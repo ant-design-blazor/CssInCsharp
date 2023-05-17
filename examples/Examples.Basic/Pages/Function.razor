@@ -1,0 +1,71 @@
+﻿@page "/function"
+
+<div class="div">
+    <div class="header">header</div>
+    <div class="body">
+        <div>body</div>
+        <div class="container">
+            container
+        </div>
+    </div>
+    <div class="footer">footer</div>
+</div>
+
+<style>
+    @_style
+</style>
+
+@code {
+    private int _size = 500;
+    private string _style = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        var css = new CSSObject
+        {
+            [".div"] = new ()
+            {
+                Width = $"{_size}px",
+                Border = "1px solid #DDD",
+                ["& .header"] = new ()
+                {
+                    Height = "50px",
+                    Width = "100%",
+                },
+                ["& .footer"] = new ()
+                {
+                    Height = "50px",
+                    Width = "100%",
+                },
+                ["& .body"] = new ()
+                {
+                    Height = $"{CalcBodyHeight(50, 50)}px",     // normal method
+                    Width = "100%",
+                    BorderTop = "1px solid #DDD",
+                    BorderBottom = "1px solid #DDD",
+                    [".container"] = new ()
+                    {
+                        Height = await GetContainerSizeAsync(), // async method
+                        BackgroundColor = Fn(() => "#EFEFEF"),  // lambda func
+                        // BackgroundColor = (Func<string>)(() => "#EFEFEF") // as the same
+                        /*
+                         * Fn method is used to tell the compiler the lambda func is Property<T> type.
+                         * Fn(() => "#EFEFEF") equals (Func<string>)(() => "#EFEFEF")
+                         */
+                    },
+                }
+            }
+        };
+        _style = css.ToString();
+    }
+
+    private int CalcBodyHeight(int header, int footer)
+    {
+        return _size - header - footer;
+    }
+
+    private async Task<string> GetContainerSizeAsync()
+    {
+        return await Task.FromResult("200px");
+    }
+}

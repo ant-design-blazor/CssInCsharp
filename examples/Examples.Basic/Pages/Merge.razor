@@ -1,0 +1,71 @@
+﻿@page "/merge"
+
+<div class="div1">This is div1</div>
+<div class="div2">This is div2</div>
+<div class="div3">
+    <div class="title">
+        This is div3
+    </div>
+</div>
+
+<style>
+    @_style
+</style>
+
+@code {
+    private string _style = "";
+
+    protected override void OnInitialized()
+    {
+        var defaultCss = new CSSObject()
+        {
+            Background = "#EFEFEF",
+            FontSize = "14px",
+            Border = "1ps solid #DDD",
+            MarginBottom = "20px"
+        };
+
+        // merge with a global css
+        var css = new CSSObject
+        {
+            [".div1"] = new CSSObject
+            {
+                Width = "100px",
+                Height = "100px",
+                Color = "red"
+            }.Merge(defaultCss),
+            [".div2"] = new CSSObject
+            {
+                Width = "120px",
+                Height = "120px",
+                Color = "blue"
+            }.Merge(defaultCss),
+            [".div3"] = new CSSObject
+            {
+                Width = "120px",
+                Height = "120px",
+                Color = "blue",
+                ["& .title"] = new ()
+                {
+                    Color = "cadetblue",
+                    FontSize = "20px"
+                }
+            }.Merge(defaultCss)
+        };
+
+        // only override div3 title color
+        css.Merge(new CSSObject
+        {
+            [".div3"] = new ()
+            {
+                ["& .title"] = new ()
+                {
+                    Color = "yellow"
+                }
+            }
+        });
+
+        _style = css.ToString();
+    }
+
+}

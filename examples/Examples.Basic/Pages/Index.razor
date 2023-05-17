@@ -1,0 +1,50 @@
+﻿@page "/"
+
+<div class="basic">
+    <div class="title">Title</div>
+    <button class="button" @onclick="HandleClick">Click</button>
+</div>
+
+<style>
+    @_style
+</style>
+
+@code
+{
+    private const string className = ".basic";
+    private string _style = "";
+
+    protected override void OnInitialized()
+    {
+        var css = new CSSObject
+        {
+            [className] = new ()
+            {
+                Width = "300px",
+                Height = "300px",
+                Border = "1px solid #DDD",
+                ["& .title"] = new ()
+                {
+                    LineHeight = "20px",
+                    Color = "red"
+                },
+                ["& .button"] = new ()
+                {
+                    Width = "100%",
+                    Height = "20px",
+                    TextAlign = "center",
+                    ["&:hover"] = new ()
+                    {
+                        Color = "blue"
+                    }
+                }
+            }
+        };
+        _style = css.ToString();
+    }
+
+    private void HandleClick()
+    {
+        Console.WriteLine(_style);
+    }
+}

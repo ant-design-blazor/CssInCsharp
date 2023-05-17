@@ -1,0 +1,109 @@
+﻿@page "/variable"
+
+<div class="div1">
+    <h3 class="title">
+        Variables
+    </h3>
+</div>
+
+<div class="div2">
+    <div class="title">Changed variable.</div>
+    <button @onclick="ChangeCssObject">Click To Change Color</button>
+</div>
+
+<style>
+    @_style1
+    @_style2
+</style>
+
+@code {
+    private string _style1 = "";
+    private string _style2 = "";
+
+    private string _color = "red"; // field
+
+    [Parameter]
+    public int Size { get; set; } = 200;  // component parameter
+
+    private PropertyRef<string> _colorRef = "red"; // a property ref
+    private CSSObject css2 = new ();
+
+    protected override void OnInitialized()
+    {
+        var fontSize = "16px";    // local varibale
+        var css1 = new CSSObject()
+        {
+            [".div1"] = new ()
+            {
+                Border = "1px solid #DDD",
+                Width = $"{Size}px",
+                Height = $"{Size}px",
+                Color = _color,
+                FontSize = fontSize,
+                ["& .title"] = new ()
+                {
+                    Color = _color,
+                    FontSize = fontSize
+                } 
+            }
+        };
+
+        /*
+         * variables are effective only during initialization,
+         * you cannot change the css object by modifying variables after initialization.
+         */
+        _style1 = css1.ToString();
+
+        /*
+         * if you want to change css object after initialization,
+         * you can define css object as a member variable, and change it after initialization.
+         * but we do not recommend you to do this.
+         *
+         * Remember: Never change the css object after initialization.
+         */
+        css2 = new CSSObject
+        {
+            [".div2"] = new()
+            {
+                Border = "1px solid #DDD",
+                Width = $"{Size}px",
+                Height = $"{Size}px",
+                MarginTop = "10px",
+                ["& .title"] = new()
+                {
+                    Color = _colorRef,
+                    FontSize = fontSize
+                }
+            }
+        };
+        _style2 = css2.ToString();
+    }
+
+    private void ChangeCssObject()
+    {
+        /*
+         * The following examples shows how to modify a css object.
+         */
+
+        // 1.use property ref to change css object
+        _colorRef.SetValue("green");
+
+        // 2.or use merge method to change css object, @see merge example.
+        css2.Merge(new CSSObject
+        {
+            [".div2"] = new ()
+            {
+                ["& .title"] = new ()
+                {
+                    Color = "green"
+                }
+            }
+        });
+
+        // 3.or set property directly
+        css2["& .title"].Color = "green";
+        
+        // rerender the css object
+        _style2 = css2.ToString();
+    }
+}
