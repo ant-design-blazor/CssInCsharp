@@ -2,7 +2,7 @@
 
 A lib for generating Style Sheets with C#.
 
-For documentation see our docs.
+For documentation see our [docs](./docs/index.md).
 
 ## Getting started
 ```sh

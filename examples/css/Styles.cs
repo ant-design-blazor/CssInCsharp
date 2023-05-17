@@ -39,7 +39,7 @@ namespace CssInCs
                         BorderColor = "transparent",
                         BoxShadow = "0 1px 2px -2px #00000029, 0 3px 6px #0000001f, 0 5px 12px 4px #00000017",
                     },
-                    ["&pro-card-checked:hover"] = new()
+                    ["&.pro-card-checked:hover"] = new()
                     {
                         BorderColor = "#DDD"
                     }
@@ -69,7 +69,7 @@ namespace CssInCs
                 },
                 ["&&-size-small"] = new()
                 {
-                    ["pro-card"] = new()
+                    [".pro-card"] = new()
                     {
                         ["&-header"] = new()
                         {
