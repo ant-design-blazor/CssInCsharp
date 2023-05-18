@@ -1,0 +1,19 @@
+﻿@namespace Examples.Component
+@inherits AntdComponentBase
+
+@WrapSSR(
+    @<div class="@Name">
+        @foreach (var item in Items)
+        {
+        <div class="item">@item</div>
+        }
+    </div>
+)
+
+@code {
+    [Parameter] 
+    public string[] Items { get; set; }
+
+    [Parameter]
+    public int Width { get; set; } = 500;
+}
