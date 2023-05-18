@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CssInCs.Benchmarks", "bench
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CssInCsLab", "examples\CssInCsLab\CssInCsLab.csproj", "{7833C610-C469-4E12-9D81-E510515D3281}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examples.Component", "examples\Examples.Component\Examples.Component.csproj", "{25DAE86F-F572-49C7-B989-834489F4B018}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{7833C610-C469-4E12-9D81-E510515D3281}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7833C610-C469-4E12-9D81-E510515D3281}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7833C610-C469-4E12-9D81-E510515D3281}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25DAE86F-F572-49C7-B989-834489F4B018}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25DAE86F-F572-49C7-B989-834489F4B018}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25DAE86F-F572-49C7-B989-834489F4B018}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25DAE86F-F572-49C7-B989-834489F4B018}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +63,7 @@ Global
 		{38A62961-5BA8-4519-A7E0-380793415492} = {285BBCAE-8461-4150-A830-F7F06388A0B9}
 		{5CCEF00A-9CBD-41FD-A026-F008CA6899AF} = {98DC1D7D-187D-4CC2-88E0-386E4E3C69BF}
 		{7833C610-C469-4E12-9D81-E510515D3281} = {88F10CF7-CAB8-4BCC-9989-4FF19AEDF449}
+		{25DAE86F-F572-49C7-B989-834489F4B018} = {88F10CF7-CAB8-4BCC-9989-4FF19AEDF449}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {03E4F30D-3A2E-4026-A665-8631C0C1188A}
