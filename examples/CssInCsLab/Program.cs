@@ -7,4 +7,9 @@
 //     Console.WriteLine();
 // }
 
+using CssInCs;
+
+var css = Styles.Selectors_I;
+Console.WriteLine(css.ToString());
+
 Console.ReadLine();

@@ -260,3 +260,70 @@ private async Task<string> GetContainerSizeAsync()
 ```
 Fn(() => "#EFEFEF") equals (Func<string>)(() => "#EFEFEF")
 ```
+
+## Parent Selectors
+
+Referencing parent selectors with & , This is the same as less. 
+
+```csharp
+var css = new CSSObject
+{
+    ["a"] = new()
+    {
+        Color = "blue",
+        ["&:hover"] = new()
+        {
+            Color = "green"
+        }
+    }
+};
+```
+
+output:
+
+```css
+a {
+  color: blue;
+}
+
+a:hover {
+  color: green;
+}
+```
+
+The "parent selectors" operator has a variety of uses. Basically any time you need the selectors of the nested rules to be combined in other ways than the default. For example another typical use of the & is to produce repetitive class names:
+
+```csharp
+var css = new CSSObject
+{
+    [".button"] = new()
+    {
+        ["&-ok"] = new()
+        {
+            BackgroundImage = "url(\"ok.png\")"
+        },
+        ["&-cancel"] = new()
+        {
+            BackgroundImage = "url(\"cancel.png\")"
+        },
+        ["&-custom"] = new()
+        {
+            BackgroundImage = "url(\"custom.png\")"
+        }
+    }
+};
+```
+
+output:
+
+```css
+.button-ok {
+  background-image: url("ok.png");
+}
+.button-cancel {
+  background-image: url("cancel.png");
+}
+.button-custom {
+  background-image: url("custom.png");
+}
+```
