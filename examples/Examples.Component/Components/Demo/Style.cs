@@ -12,7 +12,7 @@ namespace Examples.Component
         {
             return new CSSObject
             {
-                [$"{ClassName}"] = new ()
+                [ClassName] = new ()
                 {
                     Width = $"{Width}px",
                     MinHeight = "300px",

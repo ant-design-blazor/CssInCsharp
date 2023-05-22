@@ -94,6 +94,101 @@ namespace CssInCs
                 }
             }
         };
+
+        public static CSSObject Selectors_I = new ()
+        {
+            ["a"] = new()
+            {
+                Color = "blue",
+                ["&:hover"] = new()
+                {
+                    Color = "green"
+                }
+            }
+        };
+
+        public static CSSObject Selectors_II = new ()
+        {
+            [".button"] = new()
+            {
+                ["&-ok"] = new()
+                {
+                    BackgroundImage = "url(\"ok.png\")"
+                },
+                ["&-cancel"] = new()
+                {
+                    BackgroundImage = "url(\"cancel.png\")"
+                },
+                ["&-custom"] = new()
+                {
+                    BackgroundImage = "url(\"custom.png\")"
+                }
+            }
+        };
+
+        public static CSSObject Selectors_III = new()
+        {
+            [".link"] = new()
+            {
+                ["& + &"] = new()
+                {
+                    Color = "red"
+                },
+                ["& &"] = new()
+                {
+                    Color = "green"
+                },
+                ["&&"] = new()
+                {
+                    Color = "blue"
+                },
+                ["&, &ish"] = new()
+                {
+                    Color = "cyan"
+                }
+            }
+        };
+
+        public static CSSObject Selectors_IV = new()
+        {
+            [".grand"] = new()
+            {
+                [".parent"] = new ()
+                {
+                    ["& > &"] = new ()
+                    {
+                        Color = "red"
+                    },
+                    ["& &"] = new()
+                    {
+                        Color = "green"
+                    },
+                    ["&&"] = new()
+                    {
+                        Color = "blue"
+                    },
+                    ["&, &ish"] = new()
+                    {
+                        Color = "cyan"
+                    }
+                }
+            }
+        };
+
+        public static CSSObject Selectors_V = new()
+        {
+            [".header"] = new()
+            {
+                [".menu"] = new()
+                {
+                    BorderRadius = "5px",
+                    [".no-borderradius &"] = new()
+                    {
+                        BackgroundImage = "url('images/button-background.png')"
+                    }
+                }
+            }
+        };
     }
 }
 
