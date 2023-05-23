@@ -12,6 +12,9 @@ namespace Examples.Component
 
     public abstract class AntdComponentBase: ComponentBase
     {
+        [Parameter]
+        public string Id { get; set; }
+
         public RenderFragment WrapSSR(RenderFragment dom)
         {
             var token = new CssToken();
@@ -19,13 +22,11 @@ namespace Examples.Component
             return (builder) =>
             {
                 var i = 0;
+                builder.OpenComponent(i++, typeof(Style));
+                builder.AddAttribute(i++, "Id", Id);
+                builder.AddAttribute(i++, "Styles", styleList);
+                builder.CloseComponent();
                 builder.AddContent(i++, dom);
-                builder.OpenElement(i++, "style");
-                foreach (var style in styleList)
-                {
-                    builder.AddContent(i++, style.ToString());
-                }
-                builder.CloseElement();
             };
         }
 
