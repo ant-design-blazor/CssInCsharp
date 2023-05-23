@@ -13,49 +13,43 @@ dotnet add package CssInCs
 ```csharp
 <div class="basic">
     <div class="title">Title</div>
-    <button class="button" @onclick="HandleClick">Click</button>
+    <button class="button">Click</button>
 </div>
 
-<style>
-    @_style
-</style>
+<Style Id="basic-css">
+    @_css
+</Style>
 
 @code
 {
-    private string _style = "";
+    private string _css = string.Empty;
 
     protected override void OnInitialized()
     {
-        var css = new CSSObject
+        _css = new CSSObject
         {
-            [".basic"] = new ()
+            [".basic"] = new()
             {
                 Width = "300px",
                 Height = "300px",
                 Border = "1px solid #DDD",
-                ["& .title"] = new ()
+                ["& .title"] = new()
                 {
                     LineHeight = "20px",
                     Color = "red"
                 },
-                ["& .button"] = new ()
+                ["& .button"] = new()
                 {
                     Width = "100%",
                     Height = "20px",
                     TextAlign = "center",
-                    ["&:hover"] = new ()
+                    ["&:hover"] = new()
                     {
                         Color = "blue"
                     }
                 }
             }
-        };
-        _style = css.ToString();
-    }
-
-    private void HandleClick()
-    {
-        Console.WriteLine(_style);
+        }.ToString();
     }
 }
 ```

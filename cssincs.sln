@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CssInCs.Benchmarks", "bench
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CssInCsLab", "examples\CssInCsLab\CssInCsLab.csproj", "{7833C610-C469-4E12-9D81-E510515D3281}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examples.Component", "examples\Examples.Component\Examples.Component.csproj", "{25DAE86F-F572-49C7-B989-834489F4B018}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Examples.Component", "examples\Examples.Component\Examples.Component.csproj", "{25DAE86F-F572-49C7-B989-834489F4B018}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

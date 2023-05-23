@@ -1,0 +1,27 @@
+﻿<HeadContent>
+    <style id="@Id">
+        @if (Styles != null)
+        {
+            @foreach (var style in Styles)
+            {
+                @style.ToString()
+            }
+        }
+        @if (ChildContent != null)
+        {
+            @ChildContent
+        }
+    </style>
+</HeadContent>
+
+@code
+{
+    [Parameter] 
+    public string? Id { get; set; }
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    [Parameter]
+    public CSSObject[]? Styles { get; set; }
+}

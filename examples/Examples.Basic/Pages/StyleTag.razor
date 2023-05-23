@@ -1,0 +1,48 @@
+﻿@page "/style"
+
+<div class="div1">
+    Style In Head
+</div>
+
+<div class="div2">
+    Style In Body
+</div>
+
+<!-- style in head -->
+<Style Id="global-css">
+    @_styleInHead
+</Style>
+
+<!--style in body-->
+<style>
+    @_styleInBody
+</style>
+
+@code {
+    private string _styleInHead = string.Empty;
+    private string _styleInBody = string.Empty;
+
+    protected override void OnInitialized()
+    {
+        _styleInHead = new CSSObject
+        {
+            [".div1"] = new()
+            {
+                Width = "200px",
+                Height = "200px",
+                Border = "1px solid #DDD",
+            }
+        }.ToString();
+
+        _styleInBody = new CSSObject
+        {
+            [".div2"] = new()
+            {
+                Width = "200px",
+                Height = "200px",
+                Border = "1px solid #DDD",
+                BackgroundColor = "#EFEFEF",
+            }
+        }.ToString();
+    }
+}
