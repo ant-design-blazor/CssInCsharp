@@ -142,7 +142,7 @@ protected override void OnInitialized()
 
 ```CSharp
 private CSSObject _css = new ();
-private PropertyRef<string> _colorRef = "red"; // a property ref
+private string _color = "red";
 [Parameter]
 public int Size { get; set; } = 200;  // component parameter
 
@@ -159,7 +159,7 @@ protected override void OnInitialized()
             MarginTop = "10px",
             ["& .title"] = new()
             {
-                Color = _colorRef,
+                Color = _color,
                 FontSize = fontSize
             }
         }
@@ -174,10 +174,7 @@ The following examples shows how to change a css object.
 ```CSharp
 private void ClickToChangeCssObject() 
 {
-    // 1.use property ref to change css object
-    _colorRef.SetValue("green");
-
-    // 2.or use merge method to change css object, @see merge example.
+    // 1.use merge method to change css object, @see merge example.
     _css.Merge(new CSSObject
     {
         [".div2"] = new ()
@@ -189,8 +186,8 @@ private void ClickToChangeCssObject()
         }
     });
 
-    // 3.or set property directly
-    _css["& .title"].Color = "green";
+    // 2.or set property directly
+    _css[".div2"]["& .title"].Color = "green";
 
     // rerender the style
     _style = _css.ToString();
@@ -235,8 +232,7 @@ protected override async Task OnInitializedAsync()
                 {
                     // async method
                     Height = await GetContainerSizeAsync(),
-                    // lambda func
-                    BackgroundColor = Fn(() => "#EFEFEF"),
+                    BackgroundColor = "#EFEFEF",
                 }
             }
         }
@@ -253,12 +249,6 @@ private async Task<string> GetContainerSizeAsync()
 {
     return await Task.FromResult("200px");
 }
-```
-
-**Fn method is used to tell the compiler the lambda func is Property&lt;T&gt; type.**
-
-```
-Fn(() => "#EFEFEF") equals (Func<string>)(() => "#EFEFEF")
 ```
 
 ## Parent Selectors

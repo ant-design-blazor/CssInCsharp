@@ -11,9 +11,9 @@ namespace CssInCs
         /// <para> | **93** | **92**  | **15.4** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/accent-color</para>
         /// </summary>
-        public Property<string> AccentColor
+        public Property.AccentColor AccentColor
         {
-            get => (Property<string>) _properties["accent-color"];
+            get => (Property.AccentColor) _properties["accent-color"];
             set => _properties["accent-color"] = value;
         }
 
@@ -27,9 +27,9 @@ namespace CssInCs
         /// <para> | 21 _-x-_ |         | 7 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/align-content</para>
         /// </summary>
-        public Property<string> AlignContent
+        public Property.AlignContent AlignContent
         {
-            get => (Property<string>) _properties["align-content"];
+            get => (Property.AlignContent) _properties["align-content"];
             set => _properties["align-content"] = value;
         }
 
@@ -43,9 +43,9 @@ namespace CssInCs
         /// <para> | 21 _-x-_ |         | 7 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/align-items</para>
         /// </summary>
-        public Property<string> AlignItems
+        public Property.AlignItems AlignItems
         {
-            get => (Property<string>) _properties["align-items"];
+            get => (Property.AlignItems) _properties["align-items"];
             set => _properties["align-items"] = value;
         }
 
@@ -59,9 +59,9 @@ namespace CssInCs
         /// <para> | 21 _-x-_ |         | 7 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/align-self</para>
         /// </summary>
-        public Property<string> AlignSelf
+        public Property.AlignSelf AlignSelf
         {
-            get => (Property<string>) _properties["align-self"];
+            get => (Property.AlignSelf) _properties["align-self"];
             set => _properties["align-self"] = value;
         }
 
@@ -74,9 +74,9 @@ namespace CssInCs
         /// <para> |   No   |   n/a   |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/align-tracks</para>
         /// </summary>
-        public Property<string> AlignTracks
+        public Property.AlignTracks AlignTracks
         {
-            get => (Property<string>) _properties["align-tracks"];
+            get => (Property.AlignTracks) _properties["align-tracks"];
             set => _properties["align-tracks"] = value;
         }
 
@@ -89,9 +89,9 @@ namespace CssInCs
         /// <para> | **112** |   n/a   | **16** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/animation-composition</para>
         /// </summary>
-        public Property<string> AnimationComposition
+        public Property.AnimationComposition AnimationComposition
         {
-            get => (Property<string>) _properties["animation-composition"];
+            get => (Property.AnimationComposition) _properties["animation-composition"];
             set => _properties["animation-composition"] = value;
         }
 
@@ -105,9 +105,9 @@ namespace CssInCs
         /// <para> | 3 _-x-_ | 5 _-x-_ | 4 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/animation-delay</para>
         /// </summary>
-        public Property<string> AnimationDelay
+        public Property.AnimationDelay AnimationDelay
         {
-            get => (Property<string>) _properties["animation-delay"];
+            get => (Property.AnimationDelay) _properties["animation-delay"];
             set => _properties["animation-delay"] = value;
         }
 
@@ -121,9 +121,9 @@ namespace CssInCs
         /// <para> | 3 _-x-_ | 5 _-x-_ | 4 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/animation-direction</para>
         /// </summary>
-        public Property<string> AnimationDirection
+        public Property.AnimationDirection AnimationDirection
         {
-            get => (Property<string>) _properties["animation-direction"];
+            get => (Property.AnimationDirection) _properties["animation-direction"];
             set => _properties["animation-direction"] = value;
         }
 
@@ -137,9 +137,9 @@ namespace CssInCs
         /// <para> | 3 _-x-_ | 5 _-x-_ | 4 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/animation-duration</para>
         /// </summary>
-        public Property<string> AnimationDuration
+        public Property.AnimationDuration AnimationDuration
         {
-            get => (Property<string>) _properties["animation-duration"];
+            get => (Property.AnimationDuration) _properties["animation-duration"];
             set => _properties["animation-duration"] = value;
         }
 
@@ -153,9 +153,9 @@ namespace CssInCs
         /// <para> | 3 _-x-_ | 5 _-x-_ | 5 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/animation-fill-mode</para>
         /// </summary>
-        public Property<string> AnimationFillMode
+        public Property.AnimationFillMode AnimationFillMode
         {
-            get => (Property<string>) _properties["animation-fill-mode"];
+            get => (Property.AnimationFillMode) _properties["animation-fill-mode"];
             set => _properties["animation-fill-mode"] = value;
         }
 
@@ -169,9 +169,9 @@ namespace CssInCs
         /// <para> | 3 _-x-_ | 5 _-x-_ | 4 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/animation-iteration-count</para>
         /// </summary>
-        public Property<string> AnimationIterationCount
+        public Property.AnimationIterationCount AnimationIterationCount
         {
-            get => (Property<string>) _properties["animation-iteration-count"];
+            get => (Property.AnimationIterationCount) _properties["animation-iteration-count"];
             set => _properties["animation-iteration-count"] = value;
         }
 
@@ -185,9 +185,9 @@ namespace CssInCs
         /// <para> | 3 _-x-_ | 5 _-x-_ | 4 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/animation-name</para>
         /// </summary>
-        public Property<string> AnimationName
+        public Property.AnimationName AnimationName
         {
-            get => (Property<string>) _properties["animation-name"];
+            get => (Property.AnimationName) _properties["animation-name"];
             set => _properties["animation-name"] = value;
         }
 
@@ -201,9 +201,9 @@ namespace CssInCs
         /// <para> | 3 _-x-_ | 5 _-x-_ | 4 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/animation-play-state</para>
         /// </summary>
-        public Property<string> AnimationPlayState
+        public Property.AnimationPlayState AnimationPlayState
         {
-            get => (Property<string>) _properties["animation-play-state"];
+            get => (Property.AnimationPlayState) _properties["animation-play-state"];
             set => _properties["animation-play-state"] = value;
         }
 
@@ -216,9 +216,9 @@ namespace CssInCs
         /// <para> |   No   |   n/a   |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/animation-timeline</para>
         /// </summary>
-        public Property<string> AnimationTimeline
+        public Property.AnimationTimeline AnimationTimeline
         {
-            get => (Property<string>) _properties["animation-timeline"];
+            get => (Property.AnimationTimeline) _properties["animation-timeline"];
             set => _properties["animation-timeline"] = value;
         }
 
@@ -232,9 +232,9 @@ namespace CssInCs
         /// <para> | 3 _-x-_ | 5 _-x-_ | 4 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/animation-timing-function</para>
         /// </summary>
-        public Property<string> AnimationTimingFunction
+        public Property.AnimationTimingFunction AnimationTimingFunction
         {
-            get => (Property<string>) _properties["animation-timing-function"];
+            get => (Property.AnimationTimingFunction) _properties["animation-timing-function"];
             set => _properties["animation-timing-function"] = value;
         }
 
@@ -248,9 +248,9 @@ namespace CssInCs
         /// <para> | 1 _-x-_ | 1 _-x-_ | 3 _-x-_  | 12 _-x-_ |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/appearance</para>
         /// </summary>
-        public Property<string> Appearance
+        public Property.Appearance Appearance
         {
-            get => (Property<string>) _properties["appearance"];
+            get => (Property.Appearance) _properties["appearance"];
             set => _properties["appearance"] = value;
         }
 
@@ -263,9 +263,9 @@ namespace CssInCs
         /// <para> | **88** | **89**  | **15** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/aspect-ratio</para>
         /// </summary>
-        public Property<string> AspectRatio
+        public Property.AspectRatio AspectRatio
         {
-            get => (Property<string>) _properties["aspect-ratio"];
+            get => (Property.AspectRatio) _properties["aspect-ratio"];
             set => _properties["aspect-ratio"] = value;
         }
 
@@ -278,9 +278,9 @@ namespace CssInCs
         /// <para> | **76** | **103** | **9** _-x-_ | **17** | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/backdrop-filter</para>
         /// </summary>
-        public Property<string> BackdropFilter
+        public Property.BackdropFilter BackdropFilter
         {
-            get => (Property<string>) _properties["backdrop-filter"];
+            get => (Property.BackdropFilter) _properties["backdrop-filter"];
             set => _properties["backdrop-filter"] = value;
         }
 
@@ -294,9 +294,9 @@ namespace CssInCs
         /// <para> | 12 _-x-_ | 10 _-x-_ | 5.1 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/backface-visibility</para>
         /// </summary>
-        public Property<string> BackfaceVisibility
+        public Property.BackfaceVisibility BackfaceVisibility
         {
-            get => (Property<string>) _properties["backface-visibility"];
+            get => (Property.BackfaceVisibility) _properties["backface-visibility"];
             set => _properties["backface-visibility"] = value;
         }
 
@@ -309,9 +309,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/background-attachment</para>
         /// </summary>
-        public Property<string> BackgroundAttachment
+        public Property.BackgroundAttachment BackgroundAttachment
         {
-            get => (Property<string>) _properties["background-attachment"];
+            get => (Property.BackgroundAttachment) _properties["background-attachment"];
             set => _properties["background-attachment"] = value;
         }
 
@@ -324,9 +324,9 @@ namespace CssInCs
         /// <para> | **35** | **30**  | **8**  | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/background-blend-mode</para>
         /// </summary>
-        public Property<string> BackgroundBlendMode
+        public Property.BackgroundBlendMode BackgroundBlendMode
         {
-            get => (Property<string>) _properties["background-blend-mode"];
+            get => (Property.BackgroundBlendMode) _properties["background-blend-mode"];
             set => _properties["background-blend-mode"] = value;
         }
 
@@ -340,9 +340,9 @@ namespace CssInCs
         /// <para> |        |         | 3 _-x-_ |        |       |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/background-clip</para>
         /// </summary>
-        public Property<string> BackgroundClip
+        public Property.BackgroundClip BackgroundClip
         {
-            get => (Property<string>) _properties["background-clip"];
+            get => (Property.BackgroundClip) _properties["background-clip"];
             set => _properties["background-clip"] = value;
         }
 
@@ -355,9 +355,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/background-color</para>
         /// </summary>
-        public Property<string> BackgroundColor
+        public Property.BackgroundColor BackgroundColor
         {
-            get => (Property<string>) _properties["background-color"];
+            get => (Property.BackgroundColor) _properties["background-color"];
             set => _properties["background-color"] = value;
         }
 
@@ -370,9 +370,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/background-image</para>
         /// </summary>
-        public Property<string> BackgroundImage
+        public Property.BackgroundImage BackgroundImage
         {
-            get => (Property<string>) _properties["background-image"];
+            get => (Property.BackgroundImage) _properties["background-image"];
             set => _properties["background-image"] = value;
         }
 
@@ -385,9 +385,9 @@ namespace CssInCs
         /// <para> | **1**  |  **4**  | **3**  | **12** | **9** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/background-origin</para>
         /// </summary>
-        public Property<string> BackgroundOrigin
+        public Property.BackgroundOrigin BackgroundOrigin
         {
-            get => (Property<string>) _properties["background-origin"];
+            get => (Property.BackgroundOrigin) _properties["background-origin"];
             set => _properties["background-origin"] = value;
         }
 
@@ -400,9 +400,9 @@ namespace CssInCs
         /// <para> | **1**  | **49**  | **1**  | **12** | **6** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/background-position-x</para>
         /// </summary>
-        public Property<string> BackgroundPositionX
+        public Property.BackgroundPositionX BackgroundPositionX
         {
-            get => (Property<string>) _properties["background-position-x"];
+            get => (Property.BackgroundPositionX) _properties["background-position-x"];
             set => _properties["background-position-x"] = value;
         }
 
@@ -415,9 +415,9 @@ namespace CssInCs
         /// <para> | **1**  | **49**  | **1**  | **12** | **6** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/background-position-y</para>
         /// </summary>
-        public Property<string> BackgroundPositionY
+        public Property.BackgroundPositionY BackgroundPositionY
         {
-            get => (Property<string>) _properties["background-position-y"];
+            get => (Property.BackgroundPositionY) _properties["background-position-y"];
             set => _properties["background-position-y"] = value;
         }
 
@@ -430,9 +430,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/background-repeat</para>
         /// </summary>
-        public Property<string> BackgroundRepeat
+        public Property.BackgroundRepeat BackgroundRepeat
         {
-            get => (Property<string>) _properties["background-repeat"];
+            get => (Property.BackgroundRepeat) _properties["background-repeat"];
             set => _properties["background-repeat"] = value;
         }
 
@@ -446,9 +446,9 @@ namespace CssInCs
         /// <para> | 1 _-x-_ |         | 3 _-x-_ |        |       |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/background-size</para>
         /// </summary>
-        public Property<string> BackgroundSize
+        public Property.BackgroundSize BackgroundSize
         {
-            get => (Property<string>) _properties["background-size"];
+            get => (Property.BackgroundSize) _properties["background-size"];
             set => _properties["background-size"] = value;
         }
 
@@ -456,9 +456,9 @@ namespace CssInCs
         /// **Syntax**: `clip | ellipsis | &lt;string&gt;`
         /// <para> **Initial value**: `clip`</para>
         /// </summary>
-        public Property<string> BlockOverflow
+        public Property.BlockOverflow BlockOverflow
         {
-            get => (Property<string>) _properties["block-overflow"];
+            get => (Property.BlockOverflow) _properties["block-overflow"];
             set => _properties["block-overflow"] = value;
         }
 
@@ -471,9 +471,9 @@ namespace CssInCs
         /// <para> | **57** | **41**  | **12.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/block-size</para>
         /// </summary>
-        public Property<string> BlockSize
+        public Property.BlockSize BlockSize
         {
-            get => (Property<string>) _properties["block-size"];
+            get => (Property.BlockSize) _properties["block-size"];
             set => _properties["block-size"] = value;
         }
 
@@ -486,9 +486,9 @@ namespace CssInCs
         /// <para> | **87** | **66**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-block-color</para>
         /// </summary>
-        public Property<string> BorderBlockColor
+        public Property.BorderBlockColor BorderBlockColor
         {
-            get => (Property<string>) _properties["border-block-color"];
+            get => (Property.BorderBlockColor) _properties["border-block-color"];
             set => _properties["border-block-color"] = value;
         }
 
@@ -501,9 +501,9 @@ namespace CssInCs
         /// <para> | **69** | **41**  | **12.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-block-end-color</para>
         /// </summary>
-        public Property<string> BorderBlockEndColor
+        public Property.BorderBlockEndColor BorderBlockEndColor
         {
-            get => (Property<string>) _properties["border-block-end-color"];
+            get => (Property.BorderBlockEndColor) _properties["border-block-end-color"];
             set => _properties["border-block-end-color"] = value;
         }
 
@@ -516,9 +516,9 @@ namespace CssInCs
         /// <para> | **69** | **41**  | **12.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-block-end-style</para>
         /// </summary>
-        public Property<string> BorderBlockEndStyle
+        public Property.BorderBlockEndStyle BorderBlockEndStyle
         {
-            get => (Property<string>) _properties["border-block-end-style"];
+            get => (Property.BorderBlockEndStyle) _properties["border-block-end-style"];
             set => _properties["border-block-end-style"] = value;
         }
 
@@ -531,9 +531,9 @@ namespace CssInCs
         /// <para> | **69** | **41**  | **12.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-block-end-width</para>
         /// </summary>
-        public Property<string> BorderBlockEndWidth
+        public Property.BorderBlockEndWidth BorderBlockEndWidth
         {
-            get => (Property<string>) _properties["border-block-end-width"];
+            get => (Property.BorderBlockEndWidth) _properties["border-block-end-width"];
             set => _properties["border-block-end-width"] = value;
         }
 
@@ -546,9 +546,9 @@ namespace CssInCs
         /// <para> | **69** | **41**  | **12.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-block-start-color</para>
         /// </summary>
-        public Property<string> BorderBlockStartColor
+        public Property.BorderBlockStartColor BorderBlockStartColor
         {
-            get => (Property<string>) _properties["border-block-start-color"];
+            get => (Property.BorderBlockStartColor) _properties["border-block-start-color"];
             set => _properties["border-block-start-color"] = value;
         }
 
@@ -561,9 +561,9 @@ namespace CssInCs
         /// <para> | **69** | **41**  | **12.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-block-start-style</para>
         /// </summary>
-        public Property<string> BorderBlockStartStyle
+        public Property.BorderBlockStartStyle BorderBlockStartStyle
         {
-            get => (Property<string>) _properties["border-block-start-style"];
+            get => (Property.BorderBlockStartStyle) _properties["border-block-start-style"];
             set => _properties["border-block-start-style"] = value;
         }
 
@@ -576,9 +576,9 @@ namespace CssInCs
         /// <para> | **69** | **41**  | **12.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-block-start-width</para>
         /// </summary>
-        public Property<string> BorderBlockStartWidth
+        public Property.BorderBlockStartWidth BorderBlockStartWidth
         {
-            get => (Property<string>) _properties["border-block-start-width"];
+            get => (Property.BorderBlockStartWidth) _properties["border-block-start-width"];
             set => _properties["border-block-start-width"] = value;
         }
 
@@ -591,9 +591,9 @@ namespace CssInCs
         /// <para> | **87** | **66**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-block-style</para>
         /// </summary>
-        public Property<string> BorderBlockStyle
+        public Property.BorderBlockStyle BorderBlockStyle
         {
-            get => (Property<string>) _properties["border-block-style"];
+            get => (Property.BorderBlockStyle) _properties["border-block-style"];
             set => _properties["border-block-style"] = value;
         }
 
@@ -606,9 +606,9 @@ namespace CssInCs
         /// <para> | **87** | **66**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-block-width</para>
         /// </summary>
-        public Property<string> BorderBlockWidth
+        public Property.BorderBlockWidth BorderBlockWidth
         {
-            get => (Property<string>) _properties["border-block-width"];
+            get => (Property.BorderBlockWidth) _properties["border-block-width"];
             set => _properties["border-block-width"] = value;
         }
 
@@ -621,9 +621,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-bottom-color</para>
         /// </summary>
-        public Property<string> BorderBottomColor
+        public Property.BorderBottomColor BorderBottomColor
         {
-            get => (Property<string>) _properties["border-bottom-color"];
+            get => (Property.BorderBottomColor) _properties["border-bottom-color"];
             set => _properties["border-bottom-color"] = value;
         }
 
@@ -637,9 +637,9 @@ namespace CssInCs
         /// <para> | 1 _-x-_ |         | 3 _-x-_ |        |       |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-bottom-left-radius</para>
         /// </summary>
-        public Property<string> BorderBottomLeftRadius
+        public Property.BorderBottomLeftRadius BorderBottomLeftRadius
         {
-            get => (Property<string>) _properties["border-bottom-left-radius"];
+            get => (Property.BorderBottomLeftRadius) _properties["border-bottom-left-radius"];
             set => _properties["border-bottom-left-radius"] = value;
         }
 
@@ -653,9 +653,9 @@ namespace CssInCs
         /// <para> | 1 _-x-_ |         | 3 _-x-_ |        |       |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-bottom-right-radius</para>
         /// </summary>
-        public Property<string> BorderBottomRightRadius
+        public Property.BorderBottomRightRadius BorderBottomRightRadius
         {
-            get => (Property<string>) _properties["border-bottom-right-radius"];
+            get => (Property.BorderBottomRightRadius) _properties["border-bottom-right-radius"];
             set => _properties["border-bottom-right-radius"] = value;
         }
 
@@ -668,9 +668,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **5.5** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-bottom-style</para>
         /// </summary>
-        public Property<string> BorderBottomStyle
+        public Property.BorderBottomStyle BorderBottomStyle
         {
-            get => (Property<string>) _properties["border-bottom-style"];
+            get => (Property.BorderBottomStyle) _properties["border-bottom-style"];
             set => _properties["border-bottom-style"] = value;
         }
 
@@ -683,9 +683,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-bottom-width</para>
         /// </summary>
-        public Property<string> BorderBottomWidth
+        public Property.BorderBottomWidth BorderBottomWidth
         {
-            get => (Property<string>) _properties["border-bottom-width"];
+            get => (Property.BorderBottomWidth) _properties["border-bottom-width"];
             set => _properties["border-bottom-width"] = value;
         }
 
@@ -698,9 +698,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1.2** | **12** | **5** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-collapse</para>
         /// </summary>
-        public Property<string> BorderCollapse
+        public Property.BorderCollapse BorderCollapse
         {
-            get => (Property<string>) _properties["border-collapse"];
+            get => (Property.BorderCollapse) _properties["border-collapse"];
             set => _properties["border-collapse"] = value;
         }
 
@@ -713,9 +713,9 @@ namespace CssInCs
         /// <para> | **89** | **66**  | **15** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-end-end-radius</para>
         /// </summary>
-        public Property<string> BorderEndEndRadius
+        public Property.BorderEndEndRadius BorderEndEndRadius
         {
-            get => (Property<string>) _properties["border-end-end-radius"];
+            get => (Property.BorderEndEndRadius) _properties["border-end-end-radius"];
             set => _properties["border-end-end-radius"] = value;
         }
 
@@ -728,9 +728,9 @@ namespace CssInCs
         /// <para> | **89** | **66**  | **15** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-end-start-radius</para>
         /// </summary>
-        public Property<string> BorderEndStartRadius
+        public Property.BorderEndStartRadius BorderEndStartRadius
         {
-            get => (Property<string>) _properties["border-end-start-radius"];
+            get => (Property.BorderEndStartRadius) _properties["border-end-start-radius"];
             set => _properties["border-end-start-radius"] = value;
         }
 
@@ -743,9 +743,9 @@ namespace CssInCs
         /// <para> | **15** | **15**  | **6**  | **12** | **11** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-image-outset</para>
         /// </summary>
-        public Property<string> BorderImageOutset
+        public Property.BorderImageOutset BorderImageOutset
         {
-            get => (Property<string>) _properties["border-image-outset"];
+            get => (Property.BorderImageOutset) _properties["border-image-outset"];
             set => _properties["border-image-outset"] = value;
         }
 
@@ -758,9 +758,9 @@ namespace CssInCs
         /// <para> | **15** | **15**  | **6**  | **12** | **11** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-image-repeat</para>
         /// </summary>
-        public Property<string> BorderImageRepeat
+        public Property.BorderImageRepeat BorderImageRepeat
         {
-            get => (Property<string>) _properties["border-image-repeat"];
+            get => (Property.BorderImageRepeat) _properties["border-image-repeat"];
             set => _properties["border-image-repeat"] = value;
         }
 
@@ -773,9 +773,9 @@ namespace CssInCs
         /// <para> | **15** | **15**  | **6**  | **12** | **11** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-image-slice</para>
         /// </summary>
-        public Property<string> BorderImageSlice
+        public Property.BorderImageSlice BorderImageSlice
         {
-            get => (Property<string>) _properties["border-image-slice"];
+            get => (Property.BorderImageSlice) _properties["border-image-slice"];
             set => _properties["border-image-slice"] = value;
         }
 
@@ -788,9 +788,9 @@ namespace CssInCs
         /// <para> | **15** | **15**  | **6**  | **12** | **11** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-image-source</para>
         /// </summary>
-        public Property<string> BorderImageSource
+        public Property.BorderImageSource BorderImageSource
         {
-            get => (Property<string>) _properties["border-image-source"];
+            get => (Property.BorderImageSource) _properties["border-image-source"];
             set => _properties["border-image-source"] = value;
         }
 
@@ -803,9 +803,9 @@ namespace CssInCs
         /// <para> | **15** | **13**  | **6**  | **12** | **11** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-image-width</para>
         /// </summary>
-        public Property<string> BorderImageWidth
+        public Property.BorderImageWidth BorderImageWidth
         {
-            get => (Property<string>) _properties["border-image-width"];
+            get => (Property.BorderImageWidth) _properties["border-image-width"];
             set => _properties["border-image-width"] = value;
         }
 
@@ -818,9 +818,9 @@ namespace CssInCs
         /// <para> | **87** | **66**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-inline-color</para>
         /// </summary>
-        public Property<string> BorderInlineColor
+        public Property.BorderInlineColor BorderInlineColor
         {
-            get => (Property<string>) _properties["border-inline-color"];
+            get => (Property.BorderInlineColor) _properties["border-inline-color"];
             set => _properties["border-inline-color"] = value;
         }
 
@@ -834,9 +834,9 @@ namespace CssInCs
         /// <para> |        | 3 _(-moz-border-end-color)_ |          |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-inline-end-color</para>
         /// </summary>
-        public Property<string> BorderInlineEndColor
+        public Property.BorderInlineEndColor BorderInlineEndColor
         {
-            get => (Property<string>) _properties["border-inline-end-color"];
+            get => (Property.BorderInlineEndColor) _properties["border-inline-end-color"];
             set => _properties["border-inline-end-color"] = value;
         }
 
@@ -850,9 +850,9 @@ namespace CssInCs
         /// <para> |        | 3 _(-moz-border-end-style)_ |          |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-inline-end-style</para>
         /// </summary>
-        public Property<string> BorderInlineEndStyle
+        public Property.BorderInlineEndStyle BorderInlineEndStyle
         {
-            get => (Property<string>) _properties["border-inline-end-style"];
+            get => (Property.BorderInlineEndStyle) _properties["border-inline-end-style"];
             set => _properties["border-inline-end-style"] = value;
         }
 
@@ -866,9 +866,9 @@ namespace CssInCs
         /// <para> |        | 3 _(-moz-border-end-width)_ |          |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-inline-end-width</para>
         /// </summary>
-        public Property<string> BorderInlineEndWidth
+        public Property.BorderInlineEndWidth BorderInlineEndWidth
         {
-            get => (Property<string>) _properties["border-inline-end-width"];
+            get => (Property.BorderInlineEndWidth) _properties["border-inline-end-width"];
             set => _properties["border-inline-end-width"] = value;
         }
 
@@ -882,9 +882,9 @@ namespace CssInCs
         /// <para> |        | 3 _(-moz-border-start-color)_ |          |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-inline-start-color</para>
         /// </summary>
-        public Property<string> BorderInlineStartColor
+        public Property.BorderInlineStartColor BorderInlineStartColor
         {
-            get => (Property<string>) _properties["border-inline-start-color"];
+            get => (Property.BorderInlineStartColor) _properties["border-inline-start-color"];
             set => _properties["border-inline-start-color"] = value;
         }
 
@@ -898,9 +898,9 @@ namespace CssInCs
         /// <para> |        | 3 _(-moz-border-start-style)_ |          |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-inline-start-style</para>
         /// </summary>
-        public Property<string> BorderInlineStartStyle
+        public Property.BorderInlineStartStyle BorderInlineStartStyle
         {
-            get => (Property<string>) _properties["border-inline-start-style"];
+            get => (Property.BorderInlineStartStyle) _properties["border-inline-start-style"];
             set => _properties["border-inline-start-style"] = value;
         }
 
@@ -913,9 +913,9 @@ namespace CssInCs
         /// <para> | **69** | **41**  | **12.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-inline-start-width</para>
         /// </summary>
-        public Property<string> BorderInlineStartWidth
+        public Property.BorderInlineStartWidth BorderInlineStartWidth
         {
-            get => (Property<string>) _properties["border-inline-start-width"];
+            get => (Property.BorderInlineStartWidth) _properties["border-inline-start-width"];
             set => _properties["border-inline-start-width"] = value;
         }
 
@@ -928,9 +928,9 @@ namespace CssInCs
         /// <para> | **87** | **66**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-inline-style</para>
         /// </summary>
-        public Property<string> BorderInlineStyle
+        public Property.BorderInlineStyle BorderInlineStyle
         {
-            get => (Property<string>) _properties["border-inline-style"];
+            get => (Property.BorderInlineStyle) _properties["border-inline-style"];
             set => _properties["border-inline-style"] = value;
         }
 
@@ -943,9 +943,9 @@ namespace CssInCs
         /// <para> | **87** | **66**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-inline-width</para>
         /// </summary>
-        public Property<string> BorderInlineWidth
+        public Property.BorderInlineWidth BorderInlineWidth
         {
-            get => (Property<string>) _properties["border-inline-width"];
+            get => (Property.BorderInlineWidth) _properties["border-inline-width"];
             set => _properties["border-inline-width"] = value;
         }
 
@@ -958,9 +958,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-left-color</para>
         /// </summary>
-        public Property<string> BorderLeftColor
+        public Property.BorderLeftColor BorderLeftColor
         {
-            get => (Property<string>) _properties["border-left-color"];
+            get => (Property.BorderLeftColor) _properties["border-left-color"];
             set => _properties["border-left-color"] = value;
         }
 
@@ -973,9 +973,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **5.5** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-left-style</para>
         /// </summary>
-        public Property<string> BorderLeftStyle
+        public Property.BorderLeftStyle BorderLeftStyle
         {
-            get => (Property<string>) _properties["border-left-style"];
+            get => (Property.BorderLeftStyle) _properties["border-left-style"];
             set => _properties["border-left-style"] = value;
         }
 
@@ -988,9 +988,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-left-width</para>
         /// </summary>
-        public Property<string> BorderLeftWidth
+        public Property.BorderLeftWidth BorderLeftWidth
         {
-            get => (Property<string>) _properties["border-left-width"];
+            get => (Property.BorderLeftWidth) _properties["border-left-width"];
             set => _properties["border-left-width"] = value;
         }
 
@@ -1003,9 +1003,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-right-color</para>
         /// </summary>
-        public Property<string> BorderRightColor
+        public Property.BorderRightColor BorderRightColor
         {
-            get => (Property<string>) _properties["border-right-color"];
+            get => (Property.BorderRightColor) _properties["border-right-color"];
             set => _properties["border-right-color"] = value;
         }
 
@@ -1018,9 +1018,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **5.5** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-right-style</para>
         /// </summary>
-        public Property<string> BorderRightStyle
+        public Property.BorderRightStyle BorderRightStyle
         {
-            get => (Property<string>) _properties["border-right-style"];
+            get => (Property.BorderRightStyle) _properties["border-right-style"];
             set => _properties["border-right-style"] = value;
         }
 
@@ -1033,9 +1033,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-right-width</para>
         /// </summary>
-        public Property<string> BorderRightWidth
+        public Property.BorderRightWidth BorderRightWidth
         {
-            get => (Property<string>) _properties["border-right-width"];
+            get => (Property.BorderRightWidth) _properties["border-right-width"];
             set => _properties["border-right-width"] = value;
         }
 
@@ -1048,9 +1048,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **8** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-spacing</para>
         /// </summary>
-        public Property<string> BorderSpacing
+        public Property.BorderSpacing BorderSpacing
         {
-            get => (Property<string>) _properties["border-spacing"];
+            get => (Property.BorderSpacing) _properties["border-spacing"];
             set => _properties["border-spacing"] = value;
         }
 
@@ -1063,9 +1063,9 @@ namespace CssInCs
         /// <para> | **89** | **66**  | **15** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-start-end-radius</para>
         /// </summary>
-        public Property<string> BorderStartEndRadius
+        public Property.BorderStartEndRadius BorderStartEndRadius
         {
-            get => (Property<string>) _properties["border-start-end-radius"];
+            get => (Property.BorderStartEndRadius) _properties["border-start-end-radius"];
             set => _properties["border-start-end-radius"] = value;
         }
 
@@ -1078,9 +1078,9 @@ namespace CssInCs
         /// <para> | **89** | **66**  | **15** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-start-start-radius</para>
         /// </summary>
-        public Property<string> BorderStartStartRadius
+        public Property.BorderStartStartRadius BorderStartStartRadius
         {
-            get => (Property<string>) _properties["border-start-start-radius"];
+            get => (Property.BorderStartStartRadius) _properties["border-start-start-radius"];
             set => _properties["border-start-start-radius"] = value;
         }
 
@@ -1093,9 +1093,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-top-color</para>
         /// </summary>
-        public Property<string> BorderTopColor
+        public Property.BorderTopColor BorderTopColor
         {
-            get => (Property<string>) _properties["border-top-color"];
+            get => (Property.BorderTopColor) _properties["border-top-color"];
             set => _properties["border-top-color"] = value;
         }
 
@@ -1109,9 +1109,9 @@ namespace CssInCs
         /// <para> | 1 _-x-_ |         | 3 _-x-_ |        |       |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-top-left-radius</para>
         /// </summary>
-        public Property<string> BorderTopLeftRadius
+        public Property.BorderTopLeftRadius BorderTopLeftRadius
         {
-            get => (Property<string>) _properties["border-top-left-radius"];
+            get => (Property.BorderTopLeftRadius) _properties["border-top-left-radius"];
             set => _properties["border-top-left-radius"] = value;
         }
 
@@ -1125,9 +1125,9 @@ namespace CssInCs
         /// <para> | 1 _-x-_ |         | 3 _-x-_ |        |       |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-top-right-radius</para>
         /// </summary>
-        public Property<string> BorderTopRightRadius
+        public Property.BorderTopRightRadius BorderTopRightRadius
         {
-            get => (Property<string>) _properties["border-top-right-radius"];
+            get => (Property.BorderTopRightRadius) _properties["border-top-right-radius"];
             set => _properties["border-top-right-radius"] = value;
         }
 
@@ -1140,9 +1140,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **5.5** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-top-style</para>
         /// </summary>
-        public Property<string> BorderTopStyle
+        public Property.BorderTopStyle BorderTopStyle
         {
-            get => (Property<string>) _properties["border-top-style"];
+            get => (Property.BorderTopStyle) _properties["border-top-style"];
             set => _properties["border-top-style"] = value;
         }
 
@@ -1155,9 +1155,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-top-width</para>
         /// </summary>
-        public Property<string> BorderTopWidth
+        public Property.BorderTopWidth BorderTopWidth
         {
-            get => (Property<string>) _properties["border-top-width"];
+            get => (Property.BorderTopWidth) _properties["border-top-width"];
             set => _properties["border-top-width"] = value;
         }
 
@@ -1170,9 +1170,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **5** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/bottom</para>
         /// </summary>
-        public Property<string> Bottom
+        public Property.Bottom Bottom
         {
-            get => (Property<string>) _properties["bottom"];
+            get => (Property.Bottom) _properties["bottom"];
             set => _properties["bottom"] = value;
         }
 
@@ -1185,9 +1185,9 @@ namespace CssInCs
         /// <para> | **22** _-x-_ | **32**  | **7** _-x-_ | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/box-decoration-break</para>
         /// </summary>
-        public Property<string> BoxDecorationBreak
+        public Property.BoxDecorationBreak BoxDecorationBreak
         {
-            get => (Property<string>) _properties["box-decoration-break"];
+            get => (Property.BoxDecorationBreak) _properties["box-decoration-break"];
             set => _properties["box-decoration-break"] = value;
         }
 
@@ -1201,9 +1201,9 @@ namespace CssInCs
         /// <para> | 1 _-x-_ |         | 3 _-x-_ |        |       |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/box-shadow</para>
         /// </summary>
-        public Property<string> BoxShadow
+        public Property.BoxShadow BoxShadow
         {
-            get => (Property<string>) _properties["box-shadow"];
+            get => (Property.BoxShadow) _properties["box-shadow"];
             set => _properties["box-shadow"] = value;
         }
 
@@ -1217,9 +1217,9 @@ namespace CssInCs
         /// <para> | 1 _-x-_ | 1 _-x-_ | 3 _-x-_ |        |       |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/box-sizing</para>
         /// </summary>
-        public Property<string> BoxSizing
+        public Property.BoxSizing BoxSizing
         {
-            get => (Property<string>) _properties["box-sizing"];
+            get => (Property.BoxSizing) _properties["box-sizing"];
             set => _properties["box-sizing"] = value;
         }
 
@@ -1232,9 +1232,9 @@ namespace CssInCs
         /// <para> | **50** | **65**  | **10** | **12** | **10** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/break-after</para>
         /// </summary>
-        public Property<string> BreakAfter
+        public Property.BreakAfter BreakAfter
         {
-            get => (Property<string>) _properties["break-after"];
+            get => (Property.BreakAfter) _properties["break-after"];
             set => _properties["break-after"] = value;
         }
 
@@ -1247,9 +1247,9 @@ namespace CssInCs
         /// <para> | **50** | **65**  | **10** | **12** | **10** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/break-before</para>
         /// </summary>
-        public Property<string> BreakBefore
+        public Property.BreakBefore BreakBefore
         {
-            get => (Property<string>) _properties["break-before"];
+            get => (Property.BreakBefore) _properties["break-before"];
             set => _properties["break-before"] = value;
         }
 
@@ -1262,9 +1262,9 @@ namespace CssInCs
         /// <para> | **50** | **65**  | **10** | **12** | **10** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/break-inside</para>
         /// </summary>
-        public Property<string> BreakInside
+        public Property.BreakInside BreakInside
         {
-            get => (Property<string>) _properties["break-inside"];
+            get => (Property.BreakInside) _properties["break-inside"];
             set => _properties["break-inside"] = value;
         }
 
@@ -1277,9 +1277,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **8** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/caption-side</para>
         /// </summary>
-        public Property<string> CaptionSide
+        public Property.CaptionSide CaptionSide
         {
-            get => (Property<string>) _properties["caption-side"];
+            get => (Property.CaptionSide) _properties["caption-side"];
             set => _properties["caption-side"] = value;
         }
 
@@ -1292,9 +1292,9 @@ namespace CssInCs
         /// <para> | **57** | **53**  | **11.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/caret-color</para>
         /// </summary>
-        public Property<string> CaretColor
+        public Property.CaretColor CaretColor
         {
-            get => (Property<string>) _properties["caret-color"];
+            get => (Property.CaretColor) _properties["caret-color"];
             set => _properties["caret-color"] = value;
         }
 
@@ -1302,9 +1302,9 @@ namespace CssInCs
         /// **Syntax**: `auto | bar | block | underscore`
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<string> CaretShape
+        public Property.CaretShape CaretShape
         {
-            get => (Property<string>) _properties["caret-shape"];
+            get => (Property.CaretShape) _properties["caret-shape"];
             set => _properties["caret-shape"] = value;
         }
 
@@ -1317,9 +1317,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/clear</para>
         /// </summary>
-        public Property<string> Clear
+        public Property.Clear Clear
         {
-            get => (Property<string>) _properties["clear"];
+            get => (Property.Clear) _properties["clear"];
             set => _properties["clear"] = value;
         }
 
@@ -1333,9 +1333,9 @@ namespace CssInCs
         /// <para> | 23 _-x-_ |         | 7 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/clip-path</para>
         /// </summary>
-        public Property<string> ClipPath
+        public Property.ClipPath ClipPath
         {
-            get => (Property<string>) _properties["clip-path"];
+            get => (Property.ClipPath) _properties["clip-path"];
             set => _properties["clip-path"] = value;
         }
 
@@ -1348,9 +1348,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **3** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/color</para>
         /// </summary>
-        public Property<string> Color
+        public Property.Color Color
         {
-            get => (Property<string>) _properties["color"];
+            get => (Property.Color) _properties["color"];
             set => _properties["color"] = value;
         }
 
@@ -1364,9 +1364,9 @@ namespace CssInCs
         /// <para> |              | 48 _(color-adjust)_ | 6 _-x-_  |              |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/print-color-adjust</para>
         /// </summary>
-        public Property<string> ColorAdjust
+        public Property.PrintColorAdjust ColorAdjust
         {
-            get => (Property<string>) _properties["color-adjust"];
+            get => (Property.PrintColorAdjust) _properties["color-adjust"];
             set => _properties["color-adjust"] = value;
         }
 
@@ -1379,9 +1379,9 @@ namespace CssInCs
         /// <para> | **81** | **96**  | **13** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/color-scheme</para>
         /// </summary>
-        public Property<string> ColorScheme
+        public Property.ColorScheme ColorScheme
         {
-            get => (Property<string>) _properties["color-scheme"];
+            get => (Property.ColorScheme) _properties["color-scheme"];
             set => _properties["color-scheme"] = value;
         }
 
@@ -1395,9 +1395,9 @@ namespace CssInCs
         /// <para> | 1 _-x-_ |         | 3 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/column-count</para>
         /// </summary>
-        public Property<string> ColumnCount
+        public Property.ColumnCount ColumnCount
         {
-            get => (Property<string>) _properties["column-count"];
+            get => (Property.ColumnCount) _properties["column-count"];
             set => _properties["column-count"] = value;
         }
 
@@ -1411,9 +1411,9 @@ namespace CssInCs
         /// <para> |        |         | 8 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/column-fill</para>
         /// </summary>
-        public Property<string> ColumnFill
+        public Property.ColumnFill ColumnFill
         {
-            get => (Property<string>) _properties["column-fill"];
+            get => (Property.ColumnFill) _properties["column-fill"];
             set => _properties["column-fill"] = value;
         }
 
@@ -1426,9 +1426,9 @@ namespace CssInCs
         /// <para> | **1**  | **1.5** | **3**  | **12** | **10** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/column-gap</para>
         /// </summary>
-        public Property<string> ColumnGap
+        public Property.ColumnGap ColumnGap
         {
-            get => (Property<string>) _properties["column-gap"];
+            get => (Property.ColumnGap) _properties["column-gap"];
             set => _properties["column-gap"] = value;
         }
 
@@ -1442,9 +1442,9 @@ namespace CssInCs
         /// <para> | 1 _-x-_ |         | 3 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/column-rule-color</para>
         /// </summary>
-        public Property<string> ColumnRuleColor
+        public Property.ColumnRuleColor ColumnRuleColor
         {
-            get => (Property<string>) _properties["column-rule-color"];
+            get => (Property.ColumnRuleColor) _properties["column-rule-color"];
             set => _properties["column-rule-color"] = value;
         }
 
@@ -1458,9 +1458,9 @@ namespace CssInCs
         /// <para> | 1 _-x-_ |         | 3 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/column-rule-style</para>
         /// </summary>
-        public Property<string> ColumnRuleStyle
+        public Property.ColumnRuleStyle ColumnRuleStyle
         {
-            get => (Property<string>) _properties["column-rule-style"];
+            get => (Property.ColumnRuleStyle) _properties["column-rule-style"];
             set => _properties["column-rule-style"] = value;
         }
 
@@ -1474,9 +1474,9 @@ namespace CssInCs
         /// <para> | 1 _-x-_ |         | 3 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/column-rule-width</para>
         /// </summary>
-        public Property<string> ColumnRuleWidth
+        public Property.ColumnRuleWidth ColumnRuleWidth
         {
-            get => (Property<string>) _properties["column-rule-width"];
+            get => (Property.ColumnRuleWidth) _properties["column-rule-width"];
             set => _properties["column-rule-width"] = value;
         }
 
@@ -1490,9 +1490,9 @@ namespace CssInCs
         /// <para> | 6 _-x-_ |         | 5.1 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/column-span</para>
         /// </summary>
-        public Property<string> ColumnSpan
+        public Property.ColumnSpan ColumnSpan
         {
-            get => (Property<string>) _properties["column-span"];
+            get => (Property.ColumnSpan) _properties["column-span"];
             set => _properties["column-span"] = value;
         }
 
@@ -1506,9 +1506,9 @@ namespace CssInCs
         /// <para> | 1 _-x-_ |         | 3 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/column-width</para>
         /// </summary>
-        public Property<string> ColumnWidth
+        public Property.ColumnWidth ColumnWidth
         {
-            get => (Property<string>) _properties["column-width"];
+            get => (Property.ColumnWidth) _properties["column-width"];
             set => _properties["column-width"] = value;
         }
 
@@ -1521,9 +1521,9 @@ namespace CssInCs
         /// <para> | **52** | **69**  | **15.4** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/contain</para>
         /// </summary>
-        public Property<string> Contain
+        public Property.Contain Contain
         {
-            get => (Property<string>) _properties["contain"];
+            get => (Property.Contain) _properties["contain"];
             set => _properties["contain"] = value;
         }
 
@@ -1536,9 +1536,9 @@ namespace CssInCs
         /// <para> | **95** | **107** |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/contain-intrinsic-contain-intrinsic-block-size</para>
         /// </summary>
-        public Property<string> ContainIntrinsicBlockSize
+        public Property.ContainIntrinsicBlockSize ContainIntrinsicBlockSize
         {
-            get => (Property<string>) _properties["contain-intrinsic-block-size"];
+            get => (Property.ContainIntrinsicBlockSize) _properties["contain-intrinsic-block-size"];
             set => _properties["contain-intrinsic-block-size"] = value;
         }
 
@@ -1551,9 +1551,9 @@ namespace CssInCs
         /// <para> | **83** | **107** |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/contain-intrinsic-height</para>
         /// </summary>
-        public Property<string> ContainIntrinsicHeight
+        public Property.ContainIntrinsicHeight ContainIntrinsicHeight
         {
-            get => (Property<string>) _properties["contain-intrinsic-height"];
+            get => (Property.ContainIntrinsicHeight) _properties["contain-intrinsic-height"];
             set => _properties["contain-intrinsic-height"] = value;
         }
 
@@ -1566,9 +1566,9 @@ namespace CssInCs
         /// <para> | **95** | **107** |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/contain-intrinsic-contain-intrinsic-inline-size</para>
         /// </summary>
-        public Property<string> ContainIntrinsicInlineSize
+        public Property.ContainIntrinsicInlineSize ContainIntrinsicInlineSize
         {
-            get => (Property<string>) _properties["contain-intrinsic-inline-size"];
+            get => (Property.ContainIntrinsicInlineSize) _properties["contain-intrinsic-inline-size"];
             set => _properties["contain-intrinsic-inline-size"] = value;
         }
 
@@ -1581,9 +1581,9 @@ namespace CssInCs
         /// <para> | **83** | **107** |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/contain-intrinsic-width</para>
         /// </summary>
-        public Property<string> ContainIntrinsicWidth
+        public Property.ContainIntrinsicWidth ContainIntrinsicWidth
         {
-            get => (Property<string>) _properties["contain-intrinsic-width"];
+            get => (Property.ContainIntrinsicWidth) _properties["contain-intrinsic-width"];
             set => _properties["contain-intrinsic-width"] = value;
         }
 
@@ -1596,9 +1596,9 @@ namespace CssInCs
         /// <para> | **105** | **110** | **16** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/container-name</para>
         /// </summary>
-        public Property<string> ContainerName
+        public Property.ContainerName ContainerName
         {
-            get => (Property<string>) _properties["container-name"];
+            get => (Property.ContainerName) _properties["container-name"];
             set => _properties["container-name"] = value;
         }
 
@@ -1611,9 +1611,9 @@ namespace CssInCs
         /// <para> | **105** | **110** | **16** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/container-type</para>
         /// </summary>
-        public Property<string> ContainerType
+        public Property.ContainerType ContainerType
         {
-            get => (Property<string>) _properties["container-type"];
+            get => (Property.ContainerType) _properties["container-type"];
             set => _properties["container-type"] = value;
         }
 
@@ -1626,9 +1626,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **8** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/content</para>
         /// </summary>
-        public Property<string> Content
+        public Property.Content Content
         {
-            get => (Property<string>) _properties["content"];
+            get => (Property.Content) _properties["content"];
             set => _properties["content"] = value;
         }
 
@@ -1641,9 +1641,9 @@ namespace CssInCs
         /// <para> | **85** |   n/a   |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/content-visibility</para>
         /// </summary>
-        public Property<string> ContentVisibility
+        public Property.ContentVisibility ContentVisibility
         {
-            get => (Property<string>) _properties["content-visibility"];
+            get => (Property.ContentVisibility) _properties["content-visibility"];
             set => _properties["content-visibility"] = value;
         }
 
@@ -1656,9 +1656,9 @@ namespace CssInCs
         /// <para> | **2**  |  **1**  | **3**  | **12** | **8** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/counter-increment</para>
         /// </summary>
-        public Property<string> CounterIncrement
+        public Property.CounterIncrement CounterIncrement
         {
-            get => (Property<string>) _properties["counter-increment"];
+            get => (Property.CounterIncrement) _properties["counter-increment"];
             set => _properties["counter-increment"] = value;
         }
 
@@ -1671,9 +1671,9 @@ namespace CssInCs
         /// <para> | **2**  |  **1**  | **3**  | **12** | **8** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/counter-reset</para>
         /// </summary>
-        public Property<string> CounterReset
+        public Property.CounterReset CounterReset
         {
-            get => (Property<string>) _properties["counter-reset"];
+            get => (Property.CounterReset) _properties["counter-reset"];
             set => _properties["counter-reset"] = value;
         }
 
@@ -1686,9 +1686,9 @@ namespace CssInCs
         /// <para> | **85** | **68**  |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/counter-set</para>
         /// </summary>
-        public Property<string> CounterSet
+        public Property.CounterSet CounterSet
         {
-            get => (Property<string>) _properties["counter-set"];
+            get => (Property.CounterSet) _properties["counter-set"];
             set => _properties["counter-set"] = value;
         }
 
@@ -1701,9 +1701,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1.2** | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/cursor</para>
         /// </summary>
-        public Property<string> Cursor
+        public Property.Cursor Cursor
         {
-            get => (Property<string>) _properties["cursor"];
+            get => (Property.Cursor) _properties["cursor"];
             set => _properties["cursor"] = value;
         }
 
@@ -1716,9 +1716,9 @@ namespace CssInCs
         /// <para> | **2**  |  **1**  | **1**  | **12** | **5.5** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/direction</para>
         /// </summary>
-        public Property<string> Direction
+        public Property.Direction Direction
         {
-            get => (Property<string>) _properties["direction"];
+            get => (Property.Direction) _properties["direction"];
             set => _properties["direction"] = value;
         }
 
@@ -1731,9 +1731,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/display</para>
         /// </summary>
-        public Property<string> Display
+        public Property.Display Display
         {
-            get => (Property<string>) _properties["display"];
+            get => (Property.Display) _properties["display"];
             set => _properties["display"] = value;
         }
 
@@ -1746,9 +1746,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1.2** | **12** | **8** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/empty-cells</para>
         /// </summary>
-        public Property<string> EmptyCells
+        public Property.EmptyCells EmptyCells
         {
-            get => (Property<string>) _properties["empty-cells"];
+            get => (Property.EmptyCells) _properties["empty-cells"];
             set => _properties["empty-cells"] = value;
         }
 
@@ -1762,9 +1762,9 @@ namespace CssInCs
         /// <para> | 18 _-x-_ |         | 6 _-x-_ |        |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/filter</para>
         /// </summary>
-        public Property<string> Filter
+        public Property.Filter Filter
         {
-            get => (Property<string>) _properties["filter"];
+            get => (Property.Filter) _properties["filter"];
             set => _properties["filter"] = value;
         }
 
@@ -1778,9 +1778,9 @@ namespace CssInCs
         /// <para> | 22 _-x-_ |         | 7 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/flex-basis</para>
         /// </summary>
-        public Property<string> FlexBasis
+        public Property.FlexBasis FlexBasis
         {
-            get => (Property<string>) _properties["flex-basis"];
+            get => (Property.FlexBasis) _properties["flex-basis"];
             set => _properties["flex-basis"] = value;
         }
 
@@ -1794,9 +1794,9 @@ namespace CssInCs
         /// <para> | 21 _-x-_ | 49 _-x-_ | 7 _-x-_ |        | 10 _-x-_ |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/flex-direction</para>
         /// </summary>
-        public Property<string> FlexDirection
+        public Property.FlexDirection FlexDirection
         {
-            get => (Property<string>) _properties["flex-direction"];
+            get => (Property.FlexDirection) _properties["flex-direction"];
             set => _properties["flex-direction"] = value;
         }
 
@@ -1810,9 +1810,9 @@ namespace CssInCs
         /// <para> | 22 _-x-_ |         | 7 _-x-_ |        | 10 _(-ms-flex-positive)_ |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/flex-grow</para>
         /// </summary>
-        public Property<string> FlexGrow
+        public Property.FlexGrow FlexGrow
         {
-            get => (Property<string>) _properties["flex-grow"];
+            get => (Property.FlexGrow) _properties["flex-grow"];
             set => _properties["flex-grow"] = value;
         }
 
@@ -1826,9 +1826,9 @@ namespace CssInCs
         /// <para> | 22 _-x-_ |         | 8 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/flex-shrink</para>
         /// </summary>
-        public Property<string> FlexShrink
+        public Property.FlexShrink FlexShrink
         {
-            get => (Property<string>) _properties["flex-shrink"];
+            get => (Property.FlexShrink) _properties["flex-shrink"];
             set => _properties["flex-shrink"] = value;
         }
 
@@ -1842,9 +1842,9 @@ namespace CssInCs
         /// <para> | 21 _-x-_ |         | 7 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/flex-wrap</para>
         /// </summary>
-        public Property<string> FlexWrap
+        public Property.FlexWrap FlexWrap
         {
-            get => (Property<string>) _properties["flex-wrap"];
+            get => (Property.FlexWrap) _properties["flex-wrap"];
             set => _properties["flex-wrap"] = value;
         }
 
@@ -1857,9 +1857,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/float</para>
         /// </summary>
-        public Property<string> Float
+        public Property.Float Float
         {
-            get => (Property<string>) _properties["float"];
+            get => (Property.Float) _properties["float"];
             set => _properties["float"] = value;
         }
 
@@ -1872,9 +1872,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **3** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/font-family</para>
         /// </summary>
-        public Property<string> FontFamily
+        public Property.FontFamily FontFamily
         {
-            get => (Property<string>) _properties["font-family"];
+            get => (Property.FontFamily) _properties["font-family"];
             set => _properties["font-family"] = value;
         }
 
@@ -1888,9 +1888,9 @@ namespace CssInCs
         /// <para> | 16 _-x-_ | 15 _-x-_ |         |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/font-feature-settings</para>
         /// </summary>
-        public Property<string> FontFeatureSettings
+        public Property.FontFeatureSettings FontFeatureSettings
         {
-            get => (Property<string>) _properties["font-feature-settings"];
+            get => (Property.FontFeatureSettings) _properties["font-feature-settings"];
             set => _properties["font-feature-settings"] = value;
         }
 
@@ -1904,9 +1904,9 @@ namespace CssInCs
         /// <para> |        |         | 6 _-x-_ |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/font-kerning</para>
         /// </summary>
-        public Property<string> FontKerning
+        public Property.FontKerning FontKerning
         {
-            get => (Property<string>) _properties["font-kerning"];
+            get => (Property.FontKerning) _properties["font-kerning"];
             set => _properties["font-kerning"] = value;
         }
 
@@ -1920,9 +1920,9 @@ namespace CssInCs
         /// <para> |        | 4 _-x-_ |        |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/font-language-override</para>
         /// </summary>
-        public Property<string> FontLanguageOverride
+        public Property.FontLanguageOverride FontLanguageOverride
         {
-            get => (Property<string>) _properties["font-language-override"];
+            get => (Property.FontLanguageOverride) _properties["font-language-override"];
             set => _properties["font-language-override"] = value;
         }
 
@@ -1935,9 +1935,9 @@ namespace CssInCs
         /// <para> | **79** | **62**  | **11** | **17** | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/font-optical-sizing</para>
         /// </summary>
-        public Property<string> FontOpticalSizing
+        public Property.FontOpticalSizing FontOpticalSizing
         {
-            get => (Property<string>) _properties["font-optical-sizing"];
+            get => (Property.FontOpticalSizing) _properties["font-optical-sizing"];
             set => _properties["font-optical-sizing"] = value;
         }
 
@@ -1949,9 +1949,9 @@ namespace CssInCs
         /// <para> | **101** | **107** | **15.4** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/font-palette</para>
         /// </summary>
-        public Property<string> FontPalette
+        public Property.FontPalette FontPalette
         {
-            get => (Property<string>) _properties["font-palette"];
+            get => (Property.FontPalette) _properties["font-palette"];
             set => _properties["font-palette"] = value;
         }
 
@@ -1964,9 +1964,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **5.5** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/font-size</para>
         /// </summary>
-        public Property<string> FontSize
+        public Property.FontSize FontSize
         {
-            get => (Property<string>) _properties["font-size"];
+            get => (Property.FontSize) _properties["font-size"];
             set => _properties["font-size"] = value;
         }
 
@@ -1979,9 +1979,9 @@ namespace CssInCs
         /// <para> |   No   |  **3**  | **16.4** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/font-size-adjust</para>
         /// </summary>
-        public Property<string> FontSizeAdjust
+        public Property.FontSizeAdjust FontSizeAdjust
         {
-            get => (Property<string>) _properties["font-size-adjust"];
+            get => (Property.FontSizeAdjust) _properties["font-size-adjust"];
             set => _properties["font-size-adjust"] = value;
         }
 
@@ -1994,9 +1994,9 @@ namespace CssInCs
         /// <para> | **5** _(-webkit-font-smoothing)_ | **25** _(-moz-osx-font-smoothing)_ | **4** _(-webkit-font-smoothing)_ | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/font-smooth</para>
         /// </summary>
-        public Property<string> FontSmooth
+        public Property.FontSmooth FontSmooth
         {
-            get => (Property<string>) _properties["font-smooth"];
+            get => (Property.FontSmooth) _properties["font-smooth"];
             set => _properties["font-smooth"] = value;
         }
 
@@ -2009,9 +2009,9 @@ namespace CssInCs
         /// <para> | **60** |  **9**  | **11** | **12** | **9** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/font-stretch</para>
         /// </summary>
-        public Property<string> FontStretch
+        public Property.FontStretch FontStretch
         {
-            get => (Property<string>) _properties["font-stretch"];
+            get => (Property.FontStretch) _properties["font-stretch"];
             set => _properties["font-stretch"] = value;
         }
 
@@ -2024,9 +2024,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/font-style</para>
         /// </summary>
-        public Property<string> FontStyle
+        public Property.FontStyle FontStyle
         {
-            get => (Property<string>) _properties["font-style"];
+            get => (Property.FontStyle) _properties["font-style"];
             set => _properties["font-style"] = value;
         }
 
@@ -2039,9 +2039,9 @@ namespace CssInCs
         /// <para> | **97** | **34**  | **9**  | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/font-synthesis</para>
         /// </summary>
-        public Property<string> FontSynthesis
+        public Property.FontSynthesis FontSynthesis
         {
-            get => (Property<string>) _properties["font-synthesis"];
+            get => (Property.FontSynthesis) _properties["font-synthesis"];
             set => _properties["font-synthesis"] = value;
         }
 
@@ -2054,9 +2054,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/font-variant</para>
         /// </summary>
-        public Property<string> FontVariant
+        public Property.FontVariant FontVariant
         {
-            get => (Property<string>) _properties["font-variant"];
+            get => (Property.FontVariant) _properties["font-variant"];
             set => _properties["font-variant"] = value;
         }
 
@@ -2069,9 +2069,9 @@ namespace CssInCs
         /// <para> |   No   | **34**  | **9.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/font-variant-alternates</para>
         /// </summary>
-        public Property<string> FontVariantAlternates
+        public Property.FontVariantAlternates FontVariantAlternates
         {
-            get => (Property<string>) _properties["font-variant-alternates"];
+            get => (Property.FontVariantAlternates) _properties["font-variant-alternates"];
             set => _properties["font-variant-alternates"] = value;
         }
 
@@ -2084,9 +2084,9 @@ namespace CssInCs
         /// <para> | **52** | **34**  | **9.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/font-variant-caps</para>
         /// </summary>
-        public Property<string> FontVariantCaps
+        public Property.FontVariantCaps FontVariantCaps
         {
-            get => (Property<string>) _properties["font-variant-caps"];
+            get => (Property.FontVariantCaps) _properties["font-variant-caps"];
             set => _properties["font-variant-caps"] = value;
         }
 
@@ -2099,9 +2099,9 @@ namespace CssInCs
         /// <para> | **63** | **34**  | **9.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/font-variant-east-asian</para>
         /// </summary>
-        public Property<string> FontVariantEastAsian
+        public Property.FontVariantEastAsian FontVariantEastAsian
         {
-            get => (Property<string>) _properties["font-variant-east-asian"];
+            get => (Property.FontVariantEastAsian) _properties["font-variant-east-asian"];
             set => _properties["font-variant-east-asian"] = value;
         }
 
@@ -2113,9 +2113,9 @@ namespace CssInCs
         /// <para> |   No   | **108** |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/font-variant-emoji</para>
         /// </summary>
-        public Property<string> FontVariantEmoji
+        public Property.FontVariantEmoji FontVariantEmoji
         {
-            get => (Property<string>) _properties["font-variant-emoji"];
+            get => (Property.FontVariantEmoji) _properties["font-variant-emoji"];
             set => _properties["font-variant-emoji"] = value;
         }
 
@@ -2129,9 +2129,9 @@ namespace CssInCs
         /// <para> | 31 _-x-_ |         | 7 _-x-_ |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/font-variant-ligatures</para>
         /// </summary>
-        public Property<string> FontVariantLigatures
+        public Property.FontVariantLigatures FontVariantLigatures
         {
-            get => (Property<string>) _properties["font-variant-ligatures"];
+            get => (Property.FontVariantLigatures) _properties["font-variant-ligatures"];
             set => _properties["font-variant-ligatures"] = value;
         }
 
@@ -2144,9 +2144,9 @@ namespace CssInCs
         /// <para> | **52** | **34**  | **9.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/font-variant-numeric</para>
         /// </summary>
-        public Property<string> FontVariantNumeric
+        public Property.FontVariantNumeric FontVariantNumeric
         {
-            get => (Property<string>) _properties["font-variant-numeric"];
+            get => (Property.FontVariantNumeric) _properties["font-variant-numeric"];
             set => _properties["font-variant-numeric"] = value;
         }
 
@@ -2159,9 +2159,9 @@ namespace CssInCs
         /// <para> |   No   | **34**  | **9.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/font-variant-position</para>
         /// </summary>
-        public Property<string> FontVariantPosition
+        public Property.FontVariantPosition FontVariantPosition
         {
-            get => (Property<string>) _properties["font-variant-position"];
+            get => (Property.FontVariantPosition) _properties["font-variant-position"];
             set => _properties["font-variant-position"] = value;
         }
 
@@ -2174,9 +2174,9 @@ namespace CssInCs
         /// <para> | **62** | **62**  | **11** | **17** | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/font-variation-settings</para>
         /// </summary>
-        public Property<string> FontVariationSettings
+        public Property.FontVariationSettings FontVariationSettings
         {
-            get => (Property<string>) _properties["font-variation-settings"];
+            get => (Property.FontVariationSettings) _properties["font-variation-settings"];
             set => _properties["font-variation-settings"] = value;
         }
 
@@ -2189,9 +2189,9 @@ namespace CssInCs
         /// <para> | **2**  |  **1**  | **1**  | **12** | **3** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/font-weight</para>
         /// </summary>
-        public Property<string> FontWeight
+        public Property.FontWeight FontWeight
         {
-            get => (Property<string>) _properties["font-weight"];
+            get => (Property.FontWeight) _properties["font-weight"];
             set => _properties["font-weight"] = value;
         }
 
@@ -2205,9 +2205,9 @@ namespace CssInCs
         /// <para> |        |         |        | 12 _(-ms-high-contrast-adjust)_ |                                     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/forced-color-adjust</para>
         /// </summary>
-        public Property<string> ForcedColorAdjust
+        public Property.ForcedColorAdjust ForcedColorAdjust
         {
-            get => (Property<string>) _properties["forced-color-adjust"];
+            get => (Property.ForcedColorAdjust) _properties["forced-color-adjust"];
             set => _properties["forced-color-adjust"] = value;
         }
 
@@ -2220,9 +2220,9 @@ namespace CssInCs
         /// <para> | **57** | **70**  | **10.1** | **16** | **10** _(-ms-grid-columns)_ |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/grid-auto-columns</para>
         /// </summary>
-        public Property<string> GridAutoColumns
+        public Property.GridAutoColumns GridAutoColumns
         {
-            get => (Property<string>) _properties["grid-auto-columns"];
+            get => (Property.GridAutoColumns) _properties["grid-auto-columns"];
             set => _properties["grid-auto-columns"] = value;
         }
 
@@ -2235,9 +2235,9 @@ namespace CssInCs
         /// <para> | **57** | **52**  | **10.1** | **16** | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/grid-auto-flow</para>
         /// </summary>
-        public Property<string> GridAutoFlow
+        public Property.GridAutoFlow GridAutoFlow
         {
-            get => (Property<string>) _properties["grid-auto-flow"];
+            get => (Property.GridAutoFlow) _properties["grid-auto-flow"];
             set => _properties["grid-auto-flow"] = value;
         }
 
@@ -2250,9 +2250,9 @@ namespace CssInCs
         /// <para> | **57** | **70**  | **10.1** | **16** | **10** _(-ms-grid-rows)_ |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/grid-auto-rows</para>
         /// </summary>
-        public Property<string> GridAutoRows
+        public Property.GridAutoRows GridAutoRows
         {
-            get => (Property<string>) _properties["grid-auto-rows"];
+            get => (Property.GridAutoRows) _properties["grid-auto-rows"];
             set => _properties["grid-auto-rows"] = value;
         }
 
@@ -2265,9 +2265,9 @@ namespace CssInCs
         /// <para> | **57** | **52**  | **10.1** | **16** | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/grid-column-end</para>
         /// </summary>
-        public Property<string> GridColumnEnd
+        public Property.GridColumnEnd GridColumnEnd
         {
-            get => (Property<string>) _properties["grid-column-end"];
+            get => (Property.GridColumnEnd) _properties["grid-column-end"];
             set => _properties["grid-column-end"] = value;
         }
 
@@ -2280,9 +2280,9 @@ namespace CssInCs
         /// <para> | **57** | **52**  | **10.1** | **16** | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/grid-column-start</para>
         /// </summary>
-        public Property<string> GridColumnStart
+        public Property.GridColumnStart GridColumnStart
         {
-            get => (Property<string>) _properties["grid-column-start"];
+            get => (Property.GridColumnStart) _properties["grid-column-start"];
             set => _properties["grid-column-start"] = value;
         }
 
@@ -2295,9 +2295,9 @@ namespace CssInCs
         /// <para> | **57** | **52**  | **10.1** | **16** | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/grid-row-end</para>
         /// </summary>
-        public Property<string> GridRowEnd
+        public Property.GridRowEnd GridRowEnd
         {
-            get => (Property<string>) _properties["grid-row-end"];
+            get => (Property.GridRowEnd) _properties["grid-row-end"];
             set => _properties["grid-row-end"] = value;
         }
 
@@ -2310,9 +2310,9 @@ namespace CssInCs
         /// <para> | **57** | **52**  | **10.1** | **16** | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/grid-row-start</para>
         /// </summary>
-        public Property<string> GridRowStart
+        public Property.GridRowStart GridRowStart
         {
-            get => (Property<string>) _properties["grid-row-start"];
+            get => (Property.GridRowStart) _properties["grid-row-start"];
             set => _properties["grid-row-start"] = value;
         }
 
@@ -2325,9 +2325,9 @@ namespace CssInCs
         /// <para> | **57** | **52**  | **10.1** | **16** | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/grid-template-areas</para>
         /// </summary>
-        public Property<string> GridTemplateAreas
+        public Property.GridTemplateAreas GridTemplateAreas
         {
-            get => (Property<string>) _properties["grid-template-areas"];
+            get => (Property.GridTemplateAreas) _properties["grid-template-areas"];
             set => _properties["grid-template-areas"] = value;
         }
 
@@ -2340,9 +2340,9 @@ namespace CssInCs
         /// <para> | **57** | **52**  | **10.1** | **16** | **10** _(-ms-grid-columns)_ |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/grid-template-columns</para>
         /// </summary>
-        public Property<string> GridTemplateColumns
+        public Property.GridTemplateColumns GridTemplateColumns
         {
-            get => (Property<string>) _properties["grid-template-columns"];
+            get => (Property.GridTemplateColumns) _properties["grid-template-columns"];
             set => _properties["grid-template-columns"] = value;
         }
 
@@ -2355,9 +2355,9 @@ namespace CssInCs
         /// <para> | **57** | **52**  | **10.1** | **16** | **10** _(-ms-grid-rows)_ |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/grid-template-rows</para>
         /// </summary>
-        public Property<string> GridTemplateRows
+        public Property.GridTemplateRows GridTemplateRows
         {
-            get => (Property<string>) _properties["grid-template-rows"];
+            get => (Property.GridTemplateRows) _properties["grid-template-rows"];
             set => _properties["grid-template-rows"] = value;
         }
 
@@ -2370,9 +2370,9 @@ namespace CssInCs
         /// <para> |   No   |   No    | **10** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/hanging-punctuation</para>
         /// </summary>
-        public Property<string> HangingPunctuation
+        public Property.HangingPunctuation HangingPunctuation
         {
-            get => (Property<string>) _properties["hanging-punctuation"];
+            get => (Property.HangingPunctuation) _properties["hanging-punctuation"];
             set => _properties["hanging-punctuation"] = value;
         }
 
@@ -2385,9 +2385,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/height</para>
         /// </summary>
-        public Property<string> Height
+        public Property.Height Height
         {
-            get => (Property<string>) _properties["height"];
+            get => (Property.Height) _properties["height"];
             set => _properties["height"] = value;
         }
 
@@ -2401,9 +2401,9 @@ namespace CssInCs
         /// <para> | 6 _-x-_ |         |               |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/hyphenate-character</para>
         /// </summary>
-        public Property<string> HyphenateCharacter
+        public Property.HyphenateCharacter HyphenateCharacter
         {
-            get => (Property<string>) _properties["hyphenate-character"];
+            get => (Property.HyphenateCharacter) _properties["hyphenate-character"];
             set => _properties["hyphenate-character"] = value;
         }
 
@@ -2415,9 +2415,9 @@ namespace CssInCs
         /// <para> | :-----: | :-----: | :----: | :--: | :-: |</para>
         /// <para> | **109** |   No    |   No   | n/a  | No  |</para>
         /// </summary>
-        public Property<string> HyphenateLimitChars
+        public Property.HyphenateLimitChars HyphenateLimitChars
         {
-            get => (Property<string>) _properties["hyphenate-limit-chars"];
+            get => (Property.HyphenateLimitChars) _properties["hyphenate-limit-chars"];
             set => _properties["hyphenate-limit-chars"] = value;
         }
 
@@ -2431,9 +2431,9 @@ namespace CssInCs
         /// <para> | 13 _-x-_ | 6 _-x-_ |               |        |              |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/hyphens</para>
         /// </summary>
-        public Property<string> Hyphens
+        public Property.Hyphens Hyphens
         {
-            get => (Property<string>) _properties["hyphens"];
+            get => (Property.Hyphens) _properties["hyphens"];
             set => _properties["hyphens"] = value;
         }
 
@@ -2446,9 +2446,9 @@ namespace CssInCs
         /// <para> | **81** | **26**  | **13.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/image-orientation</para>
         /// </summary>
-        public Property<string> ImageOrientation
+        public Property.ImageOrientation ImageOrientation
         {
-            get => (Property<string>) _properties["image-orientation"];
+            get => (Property.ImageOrientation) _properties["image-orientation"];
             set => _properties["image-orientation"] = value;
         }
 
@@ -2461,9 +2461,9 @@ namespace CssInCs
         /// <para> | **13** | **3.6** | **6**  | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/image-rendering</para>
         /// </summary>
-        public Property<string> ImageRendering
+        public Property.ImageRendering ImageRendering
         {
-            get => (Property<string>) _properties["image-rendering"];
+            get => (Property.ImageRendering) _properties["image-rendering"];
             set => _properties["image-rendering"] = value;
         }
 
@@ -2471,9 +2471,9 @@ namespace CssInCs
         /// **Syntax**: `[ from-image || &lt;resolution&gt; ] && snap?`
         /// <para> **Initial value**: `1dppx`</para>
         /// </summary>
-        public Property<string> ImageResolution
+        public Property.ImageResolution ImageResolution
         {
-            get => (Property<string>) _properties["image-resolution"];
+            get => (Property.ImageResolution) _properties["image-resolution"];
             set => _properties["image-resolution"] = value;
         }
 
@@ -2486,9 +2486,9 @@ namespace CssInCs
         /// <para> | **110** |   No    | **9** _-x-_ | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/initial-letter</para>
         /// </summary>
-        public Property<string> InitialLetter
+        public Property.InitialLetter InitialLetter
         {
-            get => (Property<string>) _properties["initial-letter"];
+            get => (Property.InitialLetter) _properties["initial-letter"];
             set => _properties["initial-letter"] = value;
         }
 
@@ -2501,9 +2501,9 @@ namespace CssInCs
         /// <para> | **57** | **41**  | **12.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/inline-size</para>
         /// </summary>
-        public Property<string> InlineSize
+        public Property.InlineSize InlineSize
         {
-            get => (Property<string>) _properties["inline-size"];
+            get => (Property.InlineSize) _properties["inline-size"];
             set => _properties["inline-size"] = value;
         }
 
@@ -2511,9 +2511,9 @@ namespace CssInCs
         /// **Syntax**: `auto | none`
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<string> InputSecurity
+        public Property.InputSecurity InputSecurity
         {
-            get => (Property<string>) _properties["input-security"];
+            get => (Property.InputSecurity) _properties["input-security"];
             set => _properties["input-security"] = value;
         }
 
@@ -2526,9 +2526,9 @@ namespace CssInCs
         /// <para> | **87** | **63**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/inset-block-end</para>
         /// </summary>
-        public Property<string> InsetBlockEnd
+        public Property.InsetBlockEnd InsetBlockEnd
         {
-            get => (Property<string>) _properties["inset-block-end"];
+            get => (Property.InsetBlockEnd) _properties["inset-block-end"];
             set => _properties["inset-block-end"] = value;
         }
 
@@ -2541,9 +2541,9 @@ namespace CssInCs
         /// <para> | **87** | **63**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/inset-block-start</para>
         /// </summary>
-        public Property<string> InsetBlockStart
+        public Property.InsetBlockStart InsetBlockStart
         {
-            get => (Property<string>) _properties["inset-block-start"];
+            get => (Property.InsetBlockStart) _properties["inset-block-start"];
             set => _properties["inset-block-start"] = value;
         }
 
@@ -2556,9 +2556,9 @@ namespace CssInCs
         /// <para> | **87** | **63**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/inset-inline-end</para>
         /// </summary>
-        public Property<string> InsetInlineEnd
+        public Property.InsetInlineEnd InsetInlineEnd
         {
-            get => (Property<string>) _properties["inset-inline-end"];
+            get => (Property.InsetInlineEnd) _properties["inset-inline-end"];
             set => _properties["inset-inline-end"] = value;
         }
 
@@ -2571,9 +2571,9 @@ namespace CssInCs
         /// <para> | **87** | **63**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/inset-inline-start</para>
         /// </summary>
-        public Property<string> InsetInlineStart
+        public Property.InsetInlineStart InsetInlineStart
         {
-            get => (Property<string>) _properties["inset-inline-start"];
+            get => (Property.InsetInlineStart) _properties["inset-inline-start"];
             set => _properties["inset-inline-start"] = value;
         }
 
@@ -2586,9 +2586,9 @@ namespace CssInCs
         /// <para> | **41** | **36**  | **8**  | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/isolation</para>
         /// </summary>
-        public Property<string> Isolation
+        public Property.Isolation Isolation
         {
-            get => (Property<string>) _properties["isolation"];
+            get => (Property.Isolation) _properties["isolation"];
             set => _properties["isolation"] = value;
         }
 
@@ -2602,9 +2602,9 @@ namespace CssInCs
         /// <para> | 21 _-x-_ |         | 7 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/justify-content</para>
         /// </summary>
-        public Property<string> JustifyContent
+        public Property.JustifyContent JustifyContent
         {
-            get => (Property<string>) _properties["justify-content"];
+            get => (Property.JustifyContent) _properties["justify-content"];
             set => _properties["justify-content"] = value;
         }
 
@@ -2617,9 +2617,9 @@ namespace CssInCs
         /// <para> | **52** | **20**  | **9**  | **12** | **11** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/justify-items</para>
         /// </summary>
-        public Property<string> JustifyItems
+        public Property.JustifyItems JustifyItems
         {
-            get => (Property<string>) _properties["justify-items"];
+            get => (Property.JustifyItems) _properties["justify-items"];
             set => _properties["justify-items"] = value;
         }
 
@@ -2632,9 +2632,9 @@ namespace CssInCs
         /// <para> | **57** | **45**  | **10.1** | **16** | **10** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/justify-self</para>
         /// </summary>
-        public Property<string> JustifySelf
+        public Property.JustifySelf JustifySelf
         {
-            get => (Property<string>) _properties["justify-self"];
+            get => (Property.JustifySelf) _properties["justify-self"];
             set => _properties["justify-self"] = value;
         }
 
@@ -2647,9 +2647,9 @@ namespace CssInCs
         /// <para> |   No   |   n/a   |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/justify-tracks</para>
         /// </summary>
-        public Property<string> JustifyTracks
+        public Property.JustifyTracks JustifyTracks
         {
-            get => (Property<string>) _properties["justify-tracks"];
+            get => (Property.JustifyTracks) _properties["justify-tracks"];
             set => _properties["justify-tracks"] = value;
         }
 
@@ -2662,9 +2662,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **5.5** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/left</para>
         /// </summary>
-        public Property<string> Left
+        public Property.Left Left
         {
-            get => (Property<string>) _properties["left"];
+            get => (Property.Left) _properties["left"];
             set => _properties["left"] = value;
         }
 
@@ -2677,9 +2677,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/letter-spacing</para>
         /// </summary>
-        public Property<string> LetterSpacing
+        public Property.LetterSpacing LetterSpacing
         {
-            get => (Property<string>) _properties["letter-spacing"];
+            get => (Property.LetterSpacing) _properties["letter-spacing"];
             set => _properties["letter-spacing"] = value;
         }
 
@@ -2693,9 +2693,9 @@ namespace CssInCs
         /// <para> | 1 _-x-_ |         | 3 _-x-_ |        |         |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/line-break</para>
         /// </summary>
-        public Property<string> LineBreak
+        public Property.LineBreak LineBreak
         {
-            get => (Property<string>) _properties["line-break"];
+            get => (Property.LineBreak) _properties["line-break"];
             set => _properties["line-break"] = value;
         }
 
@@ -2708,9 +2708,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/line-height</para>
         /// </summary>
-        public Property<string> LineHeight
+        public Property.LineHeight LineHeight
         {
-            get => (Property<string>) _properties["line-height"];
+            get => (Property.LineHeight) _properties["line-height"];
             set => _properties["line-height"] = value;
         }
 
@@ -2723,9 +2723,9 @@ namespace CssInCs
         /// <para> |  n/a   |   No    |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/line-height-step</para>
         /// </summary>
-        public Property<string> LineHeightStep
+        public Property.LineHeightStep LineHeightStep
         {
-            get => (Property<string>) _properties["line-height-step"];
+            get => (Property.LineHeightStep) _properties["line-height-step"];
             set => _properties["line-height-step"] = value;
         }
 
@@ -2738,9 +2738,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/list-style-image</para>
         /// </summary>
-        public Property<string> ListStyleImage
+        public Property.ListStyleImage ListStyleImage
         {
-            get => (Property<string>) _properties["list-style-image"];
+            get => (Property.ListStyleImage) _properties["list-style-image"];
             set => _properties["list-style-image"] = value;
         }
 
@@ -2753,9 +2753,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/list-style-position</para>
         /// </summary>
-        public Property<string> ListStylePosition
+        public Property.ListStylePosition ListStylePosition
         {
-            get => (Property<string>) _properties["list-style-position"];
+            get => (Property.ListStylePosition) _properties["list-style-position"];
             set => _properties["list-style-position"] = value;
         }
 
@@ -2768,9 +2768,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/list-style-type</para>
         /// </summary>
-        public Property<string> ListStyleType
+        public Property.ListStyleType ListStyleType
         {
-            get => (Property<string>) _properties["list-style-type"];
+            get => (Property.ListStyleType) _properties["list-style-type"];
             set => _properties["list-style-type"] = value;
         }
 
@@ -2783,9 +2783,9 @@ namespace CssInCs
         /// <para> | **87** | **41**  | **12.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/margin-block-end</para>
         /// </summary>
-        public Property<string> MarginBlockEnd
+        public Property.MarginBlockEnd MarginBlockEnd
         {
-            get => (Property<string>) _properties["margin-block-end"];
+            get => (Property.MarginBlockEnd) _properties["margin-block-end"];
             set => _properties["margin-block-end"] = value;
         }
 
@@ -2798,9 +2798,9 @@ namespace CssInCs
         /// <para> | **87** | **41**  | **12.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/margin-block-start</para>
         /// </summary>
-        public Property<string> MarginBlockStart
+        public Property.MarginBlockStart MarginBlockStart
         {
-            get => (Property<string>) _properties["margin-block-start"];
+            get => (Property.MarginBlockStart) _properties["margin-block-start"];
             set => _properties["margin-block-start"] = value;
         }
 
@@ -2813,9 +2813,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **3** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/margin-bottom</para>
         /// </summary>
-        public Property<string> MarginBottom
+        public Property.MarginBottom MarginBottom
         {
-            get => (Property<string>) _properties["margin-bottom"];
+            get => (Property.MarginBottom) _properties["margin-bottom"];
             set => _properties["margin-bottom"] = value;
         }
 
@@ -2829,9 +2829,9 @@ namespace CssInCs
         /// <para> | 2 _(-webkit-margin-end)_ | 3 _(-moz-margin-end)_ | 3 _(-webkit-margin-end)_ |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/margin-inline-end</para>
         /// </summary>
-        public Property<string> MarginInlineEnd
+        public Property.MarginInlineEnd MarginInlineEnd
         {
-            get => (Property<string>) _properties["margin-inline-end"];
+            get => (Property.MarginInlineEnd) _properties["margin-inline-end"];
             set => _properties["margin-inline-end"] = value;
         }
 
@@ -2845,9 +2845,9 @@ namespace CssInCs
         /// <para> | 2 _(-webkit-margin-start)_ | 3 _(-moz-margin-start)_ | 3 _(-webkit-margin-start)_ |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/margin-inline-start</para>
         /// </summary>
-        public Property<string> MarginInlineStart
+        public Property.MarginInlineStart MarginInlineStart
         {
-            get => (Property<string>) _properties["margin-inline-start"];
+            get => (Property.MarginInlineStart) _properties["margin-inline-start"];
             set => _properties["margin-inline-start"] = value;
         }
 
@@ -2860,9 +2860,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **3** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/margin-left</para>
         /// </summary>
-        public Property<string> MarginLeft
+        public Property.MarginLeft MarginLeft
         {
-            get => (Property<string>) _properties["margin-left"];
+            get => (Property.MarginLeft) _properties["margin-left"];
             set => _properties["margin-left"] = value;
         }
 
@@ -2875,9 +2875,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **3** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/margin-right</para>
         /// </summary>
-        public Property<string> MarginRight
+        public Property.MarginRight MarginRight
         {
-            get => (Property<string>) _properties["margin-right"];
+            get => (Property.MarginRight) _properties["margin-right"];
             set => _properties["margin-right"] = value;
         }
 
@@ -2890,9 +2890,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **3** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/margin-top</para>
         /// </summary>
-        public Property<string> MarginTop
+        public Property.MarginTop MarginTop
         {
-            get => (Property<string>) _properties["margin-top"];
+            get => (Property.MarginTop) _properties["margin-top"];
             set => _properties["margin-top"] = value;
         }
 
@@ -2905,9 +2905,9 @@ namespace CssInCs
         /// <para> |   No   |   No    | **16.4** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/margin-trim</para>
         /// </summary>
-        public Property<string> MarginTrim
+        public Property.MarginTrim MarginTrim
         {
-            get => (Property<string>) _properties["margin-trim"];
+            get => (Property.MarginTrim) _properties["margin-trim"];
             set => _properties["margin-trim"] = value;
         }
 
@@ -2916,9 +2916,9 @@ namespace CssInCs
         /// <para> **Syntax**: `luminance | alpha`</para>
         /// <para> **Initial value**: `alpha`</para>
         /// </summary>
-        public Property<string> MaskBorderMode
+        public Property.MaskBorderMode MaskBorderMode
         {
-            get => (Property<string>) _properties["mask-border-mode"];
+            get => (Property.MaskBorderMode) _properties["mask-border-mode"];
             set => _properties["mask-border-mode"] = value;
         }
 
@@ -2931,9 +2931,9 @@ namespace CssInCs
         /// <para> | **1** _(-webkit-mask-box-image-outset)_ |   No    | **3.1** _(-webkit-mask-box-image-outset)_ | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask-border-outset</para>
         /// </summary>
-        public Property<string> MaskBorderOutset
+        public Property.MaskBorderOutset MaskBorderOutset
         {
-            get => (Property<string>) _properties["mask-border-outset"];
+            get => (Property.MaskBorderOutset) _properties["mask-border-outset"];
             set => _properties["mask-border-outset"] = value;
         }
 
@@ -2946,9 +2946,9 @@ namespace CssInCs
         /// <para> | **1** _(-webkit-mask-box-image-repeat)_ |   No    | **3.1** _(-webkit-mask-box-image-repeat)_ | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask-border-repeat</para>
         /// </summary>
-        public Property<string> MaskBorderRepeat
+        public Property.MaskBorderRepeat MaskBorderRepeat
         {
-            get => (Property<string>) _properties["mask-border-repeat"];
+            get => (Property.MaskBorderRepeat) _properties["mask-border-repeat"];
             set => _properties["mask-border-repeat"] = value;
         }
 
@@ -2961,9 +2961,9 @@ namespace CssInCs
         /// <para> | **1** _(-webkit-mask-box-image-slice)_ |   No    | **3.1** _(-webkit-mask-box-image-slice)_ | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask-border-slice</para>
         /// </summary>
-        public Property<string> MaskBorderSlice
+        public Property.MaskBorderSlice MaskBorderSlice
         {
-            get => (Property<string>) _properties["mask-border-slice"];
+            get => (Property.MaskBorderSlice) _properties["mask-border-slice"];
             set => _properties["mask-border-slice"] = value;
         }
 
@@ -2976,9 +2976,9 @@ namespace CssInCs
         /// <para> | **1** _(-webkit-mask-box-image-source)_ |   No    | **3.1** _(-webkit-mask-box-image-source)_ | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask-border-source</para>
         /// </summary>
-        public Property<string> MaskBorderSource
+        public Property.MaskBorderSource MaskBorderSource
         {
-            get => (Property<string>) _properties["mask-border-source"];
+            get => (Property.MaskBorderSource) _properties["mask-border-source"];
             set => _properties["mask-border-source"] = value;
         }
 
@@ -2991,9 +2991,9 @@ namespace CssInCs
         /// <para> | **1** _(-webkit-mask-box-image-width)_ |   No    | **3.1** _(-webkit-mask-box-image-width)_ | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask-border-width</para>
         /// </summary>
-        public Property<string> MaskBorderWidth
+        public Property.MaskBorderWidth MaskBorderWidth
         {
-            get => (Property<string>) _properties["mask-border-width"];
+            get => (Property.MaskBorderWidth) _properties["mask-border-width"];
             set => _properties["mask-border-width"] = value;
         }
 
@@ -3007,9 +3007,9 @@ namespace CssInCs
         /// <para> |             |         | 4 _-x-_  |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask-clip</para>
         /// </summary>
-        public Property<string> MaskClip
+        public Property.MaskClip MaskClip
         {
-            get => (Property<string>) _properties["mask-clip"];
+            get => (Property.MaskClip) _properties["mask-clip"];
             set => _properties["mask-clip"] = value;
         }
 
@@ -3022,9 +3022,9 @@ namespace CssInCs
         /// <para> |   No   | **53**  | **15.4** | 18-79 | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask-composite</para>
         /// </summary>
-        public Property<string> MaskComposite
+        public Property.MaskComposite MaskComposite
         {
-            get => (Property<string>) _properties["mask-composite"];
+            get => (Property.MaskComposite) _properties["mask-composite"];
             set => _properties["mask-composite"] = value;
         }
 
@@ -3038,9 +3038,9 @@ namespace CssInCs
         /// <para> |             |         | 4 _-x-_  |       |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask-image</para>
         /// </summary>
-        public Property<string> MaskImage
+        public Property.MaskImage MaskImage
         {
-            get => (Property<string>) _properties["mask-image"];
+            get => (Property.MaskImage) _properties["mask-image"];
             set => _properties["mask-image"] = value;
         }
 
@@ -3053,9 +3053,9 @@ namespace CssInCs
         /// <para> |   No   | **53**  | **15.4** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask-mode</para>
         /// </summary>
-        public Property<string> MaskMode
+        public Property.MaskMode MaskMode
         {
-            get => (Property<string>) _properties["mask-mode"];
+            get => (Property.MaskMode) _properties["mask-mode"];
             set => _properties["mask-mode"] = value;
         }
 
@@ -3069,9 +3069,9 @@ namespace CssInCs
         /// <para> |             |         | 4 _-x-_  |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask-origin</para>
         /// </summary>
-        public Property<string> MaskOrigin
+        public Property.MaskOrigin MaskOrigin
         {
-            get => (Property<string>) _properties["mask-origin"];
+            get => (Property.MaskOrigin) _properties["mask-origin"];
             set => _properties["mask-origin"] = value;
         }
 
@@ -3085,9 +3085,9 @@ namespace CssInCs
         /// <para> |             |         | 3.1 _-x-_ |       |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask-position</para>
         /// </summary>
-        public Property<string> MaskPosition
+        public Property.MaskPosition MaskPosition
         {
-            get => (Property<string>) _properties["mask-position"];
+            get => (Property.MaskPosition) _properties["mask-position"];
             set => _properties["mask-position"] = value;
         }
 
@@ -3101,9 +3101,9 @@ namespace CssInCs
         /// <para> |             |         | 3.1 _-x-_ |       |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask-repeat</para>
         /// </summary>
-        public Property<string> MaskRepeat
+        public Property.MaskRepeat MaskRepeat
         {
-            get => (Property<string>) _properties["mask-repeat"];
+            get => (Property.MaskRepeat) _properties["mask-repeat"];
             set => _properties["mask-repeat"] = value;
         }
 
@@ -3117,9 +3117,9 @@ namespace CssInCs
         /// <para> |             |         | 4 _-x-_  |       |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask-size</para>
         /// </summary>
-        public Property<string> MaskSize
+        public Property.MaskSize MaskSize
         {
-            get => (Property<string>) _properties["mask-size"];
+            get => (Property.MaskSize) _properties["mask-size"];
             set => _properties["mask-size"] = value;
         }
 
@@ -3132,9 +3132,9 @@ namespace CssInCs
         /// <para> | **24** | **35**  | **7**  | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask-type</para>
         /// </summary>
-        public Property<string> MaskType
+        public Property.MaskType MaskType
         {
-            get => (Property<string>) _properties["mask-type"];
+            get => (Property.MaskType) _properties["mask-type"];
             set => _properties["mask-type"] = value;
         }
 
@@ -3147,9 +3147,9 @@ namespace CssInCs
         /// <para> | **109** |   n/a   |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/math-depth</para>
         /// </summary>
-        public Property<string> MathDepth
+        public Property.MathDepth MathDepth
         {
-            get => (Property<string>) _properties["math-depth"];
+            get => (Property.MathDepth) _properties["math-depth"];
             set => _properties["math-depth"] = value;
         }
 
@@ -3162,9 +3162,9 @@ namespace CssInCs
         /// <para> | **109** |   No    |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/math-shift</para>
         /// </summary>
-        public Property<string> MathShift
+        public Property.MathShift MathShift
         {
-            get => (Property<string>) _properties["math-shift"];
+            get => (Property.MathShift) _properties["math-shift"];
             set => _properties["math-shift"] = value;
         }
 
@@ -3177,9 +3177,9 @@ namespace CssInCs
         /// <para> | **109** |   n/a   | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/math-style</para>
         /// </summary>
-        public Property<string> MathStyle
+        public Property.MathStyle MathStyle
         {
-            get => (Property<string>) _properties["math-style"];
+            get => (Property.MathStyle) _properties["math-style"];
             set => _properties["math-style"] = value;
         }
 
@@ -3192,9 +3192,9 @@ namespace CssInCs
         /// <para> | **57** | **41**  | **12.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/max-block-size</para>
         /// </summary>
-        public Property<string> MaxBlockSize
+        public Property.MaxBlockSize MaxBlockSize
         {
-            get => (Property<string>) _properties["max-block-size"];
+            get => (Property.MaxBlockSize) _properties["max-block-size"];
             set => _properties["max-block-size"] = value;
         }
 
@@ -3207,9 +3207,9 @@ namespace CssInCs
         /// <para> | **18** |  **1**  | **1.3** | **12** | **7** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/max-height</para>
         /// </summary>
-        public Property<string> MaxHeight
+        public Property.MaxHeight MaxHeight
         {
-            get => (Property<string>) _properties["max-height"];
+            get => (Property.MaxHeight) _properties["max-height"];
             set => _properties["max-height"] = value;
         }
 
@@ -3223,9 +3223,9 @@ namespace CssInCs
         /// <para> |        |         | 10.1 _-x-_ |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/max-inline-size</para>
         /// </summary>
-        public Property<string> MaxInlineSize
+        public Property.MaxInlineSize MaxInlineSize
         {
-            get => (Property<string>) _properties["max-inline-size"];
+            get => (Property.MaxInlineSize) _properties["max-inline-size"];
             set => _properties["max-inline-size"] = value;
         }
 
@@ -3233,9 +3233,9 @@ namespace CssInCs
         /// **Syntax**: `none | &lt;integer&gt;`
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<string> MaxLines
+        public Property.MaxLines MaxLines
         {
-            get => (Property<string>) _properties["max-lines"];
+            get => (Property.MaxLines) _properties["max-lines"];
             set => _properties["max-lines"] = value;
         }
 
@@ -3248,9 +3248,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **7** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/max-width</para>
         /// </summary>
-        public Property<string> MaxWidth
+        public Property.MaxWidth MaxWidth
         {
-            get => (Property<string>) _properties["max-width"];
+            get => (Property.MaxWidth) _properties["max-width"];
             set => _properties["max-width"] = value;
         }
 
@@ -3263,9 +3263,9 @@ namespace CssInCs
         /// <para> | **57** | **41**  | **12.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/min-block-size</para>
         /// </summary>
-        public Property<string> MinBlockSize
+        public Property.MinBlockSize MinBlockSize
         {
-            get => (Property<string>) _properties["min-block-size"];
+            get => (Property.MinBlockSize) _properties["min-block-size"];
             set => _properties["min-block-size"] = value;
         }
 
@@ -3278,9 +3278,9 @@ namespace CssInCs
         /// <para> | **1**  |  **3**  | **1.3** | **12** | **7** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/min-height</para>
         /// </summary>
-        public Property<string> MinHeight
+        public Property.MinHeight MinHeight
         {
-            get => (Property<string>) _properties["min-height"];
+            get => (Property.MinHeight) _properties["min-height"];
             set => _properties["min-height"] = value;
         }
 
@@ -3293,9 +3293,9 @@ namespace CssInCs
         /// <para> | **57** | **41**  | **12.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/min-inline-size</para>
         /// </summary>
-        public Property<string> MinInlineSize
+        public Property.MinInlineSize MinInlineSize
         {
-            get => (Property<string>) _properties["min-inline-size"];
+            get => (Property.MinInlineSize) _properties["min-inline-size"];
             set => _properties["min-inline-size"] = value;
         }
 
@@ -3308,9 +3308,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **7** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/min-width</para>
         /// </summary>
-        public Property<string> MinWidth
+        public Property.MinWidth MinWidth
         {
-            get => (Property<string>) _properties["min-width"];
+            get => (Property.MinWidth) _properties["min-width"];
             set => _properties["min-width"] = value;
         }
 
@@ -3323,9 +3323,9 @@ namespace CssInCs
         /// <para> | **41** | **32**  | **8**  | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mix-blend-mode</para>
         /// </summary>
-        public Property<string> MixBlendMode
+        public Property.MixBlendMode MixBlendMode
         {
-            get => (Property<string>) _properties["mix-blend-mode"];
+            get => (Property.MixBlendMode) _properties["mix-blend-mode"];
             set => _properties["mix-blend-mode"] = value;
         }
 
@@ -3339,9 +3339,9 @@ namespace CssInCs
         /// <para> | 46 _(motion-distance)_ |         |             |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/offset-distance</para>
         /// </summary>
-        public Property<string> MotionDistance
+        public Property.OffsetDistance MotionDistance
         {
-            get => (Property<string>) _properties["motion-distance"];
+            get => (Property.OffsetDistance) _properties["motion-distance"];
             set => _properties["motion-distance"] = value;
         }
 
@@ -3355,9 +3355,9 @@ namespace CssInCs
         /// <para> | 46 _(motion-path)_ |         |          |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/offset-path</para>
         /// </summary>
-        public Property<string> MotionPath
+        public Property.OffsetPath MotionPath
         {
-            get => (Property<string>) _properties["motion-path"];
+            get => (Property.OffsetPath) _properties["motion-path"];
             set => _properties["motion-path"] = value;
         }
 
@@ -3371,9 +3371,9 @@ namespace CssInCs
         /// <para> | 46 _(motion-rotation)_ |         |             |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/offset-rotate</para>
         /// </summary>
-        public Property<string> MotionRotation
+        public Property.OffsetRotate MotionRotation
         {
-            get => (Property<string>) _properties["motion-rotation"];
+            get => (Property.OffsetRotate) _properties["motion-rotation"];
             set => _properties["motion-rotation"] = value;
         }
 
@@ -3386,9 +3386,9 @@ namespace CssInCs
         /// <para> | **32** | **36**  | **10** | **79** | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/object-fit</para>
         /// </summary>
-        public Property<string> ObjectFit
+        public Property.ObjectFit ObjectFit
         {
-            get => (Property<string>) _properties["object-fit"];
+            get => (Property.ObjectFit) _properties["object-fit"];
             set => _properties["object-fit"] = value;
         }
 
@@ -3401,9 +3401,9 @@ namespace CssInCs
         /// <para> | **32** | **36**  | **10** | **79** | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/object-position</para>
         /// </summary>
-        public Property<string> ObjectPosition
+        public Property.ObjectPosition ObjectPosition
         {
-            get => (Property<string>) _properties["object-position"];
+            get => (Property.ObjectPosition) _properties["object-position"];
             set => _properties["object-position"] = value;
         }
 
@@ -3415,9 +3415,9 @@ namespace CssInCs
         /// <para> |   No   | **72**  | **preview** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/offset-anchor</para>
         /// </summary>
-        public Property<string> OffsetAnchor
+        public Property.OffsetAnchor OffsetAnchor
         {
-            get => (Property<string>) _properties["offset-anchor"];
+            get => (Property.OffsetAnchor) _properties["offset-anchor"];
             set => _properties["offset-anchor"] = value;
         }
 
@@ -3431,9 +3431,9 @@ namespace CssInCs
         /// <para> | 46 _(motion-distance)_ |         |             |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/offset-distance</para>
         /// </summary>
-        public Property<string> OffsetDistance
+        public Property.OffsetDistance OffsetDistance
         {
-            get => (Property<string>) _properties["offset-distance"];
+            get => (Property.OffsetDistance) _properties["offset-distance"];
             set => _properties["offset-distance"] = value;
         }
 
@@ -3447,9 +3447,9 @@ namespace CssInCs
         /// <para> | 46 _(motion-path)_ |         |          |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/offset-path</para>
         /// </summary>
-        public Property<string> OffsetPath
+        public Property.OffsetPath OffsetPath
         {
-            get => (Property<string>) _properties["offset-path"];
+            get => (Property.OffsetPath) _properties["offset-path"];
             set => _properties["offset-path"] = value;
         }
 
@@ -3461,9 +3461,9 @@ namespace CssInCs
         /// <para> |   No   |   No    | **preview** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/offset-position</para>
         /// </summary>
-        public Property<string> OffsetPosition
+        public Property.OffsetPosition OffsetPosition
         {
-            get => (Property<string>) _properties["offset-position"];
+            get => (Property.OffsetPosition) _properties["offset-position"];
             set => _properties["offset-position"] = value;
         }
 
@@ -3477,9 +3477,9 @@ namespace CssInCs
         /// <para> | 46 _(motion-rotation)_ |         |             |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/offset-rotate</para>
         /// </summary>
-        public Property<string> OffsetRotate
+        public Property.OffsetRotate OffsetRotate
         {
-            get => (Property<string>) _properties["offset-rotate"];
+            get => (Property.OffsetRotate) _properties["offset-rotate"];
             set => _properties["offset-rotate"] = value;
         }
 
@@ -3493,9 +3493,9 @@ namespace CssInCs
         /// <para> | 46 _(motion-rotation)_ |         |             |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/offset-rotate</para>
         /// </summary>
-        public Property<string> OffsetRotation
+        public Property.OffsetRotate OffsetRotation
         {
-            get => (Property<string>) _properties["offset-rotation"];
+            get => (Property.OffsetRotate) _properties["offset-rotation"];
             set => _properties["offset-rotation"] = value;
         }
 
@@ -3508,9 +3508,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **2**  | **12** | **9** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/opacity</para>
         /// </summary>
-        public Property<string> Opacity
+        public Property.Opacity Opacity
         {
-            get => (Property<string>) _properties["opacity"];
+            get => (Property.Opacity) _properties["opacity"];
             set => _properties["opacity"] = value;
         }
 
@@ -3524,9 +3524,9 @@ namespace CssInCs
         /// <para> | 21 _-x-_ |         | 7 _-x-_ |        | 10 _-x-_ |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/order</para>
         /// </summary>
-        public Property<string> Order
+        public Property.Order Order
         {
-            get => (Property<string>) _properties["order"];
+            get => (Property.Order) _properties["order"];
             set => _properties["order"] = value;
         }
 
@@ -3539,9 +3539,9 @@ namespace CssInCs
         /// <para> | **25** |   No    | **1.3** | **12** | **8** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/orphans</para>
         /// </summary>
-        public Property<string> Orphans
+        public Property.Orphans Orphans
         {
-            get => (Property<string>) _properties["orphans"];
+            get => (Property.Orphans) _properties["orphans"];
             set => _properties["orphans"] = value;
         }
 
@@ -3554,9 +3554,9 @@ namespace CssInCs
         /// <para> | **1**  | **1.5** | **1.2** | **12** | **8** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/outline-color</para>
         /// </summary>
-        public Property<string> OutlineColor
+        public Property.OutlineColor OutlineColor
         {
-            get => (Property<string>) _properties["outline-color"];
+            get => (Property.OutlineColor) _properties["outline-color"];
             set => _properties["outline-color"] = value;
         }
 
@@ -3569,9 +3569,9 @@ namespace CssInCs
         /// <para> | **1**  | **1.5** | **1.2** | **15** | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/outline-offset</para>
         /// </summary>
-        public Property<string> OutlineOffset
+        public Property.OutlineOffset OutlineOffset
         {
-            get => (Property<string>) _properties["outline-offset"];
+            get => (Property.OutlineOffset) _properties["outline-offset"];
             set => _properties["outline-offset"] = value;
         }
 
@@ -3584,9 +3584,9 @@ namespace CssInCs
         /// <para> | **1**  | **1.5** | **1.2** | **12** | **8** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/outline-style</para>
         /// </summary>
-        public Property<string> OutlineStyle
+        public Property.OutlineStyle OutlineStyle
         {
-            get => (Property<string>) _properties["outline-style"];
+            get => (Property.OutlineStyle) _properties["outline-style"];
             set => _properties["outline-style"] = value;
         }
 
@@ -3599,9 +3599,9 @@ namespace CssInCs
         /// <para> | **1**  | **1.5** | **1.2** | **12** | **8** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/outline-width</para>
         /// </summary>
-        public Property<string> OutlineWidth
+        public Property.OutlineWidth OutlineWidth
         {
-            get => (Property<string>) _properties["outline-width"];
+            get => (Property.OutlineWidth) _properties["outline-width"];
             set => _properties["outline-width"] = value;
         }
 
@@ -3613,9 +3613,9 @@ namespace CssInCs
         /// <para> | **56** | **66**  |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/overflow-anchor</para>
         /// </summary>
-        public Property<string> OverflowAnchor
+        public Property.OverflowAnchor OverflowAnchor
         {
-            get => (Property<string>) _properties["overflow-anchor"];
+            get => (Property.OverflowAnchor) _properties["overflow-anchor"];
             set => _properties["overflow-anchor"] = value;
         }
 
@@ -3627,9 +3627,9 @@ namespace CssInCs
         /// <para> |   No   | **69**  |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/overflow-block</para>
         /// </summary>
-        public Property<string> OverflowBlock
+        public Property.OverflowBlock OverflowBlock
         {
-            get => (Property<string>) _properties["overflow-block"];
+            get => (Property.OverflowBlock) _properties["overflow-block"];
             set => _properties["overflow-block"] = value;
         }
 
@@ -3642,9 +3642,9 @@ namespace CssInCs
         /// <para> |   No   | **29**  |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Mozilla/Gecko/Chrome/CSS/overflow-clip-box</para>
         /// </summary>
-        public Property<string> OverflowClipBox
+        public Property.OverflowClipBox OverflowClipBox
         {
-            get => (Property<string>) _properties["overflow-clip-box"];
+            get => (Property.OverflowClipBox) _properties["overflow-clip-box"];
             set => _properties["overflow-clip-box"] = value;
         }
 
@@ -3656,9 +3656,9 @@ namespace CssInCs
         /// <para> | **90** | **102** |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/overflow-clip-margin</para>
         /// </summary>
-        public Property<string> OverflowClipMargin
+        public Property.OverflowClipMargin OverflowClipMargin
         {
-            get => (Property<string>) _properties["overflow-clip-margin"];
+            get => (Property.OverflowClipMargin) _properties["overflow-clip-margin"];
             set => _properties["overflow-clip-margin"] = value;
         }
 
@@ -3670,9 +3670,9 @@ namespace CssInCs
         /// <para> |   No   | **69**  |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/overflow-inline</para>
         /// </summary>
-        public Property<string> OverflowInline
+        public Property.OverflowInline OverflowInline
         {
-            get => (Property<string>) _properties["overflow-inline"];
+            get => (Property.OverflowInline) _properties["overflow-inline"];
             set => _properties["overflow-inline"] = value;
         }
 
@@ -3686,9 +3686,9 @@ namespace CssInCs
         /// <para> | 1 _(word-wrap)_ | 3.5 _(word-wrap)_ | 1 _(word-wrap)_ | 12 _(word-wrap)_ |                       |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/overflow-wrap</para>
         /// </summary>
-        public Property<string> OverflowWrap
+        public Property.OverflowWrap OverflowWrap
         {
-            get => (Property<string>) _properties["overflow-wrap"];
+            get => (Property.OverflowWrap) _properties["overflow-wrap"];
             set => _properties["overflow-wrap"] = value;
         }
 
@@ -3701,9 +3701,9 @@ namespace CssInCs
         /// <para> | **1**  | **3.5** | **3**  | **12** | **5** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/overflow-x</para>
         /// </summary>
-        public Property<string> OverflowX
+        public Property.OverflowX OverflowX
         {
-            get => (Property<string>) _properties["overflow-x"];
+            get => (Property.OverflowX) _properties["overflow-x"];
             set => _properties["overflow-x"] = value;
         }
 
@@ -3716,9 +3716,9 @@ namespace CssInCs
         /// <para> | **1**  | **3.5** | **3**  | **12** | **5** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/overflow-y</para>
         /// </summary>
-        public Property<string> OverflowY
+        public Property.OverflowY OverflowY
         {
-            get => (Property<string>) _properties["overflow-y"];
+            get => (Property.OverflowY) _properties["overflow-y"];
             set => _properties["overflow-y"] = value;
         }
 
@@ -3731,9 +3731,9 @@ namespace CssInCs
         /// <para> | **77** | **73**  | **16** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/overscroll-behavior-block</para>
         /// </summary>
-        public Property<string> OverscrollBehaviorBlock
+        public Property.OverscrollBehaviorBlock OverscrollBehaviorBlock
         {
-            get => (Property<string>) _properties["overscroll-behavior-block"];
+            get => (Property.OverscrollBehaviorBlock) _properties["overscroll-behavior-block"];
             set => _properties["overscroll-behavior-block"] = value;
         }
 
@@ -3746,9 +3746,9 @@ namespace CssInCs
         /// <para> | **77** | **73**  | **16** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/overscroll-behavior-inline</para>
         /// </summary>
-        public Property<string> OverscrollBehaviorInline
+        public Property.OverscrollBehaviorInline OverscrollBehaviorInline
         {
-            get => (Property<string>) _properties["overscroll-behavior-inline"];
+            get => (Property.OverscrollBehaviorInline) _properties["overscroll-behavior-inline"];
             set => _properties["overscroll-behavior-inline"] = value;
         }
 
@@ -3761,9 +3761,9 @@ namespace CssInCs
         /// <para> | **63** | **59**  | **16** | **18** | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/overscroll-behavior-x</para>
         /// </summary>
-        public Property<string> OverscrollBehaviorX
+        public Property.OverscrollBehaviorX OverscrollBehaviorX
         {
-            get => (Property<string>) _properties["overscroll-behavior-x"];
+            get => (Property.OverscrollBehaviorX) _properties["overscroll-behavior-x"];
             set => _properties["overscroll-behavior-x"] = value;
         }
 
@@ -3776,9 +3776,9 @@ namespace CssInCs
         /// <para> | **63** | **59**  | **16** | **18** | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/overscroll-behavior-y</para>
         /// </summary>
-        public Property<string> OverscrollBehaviorY
+        public Property.OverscrollBehaviorY OverscrollBehaviorY
         {
-            get => (Property<string>) _properties["overscroll-behavior-y"];
+            get => (Property.OverscrollBehaviorY) _properties["overscroll-behavior-y"];
             set => _properties["overscroll-behavior-y"] = value;
         }
 
@@ -3791,9 +3791,9 @@ namespace CssInCs
         /// <para> | **87** | **41**  | **12.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/padding-block-end</para>
         /// </summary>
-        public Property<string> PaddingBlockEnd
+        public Property.PaddingBlockEnd PaddingBlockEnd
         {
-            get => (Property<string>) _properties["padding-block-end"];
+            get => (Property.PaddingBlockEnd) _properties["padding-block-end"];
             set => _properties["padding-block-end"] = value;
         }
 
@@ -3806,9 +3806,9 @@ namespace CssInCs
         /// <para> | **87** | **41**  | **12.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/padding-block-start</para>
         /// </summary>
-        public Property<string> PaddingBlockStart
+        public Property.PaddingBlockStart PaddingBlockStart
         {
-            get => (Property<string>) _properties["padding-block-start"];
+            get => (Property.PaddingBlockStart) _properties["padding-block-start"];
             set => _properties["padding-block-start"] = value;
         }
 
@@ -3821,9 +3821,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/padding-bottom</para>
         /// </summary>
-        public Property<string> PaddingBottom
+        public Property.PaddingBottom PaddingBottom
         {
-            get => (Property<string>) _properties["padding-bottom"];
+            get => (Property.PaddingBottom) _properties["padding-bottom"];
             set => _properties["padding-bottom"] = value;
         }
 
@@ -3837,9 +3837,9 @@ namespace CssInCs
         /// <para> | 2 _(-webkit-padding-end)_ | 3 _(-moz-padding-end)_ | 3 _(-webkit-padding-end)_ |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/padding-inline-end</para>
         /// </summary>
-        public Property<string> PaddingInlineEnd
+        public Property.PaddingInlineEnd PaddingInlineEnd
         {
-            get => (Property<string>) _properties["padding-inline-end"];
+            get => (Property.PaddingInlineEnd) _properties["padding-inline-end"];
             set => _properties["padding-inline-end"] = value;
         }
 
@@ -3853,9 +3853,9 @@ namespace CssInCs
         /// <para> | 2 _(-webkit-padding-start)_ | 3 _(-moz-padding-start)_ | 3 _(-webkit-padding-start)_ |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/padding-inline-start</para>
         /// </summary>
-        public Property<string> PaddingInlineStart
+        public Property.PaddingInlineStart PaddingInlineStart
         {
-            get => (Property<string>) _properties["padding-inline-start"];
+            get => (Property.PaddingInlineStart) _properties["padding-inline-start"];
             set => _properties["padding-inline-start"] = value;
         }
 
@@ -3868,9 +3868,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/padding-left</para>
         /// </summary>
-        public Property<string> PaddingLeft
+        public Property.PaddingLeft PaddingLeft
         {
-            get => (Property<string>) _properties["padding-left"];
+            get => (Property.PaddingLeft) _properties["padding-left"];
             set => _properties["padding-left"] = value;
         }
 
@@ -3883,9 +3883,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/padding-right</para>
         /// </summary>
-        public Property<string> PaddingRight
+        public Property.PaddingRight PaddingRight
         {
-            get => (Property<string>) _properties["padding-right"];
+            get => (Property.PaddingRight) _properties["padding-right"];
             set => _properties["padding-right"] = value;
         }
 
@@ -3898,9 +3898,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/padding-top</para>
         /// </summary>
-        public Property<string> PaddingTop
+        public Property.PaddingTop PaddingTop
         {
-            get => (Property<string>) _properties["padding-top"];
+            get => (Property.PaddingTop) _properties["padding-top"];
             set => _properties["padding-top"] = value;
         }
 
@@ -3913,9 +3913,9 @@ namespace CssInCs
         /// <para> | **85** | **110** | **preview** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/page</para>
         /// </summary>
-        public Property<string> Page
+        public Property.Page Page
         {
-            get => (Property<string>) _properties["page"];
+            get => (Property.Page) _properties["page"];
             set => _properties["page"] = value;
         }
 
@@ -3928,9 +3928,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1.2** | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/page-break-after</para>
         /// </summary>
-        public Property<string> PageBreakAfter
+        public Property.PageBreakAfter PageBreakAfter
         {
-            get => (Property<string>) _properties["page-break-after"];
+            get => (Property.PageBreakAfter) _properties["page-break-after"];
             set => _properties["page-break-after"] = value;
         }
 
@@ -3943,9 +3943,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1.2** | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/page-break-before</para>
         /// </summary>
-        public Property<string> PageBreakBefore
+        public Property.PageBreakBefore PageBreakBefore
         {
-            get => (Property<string>) _properties["page-break-before"];
+            get => (Property.PageBreakBefore) _properties["page-break-before"];
             set => _properties["page-break-before"] = value;
         }
 
@@ -3958,9 +3958,9 @@ namespace CssInCs
         /// <para> | **1**  | **19**  | **1.3** | **12** | **8** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/page-break-inside</para>
         /// </summary>
-        public Property<string> PageBreakInside
+        public Property.PageBreakInside PageBreakInside
         {
-            get => (Property<string>) _properties["page-break-inside"];
+            get => (Property.PageBreakInside) _properties["page-break-inside"];
             set => _properties["page-break-inside"] = value;
         }
 
@@ -3973,9 +3973,9 @@ namespace CssInCs
         /// <para> | **35** | **60**  | **8**  | **17** | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/paint-order</para>
         /// </summary>
-        public Property<string> PaintOrder
+        public Property.PaintOrder PaintOrder
         {
-            get => (Property<string>) _properties["paint-order"];
+            get => (Property.PaintOrder) _properties["paint-order"];
             set => _properties["paint-order"] = value;
         }
 
@@ -3989,9 +3989,9 @@ namespace CssInCs
         /// <para> | 12 _-x-_ | 10 _-x-_ | 4 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/perspective</para>
         /// </summary>
-        public Property<string> Perspective
+        public Property.Perspective Perspective
         {
-            get => (Property<string>) _properties["perspective"];
+            get => (Property.Perspective) _properties["perspective"];
             set => _properties["perspective"] = value;
         }
 
@@ -4005,9 +4005,9 @@ namespace CssInCs
         /// <para> | 12 _-x-_ | 10 _-x-_ | 4 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/perspective-origin</para>
         /// </summary>
-        public Property<string> PerspectiveOrigin
+        public Property.PerspectiveOrigin PerspectiveOrigin
         {
-            get => (Property<string>) _properties["perspective-origin"];
+            get => (Property.PerspectiveOrigin) _properties["perspective-origin"];
             set => _properties["perspective-origin"] = value;
         }
 
@@ -4020,9 +4020,9 @@ namespace CssInCs
         /// <para> | **1**  | **1.5** | **4**  | **12** | **11** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/pointer-events</para>
         /// </summary>
-        public Property<string> PointerEvents
+        public Property.PointerEvents PointerEvents
         {
-            get => (Property<string>) _properties["pointer-events"];
+            get => (Property.PointerEvents) _properties["pointer-events"];
             set => _properties["pointer-events"] = value;
         }
 
@@ -4035,9 +4035,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/position</para>
         /// </summary>
-        public Property<string> Position
+        public Property.Position Position
         {
-            get => (Property<string>) _properties["position"];
+            get => (Property.Position) _properties["position"];
             set => _properties["position"] = value;
         }
 
@@ -4051,9 +4051,9 @@ namespace CssInCs
         /// <para> |              | 48 _(color-adjust)_ | 6 _-x-_  |              |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/print-color-adjust</para>
         /// </summary>
-        public Property<string> PrintColorAdjust
+        public Property.PrintColorAdjust PrintColorAdjust
         {
-            get => (Property<string>) _properties["print-color-adjust"];
+            get => (Property.PrintColorAdjust) _properties["print-color-adjust"];
             set => _properties["print-color-adjust"] = value;
         }
 
@@ -4066,9 +4066,9 @@ namespace CssInCs
         /// <para> | **11** | **1.5** | **9**  | **12** | **8** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/quotes</para>
         /// </summary>
-        public Property<string> Quotes
+        public Property.Quotes Quotes
         {
-            get => (Property<string>) _properties["quotes"];
+            get => (Property.Quotes) _properties["quotes"];
             set => _properties["quotes"] = value;
         }
 
@@ -4081,9 +4081,9 @@ namespace CssInCs
         /// <para> | **1**  |  **4**  | **3**  | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/resize</para>
         /// </summary>
-        public Property<string> Resize
+        public Property.Resize Resize
         {
-            get => (Property<string>) _properties["resize"];
+            get => (Property.Resize) _properties["resize"];
             set => _properties["resize"] = value;
         }
 
@@ -4096,9 +4096,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **5.5** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/right</para>
         /// </summary>
-        public Property<string> Right
+        public Property.Right Right
         {
-            get => (Property<string>) _properties["right"];
+            get => (Property.Right) _properties["right"];
             set => _properties["right"] = value;
         }
 
@@ -4111,9 +4111,9 @@ namespace CssInCs
         /// <para> | **104** | **72**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/rotate</para>
         /// </summary>
-        public Property<string> Rotate
+        public Property.Rotate Rotate
         {
-            get => (Property<string>) _properties["rotate"];
+            get => (Property.Rotate) _properties["rotate"];
             set => _properties["rotate"] = value;
         }
 
@@ -4126,9 +4126,9 @@ namespace CssInCs
         /// <para> | **47** | **52**  | **10.1** | **16** | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/row-gap</para>
         /// </summary>
-        public Property<string> RowGap
+        public Property.RowGap RowGap
         {
-            get => (Property<string>) _properties["row-gap"];
+            get => (Property.RowGap) _properties["row-gap"];
             set => _properties["row-gap"] = value;
         }
 
@@ -4141,9 +4141,9 @@ namespace CssInCs
         /// <para> |   No   | **38**  |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/ruby-align</para>
         /// </summary>
-        public Property<string> RubyAlign
+        public Property.RubyAlign RubyAlign
         {
-            get => (Property<string>) _properties["ruby-align"];
+            get => (Property.RubyAlign) _properties["ruby-align"];
             set => _properties["ruby-align"] = value;
         }
 
@@ -4151,9 +4151,9 @@ namespace CssInCs
         /// **Syntax**: `separate | collapse | auto`
         /// <para> **Initial value**: `separate`</para>
         /// </summary>
-        public Property<string> RubyMerge
+        public Property.RubyMerge RubyMerge
         {
-            get => (Property<string>) _properties["ruby-merge"];
+            get => (Property.RubyMerge) _properties["ruby-merge"];
             set => _properties["ruby-merge"] = value;
         }
 
@@ -4167,9 +4167,9 @@ namespace CssInCs
         /// <para> | 1 _-x-_ |         |             |       |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/ruby-position</para>
         /// </summary>
-        public Property<string> RubyPosition
+        public Property.RubyPosition RubyPosition
         {
-            get => (Property<string>) _properties["ruby-position"];
+            get => (Property.RubyPosition) _properties["ruby-position"];
             set => _properties["ruby-position"] = value;
         }
 
@@ -4182,9 +4182,9 @@ namespace CssInCs
         /// <para> | **104** | **72**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scale</para>
         /// </summary>
-        public Property<string> Scale
+        public Property.Scale Scale
         {
-            get => (Property<string>) _properties["scale"];
+            get => (Property.Scale) _properties["scale"];
             set => _properties["scale"] = value;
         }
 
@@ -4197,9 +4197,9 @@ namespace CssInCs
         /// <para> | **61** | **36**  | **15.4** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-behavior</para>
         /// </summary>
-        public Property<string> ScrollBehavior
+        public Property.ScrollBehavior ScrollBehavior
         {
-            get => (Property<string>) _properties["scroll-behavior"];
+            get => (Property.ScrollBehavior) _properties["scroll-behavior"];
             set => _properties["scroll-behavior"] = value;
         }
 
@@ -4212,9 +4212,9 @@ namespace CssInCs
         /// <para> | **69** | **68**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-block-end</para>
         /// </summary>
-        public Property<string> ScrollMarginBlockEnd
+        public Property.ScrollMarginBlockEnd ScrollMarginBlockEnd
         {
-            get => (Property<string>) _properties["scroll-margin-block-end"];
+            get => (Property.ScrollMarginBlockEnd) _properties["scroll-margin-block-end"];
             set => _properties["scroll-margin-block-end"] = value;
         }
 
@@ -4227,9 +4227,9 @@ namespace CssInCs
         /// <para> | **69** | **68**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-block-start</para>
         /// </summary>
-        public Property<string> ScrollMarginBlockStart
+        public Property.ScrollMarginBlockStart ScrollMarginBlockStart
         {
-            get => (Property<string>) _properties["scroll-margin-block-start"];
+            get => (Property.ScrollMarginBlockStart) _properties["scroll-margin-block-start"];
             set => _properties["scroll-margin-block-start"] = value;
         }
 
@@ -4243,9 +4243,9 @@ namespace CssInCs
         /// <para> |        |         | 11 _(scroll-snap-margin-bottom)_ |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-bottom</para>
         /// </summary>
-        public Property<string> ScrollMarginBottom
+        public Property.ScrollMarginBottom ScrollMarginBottom
         {
-            get => (Property<string>) _properties["scroll-margin-bottom"];
+            get => (Property.ScrollMarginBottom) _properties["scroll-margin-bottom"];
             set => _properties["scroll-margin-bottom"] = value;
         }
 
@@ -4258,9 +4258,9 @@ namespace CssInCs
         /// <para> | **69** | **68**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-inline-end</para>
         /// </summary>
-        public Property<string> ScrollMarginInlineEnd
+        public Property.ScrollMarginInlineEnd ScrollMarginInlineEnd
         {
-            get => (Property<string>) _properties["scroll-margin-inline-end"];
+            get => (Property.ScrollMarginInlineEnd) _properties["scroll-margin-inline-end"];
             set => _properties["scroll-margin-inline-end"] = value;
         }
 
@@ -4273,9 +4273,9 @@ namespace CssInCs
         /// <para> | **69** | **68**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-inline-start</para>
         /// </summary>
-        public Property<string> ScrollMarginInlineStart
+        public Property.ScrollMarginInlineStart ScrollMarginInlineStart
         {
-            get => (Property<string>) _properties["scroll-margin-inline-start"];
+            get => (Property.ScrollMarginInlineStart) _properties["scroll-margin-inline-start"];
             set => _properties["scroll-margin-inline-start"] = value;
         }
 
@@ -4289,9 +4289,9 @@ namespace CssInCs
         /// <para> |        |         | 11 _(scroll-snap-margin-left)_ |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-left</para>
         /// </summary>
-        public Property<string> ScrollMarginLeft
+        public Property.ScrollMarginLeft ScrollMarginLeft
         {
-            get => (Property<string>) _properties["scroll-margin-left"];
+            get => (Property.ScrollMarginLeft) _properties["scroll-margin-left"];
             set => _properties["scroll-margin-left"] = value;
         }
 
@@ -4305,9 +4305,9 @@ namespace CssInCs
         /// <para> |        |         | 11 _(scroll-snap-margin-right)_ |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-right</para>
         /// </summary>
-        public Property<string> ScrollMarginRight
+        public Property.ScrollMarginRight ScrollMarginRight
         {
-            get => (Property<string>) _properties["scroll-margin-right"];
+            get => (Property.ScrollMarginRight) _properties["scroll-margin-right"];
             set => _properties["scroll-margin-right"] = value;
         }
 
@@ -4321,9 +4321,9 @@ namespace CssInCs
         /// <para> |        |         | 11 _(scroll-snap-margin-top)_ |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-top</para>
         /// </summary>
-        public Property<string> ScrollMarginTop
+        public Property.ScrollMarginTop ScrollMarginTop
         {
-            get => (Property<string>) _properties["scroll-margin-top"];
+            get => (Property.ScrollMarginTop) _properties["scroll-margin-top"];
             set => _properties["scroll-margin-top"] = value;
         }
 
@@ -4336,9 +4336,9 @@ namespace CssInCs
         /// <para> | **69** | **68**  | **15** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-padding-block-end</para>
         /// </summary>
-        public Property<string> ScrollPaddingBlockEnd
+        public Property.ScrollPaddingBlockEnd ScrollPaddingBlockEnd
         {
-            get => (Property<string>) _properties["scroll-padding-block-end"];
+            get => (Property.ScrollPaddingBlockEnd) _properties["scroll-padding-block-end"];
             set => _properties["scroll-padding-block-end"] = value;
         }
 
@@ -4351,9 +4351,9 @@ namespace CssInCs
         /// <para> | **69** | **68**  | **15** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-padding-block-start</para>
         /// </summary>
-        public Property<string> ScrollPaddingBlockStart
+        public Property.ScrollPaddingBlockStart ScrollPaddingBlockStart
         {
-            get => (Property<string>) _properties["scroll-padding-block-start"];
+            get => (Property.ScrollPaddingBlockStart) _properties["scroll-padding-block-start"];
             set => _properties["scroll-padding-block-start"] = value;
         }
 
@@ -4366,9 +4366,9 @@ namespace CssInCs
         /// <para> | **69** | **68**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-padding-bottom</para>
         /// </summary>
-        public Property<string> ScrollPaddingBottom
+        public Property.ScrollPaddingBottom ScrollPaddingBottom
         {
-            get => (Property<string>) _properties["scroll-padding-bottom"];
+            get => (Property.ScrollPaddingBottom) _properties["scroll-padding-bottom"];
             set => _properties["scroll-padding-bottom"] = value;
         }
 
@@ -4381,9 +4381,9 @@ namespace CssInCs
         /// <para> | **69** | **68**  | **15** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-padding-inline-end</para>
         /// </summary>
-        public Property<string> ScrollPaddingInlineEnd
+        public Property.ScrollPaddingInlineEnd ScrollPaddingInlineEnd
         {
-            get => (Property<string>) _properties["scroll-padding-inline-end"];
+            get => (Property.ScrollPaddingInlineEnd) _properties["scroll-padding-inline-end"];
             set => _properties["scroll-padding-inline-end"] = value;
         }
 
@@ -4396,9 +4396,9 @@ namespace CssInCs
         /// <para> | **69** | **68**  | **15** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-padding-inline-start</para>
         /// </summary>
-        public Property<string> ScrollPaddingInlineStart
+        public Property.ScrollPaddingInlineStart ScrollPaddingInlineStart
         {
-            get => (Property<string>) _properties["scroll-padding-inline-start"];
+            get => (Property.ScrollPaddingInlineStart) _properties["scroll-padding-inline-start"];
             set => _properties["scroll-padding-inline-start"] = value;
         }
 
@@ -4411,9 +4411,9 @@ namespace CssInCs
         /// <para> | **69** | **68**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-padding-left</para>
         /// </summary>
-        public Property<string> ScrollPaddingLeft
+        public Property.ScrollPaddingLeft ScrollPaddingLeft
         {
-            get => (Property<string>) _properties["scroll-padding-left"];
+            get => (Property.ScrollPaddingLeft) _properties["scroll-padding-left"];
             set => _properties["scroll-padding-left"] = value;
         }
 
@@ -4426,9 +4426,9 @@ namespace CssInCs
         /// <para> | **69** | **68**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-padding-right</para>
         /// </summary>
-        public Property<string> ScrollPaddingRight
+        public Property.ScrollPaddingRight ScrollPaddingRight
         {
-            get => (Property<string>) _properties["scroll-padding-right"];
+            get => (Property.ScrollPaddingRight) _properties["scroll-padding-right"];
             set => _properties["scroll-padding-right"] = value;
         }
 
@@ -4441,9 +4441,9 @@ namespace CssInCs
         /// <para> | **69** | **68**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-padding-top</para>
         /// </summary>
-        public Property<string> ScrollPaddingTop
+        public Property.ScrollPaddingTop ScrollPaddingTop
         {
-            get => (Property<string>) _properties["scroll-padding-top"];
+            get => (Property.ScrollPaddingTop) _properties["scroll-padding-top"];
             set => _properties["scroll-padding-top"] = value;
         }
 
@@ -4456,9 +4456,9 @@ namespace CssInCs
         /// <para> | **69** | **68**  | **11** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-snap-align</para>
         /// </summary>
-        public Property<string> ScrollSnapAlign
+        public Property.ScrollSnapAlign ScrollSnapAlign
         {
-            get => (Property<string>) _properties["scroll-snap-align"];
+            get => (Property.ScrollSnapAlign) _properties["scroll-snap-align"];
             set => _properties["scroll-snap-align"] = value;
         }
 
@@ -4472,9 +4472,9 @@ namespace CssInCs
         /// <para> |        |         | 11 _(scroll-snap-margin-bottom)_ |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-bottom</para>
         /// </summary>
-        public Property<string> ScrollSnapMarginBottom
+        public Property.ScrollMarginBottom ScrollSnapMarginBottom
         {
-            get => (Property<string>) _properties["scroll-snap-margin-bottom"];
+            get => (Property.ScrollMarginBottom) _properties["scroll-snap-margin-bottom"];
             set => _properties["scroll-snap-margin-bottom"] = value;
         }
 
@@ -4488,9 +4488,9 @@ namespace CssInCs
         /// <para> |        |         | 11 _(scroll-snap-margin-left)_ |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-left</para>
         /// </summary>
-        public Property<string> ScrollSnapMarginLeft
+        public Property.ScrollMarginLeft ScrollSnapMarginLeft
         {
-            get => (Property<string>) _properties["scroll-snap-margin-left"];
+            get => (Property.ScrollMarginLeft) _properties["scroll-snap-margin-left"];
             set => _properties["scroll-snap-margin-left"] = value;
         }
 
@@ -4504,9 +4504,9 @@ namespace CssInCs
         /// <para> |        |         | 11 _(scroll-snap-margin-right)_ |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-right</para>
         /// </summary>
-        public Property<string> ScrollSnapMarginRight
+        public Property.ScrollMarginRight ScrollSnapMarginRight
         {
-            get => (Property<string>) _properties["scroll-snap-margin-right"];
+            get => (Property.ScrollMarginRight) _properties["scroll-snap-margin-right"];
             set => _properties["scroll-snap-margin-right"] = value;
         }
 
@@ -4520,9 +4520,9 @@ namespace CssInCs
         /// <para> |        |         | 11 _(scroll-snap-margin-top)_ |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-top</para>
         /// </summary>
-        public Property<string> ScrollSnapMarginTop
+        public Property.ScrollMarginTop ScrollSnapMarginTop
         {
-            get => (Property<string>) _properties["scroll-snap-margin-top"];
+            get => (Property.ScrollMarginTop) _properties["scroll-snap-margin-top"];
             set => _properties["scroll-snap-margin-top"] = value;
         }
 
@@ -4535,9 +4535,9 @@ namespace CssInCs
         /// <para> | **75** | **103** | **15** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-snap-stop</para>
         /// </summary>
-        public Property<string> ScrollSnapStop
+        public Property.ScrollSnapStop ScrollSnapStop
         {
-            get => (Property<string>) _properties["scroll-snap-stop"];
+            get => (Property.ScrollSnapStop) _properties["scroll-snap-stop"];
             set => _properties["scroll-snap-stop"] = value;
         }
 
@@ -4551,9 +4551,9 @@ namespace CssInCs
         /// <para> |        |         | 9 _-x-_ |        |              |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-snap-type</para>
         /// </summary>
-        public Property<string> ScrollSnapType
+        public Property.ScrollSnapType ScrollSnapType
         {
-            get => (Property<string>) _properties["scroll-snap-type"];
+            get => (Property.ScrollSnapType) _properties["scroll-snap-type"];
             set => _properties["scroll-snap-type"] = value;
         }
 
@@ -4566,9 +4566,9 @@ namespace CssInCs
         /// <para> |   No   |   n/a   |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-timeline-axis</para>
         /// </summary>
-        public Property<string> ScrollTimelineAxis
+        public Property.ScrollTimelineAxis ScrollTimelineAxis
         {
-            get => (Property<string>) _properties["scroll-timeline-axis"];
+            get => (Property.ScrollTimelineAxis) _properties["scroll-timeline-axis"];
             set => _properties["scroll-timeline-axis"] = value;
         }
 
@@ -4581,9 +4581,9 @@ namespace CssInCs
         /// <para> |   No   |   n/a   |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-timeline-name</para>
         /// </summary>
-        public Property<string> ScrollTimelineName
+        public Property.ScrollTimelineName ScrollTimelineName
         {
-            get => (Property<string>) _properties["scroll-timeline-name"];
+            get => (Property.ScrollTimelineName) _properties["scroll-timeline-name"];
             set => _properties["scroll-timeline-name"] = value;
         }
 
@@ -4596,9 +4596,9 @@ namespace CssInCs
         /// <para> |   No   | **64**  |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scrollbar-color</para>
         /// </summary>
-        public Property<string> ScrollbarColor
+        public Property.ScrollbarColor ScrollbarColor
         {
-            get => (Property<string>) _properties["scrollbar-color"];
+            get => (Property.ScrollbarColor) _properties["scrollbar-color"];
             set => _properties["scrollbar-color"] = value;
         }
 
@@ -4611,9 +4611,9 @@ namespace CssInCs
         /// <para> | **94** | **97**  |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scrollbar-gutter</para>
         /// </summary>
-        public Property<string> ScrollbarGutter
+        public Property.ScrollbarGutter ScrollbarGutter
         {
-            get => (Property<string>) _properties["scrollbar-gutter"];
+            get => (Property.ScrollbarGutter) _properties["scrollbar-gutter"];
             set => _properties["scrollbar-gutter"] = value;
         }
 
@@ -4626,9 +4626,9 @@ namespace CssInCs
         /// <para> |   No   | **64**  |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scrollbar-width</para>
         /// </summary>
-        public Property<string> ScrollbarWidth
+        public Property.ScrollbarWidth ScrollbarWidth
         {
-            get => (Property<string>) _properties["scrollbar-width"];
+            get => (Property.ScrollbarWidth) _properties["scrollbar-width"];
             set => _properties["scrollbar-width"] = value;
         }
 
@@ -4641,9 +4641,9 @@ namespace CssInCs
         /// <para> | **37** | **62**  | **10.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/shape-image-threshold</para>
         /// </summary>
-        public Property<string> ShapeImageThreshold
+        public Property.ShapeImageThreshold ShapeImageThreshold
         {
-            get => (Property<string>) _properties["shape-image-threshold"];
+            get => (Property.ShapeImageThreshold) _properties["shape-image-threshold"];
             set => _properties["shape-image-threshold"] = value;
         }
 
@@ -4656,9 +4656,9 @@ namespace CssInCs
         /// <para> | **37** | **62**  | **10.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/shape-margin</para>
         /// </summary>
-        public Property<string> ShapeMargin
+        public Property.ShapeMargin ShapeMargin
         {
-            get => (Property<string>) _properties["shape-margin"];
+            get => (Property.ShapeMargin) _properties["shape-margin"];
             set => _properties["shape-margin"] = value;
         }
 
@@ -4671,9 +4671,9 @@ namespace CssInCs
         /// <para> | **37** | **62**  | **10.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/shape-outside</para>
         /// </summary>
-        public Property<string> ShapeOutside
+        public Property.ShapeOutside ShapeOutside
         {
-            get => (Property<string>) _properties["shape-outside"];
+            get => (Property.ShapeOutside) _properties["shape-outside"];
             set => _properties["shape-outside"] = value;
         }
 
@@ -4687,9 +4687,9 @@ namespace CssInCs
         /// <para> |        | 4 _-x-_ |        |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/tab-size</para>
         /// </summary>
-        public Property<string> TabSize
+        public Property.TabSize TabSize
         {
-            get => (Property<string>) _properties["tab-size"];
+            get => (Property.TabSize) _properties["tab-size"];
             set => _properties["tab-size"] = value;
         }
 
@@ -4702,9 +4702,9 @@ namespace CssInCs
         /// <para> | **14** |  **1**  | **1**  | **12** | **5** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/table-layout</para>
         /// </summary>
-        public Property<string> TableLayout
+        public Property.TableLayout TableLayout
         {
-            get => (Property<string>) _properties["table-layout"];
+            get => (Property.TableLayout) _properties["table-layout"];
             set => _properties["table-layout"] = value;
         }
 
@@ -4717,9 +4717,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **3** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/text-align</para>
         /// </summary>
-        public Property<string> TextAlign
+        public Property.TextAlign TextAlign
         {
-            get => (Property<string>) _properties["text-align"];
+            get => (Property.TextAlign) _properties["text-align"];
             set => _properties["text-align"] = value;
         }
 
@@ -4732,9 +4732,9 @@ namespace CssInCs
         /// <para> | **47** | **49**  | **16** | **12** | **5.5** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/text-align-last</para>
         /// </summary>
-        public Property<string> TextAlignLast
+        public Property.TextAlignLast TextAlignLast
         {
-            get => (Property<string>) _properties["text-align-last"];
+            get => (Property.TextAlignLast) _properties["text-align-last"];
             set => _properties["text-align-last"] = value;
         }
 
@@ -4748,9 +4748,9 @@ namespace CssInCs
         /// <para> | 9 _(-webkit-text-combine)_ |         | 5.1 _(-webkit-text-combine)_ |       |                                        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/text-combine-upright</para>
         /// </summary>
-        public Property<string> TextCombineUpright
+        public Property.TextCombineUpright TextCombineUpright
         {
-            get => (Property<string>) _properties["text-combine-upright"];
+            get => (Property.TextCombineUpright) _properties["text-combine-upright"];
             set => _properties["text-combine-upright"] = value;
         }
 
@@ -4764,9 +4764,9 @@ namespace CssInCs
         /// <para> |        |         | 8 _-x-_  |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/text-decoration-color</para>
         /// </summary>
-        public Property<string> TextDecorationColor
+        public Property.TextDecorationColor TextDecorationColor
         {
-            get => (Property<string>) _properties["text-decoration-color"];
+            get => (Property.TextDecorationColor) _properties["text-decoration-color"];
             set => _properties["text-decoration-color"] = value;
         }
 
@@ -4780,9 +4780,9 @@ namespace CssInCs
         /// <para> |        |         | 8 _-x-_  |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/text-decoration-line</para>
         /// </summary>
-        public Property<string> TextDecorationLine
+        public Property.TextDecorationLine TextDecorationLine
         {
-            get => (Property<string>) _properties["text-decoration-line"];
+            get => (Property.TextDecorationLine) _properties["text-decoration-line"];
             set => _properties["text-decoration-line"] = value;
         }
 
@@ -4796,9 +4796,9 @@ namespace CssInCs
         /// <para> |        |         | 7 _-x-_  |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/text-decoration-skip</para>
         /// </summary>
-        public Property<string> TextDecorationSkip
+        public Property.TextDecorationSkip TextDecorationSkip
         {
-            get => (Property<string>) _properties["text-decoration-skip"];
+            get => (Property.TextDecorationSkip) _properties["text-decoration-skip"];
             set => _properties["text-decoration-skip"] = value;
         }
 
@@ -4811,9 +4811,9 @@ namespace CssInCs
         /// <para> | **64** | **70**  | **15.4** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/text-decoration-skip-ink</para>
         /// </summary>
-        public Property<string> TextDecorationSkipInk
+        public Property.TextDecorationSkipInk TextDecorationSkipInk
         {
-            get => (Property<string>) _properties["text-decoration-skip-ink"];
+            get => (Property.TextDecorationSkipInk) _properties["text-decoration-skip-ink"];
             set => _properties["text-decoration-skip-ink"] = value;
         }
 
@@ -4827,9 +4827,9 @@ namespace CssInCs
         /// <para> |        |         | 8 _-x-_  |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/text-decoration-style</para>
         /// </summary>
-        public Property<string> TextDecorationStyle
+        public Property.TextDecorationStyle TextDecorationStyle
         {
-            get => (Property<string>) _properties["text-decoration-style"];
+            get => (Property.TextDecorationStyle) _properties["text-decoration-style"];
             set => _properties["text-decoration-style"] = value;
         }
 
@@ -4842,9 +4842,9 @@ namespace CssInCs
         /// <para> | **89** | **70**  | **12.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/text-decoration-thickness</para>
         /// </summary>
-        public Property<string> TextDecorationThickness
+        public Property.TextDecorationThickness TextDecorationThickness
         {
-            get => (Property<string>) _properties["text-decoration-thickness"];
+            get => (Property.TextDecorationThickness) _properties["text-decoration-thickness"];
             set => _properties["text-decoration-thickness"] = value;
         }
 
@@ -4858,9 +4858,9 @@ namespace CssInCs
         /// <para> | 25 _-x-_ |         |        |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/text-emphasis-color</para>
         /// </summary>
-        public Property<string> TextEmphasisColor
+        public Property.TextEmphasisColor TextEmphasisColor
         {
-            get => (Property<string>) _properties["text-emphasis-color"];
+            get => (Property.TextEmphasisColor) _properties["text-emphasis-color"];
             set => _properties["text-emphasis-color"] = value;
         }
 
@@ -4874,9 +4874,9 @@ namespace CssInCs
         /// <para> | 25 _-x-_ |         |        |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/text-emphasis-position</para>
         /// </summary>
-        public Property<string> TextEmphasisPosition
+        public Property.TextEmphasisPosition TextEmphasisPosition
         {
-            get => (Property<string>) _properties["text-emphasis-position"];
+            get => (Property.TextEmphasisPosition) _properties["text-emphasis-position"];
             set => _properties["text-emphasis-position"] = value;
         }
 
@@ -4890,9 +4890,9 @@ namespace CssInCs
         /// <para> | 25 _-x-_ |         |        |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/text-emphasis-style</para>
         /// </summary>
-        public Property<string> TextEmphasisStyle
+        public Property.TextEmphasisStyle TextEmphasisStyle
         {
-            get => (Property<string>) _properties["text-emphasis-style"];
+            get => (Property.TextEmphasisStyle) _properties["text-emphasis-style"];
             set => _properties["text-emphasis-style"] = value;
         }
 
@@ -4905,9 +4905,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **3** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/text-indent</para>
         /// </summary>
-        public Property<string> TextIndent
+        public Property.TextIndent TextIndent
         {
-            get => (Property<string>) _properties["text-indent"];
+            get => (Property.TextIndent) _properties["text-indent"];
             set => _properties["text-indent"] = value;
         }
 
@@ -4920,9 +4920,9 @@ namespace CssInCs
         /// <para> |  n/a   | **55**  |   No   | **12** | **11** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/text-justify</para>
         /// </summary>
-        public Property<string> TextJustify
+        public Property.TextJustify TextJustify
         {
-            get => (Property<string>) _properties["text-justify"];
+            get => (Property.TextJustify) _properties["text-justify"];
             set => _properties["text-justify"] = value;
         }
 
@@ -4936,9 +4936,9 @@ namespace CssInCs
         /// <para> | 11 _-x-_ |         | 5.1 _-x-_ |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/text-orientation</para>
         /// </summary>
-        public Property<string> TextOrientation
+        public Property.TextOrientation TextOrientation
         {
-            get => (Property<string>) _properties["text-orientation"];
+            get => (Property.TextOrientation) _properties["text-orientation"];
             set => _properties["text-orientation"] = value;
         }
 
@@ -4951,9 +4951,9 @@ namespace CssInCs
         /// <para> | **1**  |  **7**  | **1.3** | **12** | **6** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/text-overflow</para>
         /// </summary>
-        public Property<string> TextOverflow
+        public Property.TextOverflow TextOverflow
         {
-            get => (Property<string>) _properties["text-overflow"];
+            get => (Property.TextOverflow) _properties["text-overflow"];
             set => _properties["text-overflow"] = value;
         }
 
@@ -4966,9 +4966,9 @@ namespace CssInCs
         /// <para> | **4**  |  **1**  | **5**  | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/text-rendering</para>
         /// </summary>
-        public Property<string> TextRendering
+        public Property.TextRendering TextRendering
         {
-            get => (Property<string>) _properties["text-rendering"];
+            get => (Property.TextRendering) _properties["text-rendering"];
             set => _properties["text-rendering"] = value;
         }
 
@@ -4981,9 +4981,9 @@ namespace CssInCs
         /// <para> | **2**  | **3.5** | **1.1** | **12** | **10** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/text-shadow</para>
         /// </summary>
-        public Property<string> TextShadow
+        public Property.TextShadow TextShadow
         {
-            get => (Property<string>) _properties["text-shadow"];
+            get => (Property.TextShadow) _properties["text-shadow"];
             set => _properties["text-shadow"] = value;
         }
 
@@ -4996,9 +4996,9 @@ namespace CssInCs
         /// <para> | **54** |   No    |   No   | **79** | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/text-size-adjust</para>
         /// </summary>
-        public Property<string> TextSizeAdjust
+        public Property.TextSizeAdjust TextSizeAdjust
         {
-            get => (Property<string>) _properties["text-size-adjust"];
+            get => (Property.TextSizeAdjust) _properties["text-size-adjust"];
             set => _properties["text-size-adjust"] = value;
         }
 
@@ -5011,9 +5011,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/text-transform</para>
         /// </summary>
-        public Property<string> TextTransform
+        public Property.TextTransform TextTransform
         {
-            get => (Property<string>) _properties["text-transform"];
+            get => (Property.TextTransform) _properties["text-transform"];
             set => _properties["text-transform"] = value;
         }
 
@@ -5026,9 +5026,9 @@ namespace CssInCs
         /// <para> | **87** | **70**  | **12.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/text-underline-offset</para>
         /// </summary>
-        public Property<string> TextUnderlineOffset
+        public Property.TextUnderlineOffset TextUnderlineOffset
         {
-            get => (Property<string>) _properties["text-underline-offset"];
+            get => (Property.TextUnderlineOffset) _properties["text-underline-offset"];
             set => _properties["text-underline-offset"] = value;
         }
 
@@ -5042,9 +5042,9 @@ namespace CssInCs
         /// <para> |        |         | 9 _-x-_  |        |       |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/text-underline-position</para>
         /// </summary>
-        public Property<string> TextUnderlinePosition
+        public Property.TextUnderlinePosition TextUnderlinePosition
         {
-            get => (Property<string>) _properties["text-underline-position"];
+            get => (Property.TextUnderlinePosition) _properties["text-underline-position"];
             set => _properties["text-underline-position"] = value;
         }
 
@@ -5057,9 +5057,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **5** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/top</para>
         /// </summary>
-        public Property<string> Top
+        public Property.Top Top
         {
-            get => (Property<string>) _properties["top"];
+            get => (Property.Top) _properties["top"];
             set => _properties["top"] = value;
         }
 
@@ -5073,9 +5073,9 @@ namespace CssInCs
         /// <para> |        |         |        |        | 10 _-x-_ |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/touch-action</para>
         /// </summary>
-        public Property<string> TouchAction
+        public Property.TouchAction TouchAction
         {
-            get => (Property<string>) _properties["touch-action"];
+            get => (Property.TouchAction) _properties["touch-action"];
             set => _properties["touch-action"] = value;
         }
 
@@ -5089,9 +5089,9 @@ namespace CssInCs
         /// <para> | 1 _-x-_ |         | 3.1 _-x-_ |        | 9 _-x-_ |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/transform</para>
         /// </summary>
-        public Property<string> Transform
+        public Property.Transform Transform
         {
-            get => (Property<string>) _properties["transform"];
+            get => (Property.Transform) _properties["transform"];
             set => _properties["transform"] = value;
         }
 
@@ -5104,9 +5104,9 @@ namespace CssInCs
         /// <para> | **64** | **55**  | **11** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/transform-box</para>
         /// </summary>
-        public Property<string> TransformBox
+        public Property.TransformBox TransformBox
         {
-            get => (Property<string>) _properties["transform-box"];
+            get => (Property.TransformBox) _properties["transform-box"];
             set => _properties["transform-box"] = value;
         }
 
@@ -5120,9 +5120,9 @@ namespace CssInCs
         /// <para> | 1 _-x-_ | 3.5 _-x-_ | 2 _-x-_ |        | 9 _-x-_ |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/transform-origin</para>
         /// </summary>
-        public Property<string> TransformOrigin
+        public Property.TransformOrigin TransformOrigin
         {
-            get => (Property<string>) _properties["transform-origin"];
+            get => (Property.TransformOrigin) _properties["transform-origin"];
             set => _properties["transform-origin"] = value;
         }
 
@@ -5136,9 +5136,9 @@ namespace CssInCs
         /// <para> | 12 _-x-_ | 10 _-x-_ | 4 _-x-_ |        |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/transform-style</para>
         /// </summary>
-        public Property<string> TransformStyle
+        public Property.TransformStyle TransformStyle
         {
-            get => (Property<string>) _properties["transform-style"];
+            get => (Property.TransformStyle) _properties["transform-style"];
             set => _properties["transform-style"] = value;
         }
 
@@ -5152,9 +5152,9 @@ namespace CssInCs
         /// <para> | 1 _-x-_ | 4 _-x-_ | 4 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/transition-delay</para>
         /// </summary>
-        public Property<string> TransitionDelay
+        public Property.TransitionDelay TransitionDelay
         {
-            get => (Property<string>) _properties["transition-delay"];
+            get => (Property.TransitionDelay) _properties["transition-delay"];
             set => _properties["transition-delay"] = value;
         }
 
@@ -5168,9 +5168,9 @@ namespace CssInCs
         /// <para> | 1 _-x-_ | 4 _-x-_ | 3.1 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/transition-duration</para>
         /// </summary>
-        public Property<string> TransitionDuration
+        public Property.TransitionDuration TransitionDuration
         {
-            get => (Property<string>) _properties["transition-duration"];
+            get => (Property.TransitionDuration) _properties["transition-duration"];
             set => _properties["transition-duration"] = value;
         }
 
@@ -5184,9 +5184,9 @@ namespace CssInCs
         /// <para> | 1 _-x-_ | 4 _-x-_ | 3.1 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/transition-property</para>
         /// </summary>
-        public Property<string> TransitionProperty
+        public Property.TransitionProperty TransitionProperty
         {
-            get => (Property<string>) _properties["transition-property"];
+            get => (Property.TransitionProperty) _properties["transition-property"];
             set => _properties["transition-property"] = value;
         }
 
@@ -5200,9 +5200,9 @@ namespace CssInCs
         /// <para> | 1 _-x-_ | 4 _-x-_ | 3.1 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/transition-timing-function</para>
         /// </summary>
-        public Property<string> TransitionTimingFunction
+        public Property.TransitionTimingFunction TransitionTimingFunction
         {
-            get => (Property<string>) _properties["transition-timing-function"];
+            get => (Property.TransitionTimingFunction) _properties["transition-timing-function"];
             set => _properties["transition-timing-function"] = value;
         }
 
@@ -5215,9 +5215,9 @@ namespace CssInCs
         /// <para> | **104** | **72**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/translate</para>
         /// </summary>
-        public Property<string> Translate
+        public Property.Translate Translate
         {
-            get => (Property<string>) _properties["translate"];
+            get => (Property.Translate) _properties["translate"];
             set => _properties["translate"] = value;
         }
 
@@ -5230,9 +5230,9 @@ namespace CssInCs
         /// <para> | **2**  |  **1**  | **1.3** | **12** | **5.5** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/unicode-bidi</para>
         /// </summary>
-        public Property<string> UnicodeBidi
+        public Property.UnicodeBidi UnicodeBidi
         {
-            get => (Property<string>) _properties["unicode-bidi"];
+            get => (Property.UnicodeBidi) _properties["unicode-bidi"];
             set => _properties["unicode-bidi"] = value;
         }
 
@@ -5246,9 +5246,9 @@ namespace CssInCs
         /// <para> | 1 _-x-_ | 1 _-x-_ |             | 12 _-x-_ |              |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/user-select</para>
         /// </summary>
-        public Property<string> UserSelect
+        public Property.UserSelect UserSelect
         {
-            get => (Property<string>) _properties["user-select"];
+            get => (Property.UserSelect) _properties["user-select"];
             set => _properties["user-select"] = value;
         }
 
@@ -5261,9 +5261,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/vertical-align</para>
         /// </summary>
-        public Property<string> VerticalAlign
+        public Property.VerticalAlign VerticalAlign
         {
-            get => (Property<string>) _properties["vertical-align"];
+            get => (Property.VerticalAlign) _properties["vertical-align"];
             set => _properties["vertical-align"] = value;
         }
 
@@ -5276,9 +5276,9 @@ namespace CssInCs
         /// <para> | **111** |   No    |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/view-transition-name</para>
         /// </summary>
-        public Property<string> ViewTransitionName
+        public Property.ViewTransitionName ViewTransitionName
         {
-            get => (Property<string>) _properties["view-transition-name"];
+            get => (Property.ViewTransitionName) _properties["view-transition-name"];
             set => _properties["view-transition-name"] = value;
         }
 
@@ -5291,9 +5291,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/visibility</para>
         /// </summary>
-        public Property<string> Visibility
+        public Property.Visibility Visibility
         {
-            get => (Property<string>) _properties["visibility"];
+            get => (Property.Visibility) _properties["visibility"];
             set => _properties["visibility"] = value;
         }
 
@@ -5306,9 +5306,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **5.5** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/white-space</para>
         /// </summary>
-        public Property<string> WhiteSpace
+        public Property.WhiteSpace WhiteSpace
         {
-            get => (Property<string>) _properties["white-space"];
+            get => (Property.WhiteSpace) _properties["white-space"];
             set => _properties["white-space"] = value;
         }
 
@@ -5321,9 +5321,9 @@ namespace CssInCs
         /// <para> | **25** |   No    | **1.3** | **12** | **8** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/widows</para>
         /// </summary>
-        public Property<string> Widows
+        public Property.Widows Widows
         {
-            get => (Property<string>) _properties["widows"];
+            get => (Property.Widows) _properties["widows"];
             set => _properties["widows"] = value;
         }
 
@@ -5336,9 +5336,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/width</para>
         /// </summary>
-        public Property<string> Width
+        public Property.Width Width
         {
-            get => (Property<string>) _properties["width"];
+            get => (Property.Width) _properties["width"];
             set => _properties["width"] = value;
         }
 
@@ -5351,9 +5351,9 @@ namespace CssInCs
         /// <para> | **36** | **36**  | **9.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/will-change</para>
         /// </summary>
-        public Property<string> WillChange
+        public Property.WillChange WillChange
         {
-            get => (Property<string>) _properties["will-change"];
+            get => (Property.WillChange) _properties["will-change"];
             set => _properties["will-change"] = value;
         }
 
@@ -5366,9 +5366,9 @@ namespace CssInCs
         /// <para> | **1**  | **15**  | **3**  | **12** | **5.5** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/word-break</para>
         /// </summary>
-        public Property<string> WordBreak
+        public Property.WordBreak WordBreak
         {
-            get => (Property<string>) _properties["word-break"];
+            get => (Property.WordBreak) _properties["word-break"];
             set => _properties["word-break"] = value;
         }
 
@@ -5381,9 +5381,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **6** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/word-spacing</para>
         /// </summary>
-        public Property<string> WordSpacing
+        public Property.WordSpacing WordSpacing
         {
-            get => (Property<string>) _properties["word-spacing"];
+            get => (Property.WordSpacing) _properties["word-spacing"];
             set => _properties["word-spacing"] = value;
         }
 
@@ -5392,9 +5392,9 @@ namespace CssInCs
         /// <para> **Syntax**: `normal | break-word`</para>
         /// <para> **Initial value**: `normal`</para>
         /// </summary>
-        public Property<string> WordWrap
+        public Property.WordWrap WordWrap
         {
-            get => (Property<string>) _properties["word-wrap"];
+            get => (Property.WordWrap) _properties["word-wrap"];
             set => _properties["word-wrap"] = value;
         }
 
@@ -5408,9 +5408,9 @@ namespace CssInCs
         /// <para> | 8 _-x-_ |         | 5.1 _-x-_ |        |       |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/writing-mode</para>
         /// </summary>
-        public Property<string> WritingMode
+        public Property.WritingMode WritingMode
         {
-            get => (Property<string>) _properties["writing-mode"];
+            get => (Property.WritingMode) _properties["writing-mode"];
             set => _properties["writing-mode"] = value;
         }
 
@@ -5423,9 +5423,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/z-index</para>
         /// </summary>
-        public Property<string> ZIndex
+        public Property.ZIndex ZIndex
         {
-            get => (Property<string>) _properties["z-index"];
+            get => (Property.ZIndex) _properties["z-index"];
             set => _properties["z-index"] = value;
         }
 
@@ -5438,9 +5438,9 @@ namespace CssInCs
         /// <para> | **1**  |   No    | **3.1** | **12** | **5.5** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/zoom</para>
         /// </summary>
-        public Property<string> Zoom
+        public Property.Zoom Zoom
         {
-            get => (Property<string>) _properties["zoom"];
+            get => (Property.Zoom) _properties["zoom"];
             set => _properties["zoom"] = value;
         }
 

@@ -11,12 +11,13 @@ namespace CssInCs
                 FlexDirection = "column",
                 BoxSizing = "border-box",
                 Width = "100%",
-                MarginBlock = "0px",
-                MarginInline = "0px",
-                PaddingBlock = "0px",
-                PaddingInline = "0px",
+                MarginBlock = 0,
+                MarginInline = 0,
+                PaddingBlock = 0,
+                PaddingInline = 0,
                 BackgroundColor = "#EFEFEF",
-                BorderRadius = "5px",
+                BorderRadius = 5,
+                Opacity = 0.5f,
                 ["&-box-shadow"] = new()
                 {
                     BoxShadow = "0 1px 2px -2px #00000029, 0 3px 6px #0000001f, 0 5px 12px 4px #00000017",
@@ -53,8 +54,8 @@ namespace CssInCs
                         Position = "absolute",
                         InsetBlockStart = "2px",
                         InsetInlineEnd = "2px",
-                        Width = "0px",
-                        Height = "0px",
+                        Width = 0,
+                        Height = 0,
                         Border = "6px solid #485670",
                         BorderBlockEnd = "6px solid transparent",
                         BorderInlineStart = "6px solid transparent",
@@ -75,7 +76,7 @@ namespace CssInCs
                         {
                             PaddingInline = "10px",
                             PaddingBlock = "10px",
-                            PaddingBlockEnd = "0px",
+                            PaddingBlockEnd = 0,
                             ["&-border"] = new()
                             {
                                 PaddingBlockEnd = "10px"

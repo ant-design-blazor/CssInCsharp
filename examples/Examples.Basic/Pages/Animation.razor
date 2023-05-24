@@ -1,0 +1,41 @@
+﻿@page "/animation"
+
+<div class="ani">
+
+</div>
+
+<Style>
+    @_style
+</Style>
+
+@code {
+    private string _style = "";
+
+    protected override void OnInitialized()
+    {
+        _style = new CSSObject
+        {
+            [".ani"] = new ()
+            {
+                Width = "100px",
+                Height = "100px",
+                BackgroundColor = "#EFEFEF",
+                AnimationDuration = "3s",
+                AnimationName = new Keyframe("slidein")
+                {
+                    ["from"] = new ()
+                    {
+                        MarginLeft = "100%",
+                        Width = "300%"
+                    },
+                    ["to"] = new ()
+                    {
+                        MarginLeft = "0%",
+                        Width = "100%"
+                    }
+                }
+            }
+        }.ToString();
+    }
+
+}
