@@ -43,6 +43,73 @@ var css = new CSSObject
 var style = css.ToString();
 ```
 
+## Parent Selectors
+
+Referencing parent selectors with & , This is the same as less. 
+
+```csharp
+var css = new CSSObject
+{
+    ["a"] = new()
+    {
+        Color = "blue",
+        ["&:hover"] = new()
+        {
+            Color = "green"
+        }
+    }
+};
+```
+
+output:
+
+```css
+a {
+  color: blue;
+}
+
+a:hover {
+  color: green;
+}
+```
+
+The "parent selectors" operator has a variety of uses. Basically any time you need the selectors of the nested rules to be combined in other ways than the default. For example another typical use of the & is to produce repetitive class names:
+
+```csharp
+var css = new CSSObject
+{
+    [".button"] = new()
+    {
+        ["&-ok"] = new()
+        {
+            BackgroundImage = "url(\"ok.png\")"
+        },
+        ["&-cancel"] = new()
+        {
+            BackgroundImage = "url(\"cancel.png\")"
+        },
+        ["&-custom"] = new()
+        {
+            BackgroundImage = "url(\"custom.png\")"
+        }
+    }
+};
+```
+
+output:
+
+```css
+.button-ok {
+  background-image: url("ok.png");
+}
+.button-cancel {
+  background-image: url("cancel.png");
+}
+.button-custom {
+  background-image: url("custom.png");
+}
+```
+
 ## Merge
 
 You can use the merge method to inherit or merge multiple css object in some scenarios.
@@ -251,69 +318,62 @@ private async Task<string> GetContainerSizeAsync()
 }
 ```
 
-## Parent Selectors
+## Animation
 
-Referencing parent selectors with & , This is the same as less. 
+We designed a **Keyframe** type to create animation styles, which are supported by the AnimationName property.
 
-```csharp
-var css = new CSSObject
-{
-    ["a"] = new()
-    {
-        Color = "blue",
-        ["&:hover"] = new()
-        {
-            Color = "green"
-        }
-    }
-};
-```
-
-output:
-
-```css
-a {
-  color: blue;
-}
-
-a:hover {
-  color: green;
-}
-```
-
-The "parent selectors" operator has a variety of uses. Basically any time you need the selectors of the nested rules to be combined in other ways than the default. For example another typical use of the & is to produce repetitive class names:
+Transform animation example:
 
 ```csharp
-var css = new CSSObject
-{
-    [".button"] = new()
+<div class="transform">
+    <span class="title">Transform</span>
+    <div class="animation"></div>
+</div>
+
+<Style>
+    @_transform
+</Style>
+
+@code {
+    private string _transform = "";
+
+    protected override void OnInitialized()
     {
-        ["&-ok"] = new()
+        _transform = new CSSObject
         {
-            BackgroundImage = "url(\"ok.png\")"
-        },
-        ["&-cancel"] = new()
-        {
-            BackgroundImage = "url(\"cancel.png\")"
-        },
-        ["&-custom"] = new()
-        {
-            BackgroundImage = "url(\"custom.png\")"
-        }
+            [".transform"] = new()
+            {
+                Width = 120,
+                Height = 120,
+                ["& .title"] = new ()
+                {
+                    Height = 20,
+                    LineHeight = 20,
+                    FontSize = 14
+                },
+                ["& .animation"] = new()
+                {
+                    Width = 100,
+                    Height = 100,
+                    BackgroundColor = "rgba(0, 0, 255, 0.5)",
+                    AnimationDuration = "3s",
+                    AnimationName = new Keyframe("animation-transform")
+                    {
+                        ["from"] = new()
+                        {
+                            Transform = "translateX(0px)",
+                            Opacity = 1
+                        },
+                        ["to"] = new()
+                        {
+                            Transform = "translateX(100px)",
+                            Opacity = 0.2f
+                        }
+                    }
+                }
+            }
+        }.ToString();
     }
-};
-```
-
-output:
-
-```css
-.button-ok {
-  background-image: url("ok.png");
-}
-.button-cancel {
-  background-image: url("cancel.png");
-}
-.button-custom {
-  background-image: url("custom.png");
 }
 ```
+

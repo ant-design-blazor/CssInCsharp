@@ -55,21 +55,27 @@ function getPropertyTypes(lines: string[]): PropertyType[] {
 
             const types: PropertyTypeItem[] = [];
 
+            let nameNormal = `value${types.length}`;
+            let namePrivate = `_value${types.length}`;
             // string type
-            types.push({ name: 'value' + types.length, type: 'string', default: 'default', value: '_value' + types.length });
+            types.push({ name: nameNormal, type: 'string', default: 'default', value: namePrivate });
 
             // number type
             if (type.includes('TLength =') || type.includes('number & {}')) {
+                nameNormal = `value${types.length}`;
+                namePrivate = `_value${types.length}`;
                 if (floatProperties.includes(name)) {
-                    types.push({ name: 'value' + types.length, type: 'float', default: 'default', value: `_value${types.length}.ToString()` });
+                    types.push({ name: nameNormal, type: 'float', default: 'default', value: `${namePrivate}.ToString()` });
                 } else {
-                    types.push({ name: 'value' + types.length, type: 'int', default: 'default', value: '$"{_value' + types.length + '}px"' });
+                    types.push({ name: nameNormal, type: 'int', default: 'default', value: `${namePrivate} != 0 ? $"{${namePrivate}}px" : ${namePrivate}.ToString()` });
                 }
             }
 
             // animation type
             if (animationProperties.includes(name)) {
-                types.push({ name: 'value' + types.length, type: 'Keyframe', default: 'default', value: `_value${types.length}.ToString()` });
+                nameNormal = `value${types.length}`;
+                namePrivate = `_value${types.length}`;
+                types.push({ name: nameNormal, type: 'Keyframe', default: 'default', value: `${namePrivate}.ToString()` });
             }
             items.push({ name: name, types: types });
         }
@@ -77,7 +83,7 @@ function getPropertyTypes(lines: string[]): PropertyType[] {
     return items;
 }
 
-function getPropertyItems(lines: string[]): PropertyItem[] {
+function getPropertyItems(lines: string[], propTypes?: PropertyType[]): PropertyItem[] {
     let comments: string[] = [];
     const regex = RegExp('[A-Z]', 'g');
     const items: PropertyItem[] = [];
@@ -97,8 +103,15 @@ function getPropertyItems(lines: string[]): PropertyItem[] {
         const j = pure.indexOf('|');
         const k = pure.indexOf('<');
         const index = k > 0 && k < j ? k : j;
-        const propertyType = pure.substring(pure.indexOf('?:') + 2, index).trim();
         const newName = propertyName.replace(regex, (m) => '-' + m.toLowerCase());
+        let propertyType = pure.substring(pure.indexOf('?:') + 2, index).trim();
+        if (propTypes) {
+            const type = propTypes.find(x => `Property.${x.name}` === propertyType);
+            if (type) {
+                const tType = type.types.map(x => x.type).join(', ');
+                propertyType = `Property<${tType}>`;
+            }
+        }
         items.push({
             name: propertyName.charAt(0).toUpperCase() + propertyName.slice(1),
             type: propertyType,
@@ -112,6 +125,107 @@ function getPropertyItems(lines: string[]): PropertyItem[] {
 function getFileContent(input: string, start: number, end: number) {
     const content = fs.readFileSync(input, 'utf8');
     return content.split(/\r?\n/).slice(start, end - 1);
+}
+
+function generatePropertyGeneric(output: string, totalCount: number = 1) {
+    const tab = '        ';
+    const tType = (types: string[]) => {
+        return types
+            .map((x, i) => `T${i}`)
+            .join(', ');
+    }
+    const field = (types: string[]) => {
+        return types
+            .map((x, i) => `${tab}private readonly T${i} _value${i};`)
+            .join('\r\n');
+    }
+    const parameter = (types: string[]) => {
+        return types
+            .map((x, i) => `T${i} value${i} = default`)
+            .join(', ')
+    }
+    const constructor = (types: string[]) => {
+        return types
+            .map((x, i) => `${tab}    _value${i} = value${i};`)
+            .join('\r\n');
+    }
+    const operator = (types: string[]) => {
+        return types
+            .map((x, i) => `${tab}public static implicit operator Property<${tType(types)}>(T${i} t) => new(${i}, value${i}: t);`)
+            .join('\r\n');
+    }
+    const hashCode = (types: string[]) => {
+        return types
+            .map((x, i) => `${tab}            ${i} => _value${i}?.GetHashCode(),`)
+            .join('\r\n');
+    }
+    const value = (types: string[]) => {
+        return types
+            .map((x, i) => `${tab}        ${i} => FormatValue(_value${i}),`)
+            .join('\r\n');
+    }
+
+    let sb = '';
+    for (let i = 0; i < totalCount; i++) {
+        const types = new Array(i + 1).fill('');
+        sb += `
+    public readonly struct Property<${tType(types)}> : IProperty
+    {
+        private readonly int _index;
+${field(types)}
+
+        private Property(int index, ${parameter(types)})
+        {
+            _index = index;
+${constructor(types)}
+        }
+
+${operator(types)}
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj))
+            {
+                return false;
+            }
+
+            return obj is Property<${tType(types)}> o && Equals(o);
+        }
+
+        public override string ToString() => GetValue();
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hashCode = _index switch
+                {
+${hashCode(types)}
+                    _ => 0
+                } ?? 0;
+                return (hashCode * 397) ^ _index;
+            }
+        }
+
+        public string GetValue()
+        {
+            return _index switch
+            {
+${value(types)}
+                _ => throw new InvalidOperationException("Unexpected index.")
+            };
+        }
+    }
+`
+    }
+
+    const template = `using System;
+using static CssInCs.Functions;
+
+namespace CssInCs
+{${sb}}
+`;
+    fs.writeFileSync(output, template, 'utf8');
 }
 
 function generatePropertyTypes(input: string, output: string, start: number, end: number) {
@@ -177,18 +291,27 @@ ${value(item)}
 
 namespace CssInCs
 {
+    /**
+     * If you want to use this property type to replace generic property types.
+     * You can set "useGeneric = false" in "generator.ts".
+     */
     public readonly struct Property
-    {${sb}    }
+    {${sb}}
 }
 `;
 
     fs.writeFileSync(output, template, 'utf8');
 }
 
-function generatePropertyItems(input: string, output: string, start: number, end: number) {
+function generatePropertyItems(input: string, output: string, start: number, end: number, useGeneric: boolean = true) {
     const lines = getFileContent(input, start, end);
     const tab = '        ';
-    const items = getPropertyItems(lines);
+    let propTypes: PropertyType[] = []
+    if (useGeneric) {
+        const propLines = getFileContent('./node_modules/csstype/index.d.ts', 18459, 20144);
+        propTypes = getPropertyTypes(propLines)
+    }
+    const items = getPropertyItems(lines, propTypes);
     let sb = '';
     items.forEach((item) => {
         sb += tab + '/// <summary>\r\n';
@@ -224,6 +347,7 @@ function generateProperty() {
     const input = './node_modules/csstype/index.d.ts';
     const output = './src/Types/Property.cs';
     generatePropertyTypes(input, output, 18459, 20144);
+    generatePropertyGeneric('./src/Types/PropertyT.cs', 3);
 }
 
 function generateStandardLonghand() {
