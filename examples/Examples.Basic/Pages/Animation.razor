@@ -1,0 +1,97 @@
+﻿@page "/animation"
+
+<div class="transform">
+    <span class="title">Transform</span>
+    <div class="animation"></div>
+</div>
+
+<div class="offset">
+    <span class="title">Offset</span>
+    <div class="animation"></div>
+</div>
+
+<Style>
+    @_transform
+    @_offset
+</Style>
+
+@code {
+    private string _transform = "";
+    private string _offset = "";
+
+    protected override void OnInitialized()
+    {
+        _transform = new CSSObject
+        {
+            [".transform"] = new()
+            {
+                Width = 120,
+                Height = 120,
+                ["& .title"] = new ()
+                {
+                    Height = 20,
+                    LineHeight = 20,
+                    FontSize = 14
+                },
+                ["& .animation"] = new()
+                {
+                    Width = 100,
+                    Height = 100,
+                    BackgroundColor = "rgba(0, 0, 255, 0.5)",
+                    AnimationDuration = "3s",
+                    AnimationName = new Keyframe("animation-transform")
+                    {
+                        ["from"] = new()
+                        {
+                            Transform = "translateX(0px)",
+                            Opacity = 1
+                        },
+                        ["to"] = new()
+                        {
+                            Transform = "translateX(100px)",
+                            Opacity = 0.2f
+                        }
+                    }
+                }
+            }
+        }.ToString();
+
+        _offset = new CSSObject
+        {
+            [".offset"] = new()
+            {
+                Width = 120,
+                Height = 120,
+                MarginTop = 30,
+                ["& .title"] = new ()
+                {
+                    Height = 20,
+                    LineHeight = 20,
+                    FontSize = 14
+                },
+                ["& .animation"] = new()
+                {
+                    Width = 100,
+                    Height = 100,
+                    BackgroundColor = "rgba(0, 0, 255, 0.5)",
+                    AnimationDuration = "3s",
+                    AnimationName = new Keyframe("animation-offset")
+                    {
+                        ["0%"] = new()
+                        {
+                            Background = "red"
+                        },
+                        ["72%"] = new()
+                        {
+                            Background = "blue"
+                        },
+                        ["100%"] = new()
+                        {
+                            Background = "green"
+                        }
+                    }
+                }
+            }
+        }.ToString();
+    }
+}

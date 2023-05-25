@@ -39,19 +39,15 @@
                 },
                 ["& .body"] = new ()
                 {
-                    Height = $"{CalcBodyHeight(50, 50)}px",     // normal method
+                    Height = CalcBodyHeight(50, 50),     // normal method
                     Width = "100%",
                     BorderTop = "1px solid #DDD",
                     BorderBottom = "1px solid #DDD",
                     [".container"] = new ()
                     {
                         Height = await GetContainerSizeAsync(), // async method
-                        BackgroundColor = Fn(() => "#EFEFEF"),  // lambda func
-                        // BackgroundColor = (Func<string>)(() => "#EFEFEF") // as the same
-                        /*
-                         * Fn method is used to tell the compiler the lambda func is Property<T> type.
-                         * Fn(() => "#EFEFEF") equals (Func<string>)(() => "#EFEFEF")
-                         */
+                        BackgroundColor = "#EFEFEF"
+
                     },
                 }
             }
@@ -64,8 +60,8 @@
         return _size - header - footer;
     }
 
-    private async Task<string> GetContainerSizeAsync()
+    private async Task<int> GetContainerSizeAsync()
     {
-        return await Task.FromResult("200px");
+        return await Task.FromResult(200);
     }
 }

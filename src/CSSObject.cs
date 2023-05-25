@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CssInCs
 {
-    public partial class CSSObject
+    public sealed partial class CSSObject
     {
         private readonly Dictionary<string, CSSObject> _styles = new ();
         private readonly Dictionary<string, IProperty> _properties = new();

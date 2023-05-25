@@ -43,6 +43,73 @@ var css = new CSSObject
 var style = css.ToString();
 ```
 
+## Parent Selectors
+
+Referencing parent selectors with & , This is the same as less. 
+
+```csharp
+var css = new CSSObject
+{
+    ["a"] = new()
+    {
+        Color = "blue",
+        ["&:hover"] = new()
+        {
+            Color = "green"
+        }
+    }
+};
+```
+
+output:
+
+```css
+a {
+  color: blue;
+}
+
+a:hover {
+  color: green;
+}
+```
+
+The "parent selectors" operator has a variety of uses. Basically any time you need the selectors of the nested rules to be combined in other ways than the default. For example another typical use of the & is to produce repetitive class names:
+
+```csharp
+var css = new CSSObject
+{
+    [".button"] = new()
+    {
+        ["&-ok"] = new()
+        {
+            BackgroundImage = "url(\"ok.png\")"
+        },
+        ["&-cancel"] = new()
+        {
+            BackgroundImage = "url(\"cancel.png\")"
+        },
+        ["&-custom"] = new()
+        {
+            BackgroundImage = "url(\"custom.png\")"
+        }
+    }
+};
+```
+
+output:
+
+```css
+.button-ok {
+  background-image: url("ok.png");
+}
+.button-cancel {
+  background-image: url("cancel.png");
+}
+.button-custom {
+  background-image: url("custom.png");
+}
+```
+
 ## Merge
 
 You can use the merge method to inherit or merge multiple css object in some scenarios.
@@ -142,7 +209,7 @@ protected override void OnInitialized()
 
 ```CSharp
 private CSSObject _css = new ();
-private PropertyRef<string> _colorRef = "red"; // a property ref
+private string _color = "red";
 [Parameter]
 public int Size { get; set; } = 200;  // component parameter
 
@@ -159,7 +226,7 @@ protected override void OnInitialized()
             MarginTop = "10px",
             ["& .title"] = new()
             {
-                Color = _colorRef,
+                Color = _color,
                 FontSize = fontSize
             }
         }
@@ -174,10 +241,7 @@ The following examples shows how to change a css object.
 ```CSharp
 private void ClickToChangeCssObject() 
 {
-    // 1.use property ref to change css object
-    _colorRef.SetValue("green");
-
-    // 2.or use merge method to change css object, @see merge example.
+    // 1.use merge method to change css object, @see merge example.
     _css.Merge(new CSSObject
     {
         [".div2"] = new ()
@@ -189,8 +253,8 @@ private void ClickToChangeCssObject()
         }
     });
 
-    // 3.or set property directly
-    _css["& .title"].Color = "green";
+    // 2.or set property directly
+    _css[".div2"]["& .title"].Color = "green";
 
     // rerender the style
     _style = _css.ToString();
@@ -235,8 +299,7 @@ protected override async Task OnInitializedAsync()
                 {
                     // async method
                     Height = await GetContainerSizeAsync(),
-                    // lambda func
-                    BackgroundColor = Fn(() => "#EFEFEF"),
+                    BackgroundColor = "#EFEFEF",
                 }
             }
         }
@@ -255,75 +318,62 @@ private async Task<string> GetContainerSizeAsync()
 }
 ```
 
-**Fn method is used to tell the compiler the lambda func is Property&lt;T&gt; type.**
+## Animation
 
-```
-Fn(() => "#EFEFEF") equals (Func<string>)(() => "#EFEFEF")
-```
+We designed a **Keyframe** type to create animation styles, which are supported by the AnimationName property.
 
-## Parent Selectors
-
-Referencing parent selectors with & , This is the same as less. 
+Transform animation example:
 
 ```csharp
-var css = new CSSObject
-{
-    ["a"] = new()
+<div class="transform">
+    <span class="title">Transform</span>
+    <div class="animation"></div>
+</div>
+
+<Style>
+    @_transform
+</Style>
+
+@code {
+    private string _transform = "";
+
+    protected override void OnInitialized()
     {
-        Color = "blue",
-        ["&:hover"] = new()
+        _transform = new CSSObject
         {
-            Color = "green"
-        }
+            [".transform"] = new()
+            {
+                Width = 120,
+                Height = 120,
+                ["& .title"] = new ()
+                {
+                    Height = 20,
+                    LineHeight = 20,
+                    FontSize = 14
+                },
+                ["& .animation"] = new()
+                {
+                    Width = 100,
+                    Height = 100,
+                    BackgroundColor = "rgba(0, 0, 255, 0.5)",
+                    AnimationDuration = "3s",
+                    AnimationName = new Keyframe("animation-transform")
+                    {
+                        ["from"] = new()
+                        {
+                            Transform = "translateX(0px)",
+                            Opacity = 1
+                        },
+                        ["to"] = new()
+                        {
+                            Transform = "translateX(100px)",
+                            Opacity = 0.2f
+                        }
+                    }
+                }
+            }
+        }.ToString();
     }
-};
-```
-
-output:
-
-```css
-a {
-  color: blue;
-}
-
-a:hover {
-  color: green;
 }
 ```
 
-The "parent selectors" operator has a variety of uses. Basically any time you need the selectors of the nested rules to be combined in other ways than the default. For example another typical use of the & is to produce repetitive class names:
-
-```csharp
-var css = new CSSObject
-{
-    [".button"] = new()
-    {
-        ["&-ok"] = new()
-        {
-            BackgroundImage = "url(\"ok.png\")"
-        },
-        ["&-cancel"] = new()
-        {
-            BackgroundImage = "url(\"cancel.png\")"
-        },
-        ["&-custom"] = new()
-        {
-            BackgroundImage = "url(\"custom.png\")"
-        }
-    }
-};
-```
-
-output:
-
-```css
-.button-ok {
-  background-image: url("ok.png");
-}
-.button-cancel {
-  background-image: url("cancel.png");
-}
-.button-custom {
-  background-image: url("custom.png");
-}
-```

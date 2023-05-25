@@ -25,7 +25,6 @@
     [Parameter]
     public int Size { get; set; } = 200;  // component parameter
 
-    private PropertyRef<string> _colorRef = "red"; // a property ref
     private CSSObject css2 = new ();
 
     protected override void OnInitialized()
@@ -71,7 +70,7 @@
                 MarginTop = "10px",
                 ["& .title"] = new()
                 {
-                    Color = _colorRef,
+                    Color = _color,
                     FontSize = fontSize
                 }
             }
@@ -85,10 +84,7 @@
          * The following examples shows how to modify a css object.
          */
 
-        // 1.use property ref to change css object
-        _colorRef.SetValue("green");
-
-        // 2.or use merge method to change css object, @see merge example.
+        // 1.use merge method to change css object, @see merge example.
         css2.Merge(new CSSObject
         {
             [".div2"] = new ()
@@ -100,8 +96,8 @@
             }
         });
 
-        // 3.or set property directly
-        css2["& .title"].Color = "green";
+        // 2.or set property directly
+        css2[".div2"]["& .title"].Color = "green";
         
         // rerender the css object
         _style2 = css2.ToString();
