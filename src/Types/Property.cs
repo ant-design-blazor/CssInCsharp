@@ -1,4 +1,5 @@
 using System;
+using static CssInCs.Functions;
 
 namespace CssInCs
 {
@@ -25,7 +26,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -48,7 +49,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -71,7 +72,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -94,7 +95,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -117,7 +118,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -140,7 +141,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -163,7 +164,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -186,7 +187,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -209,7 +210,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -232,7 +233,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -255,7 +256,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -278,7 +279,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -304,8 +305,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -331,8 +332,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -355,7 +356,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -378,7 +379,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -401,7 +402,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -424,7 +425,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -450,8 +451,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -474,7 +475,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -497,7 +498,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -520,7 +521,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -546,8 +547,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -570,7 +571,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -593,7 +594,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -616,7 +617,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -639,7 +640,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -662,7 +663,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -685,7 +686,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -711,8 +712,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -738,8 +739,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -765,8 +766,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -789,7 +790,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -815,8 +816,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -839,7 +840,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -865,8 +866,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -892,8 +893,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -919,8 +920,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -943,7 +944,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -969,8 +970,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -993,7 +994,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1016,7 +1017,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1042,8 +1043,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1069,8 +1070,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1093,7 +1094,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1116,7 +1117,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1142,8 +1143,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1166,7 +1167,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1192,8 +1193,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1219,8 +1220,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1243,7 +1244,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1269,8 +1270,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1296,8 +1297,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1320,7 +1321,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1346,8 +1347,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1370,7 +1371,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1393,7 +1394,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1419,8 +1420,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1446,8 +1447,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1473,8 +1474,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1500,8 +1501,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1524,7 +1525,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1550,8 +1551,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1574,7 +1575,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1600,8 +1601,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1627,8 +1628,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1651,7 +1652,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1677,8 +1678,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1701,7 +1702,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1724,7 +1725,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1750,8 +1751,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1777,8 +1778,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1801,7 +1802,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1824,7 +1825,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1850,8 +1851,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1874,7 +1875,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1900,8 +1901,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1927,8 +1928,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1951,7 +1952,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1974,7 +1975,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2000,8 +2001,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2027,8 +2028,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2054,8 +2055,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2078,7 +2079,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2101,7 +2102,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2127,8 +2128,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2154,8 +2155,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2181,8 +2182,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2208,8 +2209,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2232,7 +2233,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2258,8 +2259,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2282,7 +2283,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2308,8 +2309,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2335,8 +2336,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2359,7 +2360,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2385,8 +2386,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2412,8 +2413,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2439,8 +2440,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2463,7 +2464,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2486,7 +2487,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2509,7 +2510,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2535,8 +2536,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2562,8 +2563,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2586,7 +2587,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2612,8 +2613,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2636,7 +2637,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2659,7 +2660,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2682,7 +2683,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2705,7 +2706,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2728,7 +2729,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2751,7 +2752,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2774,7 +2775,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2797,7 +2798,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2820,7 +2821,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2843,7 +2844,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2866,7 +2867,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2889,7 +2890,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2912,7 +2913,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2935,7 +2936,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2958,7 +2959,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2981,7 +2982,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3004,7 +3005,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3030,8 +3031,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3054,7 +3055,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3080,8 +3081,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3107,8 +3108,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3131,7 +3132,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3154,7 +3155,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3180,8 +3181,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3204,7 +3205,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3230,8 +3231,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3257,8 +3258,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3281,7 +3282,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3307,8 +3308,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3334,8 +3335,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3361,8 +3362,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3388,8 +3389,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3415,8 +3416,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3439,7 +3440,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3462,7 +3463,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3485,7 +3486,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3508,7 +3509,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3531,7 +3532,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3554,7 +3555,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3577,7 +3578,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3600,7 +3601,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3623,7 +3624,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3646,7 +3647,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3669,7 +3670,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3692,7 +3693,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3715,7 +3716,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3741,8 +3742,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3768,8 +3769,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3792,7 +3793,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3815,7 +3816,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3841,8 +3842,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3868,8 +3869,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3892,7 +3893,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3915,7 +3916,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3938,7 +3939,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3961,7 +3962,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3984,7 +3985,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4007,7 +4008,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4030,7 +4031,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4053,7 +4054,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4076,7 +4077,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4102,8 +4103,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4129,8 +4130,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4156,8 +4157,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4180,7 +4181,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4203,7 +4204,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4226,7 +4227,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4249,7 +4250,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4272,7 +4273,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4295,7 +4296,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4318,7 +4319,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4341,7 +4342,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4364,7 +4365,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4387,7 +4388,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4410,7 +4411,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4433,7 +4434,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4456,7 +4457,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4479,7 +4480,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4505,8 +4506,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4529,7 +4530,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4552,7 +4553,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4578,8 +4579,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4602,7 +4603,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4628,8 +4629,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4652,7 +4653,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4675,7 +4676,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4701,8 +4702,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4725,7 +4726,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4751,8 +4752,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4775,7 +4776,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4798,7 +4799,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4824,8 +4825,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4848,7 +4849,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4871,7 +4872,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4894,7 +4895,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4920,8 +4921,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4947,8 +4948,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4971,7 +4972,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4997,8 +4998,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5021,7 +5022,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5047,8 +5048,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5071,7 +5072,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5094,7 +5095,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5117,7 +5118,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5140,7 +5141,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5163,7 +5164,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5189,8 +5190,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5216,8 +5217,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5240,7 +5241,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5266,8 +5267,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5293,8 +5294,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5320,8 +5321,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5347,8 +5348,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5374,8 +5375,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5401,8 +5402,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5428,8 +5429,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5452,7 +5453,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5475,7 +5476,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5498,7 +5499,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5521,7 +5522,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5544,7 +5545,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5570,8 +5571,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5597,8 +5598,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5621,7 +5622,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5647,8 +5648,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5674,8 +5675,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5701,8 +5702,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5725,7 +5726,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5748,7 +5749,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5771,7 +5772,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5794,7 +5795,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5820,8 +5821,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5847,8 +5848,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5874,8 +5875,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5901,8 +5902,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5928,8 +5929,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5955,8 +5956,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5982,8 +5983,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6009,8 +6010,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6036,8 +6037,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6063,8 +6064,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6090,8 +6091,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6114,7 +6115,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6140,8 +6141,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6167,8 +6168,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6191,7 +6192,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6217,8 +6218,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6241,7 +6242,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6267,8 +6268,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6291,7 +6292,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6317,8 +6318,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6341,7 +6342,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6364,7 +6365,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6387,7 +6388,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6410,7 +6411,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6433,7 +6434,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6459,8 +6460,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6483,7 +6484,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6509,8 +6510,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6533,7 +6534,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6559,8 +6560,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6583,7 +6584,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6606,7 +6607,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6632,8 +6633,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6659,8 +6660,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6686,8 +6687,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6713,8 +6714,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6740,8 +6741,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6767,8 +6768,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6794,8 +6795,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6821,8 +6822,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6848,8 +6849,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6872,7 +6873,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6898,8 +6899,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6925,8 +6926,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6949,7 +6950,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6972,7 +6973,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6995,7 +6996,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7021,8 +7022,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7048,8 +7049,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7075,8 +7076,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7102,8 +7103,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7129,8 +7130,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7156,8 +7157,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7183,8 +7184,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7207,7 +7208,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7233,8 +7234,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7257,7 +7258,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7283,8 +7284,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7307,7 +7308,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7330,7 +7331,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7353,7 +7354,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7376,7 +7377,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7402,8 +7403,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7426,7 +7427,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7449,7 +7450,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7472,7 +7473,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7495,7 +7496,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7518,7 +7519,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7541,7 +7542,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7564,7 +7565,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7587,7 +7588,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7610,7 +7611,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7636,8 +7637,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7663,8 +7664,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7690,8 +7691,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7717,8 +7718,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7744,8 +7745,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7771,8 +7772,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7798,8 +7799,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7825,8 +7826,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7852,8 +7853,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7879,8 +7880,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7906,8 +7907,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7930,7 +7931,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7953,7 +7954,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7976,7 +7977,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7999,7 +8000,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8022,7 +8023,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8048,8 +8049,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8075,8 +8076,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8099,7 +8100,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8122,7 +8123,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8145,7 +8146,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8168,7 +8169,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8191,7 +8192,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8214,7 +8215,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8237,7 +8238,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8263,8 +8264,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8287,7 +8288,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8313,8 +8314,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8337,7 +8338,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8360,7 +8361,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8383,7 +8384,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8409,8 +8410,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8433,7 +8434,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8459,8 +8460,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8486,8 +8487,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8513,8 +8514,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8540,8 +8541,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8567,8 +8568,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8594,8 +8595,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8621,8 +8622,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8648,8 +8649,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8675,8 +8676,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8702,8 +8703,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8729,8 +8730,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8756,8 +8757,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8783,8 +8784,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8810,8 +8811,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8837,8 +8838,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8864,8 +8865,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8891,8 +8892,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8918,8 +8919,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8945,8 +8946,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8972,8 +8973,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8999,8 +9000,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9026,8 +9027,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9050,7 +9051,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9076,8 +9077,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9103,8 +9104,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9127,7 +9128,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9150,7 +9151,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9173,7 +9174,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9196,7 +9197,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9219,7 +9220,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9242,7 +9243,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9265,7 +9266,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9288,7 +9289,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9311,7 +9312,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9334,7 +9335,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9357,7 +9358,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9380,7 +9381,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9406,8 +9407,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9433,8 +9434,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9457,7 +9458,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9483,8 +9484,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9507,7 +9508,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9530,7 +9531,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9553,7 +9554,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9576,7 +9577,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9602,8 +9603,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9626,7 +9627,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9649,7 +9650,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9672,7 +9673,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9695,7 +9696,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9718,7 +9719,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9744,8 +9745,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9768,7 +9769,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9791,7 +9792,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9814,7 +9815,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9837,7 +9838,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9863,8 +9864,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9887,7 +9888,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9910,7 +9911,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9933,7 +9934,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9956,7 +9957,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9979,7 +9980,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10002,7 +10003,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10025,7 +10026,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10051,8 +10052,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10075,7 +10076,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10101,8 +10102,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10125,7 +10126,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10148,7 +10149,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10171,7 +10172,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10197,8 +10198,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10221,7 +10222,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10244,7 +10245,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10267,7 +10268,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10290,7 +10291,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10313,7 +10314,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10336,7 +10337,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10362,8 +10363,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10386,7 +10387,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10409,7 +10410,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10435,8 +10436,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10459,7 +10460,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10482,7 +10483,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10505,7 +10506,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10531,8 +10532,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10558,8 +10559,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10582,7 +10583,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10605,7 +10606,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10631,8 +10632,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10655,7 +10656,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10678,7 +10679,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10704,8 +10705,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10731,8 +10732,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10755,7 +10756,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10778,7 +10779,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10801,7 +10802,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10824,7 +10825,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10847,7 +10848,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10870,7 +10871,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10893,7 +10894,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10916,7 +10917,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10939,7 +10940,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10962,7 +10963,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10985,7 +10986,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11011,8 +11012,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11038,8 +11039,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11065,8 +11066,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11092,8 +11093,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11119,8 +11120,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11143,7 +11144,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11166,7 +11167,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11189,7 +11190,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11212,7 +11213,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11235,7 +11236,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11258,7 +11259,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11281,7 +11282,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11304,7 +11305,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11327,7 +11328,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11350,7 +11351,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11373,7 +11374,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11396,7 +11397,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11419,7 +11420,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11442,7 +11443,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11465,7 +11466,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11488,7 +11489,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11511,7 +11512,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11534,7 +11535,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11557,7 +11558,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11580,7 +11581,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11606,8 +11607,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11633,8 +11634,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11657,7 +11658,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11683,8 +11684,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11710,8 +11711,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11737,8 +11738,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11761,7 +11762,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11784,7 +11785,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11807,7 +11808,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11830,7 +11831,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11856,8 +11857,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11883,8 +11884,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11910,8 +11911,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11937,8 +11938,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11961,7 +11962,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11984,7 +11985,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12007,7 +12008,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12030,7 +12031,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12053,7 +12054,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12076,7 +12077,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12099,7 +12100,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12122,7 +12123,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12145,7 +12146,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12168,7 +12169,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12191,7 +12192,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12214,7 +12215,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12237,7 +12238,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12260,7 +12261,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12283,7 +12284,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12306,7 +12307,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12329,7 +12330,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12352,7 +12353,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12375,7 +12376,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12401,8 +12402,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12425,7 +12426,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12448,7 +12449,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12474,8 +12475,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12498,7 +12499,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12521,7 +12522,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12547,8 +12548,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12574,8 +12575,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12601,8 +12602,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12628,8 +12629,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12652,7 +12653,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12675,7 +12676,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12698,7 +12699,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12721,7 +12722,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12744,7 +12745,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12770,8 +12771,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12797,8 +12798,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12824,8 +12825,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12848,7 +12849,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12871,7 +12872,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12894,7 +12895,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12920,8 +12921,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12944,7 +12945,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12967,7 +12968,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12990,7 +12991,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13016,8 +13017,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13040,7 +13041,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13066,8 +13067,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13090,7 +13091,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13113,7 +13114,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13136,7 +13137,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13162,8 +13163,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13186,7 +13187,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13209,7 +13210,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13232,7 +13233,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13255,7 +13256,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13278,7 +13279,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13304,8 +13305,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13328,7 +13329,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13351,7 +13352,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13377,8 +13378,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13404,8 +13405,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13428,7 +13429,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13451,7 +13452,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13474,7 +13475,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13497,7 +13498,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13520,7 +13521,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13543,7 +13544,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13566,7 +13567,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13592,8 +13593,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13616,7 +13617,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13642,8 +13643,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13669,8 +13670,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13693,7 +13694,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13716,7 +13717,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13742,8 +13743,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13769,8 +13770,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13796,8 +13797,8 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
-                     1 => _value1 != 0 ? $"{_value1}px" : _value1.ToString(),
+                    0 => FormatValue(_value0),
+                    1 => FormatValue(_value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13820,7 +13821,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13843,7 +13844,7 @@ namespace CssInCs
             {
                 return _index switch
                 {
-                     0 => _value0,
+                    0 => FormatValue(_value0),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }

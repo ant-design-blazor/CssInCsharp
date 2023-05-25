@@ -11,8 +11,6 @@ type PropertyItem = {
 type PropertyTypeItem = {
     name: string;
     type: string;
-    default: string;
-    value: string;
 }
 
 type PropertyType = {
@@ -27,6 +25,37 @@ const floatProperties = [
 const animationProperties = [
     'AnimationName'
 ]
+
+function fieldCode(tab: string, t: PropertyType): string {
+    return t.types
+        .map(x => `${tab}private readonly ${x.type} _${x.name};`)
+        .join('\r\n');
+}
+function parameterCode(tab: string, t: PropertyType): string {
+    return t.types
+        .map(x => `${x.type} ${x.name} = default`)
+        .join(', ');
+}
+function constructorCode(tab: string, t: PropertyType): string {
+    return t.types
+        .map(x => `${tab}    _${x.name} = ${x.name};`)
+        .join('\r\n');
+}
+function operatorCode(tab: string, t: PropertyType): string {
+    return t.types
+        .map((x, i) => `${tab}public static implicit operator ${t.name}(${x.type} t) => new(${i}, ${x.name}: t);`)
+        .join('\r\n');
+}
+function valueCode(tab: string, t: PropertyType): string {
+    return t.types
+        .map((x, i) => `${tab}        ${i} => FormatValue(_value${i}),`)
+        .join('\r\n');
+}
+function hashCode(tab: string, t: PropertyType): string {
+    return t.types
+        .map((x, i) => `${tab}            ${i} => _value${i}?.GetHashCode(),`)
+        .join('\r\n');
+}
 
 function escapeComment(input: string) {
     return input.replaceAll('<', '&lt;').replaceAll('>', '&gt;');
@@ -55,27 +84,22 @@ function getPropertyTypes(lines: string[]): PropertyType[] {
 
             const types: PropertyTypeItem[] = [];
 
-            let nameNormal = `value${types.length}`;
-            let namePrivate = `_value${types.length}`;
             // string type
-            types.push({ name: nameNormal, type: 'string', default: 'default', value: namePrivate });
+            types.push({ name: `value${types.length}`, type: 'string' });
 
             // number type
             if (type.includes('TLength =') || type.includes('number & {}')) {
-                nameNormal = `value${types.length}`;
-                namePrivate = `_value${types.length}`;
+
                 if (floatProperties.includes(name)) {
-                    types.push({ name: nameNormal, type: 'float', default: 'default', value: `${namePrivate}.ToString()` });
+                    types.push({ name: `value${types.length}`, type: 'float' });
                 } else {
-                    types.push({ name: nameNormal, type: 'int', default: 'default', value: `${namePrivate} != 0 ? $"{${namePrivate}}px" : ${namePrivate}.ToString()` });
+                    types.push({ name: `value${types.length}`, type: 'int' });
                 }
             }
 
             // animation type
             if (animationProperties.includes(name)) {
-                nameNormal = `value${types.length}`;
-                namePrivate = `_value${types.length}`;
-                types.push({ name: nameNormal, type: 'Keyframe', default: 'default', value: `${namePrivate}.ToString()` });
+                types.push({ name: `value${types.length}`, type: 'Keyframe' });
             }
             items.push({ name: name, types: types });
         }
@@ -129,58 +153,30 @@ function getFileContent(input: string, start: number, end: number) {
 
 function generatePropertyGeneric(output: string, totalCount: number = 1) {
     const tab = '        ';
-    const tType = (types: string[]) => {
-        return types
-            .map((x, i) => `T${i}`)
-            .join(', ');
-    }
-    const field = (types: string[]) => {
-        return types
-            .map((x, i) => `${tab}private readonly T${i} _value${i};`)
-            .join('\r\n');
-    }
-    const parameter = (types: string[]) => {
-        return types
-            .map((x, i) => `T${i} value${i} = default`)
-            .join(', ')
-    }
-    const constructor = (types: string[]) => {
-        return types
-            .map((x, i) => `${tab}    _value${i} = value${i};`)
-            .join('\r\n');
-    }
-    const operator = (types: string[]) => {
-        return types
-            .map((x, i) => `${tab}public static implicit operator Property<${tType(types)}>(T${i} t) => new(${i}, value${i}: t);`)
-            .join('\r\n');
-    }
-    const hashCode = (types: string[]) => {
-        return types
-            .map((x, i) => `${tab}            ${i} => _value${i}?.GetHashCode(),`)
-            .join('\r\n');
-    }
-    const value = (types: string[]) => {
-        return types
-            .map((x, i) => `${tab}        ${i} => FormatValue(_value${i}),`)
-            .join('\r\n');
-    }
-
-    let sb = '';
+    const types: PropertyType[] = [];
     for (let i = 0; i < totalCount; i++) {
-        const types = new Array(i + 1).fill('');
+        const arr = new Array(i + 1).fill('');
+        const t = arr.map((x, i) => `T${i}`).join(', ');
+        types.push({
+            name: `Property<${t}>`,
+            types: arr.map((x, i) => ({ name: `value${i}`, type: `T${i}` }))
+        })
+    }
+    let sb = '';
+    types.forEach(item => {
         sb += `
-    public readonly struct Property<${tType(types)}> : IProperty
+    public readonly struct ${item.name} : IProperty
     {
         private readonly int _index;
-${field(types)}
+${fieldCode(tab, item)}
 
-        private Property(int index, ${parameter(types)})
+        private Property(int index, ${parameterCode(tab, item)})
         {
             _index = index;
-${constructor(types)}
+${constructorCode(tab, item)}
         }
 
-${operator(types)}
+${operatorCode(tab, item)}
 
         public override bool Equals(object obj)
         {
@@ -189,7 +185,7 @@ ${operator(types)}
                 return false;
             }
 
-            return obj is Property<${tType(types)}> o && Equals(o);
+            return obj is ${item.name} o && Equals(o);
         }
 
         public override string ToString() => GetValue();
@@ -200,7 +196,7 @@ ${operator(types)}
             {
                 var hashCode = _index switch
                 {
-${hashCode(types)}
+${hashCode(tab, item)}
                     _ => 0
                 } ?? 0;
                 return (hashCode * 397) ^ _index;
@@ -211,13 +207,13 @@ ${hashCode(types)}
         {
             return _index switch
             {
-${value(types)}
+${valueCode(tab, item)}
                 _ => throw new InvalidOperationException("Unexpected index.")
             };
         }
     }
 `
-    }
+    })
 
     const template = `using System;
 using static CssInCs.Functions;
@@ -232,31 +228,6 @@ function generatePropertyTypes(input: string, output: string, start: number, end
     const lines = getFileContent(input, start, end);
     const items = getPropertyTypes(lines);
     const tab = '            ';
-    const field = (t: PropertyType) => {
-        return t.types
-            .map(x => `${tab}private readonly ${x.type} _${x.name};`)
-            .join('\r\n');
-    }
-    const parameter = (t: PropertyType) => {
-        return t.types
-            .map(x => `${x.type} ${x.name} = ${x.default}`)
-            .join(', ');
-    }
-    const constructor = (t: PropertyType) => {
-        return t.types
-            .map(x => `${tab}    _${x.name} = ${x.name};`)
-            .join('\r\n');
-    }
-    const operator = (t: PropertyType) => {
-        return t.types
-            .map((x, i) => `${tab}public static implicit operator ${t.name}(${x.type} t) => new(${i}, ${x.name}: t);`)
-            .join('\r\n');
-    }
-    const value = (t: PropertyType) => {
-        return t.types
-            .map((x, i) => `${tab}         ${i} => ${x.value},`)
-            .join('\r\n');
-    }
 
     let sb = '';
     items.forEach((item) => {
@@ -264,21 +235,21 @@ function generatePropertyTypes(input: string, output: string, start: number, end
         public readonly struct ${item.name} : IProperty
         {
             private readonly int _index;
-${field(item)}
+${fieldCode(tab, item)}
 
-            private ${item.name}(int index, ${parameter(item)})
+            private ${item.name}(int index, ${parameterCode(tab, item)})
             {
                 _index = index;
-${constructor(item)}
+${constructorCode(tab, item)}
             }
 
-${operator(item)}
+${operatorCode(tab, item)}
 
             public string GetValue()
             {
                 return _index switch
                 {
-${value(item)}
+${valueCode(tab, item)}
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -288,6 +259,7 @@ ${value(item)}
     })
 
     const template = `using System;
+using static CssInCs.Functions;
 
 namespace CssInCs
 {
