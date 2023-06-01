@@ -84,6 +84,8 @@ function getPropertyTypes(lines: string[]): PropertyType[] {
 
             const types: PropertyTypeItem[] = [];
 
+            // ignore type
+            types.push({ name: `value${types.length}`, type: 'PropertySkip' });
             // string type
             types.push({ name: `value${types.length}`, type: 'string' });
 
@@ -319,7 +321,7 @@ function generateProperty() {
     const input = './node_modules/csstype/index.d.ts';
     const output = './src/Types/Property.cs';
     generatePropertyTypes(input, output, 18459, 20144);
-    generatePropertyGeneric('./src/Types/PropertyT.cs', 3);
+    generatePropertyGeneric('./src/Types/PropertyT.cs', 4);
 }
 
 function generateStandardLonghand() {
