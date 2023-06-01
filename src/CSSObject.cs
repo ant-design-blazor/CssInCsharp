@@ -1,5 +1,6 @@
 using static CssInCs.Compiler.Serializer;
 using static CssInCs.Compiler.Parser;
+using static CssInCs.Constant;
 using System.Collections.Generic;
 using System.Text;
 
@@ -11,11 +12,11 @@ namespace CssInCs
         private readonly Dictionary<string, IProperty> _properties = new();
         public Dictionary<string, IProperty> GetProperties() => _properties;
         public Dictionary<string, CSSObject> GetStyles() => _styles;
-
+        
         public CSSObject this[string key]
         {
             get => _styles[key];
-            set => _styles[key] = value;
+            set => SetStyle(key, value);
         }
 
         public override string ToString()
@@ -49,10 +50,10 @@ namespace CssInCs
             var styles = css.GetStyles();
             foreach (var style in styles)
             {
-                if (_styles.ContainsKey(style.Key))
+                if (_styles.TryGetValue(style.Key, out var value))
                 {
                     // if exists, merge to sub style sheet.
-                    _styles[style.Key].Merge(style.Value);
+                    value.Merge(style.Value);
                 }
                 else
                 {
@@ -62,6 +63,16 @@ namespace CssInCs
             }
 
             return this;
+        }
+
+        private void SetStyle(string key, CSSObject value)
+        {
+            if (key == MERGE_OPERATOR)
+            {
+                Merge(value);
+                return;
+            }
+            _styles[key] = value;
         }
     }
 }

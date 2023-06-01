@@ -7,6 +7,9 @@
         This is div3
     </div>
 </div>
+<div class="div4">
+    This is div4
+</div>
 
 <style>
     @_style
@@ -50,7 +53,14 @@
                     Color = "cadetblue",
                     FontSize = "20px"
                 }
-            }.Merge(defaultCss)
+            }.Merge(defaultCss),
+            [".div4"] = new CSSObject
+            {
+                ["..."] = defaultCss, // use merge operator
+                Width = "120px",
+                Height = "120px",
+                Color = "green",
+            }
         };
 
         // only override div3 title color
