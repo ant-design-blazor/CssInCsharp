@@ -5169,16 +5169,19 @@ namespace CssInCs
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
+            private readonly int _value2;
 
-            private FontWeight(int index, PropertySkip value0 = default, string value1 = default)
+            private FontWeight(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
             {
                 _index = index;
                 _value0 = value0;
                 _value1 = value1;
+                _value2 = value2;
             }
 
             public static implicit operator FontWeight(PropertySkip t) => new(0, value0: t);
             public static implicit operator FontWeight(string t) => new(1, value1: t);
+            public static implicit operator FontWeight(int t) => new(2, value2: t);
 
             public string GetValue()
             {
@@ -5186,6 +5189,7 @@ namespace CssInCs
                 {
                     0 => FormatValue(_value0),
                     1 => FormatValue(_value1),
+                    2 => FormatValue(_value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }

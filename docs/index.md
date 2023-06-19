@@ -153,6 +153,38 @@ var css = new CSSObject
 };
 ```
 
+### Using merge operator
+```CSharp
+var globalCss = new CSSObject()
+{
+    Background = "#EFEFEF",
+    FontSize = "14px",
+    Border = "1px solid #DDD",
+    MarginBottom = "20px"
+};
+
+var colorCss = new CSSObject()
+{
+    Color = "green"
+}
+
+var css = new CSSObject
+{
+    [".div1"] = new CSSObject
+    {
+        // using "..." to merge globalCss, similar to the ...globalCss in ts.
+        ["..."] = globalCss,
+        Width = "100px",
+        Height = "100px",
+        Color = "red",
+        ["..."] = colorCss, // merge operator can be used multiple times.
+    }
+};
+```
+
+**NOTE** : The Merge method can only overwrite the object property after instantiation, but the Merge operator can be overridden during instantiation.
+
+
 ### Overwrite existing styles
 
 ```CSharp

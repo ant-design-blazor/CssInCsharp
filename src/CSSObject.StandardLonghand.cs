@@ -2189,9 +2189,9 @@ namespace CssInCs
         /// <para> | **2**  |  **1**  | **1**  | **12** | **3** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/font-weight</para>
         /// </summary>
-        public Property<PropertySkip, string> FontWeight
+        public Property<PropertySkip, string, int> FontWeight
         {
-            get => (Property<PropertySkip, string>) _properties["font-weight"];
+            get => (Property<PropertySkip, string, int>) _properties["font-weight"];
             set => _properties["font-weight"] = value;
         }
 

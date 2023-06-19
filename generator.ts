@@ -18,6 +18,10 @@ type PropertyType = {
     types: PropertyTypeItem[];
 }
 
+const numberProperties = [
+    "FontWeight"
+]
+
 const floatProperties = [
     'Opacity'
 ]
@@ -90,7 +94,7 @@ function getPropertyTypes(lines: string[]): PropertyType[] {
             types.push({ name: `value${types.length}`, type: 'string' });
 
             // number type
-            if (type.includes('TLength =') || type.includes('number & {}')) {
+            if (type.includes('TLength =') || type.includes('number & {}') || numberProperties.includes(name)) {
 
                 if (floatProperties.includes(name)) {
                     types.push({ name: `value${types.length}`, type: 'float' });
