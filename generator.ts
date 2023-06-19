@@ -18,6 +18,10 @@ type PropertyType = {
     types: PropertyTypeItem[];
 }
 
+const numberProperties = [
+    "FontWeight"
+]
+
 const floatProperties = [
     'Opacity'
 ]
@@ -90,7 +94,7 @@ function getPropertyTypes(lines: string[]): PropertyType[] {
             types.push({ name: `value${types.length}`, type: 'string' });
 
             // number type
-            if (type.includes('TLength =') || type.includes('number & {}')) {
+            if (type.includes('TLength =') || type.includes('number & {}') || numberProperties.includes(name)) {
 
                 if (floatProperties.includes(name)) {
                     types.push({ name: `value${types.length}`, type: 'float' });
@@ -129,7 +133,9 @@ function getPropertyItems(lines: string[], propTypes?: PropertyType[]): Property
         const j = pure.indexOf('|');
         const k = pure.indexOf('<');
         const index = k > 0 && k < j ? k : j;
-        const newName = propertyName.replace(regex, (m) => '-' + m.toLowerCase());
+        const newName = propertyName
+            .replace(regex, (m) => '-' + m.toLowerCase())
+            .replace(/^(moz|ms|webkit)(.+)/, '-$1$2');
         let propertyType = pure.substring(pure.indexOf('?:') + 2, index).trim();
         if (propTypes) {
             const type = propTypes.find(x => `Property.${x.name}` === propertyType);
@@ -336,10 +342,24 @@ function generateStandardShorthand() {
     generatePropertyItems(input, output, 5066, 5864);
 }
 
+function generateVendorLonghand() {
+    const input = './node_modules/csstype/index.d.ts';
+    const output = './src/CSSObject.VendorLonghand.cs';
+    generatePropertyItems(input, output, 5870, 7663);
+}
+
+function generateVendorShorthand() {
+    const input = './node_modules/csstype/index.d.ts';
+    const output = './src/CSSObject.VendorShorthand.cs';
+    generatePropertyItems(input, output, 7665, 7816);
+}
+
 function generate() {
     generateProperty();
     generateStandardLonghand();
     generateStandardShorthand();
+    generateVendorLonghand();
+    generateVendorShorthand();
 }
 
 generate();
