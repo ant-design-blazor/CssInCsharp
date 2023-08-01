@@ -1,3 +1,4 @@
+using System;
 using static CssInCs.Compiler.Serializer;
 using static CssInCs.Compiler.Parser;
 using static CssInCs.Constant;
@@ -76,7 +77,9 @@ namespace CssInCs
 
         private void SetStyle(string key, CSSInterpolation value)
         {
-            var cssObject = value.IsT0 ? value.AsT0 : new CSSObject().Merge(value.AsT1);
+            if (key == null) return;
+            var cssObject = value.IsT0 ? value.AsT0 : new CSSObject().Merge(value.ToCssArray());
+            if (cssObject == null) return;
             if (key == MERGE_OPERATOR)
             {
                 Merge(cssObject);

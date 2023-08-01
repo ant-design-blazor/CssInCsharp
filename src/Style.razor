@@ -1,27 +1,28 @@
 ﻿<HeadContent>
-    <style id="@Id">
-        @if (Styles != null)
-        {
-            @foreach (var style in Styles)
+    @foreach (var item in _cache)
+    {
+        <style id="@item.Key">
+            @foreach (var style in item.Value())
             {
                 @style.ToString()
             }
-        }
-        @if (ChildContent != null)
-        {
-            @ChildContent
-        }
-    </style>
+        </style>
+    }
 </HeadContent>
 
 @code
 {
-    [Parameter] 
-    public string? Id { get; set; }
+    private static Dictionary<string, Func<CSSObject[]>> _cache = new();
 
     [Parameter]
-    public RenderFragment? ChildContent { get; set; }
+    public string Id { get; set; } = $"cssincs-{Guid.NewGuid()}";
 
     [Parameter]
-    public CSSObject[]? Styles { get; set; }
+    public Func<CSSObject[]> StyleFn { get; set; }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        _cache.TryAdd(Id, StyleFn);
+    }
 }

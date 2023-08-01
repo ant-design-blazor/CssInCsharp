@@ -10,7 +10,7 @@ internal static class Functions
             int v => v != 0 ? $"{v}px" : v.ToString(),
             float v => v.ToString(),
             Keyframe v => v.ToString(),
-            _ => value.ToString()
+            _ => value?.ToString()
         };
     }
 }
