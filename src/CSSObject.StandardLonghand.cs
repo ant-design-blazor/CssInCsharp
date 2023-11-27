@@ -2708,9 +2708,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/line-height</para>
         /// </summary>
-        public Property<PropertySkip, string, int> LineHeight
+        public Property<PropertySkip, string, float> LineHeight
         {
-            get => (Property<PropertySkip, string, int>) _properties["line-height"];
+            get => (Property<PropertySkip, string, float>) _properties["line-height"];
             set => _properties["line-height"] = value;
         }
 

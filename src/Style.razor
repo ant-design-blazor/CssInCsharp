@@ -1,28 +1,59 @@
-﻿<HeadContent>
-    @foreach (var item in _cache)
-    {
-        <style id="@item.Key">
-            @foreach (var style in item.Value())
-            {
-                @style.ToString()
-            }
-        </style>
-    }
-</HeadContent>
+﻿@using System.Text
+@if (HeadRender)
+{
+    <HeadContent>
+        @RenderStyle()
+    </HeadContent>
+}
+else
+{
+    @RenderStyle()
+}
 
 @code
 {
-    private static Dictionary<string, Func<CSSObject[]>> _cache = new();
+    [Parameter]
+    public string Theme { get; set; }
 
     [Parameter]
-    public string Id { get; set; } = $"cssincs-{Guid.NewGuid()}";
+    public string Token { get; set; }
 
     [Parameter]
-    public Func<CSSObject[]> StyleFn { get; set; }
+    public string[] Path { get; set; }
 
-    protected override void OnInitialized()
+    [Parameter]
+    public string HashId { get; set; }
+
+    [Parameter]
+    public string Layer { get; set; }
+
+    [Parameter]
+    public Func<CSSInterpolation> StyleFn { get; set; }
+
+    [Parameter]
+    public bool HeadRender { get; set; }
+
+    private RenderFragment RenderStyle()
     {
-        base.OnInitialized();
-        _cache.TryAdd(Id, StyleFn);
+        var fullPath = new [] { Token }.Concat(Path);
+        var cachePath = string.Join("|", fullPath);
+        var cache = StyleCache.Instance.GetOrAdd(cachePath, BuildCache);
+        return @<style data-css-hash="@cache.StyleId" data-token-hash="@cache.TokenKey" data-cache-path="@cachePath">@cache.StyleStr</style>;
+    }
+
+    private StyleCache.Item BuildCache(string key)
+    {
+        var csses = StyleFn().ToCssArray();
+        var sb = new StringBuilder();
+        foreach (var css in csses)
+        {
+            sb.Append(css.ToString());
+        }
+        return new StyleCache.Item
+        {
+            StyleStr = sb.ToString(),
+            TokenKey = Token,
+            StyleId = ""
+        };
     }
 }
