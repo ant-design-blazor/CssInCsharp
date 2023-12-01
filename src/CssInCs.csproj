@@ -8,6 +8,7 @@
     <RazorLangVersion>3.0</RazorLangVersion>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <ImplicitUsings>disable</ImplicitUsings>
+	<PackageIcon>logo.png</PackageIcon>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -55,5 +56,4 @@
   <ItemGroup>
     <None Remove="CssInCs.csproj.DotSettings" />
   </ItemGroup>
-
 </Project>
