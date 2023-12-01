@@ -2708,9 +2708,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/line-height</para>
         /// </summary>
-        public Property<PropertySkip, string, float> LineHeight
+        public Property<PropertySkip, string, double> LineHeight
         {
-            get => (Property<PropertySkip, string, float>) _properties["line-height"];
+            get => (Property<PropertySkip, string, double>) _properties["line-height"];
             set => _properties["line-height"] = value;
         }
 
@@ -3508,9 +3508,9 @@ namespace CssInCs
         /// <para> | **1**  |  **1**  | **2**  | **12** | **9** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/opacity</para>
         /// </summary>
-        public Property<PropertySkip, string, float> Opacity
+        public Property<PropertySkip, string, double> Opacity
         {
-            get => (Property<PropertySkip, string, float>) _properties["opacity"];
+            get => (Property<PropertySkip, string, double>) _properties["opacity"];
             set => _properties["opacity"] = value;
         }
 

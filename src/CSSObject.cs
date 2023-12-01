@@ -22,21 +22,36 @@ namespace CssInCs
 
         public override string ToString()
         {
-            return Serialize(Compile(CreateCss()), Stringify);
+            return SerializeCss(string.Empty);
         }
 
-        public string CreateCss()
+        public string SerializeCss(string hashId)
+        {
+            return Serialize(Compile(ParseStyle(true, hashId)), Stringify);
+        }
+
+        public string ParseStyle(bool root, string hashId)
         {
             var sb = new StringBuilder();
+            var hashClassName = $".{hashId}";
             foreach (var property in _properties)
             {
-                sb.Append($"{property.Key}:{property.Value.GetValue()};");
+                sb.Append($"{property.Key}:{property.Value.GetValue(property.Key)};");
             }
             foreach (var subStyle in _styles)
             {
-                sb.Append($"{subStyle.Key}{{{subStyle.Value.CreateCss()}}}");
+                var nextRoot = false;
+                sb.Append($"{subStyle.Key}{{{subStyle.Value.ParseStyle(nextRoot, hashId)}}}");
             }
-            return sb.ToString();
+
+            if (root)
+            {
+                return $":where({hashClassName}){sb}";
+            }
+            else
+            {
+                return sb.ToString();
+            }
         }
 
         public CSSObject Merge(CSSObject css)

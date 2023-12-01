@@ -21,5 +21,10 @@ namespace CssInCs
         {
             return _cache.GetOrAdd(key, func);
         }
+
+        public bool Exists(string key)
+        {
+            return _cache.ContainsKey(key);
+        }
     }
 }
