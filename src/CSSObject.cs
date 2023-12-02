@@ -33,7 +33,7 @@ namespace CssInCSharp
         public string ParseStyle(bool root, string hashId)
         {
             var sb = new StringBuilder();
-            var hashClassName = $".{hashId}";
+            
             foreach (var property in _properties)
             {
                 sb.Append($"{property.Key}:{property.Value.GetValue(property.Key)};");
@@ -44,9 +44,9 @@ namespace CssInCSharp
                 sb.Append($"{subStyle.Key}{{{subStyle.Value.ParseStyle(nextRoot, hashId)}}}");
             }
 
-            if (root)
+            if (root && !string.IsNullOrEmpty(hashId))
             {
-                return $":where({hashClassName}){sb}";
+                return $":where(.{hashId}){sb}";
             }
             else
             {

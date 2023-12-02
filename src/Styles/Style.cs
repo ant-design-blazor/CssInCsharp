@@ -11,7 +11,7 @@ namespace CssInCSharp
         public string TokenKey { get; set; }
 
         [Parameter]
-        public string Path { get; set; }
+        public string Path { get; set; } = $"css|{Guid.NewGuid()}";
 
         [Parameter]
         public string HashId { get; set; }

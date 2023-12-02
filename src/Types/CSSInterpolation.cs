@@ -8,6 +8,8 @@ namespace CssInCSharp
         private readonly CSSObject _value0;
         private readonly CSSInterpolation[] _value1;
 
+        public CSSObject this[string key] => _value0;
+
         private CSSInterpolation(int index, CSSObject value0 = default, CSSInterpolation[] value1 = default)
         {
             _index = index;
