@@ -1,7 +1,7 @@
-﻿using static CssInCs.Compiler.Utility;
+﻿using static CssInCSharp.Compiler.Utility;
 using System.Collections.Generic;
 
-namespace CssInCs.Compiler
+namespace CssInCSharp.Compiler
 {
     public class Element
     {

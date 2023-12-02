@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
 
-namespace CssInCs
+namespace CssInCSharp
 {
     internal class StyleCache
     {

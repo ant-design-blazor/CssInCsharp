@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace CssInCs
+namespace CssInCSharp
 {
     /// <summary>
     /// @see https://github.com/emotion-js/emotion/blob/main/packages/unitless/src/index.js

@@ -1,7 +1,7 @@
 ﻿using Bunit;
 using Xunit;
 
-namespace CssInCs.Tests
+namespace CssInCSharp.Tests
 {
     public class StyleTests : TestContext
     {

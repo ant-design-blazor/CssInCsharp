@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace CssInCs.Extensions
+namespace CssInCSharp
 {
     public static class CollectionExtension
     {

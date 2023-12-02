@@ -1,7 +1,7 @@
 using System;
-using static CssInCs.Functions;
+using static CssInCSharp.Functions;
 
-namespace CssInCs
+namespace CssInCSharp
 {
     public readonly struct Property<T0> : IProperty
     {

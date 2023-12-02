@@ -2,47 +2,37 @@
 
 <div class="basic">
     <div class="title">Title</div>
-    <button class="button" @onclick="HandleClick">Click</button>
 </div>
 
-<Style Id="basic-css">
-    @_css
-</Style>
+<Style StyleFn="@GenStyle"></Style>
 
 @code
 {
-    private string _css = string.Empty;
-
-    protected override void OnInitialized()
+    private CSSInterpolation GenStyle()
     {
-        _css = new CSSObject
+        return new CSSObject
         {
-            [".basic"] = new()
+            [".basic"] = new CSSObject
             {
                 Width = "300px",
                 Height = "300px",
                 Border = "1px solid #DDD",
-                ["& .title"] = new()
+                ["& .title"] = new CSSObject()
                 {
                     LineHeight = "20px",
                     Color = "red"
                 },
-                ["& .button"] = new()
+                ["& .button"] = new CSSObject()
                 {
                     Width = "100%",
                     Height = "20px",
                     TextAlign = "center",
-                    ["&:hover"] = new()
+                    ["&:hover"] = new CSSObject()
                     {
                         Color = "blue"
                     }
                 }
             }
-        }.ToString();
-    }
-
-    private void HandleClick()
-    {
-        Console.WriteLine(_css.ToString());
+        };
     }
 }

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
 using System;
 
-namespace CssInCs
+namespace CssInCSharp
 {
     public class StyleInfo
     {

@@ -1,11 +1,11 @@
 using System;
-using static CssInCs.Compiler.Serializer;
-using static CssInCs.Compiler.Parser;
-using static CssInCs.Constant;
+using static CssInCSharp.Compiler.Serializer;
+using static CssInCSharp.Compiler.Parser;
+using static CssInCSharp.Constant;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CssInCs
+namespace CssInCSharp
 {
     public sealed partial class CSSObject
     {

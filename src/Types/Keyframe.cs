@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 
-namespace CssInCs
+namespace CssInCSharp
 {
     public sealed class Keyframe
     {

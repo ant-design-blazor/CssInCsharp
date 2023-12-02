@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Components.Sections;
 #endif
 using Microsoft.AspNetCore.Components.Web;
 
-namespace CssInCs
+namespace CssInCSharp
 {
     public sealed class StyleOutlet : ComponentBase
     {

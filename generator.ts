@@ -226,9 +226,9 @@ ${valueCode(tab, item)}
     })
 
     const template = `using System;
-using static CssInCs.Functions;
+using static CssInCSharp.Functions;
 
-namespace CssInCs
+namespace CssInCSharp
 {${sb}}
 `;
     fs.writeFileSync(output, template, 'utf8');
@@ -269,9 +269,9 @@ ${valueCode(tab, item)}
     })
 
     const template = `using System;
-using static CssInCs.Functions;
+using static CssInCSharp.Functions;
 
-namespace CssInCs
+namespace CssInCSharp
 {
     /**
      * If you want to use this property type to replace generic property types.
@@ -315,7 +315,7 @@ function generatePropertyItems(input: string, output: string, start: number, end
         sb += '\r\n';
     });
 
-    const template = `namespace CssInCs
+    const template = `namespace CssInCSharp
 {
     public partial class CSSObject
     {
@@ -361,7 +361,7 @@ function generateUnitless() {
     const items = Object.keys(unitless).map(key => `${tab}{ "${key}", ${unitless[key]} }`);
     let template = `using System.Collections.Generic;
 
-namespace CssInCs
+namespace CssInCSharp
 {
     /// <summary>
     /// @see https://github.com/emotion-js/emotion/blob/main/packages/unitless/src/index.js

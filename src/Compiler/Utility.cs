@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace CssInCs.Compiler
+namespace CssInCSharp.Compiler
 {
     public static class Utility
     {

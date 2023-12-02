@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Components.Rendering;
 using System;
 using System.Text;
 
-namespace CssInCs
+namespace CssInCSharp
 {
     public class Style : ComponentBase
     {

@@ -1,7 +1,7 @@
 using System;
-using static CssInCs.Functions;
+using static CssInCSharp.Functions;
 
-namespace CssInCs
+namespace CssInCSharp
 {
     /**
      * If you want to use this property type to replace generic property types.

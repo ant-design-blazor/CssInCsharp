@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Components.Rendering;
 using Microsoft.AspNetCore.Components.Sections;
 #endif
 
-namespace CssInCs
+namespace CssInCSharp
 {
     public class StyleContent : ComponentBase
     {

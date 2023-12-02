@@ -1,4 +1,4 @@
-﻿namespace CssInCs.Compiler
+﻿namespace CssInCSharp.Compiler
 {
     internal static class Enum
     {

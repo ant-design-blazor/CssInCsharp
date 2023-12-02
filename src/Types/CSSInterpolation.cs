@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CssInCs
+namespace CssInCSharp
 {
     public struct CSSInterpolation
     {
