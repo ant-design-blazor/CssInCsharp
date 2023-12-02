@@ -37,16 +37,11 @@ jobs:
         with:
           dotnet-version: 8.0.100
 
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '10.x'
-
       - name: Package Nightly Nuget 📦
         run: |
-          npm i
           SUFFIX=`date "+%y%m%d%H%M%S"`
-          dotnet build src/CssInCs.csproj
-          dotnet pack src/CssInCs.csproj /p:PackageVersion=$Version-nightly-${SUFFIX} -c Release -o publish
+          dotnet build src/CssInCSharp.csproj
+          dotnet pack src/CssInCSharp.csproj /p:PackageVersion=$Version-nightly-${SUFFIX} -c Release -o publish
 
       - name: Publish to Nuget ✔
         run: |

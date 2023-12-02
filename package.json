@@ -1,11 +1,10 @@
 {
-  "name": "@blazor-component/typecss",
+  "name": "@blazor-component/cssincsharp",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "generate": "ts-node generator.ts",
-    "lessc": "lessc"
+    "generate": "ts-node generator.ts"
   },
   "author": "",
   "license": "MIT",

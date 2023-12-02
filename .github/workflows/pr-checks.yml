@@ -29,11 +29,6 @@ jobs:
         with:
           dotnet-version: 8.0.100
 
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '10.x'
-
       - name: Check Building ⚙
         run: |
-          npm i
           dotnet build
