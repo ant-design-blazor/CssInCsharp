@@ -1,4 +1,4 @@
-namespace CssInCs
+namespace CssInCSharp
 {
     public static class Styles
     {

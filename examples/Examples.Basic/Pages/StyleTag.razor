@@ -9,40 +9,38 @@
 </div>
 
 <!-- style in head -->
-<Style Id="global-css">
-    @_styleInHead
-</Style>
+<StyleContent>
+    <Style StyleFn="@StyleInHead" Path="Basic|StyleTag"></Style>
+</StyleContent>
 
 <!--style in body-->
-<style>
-    @_styleInBody
-</style>
+<Style StyleFn="@StyleInBody"></Style>
 
 @code {
-    private string _styleInHead = string.Empty;
-    private string _styleInBody = string.Empty;
-
-    protected override void OnInitialized()
+    private CSSInterpolation StyleInHead()
     {
-        _styleInHead = new CSSObject
+        return new CSSObject
         {
-            [".div1"] = new()
+            [".div1"] = new CSSObject
             {
                 Width = "200px",
                 Height = "200px",
                 Border = "1px solid #DDD",
             }
-        }.ToString();
+        };
+    }
 
-        _styleInBody = new CSSObject
+    private CSSInterpolation StyleInBody()
+    {
+        return new CSSObject
         {
-            [".div2"] = new()
+            [".div2"] = new CSSObject
             {
                 Width = "200px",
                 Height = "200px",
                 Border = "1px solid #DDD",
                 BackgroundColor = "#EFEFEF",
             }
-        }.ToString();
+        };
     }
 }

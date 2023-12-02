@@ -10,30 +10,25 @@
     <div class="animation"></div>
 </div>
 
-<Style>
-    @_transform
-    @_offset
-</Style>
+<Style StyleFn="@CreateTransformStyle"></Style>
+<Style StyleFn="@CreateOffsetStyle"></Style>
 
 @code {
-    private string _transform = "";
-    private string _offset = "";
-
-    protected override void OnInitialized()
+    private CSSInterpolation CreateTransformStyle()
     {
-        _transform = new CSSObject
+        return new CSSObject
         {
-            [".transform"] = new()
+            [".transform"] = new CSSObject
             {
                 Width = 120,
                 Height = 120,
-                ["& .title"] = new ()
+                ["& .title"] = new CSSObject
                 {
                     Height = 20,
                     LineHeight = 20,
                     FontSize = 14
                 },
-                ["& .animation"] = new()
+                ["& .animation"] = new CSSObject
                 {
                     Width = 100,
                     Height = 100,
@@ -54,22 +49,25 @@
                     }
                 }
             }
-        }.ToString();
+        };
+    }
 
-        _offset = new CSSObject
+    private CSSInterpolation CreateOffsetStyle()
+    {
+        return new CSSObject
         {
-            [".offset"] = new()
+            [".offset"] = new CSSObject
             {
                 Width = 120,
                 Height = 120,
                 MarginTop = 30,
-                ["& .title"] = new ()
+                ["& .title"] = new CSSObject
                 {
                     Height = 20,
                     LineHeight = 20,
                     FontSize = 14
                 },
-                ["& .animation"] = new()
+                ["& .animation"] = new CSSObject
                 {
                     Width = 100,
                     Height = 100,
@@ -92,6 +90,6 @@
                     }
                 }
             }
-        }.ToString();
+        };
     }
 }

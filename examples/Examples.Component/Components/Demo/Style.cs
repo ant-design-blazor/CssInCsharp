@@ -1,4 +1,4 @@
-﻿using CssInCs;
+﻿using CssInCSharp;
 
 namespace Examples.Component
 {
@@ -7,12 +7,13 @@ namespace Examples.Component
         // or component id,name etc.
         private const string Name = "demo";
         private const string ClassName = $".{Name}";
+        private CssToken _token = new CssToken();
 
         private CSSObject GenStyle(CssToken token)
         {
             return new CSSObject
             {
-                [ClassName] = new ()
+                [ClassName] = new CSSObject
                 {
                     Width = $"{Width}px",
                     MinHeight = "300px",
@@ -20,7 +21,7 @@ namespace Examples.Component
                     FlexDirection = "row",
                     FlexWrap = "wrap",
                     JustifyContent = "space-between",
-                    ["& .item"] = new ()
+                    ["& .item"] = new CSSObject
                     {
                         Width = "80px",
                         Height = "100px",
@@ -34,9 +35,9 @@ namespace Examples.Component
             };
         }
 
-        protected override CSSObject[] UseStyle(CssToken token) => new []
+        protected override CSSInterpolation UseStyle() => new CSSInterpolation[]
         {
-            GenStyle(token)
+            GenStyle(_token)
         };
     }
 }
