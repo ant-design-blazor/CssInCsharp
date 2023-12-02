@@ -1,6 +1,6 @@
 ## Install Package
 ```sh
-dotnet add package CssInCs
+dotnet add package CssInCSharp
 ```
 
 ## Add Using
@@ -8,7 +8,7 @@ dotnet add package CssInCs
 Add usings to _Imports.razor file in your blazor project.
 
 ```CSharp
-@using CssInCs
+@using CssInCSharp
 ```
 
 ## Usage
@@ -16,22 +16,22 @@ Add usings to _Imports.razor file in your blazor project.
 // Create css object
 var css = new CSSObject
 {
-    [".demo"] = new ()
+    [".demo"] = new CSSObject
     {
         Width = "300px",
         Height = "300px",
         Border = "1px solid #DDD",
-        ["& .title"] = new ()
+        ["& .title"] = new CSSObject
         {
             LineHeight = "20px",
             Color = "red"
         },
-        ["& .button"] = new ()
+        ["& .button"] = new CSSObject
         {
             Width = "100%",
             Height = "20px",
             TextAlign = "center",
-            ["&:hover"] = new ()
+            ["&:hover"] = new CSSObject
             {
                 Color = "blue"
             }
@@ -50,10 +50,10 @@ Referencing parent selectors with & , This is the same as less.
 ```csharp
 var css = new CSSObject
 {
-    ["a"] = new()
+    ["a"] = new CSSObject
     {
         Color = "blue",
-        ["&:hover"] = new()
+        ["&:hover"] = new CSSObject
         {
             Color = "green"
         }
@@ -78,17 +78,17 @@ The "parent selectors" operator has a variety of uses. Basically any time you ne
 ```csharp
 var css = new CSSObject
 {
-    [".button"] = new()
+    [".button"] = new CSSObject
     {
-        ["&-ok"] = new()
+        ["&-ok"] = new CSSObject
         {
             BackgroundImage = "url(\"ok.png\")"
         },
-        ["&-cancel"] = new()
+        ["&-cancel"] = new CSSObject
         {
             BackgroundImage = "url(\"cancel.png\")"
         },
-        ["&-custom"] = new()
+        ["&-custom"] = new CSSObject
         {
             BackgroundImage = "url(\"custom.png\")"
         }
@@ -116,7 +116,7 @@ You can use the merge method to inherit or merge multiple css object in some sce
 
 ### Reuse global styles
 ```CSharp
-var globalCss = new CSSObject()
+var globalCss = new CSSObject
 {
     Background = "#EFEFEF",
     FontSize = "14px",
@@ -144,7 +144,7 @@ var css = new CSSObject
         Width = "120px",
         Height = "120px",
         Color = "blue",
-        ["& .title"] = new ()
+        ["& .title"] = new CSSObject
         {
             Color = "cadetblue",
             FontSize = "20px"
@@ -155,7 +155,7 @@ var css = new CSSObject
 
 ### Using merge operator
 ```CSharp
-var globalCss = new CSSObject()
+var globalCss = new CSSObject
 {
     Background = "#EFEFEF",
     FontSize = "14px",
@@ -163,7 +163,7 @@ var globalCss = new CSSObject()
     MarginBottom = "20px"
 };
 
-var colorCss = new CSSObject()
+var colorCss = new CSSObject
 {
     Color = "green"
 }
@@ -191,9 +191,9 @@ var css = new CSSObject
 // override div3 title color
 css.Merge(new CSSObject
 {
-    [".div3"] = new ()
+    [".div3"] = new CSSObject
     {
-        ["& .title"] = new ()
+        ["& .title"] = new CSSObject
         {
             Color = "yellow"
         }
@@ -214,16 +214,16 @@ public int Size { get; set; } = 200;  // component parameter
 protected override void OnInitialized()
 {
     var fontSize = "16px";            // local varibale
-    var css = new CSSObject()
+    var css = new CSSObject
     {
-        [".div1"] = new ()
+        [".div1"] = new CSSObject
         {
             Border = "1px solid #DDD",
             Width = $"{Size}px",
             Height = $"{Size}px",
             Color = _color,
             FontSize = fontSize,
-            ["& .title"] = new ()
+            ["& .title"] = new CSSObject
             {
                 Color = _color,
                 FontSize = fontSize
@@ -250,13 +250,13 @@ protected override void OnInitialized()
     var fontSize = "16px";            // local varibale
     _css = new CSSObject
     {
-        [".div2"] = new()
+        [".div2"] = new CSSObject
         {
             Border = "1px solid #DDD",
             Width = $"{Size}px",
             Height = $"{Size}px",
             MarginTop = "10px",
-            ["& .title"] = new()
+            ["& .title"] = new CSSObject
             {
                 Color = _color,
                 FontSize = fontSize
@@ -278,7 +278,7 @@ private void ClickToChangeCssObject()
     {
         [".div2"] = new ()
         {
-            ["& .title"] = new ()
+            ["& .title"] = new CSSObject
             {
                 Color = "green"
             }
@@ -306,28 +306,28 @@ protected override async Task OnInitializedAsync()
 {
     var css = new CSSObject
     {
-        [".div"] = new ()
+        [".div"] = new CSSObject
         {
             Width = $"{_size}px",
             Border = "1px solid #DDD",
-            ["& .header"] = new ()
+            ["& .header"] = new CSSObject
             {
                 Height = "50px",
                 Width = "100%",
             },
-            ["& .footer"] = new ()
+            ["& .footer"] = new CSSObject
             {
                 Height = "50px",
                 Width = "100%",
             },
-            ["& .body"] = new ()
+            ["& .body"] = new CSSObject
             {
                 // normal method
                 Height = $"{CalcBodyHeight(50, 50)}px",
                 Width = "100%",
                 BorderTop = "1px solid #DDD",
                 BorderBottom = "1px solid #DDD",
-                [".container"] = new ()
+                [".container"] = new CSSObject
                 {
                     // async method
                     Height = await GetContainerSizeAsync(),
@@ -362,9 +362,9 @@ Transform animation example:
     <div class="animation"></div>
 </div>
 
-<Style>
+<style>
     @_transform
-</Style>
+</style>
 
 @code {
     private string _transform = "";
@@ -373,17 +373,17 @@ Transform animation example:
     {
         _transform = new CSSObject
         {
-            [".transform"] = new()
+            [".transform"] = new CSSObject
             {
                 Width = 120,
                 Height = 120,
-                ["& .title"] = new ()
+                ["& .title"] = new CSSObject
                 {
                     Height = 20,
                     LineHeight = 20,
                     FontSize = 14
                 },
-                ["& .animation"] = new()
+                ["& .animation"] = new CSSObject
                 {
                     Width = 100,
                     Height = 100,

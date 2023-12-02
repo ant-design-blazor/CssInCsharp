@@ -16,9 +16,9 @@ dotnet add package CssInCSharp
     <button class="button">Click</button>
 </div>
 
-<Style Id="basic-css">
+<style>
     @_css
-</Style>
+</style>
 
 @code
 {
@@ -28,22 +28,22 @@ dotnet add package CssInCSharp
     {
         _css = new CSSObject
         {
-            [".basic"] = new()
+            [".basic"] = new CSSObject
             {
                 Width = "300px",
                 Height = "300px",
                 Border = "1px solid #DDD",
-                ["& .title"] = new()
+                ["& .title"] = new CSSObject
                 {
                     LineHeight = "20px",
                     Color = "red"
                 },
-                ["& .button"] = new()
+                ["& .button"] = new CSSObject
                 {
                     Width = "100%",
                     Height = "20px",
                     TextAlign = "center",
-                    ["&:hover"] = new()
+                    ["&:hover"] = new CSSObject
                     {
                         Color = "blue"
                     }
@@ -57,7 +57,7 @@ dotnet add package CssInCSharp
 For other examples, you can check out the example code.
 
 ## Css Compiler
-The cssincs is similar to less or sass. You can simply convert you style file into C# class, so that you can make full use of the C# language features to generate style content.
+The CssInCSharp is similar to less or sass. You can simply convert you style file into C# class, so that you can make full use of the C# language features to generate style content.
 
 ## Benchmark
 ``` ini
