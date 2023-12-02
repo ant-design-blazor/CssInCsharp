@@ -1,4 +1,4 @@
-# CssInCs
+# CssInCSharp
 
 A lib for generating Style Sheets with C#.
 
