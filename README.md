@@ -6,7 +6,7 @@ For documentation see our [docs](./docs/index.md).
 
 ## Getting started
 ```sh
-dotnet add package CssInCs
+dotnet add package CssInCSharp
 ```
 
 ## Usage
