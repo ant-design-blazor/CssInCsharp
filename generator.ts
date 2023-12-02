@@ -1,5 +1,6 @@
 
 import * as fs from 'fs'
+import unitless from '@emotion/unitless'
 
 type PropertyItem = {
     name: string;
@@ -23,7 +24,8 @@ const numberProperties = [
 ]
 
 const floatProperties = [
-    'Opacity'
+    'Opacity',
+    "LineHeight"
 ]
 
 const animationProperties = [
@@ -52,7 +54,7 @@ function operatorCode(tab: string, t: PropertyType): string {
 }
 function valueCode(tab: string, t: PropertyType): string {
     return t.types
-        .map((x, i) => `${tab}        ${i} => FormatValue(_value${i}),`)
+        .map((x, i) => `${tab}        ${i} => FormatValue(key, _value${i}),`)
         .join('\r\n');
 }
 function hashCode(tab: string, t: PropertyType): string {
@@ -97,7 +99,7 @@ function getPropertyTypes(lines: string[]): PropertyType[] {
             if (type.includes('TLength =') || type.includes('number & {}') || numberProperties.includes(name)) {
 
                 if (floatProperties.includes(name)) {
-                    types.push({ name: `value${types.length}`, type: 'float' });
+                    types.push({ name: `value${types.length}`, type: 'double' });
                 } else {
                     types.push({ name: `value${types.length}`, type: 'int' });
                 }
@@ -196,7 +198,7 @@ ${operatorCode(tab, item)}
             return obj is ${item.name} o && Equals(o);
         }
 
-        public override string ToString() => GetValue();
+        public override string ToString() => GetValue(null);
 
         public override int GetHashCode()
         {
@@ -211,7 +213,7 @@ ${hashCode(tab, item)}
             }
         }
 
-        public string GetValue()
+        public string GetValue(string key)
         {
             return _index switch
             {
@@ -224,9 +226,9 @@ ${valueCode(tab, item)}
     })
 
     const template = `using System;
-using static CssInCs.Functions;
+using static CssInCSharp.Functions;
 
-namespace CssInCs
+namespace CssInCSharp
 {${sb}}
 `;
     fs.writeFileSync(output, template, 'utf8');
@@ -253,7 +255,7 @@ ${constructorCode(tab, item)}
 
 ${operatorCode(tab, item)}
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
@@ -267,9 +269,9 @@ ${valueCode(tab, item)}
     })
 
     const template = `using System;
-using static CssInCs.Functions;
+using static CssInCSharp.Functions;
 
-namespace CssInCs
+namespace CssInCSharp
 {
     /**
      * If you want to use this property type to replace generic property types.
@@ -313,7 +315,7 @@ function generatePropertyItems(input: string, output: string, start: number, end
         sb += '\r\n';
     });
 
-    const template = `namespace CssInCs
+    const template = `namespace CssInCSharp
 {
     public partial class CSSObject
     {
@@ -354,12 +356,35 @@ function generateVendorShorthand() {
     generatePropertyItems(input, output, 7665, 7816);
 }
 
+function generateUnitless() {
+    const tab = '            ';
+    const items = Object.keys(unitless).map(key => `${tab}{ "${key}", ${unitless[key]} }`);
+    let template = `using System.Collections.Generic;
+
+namespace CssInCSharp
+{
+    /// <summary>
+    /// @see https://github.com/emotion-js/emotion/blob/main/packages/unitless/src/index.js
+    /// </summary>
+    internal static class Unitless
+    {
+        public static Dictionary<string, int> Keys = new Dictionary<string, int>
+        {
+${items.join(',\r\n')}
+        };
+    }
+}`;
+    const output = './src/Types/Unitless.cs';
+    fs.writeFileSync(output, template, 'utf8');
+}
+
 function generate() {
     generateProperty();
     generateStandardLonghand();
     generateStandardShorthand();
     generateVendorLonghand();
     generateVendorShorthand();
+    generateUnitless();
 }
 
 generate();

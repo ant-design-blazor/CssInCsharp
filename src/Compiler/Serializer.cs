@@ -1,9 +1,9 @@
-﻿using static CssInCs.Compiler.Utility;
-using static CssInCs.Compiler.Enum;
+﻿using static CssInCSharp.Compiler.Utility;
+using static CssInCSharp.Compiler.Enum;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CssInCs.Compiler
+namespace CssInCSharp.Compiler
 {
     public delegate string SerializeCallback(Element element, SerializeCallback callback);
 

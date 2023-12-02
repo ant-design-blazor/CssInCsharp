@@ -1,4 +1,4 @@
-namespace CssInCs
+namespace CssInCSharp
 {
     public partial class CSSObject
     {

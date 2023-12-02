@@ -1,7 +1,7 @@
 using System;
-using static CssInCs.Functions;
+using static CssInCSharp.Functions;
 
-namespace CssInCs
+namespace CssInCSharp
 {
     public readonly struct Property<T0> : IProperty
     {
@@ -26,7 +26,7 @@ namespace CssInCs
             return obj is Property<T0> o && Equals(o);
         }
 
-        public override string ToString() => GetValue();
+        public override string ToString() => GetValue(null);
 
         public override int GetHashCode()
         {
@@ -41,11 +41,11 @@ namespace CssInCs
             }
         }
 
-        public string GetValue()
+        public string GetValue(string key)
         {
             return _index switch
             {
-                0 => FormatValue(_value0),
+                0 => FormatValue(key, _value0),
                 _ => throw new InvalidOperationException("Unexpected index.")
             };
         }
@@ -77,7 +77,7 @@ namespace CssInCs
             return obj is Property<T0, T1> o && Equals(o);
         }
 
-        public override string ToString() => GetValue();
+        public override string ToString() => GetValue(null);
 
         public override int GetHashCode()
         {
@@ -93,12 +93,12 @@ namespace CssInCs
             }
         }
 
-        public string GetValue()
+        public string GetValue(string key)
         {
             return _index switch
             {
-                0 => FormatValue(_value0),
-                1 => FormatValue(_value1),
+                0 => FormatValue(key, _value0),
+                1 => FormatValue(key, _value1),
                 _ => throw new InvalidOperationException("Unexpected index.")
             };
         }
@@ -133,7 +133,7 @@ namespace CssInCs
             return obj is Property<T0, T1, T2> o && Equals(o);
         }
 
-        public override string ToString() => GetValue();
+        public override string ToString() => GetValue(null);
 
         public override int GetHashCode()
         {
@@ -150,13 +150,13 @@ namespace CssInCs
             }
         }
 
-        public string GetValue()
+        public string GetValue(string key)
         {
             return _index switch
             {
-                0 => FormatValue(_value0),
-                1 => FormatValue(_value1),
-                2 => FormatValue(_value2),
+                0 => FormatValue(key, _value0),
+                1 => FormatValue(key, _value1),
+                2 => FormatValue(key, _value2),
                 _ => throw new InvalidOperationException("Unexpected index.")
             };
         }
@@ -194,7 +194,7 @@ namespace CssInCs
             return obj is Property<T0, T1, T2, T3> o && Equals(o);
         }
 
-        public override string ToString() => GetValue();
+        public override string ToString() => GetValue(null);
 
         public override int GetHashCode()
         {
@@ -212,14 +212,14 @@ namespace CssInCs
             }
         }
 
-        public string GetValue()
+        public string GetValue(string key)
         {
             return _index switch
             {
-                0 => FormatValue(_value0),
-                1 => FormatValue(_value1),
-                2 => FormatValue(_value2),
-                3 => FormatValue(_value3),
+                0 => FormatValue(key, _value0),
+                1 => FormatValue(key, _value1),
+                2 => FormatValue(key, _value2),
+                3 => FormatValue(key, _value3),
                 _ => throw new InvalidOperationException("Unexpected index.")
             };
         }

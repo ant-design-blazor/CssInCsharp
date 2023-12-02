@@ -1,10 +1,11 @@
-using static CssInCs.Compiler.Serializer;
-using static CssInCs.Compiler.Parser;
-using static CssInCs.Constant;
+using System;
+using static CssInCSharp.Compiler.Serializer;
+using static CssInCSharp.Compiler.Parser;
+using static CssInCSharp.Constant;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CssInCs
+namespace CssInCSharp
 {
     public sealed partial class CSSObject
     {
@@ -21,21 +22,36 @@ namespace CssInCs
 
         public override string ToString()
         {
-            return Serialize(Compile(CreateCss()), Stringify);
+            return SerializeCss(string.Empty);
         }
 
-        public string CreateCss()
+        public string SerializeCss(string hashId)
+        {
+            return Serialize(Compile(ParseStyle(true, hashId)), Stringify);
+        }
+
+        public string ParseStyle(bool root, string hashId)
         {
             var sb = new StringBuilder();
+            
             foreach (var property in _properties)
             {
-                sb.Append($"{property.Key}:{property.Value.GetValue()};");
+                sb.Append($"{property.Key}:{property.Value.GetValue(property.Key)};");
             }
             foreach (var subStyle in _styles)
             {
-                sb.Append($"{subStyle.Key}{{{subStyle.Value.CreateCss()}}}");
+                var nextRoot = false;
+                sb.Append($"{subStyle.Key}{{{subStyle.Value.ParseStyle(nextRoot, hashId)}}}");
             }
-            return sb.ToString();
+
+            if (root && !string.IsNullOrEmpty(hashId))
+            {
+                return $":where(.{hashId}){sb}";
+            }
+            else
+            {
+                return sb.ToString();
+            }
         }
 
         public CSSObject Merge(CSSObject css)
@@ -76,7 +92,9 @@ namespace CssInCs
 
         private void SetStyle(string key, CSSInterpolation value)
         {
-            var cssObject = value.IsT0 ? value.AsT0 : new CSSObject().Merge(value.AsT1);
+            if (key == null) return;
+            var cssObject = value.IsT0 ? value.AsT0 : new CSSObject().Merge(value.ToCssArray());
+            if (cssObject == null) return;
             if (key == MERGE_OPERATOR)
             {
                 Merge(cssObject);

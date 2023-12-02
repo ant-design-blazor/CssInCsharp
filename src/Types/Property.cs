@@ -1,7 +1,7 @@
 using System;
-using static CssInCs.Functions;
+using static CssInCSharp.Functions;
 
-namespace CssInCs
+namespace CssInCSharp
 {
     /**
      * If you want to use this property type to replace generic property types.
@@ -25,12 +25,12 @@ namespace CssInCs
             public static implicit operator AccentColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator AccentColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -52,12 +52,12 @@ namespace CssInCs
             public static implicit operator AlignContent(PropertySkip t) => new(0, value0: t);
             public static implicit operator AlignContent(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -79,12 +79,12 @@ namespace CssInCs
             public static implicit operator AlignItems(PropertySkip t) => new(0, value0: t);
             public static implicit operator AlignItems(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -106,12 +106,12 @@ namespace CssInCs
             public static implicit operator AlignSelf(PropertySkip t) => new(0, value0: t);
             public static implicit operator AlignSelf(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -133,12 +133,12 @@ namespace CssInCs
             public static implicit operator AlignTracks(PropertySkip t) => new(0, value0: t);
             public static implicit operator AlignTracks(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -160,12 +160,12 @@ namespace CssInCs
             public static implicit operator All(PropertySkip t) => new(0, value0: t);
             public static implicit operator All(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -187,12 +187,12 @@ namespace CssInCs
             public static implicit operator Animation(PropertySkip t) => new(0, value0: t);
             public static implicit operator Animation(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -214,12 +214,12 @@ namespace CssInCs
             public static implicit operator AnimationComposition(PropertySkip t) => new(0, value0: t);
             public static implicit operator AnimationComposition(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -241,12 +241,12 @@ namespace CssInCs
             public static implicit operator AnimationDelay(PropertySkip t) => new(0, value0: t);
             public static implicit operator AnimationDelay(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -268,12 +268,12 @@ namespace CssInCs
             public static implicit operator AnimationDirection(PropertySkip t) => new(0, value0: t);
             public static implicit operator AnimationDirection(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -295,12 +295,12 @@ namespace CssInCs
             public static implicit operator AnimationDuration(PropertySkip t) => new(0, value0: t);
             public static implicit operator AnimationDuration(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -322,12 +322,12 @@ namespace CssInCs
             public static implicit operator AnimationFillMode(PropertySkip t) => new(0, value0: t);
             public static implicit operator AnimationFillMode(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -352,13 +352,13 @@ namespace CssInCs
             public static implicit operator AnimationIterationCount(string t) => new(1, value1: t);
             public static implicit operator AnimationIterationCount(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -383,13 +383,13 @@ namespace CssInCs
             public static implicit operator AnimationName(string t) => new(1, value1: t);
             public static implicit operator AnimationName(Keyframe t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -411,12 +411,12 @@ namespace CssInCs
             public static implicit operator AnimationPlayState(PropertySkip t) => new(0, value0: t);
             public static implicit operator AnimationPlayState(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -438,12 +438,12 @@ namespace CssInCs
             public static implicit operator AnimationTimeline(PropertySkip t) => new(0, value0: t);
             public static implicit operator AnimationTimeline(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -465,12 +465,12 @@ namespace CssInCs
             public static implicit operator AnimationTimingFunction(PropertySkip t) => new(0, value0: t);
             public static implicit operator AnimationTimingFunction(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -492,12 +492,12 @@ namespace CssInCs
             public static implicit operator Appearance(PropertySkip t) => new(0, value0: t);
             public static implicit operator Appearance(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -522,13 +522,13 @@ namespace CssInCs
             public static implicit operator AspectRatio(string t) => new(1, value1: t);
             public static implicit operator AspectRatio(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -550,12 +550,12 @@ namespace CssInCs
             public static implicit operator Azimuth(PropertySkip t) => new(0, value0: t);
             public static implicit operator Azimuth(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -577,12 +577,12 @@ namespace CssInCs
             public static implicit operator BackdropFilter(PropertySkip t) => new(0, value0: t);
             public static implicit operator BackdropFilter(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -604,12 +604,12 @@ namespace CssInCs
             public static implicit operator BackfaceVisibility(PropertySkip t) => new(0, value0: t);
             public static implicit operator BackfaceVisibility(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -634,13 +634,13 @@ namespace CssInCs
             public static implicit operator Background(string t) => new(1, value1: t);
             public static implicit operator Background(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -662,12 +662,12 @@ namespace CssInCs
             public static implicit operator BackgroundAttachment(PropertySkip t) => new(0, value0: t);
             public static implicit operator BackgroundAttachment(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -689,12 +689,12 @@ namespace CssInCs
             public static implicit operator BackgroundBlendMode(PropertySkip t) => new(0, value0: t);
             public static implicit operator BackgroundBlendMode(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -716,12 +716,12 @@ namespace CssInCs
             public static implicit operator BackgroundClip(PropertySkip t) => new(0, value0: t);
             public static implicit operator BackgroundClip(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -743,12 +743,12 @@ namespace CssInCs
             public static implicit operator BackgroundColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator BackgroundColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -770,12 +770,12 @@ namespace CssInCs
             public static implicit operator BackgroundImage(PropertySkip t) => new(0, value0: t);
             public static implicit operator BackgroundImage(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -797,12 +797,12 @@ namespace CssInCs
             public static implicit operator BackgroundOrigin(PropertySkip t) => new(0, value0: t);
             public static implicit operator BackgroundOrigin(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -827,13 +827,13 @@ namespace CssInCs
             public static implicit operator BackgroundPosition(string t) => new(1, value1: t);
             public static implicit operator BackgroundPosition(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -858,13 +858,13 @@ namespace CssInCs
             public static implicit operator BackgroundPositionX(string t) => new(1, value1: t);
             public static implicit operator BackgroundPositionX(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -889,13 +889,13 @@ namespace CssInCs
             public static implicit operator BackgroundPositionY(string t) => new(1, value1: t);
             public static implicit operator BackgroundPositionY(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -917,12 +917,12 @@ namespace CssInCs
             public static implicit operator BackgroundRepeat(PropertySkip t) => new(0, value0: t);
             public static implicit operator BackgroundRepeat(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -947,13 +947,13 @@ namespace CssInCs
             public static implicit operator BackgroundSize(string t) => new(1, value1: t);
             public static implicit operator BackgroundSize(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -975,12 +975,12 @@ namespace CssInCs
             public static implicit operator BlockOverflow(PropertySkip t) => new(0, value0: t);
             public static implicit operator BlockOverflow(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1005,13 +1005,13 @@ namespace CssInCs
             public static implicit operator BlockSize(string t) => new(1, value1: t);
             public static implicit operator BlockSize(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1036,13 +1036,13 @@ namespace CssInCs
             public static implicit operator Border(string t) => new(1, value1: t);
             public static implicit operator Border(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1067,13 +1067,13 @@ namespace CssInCs
             public static implicit operator BorderBlock(string t) => new(1, value1: t);
             public static implicit operator BorderBlock(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1095,12 +1095,12 @@ namespace CssInCs
             public static implicit operator BorderBlockColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderBlockColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1125,13 +1125,13 @@ namespace CssInCs
             public static implicit operator BorderBlockEnd(string t) => new(1, value1: t);
             public static implicit operator BorderBlockEnd(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1153,12 +1153,12 @@ namespace CssInCs
             public static implicit operator BorderBlockEndColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderBlockEndColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1180,12 +1180,12 @@ namespace CssInCs
             public static implicit operator BorderBlockEndStyle(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderBlockEndStyle(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1210,13 +1210,13 @@ namespace CssInCs
             public static implicit operator BorderBlockEndWidth(string t) => new(1, value1: t);
             public static implicit operator BorderBlockEndWidth(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1241,13 +1241,13 @@ namespace CssInCs
             public static implicit operator BorderBlockStart(string t) => new(1, value1: t);
             public static implicit operator BorderBlockStart(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1269,12 +1269,12 @@ namespace CssInCs
             public static implicit operator BorderBlockStartColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderBlockStartColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1296,12 +1296,12 @@ namespace CssInCs
             public static implicit operator BorderBlockStartStyle(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderBlockStartStyle(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1326,13 +1326,13 @@ namespace CssInCs
             public static implicit operator BorderBlockStartWidth(string t) => new(1, value1: t);
             public static implicit operator BorderBlockStartWidth(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1354,12 +1354,12 @@ namespace CssInCs
             public static implicit operator BorderBlockStyle(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderBlockStyle(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1384,13 +1384,13 @@ namespace CssInCs
             public static implicit operator BorderBlockWidth(string t) => new(1, value1: t);
             public static implicit operator BorderBlockWidth(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1415,13 +1415,13 @@ namespace CssInCs
             public static implicit operator BorderBottom(string t) => new(1, value1: t);
             public static implicit operator BorderBottom(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1443,12 +1443,12 @@ namespace CssInCs
             public static implicit operator BorderBottomColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderBottomColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1473,13 +1473,13 @@ namespace CssInCs
             public static implicit operator BorderBottomLeftRadius(string t) => new(1, value1: t);
             public static implicit operator BorderBottomLeftRadius(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1504,13 +1504,13 @@ namespace CssInCs
             public static implicit operator BorderBottomRightRadius(string t) => new(1, value1: t);
             public static implicit operator BorderBottomRightRadius(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1532,12 +1532,12 @@ namespace CssInCs
             public static implicit operator BorderBottomStyle(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderBottomStyle(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1562,13 +1562,13 @@ namespace CssInCs
             public static implicit operator BorderBottomWidth(string t) => new(1, value1: t);
             public static implicit operator BorderBottomWidth(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1590,12 +1590,12 @@ namespace CssInCs
             public static implicit operator BorderCollapse(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderCollapse(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1617,12 +1617,12 @@ namespace CssInCs
             public static implicit operator BorderColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1647,13 +1647,13 @@ namespace CssInCs
             public static implicit operator BorderEndEndRadius(string t) => new(1, value1: t);
             public static implicit operator BorderEndEndRadius(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1678,13 +1678,13 @@ namespace CssInCs
             public static implicit operator BorderEndStartRadius(string t) => new(1, value1: t);
             public static implicit operator BorderEndStartRadius(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1709,13 +1709,13 @@ namespace CssInCs
             public static implicit operator BorderImage(string t) => new(1, value1: t);
             public static implicit operator BorderImage(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1740,13 +1740,13 @@ namespace CssInCs
             public static implicit operator BorderImageOutset(string t) => new(1, value1: t);
             public static implicit operator BorderImageOutset(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1768,12 +1768,12 @@ namespace CssInCs
             public static implicit operator BorderImageRepeat(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderImageRepeat(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1798,13 +1798,13 @@ namespace CssInCs
             public static implicit operator BorderImageSlice(string t) => new(1, value1: t);
             public static implicit operator BorderImageSlice(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1826,12 +1826,12 @@ namespace CssInCs
             public static implicit operator BorderImageSource(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderImageSource(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1856,13 +1856,13 @@ namespace CssInCs
             public static implicit operator BorderImageWidth(string t) => new(1, value1: t);
             public static implicit operator BorderImageWidth(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1887,13 +1887,13 @@ namespace CssInCs
             public static implicit operator BorderInline(string t) => new(1, value1: t);
             public static implicit operator BorderInline(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1915,12 +1915,12 @@ namespace CssInCs
             public static implicit operator BorderInlineColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderInlineColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1945,13 +1945,13 @@ namespace CssInCs
             public static implicit operator BorderInlineEnd(string t) => new(1, value1: t);
             public static implicit operator BorderInlineEnd(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1973,12 +1973,12 @@ namespace CssInCs
             public static implicit operator BorderInlineEndColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderInlineEndColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2000,12 +2000,12 @@ namespace CssInCs
             public static implicit operator BorderInlineEndStyle(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderInlineEndStyle(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2030,13 +2030,13 @@ namespace CssInCs
             public static implicit operator BorderInlineEndWidth(string t) => new(1, value1: t);
             public static implicit operator BorderInlineEndWidth(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2061,13 +2061,13 @@ namespace CssInCs
             public static implicit operator BorderInlineStart(string t) => new(1, value1: t);
             public static implicit operator BorderInlineStart(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2089,12 +2089,12 @@ namespace CssInCs
             public static implicit operator BorderInlineStartColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderInlineStartColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2116,12 +2116,12 @@ namespace CssInCs
             public static implicit operator BorderInlineStartStyle(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderInlineStartStyle(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2146,13 +2146,13 @@ namespace CssInCs
             public static implicit operator BorderInlineStartWidth(string t) => new(1, value1: t);
             public static implicit operator BorderInlineStartWidth(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2174,12 +2174,12 @@ namespace CssInCs
             public static implicit operator BorderInlineStyle(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderInlineStyle(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2204,13 +2204,13 @@ namespace CssInCs
             public static implicit operator BorderInlineWidth(string t) => new(1, value1: t);
             public static implicit operator BorderInlineWidth(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2235,13 +2235,13 @@ namespace CssInCs
             public static implicit operator BorderLeft(string t) => new(1, value1: t);
             public static implicit operator BorderLeft(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2263,12 +2263,12 @@ namespace CssInCs
             public static implicit operator BorderLeftColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderLeftColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2290,12 +2290,12 @@ namespace CssInCs
             public static implicit operator BorderLeftStyle(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderLeftStyle(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2320,13 +2320,13 @@ namespace CssInCs
             public static implicit operator BorderLeftWidth(string t) => new(1, value1: t);
             public static implicit operator BorderLeftWidth(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2351,13 +2351,13 @@ namespace CssInCs
             public static implicit operator BorderRadius(string t) => new(1, value1: t);
             public static implicit operator BorderRadius(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2382,13 +2382,13 @@ namespace CssInCs
             public static implicit operator BorderRight(string t) => new(1, value1: t);
             public static implicit operator BorderRight(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2410,12 +2410,12 @@ namespace CssInCs
             public static implicit operator BorderRightColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderRightColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2437,12 +2437,12 @@ namespace CssInCs
             public static implicit operator BorderRightStyle(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderRightStyle(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2467,13 +2467,13 @@ namespace CssInCs
             public static implicit operator BorderRightWidth(string t) => new(1, value1: t);
             public static implicit operator BorderRightWidth(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2498,13 +2498,13 @@ namespace CssInCs
             public static implicit operator BorderSpacing(string t) => new(1, value1: t);
             public static implicit operator BorderSpacing(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2529,13 +2529,13 @@ namespace CssInCs
             public static implicit operator BorderStartEndRadius(string t) => new(1, value1: t);
             public static implicit operator BorderStartEndRadius(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2560,13 +2560,13 @@ namespace CssInCs
             public static implicit operator BorderStartStartRadius(string t) => new(1, value1: t);
             public static implicit operator BorderStartStartRadius(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2588,12 +2588,12 @@ namespace CssInCs
             public static implicit operator BorderStyle(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderStyle(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2618,13 +2618,13 @@ namespace CssInCs
             public static implicit operator BorderTop(string t) => new(1, value1: t);
             public static implicit operator BorderTop(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2646,12 +2646,12 @@ namespace CssInCs
             public static implicit operator BorderTopColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderTopColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2676,13 +2676,13 @@ namespace CssInCs
             public static implicit operator BorderTopLeftRadius(string t) => new(1, value1: t);
             public static implicit operator BorderTopLeftRadius(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2707,13 +2707,13 @@ namespace CssInCs
             public static implicit operator BorderTopRightRadius(string t) => new(1, value1: t);
             public static implicit operator BorderTopRightRadius(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2735,12 +2735,12 @@ namespace CssInCs
             public static implicit operator BorderTopStyle(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderTopStyle(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2765,13 +2765,13 @@ namespace CssInCs
             public static implicit operator BorderTopWidth(string t) => new(1, value1: t);
             public static implicit operator BorderTopWidth(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2796,13 +2796,13 @@ namespace CssInCs
             public static implicit operator BorderWidth(string t) => new(1, value1: t);
             public static implicit operator BorderWidth(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2827,13 +2827,13 @@ namespace CssInCs
             public static implicit operator Bottom(string t) => new(1, value1: t);
             public static implicit operator Bottom(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2855,12 +2855,12 @@ namespace CssInCs
             public static implicit operator BoxAlign(PropertySkip t) => new(0, value0: t);
             public static implicit operator BoxAlign(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2882,12 +2882,12 @@ namespace CssInCs
             public static implicit operator BoxDecorationBreak(PropertySkip t) => new(0, value0: t);
             public static implicit operator BoxDecorationBreak(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2909,12 +2909,12 @@ namespace CssInCs
             public static implicit operator BoxDirection(PropertySkip t) => new(0, value0: t);
             public static implicit operator BoxDirection(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2939,13 +2939,13 @@ namespace CssInCs
             public static implicit operator BoxFlex(string t) => new(1, value1: t);
             public static implicit operator BoxFlex(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2970,13 +2970,13 @@ namespace CssInCs
             public static implicit operator BoxFlexGroup(string t) => new(1, value1: t);
             public static implicit operator BoxFlexGroup(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2998,12 +2998,12 @@ namespace CssInCs
             public static implicit operator BoxLines(PropertySkip t) => new(0, value0: t);
             public static implicit operator BoxLines(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3028,13 +3028,13 @@ namespace CssInCs
             public static implicit operator BoxOrdinalGroup(string t) => new(1, value1: t);
             public static implicit operator BoxOrdinalGroup(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3056,12 +3056,12 @@ namespace CssInCs
             public static implicit operator BoxOrient(PropertySkip t) => new(0, value0: t);
             public static implicit operator BoxOrient(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3083,12 +3083,12 @@ namespace CssInCs
             public static implicit operator BoxPack(PropertySkip t) => new(0, value0: t);
             public static implicit operator BoxPack(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3110,12 +3110,12 @@ namespace CssInCs
             public static implicit operator BoxShadow(PropertySkip t) => new(0, value0: t);
             public static implicit operator BoxShadow(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3137,12 +3137,12 @@ namespace CssInCs
             public static implicit operator BoxSizing(PropertySkip t) => new(0, value0: t);
             public static implicit operator BoxSizing(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3164,12 +3164,12 @@ namespace CssInCs
             public static implicit operator BreakAfter(PropertySkip t) => new(0, value0: t);
             public static implicit operator BreakAfter(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3191,12 +3191,12 @@ namespace CssInCs
             public static implicit operator BreakBefore(PropertySkip t) => new(0, value0: t);
             public static implicit operator BreakBefore(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3218,12 +3218,12 @@ namespace CssInCs
             public static implicit operator BreakInside(PropertySkip t) => new(0, value0: t);
             public static implicit operator BreakInside(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3245,12 +3245,12 @@ namespace CssInCs
             public static implicit operator CaptionSide(PropertySkip t) => new(0, value0: t);
             public static implicit operator CaptionSide(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3272,12 +3272,12 @@ namespace CssInCs
             public static implicit operator Caret(PropertySkip t) => new(0, value0: t);
             public static implicit operator Caret(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3299,12 +3299,12 @@ namespace CssInCs
             public static implicit operator CaretColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator CaretColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3326,12 +3326,12 @@ namespace CssInCs
             public static implicit operator CaretShape(PropertySkip t) => new(0, value0: t);
             public static implicit operator CaretShape(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3353,12 +3353,12 @@ namespace CssInCs
             public static implicit operator Clear(PropertySkip t) => new(0, value0: t);
             public static implicit operator Clear(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3380,12 +3380,12 @@ namespace CssInCs
             public static implicit operator Clip(PropertySkip t) => new(0, value0: t);
             public static implicit operator Clip(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3407,12 +3407,12 @@ namespace CssInCs
             public static implicit operator ClipPath(PropertySkip t) => new(0, value0: t);
             public static implicit operator ClipPath(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3434,12 +3434,12 @@ namespace CssInCs
             public static implicit operator Color(PropertySkip t) => new(0, value0: t);
             public static implicit operator Color(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3461,12 +3461,12 @@ namespace CssInCs
             public static implicit operator PrintColorAdjust(PropertySkip t) => new(0, value0: t);
             public static implicit operator PrintColorAdjust(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3488,12 +3488,12 @@ namespace CssInCs
             public static implicit operator ColorScheme(PropertySkip t) => new(0, value0: t);
             public static implicit operator ColorScheme(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3518,13 +3518,13 @@ namespace CssInCs
             public static implicit operator ColumnCount(string t) => new(1, value1: t);
             public static implicit operator ColumnCount(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3546,12 +3546,12 @@ namespace CssInCs
             public static implicit operator ColumnFill(PropertySkip t) => new(0, value0: t);
             public static implicit operator ColumnFill(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3576,13 +3576,13 @@ namespace CssInCs
             public static implicit operator ColumnGap(string t) => new(1, value1: t);
             public static implicit operator ColumnGap(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3607,13 +3607,13 @@ namespace CssInCs
             public static implicit operator ColumnRule(string t) => new(1, value1: t);
             public static implicit operator ColumnRule(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3635,12 +3635,12 @@ namespace CssInCs
             public static implicit operator ColumnRuleColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator ColumnRuleColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3662,12 +3662,12 @@ namespace CssInCs
             public static implicit operator ColumnRuleStyle(PropertySkip t) => new(0, value0: t);
             public static implicit operator ColumnRuleStyle(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3692,13 +3692,13 @@ namespace CssInCs
             public static implicit operator ColumnRuleWidth(string t) => new(1, value1: t);
             public static implicit operator ColumnRuleWidth(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3720,12 +3720,12 @@ namespace CssInCs
             public static implicit operator ColumnSpan(PropertySkip t) => new(0, value0: t);
             public static implicit operator ColumnSpan(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3750,13 +3750,13 @@ namespace CssInCs
             public static implicit operator ColumnWidth(string t) => new(1, value1: t);
             public static implicit operator ColumnWidth(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3781,13 +3781,13 @@ namespace CssInCs
             public static implicit operator Columns(string t) => new(1, value1: t);
             public static implicit operator Columns(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3809,12 +3809,12 @@ namespace CssInCs
             public static implicit operator Contain(PropertySkip t) => new(0, value0: t);
             public static implicit operator Contain(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3839,13 +3839,13 @@ namespace CssInCs
             public static implicit operator ContainIntrinsicBlockSize(string t) => new(1, value1: t);
             public static implicit operator ContainIntrinsicBlockSize(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3870,13 +3870,13 @@ namespace CssInCs
             public static implicit operator ContainIntrinsicHeight(string t) => new(1, value1: t);
             public static implicit operator ContainIntrinsicHeight(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3901,13 +3901,13 @@ namespace CssInCs
             public static implicit operator ContainIntrinsicInlineSize(string t) => new(1, value1: t);
             public static implicit operator ContainIntrinsicInlineSize(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3932,13 +3932,13 @@ namespace CssInCs
             public static implicit operator ContainIntrinsicSize(string t) => new(1, value1: t);
             public static implicit operator ContainIntrinsicSize(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3963,13 +3963,13 @@ namespace CssInCs
             public static implicit operator ContainIntrinsicWidth(string t) => new(1, value1: t);
             public static implicit operator ContainIntrinsicWidth(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3991,12 +3991,12 @@ namespace CssInCs
             public static implicit operator Container(PropertySkip t) => new(0, value0: t);
             public static implicit operator Container(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4018,12 +4018,12 @@ namespace CssInCs
             public static implicit operator ContainerName(PropertySkip t) => new(0, value0: t);
             public static implicit operator ContainerName(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4045,12 +4045,12 @@ namespace CssInCs
             public static implicit operator ContainerType(PropertySkip t) => new(0, value0: t);
             public static implicit operator ContainerType(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4072,12 +4072,12 @@ namespace CssInCs
             public static implicit operator Content(PropertySkip t) => new(0, value0: t);
             public static implicit operator Content(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4099,12 +4099,12 @@ namespace CssInCs
             public static implicit operator ContentVisibility(PropertySkip t) => new(0, value0: t);
             public static implicit operator ContentVisibility(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4126,12 +4126,12 @@ namespace CssInCs
             public static implicit operator CounterIncrement(PropertySkip t) => new(0, value0: t);
             public static implicit operator CounterIncrement(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4153,12 +4153,12 @@ namespace CssInCs
             public static implicit operator CounterReset(PropertySkip t) => new(0, value0: t);
             public static implicit operator CounterReset(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4180,12 +4180,12 @@ namespace CssInCs
             public static implicit operator CounterSet(PropertySkip t) => new(0, value0: t);
             public static implicit operator CounterSet(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4207,12 +4207,12 @@ namespace CssInCs
             public static implicit operator Cursor(PropertySkip t) => new(0, value0: t);
             public static implicit operator Cursor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4234,12 +4234,12 @@ namespace CssInCs
             public static implicit operator Direction(PropertySkip t) => new(0, value0: t);
             public static implicit operator Direction(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4261,12 +4261,12 @@ namespace CssInCs
             public static implicit operator Display(PropertySkip t) => new(0, value0: t);
             public static implicit operator Display(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4288,12 +4288,12 @@ namespace CssInCs
             public static implicit operator EmptyCells(PropertySkip t) => new(0, value0: t);
             public static implicit operator EmptyCells(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4315,12 +4315,12 @@ namespace CssInCs
             public static implicit operator Filter(PropertySkip t) => new(0, value0: t);
             public static implicit operator Filter(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4345,13 +4345,13 @@ namespace CssInCs
             public static implicit operator Flex(string t) => new(1, value1: t);
             public static implicit operator Flex(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4376,13 +4376,13 @@ namespace CssInCs
             public static implicit operator FlexBasis(string t) => new(1, value1: t);
             public static implicit operator FlexBasis(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4404,12 +4404,12 @@ namespace CssInCs
             public static implicit operator FlexDirection(PropertySkip t) => new(0, value0: t);
             public static implicit operator FlexDirection(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4431,12 +4431,12 @@ namespace CssInCs
             public static implicit operator FlexFlow(PropertySkip t) => new(0, value0: t);
             public static implicit operator FlexFlow(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4461,13 +4461,13 @@ namespace CssInCs
             public static implicit operator FlexGrow(string t) => new(1, value1: t);
             public static implicit operator FlexGrow(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4492,13 +4492,13 @@ namespace CssInCs
             public static implicit operator FlexShrink(string t) => new(1, value1: t);
             public static implicit operator FlexShrink(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4520,12 +4520,12 @@ namespace CssInCs
             public static implicit operator FlexWrap(PropertySkip t) => new(0, value0: t);
             public static implicit operator FlexWrap(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4547,12 +4547,12 @@ namespace CssInCs
             public static implicit operator Float(PropertySkip t) => new(0, value0: t);
             public static implicit operator Float(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4574,12 +4574,12 @@ namespace CssInCs
             public static implicit operator Font(PropertySkip t) => new(0, value0: t);
             public static implicit operator Font(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4601,12 +4601,12 @@ namespace CssInCs
             public static implicit operator FontFamily(PropertySkip t) => new(0, value0: t);
             public static implicit operator FontFamily(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4628,12 +4628,12 @@ namespace CssInCs
             public static implicit operator FontFeatureSettings(PropertySkip t) => new(0, value0: t);
             public static implicit operator FontFeatureSettings(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4655,12 +4655,12 @@ namespace CssInCs
             public static implicit operator FontKerning(PropertySkip t) => new(0, value0: t);
             public static implicit operator FontKerning(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4682,12 +4682,12 @@ namespace CssInCs
             public static implicit operator FontLanguageOverride(PropertySkip t) => new(0, value0: t);
             public static implicit operator FontLanguageOverride(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4709,12 +4709,12 @@ namespace CssInCs
             public static implicit operator FontOpticalSizing(PropertySkip t) => new(0, value0: t);
             public static implicit operator FontOpticalSizing(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4736,12 +4736,12 @@ namespace CssInCs
             public static implicit operator FontPalette(PropertySkip t) => new(0, value0: t);
             public static implicit operator FontPalette(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4766,13 +4766,13 @@ namespace CssInCs
             public static implicit operator FontSize(string t) => new(1, value1: t);
             public static implicit operator FontSize(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4797,13 +4797,13 @@ namespace CssInCs
             public static implicit operator FontSizeAdjust(string t) => new(1, value1: t);
             public static implicit operator FontSizeAdjust(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4828,13 +4828,13 @@ namespace CssInCs
             public static implicit operator FontSmooth(string t) => new(1, value1: t);
             public static implicit operator FontSmooth(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4856,12 +4856,12 @@ namespace CssInCs
             public static implicit operator FontStretch(PropertySkip t) => new(0, value0: t);
             public static implicit operator FontStretch(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4883,12 +4883,12 @@ namespace CssInCs
             public static implicit operator FontStyle(PropertySkip t) => new(0, value0: t);
             public static implicit operator FontStyle(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4910,12 +4910,12 @@ namespace CssInCs
             public static implicit operator FontSynthesis(PropertySkip t) => new(0, value0: t);
             public static implicit operator FontSynthesis(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4937,12 +4937,12 @@ namespace CssInCs
             public static implicit operator FontVariant(PropertySkip t) => new(0, value0: t);
             public static implicit operator FontVariant(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4964,12 +4964,12 @@ namespace CssInCs
             public static implicit operator FontVariantAlternates(PropertySkip t) => new(0, value0: t);
             public static implicit operator FontVariantAlternates(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4991,12 +4991,12 @@ namespace CssInCs
             public static implicit operator FontVariantCaps(PropertySkip t) => new(0, value0: t);
             public static implicit operator FontVariantCaps(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5018,12 +5018,12 @@ namespace CssInCs
             public static implicit operator FontVariantEastAsian(PropertySkip t) => new(0, value0: t);
             public static implicit operator FontVariantEastAsian(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5045,12 +5045,12 @@ namespace CssInCs
             public static implicit operator FontVariantEmoji(PropertySkip t) => new(0, value0: t);
             public static implicit operator FontVariantEmoji(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5072,12 +5072,12 @@ namespace CssInCs
             public static implicit operator FontVariantLigatures(PropertySkip t) => new(0, value0: t);
             public static implicit operator FontVariantLigatures(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5099,12 +5099,12 @@ namespace CssInCs
             public static implicit operator FontVariantNumeric(PropertySkip t) => new(0, value0: t);
             public static implicit operator FontVariantNumeric(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5126,12 +5126,12 @@ namespace CssInCs
             public static implicit operator FontVariantPosition(PropertySkip t) => new(0, value0: t);
             public static implicit operator FontVariantPosition(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5153,12 +5153,12 @@ namespace CssInCs
             public static implicit operator FontVariationSettings(PropertySkip t) => new(0, value0: t);
             public static implicit operator FontVariationSettings(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5183,13 +5183,13 @@ namespace CssInCs
             public static implicit operator FontWeight(string t) => new(1, value1: t);
             public static implicit operator FontWeight(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5211,12 +5211,12 @@ namespace CssInCs
             public static implicit operator ForcedColorAdjust(PropertySkip t) => new(0, value0: t);
             public static implicit operator ForcedColorAdjust(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5241,13 +5241,13 @@ namespace CssInCs
             public static implicit operator Gap(string t) => new(1, value1: t);
             public static implicit operator Gap(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5269,12 +5269,12 @@ namespace CssInCs
             public static implicit operator Grid(PropertySkip t) => new(0, value0: t);
             public static implicit operator Grid(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5296,12 +5296,12 @@ namespace CssInCs
             public static implicit operator GridArea(PropertySkip t) => new(0, value0: t);
             public static implicit operator GridArea(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5326,13 +5326,13 @@ namespace CssInCs
             public static implicit operator GridAutoColumns(string t) => new(1, value1: t);
             public static implicit operator GridAutoColumns(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5354,12 +5354,12 @@ namespace CssInCs
             public static implicit operator GridAutoFlow(PropertySkip t) => new(0, value0: t);
             public static implicit operator GridAutoFlow(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5384,13 +5384,13 @@ namespace CssInCs
             public static implicit operator GridAutoRows(string t) => new(1, value1: t);
             public static implicit operator GridAutoRows(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5412,12 +5412,12 @@ namespace CssInCs
             public static implicit operator GridColumn(PropertySkip t) => new(0, value0: t);
             public static implicit operator GridColumn(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5439,12 +5439,12 @@ namespace CssInCs
             public static implicit operator GridColumnEnd(PropertySkip t) => new(0, value0: t);
             public static implicit operator GridColumnEnd(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5469,13 +5469,13 @@ namespace CssInCs
             public static implicit operator GridColumnGap(string t) => new(1, value1: t);
             public static implicit operator GridColumnGap(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5497,12 +5497,12 @@ namespace CssInCs
             public static implicit operator GridColumnStart(PropertySkip t) => new(0, value0: t);
             public static implicit operator GridColumnStart(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5527,13 +5527,13 @@ namespace CssInCs
             public static implicit operator GridGap(string t) => new(1, value1: t);
             public static implicit operator GridGap(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5555,12 +5555,12 @@ namespace CssInCs
             public static implicit operator GridRow(PropertySkip t) => new(0, value0: t);
             public static implicit operator GridRow(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5582,12 +5582,12 @@ namespace CssInCs
             public static implicit operator GridRowEnd(PropertySkip t) => new(0, value0: t);
             public static implicit operator GridRowEnd(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5612,13 +5612,13 @@ namespace CssInCs
             public static implicit operator GridRowGap(string t) => new(1, value1: t);
             public static implicit operator GridRowGap(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5640,12 +5640,12 @@ namespace CssInCs
             public static implicit operator GridRowStart(PropertySkip t) => new(0, value0: t);
             public static implicit operator GridRowStart(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5667,12 +5667,12 @@ namespace CssInCs
             public static implicit operator GridTemplate(PropertySkip t) => new(0, value0: t);
             public static implicit operator GridTemplate(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5694,12 +5694,12 @@ namespace CssInCs
             public static implicit operator GridTemplateAreas(PropertySkip t) => new(0, value0: t);
             public static implicit operator GridTemplateAreas(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5724,13 +5724,13 @@ namespace CssInCs
             public static implicit operator GridTemplateColumns(string t) => new(1, value1: t);
             public static implicit operator GridTemplateColumns(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5755,13 +5755,13 @@ namespace CssInCs
             public static implicit operator GridTemplateRows(string t) => new(1, value1: t);
             public static implicit operator GridTemplateRows(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5783,12 +5783,12 @@ namespace CssInCs
             public static implicit operator HangingPunctuation(PropertySkip t) => new(0, value0: t);
             public static implicit operator HangingPunctuation(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5813,13 +5813,13 @@ namespace CssInCs
             public static implicit operator Height(string t) => new(1, value1: t);
             public static implicit operator Height(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5841,12 +5841,12 @@ namespace CssInCs
             public static implicit operator HyphenateCharacter(PropertySkip t) => new(0, value0: t);
             public static implicit operator HyphenateCharacter(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5871,13 +5871,13 @@ namespace CssInCs
             public static implicit operator HyphenateLimitChars(string t) => new(1, value1: t);
             public static implicit operator HyphenateLimitChars(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5899,12 +5899,12 @@ namespace CssInCs
             public static implicit operator Hyphens(PropertySkip t) => new(0, value0: t);
             public static implicit operator Hyphens(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5926,12 +5926,12 @@ namespace CssInCs
             public static implicit operator ImageOrientation(PropertySkip t) => new(0, value0: t);
             public static implicit operator ImageOrientation(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5953,12 +5953,12 @@ namespace CssInCs
             public static implicit operator ImageRendering(PropertySkip t) => new(0, value0: t);
             public static implicit operator ImageRendering(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5980,12 +5980,12 @@ namespace CssInCs
             public static implicit operator ImageResolution(PropertySkip t) => new(0, value0: t);
             public static implicit operator ImageResolution(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6007,12 +6007,12 @@ namespace CssInCs
             public static implicit operator ImeMode(PropertySkip t) => new(0, value0: t);
             public static implicit operator ImeMode(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6037,13 +6037,13 @@ namespace CssInCs
             public static implicit operator InitialLetter(string t) => new(1, value1: t);
             public static implicit operator InitialLetter(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6068,13 +6068,13 @@ namespace CssInCs
             public static implicit operator InlineSize(string t) => new(1, value1: t);
             public static implicit operator InlineSize(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6096,12 +6096,12 @@ namespace CssInCs
             public static implicit operator InputSecurity(PropertySkip t) => new(0, value0: t);
             public static implicit operator InputSecurity(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6126,13 +6126,13 @@ namespace CssInCs
             public static implicit operator Inset(string t) => new(1, value1: t);
             public static implicit operator Inset(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6157,13 +6157,13 @@ namespace CssInCs
             public static implicit operator InsetBlock(string t) => new(1, value1: t);
             public static implicit operator InsetBlock(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6188,13 +6188,13 @@ namespace CssInCs
             public static implicit operator InsetBlockEnd(string t) => new(1, value1: t);
             public static implicit operator InsetBlockEnd(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6219,13 +6219,13 @@ namespace CssInCs
             public static implicit operator InsetBlockStart(string t) => new(1, value1: t);
             public static implicit operator InsetBlockStart(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6250,13 +6250,13 @@ namespace CssInCs
             public static implicit operator InsetInline(string t) => new(1, value1: t);
             public static implicit operator InsetInline(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6281,13 +6281,13 @@ namespace CssInCs
             public static implicit operator InsetInlineEnd(string t) => new(1, value1: t);
             public static implicit operator InsetInlineEnd(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6312,13 +6312,13 @@ namespace CssInCs
             public static implicit operator InsetInlineStart(string t) => new(1, value1: t);
             public static implicit operator InsetInlineStart(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6340,12 +6340,12 @@ namespace CssInCs
             public static implicit operator Isolation(PropertySkip t) => new(0, value0: t);
             public static implicit operator Isolation(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6367,12 +6367,12 @@ namespace CssInCs
             public static implicit operator JustifyContent(PropertySkip t) => new(0, value0: t);
             public static implicit operator JustifyContent(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6394,12 +6394,12 @@ namespace CssInCs
             public static implicit operator JustifyItems(PropertySkip t) => new(0, value0: t);
             public static implicit operator JustifyItems(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6421,12 +6421,12 @@ namespace CssInCs
             public static implicit operator JustifySelf(PropertySkip t) => new(0, value0: t);
             public static implicit operator JustifySelf(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6448,12 +6448,12 @@ namespace CssInCs
             public static implicit operator JustifyTracks(PropertySkip t) => new(0, value0: t);
             public static implicit operator JustifyTracks(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6478,13 +6478,13 @@ namespace CssInCs
             public static implicit operator Left(string t) => new(1, value1: t);
             public static implicit operator Left(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6509,13 +6509,13 @@ namespace CssInCs
             public static implicit operator LetterSpacing(string t) => new(1, value1: t);
             public static implicit operator LetterSpacing(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6537,12 +6537,12 @@ namespace CssInCs
             public static implicit operator LineBreak(PropertySkip t) => new(0, value0: t);
             public static implicit operator LineBreak(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6567,13 +6567,13 @@ namespace CssInCs
             public static implicit operator LineClamp(string t) => new(1, value1: t);
             public static implicit operator LineClamp(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6584,9 +6584,9 @@ namespace CssInCs
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private LineHeight(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private LineHeight(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -6596,15 +6596,15 @@ namespace CssInCs
 
             public static implicit operator LineHeight(PropertySkip t) => new(0, value0: t);
             public static implicit operator LineHeight(string t) => new(1, value1: t);
-            public static implicit operator LineHeight(int t) => new(2, value2: t);
+            public static implicit operator LineHeight(double t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6629,13 +6629,13 @@ namespace CssInCs
             public static implicit operator LineHeightStep(string t) => new(1, value1: t);
             public static implicit operator LineHeightStep(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6657,12 +6657,12 @@ namespace CssInCs
             public static implicit operator ListStyle(PropertySkip t) => new(0, value0: t);
             public static implicit operator ListStyle(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6684,12 +6684,12 @@ namespace CssInCs
             public static implicit operator ListStyleImage(PropertySkip t) => new(0, value0: t);
             public static implicit operator ListStyleImage(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6711,12 +6711,12 @@ namespace CssInCs
             public static implicit operator ListStylePosition(PropertySkip t) => new(0, value0: t);
             public static implicit operator ListStylePosition(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6738,12 +6738,12 @@ namespace CssInCs
             public static implicit operator ListStyleType(PropertySkip t) => new(0, value0: t);
             public static implicit operator ListStyleType(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6768,13 +6768,13 @@ namespace CssInCs
             public static implicit operator Margin(string t) => new(1, value1: t);
             public static implicit operator Margin(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6799,13 +6799,13 @@ namespace CssInCs
             public static implicit operator MarginBlock(string t) => new(1, value1: t);
             public static implicit operator MarginBlock(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6830,13 +6830,13 @@ namespace CssInCs
             public static implicit operator MarginBlockEnd(string t) => new(1, value1: t);
             public static implicit operator MarginBlockEnd(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6861,13 +6861,13 @@ namespace CssInCs
             public static implicit operator MarginBlockStart(string t) => new(1, value1: t);
             public static implicit operator MarginBlockStart(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6892,13 +6892,13 @@ namespace CssInCs
             public static implicit operator MarginBottom(string t) => new(1, value1: t);
             public static implicit operator MarginBottom(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6923,13 +6923,13 @@ namespace CssInCs
             public static implicit operator MarginInline(string t) => new(1, value1: t);
             public static implicit operator MarginInline(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6954,13 +6954,13 @@ namespace CssInCs
             public static implicit operator MarginInlineEnd(string t) => new(1, value1: t);
             public static implicit operator MarginInlineEnd(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6985,13 +6985,13 @@ namespace CssInCs
             public static implicit operator MarginInlineStart(string t) => new(1, value1: t);
             public static implicit operator MarginInlineStart(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7016,13 +7016,13 @@ namespace CssInCs
             public static implicit operator MarginLeft(string t) => new(1, value1: t);
             public static implicit operator MarginLeft(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7047,13 +7047,13 @@ namespace CssInCs
             public static implicit operator MarginRight(string t) => new(1, value1: t);
             public static implicit operator MarginRight(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7078,13 +7078,13 @@ namespace CssInCs
             public static implicit operator MarginTop(string t) => new(1, value1: t);
             public static implicit operator MarginTop(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7106,12 +7106,12 @@ namespace CssInCs
             public static implicit operator MarginTrim(PropertySkip t) => new(0, value0: t);
             public static implicit operator MarginTrim(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7136,13 +7136,13 @@ namespace CssInCs
             public static implicit operator Mask(string t) => new(1, value1: t);
             public static implicit operator Mask(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7167,13 +7167,13 @@ namespace CssInCs
             public static implicit operator MaskBorder(string t) => new(1, value1: t);
             public static implicit operator MaskBorder(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7195,12 +7195,12 @@ namespace CssInCs
             public static implicit operator MaskBorderMode(PropertySkip t) => new(0, value0: t);
             public static implicit operator MaskBorderMode(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7225,13 +7225,13 @@ namespace CssInCs
             public static implicit operator MaskBorderOutset(string t) => new(1, value1: t);
             public static implicit operator MaskBorderOutset(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7253,12 +7253,12 @@ namespace CssInCs
             public static implicit operator MaskBorderRepeat(PropertySkip t) => new(0, value0: t);
             public static implicit operator MaskBorderRepeat(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7283,13 +7283,13 @@ namespace CssInCs
             public static implicit operator MaskBorderSlice(string t) => new(1, value1: t);
             public static implicit operator MaskBorderSlice(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7311,12 +7311,12 @@ namespace CssInCs
             public static implicit operator MaskBorderSource(PropertySkip t) => new(0, value0: t);
             public static implicit operator MaskBorderSource(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7341,13 +7341,13 @@ namespace CssInCs
             public static implicit operator MaskBorderWidth(string t) => new(1, value1: t);
             public static implicit operator MaskBorderWidth(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7369,12 +7369,12 @@ namespace CssInCs
             public static implicit operator MaskClip(PropertySkip t) => new(0, value0: t);
             public static implicit operator MaskClip(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7396,12 +7396,12 @@ namespace CssInCs
             public static implicit operator MaskComposite(PropertySkip t) => new(0, value0: t);
             public static implicit operator MaskComposite(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7423,12 +7423,12 @@ namespace CssInCs
             public static implicit operator MaskImage(PropertySkip t) => new(0, value0: t);
             public static implicit operator MaskImage(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7450,12 +7450,12 @@ namespace CssInCs
             public static implicit operator MaskMode(PropertySkip t) => new(0, value0: t);
             public static implicit operator MaskMode(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7477,12 +7477,12 @@ namespace CssInCs
             public static implicit operator MaskOrigin(PropertySkip t) => new(0, value0: t);
             public static implicit operator MaskOrigin(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7507,13 +7507,13 @@ namespace CssInCs
             public static implicit operator MaskPosition(string t) => new(1, value1: t);
             public static implicit operator MaskPosition(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7535,12 +7535,12 @@ namespace CssInCs
             public static implicit operator MaskRepeat(PropertySkip t) => new(0, value0: t);
             public static implicit operator MaskRepeat(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7565,13 +7565,13 @@ namespace CssInCs
             public static implicit operator MaskSize(string t) => new(1, value1: t);
             public static implicit operator MaskSize(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7593,12 +7593,12 @@ namespace CssInCs
             public static implicit operator MaskType(PropertySkip t) => new(0, value0: t);
             public static implicit operator MaskType(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7623,13 +7623,13 @@ namespace CssInCs
             public static implicit operator MathDepth(string t) => new(1, value1: t);
             public static implicit operator MathDepth(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7651,12 +7651,12 @@ namespace CssInCs
             public static implicit operator MathShift(PropertySkip t) => new(0, value0: t);
             public static implicit operator MathShift(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7678,12 +7678,12 @@ namespace CssInCs
             public static implicit operator MathStyle(PropertySkip t) => new(0, value0: t);
             public static implicit operator MathStyle(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7708,13 +7708,13 @@ namespace CssInCs
             public static implicit operator MaxBlockSize(string t) => new(1, value1: t);
             public static implicit operator MaxBlockSize(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7739,13 +7739,13 @@ namespace CssInCs
             public static implicit operator MaxHeight(string t) => new(1, value1: t);
             public static implicit operator MaxHeight(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7770,13 +7770,13 @@ namespace CssInCs
             public static implicit operator MaxInlineSize(string t) => new(1, value1: t);
             public static implicit operator MaxInlineSize(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7801,13 +7801,13 @@ namespace CssInCs
             public static implicit operator MaxLines(string t) => new(1, value1: t);
             public static implicit operator MaxLines(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7832,13 +7832,13 @@ namespace CssInCs
             public static implicit operator MaxWidth(string t) => new(1, value1: t);
             public static implicit operator MaxWidth(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7863,13 +7863,13 @@ namespace CssInCs
             public static implicit operator MinBlockSize(string t) => new(1, value1: t);
             public static implicit operator MinBlockSize(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7894,13 +7894,13 @@ namespace CssInCs
             public static implicit operator MinHeight(string t) => new(1, value1: t);
             public static implicit operator MinHeight(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7925,13 +7925,13 @@ namespace CssInCs
             public static implicit operator MinInlineSize(string t) => new(1, value1: t);
             public static implicit operator MinInlineSize(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7956,13 +7956,13 @@ namespace CssInCs
             public static implicit operator MinWidth(string t) => new(1, value1: t);
             public static implicit operator MinWidth(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7984,12 +7984,12 @@ namespace CssInCs
             public static implicit operator MixBlendMode(PropertySkip t) => new(0, value0: t);
             public static implicit operator MixBlendMode(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8014,13 +8014,13 @@ namespace CssInCs
             public static implicit operator Offset(string t) => new(1, value1: t);
             public static implicit operator Offset(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8045,13 +8045,13 @@ namespace CssInCs
             public static implicit operator OffsetDistance(string t) => new(1, value1: t);
             public static implicit operator OffsetDistance(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8073,12 +8073,12 @@ namespace CssInCs
             public static implicit operator OffsetPath(PropertySkip t) => new(0, value0: t);
             public static implicit operator OffsetPath(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8100,12 +8100,12 @@ namespace CssInCs
             public static implicit operator OffsetRotate(PropertySkip t) => new(0, value0: t);
             public static implicit operator OffsetRotate(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8127,12 +8127,12 @@ namespace CssInCs
             public static implicit operator ObjectFit(PropertySkip t) => new(0, value0: t);
             public static implicit operator ObjectFit(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8157,13 +8157,13 @@ namespace CssInCs
             public static implicit operator ObjectPosition(string t) => new(1, value1: t);
             public static implicit operator ObjectPosition(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8188,13 +8188,13 @@ namespace CssInCs
             public static implicit operator OffsetAnchor(string t) => new(1, value1: t);
             public static implicit operator OffsetAnchor(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8219,13 +8219,13 @@ namespace CssInCs
             public static implicit operator OffsetPosition(string t) => new(1, value1: t);
             public static implicit operator OffsetPosition(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8236,9 +8236,9 @@ namespace CssInCs
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly float _value2;
+            private readonly double _value2;
 
-            private Opacity(int index, PropertySkip value0 = default, string value1 = default, float value2 = default)
+            private Opacity(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -8248,15 +8248,15 @@ namespace CssInCs
 
             public static implicit operator Opacity(PropertySkip t) => new(0, value0: t);
             public static implicit operator Opacity(string t) => new(1, value1: t);
-            public static implicit operator Opacity(float t) => new(2, value2: t);
+            public static implicit operator Opacity(double t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8281,13 +8281,13 @@ namespace CssInCs
             public static implicit operator Order(string t) => new(1, value1: t);
             public static implicit operator Order(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8312,13 +8312,13 @@ namespace CssInCs
             public static implicit operator Orphans(string t) => new(1, value1: t);
             public static implicit operator Orphans(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8343,13 +8343,13 @@ namespace CssInCs
             public static implicit operator Outline(string t) => new(1, value1: t);
             public static implicit operator Outline(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8371,12 +8371,12 @@ namespace CssInCs
             public static implicit operator OutlineColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator OutlineColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8401,13 +8401,13 @@ namespace CssInCs
             public static implicit operator OutlineOffset(string t) => new(1, value1: t);
             public static implicit operator OutlineOffset(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8429,12 +8429,12 @@ namespace CssInCs
             public static implicit operator OutlineStyle(PropertySkip t) => new(0, value0: t);
             public static implicit operator OutlineStyle(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8459,13 +8459,13 @@ namespace CssInCs
             public static implicit operator OutlineWidth(string t) => new(1, value1: t);
             public static implicit operator OutlineWidth(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8487,12 +8487,12 @@ namespace CssInCs
             public static implicit operator Overflow(PropertySkip t) => new(0, value0: t);
             public static implicit operator Overflow(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8514,12 +8514,12 @@ namespace CssInCs
             public static implicit operator OverflowAnchor(PropertySkip t) => new(0, value0: t);
             public static implicit operator OverflowAnchor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8541,12 +8541,12 @@ namespace CssInCs
             public static implicit operator OverflowBlock(PropertySkip t) => new(0, value0: t);
             public static implicit operator OverflowBlock(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8568,12 +8568,12 @@ namespace CssInCs
             public static implicit operator OverflowClipBox(PropertySkip t) => new(0, value0: t);
             public static implicit operator OverflowClipBox(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8598,13 +8598,13 @@ namespace CssInCs
             public static implicit operator OverflowClipMargin(string t) => new(1, value1: t);
             public static implicit operator OverflowClipMargin(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8626,12 +8626,12 @@ namespace CssInCs
             public static implicit operator OverflowInline(PropertySkip t) => new(0, value0: t);
             public static implicit operator OverflowInline(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8653,12 +8653,12 @@ namespace CssInCs
             public static implicit operator OverflowWrap(PropertySkip t) => new(0, value0: t);
             public static implicit operator OverflowWrap(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8680,12 +8680,12 @@ namespace CssInCs
             public static implicit operator OverflowX(PropertySkip t) => new(0, value0: t);
             public static implicit operator OverflowX(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8707,12 +8707,12 @@ namespace CssInCs
             public static implicit operator OverflowY(PropertySkip t) => new(0, value0: t);
             public static implicit operator OverflowY(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8734,12 +8734,12 @@ namespace CssInCs
             public static implicit operator OverscrollBehavior(PropertySkip t) => new(0, value0: t);
             public static implicit operator OverscrollBehavior(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8761,12 +8761,12 @@ namespace CssInCs
             public static implicit operator OverscrollBehaviorBlock(PropertySkip t) => new(0, value0: t);
             public static implicit operator OverscrollBehaviorBlock(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8788,12 +8788,12 @@ namespace CssInCs
             public static implicit operator OverscrollBehaviorInline(PropertySkip t) => new(0, value0: t);
             public static implicit operator OverscrollBehaviorInline(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8815,12 +8815,12 @@ namespace CssInCs
             public static implicit operator OverscrollBehaviorX(PropertySkip t) => new(0, value0: t);
             public static implicit operator OverscrollBehaviorX(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8842,12 +8842,12 @@ namespace CssInCs
             public static implicit operator OverscrollBehaviorY(PropertySkip t) => new(0, value0: t);
             public static implicit operator OverscrollBehaviorY(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8872,13 +8872,13 @@ namespace CssInCs
             public static implicit operator Padding(string t) => new(1, value1: t);
             public static implicit operator Padding(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8903,13 +8903,13 @@ namespace CssInCs
             public static implicit operator PaddingBlock(string t) => new(1, value1: t);
             public static implicit operator PaddingBlock(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8934,13 +8934,13 @@ namespace CssInCs
             public static implicit operator PaddingBlockEnd(string t) => new(1, value1: t);
             public static implicit operator PaddingBlockEnd(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8965,13 +8965,13 @@ namespace CssInCs
             public static implicit operator PaddingBlockStart(string t) => new(1, value1: t);
             public static implicit operator PaddingBlockStart(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8996,13 +8996,13 @@ namespace CssInCs
             public static implicit operator PaddingBottom(string t) => new(1, value1: t);
             public static implicit operator PaddingBottom(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9027,13 +9027,13 @@ namespace CssInCs
             public static implicit operator PaddingInline(string t) => new(1, value1: t);
             public static implicit operator PaddingInline(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9058,13 +9058,13 @@ namespace CssInCs
             public static implicit operator PaddingInlineEnd(string t) => new(1, value1: t);
             public static implicit operator PaddingInlineEnd(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9089,13 +9089,13 @@ namespace CssInCs
             public static implicit operator PaddingInlineStart(string t) => new(1, value1: t);
             public static implicit operator PaddingInlineStart(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9120,13 +9120,13 @@ namespace CssInCs
             public static implicit operator PaddingLeft(string t) => new(1, value1: t);
             public static implicit operator PaddingLeft(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9151,13 +9151,13 @@ namespace CssInCs
             public static implicit operator PaddingRight(string t) => new(1, value1: t);
             public static implicit operator PaddingRight(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9182,13 +9182,13 @@ namespace CssInCs
             public static implicit operator PaddingTop(string t) => new(1, value1: t);
             public static implicit operator PaddingTop(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9210,12 +9210,12 @@ namespace CssInCs
             public static implicit operator Page(PropertySkip t) => new(0, value0: t);
             public static implicit operator Page(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9237,12 +9237,12 @@ namespace CssInCs
             public static implicit operator PageBreakAfter(PropertySkip t) => new(0, value0: t);
             public static implicit operator PageBreakAfter(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9264,12 +9264,12 @@ namespace CssInCs
             public static implicit operator PageBreakBefore(PropertySkip t) => new(0, value0: t);
             public static implicit operator PageBreakBefore(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9291,12 +9291,12 @@ namespace CssInCs
             public static implicit operator PageBreakInside(PropertySkip t) => new(0, value0: t);
             public static implicit operator PageBreakInside(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9318,12 +9318,12 @@ namespace CssInCs
             public static implicit operator PaintOrder(PropertySkip t) => new(0, value0: t);
             public static implicit operator PaintOrder(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9348,13 +9348,13 @@ namespace CssInCs
             public static implicit operator Perspective(string t) => new(1, value1: t);
             public static implicit operator Perspective(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9379,13 +9379,13 @@ namespace CssInCs
             public static implicit operator PerspectiveOrigin(string t) => new(1, value1: t);
             public static implicit operator PerspectiveOrigin(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9407,12 +9407,12 @@ namespace CssInCs
             public static implicit operator PlaceContent(PropertySkip t) => new(0, value0: t);
             public static implicit operator PlaceContent(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9434,12 +9434,12 @@ namespace CssInCs
             public static implicit operator PlaceItems(PropertySkip t) => new(0, value0: t);
             public static implicit operator PlaceItems(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9461,12 +9461,12 @@ namespace CssInCs
             public static implicit operator PlaceSelf(PropertySkip t) => new(0, value0: t);
             public static implicit operator PlaceSelf(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9488,12 +9488,12 @@ namespace CssInCs
             public static implicit operator PointerEvents(PropertySkip t) => new(0, value0: t);
             public static implicit operator PointerEvents(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9515,12 +9515,12 @@ namespace CssInCs
             public static implicit operator Position(PropertySkip t) => new(0, value0: t);
             public static implicit operator Position(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9542,12 +9542,12 @@ namespace CssInCs
             public static implicit operator Quotes(PropertySkip t) => new(0, value0: t);
             public static implicit operator Quotes(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9569,12 +9569,12 @@ namespace CssInCs
             public static implicit operator Resize(PropertySkip t) => new(0, value0: t);
             public static implicit operator Resize(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9599,13 +9599,13 @@ namespace CssInCs
             public static implicit operator Right(string t) => new(1, value1: t);
             public static implicit operator Right(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9627,12 +9627,12 @@ namespace CssInCs
             public static implicit operator Rotate(PropertySkip t) => new(0, value0: t);
             public static implicit operator Rotate(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9657,13 +9657,13 @@ namespace CssInCs
             public static implicit operator RowGap(string t) => new(1, value1: t);
             public static implicit operator RowGap(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9685,12 +9685,12 @@ namespace CssInCs
             public static implicit operator RubyAlign(PropertySkip t) => new(0, value0: t);
             public static implicit operator RubyAlign(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9712,12 +9712,12 @@ namespace CssInCs
             public static implicit operator RubyMerge(PropertySkip t) => new(0, value0: t);
             public static implicit operator RubyMerge(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9739,12 +9739,12 @@ namespace CssInCs
             public static implicit operator RubyPosition(PropertySkip t) => new(0, value0: t);
             public static implicit operator RubyPosition(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9769,13 +9769,13 @@ namespace CssInCs
             public static implicit operator Scale(string t) => new(1, value1: t);
             public static implicit operator Scale(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9797,12 +9797,12 @@ namespace CssInCs
             public static implicit operator ScrollBehavior(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollBehavior(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9827,13 +9827,13 @@ namespace CssInCs
             public static implicit operator ScrollMargin(string t) => new(1, value1: t);
             public static implicit operator ScrollMargin(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9858,13 +9858,13 @@ namespace CssInCs
             public static implicit operator ScrollMarginBlock(string t) => new(1, value1: t);
             public static implicit operator ScrollMarginBlock(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9889,13 +9889,13 @@ namespace CssInCs
             public static implicit operator ScrollMarginBlockEnd(string t) => new(1, value1: t);
             public static implicit operator ScrollMarginBlockEnd(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9920,13 +9920,13 @@ namespace CssInCs
             public static implicit operator ScrollMarginBlockStart(string t) => new(1, value1: t);
             public static implicit operator ScrollMarginBlockStart(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9951,13 +9951,13 @@ namespace CssInCs
             public static implicit operator ScrollMarginBottom(string t) => new(1, value1: t);
             public static implicit operator ScrollMarginBottom(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9982,13 +9982,13 @@ namespace CssInCs
             public static implicit operator ScrollMarginInline(string t) => new(1, value1: t);
             public static implicit operator ScrollMarginInline(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10013,13 +10013,13 @@ namespace CssInCs
             public static implicit operator ScrollMarginInlineEnd(string t) => new(1, value1: t);
             public static implicit operator ScrollMarginInlineEnd(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10044,13 +10044,13 @@ namespace CssInCs
             public static implicit operator ScrollMarginInlineStart(string t) => new(1, value1: t);
             public static implicit operator ScrollMarginInlineStart(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10075,13 +10075,13 @@ namespace CssInCs
             public static implicit operator ScrollMarginLeft(string t) => new(1, value1: t);
             public static implicit operator ScrollMarginLeft(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10106,13 +10106,13 @@ namespace CssInCs
             public static implicit operator ScrollMarginRight(string t) => new(1, value1: t);
             public static implicit operator ScrollMarginRight(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10137,13 +10137,13 @@ namespace CssInCs
             public static implicit operator ScrollMarginTop(string t) => new(1, value1: t);
             public static implicit operator ScrollMarginTop(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10168,13 +10168,13 @@ namespace CssInCs
             public static implicit operator ScrollPadding(string t) => new(1, value1: t);
             public static implicit operator ScrollPadding(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10199,13 +10199,13 @@ namespace CssInCs
             public static implicit operator ScrollPaddingBlock(string t) => new(1, value1: t);
             public static implicit operator ScrollPaddingBlock(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10230,13 +10230,13 @@ namespace CssInCs
             public static implicit operator ScrollPaddingBlockEnd(string t) => new(1, value1: t);
             public static implicit operator ScrollPaddingBlockEnd(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10261,13 +10261,13 @@ namespace CssInCs
             public static implicit operator ScrollPaddingBlockStart(string t) => new(1, value1: t);
             public static implicit operator ScrollPaddingBlockStart(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10292,13 +10292,13 @@ namespace CssInCs
             public static implicit operator ScrollPaddingBottom(string t) => new(1, value1: t);
             public static implicit operator ScrollPaddingBottom(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10323,13 +10323,13 @@ namespace CssInCs
             public static implicit operator ScrollPaddingInline(string t) => new(1, value1: t);
             public static implicit operator ScrollPaddingInline(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10354,13 +10354,13 @@ namespace CssInCs
             public static implicit operator ScrollPaddingInlineEnd(string t) => new(1, value1: t);
             public static implicit operator ScrollPaddingInlineEnd(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10385,13 +10385,13 @@ namespace CssInCs
             public static implicit operator ScrollPaddingInlineStart(string t) => new(1, value1: t);
             public static implicit operator ScrollPaddingInlineStart(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10416,13 +10416,13 @@ namespace CssInCs
             public static implicit operator ScrollPaddingLeft(string t) => new(1, value1: t);
             public static implicit operator ScrollPaddingLeft(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10447,13 +10447,13 @@ namespace CssInCs
             public static implicit operator ScrollPaddingRight(string t) => new(1, value1: t);
             public static implicit operator ScrollPaddingRight(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10478,13 +10478,13 @@ namespace CssInCs
             public static implicit operator ScrollPaddingTop(string t) => new(1, value1: t);
             public static implicit operator ScrollPaddingTop(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10506,12 +10506,12 @@ namespace CssInCs
             public static implicit operator ScrollSnapAlign(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollSnapAlign(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10536,13 +10536,13 @@ namespace CssInCs
             public static implicit operator ScrollSnapCoordinate(string t) => new(1, value1: t);
             public static implicit operator ScrollSnapCoordinate(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10567,13 +10567,13 @@ namespace CssInCs
             public static implicit operator ScrollSnapDestination(string t) => new(1, value1: t);
             public static implicit operator ScrollSnapDestination(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10595,12 +10595,12 @@ namespace CssInCs
             public static implicit operator ScrollSnapPointsX(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollSnapPointsX(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10622,12 +10622,12 @@ namespace CssInCs
             public static implicit operator ScrollSnapPointsY(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollSnapPointsY(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10649,12 +10649,12 @@ namespace CssInCs
             public static implicit operator ScrollSnapStop(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollSnapStop(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10676,12 +10676,12 @@ namespace CssInCs
             public static implicit operator ScrollSnapType(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollSnapType(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10703,12 +10703,12 @@ namespace CssInCs
             public static implicit operator ScrollSnapTypeX(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollSnapTypeX(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10730,12 +10730,12 @@ namespace CssInCs
             public static implicit operator ScrollSnapTypeY(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollSnapTypeY(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10757,12 +10757,12 @@ namespace CssInCs
             public static implicit operator ScrollTimeline(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollTimeline(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10784,12 +10784,12 @@ namespace CssInCs
             public static implicit operator ScrollTimelineAxis(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollTimelineAxis(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10811,12 +10811,12 @@ namespace CssInCs
             public static implicit operator ScrollTimelineName(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollTimelineName(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10838,12 +10838,12 @@ namespace CssInCs
             public static implicit operator ScrollbarColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollbarColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10865,12 +10865,12 @@ namespace CssInCs
             public static implicit operator ScrollbarGutter(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollbarGutter(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10892,12 +10892,12 @@ namespace CssInCs
             public static implicit operator ScrollbarWidth(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollbarWidth(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10922,13 +10922,13 @@ namespace CssInCs
             public static implicit operator ShapeImageThreshold(string t) => new(1, value1: t);
             public static implicit operator ShapeImageThreshold(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10953,13 +10953,13 @@ namespace CssInCs
             public static implicit operator ShapeMargin(string t) => new(1, value1: t);
             public static implicit operator ShapeMargin(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10981,12 +10981,12 @@ namespace CssInCs
             public static implicit operator ShapeOutside(PropertySkip t) => new(0, value0: t);
             public static implicit operator ShapeOutside(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11011,13 +11011,13 @@ namespace CssInCs
             public static implicit operator TabSize(string t) => new(1, value1: t);
             public static implicit operator TabSize(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11039,12 +11039,12 @@ namespace CssInCs
             public static implicit operator TableLayout(PropertySkip t) => new(0, value0: t);
             public static implicit operator TableLayout(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11066,12 +11066,12 @@ namespace CssInCs
             public static implicit operator TextAlign(PropertySkip t) => new(0, value0: t);
             public static implicit operator TextAlign(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11093,12 +11093,12 @@ namespace CssInCs
             public static implicit operator TextAlignLast(PropertySkip t) => new(0, value0: t);
             public static implicit operator TextAlignLast(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11120,12 +11120,12 @@ namespace CssInCs
             public static implicit operator TextCombineUpright(PropertySkip t) => new(0, value0: t);
             public static implicit operator TextCombineUpright(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11150,13 +11150,13 @@ namespace CssInCs
             public static implicit operator TextDecoration(string t) => new(1, value1: t);
             public static implicit operator TextDecoration(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11178,12 +11178,12 @@ namespace CssInCs
             public static implicit operator TextDecorationColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator TextDecorationColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11205,12 +11205,12 @@ namespace CssInCs
             public static implicit operator TextDecorationLine(PropertySkip t) => new(0, value0: t);
             public static implicit operator TextDecorationLine(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11232,12 +11232,12 @@ namespace CssInCs
             public static implicit operator TextDecorationSkip(PropertySkip t) => new(0, value0: t);
             public static implicit operator TextDecorationSkip(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11259,12 +11259,12 @@ namespace CssInCs
             public static implicit operator TextDecorationSkipInk(PropertySkip t) => new(0, value0: t);
             public static implicit operator TextDecorationSkipInk(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11286,12 +11286,12 @@ namespace CssInCs
             public static implicit operator TextDecorationStyle(PropertySkip t) => new(0, value0: t);
             public static implicit operator TextDecorationStyle(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11316,13 +11316,13 @@ namespace CssInCs
             public static implicit operator TextDecorationThickness(string t) => new(1, value1: t);
             public static implicit operator TextDecorationThickness(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11344,12 +11344,12 @@ namespace CssInCs
             public static implicit operator TextEmphasis(PropertySkip t) => new(0, value0: t);
             public static implicit operator TextEmphasis(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11371,12 +11371,12 @@ namespace CssInCs
             public static implicit operator TextEmphasisColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator TextEmphasisColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11398,12 +11398,12 @@ namespace CssInCs
             public static implicit operator TextEmphasisPosition(PropertySkip t) => new(0, value0: t);
             public static implicit operator TextEmphasisPosition(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11425,12 +11425,12 @@ namespace CssInCs
             public static implicit operator TextEmphasisStyle(PropertySkip t) => new(0, value0: t);
             public static implicit operator TextEmphasisStyle(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11455,13 +11455,13 @@ namespace CssInCs
             public static implicit operator TextIndent(string t) => new(1, value1: t);
             public static implicit operator TextIndent(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11483,12 +11483,12 @@ namespace CssInCs
             public static implicit operator TextJustify(PropertySkip t) => new(0, value0: t);
             public static implicit operator TextJustify(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11510,12 +11510,12 @@ namespace CssInCs
             public static implicit operator TextOrientation(PropertySkip t) => new(0, value0: t);
             public static implicit operator TextOrientation(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11537,12 +11537,12 @@ namespace CssInCs
             public static implicit operator TextOverflow(PropertySkip t) => new(0, value0: t);
             public static implicit operator TextOverflow(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11564,12 +11564,12 @@ namespace CssInCs
             public static implicit operator TextRendering(PropertySkip t) => new(0, value0: t);
             public static implicit operator TextRendering(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11591,12 +11591,12 @@ namespace CssInCs
             public static implicit operator TextShadow(PropertySkip t) => new(0, value0: t);
             public static implicit operator TextShadow(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11618,12 +11618,12 @@ namespace CssInCs
             public static implicit operator TextSizeAdjust(PropertySkip t) => new(0, value0: t);
             public static implicit operator TextSizeAdjust(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11645,12 +11645,12 @@ namespace CssInCs
             public static implicit operator TextTransform(PropertySkip t) => new(0, value0: t);
             public static implicit operator TextTransform(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11675,13 +11675,13 @@ namespace CssInCs
             public static implicit operator TextUnderlineOffset(string t) => new(1, value1: t);
             public static implicit operator TextUnderlineOffset(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11703,12 +11703,12 @@ namespace CssInCs
             public static implicit operator TextUnderlinePosition(PropertySkip t) => new(0, value0: t);
             public static implicit operator TextUnderlinePosition(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11733,13 +11733,13 @@ namespace CssInCs
             public static implicit operator Top(string t) => new(1, value1: t);
             public static implicit operator Top(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11761,12 +11761,12 @@ namespace CssInCs
             public static implicit operator TouchAction(PropertySkip t) => new(0, value0: t);
             public static implicit operator TouchAction(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11788,12 +11788,12 @@ namespace CssInCs
             public static implicit operator Transform(PropertySkip t) => new(0, value0: t);
             public static implicit operator Transform(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11815,12 +11815,12 @@ namespace CssInCs
             public static implicit operator TransformBox(PropertySkip t) => new(0, value0: t);
             public static implicit operator TransformBox(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11845,13 +11845,13 @@ namespace CssInCs
             public static implicit operator TransformOrigin(string t) => new(1, value1: t);
             public static implicit operator TransformOrigin(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11873,12 +11873,12 @@ namespace CssInCs
             public static implicit operator TransformStyle(PropertySkip t) => new(0, value0: t);
             public static implicit operator TransformStyle(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11900,12 +11900,12 @@ namespace CssInCs
             public static implicit operator Transition(PropertySkip t) => new(0, value0: t);
             public static implicit operator Transition(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11927,12 +11927,12 @@ namespace CssInCs
             public static implicit operator TransitionDelay(PropertySkip t) => new(0, value0: t);
             public static implicit operator TransitionDelay(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11954,12 +11954,12 @@ namespace CssInCs
             public static implicit operator TransitionDuration(PropertySkip t) => new(0, value0: t);
             public static implicit operator TransitionDuration(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11981,12 +11981,12 @@ namespace CssInCs
             public static implicit operator TransitionProperty(PropertySkip t) => new(0, value0: t);
             public static implicit operator TransitionProperty(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12008,12 +12008,12 @@ namespace CssInCs
             public static implicit operator TransitionTimingFunction(PropertySkip t) => new(0, value0: t);
             public static implicit operator TransitionTimingFunction(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12038,13 +12038,13 @@ namespace CssInCs
             public static implicit operator Translate(string t) => new(1, value1: t);
             public static implicit operator Translate(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12066,12 +12066,12 @@ namespace CssInCs
             public static implicit operator UnicodeBidi(PropertySkip t) => new(0, value0: t);
             public static implicit operator UnicodeBidi(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12093,12 +12093,12 @@ namespace CssInCs
             public static implicit operator UserSelect(PropertySkip t) => new(0, value0: t);
             public static implicit operator UserSelect(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12123,13 +12123,13 @@ namespace CssInCs
             public static implicit operator VerticalAlign(string t) => new(1, value1: t);
             public static implicit operator VerticalAlign(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12151,12 +12151,12 @@ namespace CssInCs
             public static implicit operator ViewTransitionName(PropertySkip t) => new(0, value0: t);
             public static implicit operator ViewTransitionName(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12178,12 +12178,12 @@ namespace CssInCs
             public static implicit operator Visibility(PropertySkip t) => new(0, value0: t);
             public static implicit operator Visibility(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12205,12 +12205,12 @@ namespace CssInCs
             public static implicit operator WhiteSpace(PropertySkip t) => new(0, value0: t);
             public static implicit operator WhiteSpace(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12235,13 +12235,13 @@ namespace CssInCs
             public static implicit operator Widows(string t) => new(1, value1: t);
             public static implicit operator Widows(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12266,13 +12266,13 @@ namespace CssInCs
             public static implicit operator Width(string t) => new(1, value1: t);
             public static implicit operator Width(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12294,12 +12294,12 @@ namespace CssInCs
             public static implicit operator WillChange(PropertySkip t) => new(0, value0: t);
             public static implicit operator WillChange(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12321,12 +12321,12 @@ namespace CssInCs
             public static implicit operator WordBreak(PropertySkip t) => new(0, value0: t);
             public static implicit operator WordBreak(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12351,13 +12351,13 @@ namespace CssInCs
             public static implicit operator WordSpacing(string t) => new(1, value1: t);
             public static implicit operator WordSpacing(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12379,12 +12379,12 @@ namespace CssInCs
             public static implicit operator WordWrap(PropertySkip t) => new(0, value0: t);
             public static implicit operator WordWrap(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12406,12 +12406,12 @@ namespace CssInCs
             public static implicit operator WritingMode(PropertySkip t) => new(0, value0: t);
             public static implicit operator WritingMode(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12436,13 +12436,13 @@ namespace CssInCs
             public static implicit operator ZIndex(string t) => new(1, value1: t);
             public static implicit operator ZIndex(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12467,13 +12467,13 @@ namespace CssInCs
             public static implicit operator Zoom(string t) => new(1, value1: t);
             public static implicit operator Zoom(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12495,12 +12495,12 @@ namespace CssInCs
             public static implicit operator MozAppearance(PropertySkip t) => new(0, value0: t);
             public static implicit operator MozAppearance(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12522,12 +12522,12 @@ namespace CssInCs
             public static implicit operator MozBinding(PropertySkip t) => new(0, value0: t);
             public static implicit operator MozBinding(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12549,12 +12549,12 @@ namespace CssInCs
             public static implicit operator MozBorderBottomColors(PropertySkip t) => new(0, value0: t);
             public static implicit operator MozBorderBottomColors(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12576,12 +12576,12 @@ namespace CssInCs
             public static implicit operator MozBorderLeftColors(PropertySkip t) => new(0, value0: t);
             public static implicit operator MozBorderLeftColors(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12603,12 +12603,12 @@ namespace CssInCs
             public static implicit operator MozBorderRightColors(PropertySkip t) => new(0, value0: t);
             public static implicit operator MozBorderRightColors(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12630,12 +12630,12 @@ namespace CssInCs
             public static implicit operator MozBorderTopColors(PropertySkip t) => new(0, value0: t);
             public static implicit operator MozBorderTopColors(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12657,12 +12657,12 @@ namespace CssInCs
             public static implicit operator MozContextProperties(PropertySkip t) => new(0, value0: t);
             public static implicit operator MozContextProperties(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12684,12 +12684,12 @@ namespace CssInCs
             public static implicit operator MozFloatEdge(PropertySkip t) => new(0, value0: t);
             public static implicit operator MozFloatEdge(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12711,12 +12711,12 @@ namespace CssInCs
             public static implicit operator MozForceBrokenImageIcon(PropertySkip t) => new(0, value0: t);
             public static implicit operator MozForceBrokenImageIcon(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12738,12 +12738,12 @@ namespace CssInCs
             public static implicit operator MozImageRegion(PropertySkip t) => new(0, value0: t);
             public static implicit operator MozImageRegion(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12765,12 +12765,12 @@ namespace CssInCs
             public static implicit operator MozOrient(PropertySkip t) => new(0, value0: t);
             public static implicit operator MozOrient(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12795,13 +12795,13 @@ namespace CssInCs
             public static implicit operator MozOutlineRadius(string t) => new(1, value1: t);
             public static implicit operator MozOutlineRadius(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12826,13 +12826,13 @@ namespace CssInCs
             public static implicit operator MozOutlineRadiusBottomleft(string t) => new(1, value1: t);
             public static implicit operator MozOutlineRadiusBottomleft(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12857,13 +12857,13 @@ namespace CssInCs
             public static implicit operator MozOutlineRadiusBottomright(string t) => new(1, value1: t);
             public static implicit operator MozOutlineRadiusBottomright(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12888,13 +12888,13 @@ namespace CssInCs
             public static implicit operator MozOutlineRadiusTopleft(string t) => new(1, value1: t);
             public static implicit operator MozOutlineRadiusTopleft(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12919,13 +12919,13 @@ namespace CssInCs
             public static implicit operator MozOutlineRadiusTopright(string t) => new(1, value1: t);
             public static implicit operator MozOutlineRadiusTopright(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12947,12 +12947,12 @@ namespace CssInCs
             public static implicit operator MozStackSizing(PropertySkip t) => new(0, value0: t);
             public static implicit operator MozStackSizing(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12974,12 +12974,12 @@ namespace CssInCs
             public static implicit operator MozTextBlink(PropertySkip t) => new(0, value0: t);
             public static implicit operator MozTextBlink(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13001,12 +13001,12 @@ namespace CssInCs
             public static implicit operator MozUserFocus(PropertySkip t) => new(0, value0: t);
             public static implicit operator MozUserFocus(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13028,12 +13028,12 @@ namespace CssInCs
             public static implicit operator MozUserInput(PropertySkip t) => new(0, value0: t);
             public static implicit operator MozUserInput(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13055,12 +13055,12 @@ namespace CssInCs
             public static implicit operator MozUserModify(PropertySkip t) => new(0, value0: t);
             public static implicit operator MozUserModify(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13082,12 +13082,12 @@ namespace CssInCs
             public static implicit operator MozWindowDragging(PropertySkip t) => new(0, value0: t);
             public static implicit operator MozWindowDragging(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13109,12 +13109,12 @@ namespace CssInCs
             public static implicit operator MozWindowShadow(PropertySkip t) => new(0, value0: t);
             public static implicit operator MozWindowShadow(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13136,12 +13136,12 @@ namespace CssInCs
             public static implicit operator MsAccelerator(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsAccelerator(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13163,12 +13163,12 @@ namespace CssInCs
             public static implicit operator MsBlockProgression(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsBlockProgression(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13190,12 +13190,12 @@ namespace CssInCs
             public static implicit operator MsContentZoomChaining(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsContentZoomChaining(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13217,12 +13217,12 @@ namespace CssInCs
             public static implicit operator MsContentZoomLimit(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsContentZoomLimit(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13244,12 +13244,12 @@ namespace CssInCs
             public static implicit operator MsContentZoomLimitMax(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsContentZoomLimitMax(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13271,12 +13271,12 @@ namespace CssInCs
             public static implicit operator MsContentZoomLimitMin(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsContentZoomLimitMin(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13298,12 +13298,12 @@ namespace CssInCs
             public static implicit operator MsContentZoomSnap(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsContentZoomSnap(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13325,12 +13325,12 @@ namespace CssInCs
             public static implicit operator MsContentZoomSnapPoints(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsContentZoomSnapPoints(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13352,12 +13352,12 @@ namespace CssInCs
             public static implicit operator MsContentZoomSnapType(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsContentZoomSnapType(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13379,12 +13379,12 @@ namespace CssInCs
             public static implicit operator MsContentZooming(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsContentZooming(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13406,12 +13406,12 @@ namespace CssInCs
             public static implicit operator MsFilter(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsFilter(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13433,12 +13433,12 @@ namespace CssInCs
             public static implicit operator MsFlowFrom(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsFlowFrom(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13460,12 +13460,12 @@ namespace CssInCs
             public static implicit operator MsFlowInto(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsFlowInto(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13490,13 +13490,13 @@ namespace CssInCs
             public static implicit operator MsGridColumns(string t) => new(1, value1: t);
             public static implicit operator MsGridColumns(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13521,13 +13521,13 @@ namespace CssInCs
             public static implicit operator MsGridRows(string t) => new(1, value1: t);
             public static implicit operator MsGridRows(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13549,12 +13549,12 @@ namespace CssInCs
             public static implicit operator MsHighContrastAdjust(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsHighContrastAdjust(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13579,13 +13579,13 @@ namespace CssInCs
             public static implicit operator MsHyphenateLimitChars(string t) => new(1, value1: t);
             public static implicit operator MsHyphenateLimitChars(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13610,13 +13610,13 @@ namespace CssInCs
             public static implicit operator MsHyphenateLimitLines(string t) => new(1, value1: t);
             public static implicit operator MsHyphenateLimitLines(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13641,13 +13641,13 @@ namespace CssInCs
             public static implicit operator MsHyphenateLimitZone(string t) => new(1, value1: t);
             public static implicit operator MsHyphenateLimitZone(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13669,12 +13669,12 @@ namespace CssInCs
             public static implicit operator MsImeAlign(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsImeAlign(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13696,12 +13696,12 @@ namespace CssInCs
             public static implicit operator MsOverflowStyle(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsOverflowStyle(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13723,12 +13723,12 @@ namespace CssInCs
             public static implicit operator MsScrollChaining(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsScrollChaining(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13750,12 +13750,12 @@ namespace CssInCs
             public static implicit operator MsScrollLimit(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsScrollLimit(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13780,13 +13780,13 @@ namespace CssInCs
             public static implicit operator MsScrollLimitXMax(string t) => new(1, value1: t);
             public static implicit operator MsScrollLimitXMax(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13811,13 +13811,13 @@ namespace CssInCs
             public static implicit operator MsScrollLimitXMin(string t) => new(1, value1: t);
             public static implicit operator MsScrollLimitXMin(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13842,13 +13842,13 @@ namespace CssInCs
             public static implicit operator MsScrollLimitYMax(string t) => new(1, value1: t);
             public static implicit operator MsScrollLimitYMax(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13873,13 +13873,13 @@ namespace CssInCs
             public static implicit operator MsScrollLimitYMin(string t) => new(1, value1: t);
             public static implicit operator MsScrollLimitYMin(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13901,12 +13901,12 @@ namespace CssInCs
             public static implicit operator MsScrollRails(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsScrollRails(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13928,12 +13928,12 @@ namespace CssInCs
             public static implicit operator MsScrollSnapPointsX(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsScrollSnapPointsX(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13955,12 +13955,12 @@ namespace CssInCs
             public static implicit operator MsScrollSnapPointsY(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsScrollSnapPointsY(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13982,12 +13982,12 @@ namespace CssInCs
             public static implicit operator MsScrollSnapType(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsScrollSnapType(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14009,12 +14009,12 @@ namespace CssInCs
             public static implicit operator MsScrollSnapX(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsScrollSnapX(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14036,12 +14036,12 @@ namespace CssInCs
             public static implicit operator MsScrollSnapY(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsScrollSnapY(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14063,12 +14063,12 @@ namespace CssInCs
             public static implicit operator MsScrollTranslation(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsScrollTranslation(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14090,12 +14090,12 @@ namespace CssInCs
             public static implicit operator MsScrollbar3dlightColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsScrollbar3dlightColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14117,12 +14117,12 @@ namespace CssInCs
             public static implicit operator MsScrollbarArrowColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsScrollbarArrowColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14144,12 +14144,12 @@ namespace CssInCs
             public static implicit operator MsScrollbarBaseColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsScrollbarBaseColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14171,12 +14171,12 @@ namespace CssInCs
             public static implicit operator MsScrollbarDarkshadowColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsScrollbarDarkshadowColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14198,12 +14198,12 @@ namespace CssInCs
             public static implicit operator MsScrollbarFaceColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsScrollbarFaceColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14225,12 +14225,12 @@ namespace CssInCs
             public static implicit operator MsScrollbarHighlightColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsScrollbarHighlightColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14252,12 +14252,12 @@ namespace CssInCs
             public static implicit operator MsScrollbarShadowColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsScrollbarShadowColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14279,12 +14279,12 @@ namespace CssInCs
             public static implicit operator MsScrollbarTrackColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsScrollbarTrackColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14306,12 +14306,12 @@ namespace CssInCs
             public static implicit operator MsTextAutospace(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsTextAutospace(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14333,12 +14333,12 @@ namespace CssInCs
             public static implicit operator MsTouchSelect(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsTouchSelect(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14360,12 +14360,12 @@ namespace CssInCs
             public static implicit operator MsUserSelect(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsUserSelect(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14387,12 +14387,12 @@ namespace CssInCs
             public static implicit operator MsWrapFlow(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsWrapFlow(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14417,13 +14417,13 @@ namespace CssInCs
             public static implicit operator MsWrapMargin(string t) => new(1, value1: t);
             public static implicit operator MsWrapMargin(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14445,12 +14445,12 @@ namespace CssInCs
             public static implicit operator MsWrapThrough(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsWrapThrough(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14472,12 +14472,12 @@ namespace CssInCs
             public static implicit operator WebkitAppearance(PropertySkip t) => new(0, value0: t);
             public static implicit operator WebkitAppearance(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14502,13 +14502,13 @@ namespace CssInCs
             public static implicit operator WebkitBorderBefore(string t) => new(1, value1: t);
             public static implicit operator WebkitBorderBefore(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14530,12 +14530,12 @@ namespace CssInCs
             public static implicit operator WebkitBorderBeforeColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator WebkitBorderBeforeColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14557,12 +14557,12 @@ namespace CssInCs
             public static implicit operator WebkitBorderBeforeStyle(PropertySkip t) => new(0, value0: t);
             public static implicit operator WebkitBorderBeforeStyle(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14587,13 +14587,13 @@ namespace CssInCs
             public static implicit operator WebkitBorderBeforeWidth(string t) => new(1, value1: t);
             public static implicit operator WebkitBorderBeforeWidth(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14618,13 +14618,13 @@ namespace CssInCs
             public static implicit operator WebkitBoxReflect(string t) => new(1, value1: t);
             public static implicit operator WebkitBoxReflect(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14649,13 +14649,13 @@ namespace CssInCs
             public static implicit operator WebkitLineClamp(string t) => new(1, value1: t);
             public static implicit operator WebkitLineClamp(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14680,13 +14680,13 @@ namespace CssInCs
             public static implicit operator WebkitMask(string t) => new(1, value1: t);
             public static implicit operator WebkitMask(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14708,12 +14708,12 @@ namespace CssInCs
             public static implicit operator WebkitMaskAttachment(PropertySkip t) => new(0, value0: t);
             public static implicit operator WebkitMaskAttachment(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14735,12 +14735,12 @@ namespace CssInCs
             public static implicit operator WebkitMaskClip(PropertySkip t) => new(0, value0: t);
             public static implicit operator WebkitMaskClip(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14762,12 +14762,12 @@ namespace CssInCs
             public static implicit operator WebkitMaskComposite(PropertySkip t) => new(0, value0: t);
             public static implicit operator WebkitMaskComposite(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14789,12 +14789,12 @@ namespace CssInCs
             public static implicit operator WebkitMaskImage(PropertySkip t) => new(0, value0: t);
             public static implicit operator WebkitMaskImage(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14816,12 +14816,12 @@ namespace CssInCs
             public static implicit operator WebkitMaskOrigin(PropertySkip t) => new(0, value0: t);
             public static implicit operator WebkitMaskOrigin(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14846,13 +14846,13 @@ namespace CssInCs
             public static implicit operator WebkitMaskPosition(string t) => new(1, value1: t);
             public static implicit operator WebkitMaskPosition(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14877,13 +14877,13 @@ namespace CssInCs
             public static implicit operator WebkitMaskPositionX(string t) => new(1, value1: t);
             public static implicit operator WebkitMaskPositionX(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14908,13 +14908,13 @@ namespace CssInCs
             public static implicit operator WebkitMaskPositionY(string t) => new(1, value1: t);
             public static implicit operator WebkitMaskPositionY(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14936,12 +14936,12 @@ namespace CssInCs
             public static implicit operator WebkitMaskRepeat(PropertySkip t) => new(0, value0: t);
             public static implicit operator WebkitMaskRepeat(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14963,12 +14963,12 @@ namespace CssInCs
             public static implicit operator WebkitMaskRepeatX(PropertySkip t) => new(0, value0: t);
             public static implicit operator WebkitMaskRepeatX(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14990,12 +14990,12 @@ namespace CssInCs
             public static implicit operator WebkitMaskRepeatY(PropertySkip t) => new(0, value0: t);
             public static implicit operator WebkitMaskRepeatY(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15020,13 +15020,13 @@ namespace CssInCs
             public static implicit operator WebkitMaskSize(string t) => new(1, value1: t);
             public static implicit operator WebkitMaskSize(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15048,12 +15048,12 @@ namespace CssInCs
             public static implicit operator WebkitOverflowScrolling(PropertySkip t) => new(0, value0: t);
             public static implicit operator WebkitOverflowScrolling(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15075,12 +15075,12 @@ namespace CssInCs
             public static implicit operator WebkitTapHighlightColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator WebkitTapHighlightColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15102,12 +15102,12 @@ namespace CssInCs
             public static implicit operator WebkitTextFillColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator WebkitTextFillColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15132,13 +15132,13 @@ namespace CssInCs
             public static implicit operator WebkitTextStroke(string t) => new(1, value1: t);
             public static implicit operator WebkitTextStroke(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15160,12 +15160,12 @@ namespace CssInCs
             public static implicit operator WebkitTextStrokeColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator WebkitTextStrokeColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15190,13 +15190,13 @@ namespace CssInCs
             public static implicit operator WebkitTextStrokeWidth(string t) => new(1, value1: t);
             public static implicit operator WebkitTextStrokeWidth(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15218,12 +15218,12 @@ namespace CssInCs
             public static implicit operator WebkitTouchCallout(PropertySkip t) => new(0, value0: t);
             public static implicit operator WebkitTouchCallout(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15245,12 +15245,12 @@ namespace CssInCs
             public static implicit operator WebkitUserModify(PropertySkip t) => new(0, value0: t);
             public static implicit operator WebkitUserModify(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15272,12 +15272,12 @@ namespace CssInCs
             public static implicit operator AlignmentBaseline(PropertySkip t) => new(0, value0: t);
             public static implicit operator AlignmentBaseline(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15302,13 +15302,13 @@ namespace CssInCs
             public static implicit operator BaselineShift(string t) => new(1, value1: t);
             public static implicit operator BaselineShift(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15330,12 +15330,12 @@ namespace CssInCs
             public static implicit operator ClipRule(PropertySkip t) => new(0, value0: t);
             public static implicit operator ClipRule(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15357,12 +15357,12 @@ namespace CssInCs
             public static implicit operator ColorInterpolation(PropertySkip t) => new(0, value0: t);
             public static implicit operator ColorInterpolation(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15384,12 +15384,12 @@ namespace CssInCs
             public static implicit operator ColorRendering(PropertySkip t) => new(0, value0: t);
             public static implicit operator ColorRendering(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15411,12 +15411,12 @@ namespace CssInCs
             public static implicit operator DominantBaseline(PropertySkip t) => new(0, value0: t);
             public static implicit operator DominantBaseline(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15438,12 +15438,12 @@ namespace CssInCs
             public static implicit operator Fill(PropertySkip t) => new(0, value0: t);
             public static implicit operator Fill(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15468,13 +15468,13 @@ namespace CssInCs
             public static implicit operator FillOpacity(string t) => new(1, value1: t);
             public static implicit operator FillOpacity(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15496,12 +15496,12 @@ namespace CssInCs
             public static implicit operator FillRule(PropertySkip t) => new(0, value0: t);
             public static implicit operator FillRule(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15523,12 +15523,12 @@ namespace CssInCs
             public static implicit operator FloodColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator FloodColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15553,13 +15553,13 @@ namespace CssInCs
             public static implicit operator FloodOpacity(string t) => new(1, value1: t);
             public static implicit operator FloodOpacity(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15584,13 +15584,13 @@ namespace CssInCs
             public static implicit operator GlyphOrientationVertical(string t) => new(1, value1: t);
             public static implicit operator GlyphOrientationVertical(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15612,12 +15612,12 @@ namespace CssInCs
             public static implicit operator LightingColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator LightingColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15639,12 +15639,12 @@ namespace CssInCs
             public static implicit operator Marker(PropertySkip t) => new(0, value0: t);
             public static implicit operator Marker(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15666,12 +15666,12 @@ namespace CssInCs
             public static implicit operator MarkerEnd(PropertySkip t) => new(0, value0: t);
             public static implicit operator MarkerEnd(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15693,12 +15693,12 @@ namespace CssInCs
             public static implicit operator MarkerMid(PropertySkip t) => new(0, value0: t);
             public static implicit operator MarkerMid(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15720,12 +15720,12 @@ namespace CssInCs
             public static implicit operator MarkerStart(PropertySkip t) => new(0, value0: t);
             public static implicit operator MarkerStart(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15747,12 +15747,12 @@ namespace CssInCs
             public static implicit operator ShapeRendering(PropertySkip t) => new(0, value0: t);
             public static implicit operator ShapeRendering(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15774,12 +15774,12 @@ namespace CssInCs
             public static implicit operator StopColor(PropertySkip t) => new(0, value0: t);
             public static implicit operator StopColor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15804,13 +15804,13 @@ namespace CssInCs
             public static implicit operator StopOpacity(string t) => new(1, value1: t);
             public static implicit operator StopOpacity(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15832,12 +15832,12 @@ namespace CssInCs
             public static implicit operator Stroke(PropertySkip t) => new(0, value0: t);
             public static implicit operator Stroke(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15862,13 +15862,13 @@ namespace CssInCs
             public static implicit operator StrokeDasharray(string t) => new(1, value1: t);
             public static implicit operator StrokeDasharray(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15893,13 +15893,13 @@ namespace CssInCs
             public static implicit operator StrokeDashoffset(string t) => new(1, value1: t);
             public static implicit operator StrokeDashoffset(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15921,12 +15921,12 @@ namespace CssInCs
             public static implicit operator StrokeLinecap(PropertySkip t) => new(0, value0: t);
             public static implicit operator StrokeLinecap(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15948,12 +15948,12 @@ namespace CssInCs
             public static implicit operator StrokeLinejoin(PropertySkip t) => new(0, value0: t);
             public static implicit operator StrokeLinejoin(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15978,13 +15978,13 @@ namespace CssInCs
             public static implicit operator StrokeMiterlimit(string t) => new(1, value1: t);
             public static implicit operator StrokeMiterlimit(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -16009,13 +16009,13 @@ namespace CssInCs
             public static implicit operator StrokeOpacity(string t) => new(1, value1: t);
             public static implicit operator StrokeOpacity(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -16040,13 +16040,13 @@ namespace CssInCs
             public static implicit operator StrokeWidth(string t) => new(1, value1: t);
             public static implicit operator StrokeWidth(int t) => new(2, value2: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
-                    2 => FormatValue(_value2),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -16068,12 +16068,12 @@ namespace CssInCs
             public static implicit operator TextAnchor(PropertySkip t) => new(0, value0: t);
             public static implicit operator TextAnchor(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -16095,12 +16095,12 @@ namespace CssInCs
             public static implicit operator VectorEffect(PropertySkip t) => new(0, value0: t);
             public static implicit operator VectorEffect(string t) => new(1, value1: t);
 
-            public string GetValue()
+            public string GetValue(string key)
             {
                 return _index switch
                 {
-                    0 => FormatValue(_value0),
-                    1 => FormatValue(_value1),
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }

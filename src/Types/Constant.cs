@@ -1,4 +1,4 @@
-﻿namespace CssInCs
+﻿namespace CssInCSharp
 {
     internal static class Constant
     {

@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\CssInCs.csproj" />
+    <ProjectReference Include="..\..\src\CssInCSharp.csproj" />
   </ItemGroup>
 
 </Project>

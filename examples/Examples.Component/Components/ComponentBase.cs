@@ -1,4 +1,4 @@
-﻿using CssInCs;
+﻿using CssInCSharp;
 using Microsoft.AspNetCore.Components;
 
 namespace Examples.Component
@@ -8,6 +8,8 @@ namespace Examples.Component
         // some css token, eg: theme parameters
         public string ThemeColor { get; set; }
         public string ThemeBackground { get; set; }
+        public string ComponentName { get; set; }
+        public string HashId { get; set; }
     }
 
     public abstract class AntdComponentBase: ComponentBase
@@ -15,21 +17,20 @@ namespace Examples.Component
         [Parameter]
         public string Id { get; set; }
 
-        public RenderFragment WrapSSR(RenderFragment dom)
+        public RenderFragment WrapSSR(RenderFragment dom, CssToken token)
         {
-            var token = new CssToken();
-            var styleList = UseStyle(token);
             return (builder) =>
             {
                 var i = 0;
                 builder.OpenComponent(i++, typeof(Style));
-                builder.AddAttribute(i++, "Id", Id);
-                builder.AddAttribute(i++, "Styles", styleList);
+                builder.AddAttribute(i++, "TokenKey", $"{token.HashId}");
+                builder.AddAttribute(i++, "Path", $"css|{token.ComponentName}");
+                builder.AddAttribute(i++, "StyleFn", UseStyle);
                 builder.CloseComponent();
                 builder.AddContent(i++, dom);
             };
         }
 
-        protected abstract CSSObject[] UseStyle(CssToken token);
+        protected abstract CSSInterpolation UseStyle();
     }
 }

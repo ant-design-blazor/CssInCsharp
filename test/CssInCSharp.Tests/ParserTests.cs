@@ -1,9 +1,9 @@
-using static CssInCs.Compiler.Parser;
-using static CssInCs.Compiler.Serializer;
+using static CssInCSharp.Compiler.Parser;
+using static CssInCSharp.Compiler.Serializer;
 using Shouldly;
 using Xunit;
 
-namespace CssInCs.Tests
+namespace CssInCSharp.Tests
 {
     public class ParserTests
     {

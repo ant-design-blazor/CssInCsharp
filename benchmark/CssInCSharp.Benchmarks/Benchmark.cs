@@ -1,4 +1,4 @@
-﻿using static CssInCs.Styles;
+﻿using static CssInCSharp.Styles;
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Configs;
 using BenchmarkDotNet.Diagnosers;

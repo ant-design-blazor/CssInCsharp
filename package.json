@@ -1,15 +1,15 @@
 {
-  "name": "@blazor-component/typecss",
+  "name": "@blazor-component/cssincsharp",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "generate": "ts-node generator.ts",
-    "lessc": "lessc"
+    "generate": "ts-node generator.ts"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@emotion/unitless": "^0.8.1",
     "@types/node": "^18.16.1",
     "csstype": "^3.1.2",
     "less": "^4.1.3",

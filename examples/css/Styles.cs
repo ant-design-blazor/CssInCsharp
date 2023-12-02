@@ -1,10 +1,10 @@
-namespace CssInCs
+namespace CssInCSharp
 {
     public static class Styles
     {
         public static CSSObject BenchmarkCss = new()
         {
-            [".pro-card"] = new()
+            [".pro-card"] = new CSSObject()
             {
                 Position = "relative",
                 Display = "flex",
@@ -18,38 +18,38 @@ namespace CssInCs
                 BackgroundColor = "#EFEFEF",
                 BorderRadius = 5,
                 Opacity = 0.5f,
-                ["&-box-shadow"] = new()
+                ["&-box-shadow"] = new CSSObject()
                 {
                     BoxShadow = "0 1px 2px -2px #00000029, 0 3px 6px #0000001f, 0 5px 12px 4px #00000017",
                     BorderColor = "transparent"
                 },
-                ["&-col"] = new()
+                ["&-col"] = new CSSObject()
                 {
                     Width = "100%"
                 },
-                ["&-border"] = new()
+                ["&-border"] = new CSSObject()
                 {
                     Border = "20px solid #DDD"
                 },
-                ["&-hoverable"] = new()
+                ["&-hoverable"] = new CSSObject()
                 {
                     Cursor = "pointer",
                     Transition = "box-shadow 0.3s, border-color 0.3s",
-                    ["&:hover"] = new()
+                    ["&:hover"] = new CSSObject()
                     {
                         BorderColor = "transparent",
                         BoxShadow = "0 1px 2px -2px #00000029, 0 3px 6px #0000001f, 0 5px 12px 4px #00000017",
                     },
-                    ["&.pro-card-checked:hover"] = new()
+                    ["&.pro-card-checked:hover"] = new CSSObject()
                     {
                         BorderColor = "#DDD"
                     }
                 },
-                ["&-checked"] = new()
+                ["&-checked"] = new CSSObject()
                 {
                     BackgroundColor = "#EFEFEF",
                     BorderColor = "#DDD",
-                    ["&::after"] = new()
+                    ["&::after"] = new CSSObject()
                     {
                         Position = "absolute",
                         InsetBlockStart = "2px",
@@ -63,30 +63,30 @@ namespace CssInCs
                         Content = "\"\"",
                     }
                 },
-                ["&:focus"] = new()
+                ["&:focus"] = new CSSObject()
                 {
                     BackgroundColor = "#EFEFEF",
                     BorderColor = "#DDD",
                 },
-                ["&&-size-small"] = new()
+                ["&&-size-small"] = new CSSObject()
                 {
-                    [".pro-card"] = new()
+                    [".pro-card"] = new CSSObject()
                     {
-                        ["&-header"] = new()
+                        ["&-header"] = new CSSObject()
                         {
                             PaddingInline = "10px",
                             PaddingBlock = "10px",
                             PaddingBlockEnd = 0,
-                            ["&-border"] = new()
+                            ["&-border"] = new CSSObject()
                             {
                                 PaddingBlockEnd = "10px"
                             }
                         },
-                        ["&-title"] = new()
+                        ["&-title"] = new CSSObject()
                         {
                             FontSize = "12px"
                         },
-                        ["&-body"] = new()
+                        ["&-body"] = new CSSObject()
                         {
                             PaddingInline = "10px",
                             PaddingBlock = "10px",
@@ -98,29 +98,29 @@ namespace CssInCs
 
         public static CSSObject Selectors_I = new ()
         {
-            ["a"] = new()
+            ["a"] = new CSSObject()
             {
                 Color = "blue",
-                ["&:hover"] = new()
+                ["&:hover"] = new CSSObject()
                 {
                     Color = "green"
                 }
             }
         };
 
-        public static CSSObject Selectors_II = new ()
+        public static CSSObject Selectors_II = new CSSObject()
         {
-            [".button"] = new()
+            [".button"] = new CSSObject()
             {
-                ["&-ok"] = new()
+                ["&-ok"] = new CSSObject()
                 {
                     BackgroundImage = "url(\"ok.png\")"
                 },
-                ["&-cancel"] = new()
+                ["&-cancel"] = new CSSObject()
                 {
                     BackgroundImage = "url(\"cancel.png\")"
                 },
-                ["&-custom"] = new()
+                ["&-custom"] = new CSSObject()
                 {
                     BackgroundImage = "url(\"custom.png\")"
                 }
@@ -129,46 +129,46 @@ namespace CssInCs
 
         public static CSSObject Selectors_III = new()
         {
-            [".link"] = new()
+            [".link"] = new CSSObject()
             {
-                ["& + &"] = new()
+                ["& + &"] = new CSSObject()
                 {
                     Color = "red"
                 },
-                ["& &"] = new()
+                ["& &"] = new CSSObject()
                 {
                     Color = "green"
                 },
-                ["&&"] = new()
+                ["&&"] = new CSSObject()
                 {
                     Color = "blue"
                 },
-                ["&, &ish"] = new()
+                ["&, &ish"] = new CSSObject()
                 {
                     Color = "cyan"
                 }
             }
         };
 
-        public static CSSObject Selectors_IV = new()
+        public static CSSObject Selectors_IV = new CSSObject()
         {
-            [".grand"] = new()
+            [".grand"] = new CSSObject()
             {
-                [".parent"] = new ()
+                [".parent"] = new CSSObject()
                 {
-                    ["& > &"] = new ()
+                    ["& > &"] = new CSSObject()
                     {
                         Color = "red"
                     },
-                    ["& &"] = new()
+                    ["& &"] = new CSSObject()
                     {
                         Color = "green"
                     },
-                    ["&&"] = new()
+                    ["&&"] = new CSSObject()
                     {
                         Color = "blue"
                     },
-                    ["&, &ish"] = new()
+                    ["&, &ish"] = new CSSObject()
                     {
                         Color = "cyan"
                     }
@@ -178,12 +178,12 @@ namespace CssInCs
 
         public static CSSObject Selectors_V = new()
         {
-            [".header"] = new()
+            [".header"] = new CSSObject()
             {
-                [".menu"] = new()
+                [".menu"] = new CSSObject()
                 {
                     BorderRadius = "5px",
-                    [".no-borderradius &"] = new()
+                    [".no-borderradius &"] = new CSSObject()
                     {
                         BackgroundImage = "url('images/button-background.png')"
                     }

@@ -11,16 +11,13 @@
     This is div4
 </div>
 
-<style>
-    @_style
-</style>
+<Style StyleFn="@GenStyle">
+</Style>
 
 @code {
-    private string _style = "";
-
-    protected override void OnInitialized()
+    private CSSInterpolation GenStyle()
     {
-        var defaultCss = new CSSObject()
+        var defaultCss = new CSSObject
         {
             Background = "#EFEFEF",
             FontSize = "14px",
@@ -48,7 +45,7 @@
                 Width = "120px",
                 Height = "120px",
                 Color = "blue",
-                ["& .title"] = new ()
+                ["& .title"] = new CSSObject
                 {
                     Color = "cadetblue",
                     FontSize = "20px"
@@ -66,16 +63,16 @@
         // only override div3 title color
         css.Merge(new CSSObject
         {
-            [".div3"] = new ()
+            [".div3"] = new CSSObject
             {
-                ["& .title"] = new ()
+                ["& .title"] = new CSSObject
                 {
                     Color = "yellow"
                 }
             }
         });
 
-        _style = css.ToString();
+        return css;
     }
 
 }

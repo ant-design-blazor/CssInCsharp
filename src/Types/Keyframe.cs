@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 
-namespace CssInCs
+namespace CssInCSharp
 {
     public sealed class Keyframe
     {
@@ -29,7 +29,7 @@ namespace CssInCs
             sb.Append($"{_name};@keyframes {_name}{{");
             foreach (var subStyle in _styles)
             {
-                sb.Append($"{subStyle.Key}{{{subStyle.Value.CreateCss()}}}");
+                sb.Append($"{subStyle.Key}{{{subStyle.Value.ParseStyle(true, string.Empty)}}}");
             }
             sb.Append("}}");
             return sb.ToString();

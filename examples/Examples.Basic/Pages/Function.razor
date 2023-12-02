@@ -12,7 +12,7 @@
 </div>
 
 <style>
-    @_style
+  @_style
 </style>
 
 @code {
@@ -23,27 +23,27 @@
     {
         var css = new CSSObject
         {
-            [".div"] = new ()
+            [".div"] = new CSSObject
             {
                 Width = $"{_size}px",
                 Border = "1px solid #DDD",
-                ["& .header"] = new ()
+                ["& .header"] = new CSSObject
                 {
                     Height = "50px",
                     Width = "100%",
                 },
-                ["& .footer"] = new ()
+                ["& .footer"] = new CSSObject
                 {
                     Height = "50px",
                     Width = "100%",
                 },
-                ["& .body"] = new ()
+                ["& .body"] = new CSSObject
                 {
                     Height = CalcBodyHeight(50, 50),     // normal method
                     Width = "100%",
                     BorderTop = "1px solid #DDD",
                     BorderBottom = "1px solid #DDD",
-                    [".container"] = new ()
+                    [".container"] = new CSSObject
                     {
                         Height = await GetContainerSizeAsync(), // async method
                         BackgroundColor = "#EFEFEF"

@@ -8,6 +8,7 @@
     <RazorLangVersion>3.0</RazorLangVersion>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <ImplicitUsings>disable</ImplicitUsings>
+	<PackageIcon>logo.png</PackageIcon>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -52,4 +53,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="CssInCSharp.csproj.DotSettings" />
+  </ItemGroup>
 </Project>
