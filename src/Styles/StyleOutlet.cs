@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Rendering;
+#if NET8_0_OR_GREATER
 using Microsoft.AspNetCore.Components.Sections;
+#endif
 using Microsoft.AspNetCore.Components.Web;
 
 namespace CssInCs

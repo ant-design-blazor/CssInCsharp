@@ -20,11 +20,11 @@ namespace CssInCs
                 var i = 0;
                 foreach (var style in styles)
                 {
-                    builder.OpenComponent<Style>(0);
-                    builder.AddAttribute(1, "HashId", style.HashId);
-                    builder.AddAttribute(2, "TokenKey", style.TokenKey);
-                    builder.AddAttribute(3, "Path", $"{style.TokenKey}|{string.Join("|", style.Path)}");
-                    builder.AddAttribute(4, "StyleFn", style.StyleFn);
+                    builder.OpenComponent<Style>(i++);
+                    builder.AddAttribute(i++, "HashId", style.HashId);
+                    builder.AddAttribute(i++, "TokenKey", style.TokenKey);
+                    builder.AddAttribute(i++, "Path", $"{style.TokenKey}|{string.Join("|", style.Path)}");
+                    builder.AddAttribute(i++, "StyleFn", style.StyleFn);
                     builder.CloseComponent();
                 }
             };
