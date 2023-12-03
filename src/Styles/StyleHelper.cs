@@ -15,18 +15,11 @@ namespace CssInCSharp
     {
         public static RenderFragment UseStyleRegister(StyleInfo[] styles)
         {
+            StyleOutlet.Register(styles);
             return builder =>
             {
-                var i = 0;
-                foreach (var style in styles)
-                {
-                    builder.OpenComponent<Style>(i++);
-                    builder.AddAttribute(i++, "HashId", style.HashId);
-                    builder.AddAttribute(i++, "TokenKey", style.TokenKey);
-                    builder.AddAttribute(i++, "Path", $"{style.TokenKey}|{string.Join("|", style.Path)}");
-                    builder.AddAttribute(i++, "StyleFn", style.StyleFn);
-                    builder.CloseComponent();
-                }
+                builder.OpenComponent<StyleContent>(0);
+                builder.CloseComponent();
             };
         }
     }
