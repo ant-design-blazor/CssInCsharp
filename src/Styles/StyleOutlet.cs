@@ -21,6 +21,12 @@ namespace CssInCSharp
             }
         }
 
+        internal static void Register(StyleInfo style)
+        {
+            var path = $"{style.TokenKey}|{string.Join("|", style.Path)}";
+            Styles.TryAdd(path, style);
+        }
+
         /*
          * using SectionOutlet to render style tag
          * note:

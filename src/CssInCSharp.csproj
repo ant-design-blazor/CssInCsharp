@@ -8,7 +8,7 @@
     <RazorLangVersion>3.0</RazorLangVersion>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <ImplicitUsings>disable</ImplicitUsings>
-	<PackageIcon>logo.png</PackageIcon>
+    <PackageIcon>logo.png</PackageIcon>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -22,6 +22,8 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/ant-design-blazor/CssInCsharp</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ant-design-blazor/CssInCsharp</RepositoryUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
