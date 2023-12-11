@@ -24,8 +24,6 @@ namespace CssInCSharp
 
         protected override void BuildRenderTree(RenderTreeBuilder builder)
         {
-            // If the cache is hit, skip render
-            if (StyleCache.Instance.Exists(Path)) return;
             var cache = StyleCache.Instance.GetOrAdd(Path, (key) =>
             {
                 var csses = StyleFn().ToCssArray();

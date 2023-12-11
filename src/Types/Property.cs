@@ -338,9 +338,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private AnimationIterationCount(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private AnimationIterationCount(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -350,7 +350,7 @@ namespace CssInCSharp
 
             public static implicit operator AnimationIterationCount(PropertySkip t) => new(0, value0: t);
             public static implicit operator AnimationIterationCount(string t) => new(1, value1: t);
-            public static implicit operator AnimationIterationCount(int t) => new(2, value2: t);
+            public static implicit operator AnimationIterationCount(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -508,9 +508,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private AspectRatio(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private AspectRatio(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -520,7 +520,7 @@ namespace CssInCSharp
 
             public static implicit operator AspectRatio(PropertySkip t) => new(0, value0: t);
             public static implicit operator AspectRatio(string t) => new(1, value1: t);
-            public static implicit operator AspectRatio(int t) => new(2, value2: t);
+            public static implicit operator AspectRatio(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -620,9 +620,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private Background(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private Background(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -632,7 +632,7 @@ namespace CssInCSharp
 
             public static implicit operator Background(PropertySkip t) => new(0, value0: t);
             public static implicit operator Background(string t) => new(1, value1: t);
-            public static implicit operator Background(int t) => new(2, value2: t);
+            public static implicit operator Background(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -813,9 +813,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BackgroundPosition(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BackgroundPosition(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -825,7 +825,7 @@ namespace CssInCSharp
 
             public static implicit operator BackgroundPosition(PropertySkip t) => new(0, value0: t);
             public static implicit operator BackgroundPosition(string t) => new(1, value1: t);
-            public static implicit operator BackgroundPosition(int t) => new(2, value2: t);
+            public static implicit operator BackgroundPosition(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -844,9 +844,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BackgroundPositionX(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BackgroundPositionX(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -856,7 +856,7 @@ namespace CssInCSharp
 
             public static implicit operator BackgroundPositionX(PropertySkip t) => new(0, value0: t);
             public static implicit operator BackgroundPositionX(string t) => new(1, value1: t);
-            public static implicit operator BackgroundPositionX(int t) => new(2, value2: t);
+            public static implicit operator BackgroundPositionX(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -875,9 +875,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BackgroundPositionY(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BackgroundPositionY(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -887,7 +887,7 @@ namespace CssInCSharp
 
             public static implicit operator BackgroundPositionY(PropertySkip t) => new(0, value0: t);
             public static implicit operator BackgroundPositionY(string t) => new(1, value1: t);
-            public static implicit operator BackgroundPositionY(int t) => new(2, value2: t);
+            public static implicit operator BackgroundPositionY(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -933,9 +933,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BackgroundSize(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BackgroundSize(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -945,7 +945,7 @@ namespace CssInCSharp
 
             public static implicit operator BackgroundSize(PropertySkip t) => new(0, value0: t);
             public static implicit operator BackgroundSize(string t) => new(1, value1: t);
-            public static implicit operator BackgroundSize(int t) => new(2, value2: t);
+            public static implicit operator BackgroundSize(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -991,9 +991,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BlockSize(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BlockSize(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -1003,7 +1003,7 @@ namespace CssInCSharp
 
             public static implicit operator BlockSize(PropertySkip t) => new(0, value0: t);
             public static implicit operator BlockSize(string t) => new(1, value1: t);
-            public static implicit operator BlockSize(int t) => new(2, value2: t);
+            public static implicit operator BlockSize(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -1022,9 +1022,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private Border(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private Border(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -1034,7 +1034,7 @@ namespace CssInCSharp
 
             public static implicit operator Border(PropertySkip t) => new(0, value0: t);
             public static implicit operator Border(string t) => new(1, value1: t);
-            public static implicit operator Border(int t) => new(2, value2: t);
+            public static implicit operator Border(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -1053,9 +1053,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderBlock(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderBlock(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -1065,7 +1065,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderBlock(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderBlock(string t) => new(1, value1: t);
-            public static implicit operator BorderBlock(int t) => new(2, value2: t);
+            public static implicit operator BorderBlock(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -1111,9 +1111,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderBlockEnd(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderBlockEnd(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -1123,7 +1123,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderBlockEnd(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderBlockEnd(string t) => new(1, value1: t);
-            public static implicit operator BorderBlockEnd(int t) => new(2, value2: t);
+            public static implicit operator BorderBlockEnd(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -1196,9 +1196,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderBlockEndWidth(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderBlockEndWidth(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -1208,7 +1208,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderBlockEndWidth(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderBlockEndWidth(string t) => new(1, value1: t);
-            public static implicit operator BorderBlockEndWidth(int t) => new(2, value2: t);
+            public static implicit operator BorderBlockEndWidth(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -1227,9 +1227,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderBlockStart(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderBlockStart(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -1239,7 +1239,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderBlockStart(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderBlockStart(string t) => new(1, value1: t);
-            public static implicit operator BorderBlockStart(int t) => new(2, value2: t);
+            public static implicit operator BorderBlockStart(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -1312,9 +1312,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderBlockStartWidth(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderBlockStartWidth(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -1324,7 +1324,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderBlockStartWidth(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderBlockStartWidth(string t) => new(1, value1: t);
-            public static implicit operator BorderBlockStartWidth(int t) => new(2, value2: t);
+            public static implicit operator BorderBlockStartWidth(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -1370,9 +1370,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderBlockWidth(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderBlockWidth(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -1382,7 +1382,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderBlockWidth(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderBlockWidth(string t) => new(1, value1: t);
-            public static implicit operator BorderBlockWidth(int t) => new(2, value2: t);
+            public static implicit operator BorderBlockWidth(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -1401,9 +1401,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderBottom(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderBottom(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -1413,7 +1413,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderBottom(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderBottom(string t) => new(1, value1: t);
-            public static implicit operator BorderBottom(int t) => new(2, value2: t);
+            public static implicit operator BorderBottom(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -1459,9 +1459,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderBottomLeftRadius(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderBottomLeftRadius(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -1471,7 +1471,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderBottomLeftRadius(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderBottomLeftRadius(string t) => new(1, value1: t);
-            public static implicit operator BorderBottomLeftRadius(int t) => new(2, value2: t);
+            public static implicit operator BorderBottomLeftRadius(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -1490,9 +1490,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderBottomRightRadius(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderBottomRightRadius(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -1502,7 +1502,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderBottomRightRadius(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderBottomRightRadius(string t) => new(1, value1: t);
-            public static implicit operator BorderBottomRightRadius(int t) => new(2, value2: t);
+            public static implicit operator BorderBottomRightRadius(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -1548,9 +1548,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderBottomWidth(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderBottomWidth(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -1560,7 +1560,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderBottomWidth(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderBottomWidth(string t) => new(1, value1: t);
-            public static implicit operator BorderBottomWidth(int t) => new(2, value2: t);
+            public static implicit operator BorderBottomWidth(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -1633,9 +1633,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderEndEndRadius(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderEndEndRadius(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -1645,7 +1645,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderEndEndRadius(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderEndEndRadius(string t) => new(1, value1: t);
-            public static implicit operator BorderEndEndRadius(int t) => new(2, value2: t);
+            public static implicit operator BorderEndEndRadius(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -1664,9 +1664,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderEndStartRadius(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderEndStartRadius(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -1676,7 +1676,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderEndStartRadius(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderEndStartRadius(string t) => new(1, value1: t);
-            public static implicit operator BorderEndStartRadius(int t) => new(2, value2: t);
+            public static implicit operator BorderEndStartRadius(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -1695,9 +1695,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderImage(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderImage(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -1707,7 +1707,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderImage(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderImage(string t) => new(1, value1: t);
-            public static implicit operator BorderImage(int t) => new(2, value2: t);
+            public static implicit operator BorderImage(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -1726,9 +1726,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderImageOutset(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderImageOutset(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -1738,7 +1738,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderImageOutset(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderImageOutset(string t) => new(1, value1: t);
-            public static implicit operator BorderImageOutset(int t) => new(2, value2: t);
+            public static implicit operator BorderImageOutset(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -1784,9 +1784,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderImageSlice(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderImageSlice(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -1796,7 +1796,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderImageSlice(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderImageSlice(string t) => new(1, value1: t);
-            public static implicit operator BorderImageSlice(int t) => new(2, value2: t);
+            public static implicit operator BorderImageSlice(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -1842,9 +1842,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderImageWidth(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderImageWidth(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -1854,7 +1854,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderImageWidth(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderImageWidth(string t) => new(1, value1: t);
-            public static implicit operator BorderImageWidth(int t) => new(2, value2: t);
+            public static implicit operator BorderImageWidth(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -1873,9 +1873,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderInline(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderInline(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -1885,7 +1885,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderInline(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderInline(string t) => new(1, value1: t);
-            public static implicit operator BorderInline(int t) => new(2, value2: t);
+            public static implicit operator BorderInline(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -1931,9 +1931,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderInlineEnd(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderInlineEnd(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -1943,7 +1943,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderInlineEnd(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderInlineEnd(string t) => new(1, value1: t);
-            public static implicit operator BorderInlineEnd(int t) => new(2, value2: t);
+            public static implicit operator BorderInlineEnd(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -2016,9 +2016,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderInlineEndWidth(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderInlineEndWidth(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -2028,7 +2028,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderInlineEndWidth(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderInlineEndWidth(string t) => new(1, value1: t);
-            public static implicit operator BorderInlineEndWidth(int t) => new(2, value2: t);
+            public static implicit operator BorderInlineEndWidth(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -2047,9 +2047,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderInlineStart(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderInlineStart(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -2059,7 +2059,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderInlineStart(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderInlineStart(string t) => new(1, value1: t);
-            public static implicit operator BorderInlineStart(int t) => new(2, value2: t);
+            public static implicit operator BorderInlineStart(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -2132,9 +2132,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderInlineStartWidth(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderInlineStartWidth(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -2144,7 +2144,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderInlineStartWidth(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderInlineStartWidth(string t) => new(1, value1: t);
-            public static implicit operator BorderInlineStartWidth(int t) => new(2, value2: t);
+            public static implicit operator BorderInlineStartWidth(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -2190,9 +2190,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderInlineWidth(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderInlineWidth(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -2202,7 +2202,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderInlineWidth(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderInlineWidth(string t) => new(1, value1: t);
-            public static implicit operator BorderInlineWidth(int t) => new(2, value2: t);
+            public static implicit operator BorderInlineWidth(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -2221,9 +2221,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderLeft(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderLeft(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -2233,7 +2233,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderLeft(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderLeft(string t) => new(1, value1: t);
-            public static implicit operator BorderLeft(int t) => new(2, value2: t);
+            public static implicit operator BorderLeft(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -2306,9 +2306,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderLeftWidth(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderLeftWidth(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -2318,7 +2318,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderLeftWidth(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderLeftWidth(string t) => new(1, value1: t);
-            public static implicit operator BorderLeftWidth(int t) => new(2, value2: t);
+            public static implicit operator BorderLeftWidth(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -2337,9 +2337,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderRadius(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderRadius(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -2349,7 +2349,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderRadius(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderRadius(string t) => new(1, value1: t);
-            public static implicit operator BorderRadius(int t) => new(2, value2: t);
+            public static implicit operator BorderRadius(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -2368,9 +2368,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderRight(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderRight(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -2380,7 +2380,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderRight(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderRight(string t) => new(1, value1: t);
-            public static implicit operator BorderRight(int t) => new(2, value2: t);
+            public static implicit operator BorderRight(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -2453,9 +2453,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderRightWidth(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderRightWidth(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -2465,7 +2465,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderRightWidth(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderRightWidth(string t) => new(1, value1: t);
-            public static implicit operator BorderRightWidth(int t) => new(2, value2: t);
+            public static implicit operator BorderRightWidth(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -2484,9 +2484,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderSpacing(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderSpacing(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -2496,7 +2496,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderSpacing(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderSpacing(string t) => new(1, value1: t);
-            public static implicit operator BorderSpacing(int t) => new(2, value2: t);
+            public static implicit operator BorderSpacing(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -2515,9 +2515,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderStartEndRadius(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderStartEndRadius(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -2527,7 +2527,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderStartEndRadius(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderStartEndRadius(string t) => new(1, value1: t);
-            public static implicit operator BorderStartEndRadius(int t) => new(2, value2: t);
+            public static implicit operator BorderStartEndRadius(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -2546,9 +2546,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderStartStartRadius(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderStartStartRadius(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -2558,7 +2558,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderStartStartRadius(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderStartStartRadius(string t) => new(1, value1: t);
-            public static implicit operator BorderStartStartRadius(int t) => new(2, value2: t);
+            public static implicit operator BorderStartStartRadius(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -2604,9 +2604,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderTop(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderTop(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -2616,7 +2616,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderTop(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderTop(string t) => new(1, value1: t);
-            public static implicit operator BorderTop(int t) => new(2, value2: t);
+            public static implicit operator BorderTop(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -2662,9 +2662,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderTopLeftRadius(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderTopLeftRadius(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -2674,7 +2674,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderTopLeftRadius(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderTopLeftRadius(string t) => new(1, value1: t);
-            public static implicit operator BorderTopLeftRadius(int t) => new(2, value2: t);
+            public static implicit operator BorderTopLeftRadius(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -2693,9 +2693,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderTopRightRadius(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderTopRightRadius(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -2705,7 +2705,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderTopRightRadius(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderTopRightRadius(string t) => new(1, value1: t);
-            public static implicit operator BorderTopRightRadius(int t) => new(2, value2: t);
+            public static implicit operator BorderTopRightRadius(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -2751,9 +2751,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderTopWidth(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderTopWidth(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -2763,7 +2763,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderTopWidth(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderTopWidth(string t) => new(1, value1: t);
-            public static implicit operator BorderTopWidth(int t) => new(2, value2: t);
+            public static implicit operator BorderTopWidth(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -2782,9 +2782,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BorderWidth(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BorderWidth(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -2794,7 +2794,7 @@ namespace CssInCSharp
 
             public static implicit operator BorderWidth(PropertySkip t) => new(0, value0: t);
             public static implicit operator BorderWidth(string t) => new(1, value1: t);
-            public static implicit operator BorderWidth(int t) => new(2, value2: t);
+            public static implicit operator BorderWidth(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -2813,9 +2813,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private Bottom(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private Bottom(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -2825,7 +2825,7 @@ namespace CssInCSharp
 
             public static implicit operator Bottom(PropertySkip t) => new(0, value0: t);
             public static implicit operator Bottom(string t) => new(1, value1: t);
-            public static implicit operator Bottom(int t) => new(2, value2: t);
+            public static implicit operator Bottom(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -2925,9 +2925,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BoxFlex(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BoxFlex(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -2937,7 +2937,7 @@ namespace CssInCSharp
 
             public static implicit operator BoxFlex(PropertySkip t) => new(0, value0: t);
             public static implicit operator BoxFlex(string t) => new(1, value1: t);
-            public static implicit operator BoxFlex(int t) => new(2, value2: t);
+            public static implicit operator BoxFlex(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -2956,9 +2956,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BoxFlexGroup(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BoxFlexGroup(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -2968,7 +2968,7 @@ namespace CssInCSharp
 
             public static implicit operator BoxFlexGroup(PropertySkip t) => new(0, value0: t);
             public static implicit operator BoxFlexGroup(string t) => new(1, value1: t);
-            public static implicit operator BoxFlexGroup(int t) => new(2, value2: t);
+            public static implicit operator BoxFlexGroup(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -3014,9 +3014,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BoxOrdinalGroup(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BoxOrdinalGroup(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -3026,7 +3026,7 @@ namespace CssInCSharp
 
             public static implicit operator BoxOrdinalGroup(PropertySkip t) => new(0, value0: t);
             public static implicit operator BoxOrdinalGroup(string t) => new(1, value1: t);
-            public static implicit operator BoxOrdinalGroup(int t) => new(2, value2: t);
+            public static implicit operator BoxOrdinalGroup(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -3504,9 +3504,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ColumnCount(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ColumnCount(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -3516,7 +3516,7 @@ namespace CssInCSharp
 
             public static implicit operator ColumnCount(PropertySkip t) => new(0, value0: t);
             public static implicit operator ColumnCount(string t) => new(1, value1: t);
-            public static implicit operator ColumnCount(int t) => new(2, value2: t);
+            public static implicit operator ColumnCount(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -3562,9 +3562,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ColumnGap(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ColumnGap(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -3574,7 +3574,7 @@ namespace CssInCSharp
 
             public static implicit operator ColumnGap(PropertySkip t) => new(0, value0: t);
             public static implicit operator ColumnGap(string t) => new(1, value1: t);
-            public static implicit operator ColumnGap(int t) => new(2, value2: t);
+            public static implicit operator ColumnGap(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -3593,9 +3593,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ColumnRule(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ColumnRule(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -3605,7 +3605,7 @@ namespace CssInCSharp
 
             public static implicit operator ColumnRule(PropertySkip t) => new(0, value0: t);
             public static implicit operator ColumnRule(string t) => new(1, value1: t);
-            public static implicit operator ColumnRule(int t) => new(2, value2: t);
+            public static implicit operator ColumnRule(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -3678,9 +3678,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ColumnRuleWidth(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ColumnRuleWidth(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -3690,7 +3690,7 @@ namespace CssInCSharp
 
             public static implicit operator ColumnRuleWidth(PropertySkip t) => new(0, value0: t);
             public static implicit operator ColumnRuleWidth(string t) => new(1, value1: t);
-            public static implicit operator ColumnRuleWidth(int t) => new(2, value2: t);
+            public static implicit operator ColumnRuleWidth(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -3736,9 +3736,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ColumnWidth(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ColumnWidth(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -3748,7 +3748,7 @@ namespace CssInCSharp
 
             public static implicit operator ColumnWidth(PropertySkip t) => new(0, value0: t);
             public static implicit operator ColumnWidth(string t) => new(1, value1: t);
-            public static implicit operator ColumnWidth(int t) => new(2, value2: t);
+            public static implicit operator ColumnWidth(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -3767,9 +3767,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private Columns(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private Columns(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -3779,7 +3779,7 @@ namespace CssInCSharp
 
             public static implicit operator Columns(PropertySkip t) => new(0, value0: t);
             public static implicit operator Columns(string t) => new(1, value1: t);
-            public static implicit operator Columns(int t) => new(2, value2: t);
+            public static implicit operator Columns(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -3825,9 +3825,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ContainIntrinsicBlockSize(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ContainIntrinsicBlockSize(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -3837,7 +3837,7 @@ namespace CssInCSharp
 
             public static implicit operator ContainIntrinsicBlockSize(PropertySkip t) => new(0, value0: t);
             public static implicit operator ContainIntrinsicBlockSize(string t) => new(1, value1: t);
-            public static implicit operator ContainIntrinsicBlockSize(int t) => new(2, value2: t);
+            public static implicit operator ContainIntrinsicBlockSize(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -3856,9 +3856,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ContainIntrinsicHeight(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ContainIntrinsicHeight(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -3868,7 +3868,7 @@ namespace CssInCSharp
 
             public static implicit operator ContainIntrinsicHeight(PropertySkip t) => new(0, value0: t);
             public static implicit operator ContainIntrinsicHeight(string t) => new(1, value1: t);
-            public static implicit operator ContainIntrinsicHeight(int t) => new(2, value2: t);
+            public static implicit operator ContainIntrinsicHeight(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -3887,9 +3887,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ContainIntrinsicInlineSize(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ContainIntrinsicInlineSize(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -3899,7 +3899,7 @@ namespace CssInCSharp
 
             public static implicit operator ContainIntrinsicInlineSize(PropertySkip t) => new(0, value0: t);
             public static implicit operator ContainIntrinsicInlineSize(string t) => new(1, value1: t);
-            public static implicit operator ContainIntrinsicInlineSize(int t) => new(2, value2: t);
+            public static implicit operator ContainIntrinsicInlineSize(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -3918,9 +3918,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ContainIntrinsicSize(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ContainIntrinsicSize(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -3930,7 +3930,7 @@ namespace CssInCSharp
 
             public static implicit operator ContainIntrinsicSize(PropertySkip t) => new(0, value0: t);
             public static implicit operator ContainIntrinsicSize(string t) => new(1, value1: t);
-            public static implicit operator ContainIntrinsicSize(int t) => new(2, value2: t);
+            public static implicit operator ContainIntrinsicSize(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -3949,9 +3949,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ContainIntrinsicWidth(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ContainIntrinsicWidth(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -3961,7 +3961,7 @@ namespace CssInCSharp
 
             public static implicit operator ContainIntrinsicWidth(PropertySkip t) => new(0, value0: t);
             public static implicit operator ContainIntrinsicWidth(string t) => new(1, value1: t);
-            public static implicit operator ContainIntrinsicWidth(int t) => new(2, value2: t);
+            public static implicit operator ContainIntrinsicWidth(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -4331,9 +4331,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private Flex(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private Flex(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -4343,7 +4343,7 @@ namespace CssInCSharp
 
             public static implicit operator Flex(PropertySkip t) => new(0, value0: t);
             public static implicit operator Flex(string t) => new(1, value1: t);
-            public static implicit operator Flex(int t) => new(2, value2: t);
+            public static implicit operator Flex(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -4362,9 +4362,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private FlexBasis(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private FlexBasis(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -4374,7 +4374,7 @@ namespace CssInCSharp
 
             public static implicit operator FlexBasis(PropertySkip t) => new(0, value0: t);
             public static implicit operator FlexBasis(string t) => new(1, value1: t);
-            public static implicit operator FlexBasis(int t) => new(2, value2: t);
+            public static implicit operator FlexBasis(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -4447,9 +4447,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private FlexGrow(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private FlexGrow(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -4459,7 +4459,7 @@ namespace CssInCSharp
 
             public static implicit operator FlexGrow(PropertySkip t) => new(0, value0: t);
             public static implicit operator FlexGrow(string t) => new(1, value1: t);
-            public static implicit operator FlexGrow(int t) => new(2, value2: t);
+            public static implicit operator FlexGrow(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -4478,9 +4478,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private FlexShrink(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private FlexShrink(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -4490,7 +4490,7 @@ namespace CssInCSharp
 
             public static implicit operator FlexShrink(PropertySkip t) => new(0, value0: t);
             public static implicit operator FlexShrink(string t) => new(1, value1: t);
-            public static implicit operator FlexShrink(int t) => new(2, value2: t);
+            public static implicit operator FlexShrink(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -4752,9 +4752,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private FontSize(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private FontSize(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -4764,7 +4764,7 @@ namespace CssInCSharp
 
             public static implicit operator FontSize(PropertySkip t) => new(0, value0: t);
             public static implicit operator FontSize(string t) => new(1, value1: t);
-            public static implicit operator FontSize(int t) => new(2, value2: t);
+            public static implicit operator FontSize(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -4783,9 +4783,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private FontSizeAdjust(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private FontSizeAdjust(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -4795,7 +4795,7 @@ namespace CssInCSharp
 
             public static implicit operator FontSizeAdjust(PropertySkip t) => new(0, value0: t);
             public static implicit operator FontSizeAdjust(string t) => new(1, value1: t);
-            public static implicit operator FontSizeAdjust(int t) => new(2, value2: t);
+            public static implicit operator FontSizeAdjust(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -4814,9 +4814,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private FontSmooth(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private FontSmooth(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -4826,7 +4826,7 @@ namespace CssInCSharp
 
             public static implicit operator FontSmooth(PropertySkip t) => new(0, value0: t);
             public static implicit operator FontSmooth(string t) => new(1, value1: t);
-            public static implicit operator FontSmooth(int t) => new(2, value2: t);
+            public static implicit operator FontSmooth(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -5169,9 +5169,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private FontWeight(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private FontWeight(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -5181,7 +5181,7 @@ namespace CssInCSharp
 
             public static implicit operator FontWeight(PropertySkip t) => new(0, value0: t);
             public static implicit operator FontWeight(string t) => new(1, value1: t);
-            public static implicit operator FontWeight(int t) => new(2, value2: t);
+            public static implicit operator FontWeight(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -5227,9 +5227,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private Gap(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private Gap(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -5239,7 +5239,7 @@ namespace CssInCSharp
 
             public static implicit operator Gap(PropertySkip t) => new(0, value0: t);
             public static implicit operator Gap(string t) => new(1, value1: t);
-            public static implicit operator Gap(int t) => new(2, value2: t);
+            public static implicit operator Gap(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -5312,9 +5312,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private GridAutoColumns(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private GridAutoColumns(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -5324,7 +5324,7 @@ namespace CssInCSharp
 
             public static implicit operator GridAutoColumns(PropertySkip t) => new(0, value0: t);
             public static implicit operator GridAutoColumns(string t) => new(1, value1: t);
-            public static implicit operator GridAutoColumns(int t) => new(2, value2: t);
+            public static implicit operator GridAutoColumns(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -5370,9 +5370,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private GridAutoRows(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private GridAutoRows(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -5382,7 +5382,7 @@ namespace CssInCSharp
 
             public static implicit operator GridAutoRows(PropertySkip t) => new(0, value0: t);
             public static implicit operator GridAutoRows(string t) => new(1, value1: t);
-            public static implicit operator GridAutoRows(int t) => new(2, value2: t);
+            public static implicit operator GridAutoRows(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -5455,9 +5455,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private GridColumnGap(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private GridColumnGap(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -5467,7 +5467,7 @@ namespace CssInCSharp
 
             public static implicit operator GridColumnGap(PropertySkip t) => new(0, value0: t);
             public static implicit operator GridColumnGap(string t) => new(1, value1: t);
-            public static implicit operator GridColumnGap(int t) => new(2, value2: t);
+            public static implicit operator GridColumnGap(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -5513,9 +5513,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private GridGap(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private GridGap(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -5525,7 +5525,7 @@ namespace CssInCSharp
 
             public static implicit operator GridGap(PropertySkip t) => new(0, value0: t);
             public static implicit operator GridGap(string t) => new(1, value1: t);
-            public static implicit operator GridGap(int t) => new(2, value2: t);
+            public static implicit operator GridGap(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -5598,9 +5598,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private GridRowGap(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private GridRowGap(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -5610,7 +5610,7 @@ namespace CssInCSharp
 
             public static implicit operator GridRowGap(PropertySkip t) => new(0, value0: t);
             public static implicit operator GridRowGap(string t) => new(1, value1: t);
-            public static implicit operator GridRowGap(int t) => new(2, value2: t);
+            public static implicit operator GridRowGap(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -5710,9 +5710,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private GridTemplateColumns(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private GridTemplateColumns(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -5722,7 +5722,7 @@ namespace CssInCSharp
 
             public static implicit operator GridTemplateColumns(PropertySkip t) => new(0, value0: t);
             public static implicit operator GridTemplateColumns(string t) => new(1, value1: t);
-            public static implicit operator GridTemplateColumns(int t) => new(2, value2: t);
+            public static implicit operator GridTemplateColumns(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -5741,9 +5741,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private GridTemplateRows(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private GridTemplateRows(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -5753,7 +5753,7 @@ namespace CssInCSharp
 
             public static implicit operator GridTemplateRows(PropertySkip t) => new(0, value0: t);
             public static implicit operator GridTemplateRows(string t) => new(1, value1: t);
-            public static implicit operator GridTemplateRows(int t) => new(2, value2: t);
+            public static implicit operator GridTemplateRows(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -5799,9 +5799,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private Height(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private Height(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -5811,7 +5811,7 @@ namespace CssInCSharp
 
             public static implicit operator Height(PropertySkip t) => new(0, value0: t);
             public static implicit operator Height(string t) => new(1, value1: t);
-            public static implicit operator Height(int t) => new(2, value2: t);
+            public static implicit operator Height(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -5857,9 +5857,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private HyphenateLimitChars(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private HyphenateLimitChars(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -5869,7 +5869,7 @@ namespace CssInCSharp
 
             public static implicit operator HyphenateLimitChars(PropertySkip t) => new(0, value0: t);
             public static implicit operator HyphenateLimitChars(string t) => new(1, value1: t);
-            public static implicit operator HyphenateLimitChars(int t) => new(2, value2: t);
+            public static implicit operator HyphenateLimitChars(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -6023,9 +6023,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private InitialLetter(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private InitialLetter(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -6035,7 +6035,7 @@ namespace CssInCSharp
 
             public static implicit operator InitialLetter(PropertySkip t) => new(0, value0: t);
             public static implicit operator InitialLetter(string t) => new(1, value1: t);
-            public static implicit operator InitialLetter(int t) => new(2, value2: t);
+            public static implicit operator InitialLetter(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -6054,9 +6054,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private InlineSize(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private InlineSize(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -6066,7 +6066,7 @@ namespace CssInCSharp
 
             public static implicit operator InlineSize(PropertySkip t) => new(0, value0: t);
             public static implicit operator InlineSize(string t) => new(1, value1: t);
-            public static implicit operator InlineSize(int t) => new(2, value2: t);
+            public static implicit operator InlineSize(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -6112,9 +6112,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private Inset(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private Inset(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -6124,7 +6124,7 @@ namespace CssInCSharp
 
             public static implicit operator Inset(PropertySkip t) => new(0, value0: t);
             public static implicit operator Inset(string t) => new(1, value1: t);
-            public static implicit operator Inset(int t) => new(2, value2: t);
+            public static implicit operator Inset(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -6143,9 +6143,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private InsetBlock(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private InsetBlock(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -6155,7 +6155,7 @@ namespace CssInCSharp
 
             public static implicit operator InsetBlock(PropertySkip t) => new(0, value0: t);
             public static implicit operator InsetBlock(string t) => new(1, value1: t);
-            public static implicit operator InsetBlock(int t) => new(2, value2: t);
+            public static implicit operator InsetBlock(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -6174,9 +6174,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private InsetBlockEnd(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private InsetBlockEnd(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -6186,7 +6186,7 @@ namespace CssInCSharp
 
             public static implicit operator InsetBlockEnd(PropertySkip t) => new(0, value0: t);
             public static implicit operator InsetBlockEnd(string t) => new(1, value1: t);
-            public static implicit operator InsetBlockEnd(int t) => new(2, value2: t);
+            public static implicit operator InsetBlockEnd(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -6205,9 +6205,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private InsetBlockStart(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private InsetBlockStart(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -6217,7 +6217,7 @@ namespace CssInCSharp
 
             public static implicit operator InsetBlockStart(PropertySkip t) => new(0, value0: t);
             public static implicit operator InsetBlockStart(string t) => new(1, value1: t);
-            public static implicit operator InsetBlockStart(int t) => new(2, value2: t);
+            public static implicit operator InsetBlockStart(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -6236,9 +6236,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private InsetInline(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private InsetInline(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -6248,7 +6248,7 @@ namespace CssInCSharp
 
             public static implicit operator InsetInline(PropertySkip t) => new(0, value0: t);
             public static implicit operator InsetInline(string t) => new(1, value1: t);
-            public static implicit operator InsetInline(int t) => new(2, value2: t);
+            public static implicit operator InsetInline(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -6267,9 +6267,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private InsetInlineEnd(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private InsetInlineEnd(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -6279,7 +6279,7 @@ namespace CssInCSharp
 
             public static implicit operator InsetInlineEnd(PropertySkip t) => new(0, value0: t);
             public static implicit operator InsetInlineEnd(string t) => new(1, value1: t);
-            public static implicit operator InsetInlineEnd(int t) => new(2, value2: t);
+            public static implicit operator InsetInlineEnd(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -6298,9 +6298,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private InsetInlineStart(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private InsetInlineStart(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -6310,7 +6310,7 @@ namespace CssInCSharp
 
             public static implicit operator InsetInlineStart(PropertySkip t) => new(0, value0: t);
             public static implicit operator InsetInlineStart(string t) => new(1, value1: t);
-            public static implicit operator InsetInlineStart(int t) => new(2, value2: t);
+            public static implicit operator InsetInlineStart(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -6464,9 +6464,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private Left(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private Left(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -6476,7 +6476,7 @@ namespace CssInCSharp
 
             public static implicit operator Left(PropertySkip t) => new(0, value0: t);
             public static implicit operator Left(string t) => new(1, value1: t);
-            public static implicit operator Left(int t) => new(2, value2: t);
+            public static implicit operator Left(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -6495,9 +6495,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private LetterSpacing(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private LetterSpacing(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -6507,7 +6507,7 @@ namespace CssInCSharp
 
             public static implicit operator LetterSpacing(PropertySkip t) => new(0, value0: t);
             public static implicit operator LetterSpacing(string t) => new(1, value1: t);
-            public static implicit operator LetterSpacing(int t) => new(2, value2: t);
+            public static implicit operator LetterSpacing(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -6553,9 +6553,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private LineClamp(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private LineClamp(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -6565,7 +6565,7 @@ namespace CssInCSharp
 
             public static implicit operator LineClamp(PropertySkip t) => new(0, value0: t);
             public static implicit operator LineClamp(string t) => new(1, value1: t);
-            public static implicit operator LineClamp(int t) => new(2, value2: t);
+            public static implicit operator LineClamp(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -6615,9 +6615,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private LineHeightStep(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private LineHeightStep(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -6627,7 +6627,7 @@ namespace CssInCSharp
 
             public static implicit operator LineHeightStep(PropertySkip t) => new(0, value0: t);
             public static implicit operator LineHeightStep(string t) => new(1, value1: t);
-            public static implicit operator LineHeightStep(int t) => new(2, value2: t);
+            public static implicit operator LineHeightStep(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -6754,9 +6754,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private Margin(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private Margin(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -6766,7 +6766,7 @@ namespace CssInCSharp
 
             public static implicit operator Margin(PropertySkip t) => new(0, value0: t);
             public static implicit operator Margin(string t) => new(1, value1: t);
-            public static implicit operator Margin(int t) => new(2, value2: t);
+            public static implicit operator Margin(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -6785,9 +6785,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MarginBlock(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MarginBlock(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -6797,7 +6797,7 @@ namespace CssInCSharp
 
             public static implicit operator MarginBlock(PropertySkip t) => new(0, value0: t);
             public static implicit operator MarginBlock(string t) => new(1, value1: t);
-            public static implicit operator MarginBlock(int t) => new(2, value2: t);
+            public static implicit operator MarginBlock(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -6816,9 +6816,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MarginBlockEnd(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MarginBlockEnd(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -6828,7 +6828,7 @@ namespace CssInCSharp
 
             public static implicit operator MarginBlockEnd(PropertySkip t) => new(0, value0: t);
             public static implicit operator MarginBlockEnd(string t) => new(1, value1: t);
-            public static implicit operator MarginBlockEnd(int t) => new(2, value2: t);
+            public static implicit operator MarginBlockEnd(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -6847,9 +6847,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MarginBlockStart(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MarginBlockStart(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -6859,7 +6859,7 @@ namespace CssInCSharp
 
             public static implicit operator MarginBlockStart(PropertySkip t) => new(0, value0: t);
             public static implicit operator MarginBlockStart(string t) => new(1, value1: t);
-            public static implicit operator MarginBlockStart(int t) => new(2, value2: t);
+            public static implicit operator MarginBlockStart(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -6878,9 +6878,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MarginBottom(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MarginBottom(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -6890,7 +6890,7 @@ namespace CssInCSharp
 
             public static implicit operator MarginBottom(PropertySkip t) => new(0, value0: t);
             public static implicit operator MarginBottom(string t) => new(1, value1: t);
-            public static implicit operator MarginBottom(int t) => new(2, value2: t);
+            public static implicit operator MarginBottom(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -6909,9 +6909,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MarginInline(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MarginInline(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -6921,7 +6921,7 @@ namespace CssInCSharp
 
             public static implicit operator MarginInline(PropertySkip t) => new(0, value0: t);
             public static implicit operator MarginInline(string t) => new(1, value1: t);
-            public static implicit operator MarginInline(int t) => new(2, value2: t);
+            public static implicit operator MarginInline(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -6940,9 +6940,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MarginInlineEnd(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MarginInlineEnd(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -6952,7 +6952,7 @@ namespace CssInCSharp
 
             public static implicit operator MarginInlineEnd(PropertySkip t) => new(0, value0: t);
             public static implicit operator MarginInlineEnd(string t) => new(1, value1: t);
-            public static implicit operator MarginInlineEnd(int t) => new(2, value2: t);
+            public static implicit operator MarginInlineEnd(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -6971,9 +6971,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MarginInlineStart(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MarginInlineStart(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -6983,7 +6983,7 @@ namespace CssInCSharp
 
             public static implicit operator MarginInlineStart(PropertySkip t) => new(0, value0: t);
             public static implicit operator MarginInlineStart(string t) => new(1, value1: t);
-            public static implicit operator MarginInlineStart(int t) => new(2, value2: t);
+            public static implicit operator MarginInlineStart(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -7002,9 +7002,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MarginLeft(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MarginLeft(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -7014,7 +7014,7 @@ namespace CssInCSharp
 
             public static implicit operator MarginLeft(PropertySkip t) => new(0, value0: t);
             public static implicit operator MarginLeft(string t) => new(1, value1: t);
-            public static implicit operator MarginLeft(int t) => new(2, value2: t);
+            public static implicit operator MarginLeft(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -7033,9 +7033,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MarginRight(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MarginRight(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -7045,7 +7045,7 @@ namespace CssInCSharp
 
             public static implicit operator MarginRight(PropertySkip t) => new(0, value0: t);
             public static implicit operator MarginRight(string t) => new(1, value1: t);
-            public static implicit operator MarginRight(int t) => new(2, value2: t);
+            public static implicit operator MarginRight(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -7064,9 +7064,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MarginTop(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MarginTop(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -7076,7 +7076,7 @@ namespace CssInCSharp
 
             public static implicit operator MarginTop(PropertySkip t) => new(0, value0: t);
             public static implicit operator MarginTop(string t) => new(1, value1: t);
-            public static implicit operator MarginTop(int t) => new(2, value2: t);
+            public static implicit operator MarginTop(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -7122,9 +7122,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private Mask(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private Mask(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -7134,7 +7134,7 @@ namespace CssInCSharp
 
             public static implicit operator Mask(PropertySkip t) => new(0, value0: t);
             public static implicit operator Mask(string t) => new(1, value1: t);
-            public static implicit operator Mask(int t) => new(2, value2: t);
+            public static implicit operator Mask(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -7153,9 +7153,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MaskBorder(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MaskBorder(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -7165,7 +7165,7 @@ namespace CssInCSharp
 
             public static implicit operator MaskBorder(PropertySkip t) => new(0, value0: t);
             public static implicit operator MaskBorder(string t) => new(1, value1: t);
-            public static implicit operator MaskBorder(int t) => new(2, value2: t);
+            public static implicit operator MaskBorder(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -7211,9 +7211,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MaskBorderOutset(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MaskBorderOutset(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -7223,7 +7223,7 @@ namespace CssInCSharp
 
             public static implicit operator MaskBorderOutset(PropertySkip t) => new(0, value0: t);
             public static implicit operator MaskBorderOutset(string t) => new(1, value1: t);
-            public static implicit operator MaskBorderOutset(int t) => new(2, value2: t);
+            public static implicit operator MaskBorderOutset(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -7269,9 +7269,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MaskBorderSlice(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MaskBorderSlice(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -7281,7 +7281,7 @@ namespace CssInCSharp
 
             public static implicit operator MaskBorderSlice(PropertySkip t) => new(0, value0: t);
             public static implicit operator MaskBorderSlice(string t) => new(1, value1: t);
-            public static implicit operator MaskBorderSlice(int t) => new(2, value2: t);
+            public static implicit operator MaskBorderSlice(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -7327,9 +7327,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MaskBorderWidth(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MaskBorderWidth(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -7339,7 +7339,7 @@ namespace CssInCSharp
 
             public static implicit operator MaskBorderWidth(PropertySkip t) => new(0, value0: t);
             public static implicit operator MaskBorderWidth(string t) => new(1, value1: t);
-            public static implicit operator MaskBorderWidth(int t) => new(2, value2: t);
+            public static implicit operator MaskBorderWidth(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -7493,9 +7493,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MaskPosition(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MaskPosition(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -7505,7 +7505,7 @@ namespace CssInCSharp
 
             public static implicit operator MaskPosition(PropertySkip t) => new(0, value0: t);
             public static implicit operator MaskPosition(string t) => new(1, value1: t);
-            public static implicit operator MaskPosition(int t) => new(2, value2: t);
+            public static implicit operator MaskPosition(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -7551,9 +7551,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MaskSize(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MaskSize(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -7563,7 +7563,7 @@ namespace CssInCSharp
 
             public static implicit operator MaskSize(PropertySkip t) => new(0, value0: t);
             public static implicit operator MaskSize(string t) => new(1, value1: t);
-            public static implicit operator MaskSize(int t) => new(2, value2: t);
+            public static implicit operator MaskSize(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -7609,9 +7609,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MathDepth(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MathDepth(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -7621,7 +7621,7 @@ namespace CssInCSharp
 
             public static implicit operator MathDepth(PropertySkip t) => new(0, value0: t);
             public static implicit operator MathDepth(string t) => new(1, value1: t);
-            public static implicit operator MathDepth(int t) => new(2, value2: t);
+            public static implicit operator MathDepth(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -7694,9 +7694,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MaxBlockSize(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MaxBlockSize(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -7706,7 +7706,7 @@ namespace CssInCSharp
 
             public static implicit operator MaxBlockSize(PropertySkip t) => new(0, value0: t);
             public static implicit operator MaxBlockSize(string t) => new(1, value1: t);
-            public static implicit operator MaxBlockSize(int t) => new(2, value2: t);
+            public static implicit operator MaxBlockSize(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -7725,9 +7725,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MaxHeight(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MaxHeight(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -7737,7 +7737,7 @@ namespace CssInCSharp
 
             public static implicit operator MaxHeight(PropertySkip t) => new(0, value0: t);
             public static implicit operator MaxHeight(string t) => new(1, value1: t);
-            public static implicit operator MaxHeight(int t) => new(2, value2: t);
+            public static implicit operator MaxHeight(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -7756,9 +7756,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MaxInlineSize(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MaxInlineSize(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -7768,7 +7768,7 @@ namespace CssInCSharp
 
             public static implicit operator MaxInlineSize(PropertySkip t) => new(0, value0: t);
             public static implicit operator MaxInlineSize(string t) => new(1, value1: t);
-            public static implicit operator MaxInlineSize(int t) => new(2, value2: t);
+            public static implicit operator MaxInlineSize(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -7787,9 +7787,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MaxLines(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MaxLines(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -7799,7 +7799,7 @@ namespace CssInCSharp
 
             public static implicit operator MaxLines(PropertySkip t) => new(0, value0: t);
             public static implicit operator MaxLines(string t) => new(1, value1: t);
-            public static implicit operator MaxLines(int t) => new(2, value2: t);
+            public static implicit operator MaxLines(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -7818,9 +7818,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MaxWidth(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MaxWidth(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -7830,7 +7830,7 @@ namespace CssInCSharp
 
             public static implicit operator MaxWidth(PropertySkip t) => new(0, value0: t);
             public static implicit operator MaxWidth(string t) => new(1, value1: t);
-            public static implicit operator MaxWidth(int t) => new(2, value2: t);
+            public static implicit operator MaxWidth(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -7849,9 +7849,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MinBlockSize(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MinBlockSize(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -7861,7 +7861,7 @@ namespace CssInCSharp
 
             public static implicit operator MinBlockSize(PropertySkip t) => new(0, value0: t);
             public static implicit operator MinBlockSize(string t) => new(1, value1: t);
-            public static implicit operator MinBlockSize(int t) => new(2, value2: t);
+            public static implicit operator MinBlockSize(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -7880,9 +7880,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MinHeight(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MinHeight(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -7892,7 +7892,7 @@ namespace CssInCSharp
 
             public static implicit operator MinHeight(PropertySkip t) => new(0, value0: t);
             public static implicit operator MinHeight(string t) => new(1, value1: t);
-            public static implicit operator MinHeight(int t) => new(2, value2: t);
+            public static implicit operator MinHeight(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -7911,9 +7911,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MinInlineSize(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MinInlineSize(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -7923,7 +7923,7 @@ namespace CssInCSharp
 
             public static implicit operator MinInlineSize(PropertySkip t) => new(0, value0: t);
             public static implicit operator MinInlineSize(string t) => new(1, value1: t);
-            public static implicit operator MinInlineSize(int t) => new(2, value2: t);
+            public static implicit operator MinInlineSize(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -7942,9 +7942,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MinWidth(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MinWidth(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -7954,7 +7954,7 @@ namespace CssInCSharp
 
             public static implicit operator MinWidth(PropertySkip t) => new(0, value0: t);
             public static implicit operator MinWidth(string t) => new(1, value1: t);
-            public static implicit operator MinWidth(int t) => new(2, value2: t);
+            public static implicit operator MinWidth(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -8000,9 +8000,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private Offset(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private Offset(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -8012,7 +8012,7 @@ namespace CssInCSharp
 
             public static implicit operator Offset(PropertySkip t) => new(0, value0: t);
             public static implicit operator Offset(string t) => new(1, value1: t);
-            public static implicit operator Offset(int t) => new(2, value2: t);
+            public static implicit operator Offset(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -8031,9 +8031,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private OffsetDistance(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private OffsetDistance(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -8043,7 +8043,7 @@ namespace CssInCSharp
 
             public static implicit operator OffsetDistance(PropertySkip t) => new(0, value0: t);
             public static implicit operator OffsetDistance(string t) => new(1, value1: t);
-            public static implicit operator OffsetDistance(int t) => new(2, value2: t);
+            public static implicit operator OffsetDistance(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -8143,9 +8143,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ObjectPosition(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ObjectPosition(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -8155,7 +8155,7 @@ namespace CssInCSharp
 
             public static implicit operator ObjectPosition(PropertySkip t) => new(0, value0: t);
             public static implicit operator ObjectPosition(string t) => new(1, value1: t);
-            public static implicit operator ObjectPosition(int t) => new(2, value2: t);
+            public static implicit operator ObjectPosition(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -8174,9 +8174,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private OffsetAnchor(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private OffsetAnchor(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -8186,7 +8186,7 @@ namespace CssInCSharp
 
             public static implicit operator OffsetAnchor(PropertySkip t) => new(0, value0: t);
             public static implicit operator OffsetAnchor(string t) => new(1, value1: t);
-            public static implicit operator OffsetAnchor(int t) => new(2, value2: t);
+            public static implicit operator OffsetAnchor(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -8205,9 +8205,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private OffsetPosition(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private OffsetPosition(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -8217,7 +8217,7 @@ namespace CssInCSharp
 
             public static implicit operator OffsetPosition(PropertySkip t) => new(0, value0: t);
             public static implicit operator OffsetPosition(string t) => new(1, value1: t);
-            public static implicit operator OffsetPosition(int t) => new(2, value2: t);
+            public static implicit operator OffsetPosition(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -8267,9 +8267,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private Order(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private Order(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -8279,7 +8279,7 @@ namespace CssInCSharp
 
             public static implicit operator Order(PropertySkip t) => new(0, value0: t);
             public static implicit operator Order(string t) => new(1, value1: t);
-            public static implicit operator Order(int t) => new(2, value2: t);
+            public static implicit operator Order(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -8298,9 +8298,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private Orphans(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private Orphans(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -8310,7 +8310,7 @@ namespace CssInCSharp
 
             public static implicit operator Orphans(PropertySkip t) => new(0, value0: t);
             public static implicit operator Orphans(string t) => new(1, value1: t);
-            public static implicit operator Orphans(int t) => new(2, value2: t);
+            public static implicit operator Orphans(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -8329,9 +8329,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private Outline(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private Outline(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -8341,7 +8341,7 @@ namespace CssInCSharp
 
             public static implicit operator Outline(PropertySkip t) => new(0, value0: t);
             public static implicit operator Outline(string t) => new(1, value1: t);
-            public static implicit operator Outline(int t) => new(2, value2: t);
+            public static implicit operator Outline(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -8387,9 +8387,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private OutlineOffset(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private OutlineOffset(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -8399,7 +8399,7 @@ namespace CssInCSharp
 
             public static implicit operator OutlineOffset(PropertySkip t) => new(0, value0: t);
             public static implicit operator OutlineOffset(string t) => new(1, value1: t);
-            public static implicit operator OutlineOffset(int t) => new(2, value2: t);
+            public static implicit operator OutlineOffset(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -8445,9 +8445,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private OutlineWidth(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private OutlineWidth(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -8457,7 +8457,7 @@ namespace CssInCSharp
 
             public static implicit operator OutlineWidth(PropertySkip t) => new(0, value0: t);
             public static implicit operator OutlineWidth(string t) => new(1, value1: t);
-            public static implicit operator OutlineWidth(int t) => new(2, value2: t);
+            public static implicit operator OutlineWidth(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -8584,9 +8584,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private OverflowClipMargin(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private OverflowClipMargin(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -8596,7 +8596,7 @@ namespace CssInCSharp
 
             public static implicit operator OverflowClipMargin(PropertySkip t) => new(0, value0: t);
             public static implicit operator OverflowClipMargin(string t) => new(1, value1: t);
-            public static implicit operator OverflowClipMargin(int t) => new(2, value2: t);
+            public static implicit operator OverflowClipMargin(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -8858,9 +8858,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private Padding(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private Padding(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -8870,7 +8870,7 @@ namespace CssInCSharp
 
             public static implicit operator Padding(PropertySkip t) => new(0, value0: t);
             public static implicit operator Padding(string t) => new(1, value1: t);
-            public static implicit operator Padding(int t) => new(2, value2: t);
+            public static implicit operator Padding(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -8889,9 +8889,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private PaddingBlock(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private PaddingBlock(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -8901,7 +8901,7 @@ namespace CssInCSharp
 
             public static implicit operator PaddingBlock(PropertySkip t) => new(0, value0: t);
             public static implicit operator PaddingBlock(string t) => new(1, value1: t);
-            public static implicit operator PaddingBlock(int t) => new(2, value2: t);
+            public static implicit operator PaddingBlock(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -8920,9 +8920,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private PaddingBlockEnd(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private PaddingBlockEnd(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -8932,7 +8932,7 @@ namespace CssInCSharp
 
             public static implicit operator PaddingBlockEnd(PropertySkip t) => new(0, value0: t);
             public static implicit operator PaddingBlockEnd(string t) => new(1, value1: t);
-            public static implicit operator PaddingBlockEnd(int t) => new(2, value2: t);
+            public static implicit operator PaddingBlockEnd(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -8951,9 +8951,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private PaddingBlockStart(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private PaddingBlockStart(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -8963,7 +8963,7 @@ namespace CssInCSharp
 
             public static implicit operator PaddingBlockStart(PropertySkip t) => new(0, value0: t);
             public static implicit operator PaddingBlockStart(string t) => new(1, value1: t);
-            public static implicit operator PaddingBlockStart(int t) => new(2, value2: t);
+            public static implicit operator PaddingBlockStart(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -8982,9 +8982,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private PaddingBottom(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private PaddingBottom(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -8994,7 +8994,7 @@ namespace CssInCSharp
 
             public static implicit operator PaddingBottom(PropertySkip t) => new(0, value0: t);
             public static implicit operator PaddingBottom(string t) => new(1, value1: t);
-            public static implicit operator PaddingBottom(int t) => new(2, value2: t);
+            public static implicit operator PaddingBottom(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -9013,9 +9013,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private PaddingInline(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private PaddingInline(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -9025,7 +9025,7 @@ namespace CssInCSharp
 
             public static implicit operator PaddingInline(PropertySkip t) => new(0, value0: t);
             public static implicit operator PaddingInline(string t) => new(1, value1: t);
-            public static implicit operator PaddingInline(int t) => new(2, value2: t);
+            public static implicit operator PaddingInline(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -9044,9 +9044,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private PaddingInlineEnd(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private PaddingInlineEnd(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -9056,7 +9056,7 @@ namespace CssInCSharp
 
             public static implicit operator PaddingInlineEnd(PropertySkip t) => new(0, value0: t);
             public static implicit operator PaddingInlineEnd(string t) => new(1, value1: t);
-            public static implicit operator PaddingInlineEnd(int t) => new(2, value2: t);
+            public static implicit operator PaddingInlineEnd(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -9075,9 +9075,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private PaddingInlineStart(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private PaddingInlineStart(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -9087,7 +9087,7 @@ namespace CssInCSharp
 
             public static implicit operator PaddingInlineStart(PropertySkip t) => new(0, value0: t);
             public static implicit operator PaddingInlineStart(string t) => new(1, value1: t);
-            public static implicit operator PaddingInlineStart(int t) => new(2, value2: t);
+            public static implicit operator PaddingInlineStart(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -9106,9 +9106,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private PaddingLeft(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private PaddingLeft(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -9118,7 +9118,7 @@ namespace CssInCSharp
 
             public static implicit operator PaddingLeft(PropertySkip t) => new(0, value0: t);
             public static implicit operator PaddingLeft(string t) => new(1, value1: t);
-            public static implicit operator PaddingLeft(int t) => new(2, value2: t);
+            public static implicit operator PaddingLeft(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -9137,9 +9137,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private PaddingRight(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private PaddingRight(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -9149,7 +9149,7 @@ namespace CssInCSharp
 
             public static implicit operator PaddingRight(PropertySkip t) => new(0, value0: t);
             public static implicit operator PaddingRight(string t) => new(1, value1: t);
-            public static implicit operator PaddingRight(int t) => new(2, value2: t);
+            public static implicit operator PaddingRight(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -9168,9 +9168,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private PaddingTop(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private PaddingTop(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -9180,7 +9180,7 @@ namespace CssInCSharp
 
             public static implicit operator PaddingTop(PropertySkip t) => new(0, value0: t);
             public static implicit operator PaddingTop(string t) => new(1, value1: t);
-            public static implicit operator PaddingTop(int t) => new(2, value2: t);
+            public static implicit operator PaddingTop(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -9334,9 +9334,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private Perspective(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private Perspective(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -9346,7 +9346,7 @@ namespace CssInCSharp
 
             public static implicit operator Perspective(PropertySkip t) => new(0, value0: t);
             public static implicit operator Perspective(string t) => new(1, value1: t);
-            public static implicit operator Perspective(int t) => new(2, value2: t);
+            public static implicit operator Perspective(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -9365,9 +9365,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private PerspectiveOrigin(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private PerspectiveOrigin(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -9377,7 +9377,7 @@ namespace CssInCSharp
 
             public static implicit operator PerspectiveOrigin(PropertySkip t) => new(0, value0: t);
             public static implicit operator PerspectiveOrigin(string t) => new(1, value1: t);
-            public static implicit operator PerspectiveOrigin(int t) => new(2, value2: t);
+            public static implicit operator PerspectiveOrigin(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -9585,9 +9585,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private Right(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private Right(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -9597,7 +9597,7 @@ namespace CssInCSharp
 
             public static implicit operator Right(PropertySkip t) => new(0, value0: t);
             public static implicit operator Right(string t) => new(1, value1: t);
-            public static implicit operator Right(int t) => new(2, value2: t);
+            public static implicit operator Right(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -9643,9 +9643,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private RowGap(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private RowGap(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -9655,7 +9655,7 @@ namespace CssInCSharp
 
             public static implicit operator RowGap(PropertySkip t) => new(0, value0: t);
             public static implicit operator RowGap(string t) => new(1, value1: t);
-            public static implicit operator RowGap(int t) => new(2, value2: t);
+            public static implicit operator RowGap(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -9755,9 +9755,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private Scale(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private Scale(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -9767,7 +9767,7 @@ namespace CssInCSharp
 
             public static implicit operator Scale(PropertySkip t) => new(0, value0: t);
             public static implicit operator Scale(string t) => new(1, value1: t);
-            public static implicit operator Scale(int t) => new(2, value2: t);
+            public static implicit operator Scale(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -9813,9 +9813,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ScrollMargin(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ScrollMargin(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -9825,7 +9825,7 @@ namespace CssInCSharp
 
             public static implicit operator ScrollMargin(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollMargin(string t) => new(1, value1: t);
-            public static implicit operator ScrollMargin(int t) => new(2, value2: t);
+            public static implicit operator ScrollMargin(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -9844,9 +9844,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ScrollMarginBlock(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ScrollMarginBlock(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -9856,7 +9856,7 @@ namespace CssInCSharp
 
             public static implicit operator ScrollMarginBlock(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollMarginBlock(string t) => new(1, value1: t);
-            public static implicit operator ScrollMarginBlock(int t) => new(2, value2: t);
+            public static implicit operator ScrollMarginBlock(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -9875,9 +9875,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ScrollMarginBlockEnd(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ScrollMarginBlockEnd(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -9887,7 +9887,7 @@ namespace CssInCSharp
 
             public static implicit operator ScrollMarginBlockEnd(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollMarginBlockEnd(string t) => new(1, value1: t);
-            public static implicit operator ScrollMarginBlockEnd(int t) => new(2, value2: t);
+            public static implicit operator ScrollMarginBlockEnd(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -9906,9 +9906,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ScrollMarginBlockStart(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ScrollMarginBlockStart(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -9918,7 +9918,7 @@ namespace CssInCSharp
 
             public static implicit operator ScrollMarginBlockStart(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollMarginBlockStart(string t) => new(1, value1: t);
-            public static implicit operator ScrollMarginBlockStart(int t) => new(2, value2: t);
+            public static implicit operator ScrollMarginBlockStart(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -9937,9 +9937,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ScrollMarginBottom(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ScrollMarginBottom(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -9949,7 +9949,7 @@ namespace CssInCSharp
 
             public static implicit operator ScrollMarginBottom(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollMarginBottom(string t) => new(1, value1: t);
-            public static implicit operator ScrollMarginBottom(int t) => new(2, value2: t);
+            public static implicit operator ScrollMarginBottom(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -9968,9 +9968,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ScrollMarginInline(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ScrollMarginInline(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -9980,7 +9980,7 @@ namespace CssInCSharp
 
             public static implicit operator ScrollMarginInline(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollMarginInline(string t) => new(1, value1: t);
-            public static implicit operator ScrollMarginInline(int t) => new(2, value2: t);
+            public static implicit operator ScrollMarginInline(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -9999,9 +9999,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ScrollMarginInlineEnd(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ScrollMarginInlineEnd(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -10011,7 +10011,7 @@ namespace CssInCSharp
 
             public static implicit operator ScrollMarginInlineEnd(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollMarginInlineEnd(string t) => new(1, value1: t);
-            public static implicit operator ScrollMarginInlineEnd(int t) => new(2, value2: t);
+            public static implicit operator ScrollMarginInlineEnd(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -10030,9 +10030,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ScrollMarginInlineStart(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ScrollMarginInlineStart(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -10042,7 +10042,7 @@ namespace CssInCSharp
 
             public static implicit operator ScrollMarginInlineStart(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollMarginInlineStart(string t) => new(1, value1: t);
-            public static implicit operator ScrollMarginInlineStart(int t) => new(2, value2: t);
+            public static implicit operator ScrollMarginInlineStart(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -10061,9 +10061,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ScrollMarginLeft(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ScrollMarginLeft(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -10073,7 +10073,7 @@ namespace CssInCSharp
 
             public static implicit operator ScrollMarginLeft(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollMarginLeft(string t) => new(1, value1: t);
-            public static implicit operator ScrollMarginLeft(int t) => new(2, value2: t);
+            public static implicit operator ScrollMarginLeft(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -10092,9 +10092,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ScrollMarginRight(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ScrollMarginRight(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -10104,7 +10104,7 @@ namespace CssInCSharp
 
             public static implicit operator ScrollMarginRight(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollMarginRight(string t) => new(1, value1: t);
-            public static implicit operator ScrollMarginRight(int t) => new(2, value2: t);
+            public static implicit operator ScrollMarginRight(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -10123,9 +10123,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ScrollMarginTop(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ScrollMarginTop(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -10135,7 +10135,7 @@ namespace CssInCSharp
 
             public static implicit operator ScrollMarginTop(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollMarginTop(string t) => new(1, value1: t);
-            public static implicit operator ScrollMarginTop(int t) => new(2, value2: t);
+            public static implicit operator ScrollMarginTop(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -10154,9 +10154,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ScrollPadding(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ScrollPadding(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -10166,7 +10166,7 @@ namespace CssInCSharp
 
             public static implicit operator ScrollPadding(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollPadding(string t) => new(1, value1: t);
-            public static implicit operator ScrollPadding(int t) => new(2, value2: t);
+            public static implicit operator ScrollPadding(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -10185,9 +10185,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ScrollPaddingBlock(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ScrollPaddingBlock(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -10197,7 +10197,7 @@ namespace CssInCSharp
 
             public static implicit operator ScrollPaddingBlock(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollPaddingBlock(string t) => new(1, value1: t);
-            public static implicit operator ScrollPaddingBlock(int t) => new(2, value2: t);
+            public static implicit operator ScrollPaddingBlock(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -10216,9 +10216,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ScrollPaddingBlockEnd(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ScrollPaddingBlockEnd(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -10228,7 +10228,7 @@ namespace CssInCSharp
 
             public static implicit operator ScrollPaddingBlockEnd(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollPaddingBlockEnd(string t) => new(1, value1: t);
-            public static implicit operator ScrollPaddingBlockEnd(int t) => new(2, value2: t);
+            public static implicit operator ScrollPaddingBlockEnd(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -10247,9 +10247,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ScrollPaddingBlockStart(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ScrollPaddingBlockStart(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -10259,7 +10259,7 @@ namespace CssInCSharp
 
             public static implicit operator ScrollPaddingBlockStart(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollPaddingBlockStart(string t) => new(1, value1: t);
-            public static implicit operator ScrollPaddingBlockStart(int t) => new(2, value2: t);
+            public static implicit operator ScrollPaddingBlockStart(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -10278,9 +10278,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ScrollPaddingBottom(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ScrollPaddingBottom(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -10290,7 +10290,7 @@ namespace CssInCSharp
 
             public static implicit operator ScrollPaddingBottom(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollPaddingBottom(string t) => new(1, value1: t);
-            public static implicit operator ScrollPaddingBottom(int t) => new(2, value2: t);
+            public static implicit operator ScrollPaddingBottom(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -10309,9 +10309,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ScrollPaddingInline(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ScrollPaddingInline(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -10321,7 +10321,7 @@ namespace CssInCSharp
 
             public static implicit operator ScrollPaddingInline(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollPaddingInline(string t) => new(1, value1: t);
-            public static implicit operator ScrollPaddingInline(int t) => new(2, value2: t);
+            public static implicit operator ScrollPaddingInline(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -10340,9 +10340,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ScrollPaddingInlineEnd(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ScrollPaddingInlineEnd(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -10352,7 +10352,7 @@ namespace CssInCSharp
 
             public static implicit operator ScrollPaddingInlineEnd(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollPaddingInlineEnd(string t) => new(1, value1: t);
-            public static implicit operator ScrollPaddingInlineEnd(int t) => new(2, value2: t);
+            public static implicit operator ScrollPaddingInlineEnd(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -10371,9 +10371,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ScrollPaddingInlineStart(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ScrollPaddingInlineStart(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -10383,7 +10383,7 @@ namespace CssInCSharp
 
             public static implicit operator ScrollPaddingInlineStart(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollPaddingInlineStart(string t) => new(1, value1: t);
-            public static implicit operator ScrollPaddingInlineStart(int t) => new(2, value2: t);
+            public static implicit operator ScrollPaddingInlineStart(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -10402,9 +10402,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ScrollPaddingLeft(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ScrollPaddingLeft(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -10414,7 +10414,7 @@ namespace CssInCSharp
 
             public static implicit operator ScrollPaddingLeft(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollPaddingLeft(string t) => new(1, value1: t);
-            public static implicit operator ScrollPaddingLeft(int t) => new(2, value2: t);
+            public static implicit operator ScrollPaddingLeft(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -10433,9 +10433,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ScrollPaddingRight(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ScrollPaddingRight(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -10445,7 +10445,7 @@ namespace CssInCSharp
 
             public static implicit operator ScrollPaddingRight(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollPaddingRight(string t) => new(1, value1: t);
-            public static implicit operator ScrollPaddingRight(int t) => new(2, value2: t);
+            public static implicit operator ScrollPaddingRight(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -10464,9 +10464,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ScrollPaddingTop(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ScrollPaddingTop(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -10476,7 +10476,7 @@ namespace CssInCSharp
 
             public static implicit operator ScrollPaddingTop(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollPaddingTop(string t) => new(1, value1: t);
-            public static implicit operator ScrollPaddingTop(int t) => new(2, value2: t);
+            public static implicit operator ScrollPaddingTop(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -10522,9 +10522,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ScrollSnapCoordinate(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ScrollSnapCoordinate(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -10534,7 +10534,7 @@ namespace CssInCSharp
 
             public static implicit operator ScrollSnapCoordinate(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollSnapCoordinate(string t) => new(1, value1: t);
-            public static implicit operator ScrollSnapCoordinate(int t) => new(2, value2: t);
+            public static implicit operator ScrollSnapCoordinate(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -10553,9 +10553,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ScrollSnapDestination(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ScrollSnapDestination(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -10565,7 +10565,7 @@ namespace CssInCSharp
 
             public static implicit operator ScrollSnapDestination(PropertySkip t) => new(0, value0: t);
             public static implicit operator ScrollSnapDestination(string t) => new(1, value1: t);
-            public static implicit operator ScrollSnapDestination(int t) => new(2, value2: t);
+            public static implicit operator ScrollSnapDestination(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -10908,9 +10908,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ShapeImageThreshold(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ShapeImageThreshold(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -10920,7 +10920,7 @@ namespace CssInCSharp
 
             public static implicit operator ShapeImageThreshold(PropertySkip t) => new(0, value0: t);
             public static implicit operator ShapeImageThreshold(string t) => new(1, value1: t);
-            public static implicit operator ShapeImageThreshold(int t) => new(2, value2: t);
+            public static implicit operator ShapeImageThreshold(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -10939,9 +10939,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ShapeMargin(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ShapeMargin(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -10951,7 +10951,7 @@ namespace CssInCSharp
 
             public static implicit operator ShapeMargin(PropertySkip t) => new(0, value0: t);
             public static implicit operator ShapeMargin(string t) => new(1, value1: t);
-            public static implicit operator ShapeMargin(int t) => new(2, value2: t);
+            public static implicit operator ShapeMargin(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -10997,9 +10997,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private TabSize(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private TabSize(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -11009,7 +11009,7 @@ namespace CssInCSharp
 
             public static implicit operator TabSize(PropertySkip t) => new(0, value0: t);
             public static implicit operator TabSize(string t) => new(1, value1: t);
-            public static implicit operator TabSize(int t) => new(2, value2: t);
+            public static implicit operator TabSize(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -11136,9 +11136,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private TextDecoration(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private TextDecoration(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -11148,7 +11148,7 @@ namespace CssInCSharp
 
             public static implicit operator TextDecoration(PropertySkip t) => new(0, value0: t);
             public static implicit operator TextDecoration(string t) => new(1, value1: t);
-            public static implicit operator TextDecoration(int t) => new(2, value2: t);
+            public static implicit operator TextDecoration(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -11302,9 +11302,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private TextDecorationThickness(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private TextDecorationThickness(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -11314,7 +11314,7 @@ namespace CssInCSharp
 
             public static implicit operator TextDecorationThickness(PropertySkip t) => new(0, value0: t);
             public static implicit operator TextDecorationThickness(string t) => new(1, value1: t);
-            public static implicit operator TextDecorationThickness(int t) => new(2, value2: t);
+            public static implicit operator TextDecorationThickness(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -11441,9 +11441,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private TextIndent(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private TextIndent(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -11453,7 +11453,7 @@ namespace CssInCSharp
 
             public static implicit operator TextIndent(PropertySkip t) => new(0, value0: t);
             public static implicit operator TextIndent(string t) => new(1, value1: t);
-            public static implicit operator TextIndent(int t) => new(2, value2: t);
+            public static implicit operator TextIndent(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -11661,9 +11661,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private TextUnderlineOffset(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private TextUnderlineOffset(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -11673,7 +11673,7 @@ namespace CssInCSharp
 
             public static implicit operator TextUnderlineOffset(PropertySkip t) => new(0, value0: t);
             public static implicit operator TextUnderlineOffset(string t) => new(1, value1: t);
-            public static implicit operator TextUnderlineOffset(int t) => new(2, value2: t);
+            public static implicit operator TextUnderlineOffset(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -11719,9 +11719,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private Top(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private Top(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -11731,7 +11731,7 @@ namespace CssInCSharp
 
             public static implicit operator Top(PropertySkip t) => new(0, value0: t);
             public static implicit operator Top(string t) => new(1, value1: t);
-            public static implicit operator Top(int t) => new(2, value2: t);
+            public static implicit operator Top(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -11831,9 +11831,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private TransformOrigin(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private TransformOrigin(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -11843,7 +11843,7 @@ namespace CssInCSharp
 
             public static implicit operator TransformOrigin(PropertySkip t) => new(0, value0: t);
             public static implicit operator TransformOrigin(string t) => new(1, value1: t);
-            public static implicit operator TransformOrigin(int t) => new(2, value2: t);
+            public static implicit operator TransformOrigin(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -12024,9 +12024,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private Translate(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private Translate(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -12036,7 +12036,7 @@ namespace CssInCSharp
 
             public static implicit operator Translate(PropertySkip t) => new(0, value0: t);
             public static implicit operator Translate(string t) => new(1, value1: t);
-            public static implicit operator Translate(int t) => new(2, value2: t);
+            public static implicit operator Translate(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -12109,9 +12109,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private VerticalAlign(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private VerticalAlign(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -12121,7 +12121,7 @@ namespace CssInCSharp
 
             public static implicit operator VerticalAlign(PropertySkip t) => new(0, value0: t);
             public static implicit operator VerticalAlign(string t) => new(1, value1: t);
-            public static implicit operator VerticalAlign(int t) => new(2, value2: t);
+            public static implicit operator VerticalAlign(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -12221,9 +12221,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private Widows(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private Widows(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -12233,7 +12233,7 @@ namespace CssInCSharp
 
             public static implicit operator Widows(PropertySkip t) => new(0, value0: t);
             public static implicit operator Widows(string t) => new(1, value1: t);
-            public static implicit operator Widows(int t) => new(2, value2: t);
+            public static implicit operator Widows(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -12252,9 +12252,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private Width(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private Width(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -12264,7 +12264,7 @@ namespace CssInCSharp
 
             public static implicit operator Width(PropertySkip t) => new(0, value0: t);
             public static implicit operator Width(string t) => new(1, value1: t);
-            public static implicit operator Width(int t) => new(2, value2: t);
+            public static implicit operator Width(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -12337,9 +12337,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private WordSpacing(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private WordSpacing(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -12349,7 +12349,7 @@ namespace CssInCSharp
 
             public static implicit operator WordSpacing(PropertySkip t) => new(0, value0: t);
             public static implicit operator WordSpacing(string t) => new(1, value1: t);
-            public static implicit operator WordSpacing(int t) => new(2, value2: t);
+            public static implicit operator WordSpacing(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -12422,9 +12422,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private ZIndex(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private ZIndex(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -12434,7 +12434,7 @@ namespace CssInCSharp
 
             public static implicit operator ZIndex(PropertySkip t) => new(0, value0: t);
             public static implicit operator ZIndex(string t) => new(1, value1: t);
-            public static implicit operator ZIndex(int t) => new(2, value2: t);
+            public static implicit operator ZIndex(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -12453,9 +12453,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private Zoom(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private Zoom(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -12465,7 +12465,7 @@ namespace CssInCSharp
 
             public static implicit operator Zoom(PropertySkip t) => new(0, value0: t);
             public static implicit operator Zoom(string t) => new(1, value1: t);
-            public static implicit operator Zoom(int t) => new(2, value2: t);
+            public static implicit operator Zoom(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -12781,9 +12781,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MozOutlineRadius(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MozOutlineRadius(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -12793,7 +12793,7 @@ namespace CssInCSharp
 
             public static implicit operator MozOutlineRadius(PropertySkip t) => new(0, value0: t);
             public static implicit operator MozOutlineRadius(string t) => new(1, value1: t);
-            public static implicit operator MozOutlineRadius(int t) => new(2, value2: t);
+            public static implicit operator MozOutlineRadius(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -12812,9 +12812,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MozOutlineRadiusBottomleft(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MozOutlineRadiusBottomleft(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -12824,7 +12824,7 @@ namespace CssInCSharp
 
             public static implicit operator MozOutlineRadiusBottomleft(PropertySkip t) => new(0, value0: t);
             public static implicit operator MozOutlineRadiusBottomleft(string t) => new(1, value1: t);
-            public static implicit operator MozOutlineRadiusBottomleft(int t) => new(2, value2: t);
+            public static implicit operator MozOutlineRadiusBottomleft(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -12843,9 +12843,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MozOutlineRadiusBottomright(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MozOutlineRadiusBottomright(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -12855,7 +12855,7 @@ namespace CssInCSharp
 
             public static implicit operator MozOutlineRadiusBottomright(PropertySkip t) => new(0, value0: t);
             public static implicit operator MozOutlineRadiusBottomright(string t) => new(1, value1: t);
-            public static implicit operator MozOutlineRadiusBottomright(int t) => new(2, value2: t);
+            public static implicit operator MozOutlineRadiusBottomright(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -12874,9 +12874,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MozOutlineRadiusTopleft(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MozOutlineRadiusTopleft(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -12886,7 +12886,7 @@ namespace CssInCSharp
 
             public static implicit operator MozOutlineRadiusTopleft(PropertySkip t) => new(0, value0: t);
             public static implicit operator MozOutlineRadiusTopleft(string t) => new(1, value1: t);
-            public static implicit operator MozOutlineRadiusTopleft(int t) => new(2, value2: t);
+            public static implicit operator MozOutlineRadiusTopleft(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -12905,9 +12905,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MozOutlineRadiusTopright(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MozOutlineRadiusTopright(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -12917,7 +12917,7 @@ namespace CssInCSharp
 
             public static implicit operator MozOutlineRadiusTopright(PropertySkip t) => new(0, value0: t);
             public static implicit operator MozOutlineRadiusTopright(string t) => new(1, value1: t);
-            public static implicit operator MozOutlineRadiusTopright(int t) => new(2, value2: t);
+            public static implicit operator MozOutlineRadiusTopright(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -13476,9 +13476,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MsGridColumns(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MsGridColumns(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -13488,7 +13488,7 @@ namespace CssInCSharp
 
             public static implicit operator MsGridColumns(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsGridColumns(string t) => new(1, value1: t);
-            public static implicit operator MsGridColumns(int t) => new(2, value2: t);
+            public static implicit operator MsGridColumns(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -13507,9 +13507,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MsGridRows(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MsGridRows(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -13519,7 +13519,7 @@ namespace CssInCSharp
 
             public static implicit operator MsGridRows(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsGridRows(string t) => new(1, value1: t);
-            public static implicit operator MsGridRows(int t) => new(2, value2: t);
+            public static implicit operator MsGridRows(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -13565,9 +13565,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MsHyphenateLimitChars(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MsHyphenateLimitChars(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -13577,7 +13577,7 @@ namespace CssInCSharp
 
             public static implicit operator MsHyphenateLimitChars(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsHyphenateLimitChars(string t) => new(1, value1: t);
-            public static implicit operator MsHyphenateLimitChars(int t) => new(2, value2: t);
+            public static implicit operator MsHyphenateLimitChars(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -13596,9 +13596,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MsHyphenateLimitLines(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MsHyphenateLimitLines(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -13608,7 +13608,7 @@ namespace CssInCSharp
 
             public static implicit operator MsHyphenateLimitLines(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsHyphenateLimitLines(string t) => new(1, value1: t);
-            public static implicit operator MsHyphenateLimitLines(int t) => new(2, value2: t);
+            public static implicit operator MsHyphenateLimitLines(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -13627,9 +13627,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MsHyphenateLimitZone(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MsHyphenateLimitZone(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -13639,7 +13639,7 @@ namespace CssInCSharp
 
             public static implicit operator MsHyphenateLimitZone(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsHyphenateLimitZone(string t) => new(1, value1: t);
-            public static implicit operator MsHyphenateLimitZone(int t) => new(2, value2: t);
+            public static implicit operator MsHyphenateLimitZone(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -13766,9 +13766,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MsScrollLimitXMax(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MsScrollLimitXMax(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -13778,7 +13778,7 @@ namespace CssInCSharp
 
             public static implicit operator MsScrollLimitXMax(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsScrollLimitXMax(string t) => new(1, value1: t);
-            public static implicit operator MsScrollLimitXMax(int t) => new(2, value2: t);
+            public static implicit operator MsScrollLimitXMax(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -13797,9 +13797,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MsScrollLimitXMin(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MsScrollLimitXMin(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -13809,7 +13809,7 @@ namespace CssInCSharp
 
             public static implicit operator MsScrollLimitXMin(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsScrollLimitXMin(string t) => new(1, value1: t);
-            public static implicit operator MsScrollLimitXMin(int t) => new(2, value2: t);
+            public static implicit operator MsScrollLimitXMin(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -13828,9 +13828,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MsScrollLimitYMax(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MsScrollLimitYMax(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -13840,7 +13840,7 @@ namespace CssInCSharp
 
             public static implicit operator MsScrollLimitYMax(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsScrollLimitYMax(string t) => new(1, value1: t);
-            public static implicit operator MsScrollLimitYMax(int t) => new(2, value2: t);
+            public static implicit operator MsScrollLimitYMax(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -13859,9 +13859,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MsScrollLimitYMin(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MsScrollLimitYMin(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -13871,7 +13871,7 @@ namespace CssInCSharp
 
             public static implicit operator MsScrollLimitYMin(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsScrollLimitYMin(string t) => new(1, value1: t);
-            public static implicit operator MsScrollLimitYMin(int t) => new(2, value2: t);
+            public static implicit operator MsScrollLimitYMin(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -14403,9 +14403,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private MsWrapMargin(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private MsWrapMargin(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -14415,7 +14415,7 @@ namespace CssInCSharp
 
             public static implicit operator MsWrapMargin(PropertySkip t) => new(0, value0: t);
             public static implicit operator MsWrapMargin(string t) => new(1, value1: t);
-            public static implicit operator MsWrapMargin(int t) => new(2, value2: t);
+            public static implicit operator MsWrapMargin(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -14488,9 +14488,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private WebkitBorderBefore(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private WebkitBorderBefore(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -14500,7 +14500,7 @@ namespace CssInCSharp
 
             public static implicit operator WebkitBorderBefore(PropertySkip t) => new(0, value0: t);
             public static implicit operator WebkitBorderBefore(string t) => new(1, value1: t);
-            public static implicit operator WebkitBorderBefore(int t) => new(2, value2: t);
+            public static implicit operator WebkitBorderBefore(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -14573,9 +14573,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private WebkitBorderBeforeWidth(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private WebkitBorderBeforeWidth(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -14585,7 +14585,7 @@ namespace CssInCSharp
 
             public static implicit operator WebkitBorderBeforeWidth(PropertySkip t) => new(0, value0: t);
             public static implicit operator WebkitBorderBeforeWidth(string t) => new(1, value1: t);
-            public static implicit operator WebkitBorderBeforeWidth(int t) => new(2, value2: t);
+            public static implicit operator WebkitBorderBeforeWidth(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -14604,9 +14604,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private WebkitBoxReflect(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private WebkitBoxReflect(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -14616,7 +14616,7 @@ namespace CssInCSharp
 
             public static implicit operator WebkitBoxReflect(PropertySkip t) => new(0, value0: t);
             public static implicit operator WebkitBoxReflect(string t) => new(1, value1: t);
-            public static implicit operator WebkitBoxReflect(int t) => new(2, value2: t);
+            public static implicit operator WebkitBoxReflect(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -14635,9 +14635,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private WebkitLineClamp(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private WebkitLineClamp(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -14647,7 +14647,7 @@ namespace CssInCSharp
 
             public static implicit operator WebkitLineClamp(PropertySkip t) => new(0, value0: t);
             public static implicit operator WebkitLineClamp(string t) => new(1, value1: t);
-            public static implicit operator WebkitLineClamp(int t) => new(2, value2: t);
+            public static implicit operator WebkitLineClamp(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -14666,9 +14666,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private WebkitMask(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private WebkitMask(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -14678,7 +14678,7 @@ namespace CssInCSharp
 
             public static implicit operator WebkitMask(PropertySkip t) => new(0, value0: t);
             public static implicit operator WebkitMask(string t) => new(1, value1: t);
-            public static implicit operator WebkitMask(int t) => new(2, value2: t);
+            public static implicit operator WebkitMask(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -14832,9 +14832,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private WebkitMaskPosition(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private WebkitMaskPosition(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -14844,7 +14844,7 @@ namespace CssInCSharp
 
             public static implicit operator WebkitMaskPosition(PropertySkip t) => new(0, value0: t);
             public static implicit operator WebkitMaskPosition(string t) => new(1, value1: t);
-            public static implicit operator WebkitMaskPosition(int t) => new(2, value2: t);
+            public static implicit operator WebkitMaskPosition(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -14863,9 +14863,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private WebkitMaskPositionX(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private WebkitMaskPositionX(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -14875,7 +14875,7 @@ namespace CssInCSharp
 
             public static implicit operator WebkitMaskPositionX(PropertySkip t) => new(0, value0: t);
             public static implicit operator WebkitMaskPositionX(string t) => new(1, value1: t);
-            public static implicit operator WebkitMaskPositionX(int t) => new(2, value2: t);
+            public static implicit operator WebkitMaskPositionX(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -14894,9 +14894,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private WebkitMaskPositionY(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private WebkitMaskPositionY(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -14906,7 +14906,7 @@ namespace CssInCSharp
 
             public static implicit operator WebkitMaskPositionY(PropertySkip t) => new(0, value0: t);
             public static implicit operator WebkitMaskPositionY(string t) => new(1, value1: t);
-            public static implicit operator WebkitMaskPositionY(int t) => new(2, value2: t);
+            public static implicit operator WebkitMaskPositionY(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -15006,9 +15006,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private WebkitMaskSize(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private WebkitMaskSize(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -15018,7 +15018,7 @@ namespace CssInCSharp
 
             public static implicit operator WebkitMaskSize(PropertySkip t) => new(0, value0: t);
             public static implicit operator WebkitMaskSize(string t) => new(1, value1: t);
-            public static implicit operator WebkitMaskSize(int t) => new(2, value2: t);
+            public static implicit operator WebkitMaskSize(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -15118,9 +15118,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private WebkitTextStroke(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private WebkitTextStroke(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -15130,7 +15130,7 @@ namespace CssInCSharp
 
             public static implicit operator WebkitTextStroke(PropertySkip t) => new(0, value0: t);
             public static implicit operator WebkitTextStroke(string t) => new(1, value1: t);
-            public static implicit operator WebkitTextStroke(int t) => new(2, value2: t);
+            public static implicit operator WebkitTextStroke(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -15176,9 +15176,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private WebkitTextStrokeWidth(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private WebkitTextStrokeWidth(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -15188,7 +15188,7 @@ namespace CssInCSharp
 
             public static implicit operator WebkitTextStrokeWidth(PropertySkip t) => new(0, value0: t);
             public static implicit operator WebkitTextStrokeWidth(string t) => new(1, value1: t);
-            public static implicit operator WebkitTextStrokeWidth(int t) => new(2, value2: t);
+            public static implicit operator WebkitTextStrokeWidth(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -15288,9 +15288,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private BaselineShift(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private BaselineShift(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -15300,7 +15300,7 @@ namespace CssInCSharp
 
             public static implicit operator BaselineShift(PropertySkip t) => new(0, value0: t);
             public static implicit operator BaselineShift(string t) => new(1, value1: t);
-            public static implicit operator BaselineShift(int t) => new(2, value2: t);
+            public static implicit operator BaselineShift(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -15454,9 +15454,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private FillOpacity(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private FillOpacity(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -15466,7 +15466,7 @@ namespace CssInCSharp
 
             public static implicit operator FillOpacity(PropertySkip t) => new(0, value0: t);
             public static implicit operator FillOpacity(string t) => new(1, value1: t);
-            public static implicit operator FillOpacity(int t) => new(2, value2: t);
+            public static implicit operator FillOpacity(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -15539,9 +15539,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private FloodOpacity(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private FloodOpacity(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -15551,7 +15551,7 @@ namespace CssInCSharp
 
             public static implicit operator FloodOpacity(PropertySkip t) => new(0, value0: t);
             public static implicit operator FloodOpacity(string t) => new(1, value1: t);
-            public static implicit operator FloodOpacity(int t) => new(2, value2: t);
+            public static implicit operator FloodOpacity(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -15570,9 +15570,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private GlyphOrientationVertical(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private GlyphOrientationVertical(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -15582,7 +15582,7 @@ namespace CssInCSharp
 
             public static implicit operator GlyphOrientationVertical(PropertySkip t) => new(0, value0: t);
             public static implicit operator GlyphOrientationVertical(string t) => new(1, value1: t);
-            public static implicit operator GlyphOrientationVertical(int t) => new(2, value2: t);
+            public static implicit operator GlyphOrientationVertical(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -15790,9 +15790,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private StopOpacity(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private StopOpacity(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -15802,7 +15802,7 @@ namespace CssInCSharp
 
             public static implicit operator StopOpacity(PropertySkip t) => new(0, value0: t);
             public static implicit operator StopOpacity(string t) => new(1, value1: t);
-            public static implicit operator StopOpacity(int t) => new(2, value2: t);
+            public static implicit operator StopOpacity(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -15848,9 +15848,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private StrokeDasharray(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private StrokeDasharray(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -15860,7 +15860,7 @@ namespace CssInCSharp
 
             public static implicit operator StrokeDasharray(PropertySkip t) => new(0, value0: t);
             public static implicit operator StrokeDasharray(string t) => new(1, value1: t);
-            public static implicit operator StrokeDasharray(int t) => new(2, value2: t);
+            public static implicit operator StrokeDasharray(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -15879,9 +15879,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private StrokeDashoffset(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private StrokeDashoffset(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -15891,7 +15891,7 @@ namespace CssInCSharp
 
             public static implicit operator StrokeDashoffset(PropertySkip t) => new(0, value0: t);
             public static implicit operator StrokeDashoffset(string t) => new(1, value1: t);
-            public static implicit operator StrokeDashoffset(int t) => new(2, value2: t);
+            public static implicit operator StrokeDashoffset(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -15964,9 +15964,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private StrokeMiterlimit(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private StrokeMiterlimit(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -15976,7 +15976,7 @@ namespace CssInCSharp
 
             public static implicit operator StrokeMiterlimit(PropertySkip t) => new(0, value0: t);
             public static implicit operator StrokeMiterlimit(string t) => new(1, value1: t);
-            public static implicit operator StrokeMiterlimit(int t) => new(2, value2: t);
+            public static implicit operator StrokeMiterlimit(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -15995,9 +15995,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private StrokeOpacity(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private StrokeOpacity(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -16007,7 +16007,7 @@ namespace CssInCSharp
 
             public static implicit operator StrokeOpacity(PropertySkip t) => new(0, value0: t);
             public static implicit operator StrokeOpacity(string t) => new(1, value1: t);
-            public static implicit operator StrokeOpacity(int t) => new(2, value2: t);
+            public static implicit operator StrokeOpacity(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {
@@ -16026,9 +16026,9 @@ namespace CssInCSharp
             private readonly int _index;
             private readonly PropertySkip _value0;
             private readonly string _value1;
-            private readonly int _value2;
+            private readonly double _value2;
 
-            private StrokeWidth(int index, PropertySkip value0 = default, string value1 = default, int value2 = default)
+            private StrokeWidth(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
             {
                 _index = index;
                 _value0 = value0;
@@ -16038,7 +16038,7 @@ namespace CssInCSharp
 
             public static implicit operator StrokeWidth(PropertySkip t) => new(0, value0: t);
             public static implicit operator StrokeWidth(string t) => new(1, value1: t);
-            public static implicit operator StrokeWidth(int t) => new(2, value2: t);
+            public static implicit operator StrokeWidth(double t) => new(2, value2: t);
 
             public string GetValue(string key)
             {

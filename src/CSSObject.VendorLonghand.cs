@@ -51,9 +51,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;single-animation-iteration-count&gt;#`</para>
         /// <para> **Initial value**: `1`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MozAnimationIterationCount
+        public Property<PropertySkip, string, double> MozAnimationIterationCount
         {
-            get => (Property<PropertySkip, string, int>) _properties["-moz-animation-iteration-count"];
+            get => (Property<PropertySkip, string, double>) _properties["-moz-animation-iteration-count"];
             set => _properties["-moz-animation-iteration-count"] = value;
         }
 
@@ -161,9 +161,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;'border-top-width'&gt;`</para>
         /// <para> **Initial value**: `medium`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MozBorderEndWidth
+        public Property<PropertySkip, string, double> MozBorderEndWidth
         {
-            get => (Property<PropertySkip, string, int>) _properties["-moz-border-end-width"];
+            get => (Property<PropertySkip, string, double>) _properties["-moz-border-end-width"];
             set => _properties["-moz-border-end-width"] = value;
         }
 
@@ -238,9 +238,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;integer&gt; | auto`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MozColumnCount
+        public Property<PropertySkip, string, double> MozColumnCount
         {
-            get => (Property<PropertySkip, string, int>) _properties["-moz-column-count"];
+            get => (Property<PropertySkip, string, double>) _properties["-moz-column-count"];
             set => _properties["-moz-column-count"] = value;
         }
 
@@ -282,9 +282,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;'border-width'&gt;`</para>
         /// <para> **Initial value**: `medium`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MozColumnRuleWidth
+        public Property<PropertySkip, string, double> MozColumnRuleWidth
         {
-            get => (Property<PropertySkip, string, int>) _properties["-moz-column-rule-width"];
+            get => (Property<PropertySkip, string, double>) _properties["-moz-column-rule-width"];
             set => _properties["-moz-column-rule-width"] = value;
         }
 
@@ -293,9 +293,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;length&gt; | auto`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MozColumnWidth
+        public Property<PropertySkip, string, double> MozColumnWidth
         {
-            get => (Property<PropertySkip, string, int>) _properties["-moz-column-width"];
+            get => (Property<PropertySkip, string, double>) _properties["-moz-column-width"];
             set => _properties["-moz-column-width"] = value;
         }
 
@@ -359,9 +359,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;'margin-left'&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MozMarginEnd
+        public Property<PropertySkip, string, double> MozMarginEnd
         {
-            get => (Property<PropertySkip, string, int>) _properties["-moz-margin-end"];
+            get => (Property<PropertySkip, string, double>) _properties["-moz-margin-end"];
             set => _properties["-moz-margin-end"] = value;
         }
 
@@ -370,9 +370,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;'margin-left'&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MozMarginStart
+        public Property<PropertySkip, string, double> MozMarginStart
         {
-            get => (Property<PropertySkip, string, int>) _properties["-moz-margin-start"];
+            get => (Property<PropertySkip, string, double>) _properties["-moz-margin-start"];
             set => _properties["-moz-margin-start"] = value;
         }
 
@@ -392,9 +392,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `auto | never | always | &lt;absolute-size&gt; | &lt;length&gt;`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MozOsxFontSmoothing
+        public Property<PropertySkip, string, double> MozOsxFontSmoothing
         {
-            get => (Property<PropertySkip, string, int>) _properties["-moz-osx-font-smoothing"];
+            get => (Property<PropertySkip, string, double>) _properties["-moz-osx-font-smoothing"];
             set => _properties["-moz-osx-font-smoothing"] = value;
         }
 
@@ -403,9 +403,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;'padding-left'&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MozPaddingEnd
+        public Property<PropertySkip, string, double> MozPaddingEnd
         {
-            get => (Property<PropertySkip, string, int>) _properties["-moz-padding-end"];
+            get => (Property<PropertySkip, string, double>) _properties["-moz-padding-end"];
             set => _properties["-moz-padding-end"] = value;
         }
 
@@ -414,9 +414,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;'padding-left'&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MozPaddingStart
+        public Property<PropertySkip, string, double> MozPaddingStart
         {
-            get => (Property<PropertySkip, string, int>) _properties["-moz-padding-start"];
+            get => (Property<PropertySkip, string, double>) _properties["-moz-padding-start"];
             set => _properties["-moz-padding-start"] = value;
         }
 
@@ -425,9 +425,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | &lt;length&gt;`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MozPerspective
+        public Property<PropertySkip, string, double> MozPerspective
         {
-            get => (Property<PropertySkip, string, int>) _properties["-moz-perspective"];
+            get => (Property<PropertySkip, string, double>) _properties["-moz-perspective"];
             set => _properties["-moz-perspective"] = value;
         }
 
@@ -436,9 +436,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;position&gt;`</para>
         /// <para> **Initial value**: `50% 50%`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MozPerspectiveOrigin
+        public Property<PropertySkip, string, double> MozPerspectiveOrigin
         {
-            get => (Property<PropertySkip, string, int>) _properties["-moz-perspective-origin"];
+            get => (Property<PropertySkip, string, double>) _properties["-moz-perspective-origin"];
             set => _properties["-moz-perspective-origin"] = value;
         }
 
@@ -458,9 +458,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;integer&gt; | &lt;length&gt;`</para>
         /// <para> **Initial value**: `8`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MozTabSize
+        public Property<PropertySkip, string, double> MozTabSize
         {
-            get => (Property<PropertySkip, string, int>) _properties["-moz-tab-size"];
+            get => (Property<PropertySkip, string, double>) _properties["-moz-tab-size"];
             set => _properties["-moz-tab-size"] = value;
         }
 
@@ -491,9 +491,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `[ &lt;length-percentage&gt; | left | center | right | top | bottom ] | [ [ &lt;length-percentage&gt; | left | center | right ] && [ &lt;length-percentage&gt; | top | center | bottom ] ] &lt;length&gt;?`</para>
         /// <para> **Initial value**: `50% 50% 0`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MozTransformOrigin
+        public Property<PropertySkip, string, double> MozTransformOrigin
         {
-            get => (Property<PropertySkip, string, int>) _properties["-moz-transform-origin"];
+            get => (Property<PropertySkip, string, double>) _properties["-moz-transform-origin"];
             set => _properties["-moz-transform-origin"] = value;
         }
 
@@ -722,9 +722,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;number&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MsFlexPositive
+        public Property<PropertySkip, string, double> MsFlexPositive
         {
-            get => (Property<PropertySkip, string, int>) _properties["-ms-flex-positive"];
+            get => (Property<PropertySkip, string, double>) _properties["-ms-flex-positive"];
             set => _properties["-ms-flex-positive"] = value;
         }
 
@@ -755,9 +755,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | &lt;track-list&gt; | &lt;auto-track-list&gt;`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MsGridColumns
+        public Property<PropertySkip, string, double> MsGridColumns
         {
-            get => (Property<PropertySkip, string, int>) _properties["-ms-grid-columns"];
+            get => (Property<PropertySkip, string, double>) _properties["-ms-grid-columns"];
             set => _properties["-ms-grid-columns"] = value;
         }
 
@@ -766,9 +766,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | &lt;track-list&gt; | &lt;auto-track-list&gt;`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MsGridRows
+        public Property<PropertySkip, string, double> MsGridRows
         {
-            get => (Property<PropertySkip, string, int>) _properties["-ms-grid-rows"];
+            get => (Property<PropertySkip, string, double>) _properties["-ms-grid-rows"];
             set => _properties["-ms-grid-rows"] = value;
         }
 
@@ -788,9 +788,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `auto | &lt;integer&gt;{1,3}`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MsHyphenateLimitChars
+        public Property<PropertySkip, string, double> MsHyphenateLimitChars
         {
-            get => (Property<PropertySkip, string, int>) _properties["-ms-hyphenate-limit-chars"];
+            get => (Property<PropertySkip, string, double>) _properties["-ms-hyphenate-limit-chars"];
             set => _properties["-ms-hyphenate-limit-chars"] = value;
         }
 
@@ -799,9 +799,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `no-limit | &lt;integer&gt;`</para>
         /// <para> **Initial value**: `no-limit`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MsHyphenateLimitLines
+        public Property<PropertySkip, string, double> MsHyphenateLimitLines
         {
-            get => (Property<PropertySkip, string, int>) _properties["-ms-hyphenate-limit-lines"];
+            get => (Property<PropertySkip, string, double>) _properties["-ms-hyphenate-limit-lines"];
             set => _properties["-ms-hyphenate-limit-lines"] = value;
         }
 
@@ -810,9 +810,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;percentage&gt; | &lt;length&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MsHyphenateLimitZone
+        public Property<PropertySkip, string, double> MsHyphenateLimitZone
         {
-            get => (Property<PropertySkip, string, int>) _properties["-ms-hyphenate-limit-zone"];
+            get => (Property<PropertySkip, string, double>) _properties["-ms-hyphenate-limit-zone"];
             set => _properties["-ms-hyphenate-limit-zone"] = value;
         }
 
@@ -854,9 +854,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;integer&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MsOrder
+        public Property<PropertySkip, string, double> MsOrder
         {
-            get => (Property<PropertySkip, string, int>) _properties["-ms-order"];
+            get => (Property<PropertySkip, string, double>) _properties["-ms-order"];
             set => _properties["-ms-order"] = value;
         }
 
@@ -909,9 +909,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `auto | &lt;length&gt;`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MsScrollLimitXMax
+        public Property<PropertySkip, string, double> MsScrollLimitXMax
         {
-            get => (Property<PropertySkip, string, int>) _properties["-ms-scroll-limit-x-max"];
+            get => (Property<PropertySkip, string, double>) _properties["-ms-scroll-limit-x-max"];
             set => _properties["-ms-scroll-limit-x-max"] = value;
         }
 
@@ -920,9 +920,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;length&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MsScrollLimitXMin
+        public Property<PropertySkip, string, double> MsScrollLimitXMin
         {
-            get => (Property<PropertySkip, string, int>) _properties["-ms-scroll-limit-x-min"];
+            get => (Property<PropertySkip, string, double>) _properties["-ms-scroll-limit-x-min"];
             set => _properties["-ms-scroll-limit-x-min"] = value;
         }
 
@@ -931,9 +931,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `auto | &lt;length&gt;`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MsScrollLimitYMax
+        public Property<PropertySkip, string, double> MsScrollLimitYMax
         {
-            get => (Property<PropertySkip, string, int>) _properties["-ms-scroll-limit-y-max"];
+            get => (Property<PropertySkip, string, double>) _properties["-ms-scroll-limit-y-max"];
             set => _properties["-ms-scroll-limit-y-max"] = value;
         }
 
@@ -942,9 +942,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;length&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MsScrollLimitYMin
+        public Property<PropertySkip, string, double> MsScrollLimitYMin
         {
-            get => (Property<PropertySkip, string, int>) _properties["-ms-scroll-limit-y-min"];
+            get => (Property<PropertySkip, string, double>) _properties["-ms-scroll-limit-y-min"];
             set => _properties["-ms-scroll-limit-y-min"] = value;
         }
 
@@ -1162,9 +1162,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `[ &lt;length-percentage&gt; | left | center | right | top | bottom ] | [ [ &lt;length-percentage&gt; | left | center | right ] && [ &lt;length-percentage&gt; | top | center | bottom ] ] &lt;length&gt;?`</para>
         /// <para> **Initial value**: `50% 50% 0`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MsTransformOrigin
+        public Property<PropertySkip, string, double> MsTransformOrigin
         {
-            get => (Property<PropertySkip, string, int>) _properties["-ms-transform-origin"];
+            get => (Property<PropertySkip, string, double>) _properties["-ms-transform-origin"];
             set => _properties["-ms-transform-origin"] = value;
         }
 
@@ -1250,9 +1250,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;length&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MsWrapMargin
+        public Property<PropertySkip, string, double> MsWrapMargin
         {
-            get => (Property<PropertySkip, string, int>) _properties["-ms-wrap-margin"];
+            get => (Property<PropertySkip, string, double>) _properties["-ms-wrap-margin"];
             set => _properties["-ms-wrap-margin"] = value;
         }
 
@@ -1360,9 +1360,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;single-animation-iteration-count&gt;#`</para>
         /// <para> **Initial value**: `1`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitAnimationIterationCount
+        public Property<PropertySkip, string, double> WebkitAnimationIterationCount
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-animation-iteration-count"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-animation-iteration-count"];
             set => _properties["-webkit-animation-iteration-count"] = value;
         }
 
@@ -1459,9 +1459,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;bg-size&gt;#`</para>
         /// <para> **Initial value**: `auto auto`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitBackgroundSize
+        public Property<PropertySkip, string, double> WebkitBackgroundSize
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-background-size"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-background-size"];
             set => _properties["-webkit-background-size"] = value;
         }
 
@@ -1489,9 +1489,9 @@ namespace CssInCSharp
         /// **Syntax**: `&lt;'border-width'&gt;`
         /// <para> **Initial value**: `medium`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitBorderBeforeWidth
+        public Property<PropertySkip, string, double> WebkitBorderBeforeWidth
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-border-before-width"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-border-before-width"];
             set => _properties["-webkit-border-before-width"] = value;
         }
 
@@ -1500,9 +1500,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;length-percentage&gt;{1,2}`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitBorderBottomLeftRadius
+        public Property<PropertySkip, string, double> WebkitBorderBottomLeftRadius
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-border-bottom-left-radius"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-border-bottom-left-radius"];
             set => _properties["-webkit-border-bottom-left-radius"] = value;
         }
 
@@ -1511,9 +1511,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;length-percentage&gt;{1,2}`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitBorderBottomRightRadius
+        public Property<PropertySkip, string, double> WebkitBorderBottomRightRadius
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-border-bottom-right-radius"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-border-bottom-right-radius"];
             set => _properties["-webkit-border-bottom-right-radius"] = value;
         }
 
@@ -1522,9 +1522,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;number-percentage&gt;{1,4} && fill?`</para>
         /// <para> **Initial value**: `100%`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitBorderImageSlice
+        public Property<PropertySkip, string, double> WebkitBorderImageSlice
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-border-image-slice"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-border-image-slice"];
             set => _properties["-webkit-border-image-slice"] = value;
         }
 
@@ -1533,9 +1533,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;length-percentage&gt;{1,2}`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitBorderTopLeftRadius
+        public Property<PropertySkip, string, double> WebkitBorderTopLeftRadius
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-border-top-left-radius"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-border-top-left-radius"];
             set => _properties["-webkit-border-top-left-radius"] = value;
         }
 
@@ -1544,9 +1544,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;length-percentage&gt;{1,2}`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitBorderTopRightRadius
+        public Property<PropertySkip, string, double> WebkitBorderTopRightRadius
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-border-top-right-radius"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-border-top-right-radius"];
             set => _properties["-webkit-border-top-right-radius"] = value;
         }
 
@@ -1566,9 +1566,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `[ above | below | right | left ]? &lt;length&gt;? &lt;image&gt;?`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitBoxReflect
+        public Property<PropertySkip, string, double> WebkitBoxReflect
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-box-reflect"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-box-reflect"];
             set => _properties["-webkit-box-reflect"] = value;
         }
 
@@ -1610,9 +1610,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;integer&gt; | auto`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitColumnCount
+        public Property<PropertySkip, string, double> WebkitColumnCount
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-column-count"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-column-count"];
             set => _properties["-webkit-column-count"] = value;
         }
 
@@ -1654,9 +1654,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;'border-width'&gt;`</para>
         /// <para> **Initial value**: `medium`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitColumnRuleWidth
+        public Property<PropertySkip, string, double> WebkitColumnRuleWidth
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-column-rule-width"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-column-rule-width"];
             set => _properties["-webkit-column-rule-width"] = value;
         }
 
@@ -1676,9 +1676,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;length&gt; | auto`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitColumnWidth
+        public Property<PropertySkip, string, double> WebkitColumnWidth
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-column-width"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-column-width"];
             set => _properties["-webkit-column-width"] = value;
         }
 
@@ -1698,9 +1698,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `content | &lt;'width'&gt;`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitFlexBasis
+        public Property<PropertySkip, string, double> WebkitFlexBasis
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-flex-basis"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-flex-basis"];
             set => _properties["-webkit-flex-basis"] = value;
         }
 
@@ -1720,9 +1720,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;number&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitFlexGrow
+        public Property<PropertySkip, string, double> WebkitFlexGrow
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-flex-grow"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-flex-grow"];
             set => _properties["-webkit-flex-grow"] = value;
         }
 
@@ -1731,9 +1731,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;number&gt;`</para>
         /// <para> **Initial value**: `1`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitFlexShrink
+        public Property<PropertySkip, string, double> WebkitFlexShrink
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-flex-shrink"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-flex-shrink"];
             set => _properties["-webkit-flex-shrink"] = value;
         }
 
@@ -1775,9 +1775,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `auto | never | always | &lt;absolute-size&gt; | &lt;length&gt;`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitFontSmoothing
+        public Property<PropertySkip, string, double> WebkitFontSmoothing
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-font-smoothing"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-font-smoothing"];
             set => _properties["-webkit-font-smoothing"] = value;
         }
 
@@ -1819,9 +1819,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `normal | [ &lt;number&gt; &lt;integer&gt;? ]`</para>
         /// <para> **Initial value**: `normal`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitInitialLetter
+        public Property<PropertySkip, string, double> WebkitInitialLetter
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-initial-letter"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-initial-letter"];
             set => _properties["-webkit-initial-letter"] = value;
         }
 
@@ -1852,9 +1852,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | &lt;integer&gt;`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitLineClamp
+        public Property<PropertySkip, string, double> WebkitLineClamp
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-line-clamp"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-line-clamp"];
             set => _properties["-webkit-line-clamp"] = value;
         }
 
@@ -1863,9 +1863,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;'margin-left'&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitMarginEnd
+        public Property<PropertySkip, string, double> WebkitMarginEnd
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-margin-end"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-margin-end"];
             set => _properties["-webkit-margin-end"] = value;
         }
 
@@ -1874,9 +1874,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;'margin-left'&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitMarginStart
+        public Property<PropertySkip, string, double> WebkitMarginStart
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-margin-start"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-margin-start"];
             set => _properties["-webkit-margin-start"] = value;
         }
 
@@ -1896,9 +1896,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `[ &lt;length&gt; | &lt;number&gt; ]{1,4}`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitMaskBoxImageOutset
+        public Property<PropertySkip, string, double> WebkitMaskBoxImageOutset
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-mask-box-image-outset"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-mask-box-image-outset"];
             set => _properties["-webkit-mask-box-image-outset"] = value;
         }
 
@@ -1918,9 +1918,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;number-percentage&gt;{1,4} fill?`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitMaskBoxImageSlice
+        public Property<PropertySkip, string, double> WebkitMaskBoxImageSlice
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-mask-box-image-slice"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-mask-box-image-slice"];
             set => _properties["-webkit-mask-box-image-slice"] = value;
         }
 
@@ -1940,9 +1940,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `[ &lt;length-percentage&gt; | &lt;number&gt; | auto ]{1,4}`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitMaskBoxImageWidth
+        public Property<PropertySkip, string, double> WebkitMaskBoxImageWidth
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-mask-box-image-width"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-mask-box-image-width"];
             set => _properties["-webkit-mask-box-image-width"] = value;
         }
 
@@ -1995,9 +1995,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;position&gt;#`</para>
         /// <para> **Initial value**: `0% 0%`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitMaskPosition
+        public Property<PropertySkip, string, double> WebkitMaskPosition
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-mask-position"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-mask-position"];
             set => _properties["-webkit-mask-position"] = value;
         }
 
@@ -2006,9 +2006,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `[ &lt;length-percentage&gt; | left | center | right ]#`</para>
         /// <para> **Initial value**: `0%`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitMaskPositionX
+        public Property<PropertySkip, string, double> WebkitMaskPositionX
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-mask-position-x"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-mask-position-x"];
             set => _properties["-webkit-mask-position-x"] = value;
         }
 
@@ -2017,9 +2017,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `[ &lt;length-percentage&gt; | top | center | bottom ]#`</para>
         /// <para> **Initial value**: `0%`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitMaskPositionY
+        public Property<PropertySkip, string, double> WebkitMaskPositionY
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-mask-position-y"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-mask-position-y"];
             set => _properties["-webkit-mask-position-y"] = value;
         }
 
@@ -2061,9 +2061,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;bg-size&gt;#`</para>
         /// <para> **Initial value**: `auto auto`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitMaskSize
+        public Property<PropertySkip, string, double> WebkitMaskSize
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-mask-size"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-mask-size"];
             set => _properties["-webkit-mask-size"] = value;
         }
 
@@ -2072,9 +2072,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;'max-width'&gt;`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitMaxInlineSize
+        public Property<PropertySkip, string, double> WebkitMaxInlineSize
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-max-inline-size"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-max-inline-size"];
             set => _properties["-webkit-max-inline-size"] = value;
         }
 
@@ -2083,9 +2083,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;integer&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitOrder
+        public Property<PropertySkip, string, double> WebkitOrder
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-order"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-order"];
             set => _properties["-webkit-order"] = value;
         }
 
@@ -2105,9 +2105,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;'padding-left'&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitPaddingEnd
+        public Property<PropertySkip, string, double> WebkitPaddingEnd
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-padding-end"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-padding-end"];
             set => _properties["-webkit-padding-end"] = value;
         }
 
@@ -2116,9 +2116,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;'padding-left'&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitPaddingStart
+        public Property<PropertySkip, string, double> WebkitPaddingStart
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-padding-start"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-padding-start"];
             set => _properties["-webkit-padding-start"] = value;
         }
 
@@ -2127,9 +2127,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | &lt;length&gt;`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitPerspective
+        public Property<PropertySkip, string, double> WebkitPerspective
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-perspective"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-perspective"];
             set => _properties["-webkit-perspective"] = value;
         }
 
@@ -2138,9 +2138,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;position&gt;`</para>
         /// <para> **Initial value**: `50% 50%`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitPerspectiveOrigin
+        public Property<PropertySkip, string, double> WebkitPerspectiveOrigin
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-perspective-origin"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-perspective-origin"];
             set => _properties["-webkit-perspective-origin"] = value;
         }
 
@@ -2182,9 +2182,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;length-percentage&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitShapeMargin
+        public Property<PropertySkip, string, double> WebkitShapeMargin
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-shape-margin"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-shape-margin"];
             set => _properties["-webkit-shape-margin"] = value;
         }
 
@@ -2336,9 +2336,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;length&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitTextStrokeWidth
+        public Property<PropertySkip, string, double> WebkitTextStrokeWidth
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-text-stroke-width"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-text-stroke-width"];
             set => _properties["-webkit-text-stroke-width"] = value;
         }
 
@@ -2380,9 +2380,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `[ &lt;length-percentage&gt; | left | center | right | top | bottom ] | [ [ &lt;length-percentage&gt; | left | center | right ] && [ &lt;length-percentage&gt; | top | center | bottom ] ] &lt;length&gt;?`</para>
         /// <para> **Initial value**: `50% 50% 0`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitTransformOrigin
+        public Property<PropertySkip, string, double> WebkitTransformOrigin
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-transform-origin"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-transform-origin"];
             set => _properties["-webkit-transform-origin"] = value;
         }
 

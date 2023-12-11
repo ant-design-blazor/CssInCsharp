@@ -40,9 +40,9 @@ namespace CssInCSharp
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/background</para>
         /// </summary>
-        public Property<PropertySkip, string, int> Background
+        public Property<PropertySkip, string, double> Background
         {
-            get => (Property<PropertySkip, string, int>) _properties["background"];
+            get => (Property<PropertySkip, string, double>) _properties["background"];
             set => _properties["background"] = value;
         }
 
@@ -55,9 +55,9 @@ namespace CssInCSharp
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/background-position</para>
         /// </summary>
-        public Property<PropertySkip, string, int> BackgroundPosition
+        public Property<PropertySkip, string, double> BackgroundPosition
         {
-            get => (Property<PropertySkip, string, int>) _properties["background-position"];
+            get => (Property<PropertySkip, string, double>) _properties["background-position"];
             set => _properties["background-position"] = value;
         }
 
@@ -69,9 +69,9 @@ namespace CssInCSharp
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border</para>
         /// </summary>
-        public Property<PropertySkip, string, int> Border
+        public Property<PropertySkip, string, double> Border
         {
-            get => (Property<PropertySkip, string, int>) _properties["border"];
+            get => (Property<PropertySkip, string, double>) _properties["border"];
             set => _properties["border"] = value;
         }
 
@@ -83,9 +83,9 @@ namespace CssInCSharp
         /// <para> | **87** | **66**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-block</para>
         /// </summary>
-        public Property<PropertySkip, string, int> BorderBlock
+        public Property<PropertySkip, string, double> BorderBlock
         {
-            get => (Property<PropertySkip, string, int>) _properties["border-block"];
+            get => (Property<PropertySkip, string, double>) _properties["border-block"];
             set => _properties["border-block"] = value;
         }
 
@@ -97,9 +97,9 @@ namespace CssInCSharp
         /// <para> | **69** | **41**  | **12.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-block-end</para>
         /// </summary>
-        public Property<PropertySkip, string, int> BorderBlockEnd
+        public Property<PropertySkip, string, double> BorderBlockEnd
         {
-            get => (Property<PropertySkip, string, int>) _properties["border-block-end"];
+            get => (Property<PropertySkip, string, double>) _properties["border-block-end"];
             set => _properties["border-block-end"] = value;
         }
 
@@ -111,9 +111,9 @@ namespace CssInCSharp
         /// <para> | **69** | **41**  | **12.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-block-start</para>
         /// </summary>
-        public Property<PropertySkip, string, int> BorderBlockStart
+        public Property<PropertySkip, string, double> BorderBlockStart
         {
-            get => (Property<PropertySkip, string, int>) _properties["border-block-start"];
+            get => (Property<PropertySkip, string, double>) _properties["border-block-start"];
             set => _properties["border-block-start"] = value;
         }
 
@@ -125,9 +125,9 @@ namespace CssInCSharp
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-bottom</para>
         /// </summary>
-        public Property<PropertySkip, string, int> BorderBottom
+        public Property<PropertySkip, string, double> BorderBottom
         {
-            get => (Property<PropertySkip, string, int>) _properties["border-bottom"];
+            get => (Property<PropertySkip, string, double>) _properties["border-bottom"];
             set => _properties["border-bottom"] = value;
         }
 
@@ -154,9 +154,9 @@ namespace CssInCSharp
         /// <para> | 7 _-x-_ | 3.5 _-x-_ | 3 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-image</para>
         /// </summary>
-        public Property<PropertySkip, string, int> BorderImage
+        public Property<PropertySkip, string, double> BorderImage
         {
-            get => (Property<PropertySkip, string, int>) _properties["border-image"];
+            get => (Property<PropertySkip, string, double>) _properties["border-image"];
             set => _properties["border-image"] = value;
         }
 
@@ -168,9 +168,9 @@ namespace CssInCSharp
         /// <para> | **87** | **66**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-inline</para>
         /// </summary>
-        public Property<PropertySkip, string, int> BorderInline
+        public Property<PropertySkip, string, double> BorderInline
         {
-            get => (Property<PropertySkip, string, int>) _properties["border-inline"];
+            get => (Property<PropertySkip, string, double>) _properties["border-inline"];
             set => _properties["border-inline"] = value;
         }
 
@@ -182,9 +182,9 @@ namespace CssInCSharp
         /// <para> | **69** | **41**  | **12.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-inline-end</para>
         /// </summary>
-        public Property<PropertySkip, string, int> BorderInlineEnd
+        public Property<PropertySkip, string, double> BorderInlineEnd
         {
-            get => (Property<PropertySkip, string, int>) _properties["border-inline-end"];
+            get => (Property<PropertySkip, string, double>) _properties["border-inline-end"];
             set => _properties["border-inline-end"] = value;
         }
 
@@ -196,9 +196,9 @@ namespace CssInCSharp
         /// <para> | **69** | **41**  | **12.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-inline-start</para>
         /// </summary>
-        public Property<PropertySkip, string, int> BorderInlineStart
+        public Property<PropertySkip, string, double> BorderInlineStart
         {
-            get => (Property<PropertySkip, string, int>) _properties["border-inline-start"];
+            get => (Property<PropertySkip, string, double>) _properties["border-inline-start"];
             set => _properties["border-inline-start"] = value;
         }
 
@@ -210,9 +210,9 @@ namespace CssInCSharp
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-left</para>
         /// </summary>
-        public Property<PropertySkip, string, int> BorderLeft
+        public Property<PropertySkip, string, double> BorderLeft
         {
-            get => (Property<PropertySkip, string, int>) _properties["border-left"];
+            get => (Property<PropertySkip, string, double>) _properties["border-left"];
             set => _properties["border-left"] = value;
         }
 
@@ -225,9 +225,9 @@ namespace CssInCSharp
         /// <para> | 1 _-x-_ |         | 3 _-x-_ |        |       |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-radius</para>
         /// </summary>
-        public Property<PropertySkip, string, int> BorderRadius
+        public Property<PropertySkip, string, double> BorderRadius
         {
-            get => (Property<PropertySkip, string, int>) _properties["border-radius"];
+            get => (Property<PropertySkip, string, double>) _properties["border-radius"];
             set => _properties["border-radius"] = value;
         }
 
@@ -239,9 +239,9 @@ namespace CssInCSharp
         /// <para> | **1**  |  **1**  | **1**  | **12** | **5.5** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-right</para>
         /// </summary>
-        public Property<PropertySkip, string, int> BorderRight
+        public Property<PropertySkip, string, double> BorderRight
         {
-            get => (Property<PropertySkip, string, int>) _properties["border-right"];
+            get => (Property<PropertySkip, string, double>) _properties["border-right"];
             set => _properties["border-right"] = value;
         }
 
@@ -267,9 +267,9 @@ namespace CssInCSharp
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-top</para>
         /// </summary>
-        public Property<PropertySkip, string, int> BorderTop
+        public Property<PropertySkip, string, double> BorderTop
         {
-            get => (Property<PropertySkip, string, int>) _properties["border-top"];
+            get => (Property<PropertySkip, string, double>) _properties["border-top"];
             set => _properties["border-top"] = value;
         }
 
@@ -281,9 +281,9 @@ namespace CssInCSharp
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/border-width</para>
         /// </summary>
-        public Property<PropertySkip, string, int> BorderWidth
+        public Property<PropertySkip, string, double> BorderWidth
         {
-            get => (Property<PropertySkip, string, int>) _properties["border-width"];
+            get => (Property<PropertySkip, string, double>) _properties["border-width"];
             set => _properties["border-width"] = value;
         }
 
@@ -304,9 +304,9 @@ namespace CssInCSharp
         /// <para> | 1 _-x-_ |         | 3 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/column-rule</para>
         /// </summary>
-        public Property<PropertySkip, string, int> ColumnRule
+        public Property<PropertySkip, string, double> ColumnRule
         {
-            get => (Property<PropertySkip, string, int>) _properties["column-rule"];
+            get => (Property<PropertySkip, string, double>) _properties["column-rule"];
             set => _properties["column-rule"] = value;
         }
 
@@ -319,9 +319,9 @@ namespace CssInCSharp
         /// <para> |        |         | 3 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/columns</para>
         /// </summary>
-        public Property<PropertySkip, string, int> Columns
+        public Property<PropertySkip, string, double> Columns
         {
-            get => (Property<PropertySkip, string, int>) _properties["columns"];
+            get => (Property<PropertySkip, string, double>) _properties["columns"];
             set => _properties["columns"] = value;
         }
 
@@ -333,9 +333,9 @@ namespace CssInCSharp
         /// <para> | **83** | **107** |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/contain-intrinsic-size</para>
         /// </summary>
-        public Property<PropertySkip, string, int> ContainIntrinsicSize
+        public Property<PropertySkip, string, double> ContainIntrinsicSize
         {
-            get => (Property<PropertySkip, string, int>) _properties["contain-intrinsic-size"];
+            get => (Property<PropertySkip, string, double>) _properties["contain-intrinsic-size"];
             set => _properties["contain-intrinsic-size"] = value;
         }
 
@@ -362,9 +362,9 @@ namespace CssInCSharp
         /// <para> | 21 _-x-_ |         | 7 _-x-_ |        | 10 _-x-_ |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/flex</para>
         /// </summary>
-        public Property<PropertySkip, string, int> Flex
+        public Property<PropertySkip, string, double> Flex
         {
-            get => (Property<PropertySkip, string, int>) _properties["flex"];
+            get => (Property<PropertySkip, string, double>) _properties["flex"];
             set => _properties["flex"] = value;
         }
 
@@ -405,9 +405,9 @@ namespace CssInCSharp
         /// <para> | **57** | **52**  | **10.1** | **16** | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/gap</para>
         /// </summary>
-        public Property<PropertySkip, string, int> Gap
+        public Property<PropertySkip, string, double> Gap
         {
-            get => (Property<PropertySkip, string, int>) _properties["gap"];
+            get => (Property<PropertySkip, string, double>) _properties["gap"];
             set => _properties["gap"] = value;
         }
 
@@ -489,9 +489,9 @@ namespace CssInCSharp
         /// <para> | **87** | **66**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/inset</para>
         /// </summary>
-        public Property<PropertySkip, string, int> Inset
+        public Property<PropertySkip, string, double> Inset
         {
-            get => (Property<PropertySkip, string, int>) _properties["inset"];
+            get => (Property<PropertySkip, string, double>) _properties["inset"];
             set => _properties["inset"] = value;
         }
 
@@ -503,9 +503,9 @@ namespace CssInCSharp
         /// <para> | **87** | **63**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/inset-block</para>
         /// </summary>
-        public Property<PropertySkip, string, int> InsetBlock
+        public Property<PropertySkip, string, double> InsetBlock
         {
-            get => (Property<PropertySkip, string, int>) _properties["inset-block"];
+            get => (Property<PropertySkip, string, double>) _properties["inset-block"];
             set => _properties["inset-block"] = value;
         }
 
@@ -517,9 +517,9 @@ namespace CssInCSharp
         /// <para> | **87** | **63**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/inset-inline</para>
         /// </summary>
-        public Property<PropertySkip, string, int> InsetInline
+        public Property<PropertySkip, string, double> InsetInline
         {
-            get => (Property<PropertySkip, string, int>) _properties["inset-inline"];
+            get => (Property<PropertySkip, string, double>) _properties["inset-inline"];
             set => _properties["inset-inline"] = value;
         }
 
@@ -527,9 +527,9 @@ namespace CssInCSharp
         /// **Syntax**: `none | &lt;integer&gt;`
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> LineClamp
+        public Property<PropertySkip, string, double> LineClamp
         {
-            get => (Property<PropertySkip, string, int>) _properties["line-clamp"];
+            get => (Property<PropertySkip, string, double>) _properties["line-clamp"];
             set => _properties["line-clamp"] = value;
         }
 
@@ -555,9 +555,9 @@ namespace CssInCSharp
         /// <para> | **1**  |  **1**  | **1**  | **12** | **3** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/margin</para>
         /// </summary>
-        public Property<PropertySkip, string, int> Margin
+        public Property<PropertySkip, string, double> Margin
         {
-            get => (Property<PropertySkip, string, int>) _properties["margin"];
+            get => (Property<PropertySkip, string, double>) _properties["margin"];
             set => _properties["margin"] = value;
         }
 
@@ -569,9 +569,9 @@ namespace CssInCSharp
         /// <para> | **87** | **66**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/margin-block</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MarginBlock
+        public Property<PropertySkip, string, double> MarginBlock
         {
-            get => (Property<PropertySkip, string, int>) _properties["margin-block"];
+            get => (Property<PropertySkip, string, double>) _properties["margin-block"];
             set => _properties["margin-block"] = value;
         }
 
@@ -583,9 +583,9 @@ namespace CssInCSharp
         /// <para> | **87** | **66**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/margin-inline</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MarginInline
+        public Property<PropertySkip, string, double> MarginInline
         {
-            get => (Property<PropertySkip, string, int>) _properties["margin-inline"];
+            get => (Property<PropertySkip, string, double>) _properties["margin-inline"];
             set => _properties["margin-inline"] = value;
         }
 
@@ -597,9 +597,9 @@ namespace CssInCSharp
         /// <para> | **1**  |  **2**  | **3.1** | 12-79 | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask</para>
         /// </summary>
-        public Property<PropertySkip, string, int> Mask
+        public Property<PropertySkip, string, double> Mask
         {
-            get => (Property<PropertySkip, string, int>) _properties["mask"];
+            get => (Property<PropertySkip, string, double>) _properties["mask"];
             set => _properties["mask"] = value;
         }
 
@@ -611,9 +611,9 @@ namespace CssInCSharp
         /// <para> | **1** _(-webkit-mask-box-image)_ |   No    | **3.1** _(-webkit-mask-box-image)_ | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask-border</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MaskBorder
+        public Property<PropertySkip, string, double> MaskBorder
         {
-            get => (Property<PropertySkip, string, int>) _properties["mask-border"];
+            get => (Property<PropertySkip, string, double>) _properties["mask-border"];
             set => _properties["mask-border"] = value;
         }
 
@@ -626,9 +626,9 @@ namespace CssInCSharp
         /// <para> | 46 _(motion)_ |         |        |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/offset</para>
         /// </summary>
-        public Property<PropertySkip, string, int> Motion
+        public Property<PropertySkip, string, double> Motion
         {
-            get => (Property<PropertySkip, string, int>) _properties["motion"];
+            get => (Property<PropertySkip, string, double>) _properties["motion"];
             set => _properties["motion"] = value;
         }
 
@@ -641,9 +641,9 @@ namespace CssInCSharp
         /// <para> | 46 _(motion)_ |         |        |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/offset</para>
         /// </summary>
-        public Property<PropertySkip, string, int> Offset
+        public Property<PropertySkip, string, double> Offset
         {
-            get => (Property<PropertySkip, string, int>) _properties["offset"];
+            get => (Property<PropertySkip, string, double>) _properties["offset"];
             set => _properties["offset"] = value;
         }
 
@@ -655,9 +655,9 @@ namespace CssInCSharp
         /// <para> | **94** | **88**  | **1.2** | **94** | **8** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/outline</para>
         /// </summary>
-        public Property<PropertySkip, string, int> Outline
+        public Property<PropertySkip, string, double> Outline
         {
-            get => (Property<PropertySkip, string, int>) _properties["outline"];
+            get => (Property<PropertySkip, string, double>) _properties["outline"];
             set => _properties["outline"] = value;
         }
 
@@ -699,9 +699,9 @@ namespace CssInCSharp
         /// <para> | **1**  |  **1**  | **1**  | **12** | **4** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/padding</para>
         /// </summary>
-        public Property<PropertySkip, string, int> Padding
+        public Property<PropertySkip, string, double> Padding
         {
-            get => (Property<PropertySkip, string, int>) _properties["padding"];
+            get => (Property<PropertySkip, string, double>) _properties["padding"];
             set => _properties["padding"] = value;
         }
 
@@ -713,9 +713,9 @@ namespace CssInCSharp
         /// <para> | **87** | **66**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/padding-block</para>
         /// </summary>
-        public Property<PropertySkip, string, int> PaddingBlock
+        public Property<PropertySkip, string, double> PaddingBlock
         {
-            get => (Property<PropertySkip, string, int>) _properties["padding-block"];
+            get => (Property<PropertySkip, string, double>) _properties["padding-block"];
             set => _properties["padding-block"] = value;
         }
 
@@ -727,9 +727,9 @@ namespace CssInCSharp
         /// <para> | **87** | **66**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/padding-inline</para>
         /// </summary>
-        public Property<PropertySkip, string, int> PaddingInline
+        public Property<PropertySkip, string, double> PaddingInline
         {
-            get => (Property<PropertySkip, string, int>) _properties["padding-inline"];
+            get => (Property<PropertySkip, string, double>) _properties["padding-inline"];
             set => _properties["padding-inline"] = value;
         }
 
@@ -784,9 +784,9 @@ namespace CssInCSharp
         /// <para> |        |         | 11 _(scroll-snap-margin)_ |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin</para>
         /// </summary>
-        public Property<PropertySkip, string, int> ScrollMargin
+        public Property<PropertySkip, string, double> ScrollMargin
         {
-            get => (Property<PropertySkip, string, int>) _properties["scroll-margin"];
+            get => (Property<PropertySkip, string, double>) _properties["scroll-margin"];
             set => _properties["scroll-margin"] = value;
         }
 
@@ -798,9 +798,9 @@ namespace CssInCSharp
         /// <para> | **69** | **68**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-block</para>
         /// </summary>
-        public Property<PropertySkip, string, int> ScrollMarginBlock
+        public Property<PropertySkip, string, double> ScrollMarginBlock
         {
-            get => (Property<PropertySkip, string, int>) _properties["scroll-margin-block"];
+            get => (Property<PropertySkip, string, double>) _properties["scroll-margin-block"];
             set => _properties["scroll-margin-block"] = value;
         }
 
@@ -812,9 +812,9 @@ namespace CssInCSharp
         /// <para> | **69** | **68**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-inline</para>
         /// </summary>
-        public Property<PropertySkip, string, int> ScrollMarginInline
+        public Property<PropertySkip, string, double> ScrollMarginInline
         {
-            get => (Property<PropertySkip, string, int>) _properties["scroll-margin-inline"];
+            get => (Property<PropertySkip, string, double>) _properties["scroll-margin-inline"];
             set => _properties["scroll-margin-inline"] = value;
         }
 
@@ -826,9 +826,9 @@ namespace CssInCSharp
         /// <para> | **69** | **68**  | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-padding</para>
         /// </summary>
-        public Property<PropertySkip, string, int> ScrollPadding
+        public Property<PropertySkip, string, double> ScrollPadding
         {
-            get => (Property<PropertySkip, string, int>) _properties["scroll-padding"];
+            get => (Property<PropertySkip, string, double>) _properties["scroll-padding"];
             set => _properties["scroll-padding"] = value;
         }
 
@@ -840,9 +840,9 @@ namespace CssInCSharp
         /// <para> | **69** | **68**  | **15** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-padding-block</para>
         /// </summary>
-        public Property<PropertySkip, string, int> ScrollPaddingBlock
+        public Property<PropertySkip, string, double> ScrollPaddingBlock
         {
-            get => (Property<PropertySkip, string, int>) _properties["scroll-padding-block"];
+            get => (Property<PropertySkip, string, double>) _properties["scroll-padding-block"];
             set => _properties["scroll-padding-block"] = value;
         }
 
@@ -854,9 +854,9 @@ namespace CssInCSharp
         /// <para> | **69** | **68**  | **15** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-padding-inline</para>
         /// </summary>
-        public Property<PropertySkip, string, int> ScrollPaddingInline
+        public Property<PropertySkip, string, double> ScrollPaddingInline
         {
-            get => (Property<PropertySkip, string, int>) _properties["scroll-padding-inline"];
+            get => (Property<PropertySkip, string, double>) _properties["scroll-padding-inline"];
             set => _properties["scroll-padding-inline"] = value;
         }
 
@@ -869,9 +869,9 @@ namespace CssInCSharp
         /// <para> |        |         | 11 _(scroll-snap-margin)_ |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin</para>
         /// </summary>
-        public Property<PropertySkip, string, int> ScrollSnapMargin
+        public Property<PropertySkip, string, double> ScrollSnapMargin
         {
-            get => (Property<PropertySkip, string, int>) _properties["scroll-snap-margin"];
+            get => (Property<PropertySkip, string, double>) _properties["scroll-snap-margin"];
             set => _properties["scroll-snap-margin"] = value;
         }
 
@@ -897,9 +897,9 @@ namespace CssInCSharp
         /// <para> | **1**  |  **1**  | **1**  | **12** | **3** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/text-decoration</para>
         /// </summary>
-        public Property<PropertySkip, string, int> TextDecoration
+        public Property<PropertySkip, string, double> TextDecoration
         {
-            get => (Property<PropertySkip, string, int>) _properties["text-decoration"];
+            get => (Property<PropertySkip, string, double>) _properties["text-decoration"];
             set => _properties["text-decoration"] = value;
         }
 

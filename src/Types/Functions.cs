@@ -7,17 +7,18 @@ internal static class Functions
         return value switch
         {
             string v => v,
-            int v => FixValue(key, value),
-            float v => FixValue(key, value),
-            double v => FixValue(key, value),
+            int v => Wrap(key, v),
+            float v => Wrap(key, v),
+            double v => Wrap(key, v),
             Keyframe v => v.ToString(),
             _ => value?.ToString()
         };
     }
 
-    internal static string FixValue<T>(string key, T value)
+    internal static string Wrap<T>(string key, T value)
     {
-        if(!string.IsNullOrEmpty(key) && !Unitless.Keys.ContainsKey(key))
+        // All number types need to be px-wrapped and unwanted parts of Unitless should be ignored.
+        if (!string.IsNullOrEmpty(key) && !Unitless.Keys.ContainsKey(key))
         {
             return $"{value}px";
         }

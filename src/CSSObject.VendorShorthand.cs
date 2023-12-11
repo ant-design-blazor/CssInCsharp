@@ -16,9 +16,9 @@ namespace CssInCSharp
         /// The **`border-image`** CSS property draws an image around a given element. It replaces the element's regular border.
         /// <para> **Syntax**: `&lt;'border-image-source'&gt; || &lt;'border-image-slice'&gt; [ / &lt;'border-image-width'&gt; | / &lt;'border-image-width'&gt;? / &lt;'border-image-outset'&gt; ]? || &lt;'border-image-repeat'&gt;`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MozBorderImage
+        public Property<PropertySkip, string, double> MozBorderImage
         {
-            get => (Property<PropertySkip, string, int>) _properties["-moz-border-image"];
+            get => (Property<PropertySkip, string, double>) _properties["-moz-border-image"];
             set => _properties["-moz-border-image"] = value;
         }
 
@@ -26,9 +26,9 @@ namespace CssInCSharp
         /// The **`column-rule`** shorthand CSS property sets the width, style, and color of the line drawn between columns in a multi-column layout.
         /// <para> **Syntax**: `&lt;'column-rule-width'&gt; || &lt;'column-rule-style'&gt; || &lt;'column-rule-color'&gt;`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MozColumnRule
+        public Property<PropertySkip, string, double> MozColumnRule
         {
-            get => (Property<PropertySkip, string, int>) _properties["-moz-column-rule"];
+            get => (Property<PropertySkip, string, double>) _properties["-moz-column-rule"];
             set => _properties["-moz-column-rule"] = value;
         }
 
@@ -36,9 +36,9 @@ namespace CssInCSharp
         /// The **`columns`** CSS shorthand property sets the number of columns to use when drawing an element's contents, as well as those columns' widths.
         /// <para> **Syntax**: `&lt;'column-width'&gt; || &lt;'column-count'&gt;`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MozColumns
+        public Property<PropertySkip, string, double> MozColumns
         {
-            get => (Property<PropertySkip, string, int>) _properties["-moz-columns"];
+            get => (Property<PropertySkip, string, double>) _properties["-moz-columns"];
             set => _properties["-moz-columns"] = value;
         }
 
@@ -76,9 +76,9 @@ namespace CssInCSharp
         /// The **`flex`** CSS shorthand property sets how a flex _item_ will grow or shrink to fit the space available in its flex container.
         /// <para> **Syntax**: `none | [ &lt;'flex-grow'&gt; &lt;'flex-shrink'&gt;? || &lt;'flex-basis'&gt; ]`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> MsFlex
+        public Property<PropertySkip, string, double> MsFlex
         {
-            get => (Property<PropertySkip, string, int>) _properties["-ms-flex"];
+            get => (Property<PropertySkip, string, double>) _properties["-ms-flex"];
             set => _properties["-ms-flex"] = value;
         }
 
@@ -136,9 +136,9 @@ namespace CssInCSharp
         /// The **`-webkit-border-before`** CSS property is a shorthand property for setting the individual logical block start border property values in a single place in the style sheet.
         /// <para> **Syntax**: `&lt;'border-width'&gt; || &lt;'border-style'&gt; || &lt;color&gt;`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitBorderBefore
+        public Property<PropertySkip, string, double> WebkitBorderBefore
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-border-before"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-border-before"];
             set => _properties["-webkit-border-before"] = value;
         }
 
@@ -146,9 +146,9 @@ namespace CssInCSharp
         /// The **`border-image`** CSS property draws an image around a given element. It replaces the element's regular border.
         /// <para> **Syntax**: `&lt;'border-image-source'&gt; || &lt;'border-image-slice'&gt; [ / &lt;'border-image-width'&gt; | / &lt;'border-image-width'&gt;? / &lt;'border-image-outset'&gt; ]? || &lt;'border-image-repeat'&gt;`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitBorderImage
+        public Property<PropertySkip, string, double> WebkitBorderImage
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-border-image"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-border-image"];
             set => _properties["-webkit-border-image"] = value;
         }
 
@@ -156,9 +156,9 @@ namespace CssInCSharp
         /// The **`border-radius`** CSS property rounds the corners of an element's outer border edge. You can set a single radius to make circular corners, or two radii to make elliptical corners.
         /// <para> **Syntax**: `&lt;length-percentage&gt;{1,4} [ / &lt;length-percentage&gt;{1,4} ]?`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitBorderRadius
+        public Property<PropertySkip, string, double> WebkitBorderRadius
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-border-radius"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-border-radius"];
             set => _properties["-webkit-border-radius"] = value;
         }
 
@@ -166,9 +166,9 @@ namespace CssInCSharp
         /// The **`column-rule`** shorthand CSS property sets the width, style, and color of the line drawn between columns in a multi-column layout.
         /// <para> **Syntax**: `&lt;'column-rule-width'&gt; || &lt;'column-rule-style'&gt; || &lt;'column-rule-color'&gt;`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitColumnRule
+        public Property<PropertySkip, string, double> WebkitColumnRule
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-column-rule"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-column-rule"];
             set => _properties["-webkit-column-rule"] = value;
         }
 
@@ -176,9 +176,9 @@ namespace CssInCSharp
         /// The **`columns`** CSS shorthand property sets the number of columns to use when drawing an element's contents, as well as those columns' widths.
         /// <para> **Syntax**: `&lt;'column-width'&gt; || &lt;'column-count'&gt;`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitColumns
+        public Property<PropertySkip, string, double> WebkitColumns
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-columns"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-columns"];
             set => _properties["-webkit-columns"] = value;
         }
 
@@ -186,9 +186,9 @@ namespace CssInCSharp
         /// The **`flex`** CSS shorthand property sets how a flex _item_ will grow or shrink to fit the space available in its flex container.
         /// <para> **Syntax**: `none | [ &lt;'flex-grow'&gt; &lt;'flex-shrink'&gt;? || &lt;'flex-basis'&gt; ]`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitFlex
+        public Property<PropertySkip, string, double> WebkitFlex
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-flex"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-flex"];
             set => _properties["-webkit-flex"] = value;
         }
 
@@ -206,9 +206,9 @@ namespace CssInCSharp
         /// The **`mask`** CSS shorthand property hides an element (partially or fully) by masking or clipping the image at specific points.
         /// <para> **Syntax**: `[ &lt;mask-reference&gt; || &lt;position&gt; [ / &lt;bg-size&gt; ]? || &lt;repeat-style&gt; || [ &lt;box&gt; | border | padding | content | text ] || [ &lt;box&gt; | border | padding | content ] ]#`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitMask
+        public Property<PropertySkip, string, double> WebkitMask
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-mask"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-mask"];
             set => _properties["-webkit-mask"] = value;
         }
 
@@ -216,9 +216,9 @@ namespace CssInCSharp
         /// The **`mask-border`** CSS shorthand property lets you create a mask along the edge of an element's border.
         /// <para> **Syntax**: `&lt;'mask-border-source'&gt; || &lt;'mask-border-slice'&gt; [ / &lt;'mask-border-width'&gt;? [ / &lt;'mask-border-outset'&gt; ]? ]? || &lt;'mask-border-repeat'&gt; || &lt;'mask-border-mode'&gt;`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitMaskBoxImage
+        public Property<PropertySkip, string, double> WebkitMaskBoxImage
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-mask-box-image"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-mask-box-image"];
             set => _properties["-webkit-mask-box-image"] = value;
         }
 
@@ -236,9 +236,9 @@ namespace CssInCSharp
         /// The **`-webkit-text-stroke`** CSS property specifies the width and color of strokes for text characters. This is a shorthand property for the longhand properties `-webkit-text-stroke-width` and `-webkit-text-stroke-color`.
         /// <para> **Syntax**: `&lt;length&gt; || &lt;color&gt;`</para>
         /// </summary>
-        public Property<PropertySkip, string, int> WebkitTextStroke
+        public Property<PropertySkip, string, double> WebkitTextStroke
         {
-            get => (Property<PropertySkip, string, int>) _properties["-webkit-text-stroke"];
+            get => (Property<PropertySkip, string, double>) _properties["-webkit-text-stroke"];
             set => _properties["-webkit-text-stroke"] = value;
         }
 

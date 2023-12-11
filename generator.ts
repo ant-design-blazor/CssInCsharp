@@ -23,10 +23,10 @@ const numberProperties = [
     "FontWeight"
 ]
 
-const floatProperties = [
-    'Opacity',
-    "LineHeight"
-]
+// const floatProperties = [
+//     'Opacity',
+//     "LineHeight"
+// ]
 
 const animationProperties = [
     'AnimationName'
@@ -97,12 +97,13 @@ function getPropertyTypes(lines: string[]): PropertyType[] {
 
             // number type
             if (type.includes('TLength =') || type.includes('number & {}') || numberProperties.includes(name)) {
-
-                if (floatProperties.includes(name)) {
-                    types.push({ name: `value${types.length}`, type: 'double' });
-                } else {
-                    types.push({ name: `value${types.length}`, type: 'int' });
-                }
+                // use double for all number type properties.
+                types.push({ name: `value${types.length}`, type: 'double' });
+                // if (floatProperties.includes(name)) {
+                //     types.push({ name: `value${types.length}`, type: 'double' });
+                // } else {
+                //     types.push({ name: `value${types.length}`, type: 'int' });
+                // }
             }
 
             // animation type
@@ -358,7 +359,13 @@ function generateVendorShorthand() {
 
 function generateUnitless() {
     const tab = '            ';
-    const items = Object.keys(unitless).map(key => `${tab}{ "${key}", ${unitless[key]} }`);
+    const transform = (key: string) => {
+        const newName = key
+            .replace(/[A-Z]/g, (m) => '-' + m.toLowerCase())
+            .replace(/^(moz|ms|webkit)(.+)/, '-$1$2');
+        return newName;
+    }
+    const items = Object.keys(unitless).map(key => `${tab}{ "${transform(key)}", ${unitless[key]} }`);
     let template = `using System.Collections.Generic;
 
 namespace CssInCSharp

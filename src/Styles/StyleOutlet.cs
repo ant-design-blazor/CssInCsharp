@@ -9,7 +9,8 @@ namespace CssInCSharp
 {
     public sealed class StyleOutlet : ComponentBase
     {
-        internal const string StyeSectionOutletName = "cssincs_style";
+        internal const string StyeSectionOutletName = "cssincsharp_style";
+        internal const string InternalStyeSectionOutletName = "cssincsharp_style_internal";
 
         /*
          * using SectionOutlet to render style tag
@@ -20,14 +21,21 @@ namespace CssInCSharp
          */
         protected override void BuildRenderTree(RenderTreeBuilder builder)
         {
+            var i = 0;
 #if NET8_0_OR_GREATER
-            builder.OpenComponent<SectionOutlet>(0);
-            builder.AddAttribute(1, nameof(SectionOutlet.SectionName), StyeSectionOutletName);
+            // internal style content for components
+            builder.OpenComponent<SectionOutlet>(i++);
+            builder.AddAttribute(i++, nameof(SectionOutlet.SectionName), InternalStyeSectionOutletName);
             builder.CloseComponent();
-            builder.OpenComponent<HeadOutlet>(2);
+            // style content for pages
+            builder.OpenComponent<SectionOutlet>(i++);
+            builder.AddAttribute(i++, nameof(SectionOutlet.SectionName), StyeSectionOutletName);
+            builder.CloseComponent();
+            // original head
+            builder.OpenComponent<HeadOutlet>(i++);
             builder.CloseComponent();
 #elif NET6_0_OR_GREATER
-            builder.OpenComponent<HeadOutlet>(2);
+            builder.OpenComponent<HeadOutlet>(i++);
             builder.CloseComponent();
 #else
 #warning "The TargetFramework does not support the StyleOutlet component, upgrade the TargetFramework or use Style component only."
