@@ -12,12 +12,6 @@ namespace CssInCSharp
         internal const string StyeSectionOutletName = "cssincsharp_style";
         internal const string InternalStyeSectionOutletName = "cssincsharp_style_internal";
 
-        internal static void Register(StyleInfo style)
-        {
-            var path = $"{style.TokenKey}|{string.Join("|", style.Path)}";
-            Styles.TryAdd(path, style);
-        }
-
         /*
          * using SectionOutlet to render style tag
          * note:
