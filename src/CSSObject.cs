@@ -30,7 +30,7 @@ namespace CssInCSharp
             return Serialize(Compile(ParseStyle(true, hashId)), Stringify);
         }
 
-        public string ParseStyle(bool root, string hashId)
+        internal string ParseStyle(bool root, string hashId)
         {
             var sb = new StringBuilder();
             
@@ -93,6 +93,23 @@ namespace CssInCSharp
         private void SetStyle(string key, CSSInterpolation value)
         {
             if (key == null) return;
+            /*
+             * If is css variable,
+             * eg:
+             * new CSSObject
+             * {
+             *    ["--font-size"] = "12px" // here is string value.
+             * }
+             */
+            if (value.IsT2)
+            {
+                _properties[key] = (Property<string>)value.AsT2; // cast to Property type.
+                return;
+            }
+
+            /*
+             * if is CSSObject or CSSObject[]
+             */
             var cssObject = value.IsT0 ? value.AsT0 : new CSSObject().Merge(value.ToCssArray());
             if (cssObject == null) return;
             if (key == MERGE_OPERATOR)
