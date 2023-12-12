@@ -40,15 +40,5 @@ namespace CssInCSharp
                 builder.CloseComponent();
             };
         }
-
-        public static RenderFragment UseStyleRegister(StyleInfo style)
-        {
-            StyleOutlet.Register(style);
-            return builder =>
-            {
-                builder.OpenComponent<StyleContent>(0);
-                builder.CloseComponent();
-            };
-        }
     }
 }
