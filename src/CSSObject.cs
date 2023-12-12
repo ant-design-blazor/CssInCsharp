@@ -9,7 +9,7 @@ namespace CssInCSharp
 {
     public sealed partial class CSSObject
     {
-        private readonly Dictionary<string, CSSObject> _styles = new ();
+        private readonly Dictionary<string, CSSObject> _styles = new();
         private readonly Dictionary<string, IProperty> _properties = new();
         public Dictionary<string, IProperty> GetProperties() => _properties;
         public Dictionary<string, CSSObject> GetStyles() => _styles;
@@ -41,6 +41,12 @@ namespace CssInCSharp
             foreach (var subStyle in _styles)
             {
                 var nextRoot = false;
+                if (subStyle.Key.StartsWith("@"))
+                {
+                    // if is media type, skip and insert hashId from subStyle.
+                    root = false;
+                    nextRoot = true;
+                }
                 sb.Append($"{subStyle.Key}{{{subStyle.Value.ParseStyle(nextRoot, hashId)}}}");
             }
 
