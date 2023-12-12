@@ -39,6 +39,6 @@ namespace CssInCSharp
         public string AsT2 =>
             _index == 2 ?
                 _value2 :
-                throw new InvalidOperationException($"Cannot return as T1 as result is T{_index}");
+                throw new InvalidOperationException($"Cannot return as T2 as result is T{_index}");
     }
 }
