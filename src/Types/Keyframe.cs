@@ -17,6 +17,12 @@ namespace CssInCSharp
             _name = name;
         }
 
+        public Keyframe(string name, CSSObject css)
+        {
+            _name = name;
+            _styles = css.GetStyles();
+        }
+
         public CSSObject this[string key]
         {
             get => _styles[key];
@@ -31,7 +37,7 @@ namespace CssInCSharp
             {
                 sb.Append($"{subStyle.Key}{{{subStyle.Value.ParseStyle(true, string.Empty)}}}");
             }
-            sb.Append("}}");
+            sb.Append("}");
             return sb.ToString();
         }
     }

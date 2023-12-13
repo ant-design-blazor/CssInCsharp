@@ -59,5 +59,26 @@ namespace CssInCSharp.Tests
             css.ToString().ShouldBe("@media (min-width: 500px){.grid-sm{display:none;inset-inline-start:auto;inset-inline-end:auto;margin-inline-start:0;order:0;}}");
             css.SerializeCss("1iw360o").ShouldBe("@media (min-width: 500px){:where(.1iw360o).grid-sm{display:none;inset-inline-start:auto;inset-inline-end:auto;margin-inline-start:0;order:0;}}");
         }
+
+        [Fact]
+        public void Animation()
+        {
+            var messageMoveIn = new Keyframe("MessageMoveIn", new CSSObject
+            {
+                ["0%"] = new CSSObject
+                {
+                    Padding = 0,
+                    Transform = "translateY(-100%)",
+                    Opacity = 0,
+                },
+                ["100%"] = new CSSObject
+                {
+                    Padding = 100,
+                    Transform = "translateY(0)",
+                    Opacity = 1,
+                }
+            });
+            messageMoveIn.ToString().ShouldBe("MessageMoveIn;@keyframes MessageMoveIn{0%{padding:0;transform:translateY(-100%);opacity:0;}100%{padding:100px;transform:translateY(0);opacity:1;}}");
+        }
     }
 }
