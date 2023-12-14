@@ -100,16 +100,17 @@ namespace CssInCSharp
         {
             if (key == null) return;
             /*
-             * If is css variable,
-             * eg:
+             * if is CSSProperties
              * new CSSObject
              * {
-             *    ["--font-size"] = "12px" // here is string value.
+             *    ["--font-size"] = "12px",     // string value.
+             *    ["width"] = 100,              // number value.
+             *    ["width"] = new Keyframe(""), // Keyframe
              * }
              */
             if (value.IsT2)
             {
-                _properties[key] = (Property<string>)value.AsT2; // cast to Property type.
+                _properties[key] = value.AsT2;
                 return;
             }
 

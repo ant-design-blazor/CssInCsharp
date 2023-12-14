@@ -7,11 +7,15 @@ namespace CssInCSharp
         private readonly int _index;
         private readonly CSSObject _value0;
         private readonly CSSInterpolation[] _value1;
-        private readonly string _value2;
+        private readonly CSSProperties _value2;
 
         public CSSObject this[string key] => _value0;
 
-        private CSSInterpolation(int index, CSSObject value0 = default, CSSInterpolation[] value1 = default, string value2 = default)
+        private CSSInterpolation(
+            int index,
+            CSSObject value0 = default,
+            CSSInterpolation[] value1 = default,
+            CSSProperties value2 = default)
         {
             _index = index;
             _value0 = value0;
@@ -21,7 +25,11 @@ namespace CssInCSharp
 
         public static implicit operator CSSInterpolation(CSSObject t) => new(0, value0: t);
         public static implicit operator CSSInterpolation(CSSInterpolation[] t) => new(1, value1: t);
+        public static implicit operator CSSInterpolation(CSSProperties t) => new(2, value2: t);
+        // CSSProperties type alias.
         public static implicit operator CSSInterpolation(string t) => new(2, value2: t);
+        public static implicit operator CSSInterpolation(double t) => new(2, value2: t);
+        public static implicit operator CSSInterpolation(Keyframe t) => new(2, value2: t);
 
         public bool IsT0 => _index == 0;
         public bool IsT1 => _index == 1;
@@ -36,7 +44,7 @@ namespace CssInCSharp
                 _value1 :
                 throw new InvalidOperationException($"Cannot return as T1 as result is T{_index}");
 
-        public string AsT2 =>
+        public CSSProperties AsT2 =>
             _index == 2 ?
                 _value2 :
                 throw new InvalidOperationException($"Cannot return as T2 as result is T{_index}");
