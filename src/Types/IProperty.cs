@@ -8,7 +8,7 @@
     public struct PropertySkip
     {
         public bool SkipCheck { get; set; }
-        public Property<string, int> Value { get; set; }
+        public Property<string, double> Value { get; set; }
         public override string ToString()
         {
             return Value.ToString();
