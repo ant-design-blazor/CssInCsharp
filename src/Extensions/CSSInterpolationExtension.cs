@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace CssInCSharp
 {
@@ -8,7 +9,11 @@ namespace CssInCSharp
         {
             if (value.IsT0)
             {
-                return new[] { value.AsT0 };
+                if (value.AsT0 == null)
+                {
+                    return Array.Empty<CSSObject>();
+                }
+                return new CSSObject[] { value.AsT0 };
             }
             else if (value.IsT1)
             {
@@ -21,7 +26,7 @@ namespace CssInCSharp
             }
             else
             {
-                return new CSSObject[] { };
+                return Array.Empty<CSSObject>();
             }
         }
     }

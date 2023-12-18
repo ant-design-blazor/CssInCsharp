@@ -30,7 +30,7 @@ namespace CssInCSharp
                 var sb = new StringBuilder();
                 foreach (var css in csses)
                 {
-                    sb.Append(css.SerializeCss(HashId));
+                    sb.Append(css?.SerializeCss(HashId));
                 }
                 return new StyleCache.Item
                 {
