@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CssInCSharp
+namespace CssInCSharp.Colors
 {
     public record struct RGB(int R, int G, int B);
     public record struct RGBA(int R, int G, int B, int A);
@@ -21,6 +21,11 @@ namespace CssInCSharp
         private readonly HSV _value6;
         private readonly HSVA _value7;
         private readonly TinyColor _value8;
+
+        public ColorInput()
+        {
+            _index = -1;
+        }
 
         private ColorInput(
             int index, 
@@ -55,9 +60,24 @@ namespace CssInCSharp
         public static implicit operator ColorInput(HSVA value) => new(7, value7: value);
         public static implicit operator ColorInput(TinyColor value) => new(8, value8: value);
 
+        public StringNumber R { get; set; }
+        public StringNumber G { get; set; }
+        public StringNumber B { get; set; }
+        public StringNumber A { get; set; }
+        public string Format { get; set; }
+
+        public bool IsObject => _index == -1;
+
+        public bool IsString => _index == 0;
+
         public bool IsNumber => _index == 1;
 
         public bool IsTinyColor => _index == 8;
+
+        public string AsString =>
+            _index == 0 ?
+                _value0 :
+                throw new InvalidOperationException();
 
         public int AsNumber =>
             _index == 1 ?
