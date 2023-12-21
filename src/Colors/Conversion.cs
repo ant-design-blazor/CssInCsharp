@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static CssInCSharp.Colors.Util;
 
 namespace CssInCSharp.Colors
 {
@@ -13,9 +13,9 @@ namespace CssInCSharp.Colors
         {
             var hex = new []
             {
-                Math.Round(r).ToString("X2"),
-                Math.Round(g).ToString("X2"),
-                Math.Round(b).ToString("X2"),
+                ((int)r).ToString("x2"),
+                ((int)g).ToString("x2"),
+                ((int)b).ToString("x2"),
             };
 
             if (allow3Char &&
@@ -30,7 +30,40 @@ namespace CssInCSharp.Colors
             return hex.Join("");
         }
 
+        public static string RgbaToHex(double r, double g, double b, double a, bool allow4Char)
+        {
+            return "";
+        }
+
         public static RGB RgbToRgb(StringNumber r, StringNumber g, StringNumber b)
+        {
+            return new RGB
+            {
+                R = Bound01(r, 255) * 255,
+                G = Bound01(g, 255) * 255,
+                B = Bound01(b, 255) * 255,
+            };
+        }
+
+        public static HSV RgbToHsv(double r, double g, double b)
+        {
+            return new HSV();
+        }
+
+        public static HSL RgbToHsl(double r, double g, double b)
+        {
+            return new HSL();
+        }
+
+        public static RGB HsvToRgb(StringNumber h, StringNumber s, StringNumber v)
+        {
+            h = Bound01(h, 360) * 6;
+            s = Bound01(s, 100);
+            v = Bound01(v, 100);
+            return new RGB { };
+        }
+
+        public static RGB HslToRgb(StringNumber h, StringNumber s, StringNumber l)
         {
             return new RGB();
         }
