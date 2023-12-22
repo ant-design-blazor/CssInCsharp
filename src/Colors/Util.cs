@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CssInCSharp.Colors
 {
@@ -15,7 +16,7 @@ namespace CssInCSharp.Colors
             return string.Join(separator, values);
         }
 
-        public static StringNumber Bound01(StringNumber n, int max)
+        public static StringNumber Bound01(StringNumber n, double max)
         {
             if (IsOnePointZero(n))
             {
@@ -23,7 +24,7 @@ namespace CssInCSharp.Colors
             }
 
             var isPercent = IsPercentage(n);
-            n = max == 360 ? n : Math.Min(max, Math.Max(0, ParseNumber(n)));
+            n = max == 360 ? ParseNumber(n) : Math.Min(max, Math.Max(0, ParseNumber(n)));
 
             if (isPercent)
             {
@@ -54,12 +55,13 @@ namespace CssInCSharp.Colors
 
         public static string ConvertToPercentage(StringNumber n)
         {
-            if (n.IsNumber && n <= 1)
+            var d = n.IsNumber ? n.AsNumber : ParseNumber(n);
+            if (d <= 1)
             {
-                return $"{n * 100}%";
+                return $"{d * 100}%";
             }
 
-            return n.AsString;
+            return n.ToString();
         }
 
         public static double BoundAlpha(StringNumber a)
@@ -98,6 +100,8 @@ namespace CssInCSharp.Colors
                 {
                     return r;
                 }
+
+                return double.NaN;
             }
 
             return n.AsNumber;
@@ -112,5 +116,20 @@ namespace CssInCSharp.Colors
         {
             return Math.Round(value, MidpointRounding.AwayFromZero);
         }
-    }
+
+        public static double MathMax(params double[] values)
+        {
+            return values.Max();
+        }
+
+        public static double MathMin(params double[] values)
+        {
+            return values.Min();
+        }
+
+        public static double Clamp01(double val) {
+            return Math.Min(1, Math.Max(0, val));
+        }
+
+}
 }

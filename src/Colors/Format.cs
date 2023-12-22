@@ -23,14 +23,22 @@ namespace CssInCSharp.Colors
         public static implicit operator StringNumber(string value) => new(0, value0: value);
         public static implicit operator StringNumber(double value) => new(1, value1: value);
         public static double operator +(StringNumber a, double b) => a._value1 + b;
+        public static double operator +(double a, StringNumber b) => a + b._value1;
+        public static double operator +(StringNumber a, StringNumber b) => a._value1 + b._value1;
         public static double operator -(StringNumber a, double b) => a._value1 - b;
+        public static double operator -(double a, StringNumber b) => a - b._value1;
+        public static double operator -(StringNumber a, StringNumber b) => a._value1 - b._value1;
         public static double operator *(StringNumber a, double b) => a._value1 * b;
+        public static double operator *(double a, StringNumber b) => a * b._value1;
+        public static double operator *(StringNumber a, StringNumber b) => a._value1 * b._value1;
         public static double operator /(StringNumber a, double b) => a._value1 / b;
         public static double operator %(StringNumber a, double b) => a._value1 % b;
         public static bool operator <(StringNumber a, double b) => a._value1 < b;
         public static bool operator >(StringNumber a, double b) => a._value1 > b;
         public static bool operator <=(StringNumber a, double b) => a._value1 <= b;
         public static bool operator >=(StringNumber a, double b) => a._value1 >= b;
+        public static bool operator ==(StringNumber a, double b) => a._value1 == b;
+        public static bool operator !=(StringNumber a, double b) => a._value1 != b;
 
         public bool IsString => _index == 0;
         public bool IsNumber => _index == 1;
@@ -56,9 +64,9 @@ namespace CssInCSharp.Colors
         {
             return _index switch
             {
-                0 => _value0,
+                0 => _value0 ?? string.Empty,
                 1 => _value1.ToString(),
-                _ => throw new InvalidOperationException("Unexpected index.")
+                _ => string.Empty
             };
         }
     }
@@ -97,6 +105,7 @@ namespace CssInCSharp.Colors
             if (color.IsString)
             {
                 color = StringInputToObject(color.AsString);
+                if (color == null) return new RGBFormat();
             }
 
             if (color.IsObject)
@@ -126,7 +135,18 @@ namespace CssInCSharp.Colors
 
                 if (color.A.HasValue)
                 {
-                    a = color.A.Value.IsNumber ? color.A.Value.AsNumber : ParseNumber(color.A.Value);
+                    if (color.A.Value.IsNumber)
+                    {
+                        a = color.A.Value.AsNumber;
+                    }
+                    else
+                    {
+                        var n = ParseNumber(color.A.Value);
+                        if (!double.IsNaN(n))
+                        {
+                            a = n;
+                        }
+                    }
                 }
             }
 
