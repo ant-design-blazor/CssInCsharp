@@ -29,7 +29,7 @@ namespace CssInCSharp.Tests
     height:calc(
       100vh -
           1px
-        );").ShouldBe(".user{height:calc( 100vh - 1px );height:calc(\r\n      100vh -\r\n          1px\r\n        );}");
+        );").ShouldBe(".user{height:calc( 100vh - 1px );height:calc(\n      100vh -\n          1px\n        );}");
         }
 
         [Fact]
