@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace CssInCSharp.Colors
 {
-    internal static class Util
+    public static class Util
     {
         public static string CharAt(this string str, int index)
         {
@@ -28,7 +28,7 @@ namespace CssInCSharp.Colors
 
             if (isPercent)
             {
-                n = n * max / 100;
+                n = (int)(n * max) / (double)100;
             }
 
             if (Math.Abs(n - max) < 0.000001)
@@ -78,7 +78,7 @@ namespace CssInCSharp.Colors
 
         public static double ConvertHexToDecimal(string h)
         {
-            return ParseIntFromHex(h) / 255;
+            return ParseIntFromHex(h) / (double)255;
         }
 
         public static int ParseIntFromHex(string h)
@@ -114,7 +114,30 @@ namespace CssInCSharp.Colors
 
         public static double MathRound(double value)
         {
-            return Math.Round(value, MidpointRounding.AwayFromZero);
+            if (value >= 0)
+            {
+                return Math.Round(value, MidpointRounding.AwayFromZero);
+            }
+            else
+            {
+                /*
+                 * js math round method:
+                 * Math.round(25.5) -> 26
+                 * Math.round(-25.5) -> -25
+                 */
+                if (IsMidpoint(GetDecimalPlaces(value)))
+                {
+#if NETSTANDARD2_1
+                    return Math.Round(value, MidpointRounding.ToEven);
+#else
+                    return Math.Round(value, MidpointRounding.ToZero);
+#endif
+                }
+                else
+                {
+                    return Math.Round(value, MidpointRounding.AwayFromZero);
+                }
+            }
         }
 
         public static double MathMax(params double[] values)
@@ -131,5 +154,24 @@ namespace CssInCSharp.Colors
             return Math.Min(1, Math.Max(0, val));
         }
 
-}
+        public static bool IsMidpoint(double val)
+        {
+            var i = 0;
+            while (i < 16)
+            {
+                i++;
+                var mid = -(5 / Math.Pow(10, i));
+                if (val == mid)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public static double GetDecimalPlaces(double val)
+        {
+            return val - Math.Truncate(val);
+        }
+    }
 }

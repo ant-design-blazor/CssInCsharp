@@ -254,7 +254,7 @@ namespace CssInCSharp.Colors
                     R = ParseIntFromHex(match.Groups[1].Value),
                     G = ParseIntFromHex(match.Groups[2].Value),
                     B = ParseIntFromHex(match.Groups[3].Value),
-                    A = ParseIntFromHex(match.Groups[4].Value),
+                    A = ConvertHexToDecimal(match.Groups[4].Value),
                     Format = named ? "name" : "hex8",
                 };
             }
