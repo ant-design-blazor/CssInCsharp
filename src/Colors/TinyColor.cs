@@ -61,6 +61,17 @@ namespace CssInCSharp.Colors
             return new TinyColor(newColor, opts);
         }
 
+        public static TinyColor LegacyRandom()
+        {
+            var random = new Random();
+            return new TinyColor(new RGB
+            {
+                R = random.Next(),
+                G = random.Next(),
+                B = random.Next(),
+            });
+        }
+
         public bool IsDark()
         {
             return GetBrightness() < 128;
@@ -145,7 +156,7 @@ namespace CssInCSharp.Colors
         public HSLA ToHsl()
         {
             var hsl = RgbToHsl(_r, _g, _b);
-            return new HSLA(hsl.H, hsl.S, hsl.L, _a);
+            return new HSLA(hsl.H * 360, hsl.S, hsl.L, _a);
         }
 
         public string ToHslString()
@@ -394,7 +405,7 @@ namespace CssInCSharp.Colors
             var hsl = ToHsl();
             var part = 360 / slices;
             var ret = new List<TinyColor>() { this };
-            for (hsl.H = (hsl.H - ((int)(part * results) >> 1) + 720) % 360; results > 0; --results)
+            for (hsl.H = (hsl.H - ((int)(part * results) >> 1) + 720) % 360; results > 1; --results)
             {
                 hsl.H = (hsl.H + part) % 360;
                 ret.Add(new TinyColor(hsl));
@@ -465,7 +476,7 @@ namespace CssInCSharp.Colors
 
         public TinyColor[] Tetrad()
         {
-            return Polyad(3);
+            return Polyad(4);
         }
 
         public TinyColor[] Polyad(double n)

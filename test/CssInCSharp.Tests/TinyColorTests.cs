@@ -1,6 +1,8 @@
 ﻿using CssInCSharp.Colors;
 using Shouldly;
 using Xunit;
+using static CssInCSharp.Tests.MockData;
+using static CssInCSharp.Colors.Util;
 
 namespace CssInCSharp.Tests
 {
@@ -461,6 +463,167 @@ namespace CssInCSharp.Tests
             new TinyColor("#ddd").IsLight().ShouldBe(true);
             new TinyColor("#eee").IsLight().ShouldBe(true);
             new TinyColor("#fff").IsLight().ShouldBe(true);
+        }
+
+        [Fact]
+        public void Color_Equality()
+        {
+            new TinyColor("#ff0000").Equals("#ff0000").ShouldBe(true);
+            new TinyColor("#ff0000").Equals("rgb(255, 0, 0)").ShouldBe(true);
+            new TinyColor("#ff0000").Equals("rgba(255, 0, 0, .1)").ShouldBe(false);
+            new TinyColor("#ff000066").Equals("rgba(255, 0, 0, .4)").ShouldBe(true);
+            new TinyColor("#f009").Equals("rgba(255, 0, 0, .6)").ShouldBe(true);
+            new TinyColor("#336699CC").Equals("369C").ShouldBe(true);
+            new TinyColor("ff0000").Equals("#ff0000").ShouldBe(true);
+            new TinyColor("#f00").Equals("#ff0000").ShouldBe(true);
+            new TinyColor("#f00").Equals("#ff0000").ShouldBe(true);
+            new TinyColor("f00").Equals("#ff0000").ShouldBe(true);
+            new TinyColor("010101").ToHexString().ShouldBe("#010101");
+            new TinyColor("#ff0000").Equals("#00ff00").ShouldBe(false);
+            new TinyColor("#ff8000").Equals("rgb(100%, 50%, 0%)").ShouldBe(true);
+        }
+
+        [Fact]
+        public void Modifications()
+        {
+            for (var i = 0; i <= 100; i++)
+            {
+                new TinyColor("red").Desaturate(i).ToHex().ShouldBe(DESATURATIONS[i]);
+            }
+
+            for (var i = 0; i <= 100; i++)
+            {
+                new TinyColor("red").Saturate(i).ToHex().ShouldBe(SATURATIONS[i]);
+            }
+
+            for (var i = 0; i <= 100; i++)
+            {
+                new TinyColor("red").Lighten(i).ToHex().ShouldBe(LIGHTENS[i]);
+            }
+
+            for (var i = 0; i <= 100; i++)
+            {
+                new TinyColor("red").Brighten(i).ToHex().ShouldBe(BRIGHTENS[i]);
+            }
+
+            for (var i = 0; i <= 100; i++)
+            {
+                new TinyColor("red").Darken(i).ToHex().ShouldBe(DARKENS[i]);
+            }
+
+            for (var i = 0; i <= 100; i++)
+            {
+                new TinyColor("red").Tint(i).ToHex().ShouldBe(TINTS[i]);
+            }
+
+            for (var i = 0; i <= 100; i++)
+            {
+                new TinyColor("red").Shade(i).ToHex().ShouldBe(SHADES[i]);
+            }
+
+            new TinyColor("red").Greyscale().ToHex().ShouldBe("808080");
+        }
+
+        [Fact]
+        public void Spin()
+        {
+            MathRound(new TinyColor("#f00").Spin(-1234).ToHsl().H.AsNumber).ShouldBe(206);
+            MathRound(new TinyColor("#f00").Spin(-360).ToHsl().H.AsNumber).ShouldBe(0);
+            MathRound(new TinyColor("#f00").Spin(-120).ToHsl().H.AsNumber).ShouldBe(240);
+            MathRound(new TinyColor("#f00").Spin(0).ToHsl().H.AsNumber).ShouldBe(0);
+            MathRound(new TinyColor("#f00").Spin(10).ToHsl().H.AsNumber).ShouldBe(10);
+            MathRound(new TinyColor("#f00").Spin(360).ToHsl().H.AsNumber).ShouldBe(0);
+            MathRound(new TinyColor("#f00").Spin(2345).ToHsl().H.AsNumber).ShouldBe(185);
+        }
+
+        [Fact]
+        public void Mix()
+        {
+            new TinyColor("#000").Mix("#fff").ToHsl().L.AsNumber.ShouldBe(0.5);
+            new TinyColor("#f00").Mix("#000", 0).ToHex().ShouldBe("ff0000");
+            new TinyColor("#fff").Mix("#000", 90).ToHex().ShouldBe("1a1a1a");
+            for (var i = 0; i < 100; i++)
+            {
+                var newHex = ((int)MathRound(((double)255 * (100 - i)) / 100)).ToString("x2");
+
+                if (newHex.Length == 1)
+                {
+                    newHex = "0" + newHex;
+                }
+
+                new TinyColor("#f00").Mix("#000", i).ToHex().ShouldBe(newHex + "0000");
+                new TinyColor("#0f0").Mix("#000", i).ToHex().ShouldBe($"00{newHex}00");
+                new TinyColor("#00f").Mix("#000", i).ToHex().ShouldBe("0000" + newHex);
+                new TinyColor("transparent").Mix("#000", i).ToRgb().A.Value.AsNumber.ShouldBe(i / (double)100);
+            }
+        }
+
+        [Fact]
+        public void OnBackground()
+        {
+            new TinyColor("#ffffff").OnBackground("#000").ToHex().ShouldBe("ffffff");
+            new TinyColor("#ffffff00").OnBackground("#000").ToHex().ShouldBe("000000");
+            new TinyColor("#ffffff77").OnBackground("#000").ToHex().ShouldBe("777777");
+            new TinyColor("#262a6d82").OnBackground("#644242").ToHex().ShouldBe("443658");
+            new TinyColor("rgba(255,0,0,0.5)").OnBackground("rgba(0,255,0,0.5)").ToRgbString().ShouldBe("rgba(170, 85, 0, 0.75)");
+            new TinyColor("rgba(255,0,0,0.5)").OnBackground("rgba(0,0,255,1)").ToRgbString().ShouldBe("rgb(128, 0, 128)");
+            new TinyColor("rgba(0,0,255,1)").OnBackground("rgba(0,0,0,0.5)").ToRgbString().ShouldBe("rgb(0, 0, 255)");
+        }
+
+        [Fact]
+        public void Complement()
+        {
+            var complementDoesntModifyInstance = new TinyColor("red");
+            complementDoesntModifyInstance.Complement().ToHex().ShouldBe("00ffff");
+            complementDoesntModifyInstance.ToHex().ShouldBe("ff0000");
+        }
+
+        [Fact]
+        public void Analogous()
+        {
+            var combination = new TinyColor("red").Analogous();
+            ColorsToHexString(combination).ShouldBe("ff0000,ff0066,ff0033,ff0000,ff3300,ff6600");
+        }
+
+        [Fact]
+        public void Monochromatic()
+        {
+            var combination = new TinyColor("red").Monochromatic();
+            ColorsToHexString(combination).ShouldBe("ff0000,2a0000,550000,800000,aa0000,d40000");
+        }
+
+        [Fact]
+        public void Splitcomplement()
+        {
+            var combination = new TinyColor("red").Splitcomplement();
+            ColorsToHexString(combination).ShouldBe("ff0000,ccff00,0066ff");
+        }
+
+        [Fact]
+        public void Triad()
+        {
+            var combination = new TinyColor("red").Triad();
+            ColorsToHexString(combination).ShouldBe("ff0000,00ff00,0000ff");
+        }
+
+        [Fact]
+        public void Tetrad()
+        {
+            var combination = new TinyColor("red").Tetrad();
+            ColorsToHexString(combination).ShouldBe("ff0000,80ff00,00ffff,7f00ff");
+        }
+
+        [Fact]
+        public void Legacy_Random()
+        {
+            TinyColor.LegacyRandom().IsValid.ShouldBeTrue();
+        }
+
+        private string ColorsToHexString(TinyColor[]  colors)
+        {
+            return colors
+                .Select(c => c.ToHex())
+                .Join(",");
         }
     }
 }
