@@ -4,6 +4,9 @@ A lib for generating Style Sheets with C#.
 
 For documentation see our [docs](./docs/index.md).
 
+![Latest Version](https://img.shields.io/github/actions/workflow/status/ant-design-blazor/CssInCsharp/package.yml?style=flat-square)
+[![CssInCSharp](https://img.shields.io/nuget/v/CssInCSharp.svg?color=red&style=flat-square)](https://www.nuget.org/packages/CssInCsharp)
+
 ## Getting started
 ```sh
 dotnet add package CssInCSharp
@@ -30,12 +33,12 @@ dotnet add package CssInCSharp
         {
             [".basic"] = new CSSObject
             {
-                Width = "300px",
-                Height = "300px",
+                Width = 300,
+                Height = 300,
                 Border = "1px solid #DDD",
                 ["& .title"] = new CSSObject
                 {
-                    LineHeight = "20px",
+                    LineHeight = 20,
                     Color = "red"
                 },
                 ["& .button"] = new CSSObject
