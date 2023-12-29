@@ -11,19 +11,19 @@ Add usings to _Imports.razor file in your blazor project.
 @using CssInCSharp
 ```
 
-## Usage
+## Create CSS Object
 ```CSharp
 // Create css object
 var css = new CSSObject
 {
     [".demo"] = new CSSObject
     {
-        Width = "300px",
-        Height = "300px",
+        Width = 300,
+        Height = 300,
         Border = "1px solid #DDD",
         ["& .title"] = new CSSObject
         {
-            LineHeight = "20px",
+            LineHeight = 20,
             Color = "red"
         },
         ["& .button"] = new CSSObject
@@ -41,6 +41,98 @@ var css = new CSSObject
 
 // Serialize the css object.
 var style = css.ToString();
+// or use hashId
+var style = css.SerializeCss("hashId");
+```
+
+The CSSObject type supports a string indexer, which you can add calss names, attributes, selectors, and variables.
+
+```csharp
+var css = new CSSObject
+{
+    // class name
+    [".btn-default"] = new CSSObject
+    {
+        // selectors
+        ["&:hober"] = ...,
+        ["> span"] = ...,
+        ["button"] = ...,
+
+        // css variable
+        ["--btn-display"] = "block",
+    },
+}
+```
+
+The CSSObject defines a property type for each style property, which supports a wide range of types.
+
+```csharp
+var css = new CSSObject
+{
+    [".btn-default"] = new CSSObject
+    {
+        // different ways to set the value
+        Width = 200,
+        Width = "200px",
+        Width = "100%",
+        Width = "var(--btn-width)",
+    },
+}
+```
+
+The width of the number type is automatically wrapped with `px` at the time of serialization.
+
+
+The benefit of numeric types is that you can use operators for style attributes.
+
+```csharp
+var token = 10;
+var css = new CSSObject
+{
+    [".btn-default"] = new CSSObject
+    {
+        // eg: use four operations + - * /
+        Width = 200 + token,
+        Width = 200 - token,
+        Width = 200 * token,
+        Width = 200 / token,
+    },
+}
+```
+
+## Structured Stylesheet
+
+The stylesheet is structured, this is similar to less or sass.
+
+
+HTML
+```html
+<div class="div1">
+    <div class="div2">
+        <div class="div3"></div>
+    </div>
+</div>
+```
+Standard CSS
+```css
+.div1 { ... }
+.div1 .div2 { ... }
+.div1 .div2 .div3 { ... }
+```
+CssInCSharp
+```csharp
+var css = new CSSObject
+{
+    [".div1"] = new CSSObject
+    {
+        [".div2"] = new CSSObject
+        {
+            [".div3"] = new CSSObject
+            {
+            }
+        }
+    }
+}
 ```
 
 ## Parent Selectors
@@ -73,7 +165,7 @@ a:hover {
 }
 ```
 
-The "parent selectors" operator has a variety of uses. Basically any time you need the selectors of the nested rules to be combined in other ways than the default. For example another typical use of the & is to produce repetitive class names:
+The `parent selectors` operator has a variety of uses. Basically any time you need the selectors of the nested rules to be combined in other ways than the default. For example another typical use of the & is to produce repetitive class names:
 
 ```csharp
 var css = new CSSObject
@@ -409,3 +501,180 @@ Transform animation example:
 }
 ```
 
+## Colors
+CssInCSharp provider a TinyColor type for color manipulation and conversion.
+
+```csharp
+// convert rgb string to hex
+new TinyColor("rgb 255 0 0").ToHexString(); // should be: #ff0000
+
+// convert hex to rgb
+new TinyColor("#fff").ToRgbString(); // should be: rgb(255, 255, 255)
+
+// convert css color to hex
+new TinyColor("red").ToHexString(); // should be: #ff0000
+
+// from rgb
+new TinyColor(new RGB(255, 0, 0)).ToHexString(); // should be: #ff0000
+
+// set alpha
+new TinyColor("rgba(255, 0, 0, 1)").SetAlpha(0.9);
+```
+
+## Style Rendering
+
+The CssInCSharp lib provides a set of components for style rendering. Including `<StyleOutlet>` , `<StyleContent>` and `<Style>`.
+
+The `<StyleOutlet>` component is the entry component of the style, if you want to render the style to the head tag, you need to put this component in the head.
+
+In wasm project, add this code to `Program.cs` file.
+```csharp
+// builder.RootComponents.Add<HeadOutlet>("head::after"); // remove this line
+builder.RootComponents.Add<StyleOutlet>("head::after");   // add StyleOutlet to head
+```
+In server project, add this code to `_Layout.cshtml` file.
+```html
+<head>
+  <!--add StyleOutlet here, is should be on the top-->
+  <!--also should remove HeadOutlet-->
+  <component type="typeof(StyleOutlet)" render-mode="ServerPrerendered" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  ...
+</head>
+```
+
+The content of the `<StyleContent>` will be rendered into the `<StyleOutlet>`. StyleContent will usually be placed on the page. Each page can only contain one StyleContent, if there are multiple ones, only the last rendered will take effect.
+
+```html
+@page "/"
+
+<div></div>
+
+<PageTitle>Home</PageTitle>
+
+<StyleContent>
+  <!--put your style here-->
+</StyleContent>
+
+@code{
+
+}
+```
+
+The `<Style>` component provides style tag generation, style caching, and style uniqueness.
+
+Style Component Properties: 
+| Name    | Type   | Desc                     |
+| ------- | ------ | ------------------------ |
+| HashId  | string | Hash of style token.     |
+| Path    | string | Path of style.           |
+| StyleFn | Func   | Style generation method. |
+
+```csharp
+@page "/"
+
+<div class="div1"></div>
+
+<PageTitle>Home</PageTitle>
+
+<StyleContent>
+  <Style HashId="@_tokenHash" Path="home|button" StyleFn="@StyleFn"></Style>
+</StyleContent>
+
+@code
+{
+    private string _tokenHash = "css-zcfrx9";
+
+    private CSSInterpolation GenStyle()
+    {
+        return new CSSObject
+        {
+            [".div1"] = new CSSObject
+            {
+                Width = "200px",
+                Height = "200px",
+                Border = "1px solid #DDD",
+            }
+        };
+    }
+}
+```
+
+**NOTE:**
+The `Path` provides uniqueness for the style, only one style tag will be created of the same path. When designing a component, you should add a Path to the component style, so that no matter how many instances the component creating, there is only one stylesheet for those instances.
+
+
+When style is generated, the `<Style>` component will create a cache for the generated style based on the `Path`. When component is updated, if the style is cached, `StyleFn` will no longer execute, but will take the cached value.
+
+## CSS Isolation
+The `Style` component uses the `:where` pseudo-class to implement style isolation. If you need to enable style isolation, just set the value for the `HashId`.
+
+```csharp
+<div class="@_tokenHash div1"></div>
+
+<StyleContent>
+  <Style HashId="@_tokenHash" Path="home|button" StyleFn="@StyleFn"></Style>
+</StyleContent>
+
+@code{
+    private string _tokenHash = "css-zcfrx9";
+
+    private CSSInterpolation GenStyle()
+    {
+        return new CSSObject
+        {
+            [".div1"] = new CSSObject
+            {
+                Width = "200px",
+                Height = "200px",
+                Border = "1px solid #DDD",
+            }
+        };
+    }
+}
+```
+The style output:
+```css
+<style>
+:where(.css-zcfrx9).div1{width:200px;height:200px;border:1px solid #DDD;}
+</style>
+```
+
+## Custom Component Style
+On a page, you can use the `<StyleContent>` component to add styles, but you can't use StyleContent in custom component, so if you need to add a style to the head in the custom component, you need to use the `UseStyleRegister` method in the `StyleHelper` class to register the style.
+
+DemoComponent.razor
+```csharp
+<div class="@_tokenHash demo"></div>
+@_styleContent
+
+@code
+{
+    private RenderFragment _styleContent;
+    private string _tokenHash = "css-zcfrx9";
+
+    protected override void OnInitialized()
+    {
+        _styleContent = StyleHelper.UseStyleRegister(new StyleInfo
+        {
+            HashId = _tokenHash,
+            Path = new[] { "component", "demo" },
+            StyleFn = GenStyle
+        });
+    }
+
+    private CSSInterpolation GenStyle()
+    {
+        return new CSSObject
+        {
+            [".demo"] = new CSSObject
+            {
+                Width = "200px",
+                Height = "200px",
+                Border = "1px solid #DDD",
+            }
+        };
+    }
+}
+```
