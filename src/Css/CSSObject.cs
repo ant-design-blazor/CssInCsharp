@@ -1,4 +1,3 @@
-using System;
 using static CssInCSharp.Compiler.Serializer;
 using static CssInCSharp.Compiler.Parser;
 using static CssInCSharp.Constant;

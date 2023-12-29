@@ -1,7 +1,6 @@
 ﻿using static CssInCSharp.Compiler.Utility;
 using static CssInCSharp.Compiler.Enum;
 using System.Collections.Generic;
-using CssInCSharp;
 
 namespace CssInCSharp.Compiler
 {
