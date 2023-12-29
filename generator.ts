@@ -328,32 +328,32 @@ ${sb}    }
 
 function generateProperty() {
     const input = './node_modules/csstype/index.d.ts';
-    const output = './src/Types/Property.cs';
+    const output = './src/Css/Property.cs';
     generatePropertyTypes(input, output, 18459, 20144);
-    generatePropertyGeneric('./src/Types/PropertyT.cs', 4);
+    generatePropertyGeneric('./src/Css/PropertyT.cs', 4);
 }
 
 function generateStandardLonghand() {
     const input = './node_modules/csstype/index.d.ts';
-    const output = './src/CSSObject.StandardLonghand.cs';
+    const output = './src/Css/CSSObject.StandardLonghand.cs';
     generatePropertyItems(input, output, 11, 5064);
 }
 
 function generateStandardShorthand() {
     const input = './node_modules/csstype/index.d.ts';
-    const output = './src/CSSObject.StandardShorthand.cs';
+    const output = './src/Css/CSSObject.StandardShorthand.cs';
     generatePropertyItems(input, output, 5066, 5864);
 }
 
 function generateVendorLonghand() {
     const input = './node_modules/csstype/index.d.ts';
-    const output = './src/CSSObject.VendorLonghand.cs';
+    const output = './src/Css/CSSObject.VendorLonghand.cs';
     generatePropertyItems(input, output, 5870, 7663);
 }
 
 function generateVendorShorthand() {
     const input = './node_modules/csstype/index.d.ts';
-    const output = './src/CSSObject.VendorShorthand.cs';
+    const output = './src/Css/CSSObject.VendorShorthand.cs';
     generatePropertyItems(input, output, 7665, 7816);
 }
 
@@ -381,7 +381,7 @@ ${items.join(',\r\n')}
         };
     }
 }`;
-    const output = './src/Types/Unitless.cs';
+    const output = './src/Css/Unitless.cs';
     fs.writeFileSync(output, template, 'utf8');
 }
 
