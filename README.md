@@ -2,7 +2,7 @@
 
 A lib for generating Style Sheets with C#.
 
-For documentation see our [docs](./docs/index.md).
+[English](./docs/index.md) | [简体中文](./docs/index.zh-CN.md)
 
 ![Latest Version](https://img.shields.io/github/actions/workflow/status/ant-design-blazor/CssInCsharp/package.yml?style=flat-square)
 [![CssInCSharp](https://img.shields.io/nuget/v/CssInCSharp.svg?color=red&style=flat-square)](https://www.nuget.org/packages/CssInCsharp)

@@ -1,43 +1,46 @@
-# Table of Contents
-- [Table of Contents](#table-of-contents)
-- [Getting Started](#getting-started)
-  - [Install Package](#install-package)
-  - [Add Using](#add-using)
-  - [Create CSS Object](#create-css-object)
-- [Usage](#usage)
-  - [Structured Stylesheet](#structured-stylesheet)
-  - [Parent Selectors](#parent-selectors)
-  - [Merge](#merge)
-    - [Reuse global styles](#reuse-global-styles)
-    - [Using merge operator](#using-merge-operator)
-    - [Overwrite existing styles](#overwrite-existing-styles)
-  - [Variables](#variables)
-    - [Retain CSS](#retain-css)
-  - [Functions](#functions)
-  - [Animation](#animation)
-  - [Colors](#colors)
-  - [Style Rendering](#style-rendering)
-  - [CSS Isolation](#css-isolation)
-  - [Custom Component Style](#custom-component-style)
+# 目录表
+- [目录表](#目录表)
+- [开始](#开始)
+  - [安装包](#安装包)
+  - [添加引用](#添加引用)
+  - [创建CSSObject](#创建cssobject)
+- [用法简介](#用法简介)
+  - [结构化样式表](#结构化样式表)
+  - [父选择](#父选择)
+  - [样式合并](#样式合并)
+    - [复用全局样式](#复用全局样式)
+    - [使用操作符合并样式](#使用操作符合并样式)
+    - [覆写已有样式](#覆写已有样式)
+  - [变量](#变量)
+    - [保留样式](#保留样式)
+  - [方法](#方法)
+  - [动画](#动画)
+  - [颜色](#颜色)
+  - [样式渲染](#样式渲染)
+    - [StyleOutlet组件](#styleoutlet组件)
+    - [StyleContent组件](#stylecontent组件)
+    - [Style组件](#style组件)
+  - [样式隔离](#样式隔离)
+  - [自定义组件样式](#自定义组件样式)
 
-# Getting Started
+# 开始
 
-## Install Package
+## 安装包
 ```sh
 dotnet add package CssInCSharp
 ```
 
-## Add Using
+## 添加引用
 
-Add usings to _Imports.razor file in your blazor project.
+在blazor项目中，添加以下代码到_Imports.razor文件中。
 
 ```CSharp
 @using CssInCSharp
 ```
 
-## Create CSS Object
+## 创建CSSObject
 ```CSharp
-// Create css object
+// 创建一个CSSObject对象
 var css = new CSSObject
 {
     [".demo"] = new CSSObject
@@ -63,39 +66,41 @@ var css = new CSSObject
     }
 };
 
-// Serialize the css object.
+// 使用ToString方法来序列化样式表
 var style = css.ToString();
-// or use hashId
+// 或者使用SerializeCss方法序列化样式表。
 var style = css.SerializeCss("hashId");
 ```
 
-The CSSObject type supports a string indexer, which you can add calss names, attributes, selectors, and variables.
+CSSObject类型支持字符串类型的索引器，你可以利用该索引器向样式对象中添加样式名称，样式属性，选择器和变量等。
 
 ```csharp
 var css = new CSSObject
 {
-    // class name
+    // 索引器支持样式名称
     [".btn-default"] = new CSSObject
     {
-        // selectors
+        // 索引器支持选择器
         ["&:hober"] = ...,
         ["> span"] = ...,
         ["button"] = ...,
 
-        // css variable
+        // 索引器支持变量
         ["--btn-display"] = "block",
+
+        // 索引器支持样式属性，但是推荐使用强类型属性字段
+        ["color"] = "red",
     },
 }
 ```
-
-The CSSObject defines a property type for each style property, which supports a wide range of types.
+CSSObject为每个样式属性定义了属性类型，该类型支持多种值。
 
 ```csharp
 var css = new CSSObject
 {
     [".btn-default"] = new CSSObject
     {
-        // different ways to set the value
+        // Width属性既支持数字类型，同时也支持字符串类型。
         Width = 200,
         Width = "200px",
         Width = "100%",
@@ -104,10 +109,9 @@ var css = new CSSObject
 }
 ```
 
-The width of the number type is automatically wrapped with `px` at the time of serialization.
+数字类型的属性在序列化时会自动添加`px`后缀。CSSObject内部有一个数据集用来判断该属性是否支持px。
 
-
-The benefit of numeric types is that you can use operators for style attributes.
+使用数字类型的属性，可以对属性进行数值运算，而不用进行类型转换。
 
 ```csharp
 var token = 10;
@@ -115,7 +119,7 @@ var css = new CSSObject
 {
     [".btn-default"] = new CSSObject
     {
-        // eg: use four operations + - * /
+        // 例如：可以在属性赋值时进行四则运算等。
         Width = 200 + token,
         Width = 200 - token,
         Width = 200 * token,
@@ -124,10 +128,10 @@ var css = new CSSObject
 }
 ```
 
-# Usage
-## Structured Stylesheet
+# 用法简介
+## 结构化样式表
 
-The stylesheet is structured, this is similar to less or sass.
+和less或sass类似，CSSObject也是结构化的样式表。可以使用对象嵌套的方式来表示样式的层级关系。
 
 
 HTML
@@ -160,9 +164,9 @@ var css = new CSSObject
 }
 ```
 
-## Parent Selectors
+## 父选择
 
-Referencing parent selectors with & , This is the same as less. 
+和less一样，CSSObject也是使用 `&` 来表示对父级选择器的引用。
 
 ```csharp
 var css = new CSSObject
@@ -190,7 +194,8 @@ a:hover {
 }
 ```
 
-The `parent selectors` operator has a variety of uses. Basically any time you need the selectors of the nested rules to be combined in other ways than the default. For example another typical use of the & is to produce repetitive class names:
+`&` 操作符用途有很多，基本上只要是默认规则以外的其他方式组合嵌套的选择器都可以使用。例如：你可以使用 `&` 来生成重复的样式名称。
+
 
 ```csharp
 var css = new CSSObject
@@ -227,12 +232,13 @@ output:
 }
 ```
 
-## Merge
+## 样式合并
 
-You can use the merge method to inherit or merge multiple css object in some scenarios.
+在某些使用场景里，你可以使用Merge方式来继承或合并多个样式对象。
 
-### Reuse global styles
+### 复用全局样式
 ```CSharp
+// 这是一个全局共用样式对象
 var globalCss = new CSSObject
 {
     Background = "#EFEFEF",
@@ -241,7 +247,7 @@ var globalCss = new CSSObject
     MarginBottom = "20px"
 };
 
-// merge with a global css
+// 使用Merge方法可以将该全局样式合并到当前样式中，合并时会覆盖已经存在的同名属性。
 var css = new CSSObject
 {
     [".div1"] = new CSSObject
@@ -270,7 +276,9 @@ var css = new CSSObject
 };
 ```
 
-### Using merge operator
+### 使用操作符合并样式
+CSSObject对象中提供了一个合并操作符`["..."]`，使用该操作符何以在构造期间进行指定位置的样式合并。
+
 ```CSharp
 var globalCss = new CSSObject
 {
@@ -289,23 +297,23 @@ var css = new CSSObject
 {
     [".div1"] = new CSSObject
     {
-        // using "..." to merge globalCss, similar to the ...globalCss in ts.
+        // 使用 ["..."] 来合并全局样式, 写法类似TS中的 ...globalCss
         ["..."] = globalCss,
         Width = "100px",
         Height = "100px",
         Color = "red",
-        ["..."] = colorCss, // merge operator can be used multiple times.
+        ["..."] = colorCss, // 合并操作符何以多次使用。
     }
 };
 ```
 
-**NOTE** : The Merge method can only overwrite the object property after instantiation, but the Merge operator can be overridden during instantiation.
+**注意** : Merge方法，只能用在对象构造之后。`["..."]`操作符可以用在对象构造期间。
 
 
-### Overwrite existing styles
+### 覆写已有样式
+Merge方法可以覆盖对象中已有的样式。例如：覆盖上述样式对象中div3的title的颜色值。
 
 ```CSharp
-// override div3 title color
 css.Merge(new CSSObject
 {
     [".div3"] = new CSSObject
@@ -318,19 +326,20 @@ css.Merge(new CSSObject
 });
 ```
 
-## Variables
+## 变量
 
-You can use the variables defined in your class during css object creation, including member variables, local variables etc.
+CssInCsharp设计的目的就是为了能够利用C#语言的一切特性来生成样式。所以你可以在创建样式过程中使用C#定义的任何变量，包括但不限于全局变量，成员变量或局部变量。
+
 
 ```CSharp
 private string _style = "";
-private string _color = "red";        // field
+private string _color = "red";        // 成员变量
 [Parameter]
-public int Size { get; set; } = 200;  // component parameter
+public int Size { get; set; } = 200;  // 组件属性
 
 protected override void OnInitialized()
 {
-    var fontSize = "16px";            // local varibale
+    var fontSize = "16px";            // 局部变量
     var css = new CSSObject
     {
         [".div1"] = new CSSObject
@@ -348,23 +357,22 @@ protected override void OnInitialized()
         }
     };
 
-    // variables are effective only during initialization
     _style = css.ToString();
 }
 ```
-**Variables are effective only during initialization, you should not change the css object by modifying variables after initialization.**
+**变量值只在序列化时生效，一旦序列化完成后，样式就不再受变量值影响。除非重新序列化样式。**
 
-### Retain CSS
+### 保留样式
 
 ```CSharp
 private CSSObject _css = new ();
 private string _color = "red";
 [Parameter]
-public int Size { get; set; } = 200;  // component parameter
+public int Size { get; set; } = 200;  // 组件属性
 
 protected override void OnInitialized()
 {
-    var fontSize = "16px";            // local varibale
+    var fontSize = "16px";            // 局部变量
     _css = new CSSObject
     {
         [".div2"] = new CSSObject
@@ -383,14 +391,15 @@ protected override void OnInitialized()
 }
 ```
 
-If you want to change css object after initialization, you should define css object as a member variable, but we do not recommend you to do this.
+如果你需要在样式对象构造完成后并更新它，那么你需要将它定义成成员变量或全局变量。但这么做并不推荐。
 
-The following examples shows how to change a css object.
+
+以下是演示如何修改上述定义的CSSObject对象。
 
 ```CSharp
 private void ClickToChangeCssObject() 
 {
-    // 1.use merge method to change css object, @see merge example.
+    // 1.使用Merge方法来修改其内容
     _css.Merge(new CSSObject
     {
         [".div2"] = new ()
@@ -402,18 +411,18 @@ private void ClickToChangeCssObject()
         }
     });
 
-    // 2.or set property directly
+    // 2.直接设置对象属性的值
     _css[".div2"]["& .title"].Color = "green";
 
-    // rerender the style
+    // 重新序列化样式
     _style = _css.ToString();
 }
 ```
-**Remember: Never change the css object after initialization.**
+**注意: 尽可能不要在样式已经初始化结束再修改样式内容。**
 
-## Functions
+## 方法
 
-As you know, Functions are also supported.
+由于CssInCsharp是完全基于C#语言的，因此也可以在创建样式时调用C#定义的方法。
 
 ```CSharp
 private int _size = 500;
@@ -439,14 +448,14 @@ protected override async Task OnInitializedAsync()
             },
             ["& .body"] = new CSSObject
             {
-                // normal method
+                // 直接调用普通的方法
                 Height = $"{CalcBodyHeight(50, 50)}px",
                 Width = "100%",
                 BorderTop = "1px solid #DDD",
                 BorderBottom = "1px solid #DDD",
                 [".container"] = new CSSObject
                 {
-                    // async method
+                    // 也可以调用async方法
                     Height = await GetContainerSizeAsync(),
                     BackgroundColor = "#EFEFEF",
                 }
@@ -467,11 +476,11 @@ private async Task<string> GetContainerSizeAsync()
 }
 ```
 
-## Animation
+## 动画
 
-We designed a **Keyframe** type to create animation styles, which are supported by the AnimationName property.
+CSSObject类型的AnimationName属性支持`Keyframe`类型的值。使用该类型可以创建动画效果。
 
-Transform animation example:
+这是一个渐变效果的动画，在3s内将div宽度从0px变到100px，透明度从1变为0.2
 
 ```csharp
 <div class="transform">
@@ -516,7 +525,7 @@ Transform animation example:
                         ["to"] = new()
                         {
                             Transform = "translateX(100px)",
-                            Opacity = 0.2f
+                            Opacity = 0.2
                         }
                     }
                 }
@@ -526,50 +535,61 @@ Transform animation example:
 }
 ```
 
-## Colors
-CssInCSharp provider a TinyColor type for color manipulation and conversion.
+## 颜色
+CssInCSharp提供了用于颜色处理和转换的TinyColor类型。该类型可以用来对不同颜色值进行转换处理。例如RGB和16进制互转等。同时也支持css颜色转rgb或16进制。
 
+* 字符串rgb转16进制
 ```csharp
-// convert rgb string to hex
-new TinyColor("rgb 255 0 0").ToHexString(); // should be: #ff0000
-
-// convert hex to rgb
-new TinyColor("#fff").ToRgbString(); // should be: rgb(255, 255, 255)
-
-// convert css color to hex
-new TinyColor("red").ToHexString(); // should be: #ff0000
-
-// from rgb
-new TinyColor(new RGB(255, 0, 0)).ToHexString(); // should be: #ff0000
-
-// set alpha
+new TinyColor("rgb 255 0 0").ToHexString(); // 输出: #ff0000
+```
+* 16进制字符串转rgb
+```csharp
+new TinyColor("#fff").ToRgbString(); // 输出: rgb(255, 255, 255)
+```
+* css颜色值转16进制
+```csharp
+new TinyColor("red").ToHexString(); // 输出: #ff0000
+```
+* RGB对象转16进制
+```csharp
+new TinyColor(new RGB(255, 0, 0)).ToHexString(); // 输出: #ff0000
+```
+* 单独设置Alpha通道值
+```csharp
 new TinyColor("rgba(255, 0, 0, 1)").SetAlpha(0.9);
 ```
 
-## Style Rendering
+## 样式渲染
 
-The CssInCSharp lib provides a set of components for style rendering. Including `<StyleOutlet>` , `<StyleContent>` and `<Style>`.
+CssInCSharp提供一组用于样式渲染输出的组件。包括 `<StyleOutlet>` , `<StyleContent>` 和 `<Style>`。
 
-The `<StyleOutlet>` component is the entry component of the style, if you want to render the style to the head tag, you need to put this component in the head.
+### StyleOutlet组件
+`<StyleOutlet>`组件是样式的入口组件，如果你需要将样式输出到页面的`head`标签中，那么你需要将该组件放到`head`里。西面演示如果在不同项目中设置该组件。
 
-In wasm project, add this code to `Program.cs` file.
+
+在wasm模板工程中, 在`Program.cs`文件里修改如下代码。
 ```csharp
-// builder.RootComponents.Add<HeadOutlet>("head::after"); // remove this line
-builder.RootComponents.Add<StyleOutlet>("head::after");   // add StyleOutlet to head
+// builder.RootComponents.Add<HeadOutlet>("head::after"); // 移除自动生成的HeadOutlet组件
+builder.RootComponents.Add<StyleOutlet>("head::after");   // 添加StyleOutlet组件到RootComponents中
 ```
-In server project, add this code to `_Layout.cshtml` file.
+在server模板工程中, 需要修改`_Layout.cshtml`的代码。
 ```html
 <head>
-  <!--add StyleOutlet here, is should be on the top-->
-  <!--also should remove HeadOutlet-->
+  <!--添加StyleOutlet，并且将它置于其它标签的最顶端。-->
   <component type="typeof(StyleOutlet)" render-mode="ServerPrerendered" />
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   ...
+  <!--移除自带的HeadOutlet组件-->
+  <!--<component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />-->
 </head>
 ```
 
-The content of the `<StyleContent>` will be rendered into the `<StyleOutlet>`. StyleContent will usually be placed on the page. Each page can only contain one StyleContent, if there are multiple ones, only the last rendered will take effect.
+### StyleContent组件
+`<StyleContent>`组件会把组件的内容渲染到`<StyleOutlet>`所在位置。StyleContent组件一般放在Razor页面里，每个页面只能有一个StyleContent组件。如果一个页面中同时存在多个StyleContent组件，那么只有最后渲染的那个组件才会生效。
+
+
+Index.Razor页面：
 
 ```html
 @page "/"
@@ -579,7 +599,8 @@ The content of the `<StyleContent>` will be rendered into the `<StyleOutlet>`. S
 <PageTitle>Home</PageTitle>
 
 <StyleContent>
-  <!--put your style here-->
+  <style>.demo1{ color:'red'; }</style>
+  <style>.demo2{ color:'yellow'; }</style>
 </StyleContent>
 
 @code{
@@ -587,15 +608,23 @@ The content of the `<StyleContent>` will be rendered into the `<StyleOutlet>`. S
 }
 ```
 
-The `<Style>` component provides style tag generation, style caching, and style uniqueness.
+StyleContent里可以放原生的style标签也可以放CssInCsharp提供的Style组件。
 
-Style Component Properties: 
-| Name    | Type   | Desc                     |
-| ------- | ------ | ------------------------ |
-| HashId  | string | Hash of style token.     |
-| Path    | string | Path of style.           |
-| StyleFn | Func   | Style generation method. |
+**NOTE：** 由于每个页面只能有一个StyleContent组件，因此StyleContent只能放在页面里，不能用在组件中。(因为组件可能会被实例化多次，例如Button组件，在同一个页面上也可能存在多个实例)
 
+### Style组件
+`<Style>`组件用于创建样式标签和保证样式的唯一性，要注意区别于html本身的`<style>`标签。
+
+
+Style组件属性列表: 
+| Name    | Type   | Desc                                          |
+| ------- | ------ | --------------------------------------------- |
+| HashId  | string | 样式的HashId，依据token计算得到，用于样式隔离 |
+| Path    | string | 样式路径，用于保证样式唯一性                  |
+| StyleFn | Func   | 样式生成方法                                  |
+
+
+示例：
 ```csharp
 @page "/"
 
@@ -627,13 +656,17 @@ Style Component Properties:
 ```
 
 **NOTE:**
-The `Path` provides uniqueness for the style, only one style tag will be created of the same path. When designing a component, you should add a Path to the component style, so that no matter how many instances the component creating, there is only one stylesheet for those instances.
+`Path` 属性为样式提供了唯一性保证，相同的Path只会创建一个style标签。因此在为组件设计样式时，一定要设置Path属性，这样无论该组件被实例化多少次，它的样式表有且只有一份。
+
+在使用`<Style>`组件创建样式时，该组件会以Path属性为Key，为该样式生成缓存。缓存创建后即便组件状态发生变化，样式创建方法`StyleFn`不会再被调用，而是会从缓存中获取样式内容。`StyleFn`方法只在缓存不存在时才会被调用。
 
 
-When style is generated, the `<Style>` component will create a cache for the generated style based on the `Path`. When component is updated, if the style is cached, `StyleFn` will no longer execute, but will take the cached value.
+## 样式隔离
+`<Style>`组件使用`:where`的伪类来实现样式隔离。如果你需要对样式进行样式隔离，那么只需要在样式序列化时带上`HashId`即可。
 
-## CSS Isolation
-The `Style` component uses the `:where` pseudo-class to implement style isolation. If you need to enable style isolation, just set the value for the `HashId`.
+一般HashId是依据样式Token生成的，样式Token可以是主题相关配置，也可以依据自己的需求生成。它本身无特殊要求只是一个字符串而已。
+
+一旦设置了`HashId`那么所有生成的样式都会带上`:where`伪类。只有符合的html标签该样式才会生效。
 
 ```csharp
 <div class="@_tokenHash div1"></div>
@@ -659,17 +692,17 @@ The `Style` component uses the `:where` pseudo-class to implement style isolatio
     }
 }
 ```
-The style output:
+输出的样式:
 ```css
 <style>
 :where(.css-zcfrx9).div1{width:200px;height:200px;border:1px solid #DDD;}
 </style>
 ```
 
-## Custom Component Style
-On a page, you can use the `<StyleContent>` component to add styles, but you can't use StyleContent in custom component, so if you need to add a style to the head in the custom component, you need to use the `UseStyleRegister` method in the `StyleHelper` class to register the style.
+## 自定义组件样式
+在页面上，你可以使用`<StyleContent>`组件来添加页面样式。但是StyleContent并不能用在自定义的组件里。例如创建一个`<DemoComponent>`组件，该如何为这个自定义组件添加样式。CssInCsharp提供一个全局的Helper类`StyleHelper`。你可以使用`UseStyleRegister`方法来向head标签里注入样式。
 
-DemoComponent.razor
+DemoComponent.razor演示代码：
 ```csharp
 <div class="@_tokenHash demo"></div>
 @_styleContent
@@ -703,3 +736,4 @@ DemoComponent.razor
     }
 }
 ```
+`UseStyleRegister`方法调用后会返回RenderFragment对象。你需要将该对象放到组件里。
