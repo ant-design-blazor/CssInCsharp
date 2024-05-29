@@ -1000,5 +1000,70 @@ namespace CssInCSharp.Tests
                 ".user.foo.bar{color:orange;}",
                 ".user.foo.bar.barbar{color:orange;}"));
         }
+
+        [Fact]
+        public void Cascade_Layer()
+        {
+            stylis(@"
+        @layer base {
+          border-left:1px solid hotpink;
+        }
+            ").ShouldBe("@layer base{.user{border-left:1px solid hotpink;}}");
+
+            stylis(@"
+        @layer base {
+          @layer layout {
+            border-left:1px solid hotpink;
+          }
+        }
+            ").ShouldBe("@layer base{@layer layout{.user{border-left:1px solid hotpink;}}}");
+
+            stylis(@"
+        @layer framework.layout {
+          border-left:1px solid hotpink;
+        }
+            ").ShouldBe("@layer framework.layout{.user{border-left:1px solid hotpink;}}");
+
+            stylis(@"
+        @import ""theme.css"" layer(utilties);
+            ").ShouldBe("@import \"theme.css\" layer(utilties);");
+
+            stylis(@"
+        @import ""foo"";
+            ").ShouldBe("@import \"foo\";");
+
+            stylis(@"
+        @layer utilities;
+            ").ShouldBe("@layer utilities;");
+
+            stylis(@"
+        @layer theme, layout, utilities;
+            ").ShouldBe("@layer theme,layout,utilities;");
+
+            stylis(@"
+        @media (min-width: 30em) {
+          @layer layout {
+            .title { font-size: x-large; }
+          }
+        }
+
+        @layer theme {
+          @media (prefers-color-scheme: dark) {
+            .title { color: white; }
+          }
+        }
+            ").ShouldBe(string.Join("",
+                "@media (min-width: 30em){@layer layout{.user .title{font-size:x-large;}}}",
+                "@layer theme{@media (prefers-color-scheme: dark){.user .title{color:white;}}}"));
+
+            stylis(@"
+        @layer framework {
+          @keyframes slide-left {
+            from { margin-left: 0; }
+            to { margin-left: -100%; }
+          }
+        }
+            ").ShouldBe("@layer framework{@keyframes slide-left{from{margin-left:0;}to{margin-left:-100%;}}}");
+        }
     }
 }

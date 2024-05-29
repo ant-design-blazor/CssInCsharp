@@ -25,6 +25,7 @@ namespace CssInCSharp.Compiler
         {
             switch (element.Type)
             {
+                case LAYER: if(element.Children.Count != 0) break; goto case IMPORT;
                 case IMPORT: case DECLARATION: return element.Return = !string.IsNullOrEmpty(element.Return) ? element.Return : element.Value;
                 case COMMENT: return "";
                 case KEYFRAMES: return element.Return = element.Value + "{" + Serialize(element.Children, callback) + "}";

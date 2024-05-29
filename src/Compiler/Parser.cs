@@ -95,8 +95,8 @@ namespace CssInCSharp.Compiler
                                     else
                                         switch (atrule == 99 && CharAt(characters, 3) == 110 ? 100 : atrule)
                                         {
-                                            // d m s
-                                            case 100 or 109 or 115:
+                                            // d l m s
+                                            case 100 or 108 or 109 or 115:
                                                 var p = new List<Element>();
                                                 if (rule != null)
                                                 {
