@@ -42,7 +42,7 @@ namespace CssInCSharp.Compiler
                     case 40:
                         if (previous != 108 && CharAt(characters, length - 1) == 58)
                         {
-                            if (IndexOf(characters += Replace(tokenizer.Delimit(character), "&", "&\f"), "&\f") != -1)
+                            if (IndexOf(characters += Replace(tokenizer.Delimit(character), "&", "&\f"), "&\f", Abs(index != 0 ? points[index - 1] : 0)) != -1)
                                 ampersand = -1;
                             break;
                         }

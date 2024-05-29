@@ -11,9 +11,9 @@ namespace CssInCSharp.Compiler
             return (int) value[index];
         }
 
-        public static int IndexOf(string value, string search)
+        public static int IndexOf(string value, string search, int position)
         {
-            return value.IndexOf(search);
+            return value.IndexOf(search, position);
         }
 
         public static string Replace(string value, string pattern, string replacement, bool all = false)

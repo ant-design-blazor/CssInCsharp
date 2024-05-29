@@ -143,6 +143,21 @@ namespace CssInCSharp.Tests
         }
 
         [Fact]
+        public void Ampersand_In_First_Selector_Within_A_CommaSeparated_List()
+        {
+            stylis(@"
+        div {
+          display: flex;
+
+          &.foo,
+          p:not(:last-child) {
+            background: red;
+          }
+        }
+            ").ShouldBe(".user div{display:flex;}.user div.foo,.user div p:not(:last-child){background:red;}");
+        }
+
+        [Fact]
         public void Escaped_Chars_In_Selector_Identifiers()
         {
             stylis(@"
@@ -769,6 +784,10 @@ namespace CssInCSharp.Tests
                 .ShouldBe(string.Join("",
                     ".user{background:url[img}.png];}",
                     ".user .a{background:url[img}.png];}"));
+            stylis("background: url(i&m&g.png);.a {background: url(i&m&g.png);}")
+                .ShouldBe(string.Join("",
+                    ".user{background:url(i&m&g.png);}",
+                    ".user .a{background:url(i&m&g.png);}"));
         }
 
         [Fact]
