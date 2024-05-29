@@ -42,7 +42,7 @@ namespace CssInCSharp.Compiler
                     case 40:
                         if (previous != 108 && CharAt(characters, length - 1) == 58)
                         {
-                            if (IndexOf(characters += Replace(tokenizer.Delimit(character), "&", "&\f"), "&\f") != -1)
+                            if (IndexOf(characters += Replace(tokenizer.Delimit(character), "&", "&\f"), "&\f", Abs(index != 0 ? points[index - 1] : 0)) != -1)
                                 ampersand = -1;
                             break;
                         }
@@ -95,8 +95,8 @@ namespace CssInCSharp.Compiler
                                     else
                                         switch (atrule == 99 && CharAt(characters, 3) == 110 ? 100 : atrule)
                                         {
-                                            // d m s
-                                            case 100 or 109 or 115:
+                                            // d l m s
+                                            case 100 or 108 or 109 or 115:
                                                 var p = new List<Element>();
                                                 if (rule != null)
                                                 {

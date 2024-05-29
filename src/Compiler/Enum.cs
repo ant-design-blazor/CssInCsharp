@@ -20,6 +20,6 @@
         public const string FONT_FACE = "@font-face";
         public const string COUNTER_STYLE = "@counter-style";
         public const string FONT_FEATURE_VALUES = "@font-feature-values";
-
+        public const string LAYER = "@layer";
     }
 }
