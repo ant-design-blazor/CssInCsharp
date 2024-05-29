@@ -43,13 +43,13 @@ namespace CssInCSharp
         }
 
         /// <summary>
-        /// The **`transition`** CSS property is a shorthand property for `transition-property`, `transition-duration`, `transition-timing-function`, and `transition-delay`.
-        /// <para> **Syntax**: `&lt;single-transition&gt;#`</para>
+        /// In Mozilla applications like Firefox, the **`-moz-outline-radius`** CSS shorthand property can be used to give an element's `outline` rounded corners.
+        /// <para> **Syntax**: `&lt;outline-radius&gt;{1,4} [ / &lt;outline-radius&gt;{1,4} ]?`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozTransition
+        public Property<PropertySkip, string, double> MozOutlineRadius
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-transition"];
-            set => _properties["-moz-transition"] = value;
+            get => (Property<PropertySkip, string, double>) _properties["-moz-outline-radius"];
+            set => _properties["-moz-outline-radius"] = value;
         }
 
         /// <summary>

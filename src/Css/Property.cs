@@ -422,6 +422,99 @@ namespace CssInCSharp
             }
         }
 
+        public readonly struct AnimationRange : IProperty
+        {
+            private readonly int _index;
+            private readonly PropertySkip _value0;
+            private readonly string _value1;
+            private readonly double _value2;
+
+            private AnimationRange(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
+            {
+                _index = index;
+                _value0 = value0;
+                _value1 = value1;
+                _value2 = value2;
+            }
+
+            public static implicit operator AnimationRange(PropertySkip t) => new(0, value0: t);
+            public static implicit operator AnimationRange(string t) => new(1, value1: t);
+            public static implicit operator AnimationRange(double t) => new(2, value2: t);
+
+            public string GetValue(string key)
+            {
+                return _index switch
+                {
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+        }
+
+        public readonly struct AnimationRangeEnd : IProperty
+        {
+            private readonly int _index;
+            private readonly PropertySkip _value0;
+            private readonly string _value1;
+            private readonly double _value2;
+
+            private AnimationRangeEnd(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
+            {
+                _index = index;
+                _value0 = value0;
+                _value1 = value1;
+                _value2 = value2;
+            }
+
+            public static implicit operator AnimationRangeEnd(PropertySkip t) => new(0, value0: t);
+            public static implicit operator AnimationRangeEnd(string t) => new(1, value1: t);
+            public static implicit operator AnimationRangeEnd(double t) => new(2, value2: t);
+
+            public string GetValue(string key)
+            {
+                return _index switch
+                {
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+        }
+
+        public readonly struct AnimationRangeStart : IProperty
+        {
+            private readonly int _index;
+            private readonly PropertySkip _value0;
+            private readonly string _value1;
+            private readonly double _value2;
+
+            private AnimationRangeStart(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
+            {
+                _index = index;
+                _value0 = value0;
+                _value1 = value1;
+                _value2 = value2;
+            }
+
+            public static implicit operator AnimationRangeStart(PropertySkip t) => new(0, value0: t);
+            public static implicit operator AnimationRangeStart(string t) => new(1, value1: t);
+            public static implicit operator AnimationRangeStart(double t) => new(2, value2: t);
+
+            public string GetValue(string key)
+            {
+                return _index switch
+                {
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+        }
+
         public readonly struct AnimationTimeline : IProperty
         {
             private readonly int _index;
@@ -4921,6 +5014,114 @@ namespace CssInCSharp
             }
         }
 
+        public readonly struct FontSynthesisPosition : IProperty
+        {
+            private readonly int _index;
+            private readonly PropertySkip _value0;
+            private readonly string _value1;
+
+            private FontSynthesisPosition(int index, PropertySkip value0 = default, string value1 = default)
+            {
+                _index = index;
+                _value0 = value0;
+                _value1 = value1;
+            }
+
+            public static implicit operator FontSynthesisPosition(PropertySkip t) => new(0, value0: t);
+            public static implicit operator FontSynthesisPosition(string t) => new(1, value1: t);
+
+            public string GetValue(string key)
+            {
+                return _index switch
+                {
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+        }
+
+        public readonly struct FontSynthesisSmallCaps : IProperty
+        {
+            private readonly int _index;
+            private readonly PropertySkip _value0;
+            private readonly string _value1;
+
+            private FontSynthesisSmallCaps(int index, PropertySkip value0 = default, string value1 = default)
+            {
+                _index = index;
+                _value0 = value0;
+                _value1 = value1;
+            }
+
+            public static implicit operator FontSynthesisSmallCaps(PropertySkip t) => new(0, value0: t);
+            public static implicit operator FontSynthesisSmallCaps(string t) => new(1, value1: t);
+
+            public string GetValue(string key)
+            {
+                return _index switch
+                {
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+        }
+
+        public readonly struct FontSynthesisStyle : IProperty
+        {
+            private readonly int _index;
+            private readonly PropertySkip _value0;
+            private readonly string _value1;
+
+            private FontSynthesisStyle(int index, PropertySkip value0 = default, string value1 = default)
+            {
+                _index = index;
+                _value0 = value0;
+                _value1 = value1;
+            }
+
+            public static implicit operator FontSynthesisStyle(PropertySkip t) => new(0, value0: t);
+            public static implicit operator FontSynthesisStyle(string t) => new(1, value1: t);
+
+            public string GetValue(string key)
+            {
+                return _index switch
+                {
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+        }
+
+        public readonly struct FontSynthesisWeight : IProperty
+        {
+            private readonly int _index;
+            private readonly PropertySkip _value0;
+            private readonly string _value1;
+
+            private FontSynthesisWeight(int index, PropertySkip value0 = default, string value1 = default)
+            {
+                _index = index;
+                _value0 = value0;
+                _value1 = value1;
+            }
+
+            public static implicit operator FontSynthesisWeight(PropertySkip t) => new(0, value0: t);
+            public static implicit operator FontSynthesisWeight(string t) => new(1, value1: t);
+
+            public string GetValue(string key)
+            {
+                return _index switch
+                {
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+        }
+
         public readonly struct FontVariant : IProperty
         {
             private readonly int _index;
@@ -7604,6 +7805,33 @@ namespace CssInCSharp
             }
         }
 
+        public readonly struct MasonryAutoFlow : IProperty
+        {
+            private readonly int _index;
+            private readonly PropertySkip _value0;
+            private readonly string _value1;
+
+            private MasonryAutoFlow(int index, PropertySkip value0 = default, string value1 = default)
+            {
+                _index = index;
+                _value0 = value0;
+                _value1 = value1;
+            }
+
+            public static implicit operator MasonryAutoFlow(PropertySkip t) => new(0, value0: t);
+            public static implicit operator MasonryAutoFlow(string t) => new(1, value1: t);
+
+            public string GetValue(string key)
+            {
+                return _index switch
+                {
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+        }
+
         public readonly struct MathDepth : IProperty
         {
             private readonly int _index;
@@ -8706,6 +8934,33 @@ namespace CssInCSharp
 
             public static implicit operator OverflowY(PropertySkip t) => new(0, value0: t);
             public static implicit operator OverflowY(string t) => new(1, value1: t);
+
+            public string GetValue(string key)
+            {
+                return _index switch
+                {
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+        }
+
+        public readonly struct Overlay : IProperty
+        {
+            private readonly int _index;
+            private readonly PropertySkip _value0;
+            private readonly string _value1;
+
+            private Overlay(int index, PropertySkip value0 = default, string value1 = default)
+            {
+                _index = index;
+                _value0 = value0;
+                _value1 = value1;
+            }
+
+            public static implicit operator Overlay(PropertySkip t) => new(0, value0: t);
+            public static implicit operator Overlay(string t) => new(1, value1: t);
 
             public string GetValue(string key)
             {
@@ -11714,6 +11969,60 @@ namespace CssInCSharp
             }
         }
 
+        public readonly struct TextWrap : IProperty
+        {
+            private readonly int _index;
+            private readonly PropertySkip _value0;
+            private readonly string _value1;
+
+            private TextWrap(int index, PropertySkip value0 = default, string value1 = default)
+            {
+                _index = index;
+                _value0 = value0;
+                _value1 = value1;
+            }
+
+            public static implicit operator TextWrap(PropertySkip t) => new(0, value0: t);
+            public static implicit operator TextWrap(string t) => new(1, value1: t);
+
+            public string GetValue(string key)
+            {
+                return _index switch
+                {
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+        }
+
+        public readonly struct TimelineScope : IProperty
+        {
+            private readonly int _index;
+            private readonly PropertySkip _value0;
+            private readonly string _value1;
+
+            private TimelineScope(int index, PropertySkip value0 = default, string value1 = default)
+            {
+                _index = index;
+                _value0 = value0;
+                _value1 = value1;
+            }
+
+            public static implicit operator TimelineScope(PropertySkip t) => new(0, value0: t);
+            public static implicit operator TimelineScope(string t) => new(1, value1: t);
+
+            public string GetValue(string key)
+            {
+                return _index switch
+                {
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+        }
+
         public readonly struct Top : IProperty
         {
             private readonly int _index;
@@ -11899,6 +12208,33 @@ namespace CssInCSharp
 
             public static implicit operator Transition(PropertySkip t) => new(0, value0: t);
             public static implicit operator Transition(string t) => new(1, value1: t);
+
+            public string GetValue(string key)
+            {
+                return _index switch
+                {
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+        }
+
+        public readonly struct TransitionBehavior : IProperty
+        {
+            private readonly int _index;
+            private readonly PropertySkip _value0;
+            private readonly string _value1;
+
+            private TransitionBehavior(int index, PropertySkip value0 = default, string value1 = default)
+            {
+                _index = index;
+                _value0 = value0;
+                _value1 = value1;
+            }
+
+            public static implicit operator TransitionBehavior(PropertySkip t) => new(0, value0: t);
+            public static implicit operator TransitionBehavior(string t) => new(1, value1: t);
 
             public string GetValue(string key)
             {
@@ -12135,6 +12471,118 @@ namespace CssInCSharp
             }
         }
 
+        public readonly struct ViewTimeline : IProperty
+        {
+            private readonly int _index;
+            private readonly PropertySkip _value0;
+            private readonly string _value1;
+
+            private ViewTimeline(int index, PropertySkip value0 = default, string value1 = default)
+            {
+                _index = index;
+                _value0 = value0;
+                _value1 = value1;
+            }
+
+            public static implicit operator ViewTimeline(PropertySkip t) => new(0, value0: t);
+            public static implicit operator ViewTimeline(string t) => new(1, value1: t);
+
+            public string GetValue(string key)
+            {
+                return _index switch
+                {
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+        }
+
+        public readonly struct ViewTimelineAxis : IProperty
+        {
+            private readonly int _index;
+            private readonly PropertySkip _value0;
+            private readonly string _value1;
+
+            private ViewTimelineAxis(int index, PropertySkip value0 = default, string value1 = default)
+            {
+                _index = index;
+                _value0 = value0;
+                _value1 = value1;
+            }
+
+            public static implicit operator ViewTimelineAxis(PropertySkip t) => new(0, value0: t);
+            public static implicit operator ViewTimelineAxis(string t) => new(1, value1: t);
+
+            public string GetValue(string key)
+            {
+                return _index switch
+                {
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+        }
+
+        public readonly struct ViewTimelineInset : IProperty
+        {
+            private readonly int _index;
+            private readonly PropertySkip _value0;
+            private readonly string _value1;
+            private readonly double _value2;
+
+            private ViewTimelineInset(int index, PropertySkip value0 = default, string value1 = default, double value2 = default)
+            {
+                _index = index;
+                _value0 = value0;
+                _value1 = value1;
+                _value2 = value2;
+            }
+
+            public static implicit operator ViewTimelineInset(PropertySkip t) => new(0, value0: t);
+            public static implicit operator ViewTimelineInset(string t) => new(1, value1: t);
+            public static implicit operator ViewTimelineInset(double t) => new(2, value2: t);
+
+            public string GetValue(string key)
+            {
+                return _index switch
+                {
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+        }
+
+        public readonly struct ViewTimelineName : IProperty
+        {
+            private readonly int _index;
+            private readonly PropertySkip _value0;
+            private readonly string _value1;
+
+            private ViewTimelineName(int index, PropertySkip value0 = default, string value1 = default)
+            {
+                _index = index;
+                _value0 = value0;
+                _value1 = value1;
+            }
+
+            public static implicit operator ViewTimelineName(PropertySkip t) => new(0, value0: t);
+            public static implicit operator ViewTimelineName(string t) => new(1, value1: t);
+
+            public string GetValue(string key)
+            {
+                return _index switch
+                {
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+        }
+
         public readonly struct ViewTransitionName : IProperty
         {
             private readonly int _index;
@@ -12204,6 +12652,60 @@ namespace CssInCSharp
 
             public static implicit operator WhiteSpace(PropertySkip t) => new(0, value0: t);
             public static implicit operator WhiteSpace(string t) => new(1, value1: t);
+
+            public string GetValue(string key)
+            {
+                return _index switch
+                {
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+        }
+
+        public readonly struct WhiteSpaceCollapse : IProperty
+        {
+            private readonly int _index;
+            private readonly PropertySkip _value0;
+            private readonly string _value1;
+
+            private WhiteSpaceCollapse(int index, PropertySkip value0 = default, string value1 = default)
+            {
+                _index = index;
+                _value0 = value0;
+                _value1 = value1;
+            }
+
+            public static implicit operator WhiteSpaceCollapse(PropertySkip t) => new(0, value0: t);
+            public static implicit operator WhiteSpaceCollapse(string t) => new(1, value1: t);
+
+            public string GetValue(string key)
+            {
+                return _index switch
+                {
+                    0 => FormatValue(key, _value0),
+                    1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+        }
+
+        public readonly struct WhiteSpaceTrim : IProperty
+        {
+            private readonly int _index;
+            private readonly PropertySkip _value0;
+            private readonly string _value1;
+
+            private WhiteSpaceTrim(int index, PropertySkip value0 = default, string value1 = default)
+            {
+                _index = index;
+                _value0 = value0;
+                _value1 = value1;
+            }
+
+            public static implicit operator WhiteSpaceTrim(PropertySkip t) => new(0, value0: t);
+            public static implicit operator WhiteSpaceTrim(string t) => new(1, value1: t);
 
             public string GetValue(string key)
             {

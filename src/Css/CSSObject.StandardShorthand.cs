@@ -33,6 +33,20 @@ namespace CssInCSharp
         }
 
         /// <summary>
+        /// The **`animation-range`** CSS shorthand property is used to set the start and end of an animation's attachment range along its timeline, i.e. where along the timeline an animation will start and end.
+        /// <para> **Syntax**: `[ &lt;'animation-range-start'&gt; &lt;'animation-range-end'&gt;? ]#`</para>
+        /// <para> | Chrome  | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :-----: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> | **115** |   No    |   No   | n/a  | No  |</para>
+        /// <para> @see https://developer.mozilla.org/docs/Web/CSS/animation-range</para>
+        /// </summary>
+        public Property<PropertySkip, string, double> AnimationRange
+        {
+            get => (Property<PropertySkip, string, double>) _properties["animation-range"];
+            set => _properties["animation-range"] = value;
+        }
+
+        /// <summary>
         /// The **`background`** shorthand CSS property sets all background style properties at once, such as color, image, origin and size, or repeat method.
         /// <para> **Syntax**: `[ &lt;bg-layer&gt; , ]* &lt;final-bg-layer&gt;`</para>
         /// <para> | Chrome | Firefox | Safari |  Edge  |  IE   |</para>
@@ -327,10 +341,10 @@ namespace CssInCSharp
 
         /// <summary>
         /// The **`contain-intrinsic-size`** CSS shorthand property sets the size of an element that a browser will use for layout when the element is subject to size containment.
-        /// <para> **Syntax**: `[ none | &lt;length&gt; | auto &lt;length&gt; ]{1,2}`</para>
+        /// <para> **Syntax**: `[ auto? [ none | &lt;length&gt; ] ]{1,2}`</para>
         /// <para> | Chrome | Firefox | Safari | Edge | IE  |</para>
         /// <para> | :----: | :-----: | :----: | :--: | :-: |</para>
-        /// <para> | **83** | **107** |   No   | n/a  | No  |</para>
+        /// <para> | **83** | **107** | **17** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/contain-intrinsic-size</para>
         /// </summary>
         public Property<PropertySkip, string, double> ContainIntrinsicSize
@@ -592,9 +606,10 @@ namespace CssInCSharp
         /// <summary>
         /// The **`mask`** CSS shorthand property hides an element (partially or fully) by masking or clipping the image at specific points.
         /// <para> **Syntax**: `&lt;mask-layer&gt;#`</para>
-        /// <para> | Chrome | Firefox | Safari  | Edge  | IE  |</para>
-        /// <para> | :----: | :-----: | :-----: | :---: | :-: |</para>
-        /// <para> | **1**  |  **2**  | **3.1** | 12-79 | No  |</para>
+        /// <para> | Chrome | Firefox |  Safari   | Edge  | IE  |</para>
+        /// <para> | :----: | :-----: | :-------: | :---: | :-: |</para>
+        /// <para> | **1**  | **53**  | **15.4**  | 12-79 | No  |</para>
+        /// <para> |        |         | 3.1 _-x-_ |       |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask</para>
         /// </summary>
         public Property<PropertySkip, string, double> Mask
@@ -606,9 +621,10 @@ namespace CssInCSharp
         /// <summary>
         /// The **`mask-border`** CSS shorthand property lets you create a mask along the edge of an element's border.
         /// <para> **Syntax**: `&lt;'mask-border-source'&gt; || &lt;'mask-border-slice'&gt; [ / &lt;'mask-border-width'&gt;? [ / &lt;'mask-border-outset'&gt; ]? ]? || &lt;'mask-border-repeat'&gt; || &lt;'mask-border-mode'&gt;`</para>
-        /// <para> |              Chrome              | Firefox |               Safari               | Edge | IE  |</para>
-        /// <para> | :------------------------------: | :-----: | :--------------------------------: | :--: | :-: |</para>
-        /// <para> | **1** _(-webkit-mask-box-image)_ |   No    | **3.1** _(-webkit-mask-box-image)_ | n/a  | No  |</para>
+        /// <para> |              Chrome              | Firefox |             Safari             | Edge | IE  |</para>
+        /// <para> | :------------------------------: | :-----: | :----------------------------: | :--: | :-: |</para>
+        /// <para> | **1** _(-webkit-mask-box-image)_ |   No    |            **17.2**            | n/a  | No  |</para>
+        /// <para> |                                  |         | 3.1 _(-webkit-mask-box-image)_ |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask-border</para>
         /// </summary>
         public Property<PropertySkip, string, double> MaskBorder
@@ -650,9 +666,9 @@ namespace CssInCSharp
         /// <summary>
         /// The **`outline`** CSS shorthand property sets most of the outline properties in a single declaration.
         /// <para> **Syntax**: `[ &lt;'outline-color'&gt; || &lt;'outline-style'&gt; || &lt;'outline-width'&gt; ]`</para>
-        /// <para> | Chrome | Firefox | Safari  |  Edge  |  IE   |</para>
-        /// <para> | :----: | :-----: | :-----: | :----: | :---: |</para>
-        /// <para> | **94** | **88**  | **1.2** | **94** | **8** |</para>
+        /// <para> | Chrome | Firefox |  Safari  |  Edge  |  IE   |</para>
+        /// <para> | :----: | :-----: | :------: | :----: | :---: |</para>
+        /// <para> | **94** | **88**  | **16.4** | **94** | **8** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/outline</para>
         /// </summary>
         public Property<PropertySkip, string, double> Outline
@@ -793,9 +809,9 @@ namespace CssInCSharp
         /// <summary>
         /// The `scroll-margin-block` shorthand property sets the scroll margins of an element in the block dimension.
         /// <para> **Syntax**: `&lt;length&gt;{1,2}`</para>
-        /// <para> | Chrome | Firefox |  Safari  | Edge | IE  |</para>
-        /// <para> | :----: | :-----: | :------: | :--: | :-: |</para>
-        /// <para> | **69** | **68**  | **14.1** | n/a  | No  |</para>
+        /// <para> | Chrome | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :----: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> | **69** | **68**  | **15** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-block</para>
         /// </summary>
         public Property<PropertySkip, string, double> ScrollMarginBlock
@@ -807,9 +823,9 @@ namespace CssInCSharp
         /// <summary>
         /// The `scroll-margin-inline` shorthand property sets the scroll margins of an element in the inline dimension.
         /// <para> **Syntax**: `&lt;length&gt;{1,2}`</para>
-        /// <para> | Chrome | Firefox |  Safari  | Edge | IE  |</para>
-        /// <para> | :----: | :-----: | :------: | :--: | :-: |</para>
-        /// <para> | **69** | **68**  | **14.1** | n/a  | No  |</para>
+        /// <para> | Chrome | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :----: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> | **69** | **68**  | **15** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-inline</para>
         /// </summary>
         public Property<PropertySkip, string, double> ScrollMarginInline
@@ -877,10 +893,10 @@ namespace CssInCSharp
 
         /// <summary>
         /// The **`scroll-timeline`** CSS shorthand property defines a name that can be used to identify the source element of a scroll timeline, along with the scrollbar axis that should provide the timeline.
-        /// <para> **Syntax**: `[&lt;'scroll-timeline-name'&gt; &lt;'scroll-timeline-axis'&gt;?]#`</para>
-        /// <para> | Chrome | Firefox | Safari | Edge | IE  |</para>
-        /// <para> | :----: | :-----: | :----: | :--: | :-: |</para>
-        /// <para> |   No   |   n/a   |   No   | n/a  | No  |</para>
+        /// <para> **Syntax**: `[ &lt;'scroll-timeline-name'&gt; &lt;'scroll-timeline-axis'&gt;? ]#`</para>
+        /// <para> | Chrome  | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :-----: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> | **115** |   n/a   |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-timeline</para>
         /// </summary>
         public Property<PropertySkip, string> ScrollTimeline
@@ -924,13 +940,27 @@ namespace CssInCSharp
         /// <para> | Chrome  | Firefox |  Safari   |  Edge  |   IE   |</para>
         /// <para> | :-----: | :-----: | :-------: | :----: | :----: |</para>
         /// <para> | **26**  | **16**  |   **9**   | **12** | **10** |</para>
-        /// <para> | 1 _-x-_ | 4 _-x-_ | 3.1 _-x-_ |        |        |</para>
+        /// <para> | 1 _-x-_ |         | 3.1 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/transition</para>
         /// </summary>
         public Property<PropertySkip, string> Transition
         {
             get => (Property<PropertySkip, string>) _properties["transition"];
             set => _properties["transition"] = value;
+        }
+
+        /// <summary>
+        /// The **`view-timeline`** CSS shorthand property is used to define a _named view progress timeline_, which is progressed through based on the change in visibility of an element (known as the _subject_) inside a scrollable element (_scroller_). `view-timeline` is set on the subject.
+        /// <para> **Syntax**: `[ &lt;'view-timeline-name'&gt; &lt;'view-timeline-axis'&gt;? ]#`</para>
+        /// <para> | Chrome  | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :-----: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> | **115** |   n/a   |   No   | n/a  | No  |</para>
+        /// <para> @see https://developer.mozilla.org/docs/Web/CSS/view-timeline</para>
+        /// </summary>
+        public Property<PropertySkip, string> ViewTimeline
+        {
+            get => (Property<PropertySkip, string>) _properties["view-timeline"];
+            set => _properties["view-timeline"] = value;
         }
 
     }

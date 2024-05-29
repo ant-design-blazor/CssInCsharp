@@ -291,7 +291,7 @@ function generatePropertyItems(input: string, output: string, start: number, end
     const tab = '        ';
     let propTypes: PropertyType[] = []
     if (useGeneric) {
-        const propLines = getFileContent('./node_modules/csstype/index.d.ts', 18459, 20144);
+        const propLines = getFileContent('./node_modules/csstype/index.d.ts', 18948, 20690);
         propTypes = getPropertyTypes(propLines)
     }
     const items = getPropertyItems(lines, propTypes);
@@ -329,32 +329,32 @@ ${sb}    }
 function generateProperty() {
     const input = './node_modules/csstype/index.d.ts';
     const output = './src/Css/Property.cs';
-    generatePropertyTypes(input, output, 18459, 20144);
+    generatePropertyTypes(input, output, 18948, 20690);
     generatePropertyGeneric('./src/Css/PropertyT.cs', 4);
 }
 
 function generateStandardLonghand() {
     const input = './node_modules/csstype/index.d.ts';
     const output = './src/Css/CSSObject.StandardLonghand.cs';
-    generatePropertyItems(input, output, 11, 5064);
+    generatePropertyItems(input, output, 11, 5283);
 }
 
 function generateStandardShorthand() {
     const input = './node_modules/csstype/index.d.ts';
     const output = './src/Css/CSSObject.StandardShorthand.cs';
-    generatePropertyItems(input, output, 5066, 5864);
+    generatePropertyItems(input, output, 5285, 6109);
 }
 
 function generateVendorLonghand() {
     const input = './node_modules/csstype/index.d.ts';
     const output = './src/Css/CSSObject.VendorLonghand.cs';
-    generatePropertyItems(input, output, 5870, 7663);
+    generatePropertyItems(input, output, 6115, 7868);
 }
 
 function generateVendorShorthand() {
     const input = './node_modules/csstype/index.d.ts';
     const output = './src/Css/CSSObject.VendorShorthand.cs';
-    generatePropertyItems(input, output, 7665, 7816);
+    generatePropertyItems(input, output, 7870, 8021);
 }
 
 function generateUnitless() {
