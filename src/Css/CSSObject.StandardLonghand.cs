@@ -86,7 +86,7 @@ namespace CssInCSharp
         /// <para> **Initial value**: `replace`</para>
         /// <para> | Chrome  | Firefox | Safari | Edge | IE  |</para>
         /// <para> | :-----: | :-----: | :----: | :--: | :-: |</para>
-        /// <para> | **112** |   n/a   | **16** | n/a  | No  |</para>
+        /// <para> | **112** | **115** | **16** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/animation-composition</para>
         /// </summary>
         public Property<PropertySkip, string> AnimationComposition
@@ -208,12 +208,42 @@ namespace CssInCSharp
         }
 
         /// <summary>
+        /// The **`animation-range-end`** CSS property is used to set the end of an animation's attachment range along its timeline, i.e. where along the timeline an animation will end.
+        /// <para> **Syntax**: `[ normal | &lt;length-percentage&gt; | &lt;timeline-range-name&gt; &lt;length-percentage&gt;? ]#`</para>
+        /// <para> **Initial value**: `normal`</para>
+        /// <para> | Chrome  | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :-----: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> | **115** |   No    |   No   | n/a  | No  |</para>
+        /// <para> @see https://developer.mozilla.org/docs/Web/CSS/animation-range-end</para>
+        /// </summary>
+        public Property<PropertySkip, string, double> AnimationRangeEnd
+        {
+            get => (Property<PropertySkip, string, double>) _properties["animation-range-end"];
+            set => _properties["animation-range-end"] = value;
+        }
+
+        /// <summary>
+        /// The **`animation-range-start`** CSS property is used to set the start of an animation's attachment range along its timeline, i.e. where along the timeline an animation will start.
+        /// <para> **Syntax**: `[ normal | &lt;length-percentage&gt; | &lt;timeline-range-name&gt; &lt;length-percentage&gt;? ]#`</para>
+        /// <para> **Initial value**: `normal`</para>
+        /// <para> | Chrome  | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :-----: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> | **115** |   No    |   No   | n/a  | No  |</para>
+        /// <para> @see https://developer.mozilla.org/docs/Web/CSS/animation-range-start</para>
+        /// </summary>
+        public Property<PropertySkip, string, double> AnimationRangeStart
+        {
+            get => (Property<PropertySkip, string, double>) _properties["animation-range-start"];
+            set => _properties["animation-range-start"] = value;
+        }
+
+        /// <summary>
         /// The **`animation-timeline`** CSS property specifies the timeline that is used to control the progress of an animation.
         /// <para> **Syntax**: `&lt;single-animation-timeline&gt;#`</para>
         /// <para> **Initial value**: `auto`</para>
-        /// <para> | Chrome | Firefox | Safari | Edge | IE  |</para>
-        /// <para> | :----: | :-----: | :----: | :--: | :-: |</para>
-        /// <para> |   No   |   n/a   |   No   | n/a  | No  |</para>
+        /// <para> | Chrome  | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :-----: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> | **115** |   n/a   |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/animation-timeline</para>
         /// </summary>
         public Property<PropertySkip, string> AnimationTimeline
@@ -288,10 +318,10 @@ namespace CssInCSharp
         /// The **`backface-visibility`** CSS property sets whether the back face of an element is visible when turned towards the user.
         /// <para> **Syntax**: `visible | hidden`</para>
         /// <para> **Initial value**: `visible`</para>
-        /// <para> |  Chrome  | Firefox  |  Safari   |  Edge  |   IE   |</para>
-        /// <para> | :------: | :------: | :-------: | :----: | :----: |</para>
-        /// <para> |  **36**  |  **16**  | **15.4**  | **12** | **10** |</para>
-        /// <para> | 12 _-x-_ | 10 _-x-_ | 5.1 _-x-_ |        |        |</para>
+        /// <para> |  Chrome  | Firefox |  Safari   |  Edge  |   IE   |</para>
+        /// <para> | :------: | :-----: | :-------: | :----: | :----: |</para>
+        /// <para> |  **36**  | **16**  | **15.4**  | **12** | **10** |</para>
+        /// <para> | 12 _-x-_ |         | 5.1 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/backface-visibility</para>
         /// </summary>
         public Property<PropertySkip, string> BackfaceVisibility
@@ -336,7 +366,7 @@ namespace CssInCSharp
         /// <para> **Initial value**: `border-box`</para>
         /// <para> | Chrome | Firefox | Safari  |  Edge  |  IE   |</para>
         /// <para> | :----: | :-----: | :-----: | :----: | :---: |</para>
-        /// <para> | **1**  |  **4**  | **14**  | **12** | **9** |</para>
+        /// <para> | **1**  |  **4**  |  **5**  | **12** | **9** |</para>
         /// <para> |        |         | 3 _-x-_ |        |       |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/background-clip</para>
         /// </summary>
@@ -1529,11 +1559,11 @@ namespace CssInCSharp
 
         /// <summary>
         /// The **`contain-intrinsic-block-size`** CSS logical property defines the block size of an element that a browser can use for layout when the element is subject to size containment.
-        /// <para> **Syntax**: `none | &lt;length&gt; | auto &lt;length&gt;`</para>
+        /// <para> **Syntax**: `auto? [ none | &lt;length&gt; ]`</para>
         /// <para> **Initial value**: `none`</para>
         /// <para> | Chrome | Firefox | Safari | Edge | IE  |</para>
         /// <para> | :----: | :-----: | :----: | :--: | :-: |</para>
-        /// <para> | **95** | **107** |   No   | n/a  | No  |</para>
+        /// <para> | **95** | **107** | **17** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/contain-intrinsic-contain-intrinsic-block-size</para>
         /// </summary>
         public Property<PropertySkip, string, double> ContainIntrinsicBlockSize
@@ -1544,11 +1574,11 @@ namespace CssInCSharp
 
         /// <summary>
         /// The **`contain-intrinsic-length`** CSS property sets the height of an element that a browser can use for layout when the element is subject to size containment.
-        /// <para> **Syntax**: `none | &lt;length&gt; | auto &lt;length&gt;`</para>
+        /// <para> **Syntax**: `auto? [ none | &lt;length&gt; ]`</para>
         /// <para> **Initial value**: `none`</para>
         /// <para> | Chrome | Firefox | Safari | Edge | IE  |</para>
         /// <para> | :----: | :-----: | :----: | :--: | :-: |</para>
-        /// <para> | **83** | **107** |   No   | n/a  | No  |</para>
+        /// <para> | **95** | **107** | **17** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/contain-intrinsic-height</para>
         /// </summary>
         public Property<PropertySkip, string, double> ContainIntrinsicHeight
@@ -1559,11 +1589,11 @@ namespace CssInCSharp
 
         /// <summary>
         /// The **`contain-intrinsic-inline-size`** CSS logical property defines the inline-size of an element that a browser can use for layout when the element is subject to size containment.
-        /// <para> **Syntax**: `none | &lt;length&gt; | auto &lt;length&gt;`</para>
+        /// <para> **Syntax**: `auto? [ none | &lt;length&gt; ]`</para>
         /// <para> **Initial value**: `none`</para>
         /// <para> | Chrome | Firefox | Safari | Edge | IE  |</para>
         /// <para> | :----: | :-----: | :----: | :--: | :-: |</para>
-        /// <para> | **95** | **107** |   No   | n/a  | No  |</para>
+        /// <para> | **95** | **107** | **17** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/contain-intrinsic-contain-intrinsic-inline-size</para>
         /// </summary>
         public Property<PropertySkip, string, double> ContainIntrinsicInlineSize
@@ -1574,11 +1604,11 @@ namespace CssInCSharp
 
         /// <summary>
         /// The **`contain-intrinsic-width`** CSS property sets the width of an element that a browser will use for layout when the element is subject to size containment.
-        /// <para> **Syntax**: `none | &lt;length&gt; | auto &lt;length&gt;`</para>
+        /// <para> **Syntax**: `auto? [ none | &lt;length&gt; ]`</para>
         /// <para> **Initial value**: `none`</para>
         /// <para> | Chrome | Firefox | Safari | Edge | IE  |</para>
         /// <para> | :----: | :-----: | :----: | :--: | :-: |</para>
-        /// <para> | **83** | **107** |   No   | n/a  | No  |</para>
+        /// <para> | **95** | **107** | **17** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/contain-intrinsic-width</para>
         /// </summary>
         public Property<PropertySkip, string, double> ContainIntrinsicWidth
@@ -1636,9 +1666,9 @@ namespace CssInCSharp
         /// The **`content-visibility`** CSS property controls whether or not an element renders its contents at all, along with forcing a strong set of containments, allowing user agents to potentially omit large swathes of layout and rendering work until it becomes needed. It enables the user agent to skip an element's rendering work (including layout and painting) until it is needed — which makes the initial page load much faster.
         /// <para> **Syntax**: `visible | auto | hidden`</para>
         /// <para> **Initial value**: `visible`</para>
-        /// <para> | Chrome | Firefox | Safari | Edge | IE  |</para>
-        /// <para> | :----: | :-----: | :----: | :--: | :-: |</para>
-        /// <para> | **85** |   n/a   |   No   | n/a  | No  |</para>
+        /// <para> | Chrome |   Firefox   | Safari | Edge | IE  |</para>
+        /// <para> | :----: | :---------: | :----: | :--: | :-: |</para>
+        /// <para> | **85** | **preview** |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/content-visibility</para>
         /// </summary>
         public Property<PropertySkip, string> ContentVisibility
@@ -1681,9 +1711,9 @@ namespace CssInCSharp
         /// The **`counter-set`** CSS property sets a CSS counter to a given value. It manipulates the value of existing counters, and will only create new counters if there isn't already a counter of the given name on the element.
         /// <para> **Syntax**: `[ &lt;counter-name&gt; &lt;integer&gt;? ]+ | none`</para>
         /// <para> **Initial value**: `none`</para>
-        /// <para> | Chrome | Firefox | Safari | Edge | IE  |</para>
-        /// <para> | :----: | :-----: | :----: | :--: | :-: |</para>
-        /// <para> | **85** | **68**  |   No   | n/a  | No  |</para>
+        /// <para> | Chrome | Firefox |  Safari  | Edge | IE  |</para>
+        /// <para> | :----: | :-----: | :------: | :--: | :-: |</para>
+        /// <para> | **85** | **68**  | **17.2** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/counter-set</para>
         /// </summary>
         public Property<PropertySkip, string> CounterSet
@@ -2032,8 +2062,8 @@ namespace CssInCSharp
 
         /// <summary>
         /// The **`font-synthesis`** CSS property controls which missing typefaces, bold, italic, or small-caps, may be synthesized by the browser.
-        /// <para> **Syntax**: `none | [ weight || style || small-caps ]`</para>
-        /// <para> **Initial value**: `weight style`</para>
+        /// <para> **Syntax**: `none | [ weight || style || small-caps || position]`</para>
+        /// <para> **Initial value**: `weight style small-caps position `</para>
         /// <para> | Chrome | Firefox | Safari | Edge | IE  |</para>
         /// <para> | :----: | :-----: | :----: | :--: | :-: |</para>
         /// <para> | **97** | **34**  | **9**  | n/a  | No  |</para>
@@ -2043,6 +2073,66 @@ namespace CssInCSharp
         {
             get => (Property<PropertySkip, string>) _properties["font-synthesis"];
             set => _properties["font-synthesis"] = value;
+        }
+
+        /// <summary>
+        /// The **`font-synthesis-position`** CSS property lets you specify whether or not a browser may synthesize the subscript and superscript "position" typefaces when they are missing in a font family, while using `font-variant-position` to set the positions.
+        /// <para> **Syntax**: `auto | none`</para>
+        /// <para> **Initial value**: `none`</para>
+        /// <para> | Chrome | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :----: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> |   No   | **118** |   No   | n/a  | No  |</para>
+        /// <para> @see https://developer.mozilla.org/docs/Web/CSS/font-synthesis-position</para>
+        /// </summary>
+        public Property<PropertySkip, string> FontSynthesisPosition
+        {
+            get => (Property<PropertySkip, string>) _properties["font-synthesis-position"];
+            set => _properties["font-synthesis-position"] = value;
+        }
+
+        /// <summary>
+        /// The **`font-synthesis-small-caps`** CSS property lets you specify whether or not the browser may synthesize small-caps typeface when it is missing in a font family. Small-caps glyphs typically use the form of uppercase letters but are reduced to the size of lowercase letters.
+        /// <para> **Syntax**: `auto | none`</para>
+        /// <para> **Initial value**: `auto`</para>
+        /// <para> | Chrome | Firefox |  Safari  | Edge | IE  |</para>
+        /// <para> | :----: | :-----: | :------: | :--: | :-: |</para>
+        /// <para> | **97** | **111** | **16.4** | n/a  | No  |</para>
+        /// <para> @see https://developer.mozilla.org/docs/Web/CSS/font-synthesis-small-caps</para>
+        /// </summary>
+        public Property<PropertySkip, string> FontSynthesisSmallCaps
+        {
+            get => (Property<PropertySkip, string>) _properties["font-synthesis-small-caps"];
+            set => _properties["font-synthesis-small-caps"] = value;
+        }
+
+        /// <summary>
+        /// The **`font-synthesis-style`** CSS property lets you specify whether or not the browser may synthesize the oblique typeface when it is missing in a font family.
+        /// <para> **Syntax**: `auto | none`</para>
+        /// <para> **Initial value**: `auto`</para>
+        /// <para> | Chrome | Firefox |  Safari  | Edge | IE  |</para>
+        /// <para> | :----: | :-----: | :------: | :--: | :-: |</para>
+        /// <para> | **97** | **111** | **16.4** | n/a  | No  |</para>
+        /// <para> @see https://developer.mozilla.org/docs/Web/CSS/font-synthesis-style</para>
+        /// </summary>
+        public Property<PropertySkip, string> FontSynthesisStyle
+        {
+            get => (Property<PropertySkip, string>) _properties["font-synthesis-style"];
+            set => _properties["font-synthesis-style"] = value;
+        }
+
+        /// <summary>
+        /// The **`font-synthesis-weight`** CSS property lets you specify whether or not the browser may synthesize the bold typeface when it is missing in a font family.
+        /// <para> **Syntax**: `auto | none`</para>
+        /// <para> **Initial value**: `auto`</para>
+        /// <para> | Chrome | Firefox |  Safari  | Edge | IE  |</para>
+        /// <para> | :----: | :-----: | :------: | :--: | :-: |</para>
+        /// <para> | **97** | **111** | **16.4** | n/a  | No  |</para>
+        /// <para> @see https://developer.mozilla.org/docs/Web/CSS/font-synthesis-weight</para>
+        /// </summary>
+        public Property<PropertySkip, string> FontSynthesisWeight
+        {
+            get => (Property<PropertySkip, string>) _properties["font-synthesis-weight"];
+            set => _properties["font-synthesis-weight"] = value;
         }
 
         /// <summary>
@@ -2064,9 +2154,9 @@ namespace CssInCSharp
         /// The **`font-variant-alternates`** CSS property controls the usage of alternate glyphs. These alternate glyphs may be referenced by alternative names defined in `@font-feature-values`.
         /// <para> **Syntax**: `normal | [ stylistic( &lt;feature-value-name&gt; ) || historical-forms || styleset( &lt;feature-value-name&gt;# ) || character-variant( &lt;feature-value-name&gt;# ) || swash( &lt;feature-value-name&gt; ) || ornaments( &lt;feature-value-name&gt; ) || annotation( &lt;feature-value-name&gt; ) ]`</para>
         /// <para> **Initial value**: `normal`</para>
-        /// <para> | Chrome | Firefox | Safari  | Edge | IE  |</para>
-        /// <para> | :----: | :-----: | :-----: | :--: | :-: |</para>
-        /// <para> |   No   | **34**  | **9.1** | n/a  | No  |</para>
+        /// <para> | Chrome  | Firefox | Safari  | Edge | IE  |</para>
+        /// <para> | :-----: | :-----: | :-----: | :--: | :-: |</para>
+        /// <para> | **111** | **34**  | **9.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/font-variant-alternates</para>
         /// </summary>
         public Property<PropertySkip, string> FontVariantAlternates
@@ -2110,7 +2200,7 @@ namespace CssInCSharp
         /// <para> **Initial value**: `normal`</para>
         /// <para> | Chrome | Firefox | Safari | Edge | IE  |</para>
         /// <para> | :----: | :-----: | :----: | :--: | :-: |</para>
-        /// <para> |   No   | **108** |   No   | n/a  | No  |</para>
+        /// <para> |   No   |   n/a   |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/font-variant-emoji</para>
         /// </summary>
         public Property<PropertySkip, string> FontVariantEmoji
@@ -2154,9 +2244,9 @@ namespace CssInCSharp
         /// The **`font-variant-position`** CSS property controls the use of alternate, smaller glyphs that are positioned as superscript or subscript.
         /// <para> **Syntax**: `normal | sub | super`</para>
         /// <para> **Initial value**: `normal`</para>
-        /// <para> | Chrome | Firefox | Safari  | Edge | IE  |</para>
-        /// <para> | :----: | :-----: | :-----: | :--: | :-: |</para>
-        /// <para> |   No   | **34**  | **9.1** | n/a  | No  |</para>
+        /// <para> | Chrome  | Firefox | Safari  | Edge | IE  |</para>
+        /// <para> | :-----: | :-----: | :-----: | :--: | :-: |</para>
+        /// <para> | **117** | **34**  | **9.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/font-variant-position</para>
         /// </summary>
         public Property<PropertySkip, string> FontVariantPosition
@@ -2201,7 +2291,7 @@ namespace CssInCSharp
         /// <para> **Initial value**: `auto`</para>
         /// <para> | Chrome | Firefox | Safari |              Edge               |                 IE                  |</para>
         /// <para> | :----: | :-----: | :----: | :-----------------------------: | :---------------------------------: |</para>
-        /// <para> | **89** |   No    |   No   |             **79**              | **10** _(-ms-high-contrast-adjust)_ |</para>
+        /// <para> | **89** | **113** |   No   |             **79**              | **10** _(-ms-high-contrast-adjust)_ |</para>
         /// <para> |        |         |        | 12 _(-ms-high-contrast-adjust)_ |                                     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/forced-color-adjust</para>
         /// </summary>
@@ -2395,10 +2485,10 @@ namespace CssInCSharp
         /// The **`hyphenate-character`** CSS property sets the character (or string) used at the end of a line before a hyphenation break.
         /// <para> **Syntax**: `auto | &lt;string&gt;`</para>
         /// <para> **Initial value**: `auto`</para>
-        /// <para> | Chrome  | Firefox |    Safari     | Edge | IE  |</para>
-        /// <para> | :-----: | :-----: | :-----------: | :--: | :-: |</para>
-        /// <para> | **106** | **98**  | **5.1** _-x-_ | n/a  | No  |</para>
-        /// <para> | 6 _-x-_ |         |               |      |     |</para>
+        /// <para> | Chrome  | Firefox |  Safari   | Edge | IE  |</para>
+        /// <para> | :-----: | :-----: | :-------: | :--: | :-: |</para>
+        /// <para> | **106** | **98**  |  **17**   | n/a  | No  |</para>
+        /// <para> | 6 _-x-_ |         | 5.1 _-x-_ |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/hyphenate-character</para>
         /// </summary>
         public Property<PropertySkip, string> HyphenateCharacter
@@ -2425,10 +2515,10 @@ namespace CssInCSharp
         /// The **`hyphens`** CSS property specifies how words should be hyphenated when text wraps across multiple lines. It can prevent hyphenation entirely, hyphenate at manually-specified points within the text, or let the browser automatically insert hyphens where appropriate.
         /// <para> **Syntax**: `none | manual | auto`</para>
         /// <para> **Initial value**: `manual`</para>
-        /// <para> |  Chrome  | Firefox |    Safari     |  Edge  |      IE      |</para>
-        /// <para> | :------: | :-----: | :-----------: | :----: | :----------: |</para>
-        /// <para> |  **55**  | **43**  | **5.1** _-x-_ | **79** | **10** _-x-_ |</para>
-        /// <para> | 13 _-x-_ | 6 _-x-_ |               |        |              |</para>
+        /// <para> |  Chrome  | Firefox |  Safari   |  Edge  |      IE      |</para>
+        /// <para> | :------: | :-----: | :-------: | :----: | :----------: |</para>
+        /// <para> |  **55**  | **43**  |  **17**   | **79** | **10** _-x-_ |</para>
+        /// <para> | 13 _-x-_ | 6 _-x-_ | 5.1 _-x-_ |        |              |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/hyphens</para>
         /// </summary>
         public Property<PropertySkip, string> Hyphens
@@ -2780,7 +2870,7 @@ namespace CssInCSharp
         /// <para> **Initial value**: `0`</para>
         /// <para> | Chrome | Firefox |  Safari  | Edge | IE  |</para>
         /// <para> | :----: | :-----: | :------: | :--: | :-: |</para>
-        /// <para> | **87** | **41**  | **12.1** | n/a  | No  |</para>
+        /// <para> | **69** | **41**  | **12.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/margin-block-end</para>
         /// </summary>
         public Property<PropertySkip, string, double> MarginBlockEnd
@@ -2795,7 +2885,7 @@ namespace CssInCSharp
         /// <para> **Initial value**: `0`</para>
         /// <para> | Chrome | Firefox |  Safari  | Edge | IE  |</para>
         /// <para> | :----: | :-----: | :------: | :--: | :-: |</para>
-        /// <para> | **87** | **41**  | **12.1** | n/a  | No  |</para>
+        /// <para> | **69** | **41**  | **12.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/margin-block-start</para>
         /// </summary>
         public Property<PropertySkip, string, double> MarginBlockStart
@@ -2825,7 +2915,7 @@ namespace CssInCSharp
         /// <para> **Initial value**: `0`</para>
         /// <para> |          Chrome          |        Firefox        |          Safari          | Edge | IE  |</para>
         /// <para> | :----------------------: | :-------------------: | :----------------------: | :--: | :-: |</para>
-        /// <para> |          **87**          |        **41**         |         **12.1**         | n/a  | No  |</para>
+        /// <para> |          **69**          |        **41**         |         **12.1**         | n/a  | No  |</para>
         /// <para> | 2 _(-webkit-margin-end)_ | 3 _(-moz-margin-end)_ | 3 _(-webkit-margin-end)_ |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/margin-inline-end</para>
         /// </summary>
@@ -2841,7 +2931,7 @@ namespace CssInCSharp
         /// <para> **Initial value**: `0`</para>
         /// <para> |           Chrome           |         Firefox         |           Safari           | Edge | IE  |</para>
         /// <para> | :------------------------: | :---------------------: | :------------------------: | :--: | :-: |</para>
-        /// <para> |           **87**           |         **41**          |          **12.1**          | n/a  | No  |</para>
+        /// <para> |           **69**           |         **41**          |          **12.1**          | n/a  | No  |</para>
         /// <para> | 2 _(-webkit-margin-start)_ | 3 _(-moz-margin-start)_ | 3 _(-webkit-margin-start)_ |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/margin-inline-start</para>
         /// </summary>
@@ -2926,9 +3016,10 @@ namespace CssInCSharp
         /// The **`mask-border-outset`** CSS property specifies the distance by which an element's mask border is set out from its border box.
         /// <para> **Syntax**: `[ &lt;length&gt; | &lt;number&gt; ]{1,4}`</para>
         /// <para> **Initial value**: `0`</para>
-        /// <para> |                 Chrome                  | Firefox |                  Safari                   | Edge | IE  |</para>
-        /// <para> | :-------------------------------------: | :-----: | :---------------------------------------: | :--: | :-: |</para>
-        /// <para> | **1** _(-webkit-mask-box-image-outset)_ |   No    | **3.1** _(-webkit-mask-box-image-outset)_ | n/a  | No  |</para>
+        /// <para> |                 Chrome                  | Firefox |                Safari                 | Edge | IE  |</para>
+        /// <para> | :-------------------------------------: | :-----: | :-----------------------------------: | :--: | :-: |</para>
+        /// <para> | **1** _(-webkit-mask-box-image-outset)_ |   No    |               **17.2**                | n/a  | No  |</para>
+        /// <para> |                                         |         | 3.1 _(-webkit-mask-box-image-outset)_ |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask-border-outset</para>
         /// </summary>
         public Property<PropertySkip, string, double> MaskBorderOutset
@@ -2941,9 +3032,10 @@ namespace CssInCSharp
         /// The **`mask-border-repeat`** CSS property sets how the edge regions of a source image are adjusted to fit the dimensions of an element's mask border.
         /// <para> **Syntax**: `[ stretch | repeat | round | space ]{1,2}`</para>
         /// <para> **Initial value**: `stretch`</para>
-        /// <para> |                 Chrome                  | Firefox |                  Safari                   | Edge | IE  |</para>
-        /// <para> | :-------------------------------------: | :-----: | :---------------------------------------: | :--: | :-: |</para>
-        /// <para> | **1** _(-webkit-mask-box-image-repeat)_ |   No    | **3.1** _(-webkit-mask-box-image-repeat)_ | n/a  | No  |</para>
+        /// <para> |                 Chrome                  | Firefox |                Safari                 | Edge | IE  |</para>
+        /// <para> | :-------------------------------------: | :-----: | :-----------------------------------: | :--: | :-: |</para>
+        /// <para> | **1** _(-webkit-mask-box-image-repeat)_ |   No    |               **17.2**                | n/a  | No  |</para>
+        /// <para> |                                         |         | 3.1 _(-webkit-mask-box-image-repeat)_ |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask-border-repeat</para>
         /// </summary>
         public Property<PropertySkip, string> MaskBorderRepeat
@@ -2956,9 +3048,10 @@ namespace CssInCSharp
         /// The **`mask-border-slice`** CSS property divides the image set by `mask-border-source` into regions. These regions are used to form the components of an element's mask border.
         /// <para> **Syntax**: `&lt;number-percentage&gt;{1,4} fill?`</para>
         /// <para> **Initial value**: `0`</para>
-        /// <para> |                 Chrome                 | Firefox |                  Safari                  | Edge | IE  |</para>
-        /// <para> | :------------------------------------: | :-----: | :--------------------------------------: | :--: | :-: |</para>
-        /// <para> | **1** _(-webkit-mask-box-image-slice)_ |   No    | **3.1** _(-webkit-mask-box-image-slice)_ | n/a  | No  |</para>
+        /// <para> |                 Chrome                 | Firefox |                Safari                | Edge | IE  |</para>
+        /// <para> | :------------------------------------: | :-----: | :----------------------------------: | :--: | :-: |</para>
+        /// <para> | **1** _(-webkit-mask-box-image-slice)_ |   No    |               **17.2**               | n/a  | No  |</para>
+        /// <para> |                                        |         | 3.1 _(-webkit-mask-box-image-slice)_ |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask-border-slice</para>
         /// </summary>
         public Property<PropertySkip, string, double> MaskBorderSlice
@@ -2971,9 +3064,10 @@ namespace CssInCSharp
         /// The **`mask-border-source`** CSS property sets the source image used to create an element's mask border.
         /// <para> **Syntax**: `none | &lt;image&gt;`</para>
         /// <para> **Initial value**: `none`</para>
-        /// <para> |                 Chrome                  | Firefox |                  Safari                   | Edge | IE  |</para>
-        /// <para> | :-------------------------------------: | :-----: | :---------------------------------------: | :--: | :-: |</para>
-        /// <para> | **1** _(-webkit-mask-box-image-source)_ |   No    | **3.1** _(-webkit-mask-box-image-source)_ | n/a  | No  |</para>
+        /// <para> |                 Chrome                  | Firefox |                Safari                 | Edge | IE  |</para>
+        /// <para> | :-------------------------------------: | :-----: | :-----------------------------------: | :--: | :-: |</para>
+        /// <para> | **1** _(-webkit-mask-box-image-source)_ |   No    |               **17.2**                | n/a  | No  |</para>
+        /// <para> |                                         |         | 3.1 _(-webkit-mask-box-image-source)_ |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask-border-source</para>
         /// </summary>
         public Property<PropertySkip, string> MaskBorderSource
@@ -2986,9 +3080,10 @@ namespace CssInCSharp
         /// The **`mask-border-width`** CSS property sets the width of an element's mask border.
         /// <para> **Syntax**: `[ &lt;length-percentage&gt; | &lt;number&gt; | auto ]{1,4}`</para>
         /// <para> **Initial value**: `auto`</para>
-        /// <para> |                 Chrome                 | Firefox |                  Safari                  | Edge | IE  |</para>
-        /// <para> | :------------------------------------: | :-----: | :--------------------------------------: | :--: | :-: |</para>
-        /// <para> | **1** _(-webkit-mask-box-image-width)_ |   No    | **3.1** _(-webkit-mask-box-image-width)_ | n/a  | No  |</para>
+        /// <para> |                 Chrome                 | Firefox |                Safari                | Edge | IE  |</para>
+        /// <para> | :------------------------------------: | :-----: | :----------------------------------: | :--: | :-: |</para>
+        /// <para> | **1** _(-webkit-mask-box-image-width)_ |   No    |               **17.2**               | n/a  | No  |</para>
+        /// <para> |                                        |         | 3.1 _(-webkit-mask-box-image-width)_ |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask-border-width</para>
         /// </summary>
         public Property<PropertySkip, string, double> MaskBorderWidth
@@ -3001,10 +3096,10 @@ namespace CssInCSharp
         /// The **`mask-clip`** CSS property determines the area which is affected by a mask. The painted content of an element must be restricted to this area.
         /// <para> **Syntax**: `[ &lt;geometry-box&gt; | no-clip ]#`</para>
         /// <para> **Initial value**: `border-box`</para>
-        /// <para> |   Chrome    | Firefox |  Safari  | Edge | IE  |</para>
-        /// <para> | :---------: | :-----: | :------: | :--: | :-: |</para>
-        /// <para> | **1** _-x-_ | **53**  | **15.4** | n/a  | No  |</para>
-        /// <para> |             |         | 4 _-x-_  |      |     |</para>
+        /// <para> | Chrome  | Firefox |  Safari  | Edge | IE  |</para>
+        /// <para> | :-----: | :-----: | :------: | :--: | :-: |</para>
+        /// <para> | **120** | **53**  | **15.4** | n/a  | No  |</para>
+        /// <para> | 1 _-x-_ |         | 4 _-x-_  |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask-clip</para>
         /// </summary>
         public Property<PropertySkip, string> MaskClip
@@ -3017,9 +3112,9 @@ namespace CssInCSharp
         /// The **`mask-composite`** CSS property represents a compositing operation used on the current mask layer with the mask layers below it.
         /// <para> **Syntax**: `&lt;compositing-operator&gt;#`</para>
         /// <para> **Initial value**: `add`</para>
-        /// <para> | Chrome | Firefox |  Safari  | Edge  | IE  |</para>
-        /// <para> | :----: | :-----: | :------: | :---: | :-: |</para>
-        /// <para> |   No   | **53**  | **15.4** | 18-79 | No  |</para>
+        /// <para> | Chrome  | Firefox |  Safari  | Edge  | IE  |</para>
+        /// <para> | :-----: | :-----: | :------: | :---: | :-: |</para>
+        /// <para> | **120** | **53**  | **15.4** | 18-79 | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask-composite</para>
         /// </summary>
         public Property<PropertySkip, string> MaskComposite
@@ -3032,10 +3127,10 @@ namespace CssInCSharp
         /// The **`mask-image`** CSS property sets the image that is used as mask layer for an element. By default this means the alpha channel of the mask image will be multiplied with the alpha channel of the element. This can be controlled with the `mask-mode` property.
         /// <para> **Syntax**: `&lt;mask-reference&gt;#`</para>
         /// <para> **Initial value**: `none`</para>
-        /// <para> |   Chrome    | Firefox |  Safari  | Edge  | IE  |</para>
-        /// <para> | :---------: | :-----: | :------: | :---: | :-: |</para>
-        /// <para> | **1** _-x-_ | **53**  | **15.4** | 16-79 | No  |</para>
-        /// <para> |             |         | 4 _-x-_  |       |     |</para>
+        /// <para> | Chrome  | Firefox |  Safari  | Edge  | IE  |</para>
+        /// <para> | :-----: | :-----: | :------: | :---: | :-: |</para>
+        /// <para> | **120** | **53**  | **15.4** | 16-79 | No  |</para>
+        /// <para> | 1 _-x-_ |         | 4 _-x-_  |       |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask-image</para>
         /// </summary>
         public Property<PropertySkip, string> MaskImage
@@ -3048,9 +3143,9 @@ namespace CssInCSharp
         /// The **`mask-mode`** CSS property sets whether the mask reference defined by `mask-image` is treated as a luminance or alpha mask.
         /// <para> **Syntax**: `&lt;masking-mode&gt;#`</para>
         /// <para> **Initial value**: `match-source`</para>
-        /// <para> | Chrome | Firefox |  Safari  | Edge | IE  |</para>
-        /// <para> | :----: | :-----: | :------: | :--: | :-: |</para>
-        /// <para> |   No   | **53**  | **15.4** | n/a  | No  |</para>
+        /// <para> | Chrome  | Firefox |  Safari  | Edge | IE  |</para>
+        /// <para> | :-----: | :-----: | :------: | :--: | :-: |</para>
+        /// <para> | **120** | **53**  | **15.4** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask-mode</para>
         /// </summary>
         public Property<PropertySkip, string> MaskMode
@@ -3063,10 +3158,10 @@ namespace CssInCSharp
         /// The **`mask-origin`** CSS property sets the origin of a mask.
         /// <para> **Syntax**: `&lt;geometry-box&gt;#`</para>
         /// <para> **Initial value**: `border-box`</para>
-        /// <para> |   Chrome    | Firefox |  Safari  | Edge | IE  |</para>
-        /// <para> | :---------: | :-----: | :------: | :--: | :-: |</para>
-        /// <para> | **1** _-x-_ | **53**  | **15.4** | n/a  | No  |</para>
-        /// <para> |             |         | 4 _-x-_  |      |     |</para>
+        /// <para> | Chrome  | Firefox |  Safari  | Edge | IE  |</para>
+        /// <para> | :-----: | :-----: | :------: | :--: | :-: |</para>
+        /// <para> | **120** | **53**  | **15.4** | n/a  | No  |</para>
+        /// <para> | 1 _-x-_ |         | 4 _-x-_  |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask-origin</para>
         /// </summary>
         public Property<PropertySkip, string> MaskOrigin
@@ -3079,10 +3174,10 @@ namespace CssInCSharp
         /// The **`mask-position`** CSS property sets the initial position, relative to the mask position layer set by `mask-origin`, for each defined mask image.
         /// <para> **Syntax**: `&lt;position&gt;#`</para>
         /// <para> **Initial value**: `center`</para>
-        /// <para> |   Chrome    | Firefox |  Safari   | Edge  | IE  |</para>
-        /// <para> | :---------: | :-----: | :-------: | :---: | :-: |</para>
-        /// <para> | **1** _-x-_ | **53**  | **15.4**  | 18-79 | No  |</para>
-        /// <para> |             |         | 3.1 _-x-_ |       |     |</para>
+        /// <para> | Chrome  | Firefox |  Safari   | Edge  | IE  |</para>
+        /// <para> | :-----: | :-----: | :-------: | :---: | :-: |</para>
+        /// <para> | **120** | **53**  | **15.4**  | 18-79 | No  |</para>
+        /// <para> | 1 _-x-_ |         | 3.1 _-x-_ |       |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask-position</para>
         /// </summary>
         public Property<PropertySkip, string, double> MaskPosition
@@ -3095,10 +3190,10 @@ namespace CssInCSharp
         /// The **`mask-repeat`** CSS property sets how mask images are repeated. A mask image can be repeated along the horizontal axis, the vertical axis, both axes, or not repeated at all.
         /// <para> **Syntax**: `&lt;repeat-style&gt;#`</para>
         /// <para> **Initial value**: `repeat`</para>
-        /// <para> |   Chrome    | Firefox |  Safari   | Edge  | IE  |</para>
-        /// <para> | :---------: | :-----: | :-------: | :---: | :-: |</para>
-        /// <para> | **1** _-x-_ | **53**  | **15.4**  | 18-79 | No  |</para>
-        /// <para> |             |         | 3.1 _-x-_ |       |     |</para>
+        /// <para> | Chrome  | Firefox |  Safari   | Edge  | IE  |</para>
+        /// <para> | :-----: | :-----: | :-------: | :---: | :-: |</para>
+        /// <para> | **120** | **53**  | **15.4**  | 18-79 | No  |</para>
+        /// <para> | 1 _-x-_ |         | 3.1 _-x-_ |       |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask-repeat</para>
         /// </summary>
         public Property<PropertySkip, string> MaskRepeat
@@ -3111,10 +3206,10 @@ namespace CssInCSharp
         /// The **`mask-size`** CSS property specifies the sizes of the mask images. The size of the image can be fully or partially constrained in order to preserve its intrinsic ratio.
         /// <para> **Syntax**: `&lt;bg-size&gt;#`</para>
         /// <para> **Initial value**: `auto`</para>
-        /// <para> |   Chrome    | Firefox |  Safari  | Edge  | IE  |</para>
-        /// <para> | :---------: | :-----: | :------: | :---: | :-: |</para>
-        /// <para> | **4** _-x-_ | **53**  | **15.4** | 18-79 | No  |</para>
-        /// <para> |             |         | 4 _-x-_  |       |     |</para>
+        /// <para> | Chrome  | Firefox |  Safari  | Edge  | IE  |</para>
+        /// <para> | :-----: | :-----: | :------: | :---: | :-: |</para>
+        /// <para> | **120** | **53**  | **15.4** | 18-79 | No  |</para>
+        /// <para> | 4 _-x-_ |         | 4 _-x-_  |       |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/mask-size</para>
         /// </summary>
         public Property<PropertySkip, string, double> MaskSize
@@ -3139,12 +3234,27 @@ namespace CssInCSharp
         }
 
         /// <summary>
+        /// This feature is not Baseline because it does not work in some of the most widely-used browsers.
+        /// <para> **Syntax**: `[ pack | next ] || [ definite-first | ordered ]`</para>
+        /// <para> **Initial value**: `pack`</para>
+        /// <para> | Chrome | Firefox |   Safari    | Edge | IE  |</para>
+        /// <para> | :----: | :-----: | :---------: | :--: | :-: |</para>
+        /// <para> |   No   |   No    | **preview** | n/a  | No  |</para>
+        /// <para> @see https://developer.mozilla.org/docs/Web/CSS/masonry-auto-flow</para>
+        /// </summary>
+        public Property<PropertySkip, string> MasonryAutoFlow
+        {
+            get => (Property<PropertySkip, string>) _properties["masonry-auto-flow"];
+            set => _properties["masonry-auto-flow"] = value;
+        }
+
+        /// <summary>
         /// The **`math-depth`** property describes a notion of _depth_ for each element of a mathematical formula, with respect to the top-level container of that formula. Concretely, this is used to determine the computed value of the font-size property when its specified value is `math`.
         /// <para> **Syntax**: `auto-add | add(&lt;integer&gt;) | &lt;integer&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// <para> | Chrome  | Firefox | Safari | Edge | IE  |</para>
         /// <para> | :-----: | :-----: | :----: | :--: | :-: |</para>
-        /// <para> | **109** |   n/a   |   No   | n/a  | No  |</para>
+        /// <para> | **109** | **117** |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/math-depth</para>
         /// </summary>
         public Property<PropertySkip, string, double> MathDepth
@@ -3174,7 +3284,7 @@ namespace CssInCSharp
         /// <para> **Initial value**: `normal`</para>
         /// <para> | Chrome  | Firefox |  Safari  | Edge | IE  |</para>
         /// <para> | :-----: | :-----: | :------: | :--: | :-: |</para>
-        /// <para> | **109** |   n/a   | **14.1** | n/a  | No  |</para>
+        /// <para> | **109** | **117** | **14.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/math-style</para>
         /// </summary>
         public Property<PropertySkip, string> MathStyle
@@ -3333,10 +3443,10 @@ namespace CssInCSharp
         /// The **`offset-distance`** CSS property specifies a position along an `offset-path` for an element to be placed.
         /// <para> **Syntax**: `&lt;length-percentage&gt;`</para>
         /// <para> **Initial value**: `0`</para>
-        /// <para> |         Chrome         | Firefox |   Safari    | Edge | IE  |</para>
-        /// <para> | :--------------------: | :-----: | :---------: | :--: | :-: |</para>
-        /// <para> |         **55**         | **72**  | **preview** | n/a  | No  |</para>
-        /// <para> | 46 _(motion-distance)_ |         |             |      |     |</para>
+        /// <para> |         Chrome         | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :--------------------: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> |         **55**         | **72**  | **16** | n/a  | No  |</para>
+        /// <para> | 46 _(motion-distance)_ |         |        |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/offset-distance</para>
         /// </summary>
         public Property<PropertySkip, string, double> MotionDistance
@@ -3347,7 +3457,7 @@ namespace CssInCSharp
 
         /// <summary>
         /// The **`offset-path`** CSS property specifies a motion path for an element to follow and defines the element's positioning within the parent container or SVG coordinate system.
-        /// <para> **Syntax**: `none | ray( [ &lt;angle&gt; && &lt;size&gt; && contain? ] ) | &lt;path()&gt; | &lt;url&gt; | [ &lt;basic-shape&gt; || &lt;geometry-box&gt; ]`</para>
+        /// <para> **Syntax**: `none | &lt;offset-path&gt; || &lt;coord-box&gt;`</para>
         /// <para> **Initial value**: `none`</para>
         /// <para> |       Chrome       | Firefox |  Safari  | Edge | IE  |</para>
         /// <para> | :----------------: | :-----: | :------: | :--: | :-: |</para>
@@ -3365,10 +3475,10 @@ namespace CssInCSharp
         /// The **`offset-rotate`** CSS property defines the orientation/direction of the element as it is positioned along the `offset-path`.
         /// <para> **Syntax**: `[ auto | reverse ] || &lt;angle&gt;`</para>
         /// <para> **Initial value**: `auto`</para>
-        /// <para> |         Chrome         | Firefox |   Safari    | Edge | IE  |</para>
-        /// <para> | :--------------------: | :-----: | :---------: | :--: | :-: |</para>
-        /// <para> |         **56**         | **72**  | **preview** | n/a  | No  |</para>
-        /// <para> | 46 _(motion-rotation)_ |         |             |      |     |</para>
+        /// <para> |         Chrome         | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :--------------------: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> |         **56**         | **72**  | **16** | n/a  | No  |</para>
+        /// <para> | 46 _(motion-rotation)_ |         |        |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/offset-rotate</para>
         /// </summary>
         public Property<PropertySkip, string> MotionRotation
@@ -3410,9 +3520,9 @@ namespace CssInCSharp
         /// <summary>
         /// **Syntax**: `auto | &lt;position&gt;`
         /// <para> **Initial value**: `auto`</para>
-        /// <para> | Chrome | Firefox |   Safari    | Edge | IE  |</para>
-        /// <para> | :----: | :-----: | :---------: | :--: | :-: |</para>
-        /// <para> |   No   | **72**  | **preview** | n/a  | No  |</para>
+        /// <para> | Chrome  | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :-----: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> | **116** | **72**  | **16** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/offset-anchor</para>
         /// </summary>
         public Property<PropertySkip, string, double> OffsetAnchor
@@ -3425,10 +3535,10 @@ namespace CssInCSharp
         /// The **`offset-distance`** CSS property specifies a position along an `offset-path` for an element to be placed.
         /// <para> **Syntax**: `&lt;length-percentage&gt;`</para>
         /// <para> **Initial value**: `0`</para>
-        /// <para> |         Chrome         | Firefox |   Safari    | Edge | IE  |</para>
-        /// <para> | :--------------------: | :-----: | :---------: | :--: | :-: |</para>
-        /// <para> |         **55**         | **72**  | **preview** | n/a  | No  |</para>
-        /// <para> | 46 _(motion-distance)_ |         |             |      |     |</para>
+        /// <para> |         Chrome         | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :--------------------: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> |         **55**         | **72**  | **16** | n/a  | No  |</para>
+        /// <para> | 46 _(motion-distance)_ |         |        |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/offset-distance</para>
         /// </summary>
         public Property<PropertySkip, string, double> OffsetDistance
@@ -3439,7 +3549,7 @@ namespace CssInCSharp
 
         /// <summary>
         /// The **`offset-path`** CSS property specifies a motion path for an element to follow and defines the element's positioning within the parent container or SVG coordinate system.
-        /// <para> **Syntax**: `none | ray( [ &lt;angle&gt; && &lt;size&gt; && contain? ] ) | &lt;path()&gt; | &lt;url&gt; | [ &lt;basic-shape&gt; || &lt;geometry-box&gt; ]`</para>
+        /// <para> **Syntax**: `none | &lt;offset-path&gt; || &lt;coord-box&gt;`</para>
         /// <para> **Initial value**: `none`</para>
         /// <para> |       Chrome       | Firefox |  Safari  | Edge | IE  |</para>
         /// <para> | :----------------: | :-----: | :------: | :--: | :-: |</para>
@@ -3454,11 +3564,11 @@ namespace CssInCSharp
         }
 
         /// <summary>
-        /// **Syntax**: `auto | &lt;position&gt;`
+        /// **Syntax**: `normal | auto | &lt;position&gt;`
         /// <para> **Initial value**: `auto`</para>
-        /// <para> | Chrome | Firefox |   Safari    | Edge | IE  |</para>
-        /// <para> | :----: | :-----: | :---------: | :--: | :-: |</para>
-        /// <para> |   No   |   No    | **preview** | n/a  | No  |</para>
+        /// <para> | Chrome  | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :-----: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> | **116** |   n/a   | **16** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/offset-position</para>
         /// </summary>
         public Property<PropertySkip, string, double> OffsetPosition
@@ -3471,10 +3581,10 @@ namespace CssInCSharp
         /// The **`offset-rotate`** CSS property defines the orientation/direction of the element as it is positioned along the `offset-path`.
         /// <para> **Syntax**: `[ auto | reverse ] || &lt;angle&gt;`</para>
         /// <para> **Initial value**: `auto`</para>
-        /// <para> |         Chrome         | Firefox |   Safari    | Edge | IE  |</para>
-        /// <para> | :--------------------: | :-----: | :---------: | :--: | :-: |</para>
-        /// <para> |         **56**         | **72**  | **preview** | n/a  | No  |</para>
-        /// <para> | 46 _(motion-rotation)_ |         |             |      |     |</para>
+        /// <para> |         Chrome         | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :--------------------: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> |         **56**         | **72**  | **16** | n/a  | No  |</para>
+        /// <para> | 46 _(motion-rotation)_ |         |        |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/offset-rotate</para>
         /// </summary>
         public Property<PropertySkip, string> OffsetRotate
@@ -3487,10 +3597,10 @@ namespace CssInCSharp
         /// The **`offset-rotate`** CSS property defines the orientation/direction of the element as it is positioned along the `offset-path`.
         /// <para> **Syntax**: `[ auto | reverse ] || &lt;angle&gt;`</para>
         /// <para> **Initial value**: `auto`</para>
-        /// <para> |         Chrome         | Firefox |   Safari    | Edge | IE  |</para>
-        /// <para> | :--------------------: | :-----: | :---------: | :--: | :-: |</para>
-        /// <para> |         **56**         | **72**  | **preview** | n/a  | No  |</para>
-        /// <para> | 46 _(motion-rotation)_ |         |             |      |     |</para>
+        /// <para> |         Chrome         | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :--------------------: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> |         **56**         | **72**  | **16** | n/a  | No  |</para>
+        /// <para> | 46 _(motion-rotation)_ |         |        |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/offset-rotate</para>
         /// </summary>
         public Property<PropertySkip, string> OffsetRotation
@@ -3637,10 +3747,6 @@ namespace CssInCSharp
         /// The **`overflow-clip-box`** CSS property specifies relative to which box the clipping happens when there is an overflow. It is short hand for the `overflow-clip-box-inline` and `overflow-clip-box-block` properties.
         /// <para> **Syntax**: `padding-box | content-box`</para>
         /// <para> **Initial value**: `padding-box`</para>
-        /// <para> | Chrome | Firefox | Safari | Edge | IE  |</para>
-        /// <para> | :----: | :-----: | :----: | :--: | :-: |</para>
-        /// <para> |   No   | **29**  |   No   | n/a  | No  |</para>
-        /// <para> @see https://developer.mozilla.org/docs/Mozilla/Gecko/Chrome/CSS/overflow-clip-box</para>
         /// </summary>
         public Property<PropertySkip, string> OverflowClipBox
         {
@@ -3723,6 +3829,21 @@ namespace CssInCSharp
         }
 
         /// <summary>
+        /// The **`overlay`** CSS property specifies whether an element appearing in the top layer (for example, a shown popover or modal `&lt;dialog&gt;` element) is actually rendered in the top layer. This property is only relevant within a list of `transition-property` values, and only if `allow-discrete` is set as the `transition-behavior`.
+        /// <para> **Syntax**: `none | auto`</para>
+        /// <para> **Initial value**: `none`</para>
+        /// <para> | Chrome  | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :-----: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> | **117** |   No    |   No   | n/a  | No  |</para>
+        /// <para> @see https://developer.mozilla.org/docs/Web/CSS/overlay</para>
+        /// </summary>
+        public Property<PropertySkip, string> Overlay
+        {
+            get => (Property<PropertySkip, string>) _properties["overlay"];
+            set => _properties["overlay"] = value;
+        }
+
+        /// <summary>
         /// The **`overscroll-behavior-block`** CSS property sets the browser's behavior when the block direction boundary of a scrolling area is reached.
         /// <para> **Syntax**: `contain | none | auto`</para>
         /// <para> **Initial value**: `auto`</para>
@@ -3788,7 +3909,7 @@ namespace CssInCSharp
         /// <para> **Initial value**: `0`</para>
         /// <para> | Chrome | Firefox |  Safari  | Edge | IE  |</para>
         /// <para> | :----: | :-----: | :------: | :--: | :-: |</para>
-        /// <para> | **87** | **41**  | **12.1** | n/a  | No  |</para>
+        /// <para> | **69** | **41**  | **12.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/padding-block-end</para>
         /// </summary>
         public Property<PropertySkip, string, double> PaddingBlockEnd
@@ -3803,7 +3924,7 @@ namespace CssInCSharp
         /// <para> **Initial value**: `0`</para>
         /// <para> | Chrome | Firefox |  Safari  | Edge | IE  |</para>
         /// <para> | :----: | :-----: | :------: | :--: | :-: |</para>
-        /// <para> | **87** | **41**  | **12.1** | n/a  | No  |</para>
+        /// <para> | **69** | **41**  | **12.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/padding-block-start</para>
         /// </summary>
         public Property<PropertySkip, string, double> PaddingBlockStart
@@ -3833,7 +3954,7 @@ namespace CssInCSharp
         /// <para> **Initial value**: `0`</para>
         /// <para> |          Chrome           |        Firefox         |          Safari           | Edge | IE  |</para>
         /// <para> | :-----------------------: | :--------------------: | :-----------------------: | :--: | :-: |</para>
-        /// <para> |          **87**           |         **41**         |         **12.1**          | n/a  | No  |</para>
+        /// <para> |          **69**           |         **41**         |         **12.1**          | n/a  | No  |</para>
         /// <para> | 2 _(-webkit-padding-end)_ | 3 _(-moz-padding-end)_ | 3 _(-webkit-padding-end)_ |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/padding-inline-end</para>
         /// </summary>
@@ -3849,7 +3970,7 @@ namespace CssInCSharp
         /// <para> **Initial value**: `0`</para>
         /// <para> |           Chrome            |         Firefox          |           Safari            | Edge | IE  |</para>
         /// <para> | :-------------------------: | :----------------------: | :-------------------------: | :--: | :-: |</para>
-        /// <para> |           **87**            |          **41**          |          **12.1**           | n/a  | No  |</para>
+        /// <para> |           **69**            |          **41**          |          **12.1**           | n/a  | No  |</para>
         /// <para> | 2 _(-webkit-padding-start)_ | 3 _(-moz-padding-start)_ | 3 _(-webkit-padding-start)_ |      |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/padding-inline-start</para>
         /// </summary>
@@ -3908,9 +4029,9 @@ namespace CssInCSharp
         /// The **`page`** CSS property is used to specify the named page, a specific type of page defined by the `@page` at-rule.
         /// <para> **Syntax**: `auto | &lt;custom-ident&gt;`</para>
         /// <para> **Initial value**: `auto`</para>
-        /// <para> | Chrome | Firefox |   Safari    | Edge | IE  |</para>
-        /// <para> | :----: | :-----: | :---------: | :--: | :-: |</para>
-        /// <para> | **85** | **110** | **preview** | n/a  | No  |</para>
+        /// <para> | Chrome | Firefox |  Safari   | Edge | IE  |</para>
+        /// <para> | :----: | :-----: | :-------: | :--: | :-: |</para>
+        /// <para> | **85** | **110** | **≤13.1** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/page</para>
         /// </summary>
         public Property<PropertySkip, string> Page
@@ -3983,10 +4104,10 @@ namespace CssInCSharp
         /// The **`perspective`** CSS property determines the distance between the z=0 plane and the user in order to give a 3D-positioned element some perspective.
         /// <para> **Syntax**: `none | &lt;length&gt;`</para>
         /// <para> **Initial value**: `none`</para>
-        /// <para> |  Chrome  | Firefox  | Safari  |  Edge  |   IE   |</para>
-        /// <para> | :------: | :------: | :-----: | :----: | :----: |</para>
-        /// <para> |  **36**  |  **16**  |  **9**  | **12** | **10** |</para>
-        /// <para> | 12 _-x-_ | 10 _-x-_ | 4 _-x-_ |        |        |</para>
+        /// <para> |  Chrome  | Firefox | Safari  |  Edge  |   IE   |</para>
+        /// <para> | :------: | :-----: | :-----: | :----: | :----: |</para>
+        /// <para> |  **36**  | **16**  |  **9**  | **12** | **10** |</para>
+        /// <para> | 12 _-x-_ |         | 4 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/perspective</para>
         /// </summary>
         public Property<PropertySkip, string, double> Perspective
@@ -3999,10 +4120,10 @@ namespace CssInCSharp
         /// The **`perspective-origin`** CSS property determines the position at which the viewer is looking. It is used as the _vanishing point_ by the `perspective` property.
         /// <para> **Syntax**: `&lt;position&gt;`</para>
         /// <para> **Initial value**: `50% 50%`</para>
-        /// <para> |  Chrome  | Firefox  | Safari  |  Edge  |   IE   |</para>
-        /// <para> | :------: | :------: | :-----: | :----: | :----: |</para>
-        /// <para> |  **36**  |  **16**  |  **9**  | **12** | **10** |</para>
-        /// <para> | 12 _-x-_ | 10 _-x-_ | 4 _-x-_ |        |        |</para>
+        /// <para> |  Chrome  | Firefox | Safari  |  Edge  |   IE   |</para>
+        /// <para> | :------: | :-----: | :-----: | :----: | :----: |</para>
+        /// <para> |  **36**  | **16**  |  **9**  | **12** | **10** |</para>
+        /// <para> | 12 _-x-_ |         | 4 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/perspective-origin</para>
         /// </summary>
         public Property<PropertySkip, string, double> PerspectiveOrigin
@@ -4207,9 +4328,9 @@ namespace CssInCSharp
         /// The `scroll-margin-block-end` property defines the margin of the scroll snap area at the end of the block dimension that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container's coordinate space), then adding the specified outsets.
         /// <para> **Syntax**: `&lt;length&gt;`</para>
         /// <para> **Initial value**: `0`</para>
-        /// <para> | Chrome | Firefox |  Safari  | Edge | IE  |</para>
-        /// <para> | :----: | :-----: | :------: | :--: | :-: |</para>
-        /// <para> | **69** | **68**  | **14.1** | n/a  | No  |</para>
+        /// <para> | Chrome | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :----: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> | **69** | **68**  | **15** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-block-end</para>
         /// </summary>
         public Property<PropertySkip, string, double> ScrollMarginBlockEnd
@@ -4222,9 +4343,9 @@ namespace CssInCSharp
         /// The `scroll-margin-block-start` property defines the margin of the scroll snap area at the start of the block dimension that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container's coordinate space), then adding the specified outsets.
         /// <para> **Syntax**: `&lt;length&gt;`</para>
         /// <para> **Initial value**: `0`</para>
-        /// <para> | Chrome | Firefox |  Safari  | Edge | IE  |</para>
-        /// <para> | :----: | :-----: | :------: | :--: | :-: |</para>
-        /// <para> | **69** | **68**  | **14.1** | n/a  | No  |</para>
+        /// <para> | Chrome | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :----: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> | **69** | **68**  | **15** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-block-start</para>
         /// </summary>
         public Property<PropertySkip, string, double> ScrollMarginBlockStart
@@ -4253,9 +4374,9 @@ namespace CssInCSharp
         /// The `scroll-margin-inline-end` property defines the margin of the scroll snap area at the end of the inline dimension that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container's coordinate space), then adding the specified outsets.
         /// <para> **Syntax**: `&lt;length&gt;`</para>
         /// <para> **Initial value**: `0`</para>
-        /// <para> | Chrome | Firefox |  Safari  | Edge | IE  |</para>
-        /// <para> | :----: | :-----: | :------: | :--: | :-: |</para>
-        /// <para> | **69** | **68**  | **14.1** | n/a  | No  |</para>
+        /// <para> | Chrome | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :----: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> | **69** | **68**  | **15** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-inline-end</para>
         /// </summary>
         public Property<PropertySkip, string, double> ScrollMarginInlineEnd
@@ -4268,9 +4389,9 @@ namespace CssInCSharp
         /// The `scroll-margin-inline-start` property defines the margin of the scroll snap area at the start of the inline dimension that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container's coordinate space), then adding the specified outsets.
         /// <para> **Syntax**: `&lt;length&gt;`</para>
         /// <para> **Initial value**: `0`</para>
-        /// <para> | Chrome | Firefox |  Safari  | Edge | IE  |</para>
-        /// <para> | :----: | :-----: | :------: | :--: | :-: |</para>
-        /// <para> | **69** | **68**  | **14.1** | n/a  | No  |</para>
+        /// <para> | Chrome | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :----: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> | **69** | **68**  | **15** | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-inline-start</para>
         /// </summary>
         public Property<PropertySkip, string, double> ScrollMarginInlineStart
@@ -4559,11 +4680,11 @@ namespace CssInCSharp
 
         /// <summary>
         /// The **`scroll-timeline-axis`** CSS property can be used to specify the scrollbar that will be used to provide the timeline for a scroll-timeline animation.
-        /// <para> **Syntax**: `[ block | inline | vertical | horizontal ]#`</para>
+        /// <para> **Syntax**: `[ block | inline | x | y ]#`</para>
         /// <para> **Initial value**: `block`</para>
-        /// <para> | Chrome | Firefox | Safari | Edge | IE  |</para>
-        /// <para> | :----: | :-----: | :----: | :--: | :-: |</para>
-        /// <para> |   No   |   n/a   |   No   | n/a  | No  |</para>
+        /// <para> | Chrome  | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :-----: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> | **115** |   n/a   |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-timeline-axis</para>
         /// </summary>
         public Property<PropertySkip, string> ScrollTimelineAxis
@@ -4574,11 +4695,11 @@ namespace CssInCSharp
 
         /// <summary>
         /// The **`scroll-timeline-name`** CSS property defines a name that can be used to identify an element as the source of a scroll timeline for an animation.
-        /// <para> **Syntax**: `none | &lt;custom-ident&gt;#`</para>
+        /// <para> **Syntax**: `none | &lt;dashed-ident&gt;#`</para>
         /// <para> **Initial value**: `none`</para>
-        /// <para> | Chrome | Firefox | Safari | Edge | IE  |</para>
-        /// <para> | :----: | :-----: | :----: | :--: | :-: |</para>
-        /// <para> |   No   |   n/a   |   No   | n/a  | No  |</para>
+        /// <para> | Chrome  | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :-----: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> | **115** |   n/a   |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scroll-timeline-name</para>
         /// </summary>
         public Property<PropertySkip, string> ScrollTimelineName
@@ -4591,9 +4712,9 @@ namespace CssInCSharp
         /// The **`scrollbar-color`** CSS property sets the color of the scrollbar track and thumb.
         /// <para> **Syntax**: `auto | &lt;color&gt;{2}`</para>
         /// <para> **Initial value**: `auto`</para>
-        /// <para> | Chrome | Firefox | Safari | Edge | IE  |</para>
-        /// <para> | :----: | :-----: | :----: | :--: | :-: |</para>
-        /// <para> |   No   | **64**  |   No   | n/a  | No  |</para>
+        /// <para> | Chrome  | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :-----: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> | **121** | **64**  |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scrollbar-color</para>
         /// </summary>
         public Property<PropertySkip, string> ScrollbarColor
@@ -4621,9 +4742,9 @@ namespace CssInCSharp
         /// The **`scrollbar-width`** property allows the author to set the maximum thickness of an element's scrollbars when they are shown.
         /// <para> **Syntax**: `auto | thin | none`</para>
         /// <para> **Initial value**: `auto`</para>
-        /// <para> | Chrome | Firefox | Safari | Edge | IE  |</para>
-        /// <para> | :----: | :-----: | :----: | :--: | :-: |</para>
-        /// <para> |   No   | **64**  |   No   | n/a  | No  |</para>
+        /// <para> | Chrome  | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :-----: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> | **121** | **64**  |   No   | n/a  | No  |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/scrollbar-width</para>
         /// </summary>
         public Property<PropertySkip, string> ScrollbarWidth
@@ -4742,10 +4863,10 @@ namespace CssInCSharp
         /// The **`text-combine-upright`** CSS property sets the combination of characters into the space of a single character. If the combined text is wider than 1em, the user agent must fit the contents within 1em. The resulting composition is treated as a single upright glyph for layout and decoration. This property only has an effect in vertical writing modes.
         /// <para> **Syntax**: `none | all | [ digits &lt;integer&gt;? ]`</para>
         /// <para> **Initial value**: `none`</para>
-        /// <para> |           Chrome           | Firefox |            Safari            | Edge  |                   IE                   |</para>
-        /// <para> | :------------------------: | :-----: | :--------------------------: | :---: | :------------------------------------: |</para>
-        /// <para> |           **48**           | **48**  |         **preview**          | 15-79 | **11** _(-ms-text-combine-horizontal)_ |</para>
-        /// <para> | 9 _(-webkit-text-combine)_ |         | 5.1 _(-webkit-text-combine)_ |       |                                        |</para>
+        /// <para> |           Chrome           | Firefox |            Safari            |  Edge  |                   IE                   |</para>
+        /// <para> | :------------------------: | :-----: | :--------------------------: | :----: | :------------------------------------: |</para>
+        /// <para> |           **48**           | **48**  |           **15.4**           | **79** | **11** _(-ms-text-combine-horizontal)_ |</para>
+        /// <para> | 9 _(-webkit-text-combine)_ |         | 5.1 _(-webkit-text-combine)_ |        |                                        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/text-combine-upright</para>
         /// </summary>
         public Property<PropertySkip, string> TextCombineUpright
@@ -4915,9 +5036,9 @@ namespace CssInCSharp
         /// The **`text-justify`** CSS property sets what type of justification should be applied to text when `text-align``: justify;` is set on an element.
         /// <para> **Syntax**: `auto | inter-character | inter-word | none`</para>
         /// <para> **Initial value**: `auto`</para>
-        /// <para> | Chrome | Firefox | Safari |  Edge  |   IE   |</para>
-        /// <para> | :----: | :-----: | :----: | :----: | :----: |</para>
-        /// <para> |  n/a   | **55**  |   No   | **12** | **11** |</para>
+        /// <para> | Chrome | Firefox | Safari | Edge  |   IE   |</para>
+        /// <para> | :----: | :-----: | :----: | :---: | :----: |</para>
+        /// <para> |  n/a   | **55**  |   No   | 12-79 | **11** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/text-justify</para>
         /// </summary>
         public Property<PropertySkip, string> TextJustify
@@ -5049,6 +5170,36 @@ namespace CssInCSharp
         }
 
         /// <summary>
+        /// The **`text-wrap`** CSS property controls how text inside an element is wrapped. The different values provide:
+        /// <para> **Syntax**: `wrap | nowrap | balance | stable | pretty`</para>
+        /// <para> **Initial value**: `wrap`</para>
+        /// <para> | Chrome  | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :-----: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> | **114** | **121** |   No   | n/a  | No  |</para>
+        /// <para> @see https://developer.mozilla.org/docs/Web/CSS/text-wrap</para>
+        /// </summary>
+        public Property<PropertySkip, string> TextWrap
+        {
+            get => (Property<PropertySkip, string>) _properties["text-wrap"];
+            set => _properties["text-wrap"] = value;
+        }
+
+        /// <summary>
+        /// The **`timeline-scope`** CSS property modifies the scope of a named animation timeline.
+        /// <para> **Syntax**: `none | &lt;dashed-ident&gt;#`</para>
+        /// <para> **Initial value**: `none`</para>
+        /// <para> | Chrome  | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :-----: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> | **116** |   No    |   No   | n/a  | No  |</para>
+        /// <para> @see https://developer.mozilla.org/docs/Web/CSS/timeline-scope</para>
+        /// </summary>
+        public Property<PropertySkip, string> TimelineScope
+        {
+            get => (Property<PropertySkip, string>) _properties["timeline-scope"];
+            set => _properties["timeline-scope"] = value;
+        }
+
+        /// <summary>
         /// The **`top`** CSS property participates in specifying the vertical position of a positioned element. It has no effect on non-positioned elements.
         /// <para> **Syntax**: `&lt;length&gt; | &lt;percentage&gt; | auto`</para>
         /// <para> **Initial value**: `auto`</para>
@@ -5114,10 +5265,10 @@ namespace CssInCSharp
         /// The **`transform-origin`** CSS property sets the origin for an element's transformations.
         /// <para> **Syntax**: `[ &lt;length-percentage&gt; | left | center | right | top | bottom ] | [ [ &lt;length-percentage&gt; | left | center | right ] && [ &lt;length-percentage&gt; | top | center | bottom ] ] &lt;length&gt;?`</para>
         /// <para> **Initial value**: `50% 50% 0`</para>
-        /// <para> | Chrome  |  Firefox  | Safari  |  Edge  |   IE    |</para>
-        /// <para> | :-----: | :-------: | :-----: | :----: | :-----: |</para>
-        /// <para> | **36**  |  **16**   |  **9**  | **12** | **10**  |</para>
-        /// <para> | 1 _-x-_ | 3.5 _-x-_ | 2 _-x-_ |        | 9 _-x-_ |</para>
+        /// <para> | Chrome  | Firefox | Safari  |  Edge  |   IE    |</para>
+        /// <para> | :-----: | :-----: | :-----: | :----: | :-----: |</para>
+        /// <para> | **36**  | **16**  |  **9**  | **12** | **10**  |</para>
+        /// <para> | 1 _-x-_ |         | 2 _-x-_ |        | 9 _-x-_ |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/transform-origin</para>
         /// </summary>
         public Property<PropertySkip, string, double> TransformOrigin
@@ -5130,10 +5281,10 @@ namespace CssInCSharp
         /// The **`transform-style`** CSS property sets whether children of an element are positioned in the 3D space or are flattened in the plane of the element.
         /// <para> **Syntax**: `flat | preserve-3d`</para>
         /// <para> **Initial value**: `flat`</para>
-        /// <para> |  Chrome  | Firefox  | Safari  |  Edge  | IE  |</para>
-        /// <para> | :------: | :------: | :-----: | :----: | :-: |</para>
-        /// <para> |  **36**  |  **16**  |  **9**  | **12** | No  |</para>
-        /// <para> | 12 _-x-_ | 10 _-x-_ | 4 _-x-_ |        |     |</para>
+        /// <para> |  Chrome  | Firefox | Safari  |  Edge  | IE  |</para>
+        /// <para> | :------: | :-----: | :-----: | :----: | :-: |</para>
+        /// <para> |  **36**  | **16**  |  **9**  | **12** | No  |</para>
+        /// <para> | 12 _-x-_ |         | 4 _-x-_ |        |     |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/transform-style</para>
         /// </summary>
         public Property<PropertySkip, string> TransformStyle
@@ -5143,13 +5294,28 @@ namespace CssInCSharp
         }
 
         /// <summary>
+        /// The **`transition-behavior`** CSS property specifies whether transitions will be started for properties whose animation behavior is discrete.
+        /// <para> **Syntax**: `&lt;transition-behavior-value&gt;#`</para>
+        /// <para> **Initial value**: `normal`</para>
+        /// <para> | Chrome  | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :-----: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> | **117** |   No    |   No   | n/a  | No  |</para>
+        /// <para> @see https://developer.mozilla.org/docs/Web/CSS/transition-behavior</para>
+        /// </summary>
+        public Property<PropertySkip, string> TransitionBehavior
+        {
+            get => (Property<PropertySkip, string>) _properties["transition-behavior"];
+            set => _properties["transition-behavior"] = value;
+        }
+
+        /// <summary>
         /// The **`transition-delay`** CSS property specifies the duration to wait before starting a property's transition effect when its value changes.
         /// <para> **Syntax**: `&lt;time&gt;#`</para>
         /// <para> **Initial value**: `0s`</para>
         /// <para> | Chrome  | Firefox | Safari  |  Edge  |   IE   |</para>
         /// <para> | :-----: | :-----: | :-----: | :----: | :----: |</para>
         /// <para> | **26**  | **16**  |  **9**  | **12** | **10** |</para>
-        /// <para> | 1 _-x-_ | 4 _-x-_ | 4 _-x-_ |        |        |</para>
+        /// <para> | 1 _-x-_ |         | 4 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/transition-delay</para>
         /// </summary>
         public Property<PropertySkip, string> TransitionDelay
@@ -5165,7 +5331,7 @@ namespace CssInCSharp
         /// <para> | Chrome  | Firefox |  Safari   |  Edge  |   IE   |</para>
         /// <para> | :-----: | :-----: | :-------: | :----: | :----: |</para>
         /// <para> | **26**  | **16**  |   **9**   | **12** | **10** |</para>
-        /// <para> | 1 _-x-_ | 4 _-x-_ | 3.1 _-x-_ |        |        |</para>
+        /// <para> | 1 _-x-_ |         | 3.1 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/transition-duration</para>
         /// </summary>
         public Property<PropertySkip, string> TransitionDuration
@@ -5181,7 +5347,7 @@ namespace CssInCSharp
         /// <para> | Chrome  | Firefox |  Safari   |  Edge  |   IE   |</para>
         /// <para> | :-----: | :-----: | :-------: | :----: | :----: |</para>
         /// <para> | **26**  | **16**  |   **9**   | **12** | **10** |</para>
-        /// <para> | 1 _-x-_ | 4 _-x-_ | 3.1 _-x-_ |        |        |</para>
+        /// <para> | 1 _-x-_ |         | 3.1 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/transition-property</para>
         /// </summary>
         public Property<PropertySkip, string> TransitionProperty
@@ -5197,7 +5363,7 @@ namespace CssInCSharp
         /// <para> | Chrome  | Firefox |  Safari   |  Edge  |   IE   |</para>
         /// <para> | :-----: | :-----: | :-------: | :----: | :----: |</para>
         /// <para> | **26**  | **16**  |   **9**   | **12** | **10** |</para>
-        /// <para> | 1 _-x-_ | 4 _-x-_ | 3.1 _-x-_ |        |        |</para>
+        /// <para> | 1 _-x-_ |         | 3.1 _-x-_ |        |        |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/transition-timing-function</para>
         /// </summary>
         public Property<PropertySkip, string> TransitionTimingFunction
@@ -5268,6 +5434,51 @@ namespace CssInCSharp
         }
 
         /// <summary>
+        /// The **`view-timeline-axis`** CSS property is used to specify the scrollbar direction that will be used to provide the timeline for a _named view progress timeline_ animation, which is progressed through based on the change in visibility of an element (known as the _subject_) inside a scrollable element (_scroller_). `view-timeline-axis` is set on the subject. See CSS scroll-driven animations for more details.
+        /// <para> **Syntax**: `[ block | inline | x | y ]#`</para>
+        /// <para> **Initial value**: `block`</para>
+        /// <para> | Chrome  | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :-----: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> | **115** |   n/a   |   No   | n/a  | No  |</para>
+        /// <para> @see https://developer.mozilla.org/docs/Web/CSS/view-timeline-axis</para>
+        /// </summary>
+        public Property<PropertySkip, string> ViewTimelineAxis
+        {
+            get => (Property<PropertySkip, string>) _properties["view-timeline-axis"];
+            set => _properties["view-timeline-axis"] = value;
+        }
+
+        /// <summary>
+        /// The **`view-timeline-inset`** CSS property is used to specify one or two values representing an adjustment to the position of the scrollport (see Scroll container for more details) in which the subject element of a _named view progress timeline_ animation is deemed to be visible. Put another way, this allows you to specify start and/or end inset (or outset) values that offset the position of the timeline.
+        /// <para> **Syntax**: `[ [ auto | &lt;length-percentage&gt; ]{1,2} ]#`</para>
+        /// <para> **Initial value**: `auto`</para>
+        /// <para> | Chrome  | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :-----: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> | **115** |   No    |   No   | n/a  | No  |</para>
+        /// <para> @see https://developer.mozilla.org/docs/Web/CSS/view-timeline-inset</para>
+        /// </summary>
+        public Property<PropertySkip, string, double> ViewTimelineInset
+        {
+            get => (Property<PropertySkip, string, double>) _properties["view-timeline-inset"];
+            set => _properties["view-timeline-inset"] = value;
+        }
+
+        /// <summary>
+        /// The **`view-timeline-name`** CSS property is used to define the name of a _named view progress timeline_, which is progressed through based on the change in visibility of an element (known as the _subject_) inside a scrollable element (_scroller_). `view-timeline` is set on the subject.
+        /// <para> **Syntax**: `none | &lt;dashed-ident&gt;#`</para>
+        /// <para> **Initial value**: `none`</para>
+        /// <para> | Chrome  | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :-----: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> | **115** |   n/a   |   No   | n/a  | No  |</para>
+        /// <para> @see https://developer.mozilla.org/docs/Web/CSS/view-timeline-name</para>
+        /// </summary>
+        public Property<PropertySkip, string> ViewTimelineName
+        {
+            get => (Property<PropertySkip, string>) _properties["view-timeline-name"];
+            set => _properties["view-timeline-name"] = value;
+        }
+
+        /// <summary>
         /// The **`view-transition-name`** CSS property provides the selected element with a distinct identifying name (a `&lt;custom-ident&gt;`) and causes it to participate in a separate view transition from the root view transition — or no view transition if the `none` value is specified.
         /// <para> **Syntax**: `none | &lt;custom-ident&gt;`</para>
         /// <para> **Initial value**: `none`</para>
@@ -5299,7 +5510,7 @@ namespace CssInCSharp
 
         /// <summary>
         /// The **`white-space`** CSS property sets how white space inside an element is handled.
-        /// <para> **Syntax**: `normal | pre | nowrap | pre-wrap | pre-line | break-spaces`</para>
+        /// <para> **Syntax**: `normal | pre | nowrap | pre-wrap | pre-line | break-spaces | [ &lt;'white-space-collapse'&gt; || &lt;'text-wrap'&gt; || &lt;'white-space-trim'&gt; ]`</para>
         /// <para> **Initial value**: `normal`</para>
         /// <para> | Chrome | Firefox | Safari |  Edge  |   IE    |</para>
         /// <para> | :----: | :-----: | :----: | :----: | :-----: |</para>
@@ -5310,6 +5521,31 @@ namespace CssInCSharp
         {
             get => (Property<PropertySkip, string>) _properties["white-space"];
             set => _properties["white-space"] = value;
+        }
+
+        /// <summary>
+        /// The **`white-space-collapse`** CSS property controls how white space inside an element is collapsed.
+        /// <para> **Syntax**: `collapse | discard | preserve | preserve-breaks | preserve-spaces | break-spaces`</para>
+        /// <para> **Initial value**: `collapse`</para>
+        /// <para> | Chrome  | Firefox | Safari | Edge | IE  |</para>
+        /// <para> | :-----: | :-----: | :----: | :--: | :-: |</para>
+        /// <para> | **114** |   No    |   No   | n/a  | No  |</para>
+        /// <para> @see https://developer.mozilla.org/docs/Web/CSS/white-space-collapse</para>
+        /// </summary>
+        public Property<PropertySkip, string> WhiteSpaceCollapse
+        {
+            get => (Property<PropertySkip, string>) _properties["white-space-collapse"];
+            set => _properties["white-space-collapse"] = value;
+        }
+
+        /// <summary>
+        /// **Syntax**: `none | discard-before || discard-after || discard-inner`
+        /// <para> **Initial value**: `none`</para>
+        /// </summary>
+        public Property<PropertySkip, string> WhiteSpaceTrim
+        {
+            get => (Property<PropertySkip, string>) _properties["white-space-trim"];
+            set => _properties["white-space-trim"] = value;
         }
 
         /// <summary>
@@ -5391,6 +5627,9 @@ namespace CssInCSharp
         /// The **`overflow-wrap`** CSS property applies to inline elements, setting whether the browser should insert line breaks within an otherwise unbreakable string to prevent text from overflowing its line box.
         /// <para> **Syntax**: `normal | break-word`</para>
         /// <para> **Initial value**: `normal`</para>
+        /// <para> | Chrome  | Firefox |  Safari   |  Edge   | IE  |</para>
+        /// <para> | :-----: | :-----: | :-------: | :-----: | :-: |</para>
+        /// <para> | **≤80** | **≤72** | **≤13.1** | **≤80** | No  |</para>
         /// </summary>
         public Property<PropertySkip, string> WordWrap
         {
@@ -5435,7 +5674,7 @@ namespace CssInCSharp
         /// <para> **Initial value**: `normal`</para>
         /// <para> | Chrome | Firefox | Safari  |  Edge  |   IE    |</para>
         /// <para> | :----: | :-----: | :-----: | :----: | :-----: |</para>
-        /// <para> | **1**  |   No    | **3.1** | **12** | **5.5** |</para>
+        /// <para> | **1**  |   n/a   | **3.1** | **12** | **5.5** |</para>
         /// <para> @see https://developer.mozilla.org/docs/Web/CSS/zoom</para>
         /// </summary>
         public Property<PropertySkip, string, double> Zoom

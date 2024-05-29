@@ -102,17 +102,6 @@ namespace CssInCSharp
         }
 
         /// <summary>
-        /// The **`backface-visibility`** CSS property sets whether the back face of an element is visible when turned towards the user.
-        /// <para> **Syntax**: `visible | hidden`</para>
-        /// <para> **Initial value**: `visible`</para>
-        /// </summary>
-        public Property<PropertySkip, string> MozBackfaceVisibility
-        {
-            get => (Property<PropertySkip, string>) _properties["-moz-backface-visibility"];
-            set => _properties["-moz-backface-visibility"] = value;
-        }
-
-        /// <summary>
         /// The **`-moz-binding`** CSS property is used by Mozilla-based applications to attach an XBL binding to a DOM element.
         /// <para> **Syntax**: `&lt;url&gt; | none`</para>
         /// <para> **Initial value**: `none`</para>
@@ -399,6 +388,50 @@ namespace CssInCSharp
         }
 
         /// <summary>
+        /// In Mozilla applications, the **`-moz-outline-radius-bottomleft`** CSS property can be used to round the bottom-left corner of an element's `outline`.
+        /// <para> **Syntax**: `&lt;outline-radius&gt;`</para>
+        /// <para> **Initial value**: `0`</para>
+        /// </summary>
+        public Property<PropertySkip, string, double> MozOutlineRadiusBottomleft
+        {
+            get => (Property<PropertySkip, string, double>) _properties["-moz-outline-radius-bottomleft"];
+            set => _properties["-moz-outline-radius-bottomleft"] = value;
+        }
+
+        /// <summary>
+        /// In Mozilla applications, the **`-moz-outline-radius-bottomright`** CSS property can be used to round the bottom-right corner of an element's `outline`.
+        /// <para> **Syntax**: `&lt;outline-radius&gt;`</para>
+        /// <para> **Initial value**: `0`</para>
+        /// </summary>
+        public Property<PropertySkip, string, double> MozOutlineRadiusBottomright
+        {
+            get => (Property<PropertySkip, string, double>) _properties["-moz-outline-radius-bottomright"];
+            set => _properties["-moz-outline-radius-bottomright"] = value;
+        }
+
+        /// <summary>
+        /// In Mozilla applications, the **`-moz-outline-radius-topleft`** CSS property can be used to round the top-left corner of an element's `outline`.
+        /// <para> **Syntax**: `&lt;outline-radius&gt;`</para>
+        /// <para> **Initial value**: `0`</para>
+        /// </summary>
+        public Property<PropertySkip, string, double> MozOutlineRadiusTopleft
+        {
+            get => (Property<PropertySkip, string, double>) _properties["-moz-outline-radius-topleft"];
+            set => _properties["-moz-outline-radius-topleft"] = value;
+        }
+
+        /// <summary>
+        /// In Mozilla applications, the **`-moz-outline-radius-topright`** CSS property can be used to round the top-right corner of an element's `outline`.
+        /// <para> **Syntax**: `&lt;outline-radius&gt;`</para>
+        /// <para> **Initial value**: `0`</para>
+        /// </summary>
+        public Property<PropertySkip, string, double> MozOutlineRadiusTopright
+        {
+            get => (Property<PropertySkip, string, double>) _properties["-moz-outline-radius-topright"];
+            set => _properties["-moz-outline-radius-topright"] = value;
+        }
+
+        /// <summary>
         /// The **`padding-inline-end`** CSS property defines the logical inline end padding of an element, which maps to a physical padding depending on the element's writing mode, directionality, and text orientation.
         /// <para> **Syntax**: `&lt;'padding-left'&gt;`</para>
         /// <para> **Initial value**: `0`</para>
@@ -418,28 +451,6 @@ namespace CssInCSharp
         {
             get => (Property<PropertySkip, string, double>) _properties["-moz-padding-start"];
             set => _properties["-moz-padding-start"] = value;
-        }
-
-        /// <summary>
-        /// The **`perspective`** CSS property determines the distance between the z=0 plane and the user in order to give a 3D-positioned element some perspective.
-        /// <para> **Syntax**: `none | &lt;length&gt;`</para>
-        /// <para> **Initial value**: `none`</para>
-        /// </summary>
-        public Property<PropertySkip, string, double> MozPerspective
-        {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-perspective"];
-            set => _properties["-moz-perspective"] = value;
-        }
-
-        /// <summary>
-        /// The **`perspective-origin`** CSS property determines the position at which the viewer is looking. It is used as the _vanishing point_ by the `perspective` property.
-        /// <para> **Syntax**: `&lt;position&gt;`</para>
-        /// <para> **Initial value**: `50% 50%`</para>
-        /// </summary>
-        public Property<PropertySkip, string, double> MozPerspectiveOrigin
-        {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-perspective-origin"];
-            set => _properties["-moz-perspective-origin"] = value;
         }
 
         /// <summary>
@@ -484,72 +495,6 @@ namespace CssInCSharp
         {
             get => (Property<PropertySkip, string>) _properties["-moz-text-size-adjust"];
             set => _properties["-moz-text-size-adjust"] = value;
-        }
-
-        /// <summary>
-        /// The **`transform-origin`** CSS property sets the origin for an element's transformations.
-        /// <para> **Syntax**: `[ &lt;length-percentage&gt; | left | center | right | top | bottom ] | [ [ &lt;length-percentage&gt; | left | center | right ] && [ &lt;length-percentage&gt; | top | center | bottom ] ] &lt;length&gt;?`</para>
-        /// <para> **Initial value**: `50% 50% 0`</para>
-        /// </summary>
-        public Property<PropertySkip, string, double> MozTransformOrigin
-        {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-transform-origin"];
-            set => _properties["-moz-transform-origin"] = value;
-        }
-
-        /// <summary>
-        /// The **`transform-style`** CSS property sets whether children of an element are positioned in the 3D space or are flattened in the plane of the element.
-        /// <para> **Syntax**: `flat | preserve-3d`</para>
-        /// <para> **Initial value**: `flat`</para>
-        /// </summary>
-        public Property<PropertySkip, string> MozTransformStyle
-        {
-            get => (Property<PropertySkip, string>) _properties["-moz-transform-style"];
-            set => _properties["-moz-transform-style"] = value;
-        }
-
-        /// <summary>
-        /// The **`transition-delay`** CSS property specifies the duration to wait before starting a property's transition effect when its value changes.
-        /// <para> **Syntax**: `&lt;time&gt;#`</para>
-        /// <para> **Initial value**: `0s`</para>
-        /// </summary>
-        public Property<PropertySkip, string> MozTransitionDelay
-        {
-            get => (Property<PropertySkip, string>) _properties["-moz-transition-delay"];
-            set => _properties["-moz-transition-delay"] = value;
-        }
-
-        /// <summary>
-        /// The **`transition-duration`** CSS property sets the length of time a transition animation should take to complete. By default, the value is `0s`, meaning that no animation will occur.
-        /// <para> **Syntax**: `&lt;time&gt;#`</para>
-        /// <para> **Initial value**: `0s`</para>
-        /// </summary>
-        public Property<PropertySkip, string> MozTransitionDuration
-        {
-            get => (Property<PropertySkip, string>) _properties["-moz-transition-duration"];
-            set => _properties["-moz-transition-duration"] = value;
-        }
-
-        /// <summary>
-        /// The **`transition-property`** CSS property sets the CSS properties to which a transition effect should be applied.
-        /// <para> **Syntax**: `none | &lt;single-transition-property&gt;#`</para>
-        /// <para> **Initial value**: all</para>
-        /// </summary>
-        public Property<PropertySkip, string> MozTransitionProperty
-        {
-            get => (Property<PropertySkip, string>) _properties["-moz-transition-property"];
-            set => _properties["-moz-transition-property"] = value;
-        }
-
-        /// <summary>
-        /// The **`transition-timing-function`** CSS property sets how intermediate values are calculated for CSS properties being affected by a transition effect.
-        /// <para> **Syntax**: `&lt;easing-function&gt;#`</para>
-        /// <para> **Initial value**: `ease`</para>
-        /// </summary>
-        public Property<PropertySkip, string> MozTransitionTimingFunction
-        {
-            get => (Property<PropertySkip, string>) _properties["-moz-transition-timing-function"];
-            set => _properties["-moz-transition-timing-function"] = value;
         }
 
         /// <summary>
