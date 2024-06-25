@@ -286,7 +286,7 @@ namespace CssInCSharp
     fs.writeFileSync(output, template, 'utf8');
 }
 
-function generatePropertyItems(input: string, output: string, start: number, end: number, useGeneric: boolean = true) {
+function generatePropertyItems(input: string, output: string, start: number, end: number, useGeneric: boolean = true, obsolete: boolean = false, usings: string[] = []) {
     const lines = getFileContent(input, start, end);
     const tab = '        ';
     let propTypes: PropertyType[] = []
@@ -308,6 +308,9 @@ function generatePropertyItems(input: string, output: string, start: number, end
             }
         }
         sb += tab + '/// </summary>\r\n';
+        if (obsolete) {
+            sb += tab + `[Obsolete]\r\n`;
+        }
         sb += tab + `public ${item.type} ${item.name}\r\n`;
         sb += tab + '{\r\n';
         sb += tab + `    get => (${item.type}) _properties["${item.indexer}"];\r\n`;
@@ -316,7 +319,9 @@ function generatePropertyItems(input: string, output: string, start: number, end
         sb += '\r\n';
     });
 
-    const template = `namespace CssInCSharp
+    const using = usings.length > 0 ? usings.join('\r\n') + '\r\n\r\n' : '';
+
+    const template = `${using}namespace CssInCSharp
 {
     public partial class CSSObject
     {
@@ -357,6 +362,12 @@ function generateVendorShorthand() {
     generatePropertyItems(input, output, 7870, 8021);
 }
 
+function generateObsoleteProperties() {
+    const input = './node_modules/csstype/index.d.ts';
+    const output = './src/Css/CSSObject.ObsoleteProperties.cs';
+    generatePropertyItems(input, output, 8025, 9078, true, true, ['using System;']);
+}
+
 function generateUnitless() {
     const tab = '            ';
     const transform = (key: string) => {
@@ -391,6 +402,7 @@ function generate() {
     generateStandardShorthand();
     generateVendorLonghand();
     generateVendorShorthand();
+    generateObsoleteProperties();
     generateUnitless();
 }
 
