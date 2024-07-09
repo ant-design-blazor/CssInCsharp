@@ -11,6 +11,7 @@ internal static class Functions
             float v => Wrap(key, v, v != 0),
             double v => Wrap(key, v, v != 0),
             Keyframe v => v.ToString(),
+            PropertySkip v => v.GetValue(key),
             _ => value?.ToString()
         };
     }
