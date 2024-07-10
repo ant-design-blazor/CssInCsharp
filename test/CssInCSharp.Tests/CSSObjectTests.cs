@@ -80,5 +80,24 @@ namespace CssInCSharp.Tests
             });
             messageMoveIn.ToString().ShouldBe("MessageMoveIn;@keyframes MessageMoveIn{0%{padding:0;transform:translateY(-100%);opacity:0;}100%{padding:100px;transform:translateY(0);opacity:1;}}");
         }
-    }
+
+		[Fact]
+		public void Should_Property_Skip_Pxwrap()
+		{
+			new CSSObject()
+			{
+				[".test"] = new CSSObject()
+				{
+                    Left = new PropertySkip()
+                    {
+                        SkipCheck = true,
+                        Value = 12
+                    }
+				}
+			}
+			.ToString()
+			.ShouldBe(".test{left:12px;}");
+		}
+
+	}
 }
