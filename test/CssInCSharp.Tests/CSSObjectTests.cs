@@ -99,5 +99,19 @@ namespace CssInCSharp.Tests
 			.ShouldBe(".test{left:12px;}");
 		}
 
+		[Fact]
+		public void Should_Where_Inject_To_All_Selectors()
+		{
+			new CSSObject()
+			{
+                [".ant-zoom-big-fast-enter,.ant-zoom-big-fast-appear"] = new CSSObject()
+                {
+                    Transform = "scale(0)",
+                    Opacity = 0,
+                }
+			}
+			.SerializeCss("css-3nv711")
+			.ShouldBe(":where(.css-3nv711).ant-zoom-big-fast-enter,:where(.css-3nv711).ant-zoom-big-fast-appear{transform:scale(0);opacity:0;}");
+		}
 	}
 }
