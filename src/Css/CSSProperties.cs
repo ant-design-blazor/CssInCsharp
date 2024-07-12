@@ -69,5 +69,17 @@ namespace CssInCSharp
                 _ => throw new InvalidOperationException("Unexpected index.")
             };
         }
+
+        public object GetValue()
+        {
+            return _index switch
+            {
+                0 => _value0,
+                1 => _value1,
+                2 => _value2,
+                3 => _value3,
+                _ => throw new InvalidOperationException("Unexpected index.")
+            };
+        }
     }
 }

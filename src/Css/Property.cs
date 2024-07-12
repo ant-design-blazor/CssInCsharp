@@ -34,6 +34,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct AlignContent : IProperty
@@ -58,6 +68,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -88,6 +108,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct AlignSelf : IProperty
@@ -112,6 +142,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -142,6 +182,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct All : IProperty
@@ -166,6 +216,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -196,6 +256,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct AnimationComposition : IProperty
@@ -220,6 +290,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -250,6 +330,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct AnimationDirection : IProperty
@@ -274,6 +364,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -304,6 +404,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct AnimationFillMode : IProperty
@@ -328,6 +438,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -362,6 +482,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct AnimationName : IProperty
@@ -393,6 +524,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct AnimationPlayState : IProperty
@@ -417,6 +559,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -451,6 +603,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct AnimationRangeEnd : IProperty
@@ -479,6 +642,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -513,6 +687,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct AnimationTimeline : IProperty
@@ -537,6 +722,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -567,6 +762,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct Appearance : IProperty
@@ -591,6 +796,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -625,6 +840,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct Azimuth : IProperty
@@ -649,6 +875,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -679,6 +915,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BackfaceVisibility : IProperty
@@ -703,6 +949,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -737,6 +993,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BackgroundAttachment : IProperty
@@ -761,6 +1028,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -791,6 +1068,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BackgroundClip : IProperty
@@ -815,6 +1102,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -845,6 +1142,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BackgroundImage : IProperty
@@ -872,6 +1179,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BackgroundOrigin : IProperty
@@ -896,6 +1213,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -930,6 +1257,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BackgroundPositionX : IProperty
@@ -958,6 +1296,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -992,6 +1341,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BackgroundRepeat : IProperty
@@ -1016,6 +1376,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1050,6 +1420,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BlockOverflow : IProperty
@@ -1074,6 +1455,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1108,6 +1499,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct Border : IProperty
@@ -1136,6 +1538,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1170,6 +1583,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderBlockColor : IProperty
@@ -1194,6 +1618,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1228,6 +1662,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderBlockEndColor : IProperty
@@ -1255,6 +1700,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderBlockEndStyle : IProperty
@@ -1279,6 +1734,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1313,6 +1778,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderBlockStart : IProperty
@@ -1344,6 +1820,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderBlockStartColor : IProperty
@@ -1371,6 +1858,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderBlockStartStyle : IProperty
@@ -1395,6 +1892,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1429,6 +1936,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderBlockStyle : IProperty
@@ -1453,6 +1971,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1487,6 +2015,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderBottom : IProperty
@@ -1518,6 +2057,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderBottomColor : IProperty
@@ -1542,6 +2092,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1576,6 +2136,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderBottomRightRadius : IProperty
@@ -1607,6 +2178,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderBottomStyle : IProperty
@@ -1631,6 +2213,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1665,6 +2257,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderCollapse : IProperty
@@ -1692,6 +2295,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderColor : IProperty
@@ -1716,6 +2329,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1750,6 +2373,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderEndStartRadius : IProperty
@@ -1778,6 +2412,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1812,6 +2457,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderImageOutset : IProperty
@@ -1843,6 +2499,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderImageRepeat : IProperty
@@ -1867,6 +2534,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1901,6 +2578,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderImageSource : IProperty
@@ -1925,6 +2613,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -1959,6 +2657,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderInline : IProperty
@@ -1990,6 +2699,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderInlineColor : IProperty
@@ -2014,6 +2734,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2048,6 +2778,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderInlineEndColor : IProperty
@@ -2075,6 +2816,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderInlineEndStyle : IProperty
@@ -2099,6 +2850,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2133,6 +2894,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderInlineStart : IProperty
@@ -2164,6 +2936,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderInlineStartColor : IProperty
@@ -2191,6 +2974,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderInlineStartStyle : IProperty
@@ -2215,6 +3008,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2249,6 +3052,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderInlineStyle : IProperty
@@ -2273,6 +3087,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2307,6 +3131,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderLeft : IProperty
@@ -2338,6 +3173,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderLeftColor : IProperty
@@ -2365,6 +3211,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderLeftStyle : IProperty
@@ -2389,6 +3245,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2423,6 +3289,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderRadius : IProperty
@@ -2451,6 +3328,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2485,6 +3373,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderRightColor : IProperty
@@ -2512,6 +3411,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderRightStyle : IProperty
@@ -2536,6 +3445,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2570,6 +3489,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderSpacing : IProperty
@@ -2598,6 +3528,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2632,6 +3573,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderStartStartRadius : IProperty
@@ -2663,6 +3615,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderStyle : IProperty
@@ -2687,6 +3650,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2721,6 +3694,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderTopColor : IProperty
@@ -2745,6 +3729,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2779,6 +3773,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderTopRightRadius : IProperty
@@ -2810,6 +3815,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderTopStyle : IProperty
@@ -2834,6 +3850,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2868,6 +3894,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BorderWidth : IProperty
@@ -2896,6 +3933,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2930,6 +3978,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BoxAlign : IProperty
@@ -2954,6 +4013,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -2984,6 +4053,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BoxDirection : IProperty
@@ -3008,6 +4087,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3042,6 +4131,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BoxFlexGroup : IProperty
@@ -3073,6 +4173,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BoxLines : IProperty
@@ -3097,6 +4208,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3131,6 +4252,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BoxOrient : IProperty
@@ -3155,6 +4287,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3185,6 +4327,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BoxShadow : IProperty
@@ -3209,6 +4361,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3239,6 +4401,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BreakAfter : IProperty
@@ -3263,6 +4435,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3293,6 +4475,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct BreakInside : IProperty
@@ -3317,6 +4509,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3347,6 +4549,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct Caret : IProperty
@@ -3371,6 +4583,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3401,6 +4623,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct CaretShape : IProperty
@@ -3425,6 +4657,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3455,6 +4697,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct Clip : IProperty
@@ -3479,6 +4731,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3509,6 +4771,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct Color : IProperty
@@ -3533,6 +4805,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3563,6 +4845,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ColorScheme : IProperty
@@ -3587,6 +4879,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3621,6 +4923,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ColumnFill : IProperty
@@ -3645,6 +4958,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3679,6 +5002,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ColumnRule : IProperty
@@ -3710,6 +5044,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ColumnRuleColor : IProperty
@@ -3737,6 +5082,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ColumnRuleStyle : IProperty
@@ -3761,6 +5116,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3795,6 +5160,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ColumnSpan : IProperty
@@ -3819,6 +5195,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3853,6 +5239,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct Columns : IProperty
@@ -3884,6 +5281,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct Contain : IProperty
@@ -3908,6 +5316,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -3942,6 +5360,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ContainIntrinsicHeight : IProperty
@@ -3970,6 +5399,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4004,6 +5444,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ContainIntrinsicSize : IProperty
@@ -4032,6 +5483,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4066,6 +5528,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct Container : IProperty
@@ -4090,6 +5563,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4120,6 +5603,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ContainerType : IProperty
@@ -4144,6 +5637,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4174,6 +5677,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ContentVisibility : IProperty
@@ -4198,6 +5711,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4228,6 +5751,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct CounterReset : IProperty
@@ -4252,6 +5785,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4282,6 +5825,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct Cursor : IProperty
@@ -4306,6 +5859,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4336,6 +5899,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct Display : IProperty
@@ -4360,6 +5933,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4390,6 +5973,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct Filter : IProperty
@@ -4414,6 +6007,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4448,6 +6051,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct FlexBasis : IProperty
@@ -4479,6 +6093,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct FlexDirection : IProperty
@@ -4506,6 +6131,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct FlexFlow : IProperty
@@ -4530,6 +6165,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4564,6 +6209,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct FlexShrink : IProperty
@@ -4595,6 +6251,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct FlexWrap : IProperty
@@ -4619,6 +6286,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4649,6 +6326,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct Font : IProperty
@@ -4673,6 +6360,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4703,6 +6400,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct FontFeatureSettings : IProperty
@@ -4727,6 +6434,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4757,6 +6474,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct FontLanguageOverride : IProperty
@@ -4781,6 +6508,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4811,6 +6548,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct FontPalette : IProperty
@@ -4835,6 +6582,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4869,6 +6626,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct FontSizeAdjust : IProperty
@@ -4897,6 +6665,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4931,6 +6710,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct FontStretch : IProperty
@@ -4955,6 +6745,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -4985,6 +6785,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct FontSynthesis : IProperty
@@ -5009,6 +6819,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5039,6 +6859,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct FontSynthesisSmallCaps : IProperty
@@ -5063,6 +6893,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5093,6 +6933,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct FontSynthesisWeight : IProperty
@@ -5117,6 +6967,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5147,6 +7007,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct FontVariantAlternates : IProperty
@@ -5171,6 +7041,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5201,6 +7081,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct FontVariantEastAsian : IProperty
@@ -5225,6 +7115,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5255,6 +7155,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct FontVariantLigatures : IProperty
@@ -5279,6 +7189,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5309,6 +7229,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct FontVariantPosition : IProperty
@@ -5336,6 +7266,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct FontVariationSettings : IProperty
@@ -5360,6 +7300,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5394,6 +7344,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ForcedColorAdjust : IProperty
@@ -5418,6 +7379,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5452,6 +7423,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct Grid : IProperty
@@ -5479,6 +7461,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct GridArea : IProperty
@@ -5503,6 +7495,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5537,6 +7539,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct GridAutoFlow : IProperty
@@ -5561,6 +7574,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5595,6 +7618,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct GridColumn : IProperty
@@ -5622,6 +7656,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct GridColumnEnd : IProperty
@@ -5646,6 +7690,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5680,6 +7734,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct GridColumnStart : IProperty
@@ -5704,6 +7769,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5738,6 +7813,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct GridRow : IProperty
@@ -5765,6 +7851,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct GridRowEnd : IProperty
@@ -5789,6 +7885,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5823,6 +7929,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct GridRowStart : IProperty
@@ -5847,6 +7964,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5877,6 +8004,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct GridTemplateAreas : IProperty
@@ -5901,6 +8038,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -5935,6 +8082,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct GridTemplateRows : IProperty
@@ -5966,6 +8124,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct HangingPunctuation : IProperty
@@ -5990,6 +8159,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6024,6 +8203,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct HyphenateCharacter : IProperty
@@ -6048,6 +8238,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6082,6 +8282,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct Hyphens : IProperty
@@ -6106,6 +8317,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6136,6 +8357,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ImageRendering : IProperty
@@ -6160,6 +8391,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6190,6 +8431,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ImeMode : IProperty
@@ -6214,6 +8465,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6248,6 +8509,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct InlineSize : IProperty
@@ -6279,6 +8551,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct InputSecurity : IProperty
@@ -6303,6 +8586,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6337,6 +8630,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct InsetBlock : IProperty
@@ -6365,6 +8669,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6399,6 +8714,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct InsetBlockStart : IProperty
@@ -6427,6 +8753,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6461,6 +8798,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct InsetInlineEnd : IProperty
@@ -6489,6 +8837,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6523,6 +8882,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct Isolation : IProperty
@@ -6547,6 +8917,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6577,6 +8957,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct JustifyItems : IProperty
@@ -6601,6 +8991,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6631,6 +9031,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct JustifyTracks : IProperty
@@ -6655,6 +9065,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6689,6 +9109,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct LetterSpacing : IProperty
@@ -6720,6 +9151,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct LineBreak : IProperty
@@ -6744,6 +9186,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6778,6 +9230,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct LineHeight : IProperty
@@ -6806,6 +9269,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6840,6 +9314,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ListStyle : IProperty
@@ -6864,6 +9349,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6894,6 +9389,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ListStylePosition : IProperty
@@ -6921,6 +9426,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ListStyleType : IProperty
@@ -6945,6 +9460,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -6979,6 +9504,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MarginBlock : IProperty
@@ -7007,6 +9543,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7041,6 +9588,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MarginBlockStart : IProperty
@@ -7069,6 +9627,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7103,6 +9672,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MarginInline : IProperty
@@ -7131,6 +9711,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7165,6 +9756,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MarginInlineStart : IProperty
@@ -7193,6 +9795,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7227,6 +9840,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MarginRight : IProperty
@@ -7255,6 +9879,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7289,6 +9924,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MarginTrim : IProperty
@@ -7313,6 +9959,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7347,6 +10003,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MaskBorder : IProperty
@@ -7378,6 +10045,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MaskBorderMode : IProperty
@@ -7402,6 +10080,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7436,6 +10124,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MaskBorderRepeat : IProperty
@@ -7460,6 +10159,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7494,6 +10203,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MaskBorderSource : IProperty
@@ -7518,6 +10238,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7552,6 +10282,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MaskClip : IProperty
@@ -7576,6 +10317,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7606,6 +10357,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MaskImage : IProperty
@@ -7630,6 +10391,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7660,6 +10431,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MaskOrigin : IProperty
@@ -7684,6 +10465,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7718,6 +10509,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MaskRepeat : IProperty
@@ -7742,6 +10544,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7776,6 +10588,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MaskType : IProperty
@@ -7803,6 +10626,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MasonryAutoFlow : IProperty
@@ -7827,6 +10660,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7861,6 +10704,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MathShift : IProperty
@@ -7888,6 +10742,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MathStyle : IProperty
@@ -7912,6 +10776,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -7946,6 +10820,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MaxHeight : IProperty
@@ -7974,6 +10859,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8008,6 +10904,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MaxLines : IProperty
@@ -8036,6 +10943,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8070,6 +10988,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MinBlockSize : IProperty
@@ -8098,6 +11027,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8132,6 +11072,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MinInlineSize : IProperty
@@ -8160,6 +11111,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8194,6 +11156,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MixBlendMode : IProperty
@@ -8218,6 +11191,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8252,6 +11235,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct OffsetDistance : IProperty
@@ -8283,6 +11277,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct OffsetPath : IProperty
@@ -8307,6 +11312,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8337,6 +11352,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ObjectFit : IProperty
@@ -8361,6 +11386,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8395,6 +11430,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct OffsetAnchor : IProperty
@@ -8423,6 +11469,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8457,6 +11514,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct Opacity : IProperty
@@ -8485,6 +11553,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8519,6 +11598,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct Orphans : IProperty
@@ -8547,6 +11637,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8581,6 +11682,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct OutlineColor : IProperty
@@ -8605,6 +11717,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8639,6 +11761,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct OutlineStyle : IProperty
@@ -8663,6 +11796,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8697,6 +11840,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct Overflow : IProperty
@@ -8721,6 +11875,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8751,6 +11915,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct OverflowBlock : IProperty
@@ -8778,6 +11952,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct OverflowClipBox : IProperty
@@ -8802,6 +11986,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8836,6 +12030,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct OverflowInline : IProperty
@@ -8860,6 +12065,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8890,6 +12105,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct OverflowX : IProperty
@@ -8914,6 +12139,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8944,6 +12179,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct Overlay : IProperty
@@ -8968,6 +12213,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -8998,6 +12253,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct OverscrollBehaviorBlock : IProperty
@@ -9022,6 +12287,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9052,6 +12327,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct OverscrollBehaviorX : IProperty
@@ -9079,6 +12364,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct OverscrollBehaviorY : IProperty
@@ -9103,6 +12398,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9137,6 +12442,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct PaddingBlock : IProperty
@@ -9165,6 +12481,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9199,6 +12526,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct PaddingBlockStart : IProperty
@@ -9227,6 +12565,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9261,6 +12610,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct PaddingInline : IProperty
@@ -9289,6 +12649,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9323,6 +12694,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct PaddingInlineStart : IProperty
@@ -9351,6 +12733,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9385,6 +12778,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct PaddingRight : IProperty
@@ -9413,6 +12817,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9447,6 +12862,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct Page : IProperty
@@ -9471,6 +12897,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9501,6 +12937,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct PageBreakBefore : IProperty
@@ -9525,6 +12971,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9555,6 +13011,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct PaintOrder : IProperty
@@ -9579,6 +13045,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9613,6 +13089,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct PerspectiveOrigin : IProperty
@@ -9644,6 +13131,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct PlaceContent : IProperty
@@ -9668,6 +13166,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9698,6 +13206,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct PlaceSelf : IProperty
@@ -9722,6 +13240,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9752,6 +13280,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct Position : IProperty
@@ -9776,6 +13314,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9806,6 +13354,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct Resize : IProperty
@@ -9830,6 +13388,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9864,6 +13432,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct Rotate : IProperty
@@ -9888,6 +13467,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9922,6 +13511,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct RubyAlign : IProperty
@@ -9946,6 +13546,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -9976,6 +13586,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct RubyPosition : IProperty
@@ -10000,6 +13620,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10034,6 +13664,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ScrollBehavior : IProperty
@@ -10058,6 +13699,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10092,6 +13743,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ScrollMarginBlock : IProperty
@@ -10120,6 +13782,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10154,6 +13827,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ScrollMarginBlockStart : IProperty
@@ -10182,6 +13866,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10216,6 +13911,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ScrollMarginInline : IProperty
@@ -10244,6 +13950,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10278,6 +13995,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ScrollMarginInlineStart : IProperty
@@ -10306,6 +14034,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10340,6 +14079,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ScrollMarginRight : IProperty
@@ -10368,6 +14118,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10402,6 +14163,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ScrollPadding : IProperty
@@ -10430,6 +14202,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10464,6 +14247,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ScrollPaddingBlockEnd : IProperty
@@ -10492,6 +14286,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10526,6 +14331,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ScrollPaddingBottom : IProperty
@@ -10554,6 +14370,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10588,6 +14415,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ScrollPaddingInlineEnd : IProperty
@@ -10616,6 +14454,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10650,6 +14499,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ScrollPaddingLeft : IProperty
@@ -10678,6 +14538,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10712,6 +14583,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ScrollPaddingTop : IProperty
@@ -10743,6 +14625,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ScrollSnapAlign : IProperty
@@ -10767,6 +14660,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10801,6 +14704,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ScrollSnapDestination : IProperty
@@ -10832,6 +14746,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ScrollSnapPointsX : IProperty
@@ -10856,6 +14781,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10886,6 +14821,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ScrollSnapStop : IProperty
@@ -10910,6 +14855,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10940,6 +14895,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ScrollSnapTypeX : IProperty
@@ -10964,6 +14929,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -10994,6 +14969,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ScrollTimeline : IProperty
@@ -11018,6 +15003,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11048,6 +15043,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ScrollTimelineName : IProperty
@@ -11072,6 +15077,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11102,6 +15117,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ScrollbarGutter : IProperty
@@ -11129,6 +15154,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ScrollbarWidth : IProperty
@@ -11153,6 +15188,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11187,6 +15232,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ShapeMargin : IProperty
@@ -11218,6 +15274,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ShapeOutside : IProperty
@@ -11242,6 +15309,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11276,6 +15353,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct TableLayout : IProperty
@@ -11300,6 +15388,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11330,6 +15428,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct TextAlignLast : IProperty
@@ -11357,6 +15465,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct TextCombineUpright : IProperty
@@ -11381,6 +15499,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11415,6 +15543,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct TextDecorationColor : IProperty
@@ -11439,6 +15578,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11469,6 +15618,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct TextDecorationSkip : IProperty
@@ -11493,6 +15652,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11523,6 +15692,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct TextDecorationStyle : IProperty
@@ -11547,6 +15726,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11581,6 +15770,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct TextEmphasis : IProperty
@@ -11605,6 +15805,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11635,6 +15845,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct TextEmphasisPosition : IProperty
@@ -11662,6 +15882,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct TextEmphasisStyle : IProperty
@@ -11686,6 +15916,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11720,6 +15960,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct TextJustify : IProperty
@@ -11744,6 +15995,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11774,6 +16035,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct TextOverflow : IProperty
@@ -11798,6 +16069,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11828,6 +16109,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct TextShadow : IProperty
@@ -11852,6 +16143,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11882,6 +16183,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct TextTransform : IProperty
@@ -11906,6 +16217,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11940,6 +16261,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct TextUnderlinePosition : IProperty
@@ -11964,6 +16296,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -11994,6 +16336,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct TimelineScope : IProperty
@@ -12018,6 +16370,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12052,6 +16414,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct TouchAction : IProperty
@@ -12076,6 +16449,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12106,6 +16489,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct TransformBox : IProperty
@@ -12130,6 +16523,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12164,6 +16567,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct TransformStyle : IProperty
@@ -12188,6 +16602,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12218,6 +16642,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct TransitionBehavior : IProperty
@@ -12242,6 +16676,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12272,6 +16716,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct TransitionDuration : IProperty
@@ -12296,6 +16750,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12326,6 +16790,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct TransitionTimingFunction : IProperty
@@ -12350,6 +16824,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12384,6 +16868,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct UnicodeBidi : IProperty
@@ -12411,6 +16906,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct UserSelect : IProperty
@@ -12435,6 +16940,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12469,6 +16984,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ViewTimeline : IProperty
@@ -12496,6 +17022,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ViewTimelineAxis : IProperty
@@ -12520,6 +17056,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12554,6 +17100,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ViewTimelineName : IProperty
@@ -12578,6 +17135,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12608,6 +17175,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct Visibility : IProperty
@@ -12632,6 +17209,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12662,6 +17249,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct WhiteSpaceCollapse : IProperty
@@ -12689,6 +17286,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct WhiteSpaceTrim : IProperty
@@ -12713,6 +17320,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12747,6 +17364,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct Width : IProperty
@@ -12778,6 +17406,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct WillChange : IProperty
@@ -12805,6 +17444,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct WordBreak : IProperty
@@ -12829,6 +17478,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12863,6 +17522,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct WordWrap : IProperty
@@ -12890,6 +17560,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct WritingMode : IProperty
@@ -12914,6 +17594,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -12948,6 +17638,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct Zoom : IProperty
@@ -12979,6 +17680,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MozAppearance : IProperty
@@ -13003,6 +17715,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13033,6 +17755,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MozBorderBottomColors : IProperty
@@ -13057,6 +17789,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13087,6 +17829,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MozBorderRightColors : IProperty
@@ -13111,6 +17863,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13141,6 +17903,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MozContextProperties : IProperty
@@ -13165,6 +17937,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13195,6 +17977,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MozForceBrokenImageIcon : IProperty
@@ -13219,6 +18011,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13249,6 +18051,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MozOrient : IProperty
@@ -13273,6 +18085,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13307,6 +18129,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MozOutlineRadiusBottomleft : IProperty
@@ -13335,6 +18168,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13369,6 +18213,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MozOutlineRadiusTopleft : IProperty
@@ -13397,6 +18252,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13431,6 +18297,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MozStackSizing : IProperty
@@ -13455,6 +18332,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13485,6 +18372,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MozUserFocus : IProperty
@@ -13509,6 +18406,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13539,6 +18446,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MozUserModify : IProperty
@@ -13563,6 +18480,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13593,6 +18520,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MozWindowShadow : IProperty
@@ -13617,6 +18554,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13647,6 +18594,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MsBlockProgression : IProperty
@@ -13671,6 +18628,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13701,6 +18668,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MsContentZoomLimit : IProperty
@@ -13725,6 +18702,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13755,6 +18742,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MsContentZoomLimitMin : IProperty
@@ -13779,6 +18776,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13809,6 +18816,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MsContentZoomSnapPoints : IProperty
@@ -13833,6 +18850,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13863,6 +18890,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MsContentZooming : IProperty
@@ -13887,6 +18924,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -13917,6 +18964,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MsFlowFrom : IProperty
@@ -13944,6 +19001,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MsFlowInto : IProperty
@@ -13968,6 +19035,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14002,6 +19079,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MsGridRows : IProperty
@@ -14033,6 +19121,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MsHighContrastAdjust : IProperty
@@ -14057,6 +19156,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14091,6 +19200,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MsHyphenateLimitLines : IProperty
@@ -14119,6 +19239,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14153,6 +19284,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MsImeAlign : IProperty
@@ -14177,6 +19319,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14207,6 +19359,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MsScrollChaining : IProperty
@@ -14234,6 +19396,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MsScrollLimit : IProperty
@@ -14258,6 +19430,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14292,6 +19474,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MsScrollLimitXMin : IProperty
@@ -14320,6 +19513,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14354,6 +19558,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MsScrollLimitYMin : IProperty
@@ -14385,6 +19600,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MsScrollRails : IProperty
@@ -14409,6 +19635,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14439,6 +19675,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MsScrollSnapPointsY : IProperty
@@ -14463,6 +19709,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14493,6 +19749,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MsScrollSnapX : IProperty
@@ -14517,6 +19783,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14547,6 +19823,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MsScrollTranslation : IProperty
@@ -14571,6 +19857,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14601,6 +19897,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MsScrollbarArrowColor : IProperty
@@ -14625,6 +19931,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14655,6 +19971,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MsScrollbarDarkshadowColor : IProperty
@@ -14679,6 +20005,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14709,6 +20045,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MsScrollbarHighlightColor : IProperty
@@ -14733,6 +20079,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14763,6 +20119,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MsScrollbarTrackColor : IProperty
@@ -14787,6 +20153,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14817,6 +20193,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MsTouchSelect : IProperty
@@ -14841,6 +20227,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14871,6 +20267,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MsWrapFlow : IProperty
@@ -14895,6 +20301,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -14929,6 +20345,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MsWrapThrough : IProperty
@@ -14956,6 +20383,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct WebkitAppearance : IProperty
@@ -14980,6 +20417,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15014,6 +20461,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct WebkitBorderBeforeColor : IProperty
@@ -15041,6 +20499,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct WebkitBorderBeforeStyle : IProperty
@@ -15065,6 +20533,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15099,6 +20577,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct WebkitBoxReflect : IProperty
@@ -15127,6 +20616,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15161,6 +20661,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct WebkitMask : IProperty
@@ -15192,6 +20703,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct WebkitMaskAttachment : IProperty
@@ -15216,6 +20738,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15246,6 +20778,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct WebkitMaskComposite : IProperty
@@ -15270,6 +20812,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15300,6 +20852,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct WebkitMaskOrigin : IProperty
@@ -15324,6 +20886,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15358,6 +20930,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct WebkitMaskPositionX : IProperty
@@ -15386,6 +20969,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15420,6 +21014,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct WebkitMaskRepeat : IProperty
@@ -15444,6 +21049,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15474,6 +21089,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct WebkitMaskRepeatY : IProperty
@@ -15498,6 +21123,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15532,6 +21167,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct WebkitOverflowScrolling : IProperty
@@ -15556,6 +21202,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15586,6 +21242,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct WebkitTextFillColor : IProperty
@@ -15610,6 +21276,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15644,6 +21320,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct WebkitTextStrokeColor : IProperty
@@ -15668,6 +21355,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15702,6 +21399,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct WebkitTouchCallout : IProperty
@@ -15726,6 +21434,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15756,6 +21474,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct AlignmentBaseline : IProperty
@@ -15780,6 +21508,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15814,6 +21552,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ClipRule : IProperty
@@ -15838,6 +21587,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15868,6 +21627,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct ColorRendering : IProperty
@@ -15892,6 +21661,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15922,6 +21701,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct Fill : IProperty
@@ -15946,6 +21735,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -15980,6 +21779,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct FillRule : IProperty
@@ -16007,6 +21817,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct FloodColor : IProperty
@@ -16031,6 +21851,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -16065,6 +21895,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct GlyphOrientationVertical : IProperty
@@ -16096,6 +21937,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct LightingColor : IProperty
@@ -16120,6 +21972,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -16150,6 +22012,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MarkerEnd : IProperty
@@ -16174,6 +22046,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -16204,6 +22086,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct MarkerStart : IProperty
@@ -16228,6 +22120,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -16258,6 +22160,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct StopColor : IProperty
@@ -16282,6 +22194,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -16316,6 +22238,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct Stroke : IProperty
@@ -16340,6 +22273,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -16374,6 +22317,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct StrokeDashoffset : IProperty
@@ -16405,6 +22359,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct StrokeLinecap : IProperty
@@ -16432,6 +22397,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct StrokeLinejoin : IProperty
@@ -16456,6 +22431,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -16490,6 +22475,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct StrokeOpacity : IProperty
@@ -16518,6 +22514,17 @@ namespace CssInCSharp
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
                     2 => FormatValue(key, _value2),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
@@ -16552,6 +22559,17 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    2 => _value2,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct TextAnchor : IProperty
@@ -16579,6 +22597,16 @@ namespace CssInCSharp
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
         }
 
         public readonly struct VectorEffect : IProperty
@@ -16603,6 +22631,16 @@ namespace CssInCSharp
                 {
                     0 => FormatValue(key, _value0),
                     1 => FormatValue(key, _value1),
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+                    0 => _value0,
+                    1 => _value1,
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }

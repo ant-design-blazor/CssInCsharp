@@ -3,6 +3,7 @@
     public interface IProperty
     {
         string GetValue(string key);
+        object GetValue();
     }
 
     public struct PropertySkip

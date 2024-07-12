@@ -57,6 +57,11 @@ function valueCode(tab: string, t: PropertyType): string {
         .map((x, i) => `${tab}        ${i} => FormatValue(key, _value${i}),`)
         .join('\r\n');
 }
+function objectValueCode(tab: string, t: PropertyType): string {
+    return t.types
+        .map((x, i) => `${tab}        ${i} => _value${i},`)
+        .join('\r\n');
+}
 function hashCode(tab: string, t: PropertyType): string {
     return t.types
         .map((x, i) => `${tab}            ${i} => _value${i}?.GetHashCode(),`)
@@ -222,6 +227,15 @@ ${valueCode(tab, item)}
                 _ => throw new InvalidOperationException("Unexpected index.")
             };
         }
+
+        public object GetValue()
+        {
+            return _index switch
+            {
+${objectValueCode(tab, item)}
+                _ => throw new InvalidOperationException("Unexpected index.")
+            };
+        }
     }
 `
     })
@@ -261,6 +275,15 @@ ${operatorCode(tab, item)}
                 return _index switch
                 {
 ${valueCode(tab, item)}
+                    _ => throw new InvalidOperationException("Unexpected index.")
+                };
+            }
+
+            public object GetValue()
+            {
+                return _index switch
+                {
+${objectValueCode(tab, item)}
                     _ => throw new InvalidOperationException("Unexpected index.")
                 };
             }

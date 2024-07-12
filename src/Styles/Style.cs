@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Rendering;
 using System;
+using System.Collections.Generic;
 using System.Text;
 
 namespace CssInCSharp
@@ -28,23 +29,45 @@ namespace CssInCSharp
             {
                 var csses = StyleFn().ToCssArray();
                 var sb = new StringBuilder();
+                var effects = new List<(string, string)>();
                 foreach (var css in csses)
                 {
-                    sb.Append(css?.SerializeCss(HashId));
+                    sb.Append(css?.SerializeCss(HashId, effects));
                 }
-                return new StyleCache.Item
+                var item = new StyleCache.Item
                 {
                     StyleStr = sb.ToString(),
                     TokenKey = TokenKey,
-                    StyleId = ""
+                    StyleId = "",
+                    Effects = new Dictionary<string, string>(),
                 };
+                if (effects.Count > 0)
+                {
+                    foreach (var (effectName, effect) in effects)
+                    {
+                        if (!StyleCache.Instance.HasEffect(effectName))
+                        {
+                            item.Effects.TryAdd(effectName, effect);
+                        }
+                    }
+                }
+                return item;
             });
-            builder.OpenElement(0, "style");
-            builder.AddAttribute(1, "data-css-hash", cache.StyleId);
-            builder.AddAttribute(2, "data-token-hash", cache.TokenKey);
-            builder.AddAttribute(3, "data-cache-path", Path);
-            builder.AddContent(4, cache.StyleStr);
+            var i = 0;
+            builder.OpenElement(i++, "style");
+            builder.AddAttribute(i++, "data-css-hash", cache.StyleId);
+            builder.AddAttribute(i++, "data-token-hash", cache.TokenKey);
+            builder.AddAttribute(i++, "data-cache-path", Path);
+            builder.AddContent(i++, cache.StyleStr);
             builder.CloseElement();
+            // gen animation effect
+            foreach (var effect in cache.Effects)
+            {
+                builder.OpenElement(i++, "style");
+                builder.AddAttribute(i++, "data-css-hash", $"_effect-{effect.Key}");
+                builder.AddContent(i++, effect.Value);
+                builder.CloseElement();
+            }
         }
     }
 }
