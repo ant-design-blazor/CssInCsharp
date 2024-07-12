@@ -29,16 +29,23 @@ namespace CssInCSharp
             set => _styles[key] = value;
         }
 
-        public override string ToString()
+        public (string, string) GetEffect(string hashId = null)
         {
+            var effectName = hashId == null ? _name : $"{hashId}-{_name}";
             var sb = new StringBuilder();
-            sb.Append($"{_name};@keyframes {_name}{{");
+            sb.Append($"@keyframes {effectName}{{");
             foreach (var subStyle in _styles)
             {
                 sb.Append($"{subStyle.Key}{{{subStyle.Value.ParseStyle(true, string.Empty)}}}");
             }
             sb.Append("}");
-            return sb.ToString();
+            return (effectName, sb.ToString());
+        }
+
+        public override string ToString()
+        {
+            var (effectName, effectStyle) = GetEffect();
+            return $"{effectName};{effectStyle}";
         }
     }
 }

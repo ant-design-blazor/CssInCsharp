@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CssInCSharp
 {
@@ -10,6 +12,7 @@ namespace CssInCSharp
             public string StyleStr { get; set; }
             public string TokenKey { get; set; }
             public string StyleId { get; set; }
+            public Dictionary<string, string> Effects { get; set; }
         }
 
         private readonly ConcurrentDictionary<string, Item> _cache = new();
@@ -22,9 +25,12 @@ namespace CssInCSharp
             return _cache.GetOrAdd(key, func);
         }
 
-        public bool Exists(string key)
+        public bool HasEffect(string effectKey)
         {
-            return _cache.ContainsKey(key);
+            return _cache
+                .Values
+                .SelectMany(x => x.Effects.Keys)
+                .Contains(effectKey);
         }
     }
 }

@@ -49,6 +49,15 @@ namespace CssInCSharp
                 _ => throw new InvalidOperationException("Unexpected index.")
             };
         }
+
+        public object GetValue()
+        {
+            return _index switch
+            {
+                0 => _value0,
+                _ => throw new InvalidOperationException("Unexpected index.")
+            };
+        }
     }
 
     public readonly struct Property<T0, T1> : IProperty
@@ -99,6 +108,16 @@ namespace CssInCSharp
             {
                 0 => FormatValue(key, _value0),
                 1 => FormatValue(key, _value1),
+                _ => throw new InvalidOperationException("Unexpected index.")
+            };
+        }
+
+        public object GetValue()
+        {
+            return _index switch
+            {
+                0 => _value0,
+                1 => _value1,
                 _ => throw new InvalidOperationException("Unexpected index.")
             };
         }
@@ -157,6 +176,17 @@ namespace CssInCSharp
                 0 => FormatValue(key, _value0),
                 1 => FormatValue(key, _value1),
                 2 => FormatValue(key, _value2),
+                _ => throw new InvalidOperationException("Unexpected index.")
+            };
+        }
+
+        public object GetValue()
+        {
+            return _index switch
+            {
+                0 => _value0,
+                1 => _value1,
+                2 => _value2,
                 _ => throw new InvalidOperationException("Unexpected index.")
             };
         }
@@ -220,6 +250,18 @@ namespace CssInCSharp
                 1 => FormatValue(key, _value1),
                 2 => FormatValue(key, _value2),
                 3 => FormatValue(key, _value3),
+                _ => throw new InvalidOperationException("Unexpected index.")
+            };
+        }
+
+        public object GetValue()
+        {
+            return _index switch
+            {
+                0 => _value0,
+                1 => _value1,
+                2 => _value2,
+                3 => _value3,
                 _ => throw new InvalidOperationException("Unexpected index.")
             };
         }

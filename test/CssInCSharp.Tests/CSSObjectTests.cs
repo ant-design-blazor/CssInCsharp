@@ -8,7 +8,7 @@ namespace CssInCSharp.Tests
         [Fact]
         public void Number_Without_Pxwrap()
         {
-            new CSSObject
+            var css = new CSSObject
             {
                 [".test"] = new CSSObject
                 {
@@ -34,9 +34,8 @@ namespace CssInCSharp.Tests
                     Zoom = 1,
                     WebkitLineClamp = 1,
                 }
-            }
-            .ToString()
-            .ShouldBe(".test{animation-iteration-count:1;aspect-ratio:1;border-image-outset:1;border-image-slice:1;border-image-width:1;column-count:1;columns:1;flex:1;flex-grow:1;-ms-flex-positive:1px;flex-shrink:1;font-weight:1;line-height:1;opacity:1;order:1;orphans:1;tab-size:1;widows:1;z-index:1;zoom:1;-webkit-line-clamp:1;}");
+            };
+            css.ToString().ShouldBe(".test{animation-iteration-count:1;aspect-ratio:1;border-image-outset:1;border-image-slice:1;border-image-width:1;column-count:1;columns:1;flex:1;flex-grow:1;-ms-flex-positive:1px;flex-shrink:1;font-weight:1;line-height:1;opacity:1;order:1;orphans:1;tab-size:1;widows:1;z-index:1;zoom:1;-webkit-line-clamp:1;}");
         }
 
         [Fact]
@@ -81,37 +80,47 @@ namespace CssInCSharp.Tests
             messageMoveIn.ToString().ShouldBe("MessageMoveIn;@keyframes MessageMoveIn{0%{padding:0;transform:translateY(-100%);opacity:0;}100%{padding:100px;transform:translateY(0);opacity:1;}}");
         }
 
-		[Fact]
-		public void Should_Property_Skip_Pxwrap()
-		{
-			new CSSObject()
-			{
-				[".test"] = new CSSObject()
-				{
+        [Fact]
+        public void Should_Property_Skip_Pxwrap()
+        {
+            var css = new CSSObject()
+            {
+                [".test"] = new CSSObject()
+                {
                     Left = new PropertySkip()
                     {
                         SkipCheck = true,
                         Value = 12
                     }
-				}
-			}
-			.ToString()
-			.ShouldBe(".test{left:12px;}");
-		}
+                }
+            };
+            css.ToString().ShouldBe(".test{left:12px;}");
+        }
 
-		[Fact]
-		public void Should_Where_Inject_To_All_Selectors()
-		{
-			new CSSObject()
-			{
+        [Fact]
+        public void Should_Where_Inject_To_All_Selectors()
+        {
+            var css1 = new CSSObject()
+            {
                 [".ant-zoom-big-fast-enter,.ant-zoom-big-fast-appear"] = new CSSObject()
                 {
                     Transform = "scale(0)",
                     Opacity = 0,
                 }
-			}
-			.SerializeCss("css-3nv711")
-			.ShouldBe(":where(.css-3nv711).ant-zoom-big-fast-enter,:where(.css-3nv711).ant-zoom-big-fast-appear{transform:scale(0);opacity:0;}");
-		}
-	}
+            };
+            css1.SerializeCss("css-3nv711").ShouldBe(":where(.css-3nv711).ant-zoom-big-fast-enter,:where(.css-3nv711).ant-zoom-big-fast-appear{transform:scale(0);opacity:0;}");
+
+            var css2 = new CSSObject()
+            {
+                ["[class^=\"ant-affix\"], [class*=\" ant-affix\"]"] = new CSSObject()
+                {
+                    ["&::before, &::after"] = new CSSObject()
+                    {
+                        BoxSizing = "border-box",
+                    }
+                },
+            };
+            css2.SerializeCss("css-3nv711").ShouldBe(":where(.css-3nv711)[class^=\"ant-affix\"]::before,:where(.css-3nv711)[class*=\" ant-affix\"]::before,:where(.css-3nv711)[class^=\"ant-affix\"]::after,:where(.css-3nv711)[class*=\" ant-affix\"]::after{box-sizing:border-box;}");
+        }
+    }
 }

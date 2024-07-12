@@ -26,19 +26,29 @@ namespace CssInCSharp
             return SerializeCss(string.Empty);
         }
 
-        public string SerializeCss(string hashId)
+        public string SerializeCss(string hashId, List<(string, string)> effects = null)
         {
-            return Serialize(Compile(ParseStyle(true, hashId)), Stringify);
+            return Serialize(Compile(ParseStyle(true, hashId, effects)), Stringify);
         }
 
-        internal string ParseStyle(bool root, string hashId)
+        internal string ParseStyle(bool root, string hashId, List<(string, string)> effects = null)
         {
             var sb = new StringBuilder();
 
             // normal css properties
             foreach (var property in _properties)
             {
-                sb.Append($"{property.Key}:{property.Value.GetValue(property.Key)};");
+                if (effects != null && property.Key == "animation-name")
+                {
+                    var keyframe = (Keyframe)property.Value.GetValue();
+                    var effect = keyframe.GetEffect(hashId);
+                    sb.Append($"{property.Key}:{effect.Item1};");
+                    effects.Add(effect);
+                }
+                else
+                {
+                    sb.Append($"{property.Key}:{property.Value.GetValue(property.Key)};");
+                }
             }
 
             // sub style sheet
@@ -57,7 +67,7 @@ namespace CssInCSharp
                 {
 	                mergedKey = InjectSelectorHash(mergedKey, hashId);
                 }
-                sb.Append($"{mergedKey}{{{subStyle.Value.ParseStyle(nextRoot, hashId)}}}");
+                sb.Append($"{mergedKey}{{{subStyle.Value.ParseStyle(nextRoot, hashId, effects)}}}");
             }
 
             return sb.ToString();
@@ -142,10 +152,9 @@ namespace CssInCSharp
                 var htmlElement = match.Success ? match.Value : ""; 
                 fullPath[0] = $"{htmlElement}{hashSelector}{firstPath.Substring(htmlElement.Length)}"; 
                 return string.Join(" ", fullPath);
-            }); 
+            });
 
             return string.Join(",", keys);
         }
-
-	}
+    }
 }
