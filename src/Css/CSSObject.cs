@@ -28,10 +28,10 @@ namespace CssInCSharp
 
         public string SerializeCss(string hashId, List<(string, string)> effects = null)
         {
-            return Serialize(Compile(ParseStyle(true, hashId, effects)), Stringify);
+            return Serialize(Compile(ParseStyle(true, false, hashId, effects)), Stringify);
         }
 
-        internal string ParseStyle(bool root, string hashId, List<(string, string)> effects = null)
+        internal string ParseStyle(bool root, bool injectHash, string hashId, List<(string, string)> effects = null)
         {
             var sb = new StringBuilder();
 
@@ -54,20 +54,28 @@ namespace CssInCSharp
             // sub style sheet
             foreach (var subStyle in _styles)
             {
-                var mergedKey = subStyle.Key.Trim(); 
-                var nextRoot = false; 
-                if (mergedKey.StartsWith("@"))
+                var subInjectHash = false;
+                var nextRoot = false;
+                var mergedKey = subStyle.Key.Trim();
+
+                if ((root || injectHash) && !string.IsNullOrEmpty(hashId))
                 {
-                    // if is media type, skip and insert hashId from subStyle.
-                    root = false;
+                    if (mergedKey.StartsWith("@"))
+                    {
+                        subInjectHash = true;
+                    }
+                    else
+                    {
+                        mergedKey = InjectSelectorHash(mergedKey, hashId);
+                    }
+                } 
+                else if (root && string.IsNullOrEmpty(hashId) && (mergedKey == "&" || mergedKey == ""))
+                {
+                    mergedKey = "";
                     nextRoot = true;
                 }
 
-                if (root && !string.IsNullOrEmpty(hashId)) 
-                {
-	                mergedKey = InjectSelectorHash(mergedKey, hashId);
-                }
-                sb.Append($"{mergedKey}{{{subStyle.Value.ParseStyle(nextRoot, hashId, effects)}}}");
+                sb.Append($"{mergedKey}{{{subStyle.Value.ParseStyle(nextRoot, subInjectHash, hashId, effects)}}}");
             }
 
             return sb.ToString();

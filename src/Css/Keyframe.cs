@@ -36,7 +36,7 @@ namespace CssInCSharp
             sb.Append($"@keyframes {effectName}{{");
             foreach (var subStyle in _styles)
             {
-                sb.Append($"{subStyle.Key}{{{subStyle.Value.ParseStyle(true, string.Empty)}}}");
+                sb.Append($"{subStyle.Key}{{{subStyle.Value.ParseStyle(true, false, string.Empty)}}}");
             }
             sb.Append("}");
             return (effectName, sb.ToString());
