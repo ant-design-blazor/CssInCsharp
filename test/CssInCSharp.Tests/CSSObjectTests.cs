@@ -122,5 +122,33 @@ namespace CssInCSharp.Tests
             };
             css2.SerializeCss("css-3nv711").ShouldBe(":where(.css-3nv711)[class^=\"ant-affix\"]::before,:where(.css-3nv711)[class*=\" ant-affix\"]::before,:where(.css-3nv711)[class^=\"ant-affix\"]::after,:where(.css-3nv711)[class*=\" ant-affix\"]::after{box-sizing:border-box;}");
         }
+
+        [Fact]
+        public void Should_Where_Not_Inject_With_Media()
+        {
+            var css3 = new CSSObject()
+            {
+                [".ant-modal-root"] = new CSSObject()
+                {
+                    ["@media (max-width: 767)"] = new CSSObject()
+                    {
+                        [".ant-modal"] = new CSSObject()
+                        {
+                            MaxWidth = "calc(100vw - 16px)",
+                            Margin = "8 auto",
+                        },
+                        [".ant-modal-centered"] = new CSSObject()
+                        {
+                            [".ant-modal"] = new CSSObject()
+                            {
+                                Flex = 1
+                            }
+                        }
+                    }
+                }
+            };
+
+            css3.SerializeCss("css-3nv711").ShouldBe("@media (max-width: 767){:where(.css-3nv711).ant-modal-root .ant-modal{max-width:calc(100vw - 16px);margin:8 auto;}:where(.css-3nv711).ant-modal-root .ant-modal-centered .ant-modal{flex:1;}}");
+        }
     }
 }
