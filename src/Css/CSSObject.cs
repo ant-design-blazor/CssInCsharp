@@ -1,4 +1,5 @@
-﻿using static CssInCSharp.Compiler.Serializer;
+﻿using System;
+using static CssInCSharp.Compiler.Serializer;
 using static CssInCSharp.Compiler.Parser;
 using static CssInCSharp.Constant;
 using System.Collections.Generic;
@@ -10,10 +11,10 @@ namespace CssInCSharp
 {
     public sealed partial class CSSObject
     {
-        private readonly Dictionary<string, CSSObject> _styles = new();
+        private readonly Dictionary<string, CSSInterpolation> _styles = new();
         private readonly Dictionary<string, IProperty> _properties = new();
         public Dictionary<string, IProperty> GetProperties() => _properties;
-        public Dictionary<string, CSSObject> GetStyles() => _styles;
+        public Dictionary<string, CSSInterpolation> GetStyles() => _styles;
         
         public CSSInterpolation this[string key]
         {
@@ -74,8 +75,13 @@ namespace CssInCSharp
                     mergedKey = "";
                     nextRoot = true;
                 }
-
-                sb.Append($"{mergedKey}{{{subStyle.Value.ParseStyle(nextRoot, subInjectHash, hashId, effects)}}}");
+                var values = subStyle.Value.ToCssArray();
+                var valueStr = new StringBuilder();
+                foreach (var value in values)
+                {
+                    valueStr.Append(value.ParseStyle(nextRoot, subInjectHash, hashId, effects));
+                }
+                sb.Append($"{mergedKey}{{{valueStr}}}");
             }
 
             return sb.ToString();
@@ -83,6 +89,7 @@ namespace CssInCSharp
 
         public CSSObject Merge(CSSObject css)
         {
+            if (css == null) return this;
             var props = css.GetProperties();
             foreach (var prop in props)
             {
@@ -96,7 +103,7 @@ namespace CssInCSharp
                 if (_styles.TryGetValue(style.Key, out var value))
                 {
                     // if exists, merge to sub style sheet.
-                    value.Merge(style.Value);
+                    value.AsT0.Merge(style.Value.AsT0);
                 }
                 else
                 {
@@ -105,15 +112,6 @@ namespace CssInCSharp
                 }
             }
 
-            return this;
-        }
-
-        public CSSObject Merge(CSSObject[] objects)
-        {
-            foreach (var css in objects)
-            {
-                Merge(css);
-            }
             return this;
         }
 
@@ -138,14 +136,13 @@ namespace CssInCSharp
             /*
              * if is CSSObject or CSSObject[]
              */
-            var cssObject = value.IsT0 ? value.AsT0 : new CSSObject().Merge(value.ToCssArray());
-            if (cssObject == null) return;
             if (key == MERGE_OPERATOR)
             {
-                Merge(cssObject);
+                if (!value.IsT0) throw new Exception("Invalid merge value type.");
+                Merge(value.AsT0);
                 return;
             }
-            _styles[key] = cssObject;
+            _styles[key] = value;
         }
 
         private string InjectSelectorHash(string key, string hashId)

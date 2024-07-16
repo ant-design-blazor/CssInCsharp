@@ -77,12 +77,12 @@ namespace CssInCSharp.Tests
                         AnimationDuration = "3s",
                         AnimationName = new Keyframe("transformAnimation")
                         {
-                            ["from"] = new()
+                            ["from"] = new CSSObject()
                             {
                                 Transform = "translateX(0px)",
                                 Opacity = 1
                             },
-                            ["to"] = new()
+                            ["to"] = new CSSObject()
                             {
                                 Transform = "translateX(100px)",
                                 Opacity = 0.2f

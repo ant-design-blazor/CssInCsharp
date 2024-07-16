@@ -1,4 +1,5 @@
-﻿using Shouldly;
+﻿using Newtonsoft.Json.Linq;
+using Shouldly;
 using Xunit;
 
 namespace CssInCSharp.Tests
@@ -149,6 +150,32 @@ namespace CssInCSharp.Tests
             };
 
             css3.SerializeCss("css-3nv711").ShouldBe("@media (max-width: 767){:where(.css-3nv711).ant-modal-root .ant-modal{max-width:calc(100vw - 16px);margin:8 auto;}:where(.css-3nv711).ant-modal-root .ant-modal-centered .ant-modal{flex:1;}}");
+        }
+
+        [Fact]
+        public void Should_Media_Array_Merge_Into_One()
+        {
+            var css = new CSSObject
+            {
+                ["@media (max-width: 575px)"] = new CSSInterpolation[]
+                {
+                    new CSSObject()
+                    {
+                        [$".ant-form-item .ant-form-item-label"] = new CSSObject()
+                        {
+                            Padding = 0,
+                        }
+                    },
+                    new CSSObject()
+                    {
+                        [$".ant-col-xs-24.ant-form-item-label"] = new CSSObject()
+                        {
+                            Margin = 0,
+                        }
+                    }
+                }
+            };
+            css.SerializeCss("css-3nv711").ShouldBe("@media (max-width: 575px){:where(.css-3nv711).ant-form-item .ant-form-item-label{padding:0;}:where(.css-3nv711).ant-col-xs-24.ant-form-item-label{margin:0;}}");
         }
     }
 }
