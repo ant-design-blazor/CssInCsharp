@@ -36,12 +36,12 @@
                     AnimationDuration = "3s",
                     AnimationName = new Keyframe("animation-transform")
                     {
-                        ["from"] = new()
+                        ["from"] = new CSSObject()
                         {
                             Transform = "translateX(0px)",
                             Opacity = 1
                         },
-                        ["to"] = new()
+                        ["to"] = new CSSObject()
                         {
                             Transform = "translateX(100px)",
                             Opacity = 0.2f
@@ -75,15 +75,15 @@
                     AnimationDuration = "3s",
                     AnimationName = new Keyframe("animation-offset")
                     {
-                        ["0%"] = new()
+                        ["0%"] = new CSSObject()
                         {
                             Background = "red"
                         },
-                        ["72%"] = new()
+                        ["72%"] = new CSSObject()
                         {
                             Background = "blue"
                         },
-                        ["100%"] = new()
+                        ["100%"] = new CSSObject()
                         {
                             Background = "green"
                         }
