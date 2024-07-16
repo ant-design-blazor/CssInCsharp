@@ -6,7 +6,7 @@ namespace CssInCSharp
     public sealed class Keyframe
     {
         private readonly string _name;
-        private readonly Dictionary<string, CSSObject> _styles = new();
+        private readonly Dictionary<string, CSSInterpolation> _styles = new();
 
         private Keyframe()
         {
@@ -23,7 +23,7 @@ namespace CssInCSharp
             _styles = css.GetStyles();
         }
 
-        public CSSObject this[string key]
+        public CSSInterpolation this[string key]
         {
             get => _styles[key];
             set => _styles[key] = value;
@@ -36,7 +36,7 @@ namespace CssInCSharp
             sb.Append($"@keyframes {effectName}{{");
             foreach (var subStyle in _styles)
             {
-                sb.Append($"{subStyle.Key}{{{subStyle.Value.ParseStyle(true, false, string.Empty)}}}");
+                sb.Append($"{subStyle.Key}{{{subStyle.Value.AsT0.ParseStyle(true, false, string.Empty)}}}");
             }
             sb.Append("}");
             return (effectName, sb.ToString());
