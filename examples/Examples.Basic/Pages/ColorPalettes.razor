@@ -4,25 +4,41 @@
 
 @foreach (var color in AntDesignColorPalettes.PresetPalettes)
 {
-    <div>@color.Key</div>
-    @foreach (var shade in color.Value)
-    {
-        var index = Array.IndexOf(color.Value, shade);
-        <div style="background-color: @shade; width: 200px; height: 44px; @(index<5?"color: rgba(0, 0, 0, 0.85); font-weight: normal;" :"color: rgb(255, 255, 255); font-weight: bold;")">@shade</div>
-    }
+    <div class="color-group">
+        <div>@color.Key</div>
+        @foreach (var shade in color.Value)
+        {
+            var index = Array.IndexOf(color.Value, shade);
+            <div
+                style="background-color: @shade; width: 200px; height: 44px; @(index<5?"color: rgba(0, 0, 0, 0.85); font-weight: normal;" :"color: rgb(255, 255, 255); font-weight: bold;")">
+                @shade</div>
+        }
+    </div>
 }
 
-<br/><br/>
-
-@foreach (var color in AntDesignColorPalettes.PresetDarkPalettes)
-{
-    <div>@color.Key</div>
-    @foreach (var shade in color.Value)
+<br /><br />
+<div style="background-color: black;">
+    @foreach (var color in AntDesignColorPalettes.PresetDarkPalettes)
     {
-        <div style="background-color: @shade; width: 20px; height: 20px;">@shade</div>
+        <div class="color-group">
+            <div>@color.Key</div>
+            @foreach (var shade in color.Value)
+            {
+                <div style="background-color: @shade; width: 200px; height: 44px;">@shade</div>
+            }
+        </div>
     }
-}
+</div>
 
 @code {
 
 }
+
+<style>
+    .color-group {
+        display: inline-flex;
+        flex-direction: column;
+        width: 200px;
+        margin: 10px;
+    }
+</style>
