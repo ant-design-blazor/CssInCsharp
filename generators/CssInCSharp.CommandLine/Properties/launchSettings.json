@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CssInCSharp.CommandLine": {
+      "commandName": "Project",
+      "commandLineArgs": "convert -t ts -s index.ts --dry-run"
+    }
+  }
+}
