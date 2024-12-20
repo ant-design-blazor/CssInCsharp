@@ -8,6 +8,7 @@ using Spectre.Console;
 var returnCode = 0;
 var rootCommand = new RootCommand("CssInCSharp")
 {
+    new InitCommand(),
     new ConvertCommand(),
     new MinifyCommand(),
 };

@@ -18,6 +18,11 @@ internal static class NodeExtensions
         }
     }
 
+    public static bool IsNodeType<T>(this SyntaxNode node)
+    {
+        return node.GetType().IsAssignableFrom(typeof(T));
+    }
+
     public static bool IsMember(this Ts.TsTypes.INode node)
     {
         switch (node.Kind)

@@ -1,6 +1,6 @@
 ﻿namespace CssInCSharp.Generator
 {
-    public enum ConvertType
+    public enum ConverterType
     {
         Ts,
         Sass,
@@ -18,6 +18,18 @@
         public string Convert(string content, string fileName)
         {
             return string.Empty;
+        }
+    }
+
+    public class ConverterFactory
+    {
+        public static IConverter Create(ConverterType type , CSharpOptions option)
+        {
+            return type switch
+            {
+                ConverterType.Ts => new TypeScriptConverter(option),
+                _ => new DefaultConverter(),
+            };
         }
     }
 }
