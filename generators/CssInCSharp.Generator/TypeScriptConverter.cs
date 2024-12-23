@@ -12,6 +12,7 @@ namespace CssInCSharp.Generator
         public string Namespace { get; set; } = "CssInCSharp";
         public string DefaultReturnType { get; set; } = "object";
         public string DefaultParameterType { get; set; } = "object";
+        public string DefaultFieldType { get; set; } = "object";
         public string? DefaultClassName { get; set; }
     }
 
@@ -75,9 +76,6 @@ namespace CssInCSharp.Generator
                         var n = node.AsType<Ts.TsTypes.ArrowFunction>();
                         var funcName = context?.FuncName ?? string.Empty;
                         var returnType = n.Type?.GetText() ?? _options.DefaultReturnType;
-                        var methodDeclaration = SyntaxFactory.MethodDeclaration(
-                                SyntaxFactory.ParseTypeName(returnType), funcName)
-                            .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword));
 
                         var parameters = n.Parameters.Select(x =>
                         {
@@ -86,8 +84,7 @@ namespace CssInCSharp.Generator
                             return SyntaxFactory.Parameter(SyntaxFactory.Identifier(pName))
                                 .WithType(SyntaxFactory.ParseTypeName(pType));
                         }).ToArray();
-                        methodDeclaration = methodDeclaration.AddParameterListParameters(parameters);
-
+                        
                         var funcBody = n.Body;
                         var statements = new List<StatementSyntax>();
                         switch (funcBody.Kind)
@@ -100,6 +97,7 @@ namespace CssInCSharp.Generator
                                     {
                                         case Ts.TsTypes.SyntaxKind.VariableStatement:
                                             var variableStatement = statement as Ts.TsTypes.VariableStatement;
+                                            if (variableStatement.DeclarationList.Declarations.Count <= 0) break;
                                             var declaration = variableStatement.DeclarationList.Declarations[0];
                                             if (declaration.Name.Kind == Ts.TsTypes.SyntaxKind.ObjectBindingPattern)
                                             {
@@ -150,7 +148,18 @@ namespace CssInCSharp.Generator
                                 break;
                         }
 
-                        return methodDeclaration.WithBody(SyntaxFactory.Block(statements));
+                        if (context is { UseLambda: true })
+                        {
+                            return SyntaxFactory.ParenthesizedLambdaExpression(SyntaxFactory.ParameterList(SyntaxFactory.SeparatedList(parameters)), SyntaxFactory.Block(statements));
+                        }
+                        else
+                        {
+                            var methodDeclaration = SyntaxFactory.MethodDeclaration(
+                                    SyntaxFactory.ParseTypeName(returnType), funcName)
+                                .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword));
+                            methodDeclaration = methodDeclaration.AddParameterListParameters(parameters);
+                            return methodDeclaration.WithBody(SyntaxFactory.Block(statements));
+                        }
                     }
                     case Ts.TsTypes.SyntaxKind.ArrayLiteralExpression:
                     {
@@ -195,18 +204,52 @@ namespace CssInCSharp.Generator
                     {
                         var n = node.AsType<Ts.TsTypes.CallExpression>();
                         var args = n.Arguments
-                            .Where(x => x.Kind != Ts.TsTypes.SyntaxKind.ArrowFunction)
-                            .Select(x => SyntaxFactory.Argument(GenerateCSharpAst(x).AsType<ExpressionSyntax>()));
+                            .Select(x => (SyntaxNodeOrToken)SyntaxFactory.Argument(GenerateCSharpAst(x, new NodeContext() { UseLambda = true }).AsType<ExpressionSyntax>()))
+                            .Separate(SyntaxFactory.Token(SyntaxKind.CommaToken)).ToList();
                         return SyntaxFactory.InvocationExpression
                         (
                             GenerateCSharpAst(n.Expression).AsType<ExpressionSyntax>(),
-                            SyntaxFactory.ArgumentList(SyntaxFactory.SeparatedList(args))
+                            SyntaxFactory.ArgumentList(SyntaxFactory.SeparatedList<ArgumentSyntax>(args))
                         );
                     }
                     case Ts.TsTypes.SyntaxKind.ComputedPropertyName:
                     {
                         var n = node.AsType<Ts.TsTypes.ComputedPropertyName>();
                         return GenerateCSharpAst(n.Expression);
+                    }
+                    case Ts.TsTypes.SyntaxKind.ConditionalExpression:
+                    {
+                        var n = node.AsType<Ts.TsTypes.ConditionalExpression>();
+                        if (n.WhenFalse.Kind == Ts.TsTypes.SyntaxKind.MissingDeclaration)
+                        {
+                            return GenerateCSharpAst(n.WhenTrue, new NodeContext() { ConditionalToken = n.IdentifierStr });
+                        } 
+                        else if (n.WhenTrue.Kind == Ts.TsTypes.SyntaxKind.MissingDeclaration)
+                        {
+                            return GenerateCSharpAst(n.WhenFalse, new NodeContext() { ConditionalToken = n.IdentifierStr });
+                        }
+                        else
+                        {
+                            var condition = GenerateCSharpAst(n.Condition).AsType<ExpressionSyntax>();
+                            var whenTrue = GenerateCSharpAst(n.WhenTrue).AsType<ExpressionSyntax>();
+                            var whenFalse = GenerateCSharpAst(n.WhenFalse).AsType<ExpressionSyntax>();
+                            return SyntaxFactory.ConditionalExpression(
+                                condition,
+                                whenTrue,
+                                whenFalse);
+                        }
+                    }
+                    case Ts.TsTypes.SyntaxKind.ElementAccessExpression:
+                    {
+                        var n = node.AsType<Ts.TsTypes.ElementAccessExpression>();
+                        var argExp = SyntaxFactory.Argument(GenerateCSharpAst(n.ArgumentExpression).AsType<ExpressionSyntax>());
+                        return SyntaxFactory.ElementAccessExpression(SyntaxFactory.IdentifierName(n.IdentifierStr))
+                            .WithArgumentList(SyntaxFactory.BracketedArgumentList(SyntaxFactory.SeparatedList<ArgumentSyntax>(new ArgumentSyntax[]{ argExp })));
+                    }
+                    case Ts.TsTypes.SyntaxKind.FalseKeyword:
+                    {
+                        return SyntaxFactory.LiteralExpression(
+                            SyntaxKind.FalseLiteralExpression);
                     }
                     case Ts.TsTypes.SyntaxKind.HeritageClause:
                     {
@@ -251,6 +294,16 @@ namespace CssInCSharp.Generator
                         }
 
                         return classDeclaration;
+                    }
+                    case Ts.TsTypes.SyntaxKind.NewExpression:
+                    {
+                        var n = node.AsType<Ts.TsTypes.NewExpression>();
+                        var args = n.Arguments
+                            .Select(x => (SyntaxNodeOrToken)SyntaxFactory.Argument(GenerateCSharpAst(x).AsType<ExpressionSyntax>()))
+                            .Separate(SyntaxFactory.Token(SyntaxKind.CommaToken));
+
+                        return SyntaxFactory.ObjectCreationExpression(SyntaxFactory.IdentifierName(n.IdentifierStr))
+                            .WithArgumentList(SyntaxFactory.ArgumentList(SyntaxFactory.SeparatedList<ArgumentSyntax>(args)));
                     }
                     case Ts.TsTypes.SyntaxKind.NumericLiteral:
                     {
@@ -328,6 +381,13 @@ namespace CssInCSharp.Generator
                     case Ts.TsTypes.SyntaxKind.PropertyAccessExpression:
                     {
                         var n = node.AsType<Ts.TsTypes.PropertyAccessExpression>();
+                        if (context is { ConditionalToken: not null })
+                        {
+                            return SyntaxFactory.ConditionalAccessExpression(
+                                SyntaxFactory.IdentifierName(context.ConditionalToken),
+                                SyntaxFactory.MemberBindingExpression(
+                                    SyntaxFactory.IdentifierName(n.Name.GetText())));
+                        }
                         return SyntaxFactory.MemberAccessExpression
                         (
                             SyntaxKind.SimpleMemberAccessExpression,
@@ -454,7 +514,7 @@ namespace CssInCSharp.Generator
                     {
                         var n = node.AsType<Ts.TsTypes.VariableStatement>();
                         var declaration = n.DeclarationList.Declarations[0];
-                        if (declaration.Initializer.Kind == Ts.TsTypes.SyntaxKind.Identifier)
+                        if (declaration.Initializer.Kind == Ts.TsTypes.SyntaxKind.Identifier && declaration.Name.Kind != Ts.TsTypes.SyntaxKind.Identifier)
                         {
                             var initializer = declaration.Initializer?.GetText() ?? string.Empty;
                             return GenerateCSharpAst(declaration.Name, new NodeContext
@@ -462,10 +522,24 @@ namespace CssInCSharp.Generator
                                 Initializer = initializer
                             });
                         }
-                        else
+                        else if (declaration.Initializer.Kind == Ts.TsTypes.SyntaxKind.ArrowFunction)
                         {
                             var funcName = declaration.Name.GetText();
                             return GenerateCSharpAst(declaration.Initializer, new NodeContext { FuncName = funcName });
+                        }
+                        else
+                        {
+                            var name = declaration.Name.GetText();
+                            var variableDeclaration = SyntaxFactory.VariableDeclaration(
+                                    SyntaxFactory.IdentifierName(_options.DefaultFieldType))
+                                .WithVariables(SyntaxFactory.SingletonSeparatedList(
+                                    SyntaxFactory.VariableDeclarator(SyntaxFactory.Identifier(name))));
+                            var expression = GenerateCSharpAst(declaration.Initializer).AsType<ExpressionSyntax>();
+                            var equalsValueClause = SyntaxFactory.EqualsValueClause(expression);
+                            return SyntaxFactory.FieldDeclaration(variableDeclaration.WithVariables(
+                                SyntaxFactory.SingletonSeparatedList(
+                                    SyntaxFactory.VariableDeclarator(SyntaxFactory.Identifier(name))
+                                        .WithInitializer(equalsValueClause)))).WithModifiers(SyntaxFactory.TokenList(SyntaxFactory.Token(SyntaxKind.PublicKeyword)));
                         }
                     }
                     default: return default;
@@ -490,14 +564,17 @@ namespace CssInCSharp.Generator
             {
                 case Ts.TsTypes.SyntaxKind.AsteriskToken:
                     return SyntaxKind.MultiplyExpression;
-                case Ts.TsTypes.SyntaxKind.PlusToken:
-                    return SyntaxKind.AddExpression;
-                case Ts.TsTypes.SyntaxKind.MinusToken:
-                    return SyntaxKind.SubtractExpression;
-                case Ts.TsTypes.SyntaxKind.SlashToken:
-                    return SyntaxKind.DivideExpression;
                 case Ts.TsTypes.SyntaxKind.BarBarToken:
                     return SyntaxKind.CoalesceExpression;
+                case Ts.TsTypes.SyntaxKind.EqualsEqualsToken:
+                case Ts.TsTypes.SyntaxKind.EqualsEqualsEqualsToken:
+                    return SyntaxKind.EqualsExpression;
+                case Ts.TsTypes.SyntaxKind.MinusToken:
+                    return SyntaxKind.SubtractExpression;
+                case Ts.TsTypes.SyntaxKind.PlusToken:
+                    return SyntaxKind.AddExpression;
+                case Ts.TsTypes.SyntaxKind.SlashToken:
+                    return SyntaxKind.DivideExpression;
                 default:
                     throw new Exception("Typescript SyntaxKind map error.");
             }
@@ -532,6 +609,8 @@ namespace CssInCSharp.Generator
         public string? ReturnType { get; set; }
         public string? Initializer { get; set; }
         public string? FuncName { get; set; }
+        public bool UseLambda { get; set; }
+        public string? ConditionalToken { get; set; }
     }
 
     public struct SyntaxNodeOrList

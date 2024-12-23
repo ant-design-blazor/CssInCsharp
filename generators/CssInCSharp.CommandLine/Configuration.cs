@@ -6,11 +6,13 @@ namespace CssInCSharp.CommandLine
     {
         public CSharpOptions CsOptions { get; set; } = new();
 
-        public List<IncludeItem> Includes { get; set; } = [];
+        public List<IncludeItem> Include { get; set; } = [];
+
+        public List<string> Exclude { get; set; } = [];
 
         public void AddIncludeItem(string src, string dest)
         {
-            Includes.Add(new IncludeItem
+            Include.Add(new IncludeItem
             {
                 Src = src,
                 Dest = dest

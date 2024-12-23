@@ -1,7 +1,6 @@
 ﻿using System.CommandLine;
 using System.Text.Json;
 using CssInCSharp.Generator;
-using Microsoft.Extensions.FileSystemGlobbing;
 
 namespace CssInCSharp.CommandLine
 {
@@ -47,24 +46,17 @@ namespace CssInCSharp.CommandLine
             }
             else
             {
-                Console.WriteLine("`cssincs.json` file or `src` parameter, one must be specified.");
+                Console.WriteLine("`config` or `src` parameter, one must be specified.");
                 return;
             }
 
-            var items = new List<IncludeItem>();
-            foreach (var inc in config.Includes)
+            var exclude = config.Exclude.SelectMany(x => Util.GetFiles(x));
+            var items = config.Include.SelectMany(x => Util.GetFiles(x.Src).Except(exclude), (inc, file) => new IncludeItem
             {
-                var (dir, files) = Util.GetFiles(inc.Src);
-                foreach (var file in files)
-                {
-                    items.Add(new IncludeItem
-                    {
-                        Src = file,
-                        Dest = Util.GetDest(dir, file, inc.Dest, ".cs"),
-                        CsOptions = inc.CsOptions ?? config.CsOptions
-                    });
-                }
-            }
+                Src = file.FullPath,
+                Dest = Util.GetDest(file.Dir, file.FullPath, inc.Dest, ".cs"),
+                CsOptions = inc.CsOptions ?? config.CsOptions
+            });
 
             foreach (var item in items)
             {
@@ -82,56 +74,6 @@ namespace CssInCSharp.CommandLine
                     await Util.WriteAllTextAsync(item.Dest, code);
                 }
             }
-        }
-    }
-
-    public static class Util
-    {
-        public static async Task WriteAllTextAsync(string path, string content)
-        {
-            var destDir = Path.GetDirectoryName(path);
-            if (!Directory.Exists(destDir))
-            {
-                Directory.CreateDirectory(destDir);
-            }
-            await File.WriteAllTextAsync(path, content);
-        }
-
-        public static (string, string[]) GetFiles(string path)
-        {
-            path = Path.GetFullPath(path);
-            var dir = "";
-            var pattern = "";
-            var index = path.IndexOf("*");
-            if (index > 0)
-            {
-                dir = path.Substring(0, index);
-                pattern = path.Substring(index);
-            }
-            else
-            {
-                dir = Path.GetDirectoryName(path);
-                pattern = path.Substring(dir.Length + 1);
-            }
-            var matcher = new Matcher();
-            matcher.AddInclude(pattern);
-            return (dir, matcher.GetResultsInFullPath(dir).ToArray());
-        }
-
-        public static string GetDest(string dir, string file, string dest, string ext)
-        {
-            if (!string.IsNullOrEmpty(dest) && !IsFolder(dest)) return Path.GetFullPath(dest);
-            dest = Path.GetFullPath(dest ?? dir);
-            var destFile = Path.Combine(dest, file.Substring(dir.Length));
-            var destFolder = Path.GetDirectoryName(destFile);
-            var destFileName = Path.GetFileNameWithoutExtension(destFile);
-            return Path.Combine(destFolder, destFileName + ext);
-        }
-
-        public static bool IsFolder(string path)
-        {
-            var attr = File.GetAttributes(path);
-            return (attr & FileAttributes.Directory) == FileAttributes.Directory;
         }
     }
 }
