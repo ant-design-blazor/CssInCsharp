@@ -1,7 +1,6 @@
 ﻿using System.Text.Json;
 using System.Text.RegularExpressions;
 using CssInCSharp.Generator;
-using CssInCSharp.Generator.Extensions;
 
 namespace CssInCSharp.CommandLine
 {
@@ -36,11 +35,37 @@ namespace CssInCSharp.CommandLine
 
         public IncludeItem Update()
         {
-            if (CsOptions is not { DefaultClassName: not null }) return this;
-            var match = Regex.Match(CsOptions.DefaultClassName, @"(\{(dir|file):?(\S*)\})\w*");
-            if (!match.Success) return this;
-            if (match.Groups.Count < 3) return this;
-            if (Dest == null) return this;
+            UpdateDefaultClassName();
+            UpdateDefaultExportMethodName();
+            return this;
+        }
+
+        private void UpdateDefaultClassName()
+        {
+            if (CsOptions is not { DefaultClassName: not null }) return;
+            var name = ParseName(CsOptions.DefaultClassName);
+            if (!string.IsNullOrEmpty(name))
+            {
+                CsOptions.DefaultClassName = Util.PurifyFileName(name);
+            }
+        }
+
+        private void UpdateDefaultExportMethodName()
+        {
+            if (CsOptions is not { DefaultExportMethodName: not null }) return;
+            var name = ParseName(CsOptions.DefaultExportMethodName);
+            if (!string.IsNullOrEmpty(name))
+            {
+                CsOptions.DefaultExportMethodName = Util.PurifyFileName(name);
+            }
+        }
+
+        private string? ParseName(string option)
+        {
+            var match = Regex.Match(option, @"(\{(dir|file):?(\S*)\})\w*");
+            if (!match.Success) return null;
+            if (match.Groups.Count < 3) return null;
+            if (Dest == null) return null;
 
             var replace = match.Groups[1].Value;
             var type = match.Groups[2].Value;
@@ -64,11 +89,9 @@ namespace CssInCSharp.CommandLine
 
             if (!string.IsNullOrEmpty(name))
             {
-                name = CsOptions.DefaultClassName.Replace(replace, name);
-                CsOptions.DefaultClassName = Util.PurifyFileName(name);
+                name = option.Replace(replace, name);
             }
-
-            return this;
+            return name;
         }
     }
 }
