@@ -14,6 +14,7 @@ namespace CssInCSharp.Generator
         public string DefaultParameterType { get; set; } = "object";
         public string DefaultFieldType { get; set; } = "object";
         public string DefaultClassName { get; set; } = "GeneratedStyle";
+        public string DefaultExportMethodName { get; set; } = "Default";
         public bool UsePartialClass { get; set; } = false;
         public bool UseStaticMethod { get; set; } = false;
         public bool UsePascalCase { get; set; } = false;
@@ -257,6 +258,18 @@ namespace CssInCSharp.Generator
                         var argExp = SyntaxFactory.Argument(GenerateCSharpAst(n.ArgumentExpression).AsType<ExpressionSyntax>());
                         return SyntaxFactory.ElementAccessExpression(SyntaxFactory.IdentifierName(n.IdentifierStr))
                             .WithArgumentList(SyntaxFactory.BracketedArgumentList(SyntaxFactory.SeparatedList<ArgumentSyntax>(new ArgumentSyntax[]{ argExp })));
+                    }
+                    case Ts.TsTypes.SyntaxKind.ExportAssignment:
+                    {
+                        var n = node.AsType<Ts.TsTypes.ExportAssignment>();
+                        SyntaxToken[] tokens = _options.UseStaticMethod
+                            ? [SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.StaticKeyword)]
+                            : [SyntaxFactory.Token(SyntaxKind.PublicKeyword)];
+                        var methodDeclaration = SyntaxFactory
+                            .MethodDeclaration(SyntaxFactory.ParseTypeName(_options.DefaultReturnType), _options.DefaultExportMethodName)
+                            .AddModifiers(tokens);
+                        var exp = GenerateCSharpAst(n.Expression, new NodeContext() { UseLambda = true }).AsType<ExpressionSyntax>();
+                        return methodDeclaration.WithBody(SyntaxFactory.Block(SyntaxFactory.ReturnStatement(exp)));
                     }
                     case Ts.TsTypes.SyntaxKind.FalseKeyword:
                     {
