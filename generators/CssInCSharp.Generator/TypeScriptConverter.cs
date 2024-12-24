@@ -8,12 +8,15 @@ namespace CssInCSharp.Generator
 {
     public class CSharpOptions
     {
-        public List<string> Usings { get; set; } = ["System"];
+        public List<string> Usings { get; set; } = ["System", "CssInCSharp"];
         public string Namespace { get; set; } = "CssInCSharp";
         public string DefaultReturnType { get; set; } = "object";
         public string DefaultParameterType { get; set; } = "object";
         public string DefaultFieldType { get; set; } = "object";
-        public string? DefaultClassName { get; set; }
+        public string DefaultClassName { get; set; } = "GeneratedStyle";
+        public bool UsePartialClass { get; set; } = false;
+        public bool UseStaticMethod { get; set; } = false;
+        public bool UsePascalCase { get; set; } = false;
     }
 
     public class TypeScriptConverter : IConverter
@@ -27,21 +30,27 @@ namespace CssInCSharp.Generator
 
         public string Convert(string content, string fileName)
         {
-            var usings = GenerateUsings();
-            var ast = new Ts.TypeScriptAST(content, fileName);
-            var member = GenerateMemberDeclaration(ast.RootNode);
-            return SyntaxFactory.CompilationUnit()
-                .WithUsings(usings)
-                .AddMembers(member)
-                .NormalizeWhitespace()
-                .ToFullString();
+            var tsAst = new Ts.TypeScriptAST(content, fileName);
+            var csAst = Generate(tsAst.RootNode);
+            return csAst.NormalizeWhitespace().ToFullString();
         }
 
-        private SyntaxList<UsingDirectiveSyntax> GenerateUsings()
+        private CompilationUnitSyntax Generate(Ts.TsTypes.INode node)
         {
-            var usings = _options.Usings.Select(x => SyntaxFactory.UsingDirective(
-                SyntaxFactory.ParseName(x)));
-            return SyntaxFactory.List<UsingDirectiveSyntax>(usings);
+            // usings
+            var usings = SyntaxFactory.List<UsingDirectiveSyntax>(_options.Usings.Select(x => SyntaxFactory.UsingDirective(
+                SyntaxFactory.ParseName(x))));
+
+            // namespace
+            var @namespace = SyntaxFactory.NamespaceDeclaration(SyntaxFactory.ParseName(_options.Namespace));
+
+            // members
+            var members = GenerateMemberDeclaration(node);
+            @namespace = @namespace.AddMembers(members);
+
+            return SyntaxFactory.CompilationUnit()
+                .WithUsings(usings)
+                .AddMembers(@namespace);
         }
 
         private MemberDeclarationSyntax? GenerateMemberDeclaration(Ts.TsTypes.INode node)
@@ -154,9 +163,12 @@ namespace CssInCSharp.Generator
                         }
                         else
                         {
-                            var methodDeclaration = SyntaxFactory.MethodDeclaration(
-                                    SyntaxFactory.ParseTypeName(returnType), funcName)
-                                .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword));
+                            SyntaxToken[] tokens = _options.UseStaticMethod
+                                ? [SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.StaticKeyword)]
+                                : [SyntaxFactory.Token(SyntaxKind.PublicKeyword)];
+                            var methodDeclaration = SyntaxFactory
+                                .MethodDeclaration(SyntaxFactory.ParseTypeName(returnType), Format(funcName))
+                                .AddModifiers(tokens);
                             methodDeclaration = methodDeclaration.AddParameterListParameters(parameters);
                             return methodDeclaration.WithBody(SyntaxFactory.Block(statements));
                         }
@@ -420,7 +432,7 @@ namespace CssInCSharp.Generator
                     {
                         var n = node.AsType<Ts.TsTypes.PropertySignature>();
                         return SyntaxFactory
-                            .PropertyDeclaration(SyntaxFactory.ParseTypeName("string"), n.IdentifierStr)
+                            .PropertyDeclaration(GetType(n.Type), Format(n.IdentifierStr))
                             .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword))
                             .AddAccessorListAccessors
                             (
@@ -462,7 +474,10 @@ namespace CssInCSharp.Generator
                     }
                     case Ts.TsTypes.SyntaxKind.SourceFile:
                     {
-                        return SyntaxFactory.NamespaceDeclaration(SyntaxFactory.ParseName(_options.Namespace));
+                        SyntaxToken[] tokens = _options.UsePartialClass
+                            ? [SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.PartialKeyword)]
+                            : [SyntaxFactory.Token(SyntaxKind.PublicKeyword)];
+                        return SyntaxFactory.ClassDeclaration(Format(_options.DefaultClassName)).AddModifiers(tokens);
                     }
                     case Ts.TsTypes.SyntaxKind.StringLiteral:
                     {
@@ -580,7 +595,30 @@ namespace CssInCSharp.Generator
             }
         }
 
-        static int GetLineNumber(string text, int index)
+        private TypeSyntax GetType(Ts.TsTypes.INode node)
+        {
+            switch (node.Kind)
+            {
+                case Ts.TsTypes.SyntaxKind.NumberKeyword:
+                    return SyntaxFactory.ParseTypeName("double");
+                case Ts.TsTypes.SyntaxKind.StringKeyword:
+                    return SyntaxFactory.ParseTypeName("double");
+                default:
+                    return SyntaxFactory.ParseTypeName("object");
+            }
+        }
+
+        private string Format(string text)
+        {
+            if (_options.UsePascalCase)
+            {
+                return text.ToPascalCase();
+            }
+
+            return text;
+        }
+
+        private static int GetLineNumber(string text, int index)
         {
             if (index < 0 || index > text.Length)
                 throw new ArgumentOutOfRangeException(nameof(index), "Index is out of the range of the text.");

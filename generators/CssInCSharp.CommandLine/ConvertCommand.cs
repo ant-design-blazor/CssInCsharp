@@ -56,7 +56,7 @@ namespace CssInCSharp.CommandLine
                 Src = file.FullPath,
                 Dest = Util.GetDest(file.Dir, file.FullPath, inc.Dest, ".cs"),
                 CsOptions = inc.CsOptions ?? config.CsOptions
-            });
+            }.Update());
 
             foreach (var item in items)
             {

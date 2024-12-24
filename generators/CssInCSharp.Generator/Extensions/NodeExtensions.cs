@@ -25,24 +25,17 @@ internal static class NodeExtensions
 
     public static bool IsMember(this Ts.TsTypes.INode node)
     {
-        /*
-         * depth 0 is source file
-         * depth 1 is member declaration
-         */
-        if (node.Depth <= 1) return true;
-        return false;
-
-        // switch (node.Kind)
-        // {
-        //     case Ts.TsTypes.SyntaxKind.SourceFile:
-        //     case Ts.TsTypes.SyntaxKind.InterfaceDeclaration:
-        //     case Ts.TsTypes.SyntaxKind.VariableDeclaration:
-        //     case Ts.TsTypes.SyntaxKind.VariableStatement:
-        //     case Ts.TsTypes.SyntaxKind.FunctionDeclaration:
-        //     case Ts.TsTypes.SyntaxKind.PropertySignature:
-        //         return true;
-        //     default: return false;
-        // }
+        switch (node.Kind)
+        {
+            case Ts.TsTypes.SyntaxKind.SourceFile:
+            case Ts.TsTypes.SyntaxKind.InterfaceDeclaration:
+            case Ts.TsTypes.SyntaxKind.VariableDeclaration:
+            case Ts.TsTypes.SyntaxKind.VariableStatement:
+            case Ts.TsTypes.SyntaxKind.FunctionDeclaration:
+            case Ts.TsTypes.SyntaxKind.PropertySignature:
+                return true;
+            default: return false;
+        }
     }
 
     public static bool IsIndexerProperty(this Ts.TsTypes.INode node)
