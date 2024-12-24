@@ -1,0 +1,1 @@
+CssInCSharp.Ast.TypeScript is based TypeScriptAST project hosted on https://github.com/ToCSharp/TypeScriptAST distributed with Apache 2.0 license.
