@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.FileSystemGlobbing;
+using System.Text.RegularExpressions;
 
 namespace CssInCSharp.CommandLine;
 
@@ -54,6 +55,12 @@ public static class Util
     {
         var attr = File.GetAttributes(path);
         return (attr & FileAttributes.Directory) == FileAttributes.Directory;
+    }
+
+    public static string PurifyFileName(string fileName)
+    {
+        // remove "-"
+        return Regex.Replace(fileName, @"-(\w)", match => match.Groups[1].Value.ToUpper());
     }
 }
 

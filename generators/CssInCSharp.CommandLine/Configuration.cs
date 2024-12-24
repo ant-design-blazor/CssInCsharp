@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Text.Json;
+using System.Text.RegularExpressions;
 using CssInCSharp.Generator;
 using CssInCSharp.Generator.Extensions;
 
@@ -19,6 +20,11 @@ namespace CssInCSharp.CommandLine
                 Src = src,
                 Dest = dest
             });
+        }
+
+        public CSharpOptions CloneCsOptions()
+        {
+            return JsonSerializer.Deserialize<CSharpOptions>(JsonSerializer.Serialize(CsOptions));
         }
     }
 
@@ -58,7 +64,8 @@ namespace CssInCSharp.CommandLine
 
             if (!string.IsNullOrEmpty(name))
             {
-                CsOptions.DefaultClassName = CsOptions.DefaultClassName.Replace(replace, name);
+                name = CsOptions.DefaultClassName.Replace(replace, name);
+                CsOptions.DefaultClassName = Util.PurifyFileName(name);
             }
 
             return this;
