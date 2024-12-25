@@ -6,20 +6,6 @@ using Ts = Zu.TypeScript;
 
 namespace CssInCSharp.Generator
 {
-    public class CSharpOptions
-    {
-        public List<string> Usings { get; set; } = ["System", "CssInCSharp"];
-        public string Namespace { get; set; } = "CssInCSharp";
-        public string DefaultReturnType { get; set; } = "object";
-        public string DefaultParameterType { get; set; } = "object";
-        public string DefaultFieldType { get; set; } = "object";
-        public string DefaultClassName { get; set; } = "GeneratedStyle";
-        public string DefaultExportMethodName { get; set; } = "Default";
-        public bool UsePartialClass { get; set; } = false;
-        public bool UseStaticMethod { get; set; } = false;
-        public bool UsePascalCase { get; set; } = false;
-    }
-
     public class TypeScriptConverter : IConverter
     {
         private readonly CSharpOptions _options;
@@ -33,7 +19,8 @@ namespace CssInCSharp.Generator
         {
             var tsAst = new Ts.TypeScriptAST(content, fileName);
             var csAst = Generate(tsAst.RootNode);
-            return csAst.NormalizeWhitespace().ToFullString();
+            var code = csAst.NormalizeWhitespace().ToFullString();
+            return _options.Replace(code);
         }
 
         private CompilationUnitSyntax Generate(Ts.TsTypes.INode node)
@@ -356,7 +343,7 @@ namespace CssInCSharp.Generator
                         {
                             var item = (el as Ts.TsTypes.BindingElement)!;
                             var name = item.Name.GetText();
-                            var property = item.PropertyName?.GetText() ?? name;
+                            var property = Format(item.PropertyName?.GetText() ?? name);
                             var variable = SyntaxFactory
                                 .VariableDeclaration(SyntaxFactory.ParseTypeName("var"))
                                 .AddVariables
@@ -419,28 +406,37 @@ namespace CssInCSharp.Generator
                             return SyntaxFactory.ConditionalAccessExpression(
                                 SyntaxFactory.IdentifierName(context.ConditionalToken),
                                 SyntaxFactory.MemberBindingExpression(
-                                    SyntaxFactory.IdentifierName(n.Name.GetText())));
+                                    SyntaxFactory.IdentifierName(Format(n.Name.GetText()))));
                         }
                         return SyntaxFactory.MemberAccessExpression
                         (
                             SyntaxKind.SimpleMemberAccessExpression,
                             SyntaxFactory.IdentifierName(n.Expression.GetText()),
-                            SyntaxFactory.IdentifierName(n.Name.GetText())
+                            SyntaxFactory.IdentifierName(Format(n.Name.GetText()))
                         );
                     }
                     case Ts.TsTypes.SyntaxKind.PropertyAssignment:
                     {
                         var n = node.AsType<Ts.TsTypes.PropertyAssignment>();
                         var initializer = n.Initializer;
-                        var left = GenerateCSharpAst(n.Name, context).AsType<ExpressionSyntax>();
-                        if (n.Name.IsIndexerProperty())
+                        ExpressionSyntax left;
+                        if (n.Name.Kind == Ts.TsTypes.SyntaxKind.Identifier)
                         {
-                            left = SyntaxFactory.ElementAccessExpression(SyntaxFactory.IdentifierName(""))
-                                .WithArgumentList(
-                                    SyntaxFactory.BracketedArgumentList(
-                                        SyntaxFactory.SingletonSeparatedList(
-                                            SyntaxFactory.Argument(left))));
+                            left = SyntaxFactory.IdentifierName(Format(n.Name.GetText()));
                         }
+                        else
+                        {
+                            left = GenerateCSharpAst(n.Name, context).AsType<ExpressionSyntax>();
+                            if (n.Name.IsIndexerProperty())
+                            {
+                                left = SyntaxFactory.ElementAccessExpression(SyntaxFactory.IdentifierName(""))
+                                    .WithArgumentList(
+                                        SyntaxFactory.BracketedArgumentList(
+                                            SyntaxFactory.SingletonSeparatedList(
+                                                SyntaxFactory.Argument(left))));
+                            }
+                        }
+                        
                         var right = GenerateCSharpAst(initializer, context).AsType<ExpressionSyntax>();
                         return SyntaxFactory.AssignmentExpression
                         (
