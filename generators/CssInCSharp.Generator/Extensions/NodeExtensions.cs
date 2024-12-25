@@ -34,6 +34,7 @@ internal static class NodeExtensions
             case Ts.TsTypes.SyntaxKind.FunctionDeclaration:
             case Ts.TsTypes.SyntaxKind.PropertySignature:
             case Ts.TsTypes.SyntaxKind.ExportAssignment:
+            case Ts.TsTypes.SyntaxKind.TypeAliasDeclaration:
                 return true;
             default: return false;
         }

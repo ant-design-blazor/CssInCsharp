@@ -320,6 +320,14 @@ namespace CssInCSharp.Generator
 
                         return classDeclaration;
                     }
+                    case Ts.TsTypes.SyntaxKind.IntersectionType:
+                    {
+                        var n = node.AsType<Ts.TsTypes.IntersectionTypeNode>();
+                        var types = n.Types.Where(x => x.Kind != Ts.TsTypes.SyntaxKind.TypeLiteral)
+                            .Select(x => (SyntaxNodeOrToken)GenerateCSharpAst(x).AsT0)
+                            .Separate(SyntaxFactory.Token(SyntaxKind.CommaToken)).ToList();
+                        return types;
+                    }
                     case Ts.TsTypes.SyntaxKind.NewExpression:
                     {
                         var n = node.AsType<Ts.TsTypes.NewExpression>();
@@ -528,6 +536,73 @@ namespace CssInCSharp.Generator
                     {
                         return SyntaxFactory.LiteralExpression(
                             SyntaxKind.TrueLiteralExpression);
+                    }
+                    case Ts.TsTypes.SyntaxKind.TypeAliasDeclaration:
+                    {
+                        var n = node.AsType<Ts.TsTypes.TypeAliasDeclaration>();
+                        var classDeclaration = SyntaxFactory.ClassDeclaration(Format(n.IdentifierStr)).AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword));
+                        if (n.Type.Kind == Ts.TsTypes.SyntaxKind.UnionType)
+                        {
+                            // todo: how to handle UnionType
+                            return default;
+                        }
+                        if (n.Type.Kind == Ts.TsTypes.SyntaxKind.TypeLiteral)
+                        {
+                            // add members
+                            var members = GenerateCSharpAst(n.Type).AsT1;
+                            foreach (var member in members)
+                            {
+                                classDeclaration = classDeclaration.AddMembers(member.AsType<MemberDeclarationSyntax>());
+                            }
+                        }
+                        else
+                        {
+                            // add base class
+                            var r = GenerateCSharpAst(n.Type);
+                            var baseClasses = new List<SyntaxNodeOrToken>();
+                            if (r.IsT2)
+                            {
+                                baseClasses = r.AsT2;
+                            }
+                            else
+                            {
+                                baseClasses.Add(r.AsT0);
+                            }
+
+                            if (baseClasses is { Count: > 0 })
+                            {
+                                classDeclaration = classDeclaration.WithBaseList
+                                (
+                                    SyntaxFactory.BaseList(SyntaxFactory.SeparatedList<BaseTypeSyntax>(baseClasses))
+                                );
+                            }
+                        }
+                        return classDeclaration;
+                    }
+                    case Ts.TsTypes.SyntaxKind.TypeLiteral:
+                    {
+                        var n = node.AsType<Ts.TsTypes.TypeLiteralNode>();
+                        return n.Members.Select(x => GenerateCSharpAst(x).AsT0).ToList();
+                    }
+                    case Ts.TsTypes.SyntaxKind.TypeReference:
+                    {
+                        var n = node.AsType<Ts.TsTypes.TypeReferenceNode>();
+                        if (n.TypeArguments is { Count: > 0 })
+                        {
+                            var args = n.TypeArguments
+                                .Select(x => (SyntaxNodeOrToken)SyntaxFactory.IdentifierName(x.GetText().Purify()))
+                                .Separate(SyntaxFactory.Token(SyntaxKind.CommaToken));
+
+                            return SyntaxFactory.SimpleBaseType(SyntaxFactory
+                                .GenericName(n.IdentifierStr)
+                                .WithTypeArgumentList(
+                                    SyntaxFactory.TypeArgumentList(SyntaxFactory.SeparatedList<TypeSyntax>(args))));
+                        }
+                        else
+                        {
+                            return SyntaxFactory.SimpleBaseType(
+                                SyntaxFactory.IdentifierName(n.IdentifierStr));
+                        }
                     }
                     case Ts.TsTypes.SyntaxKind.FirstTemplateToken:
                     {
