@@ -1,20 +1,53 @@
 ﻿using System.Text.RegularExpressions;
+using CssInCSharp.Generator.Extensions;
 
 namespace CssInCSharp.Generator;
 
 public class CSharpOptions
 {
+    private readonly Dictionary<string, string> _contextVariables = new Dictionary<string, string>();
     public List<string> Usings { get; set; } = ["System", "CssInCSharp"];
     public string Namespace { get; set; } = "CssInCSharp";
+    public string NamePrefix { get; set; } = default!;
     public string DefaultReturnType { get; set; } = "object";
     public string DefaultParameterType { get; set; } = "object";
     public string DefaultFieldType { get; set; } = "object";
     public string DefaultClassName { get; set; } = "GeneratedStyle";
     public string DefaultExportMethodName { get; set; } = "Default";
+    public string DefaultExportType { get; set; } = "object";
     public bool UsePartialClass { get; set; } = false;
     public bool UseStaticMethod { get; set; } = false;
-    public bool UsePascalCase { get; set; } = true;
-    public List<Replacement> Replacements { get; set; } = [];
+    public bool UsePascalCase { get; set; } = false;
+    public bool UseAnonymousType { get; set; } = false;
+    public bool UseTypeInference { get; set; } = false;
+    public List<MatchItem> TypeInferences { get; set; } = [];
+    public List<MatchItem> Replacements { get; set; } = [];
+
+    public void SetContextVariables()
+    {
+        _contextVariables[nameof(Namespace)] = Namespace;
+        _contextVariables[nameof(NamePrefix)] = NamePrefix;
+        _contextVariables[nameof(DefaultReturnType)] = DefaultReturnType;
+        _contextVariables[nameof(DefaultParameterType)] = DefaultParameterType;
+        _contextVariables[nameof(DefaultFieldType)] = DefaultFieldType;
+        _contextVariables[nameof(DefaultClassName)] = DefaultClassName;
+        _contextVariables[nameof(DefaultExportMethodName)] = DefaultExportMethodName;
+        _contextVariables[nameof(DefaultExportType)] = DefaultExportType;
+    }
+
+    public string Infer(string token, string defaultValue = "object")
+    {
+        if (!UseTypeInference) return defaultValue;
+        foreach (var item in TypeInferences)
+        {
+            if (Regex.IsMatch(token, item.Pattern))
+            {
+                return item.GetValue(_contextVariables).ToPascalCase();
+            }
+        }
+
+        return defaultValue;
+    }
 
     public string Replace(string input)
     {
@@ -22,42 +55,33 @@ public class CSharpOptions
         {
             return input;
         }
-        var context = new Dictionary<string, string>
-        {
-            { nameof(Namespace), Namespace },
-            { nameof(DefaultReturnType), DefaultReturnType },
-            { nameof(DefaultParameterType), DefaultParameterType },
-            { nameof(DefaultFieldType), DefaultFieldType },
-            { nameof(DefaultClassName), DefaultClassName },
-            { nameof(DefaultExportMethodName), DefaultExportMethodName },
-        };
 
         foreach (var item in Replacements)
         {
-            input = item.Replace(input, context);
+            input = item.Replace(input, _contextVariables);
         }
 
         return input;
     }
 }
 
-public class Replacement
+public class MatchItem
 {
     public string Pattern { get; set; } = default!;
 
     public string Value { get; set; } = default!;
 
-    public Replacement()
+    public MatchItem()
     {
     }
 
-    public Replacement(string pattern, string value)
+    public MatchItem(string pattern, string value)
     {
         Pattern = pattern;
         Value = value;
     }
 
-    public string Replace(string input, Dictionary<string, string> context)
+    public string GetValue(Dictionary<string, string> context)
     {
         var match = Regex.Match(Value, @"\w*(\{(\w+)\})\w*");
         if (match is { Success: true, Groups.Count: >= 3 })
@@ -66,9 +90,16 @@ public class Replacement
             var key = match.Groups[2].ToString();
             if (context.TryGetValue(key, out var value))
             {
-                Value = Value.Replace(replace, value);
+                return Value.Replace(replace, value);
             }
         }
-        return Regex.Replace(input, Pattern, Value);
+
+        return Value;
+    }
+
+    public string Replace(string input, Dictionary<string, string> context)
+    {
+        var value = GetValue(context);
+        return Regex.Replace(input, Pattern, value);
     }
 }

@@ -35,9 +35,21 @@ namespace CssInCSharp.CommandLine
 
         public IncludeItem Update()
         {
+            UpdateNamePrefix();
             UpdateDefaultClassName();
             UpdateDefaultExportMethodName();
+            CsOptions?.SetContextVariables();
             return this;
+        }
+
+        private void UpdateNamePrefix()
+        {
+            if (CsOptions is not { NamePrefix: not null }) return;
+            var name = ParseName(CsOptions.NamePrefix);
+            if (!string.IsNullOrEmpty(name))
+            {
+                CsOptions.NamePrefix = Util.PurifyFileName(name);
+            }
         }
 
         private void UpdateDefaultClassName()

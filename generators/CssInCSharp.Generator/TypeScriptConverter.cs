@@ -26,8 +26,7 @@ namespace CssInCSharp.Generator
         private CompilationUnitSyntax Generate(Ts.TsTypes.INode node)
         {
             // usings
-            var usings = SyntaxFactory.List<UsingDirectiveSyntax>(_options.Usings.Select(x => SyntaxFactory.UsingDirective(
-                SyntaxFactory.ParseName(x))));
+            var usings = SyntaxFactory.List<UsingDirectiveSyntax>(_options.Usings.Select(GenerateUsing));
 
             // namespace
             var @namespace = SyntaxFactory.NamespaceDeclaration(SyntaxFactory.ParseName(_options.Namespace));
@@ -39,6 +38,24 @@ namespace CssInCSharp.Generator
             return SyntaxFactory.CompilationUnit()
                 .WithUsings(usings)
                 .AddMembers(@namespace);
+        }
+
+        private UsingDirectiveSyntax GenerateUsing(string usingStr)
+        {
+            var strs = usingStr.Split("=");
+            if (strs.Length > 1)
+            {
+                return SyntaxFactory.UsingDirective(SyntaxFactory.ParseName(strs[1].Trim())).WithAlias(SyntaxFactory.NameEquals(strs[0].Trim()));
+            }
+
+            strs = usingStr.Split("static");
+            if (strs.Length > 1)
+            {
+                return SyntaxFactory.UsingDirective(SyntaxFactory.ParseName(strs[1].Trim())).WithStaticKeyword(SyntaxFactory.Token(SyntaxKind.StaticKeyword));
+            }
+
+            return SyntaxFactory.UsingDirective(
+                SyntaxFactory.ParseName(usingStr));
         }
 
         private MemberDeclarationSyntax? GenerateMemberDeclaration(Ts.TsTypes.INode node)
@@ -72,12 +89,12 @@ namespace CssInCSharp.Generator
                     {
                         var n = node.AsType<Ts.TsTypes.ArrowFunction>();
                         var funcName = context?.FuncName ?? string.Empty;
-                        var returnType = n.Type?.GetText() ?? _options.DefaultReturnType;
+                        var returnType = n.Type?.GetText() ?? _options.Infer(funcName, _options.DefaultReturnType);
 
                         var parameters = n.Parameters.Select(x =>
                         {
                             var pName = x.Name.GetText();
-                            var pType = x.Type?.GetText() ?? _options.DefaultParameterType;
+                            var pType = x.Type?.GetText() ?? _options.Infer(pName, _options.DefaultParameterType);
                             return SyntaxFactory.Parameter(SyntaxFactory.Identifier(pName))
                                 .WithType(SyntaxFactory.ParseTypeName(pType));
                         }).ToArray();
@@ -208,7 +225,7 @@ namespace CssInCSharp.Generator
                             .Separate(SyntaxFactory.Token(SyntaxKind.CommaToken)).ToList();
                         return SyntaxFactory.InvocationExpression
                         (
-                            GenerateCSharpAst(n.Expression).AsType<ExpressionSyntax>(),
+                            FormatNode(n.Expression).AsType<ExpressionSyntax>(),
                             SyntaxFactory.ArgumentList(SyntaxFactory.SeparatedList<ArgumentSyntax>(args))
                         );
                     }
@@ -252,8 +269,10 @@ namespace CssInCSharp.Generator
                         SyntaxToken[] tokens = _options.UseStaticMethod
                             ? [SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.StaticKeyword)]
                             : [SyntaxFactory.Token(SyntaxKind.PublicKeyword)];
+                        var funcName = _options.DefaultExportMethodName;
+                        var returnType = _options.Infer(funcName, _options.DefaultExportType);
                         var methodDeclaration = SyntaxFactory
-                            .MethodDeclaration(SyntaxFactory.ParseTypeName(_options.DefaultReturnType), _options.DefaultExportMethodName)
+                            .MethodDeclaration(SyntaxFactory.ParseTypeName(returnType), Format(funcName))
                             .AddModifiers(tokens);
                         var exp = GenerateCSharpAst(n.Expression, new NodeContext() { UseLambda = true }).AsType<ExpressionSyntax>();
                         return methodDeclaration.WithBody(SyntaxFactory.Block(SyntaxFactory.ReturnStatement(exp)));
@@ -372,6 +391,14 @@ namespace CssInCSharp.Generator
                             {
                                 ReturnType = returnType,
                             }).AsType<ExpressionSyntax>());
+                        if (_options.UseAnonymousType)
+                        {
+                            return SyntaxFactory.AnonymousObjectCreationExpression()
+                                .WithInitializers
+                                (
+                                    SyntaxFactory.SeparatedList(assignments.Select(x => SyntaxFactory.AnonymousObjectMemberDeclarator(x.AsNode().AsType<ExpressionSyntax>())))
+                                );
+                        }
                         return SyntaxFactory
                             .ObjectCreationExpression(SyntaxFactory.IdentifierName(returnType))
                             .WithInitializer
@@ -419,24 +446,16 @@ namespace CssInCSharp.Generator
                     {
                         var n = node.AsType<Ts.TsTypes.PropertyAssignment>();
                         var initializer = n.Initializer;
-                        ExpressionSyntax left;
-                        if (n.Name.Kind == Ts.TsTypes.SyntaxKind.Identifier)
+                        var left = FormatNode(n.Name).AsType<ExpressionSyntax>();
+                        if (n.Name.IsIndexerProperty())
                         {
-                            left = SyntaxFactory.IdentifierName(Format(n.Name.GetText()));
+                            left = SyntaxFactory.ElementAccessExpression(SyntaxFactory.IdentifierName(""))
+                                .WithArgumentList(
+                                    SyntaxFactory.BracketedArgumentList(
+                                        SyntaxFactory.SingletonSeparatedList(
+                                            SyntaxFactory.Argument(left))));
                         }
-                        else
-                        {
-                            left = GenerateCSharpAst(n.Name, context).AsType<ExpressionSyntax>();
-                            if (n.Name.IsIndexerProperty())
-                            {
-                                left = SyntaxFactory.ElementAccessExpression(SyntaxFactory.IdentifierName(""))
-                                    .WithArgumentList(
-                                        SyntaxFactory.BracketedArgumentList(
-                                            SyntaxFactory.SingletonSeparatedList(
-                                                SyntaxFactory.Argument(left))));
-                            }
-                        }
-                        
+
                         var right = GenerateCSharpAst(initializer, context).AsType<ExpressionSyntax>();
                         return SyntaxFactory.AssignmentExpression
                         (
@@ -524,7 +543,7 @@ namespace CssInCSharp.Generator
 
                         return SyntaxFactory.InterpolatedStringExpression
                         (
-                            SyntaxFactory.Token(SyntaxKind.InterpolatedStringStartToken),
+                            SyntaxFactory.Token(SyntaxKind.InterpolatedVerbatimStringStartToken),
                             SyntaxFactory.List<InterpolatedStringContentSyntax>(spans)
                         );
                     }
@@ -653,7 +672,7 @@ namespace CssInCSharp.Generator
                 var n = node.AsType<Ts.TsTypes.Node>();
                 var start = GetLineNumber(n.SourceStr, n.NodeStart);
                 var end = GetLineNumber(n.SourceStr, n.End.Value);
-                throw new AstGenerateException($"Generate ast failed, source file pos: {start} {end}");
+                throw new AstGenerateException(start, end);
             }
         }
 
@@ -677,6 +696,16 @@ namespace CssInCSharp.Generator
                 default:
                     throw new Exception("Typescript SyntaxKind map error.");
             }
+        }
+
+        private SyntaxNodeOrList FormatNode(Ts.TsTypes.INode node)
+        {
+            if (node.Kind == Ts.TsTypes.SyntaxKind.Identifier)
+            {
+                return SyntaxFactory.IdentifierName(Format(node.GetText()));
+            }
+
+            return GenerateCSharpAst(node);
         }
 
         private TypeSyntax GetType(Ts.TsTypes.INode node)
@@ -720,9 +749,13 @@ namespace CssInCSharp.Generator
 
     public class AstGenerateException: Exception
     {
-        public AstGenerateException(string message) : base(message)
-        {
+        public int StartLine { get; }
+        public int EndLine { get; }
 
+        public AstGenerateException(int start, int end) : base($"Generate ast failed, source file line: {start} {end}")
+        {
+            StartLine = start;
+            EndLine = end;
         }
     }
 
