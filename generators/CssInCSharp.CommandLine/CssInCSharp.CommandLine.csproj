@@ -16,7 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\CssInCSharp.csproj" />
     <ProjectReference Include="..\CssInCSharp.Generator\CssInCSharp.Generator.csproj" />
   </ItemGroup>
 

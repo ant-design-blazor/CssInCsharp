@@ -10,7 +10,6 @@ var rootCommand = new RootCommand("CssInCSharp")
 {
     new InitCommand(),
     new ConvertCommand(),
-    new MinifyCommand(),
 };
 rootCommand.TreatUnmatchedTokensAsErrors = false;
 rootCommand.SetHandler((context) =>
