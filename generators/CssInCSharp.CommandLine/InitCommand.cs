@@ -1,5 +1,6 @@
 ﻿using System.CommandLine;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace CssInCSharp.CommandLine
 {
@@ -27,7 +28,12 @@ namespace CssInCSharp.CommandLine
 
             var config = new Configuration();
             config.AddIncludeItem("./src/**/*.ts", "./dest");
-            var json = JsonSerializer.Serialize(config, new JsonSerializerOptions { WriteIndented = true });
+            var settings = new JsonSerializerOptions
+            {
+                WriteIndented = true
+            };
+            settings.Converters.Add(new JsonStringEnumConverter(JsonNamingPolicy.CamelCase));
+            var json = JsonSerializer.Serialize(config, settings);
             await Util.WriteAllTextAsync(configFile, json);
         }
     }

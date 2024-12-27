@@ -6,6 +6,8 @@ namespace CssInCSharp.CommandLine
 {
     internal class Configuration
     {
+        public ConverterType Converter { get; set; } = ConverterType.Ts;
+
         public CSharpOptions CsOptions { get; set; } = new();
 
         public List<IncludeItem> Include { get; set; } = [];

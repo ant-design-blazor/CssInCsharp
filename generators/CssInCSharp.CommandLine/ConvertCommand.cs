@@ -42,6 +42,7 @@ namespace CssInCSharp.CommandLine
             }
             else if (!string.IsNullOrEmpty(src))
             {
+                config.Converter = type;
                 config.AddIncludeItem(src, dest);
             }
             else
@@ -60,7 +61,7 @@ namespace CssInCSharp.CommandLine
 
             foreach (var item in items)
             {
-                var converter = ConverterFactory.Create(type, item.CsOptions);
+                var converter = ConverterFactory.Create(config.Converter, item.CsOptions);
                 var content = await File.ReadAllTextAsync(item.Src);
                 var filenName = Path.GetFileName(item.Src);
                 Console.WriteLine($"Convert: {item.Src}");
