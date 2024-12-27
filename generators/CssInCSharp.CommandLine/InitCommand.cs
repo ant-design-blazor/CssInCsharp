@@ -1,6 +1,4 @@
 ﻿using System.CommandLine;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 
 namespace CssInCSharp.CommandLine
 {
@@ -25,16 +23,9 @@ namespace CssInCSharp.CommandLine
                 Console.WriteLine("The cssincs.json file already exists.");
                 return;
             }
-
             var config = new Configuration();
             config.AddIncludeItem("./src/**/*.ts", "./dest");
-            var settings = new JsonSerializerOptions
-            {
-                WriteIndented = true
-            };
-            settings.Converters.Add(new JsonStringEnumConverter(JsonNamingPolicy.CamelCase));
-            var json = JsonSerializer.Serialize(config, settings);
-            await Util.WriteAllTextAsync(configFile, json);
+            await Util.WriteAllTextAsync(configFile, config.ToJson());
         }
     }
 }

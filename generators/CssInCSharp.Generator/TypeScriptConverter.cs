@@ -128,8 +128,10 @@ namespace CssInCSharp.Generator
                                                     }).AsT1.Cast<StatementSyntax>());
                                                 }
                                             }
-                                            else
+                                            else if(declaration.Kind == Ts.TsTypes.SyntaxKind.VariableDeclaration)
                                             {
+                                                var variableDeclaration = GenerateCSharpAst(declaration).AsType<VariableDeclarationSyntax>();
+                                                statements.Add(SyntaxFactory.LocalDeclarationStatement(variableDeclaration));
                                             }
 
                                             break;
@@ -201,6 +203,15 @@ namespace CssInCSharp.Generator
                     {
                         var n = node.AsType<Ts.TsTypes.AsExpression>();
                         var variable = GenerateCSharpAst(n.Expression).AsType<ExpressionSyntax>();
+                        if (n.Type.Kind == Ts.TsTypes.SyntaxKind.TypeReference)
+                        {
+                            var typeNode = n.Type.AsType<Ts.TsTypes.TypeReferenceNode>();
+                            if (typeNode.TypeName.Kind == Ts.TsTypes.SyntaxKind.MissingDeclaration)
+                            {
+                                return variable;
+                            }
+                        }
+
                         var type = n.Type.GetText();
                         return SyntaxFactory.BinaryExpression
                         (
@@ -556,43 +567,56 @@ namespace CssInCSharp.Generator
                     {
                         var n = node.AsType<Ts.TsTypes.TypeAliasDeclaration>();
                         var classDeclaration = SyntaxFactory.ClassDeclaration(Format(n.IdentifierStr)).AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword));
-                        if (n.Type.Kind == Ts.TsTypes.SyntaxKind.UnionType)
+                        switch (n.Type.Kind)
                         {
-                            // todo: how to handle UnionType
-                            return default;
-                        }
-                        if (n.Type.Kind == Ts.TsTypes.SyntaxKind.TypeLiteral)
-                        {
-                            // add members
-                            var members = GenerateCSharpAst(n.Type).AsT1;
-                            foreach (var member in members)
+                            case Ts.TsTypes.SyntaxKind.UnionType:
                             {
-                                classDeclaration = classDeclaration.AddMembers(member.AsType<MemberDeclarationSyntax>());
+                                return default;
                             }
-                        }
-                        else
-                        {
-                            // add base class
-                            var r = GenerateCSharpAst(n.Type);
-                            var baseClasses = new List<SyntaxNodeOrToken>();
-                            if (r.IsT2)
+                            case Ts.TsTypes.SyntaxKind.TypeLiteral:
                             {
-                                baseClasses = r.AsT2;
+                                var members = GenerateCSharpAst(n.Type).AsT1;
+                                foreach (var member in members)
+                                {
+                                    classDeclaration = classDeclaration.AddMembers(member.AsType<MemberDeclarationSyntax>());
+                                }
+                                return classDeclaration;
                             }
-                            else
+                            case Ts.TsTypes.SyntaxKind.IntersectionType:
                             {
-                                baseClasses.Add(r.AsT0);
+                                var inter = n.Type.AsType<Ts.TsTypes.IntersectionTypeNode>();
+                                var type = inter.Types.FirstOrDefault(x => x.Kind == Ts.TsTypes.SyntaxKind.TypeLiteral);
+                                if (type != null)
+                                {
+                                    var members = GenerateCSharpAst(type).AsT1;
+                                    foreach (var member in members)
+                                    {
+                                        classDeclaration = classDeclaration.AddMembers(member.AsType<MemberDeclarationSyntax>());
+                                    }
+                                }
+                                goto default;
                             }
+                            default:
+                                var r = GenerateCSharpAst(n.Type);
+                                var baseClasses = new List<SyntaxNodeOrToken>();
+                                if (r.IsT2)
+                                {
+                                    baseClasses = r.AsT2;
+                                }
+                                else
+                                {
+                                    baseClasses.Add(r.AsT0);
+                                }
 
-                            if (baseClasses is { Count: > 0 })
-                            {
-                                classDeclaration = classDeclaration.WithBaseList
-                                (
-                                    SyntaxFactory.BaseList(SyntaxFactory.SeparatedList<BaseTypeSyntax>(baseClasses))
-                                );
-                            }
+                                if (baseClasses is { Count: > 0 })
+                                {
+                                    classDeclaration = classDeclaration.WithBaseList
+                                    (
+                                        SyntaxFactory.BaseList(SyntaxFactory.SeparatedList<BaseTypeSyntax>(baseClasses))
+                                    );
+                                }
+                                return classDeclaration;
                         }
-                        return classDeclaration;
                     }
                     case Ts.TsTypes.SyntaxKind.TypeLiteral:
                     {
@@ -627,6 +651,17 @@ namespace CssInCSharp.Generator
                             SyntaxKind.StringLiteralExpression,
                             SyntaxFactory.Literal(n.Text)
                         );
+                    }
+                    case Ts.TsTypes.SyntaxKind.VariableDeclaration:
+                    {
+                        var n = node.AsType<Ts.TsTypes.VariableDeclaration>();
+                        var identifier = GenerateCSharpAst(n.Initializer, new NodeContext(){ UseLambda = true}).AsType<ExpressionSyntax>();
+                        return SyntaxFactory
+                            .VariableDeclaration(SyntaxFactory.IdentifierName("var"))
+                            .AddVariables
+                            (
+                                SyntaxFactory.VariableDeclarator(SyntaxFactory.Identifier(n.IdentifierStr)).WithInitializer(SyntaxFactory.EqualsValueClause(identifier))
+                            );
                     }
                     case Ts.TsTypes.SyntaxKind.VariableStatement:
                     {
@@ -693,6 +728,8 @@ namespace CssInCSharp.Generator
                     return SyntaxKind.AddExpression;
                 case Ts.TsTypes.SyntaxKind.SlashToken:
                     return SyntaxKind.DivideExpression;
+                case Ts.TsTypes.SyntaxKind.AmpersandAmpersandToken:
+                    return SyntaxKind.LogicalAndExpression;
                 default:
                     throw new Exception("Typescript SyntaxKind map error.");
             }
@@ -715,7 +752,11 @@ namespace CssInCSharp.Generator
                 case Ts.TsTypes.SyntaxKind.NumberKeyword:
                     return SyntaxFactory.ParseTypeName("double");
                 case Ts.TsTypes.SyntaxKind.StringKeyword:
-                    return SyntaxFactory.ParseTypeName("double");
+                    return SyntaxFactory.ParseTypeName("string");
+                case Ts.TsTypes.SyntaxKind.IndexedAccessType:
+                    return SyntaxFactory.ParseTypeName("string");
+                case Ts.TsTypes.SyntaxKind.UnionType:
+                    return SyntaxFactory.ParseTypeName("string");
                 default:
                     return SyntaxFactory.ParseTypeName("object");
             }

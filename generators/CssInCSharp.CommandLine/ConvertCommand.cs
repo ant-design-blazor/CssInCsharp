@@ -1,5 +1,4 @@
 ﻿using System.CommandLine;
-using System.Text.Json;
 using CssInCSharp.Generator;
 
 namespace CssInCSharp.CommandLine
@@ -38,7 +37,7 @@ namespace CssInCSharp.CommandLine
             if (File.Exists(configFile))
             {
                 var json = await File.ReadAllTextAsync(configFile);
-                config = JsonSerializer.Deserialize<Configuration>(json)!;
+                config = json.FromJson<Configuration>();
             }
             else if (!string.IsNullOrEmpty(src))
             {
@@ -52,12 +51,21 @@ namespace CssInCSharp.CommandLine
             }
 
             var exclude = config.Exclude.SelectMany(x => Util.GetFiles(x));
-            var items = config.Include.SelectMany(x => Util.GetFiles(x.Src).Except(exclude), (inc, file) => new IncludeItem
+            var items = config.Include.SelectMany(x => Util.GetFiles(x.Src).Except(exclude), (inc, file) =>
             {
-                Src = file.FullPath,
-                Dest = Util.GetDest(file.Dir, file.FullPath, inc.Dest, ".cs"),
-                CsOptions = inc.CsOptions ?? config.CloneCsOptions()
-            }.Update());
+                var global = config.CloneCsOptions();
+                if (inc.CsOptions != null)
+                {
+                    Util.Mapper.Map(inc.CsOptions, global);
+                }
+
+                return new IncludeItem
+                {
+                    Src = file.FullPath,
+                    Dest = Util.GetDest(file.Dir, file.FullPath, inc.Dest, ".cs"),
+                    CsOptions = global
+                }.Update();
+            });
 
             foreach (var item in items)
             {

@@ -1,5 +1,4 @@
-﻿using System.Text.Json;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 using CssInCSharp.Generator;
 
 namespace CssInCSharp.CommandLine
@@ -25,7 +24,7 @@ namespace CssInCSharp.CommandLine
 
         public CSharpOptions CloneCsOptions()
         {
-            return JsonSerializer.Deserialize<CSharpOptions>(JsonSerializer.Serialize(CsOptions));
+            return Util.Mapper.Map(CsOptions, new CSharpOptions());
         }
     }
 

@@ -26,36 +26,45 @@ Additional Arguments:
 ```
 
 ## Examples
-- ```cssincs init```
+- `cssincs init`
+  
   Initialize an empty profile `cssincs.json`.
 
-- ```cssincs convert -c cssincs.json```
+- `cssincs convert -c cssincs.json`
+  
   Use the specified profile for conversions.
 
-- ```cssincs convert -t ts -s src/style.ts -d dest/style.cs```
+- `cssincs convert -t ts -s src/style.ts -d dest/style.cs`
+  
   Convert the specified TS file to C# code.
 
 ## Options
 
-- --config, -c
+- `--config, -c`
+  
   Specify the profile for conversion. eg: ./cssincs.json
 
-- --source, -s
+- `--source, -s`
+  
   Source file path. This parameter is required if no profile is specified. eg: `./src/style.ts`, or use file globbing eg: `./src/**/*.ts`.
 
-- --dest, -d
+- `--dest, -d`
+  
   The destination file, if not specified, will be output to the source file path.
 
-- --type, -t
+- `--type, -t`
+  
   The converter type supports `ts, css, less` etc.
 
-- --dry-run
+- `--dry-run`
+
   Dry run and output the result to the console.
 
 ## Profile
 Profile is recommended when you need to do a lot of file conversions or when you need to control the content of the output code.
 
 Full profile example:
+
 ```json
 {
   "Converter": "ts",
