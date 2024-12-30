@@ -6,6 +6,33 @@ namespace CssInCSharp.Generator.Extensions;
 
 internal static class NodeExtensions
 {
+    private static string[] _htmlTags = [
+        "a",
+        "bdi",
+        "blockquote",
+        "button",
+        "code",
+        "fill",
+        "i",
+        "img",
+        "input",
+        "kbd",
+        "li",
+        "mark",
+        "ol",
+        "pre",
+        "span",
+        "stroke",
+        "strong",
+        "svg",
+        "table",
+        "td",
+        "textarea",
+        "th",
+        "to",
+        "ul",
+    ];
+
     public static MemberDeclarationSyntax AddMemberNodes(this MemberDeclarationSyntax node, params MemberDeclarationSyntax[] members)
     {
         switch (node)
@@ -38,6 +65,16 @@ internal static class NodeExtensions
                 return true;
             default: return false;
         }
+    }
+
+    public static bool IsHtmlTag(this Ts.TsTypes.INode node)
+    {
+        if (node.Kind == Ts.TsTypes.SyntaxKind.Identifier)
+        {
+            var tag = node.GetText();
+            return _htmlTags.Contains(tag);
+        }
+        return false;
     }
 
     public static bool IsIndexerProperty(this Ts.TsTypes.INode node)

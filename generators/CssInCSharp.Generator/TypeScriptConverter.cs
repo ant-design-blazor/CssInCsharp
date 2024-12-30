@@ -104,6 +104,7 @@ namespace CssInCSharp.Generator
                         switch (funcBody.Kind)
                         {
                             case Ts.TsTypes.SyntaxKind.Block:
+                            {
                                 var block = funcBody as Ts.TsTypes.Block;
                                 foreach (var statement in block.Statements)
                                 {
@@ -128,7 +129,7 @@ namespace CssInCSharp.Generator
                                                     }).AsT1.Cast<StatementSyntax>());
                                                 }
                                             }
-                                            else if(declaration.Kind == Ts.TsTypes.SyntaxKind.VariableDeclaration)
+                                            else if (declaration.Kind == Ts.TsTypes.SyntaxKind.VariableDeclaration)
                                             {
                                                 var variableDeclaration = GenerateCSharpAst(declaration).AsType<VariableDeclarationSyntax>();
                                                 statements.Add(SyntaxFactory.LocalDeclarationStatement(variableDeclaration));
@@ -137,22 +138,18 @@ namespace CssInCSharp.Generator
                                             break;
                                         case Ts.TsTypes.SyntaxKind.ReturnStatement:
                                             var rs = statement as Ts.TsTypes.ReturnStatement;
-                                            switch (rs.Expression.Kind)
+                                            var sss = SyntaxFactory.ReturnStatement(GenerateCSharpAst(rs.Expression, new NodeContext
                                             {
-                                                case Ts.TsTypes.SyntaxKind.ObjectLiteralExpression:
-                                                    statements.Add(SyntaxFactory.ReturnStatement(GenerateCSharpAst(rs.Expression, new NodeContext
-                                                    {
-                                                        ReturnType = returnType
-                                                    }).AsType<ExpressionSyntax>()));
-                                                    break;
-                                            }
-
+                                                ReturnType = returnType
+                                            }).AsType<ExpressionSyntax>());
+                                            statements.Add(sss);
                                             break;
                                     }
                                 }
-
                                 break;
+                            }
                             case Ts.TsTypes.SyntaxKind.ParenthesizedExpression:
+                            {
                                 var expression = funcBody as Ts.TsTypes.ParenthesizedExpression;
                                 switch (expression.Expression.Kind)
                                 {
@@ -162,6 +159,13 @@ namespace CssInCSharp.Generator
                                         break;
                                 }
                                 break;
+                            }
+                            case Ts.TsTypes.SyntaxKind.ArrayLiteralExpression:
+                            {
+                                var statement = GenerateCSharpAst(funcBody).AsType<ExpressionSyntax>();
+                                statements.Add(SyntaxFactory.ReturnStatement(statement));
+                                break;
+                            }
                         }
 
                         if (context is { UseLambda: true })
@@ -355,6 +359,14 @@ namespace CssInCSharp.Generator
                         return SyntaxFactory.ObjectCreationExpression(SyntaxFactory.IdentifierName(n.IdentifierStr))
                             .WithArgumentList(SyntaxFactory.ArgumentList(SyntaxFactory.SeparatedList<ArgumentSyntax>(args)));
                     }
+                    case Ts.TsTypes.SyntaxKind.NonNullExpression:
+                    {
+                        var n = node.AsType<Ts.TsTypes.NonNullExpression>();
+                        return SyntaxFactory.PostfixUnaryExpression(
+                            SyntaxKind.SuppressNullableWarningExpression,
+                            SyntaxFactory.IdentifierName(n.IdentifierStr)
+                        );
+                    }
                     case Ts.TsTypes.SyntaxKind.NumericLiteral:
                     {
                         var n = node.AsType<Ts.TsTypes.NumericLiteral>();
@@ -457,16 +469,28 @@ namespace CssInCSharp.Generator
                     {
                         var n = node.AsType<Ts.TsTypes.PropertyAssignment>();
                         var initializer = n.Initializer;
-                        var left = FormatNode(n.Name).AsType<ExpressionSyntax>();
-                        if (n.Name.IsIndexerProperty())
+                        ExpressionSyntax left;
+                        if (n.Name.IsHtmlTag())
                         {
                             left = SyntaxFactory.ElementAccessExpression(SyntaxFactory.IdentifierName(""))
                                 .WithArgumentList(
                                     SyntaxFactory.BracketedArgumentList(
                                         SyntaxFactory.SingletonSeparatedList(
-                                            SyntaxFactory.Argument(left))));
+                                            SyntaxFactory.Argument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal(n.Name.GetText()))))));
                         }
-
+                        else
+                        {
+                            left = FormatNode(n.Name).AsType<ExpressionSyntax>();
+                            if (n.Name.IsIndexerProperty())
+                            {
+                                left = SyntaxFactory.ElementAccessExpression(SyntaxFactory.IdentifierName(""))
+                                    .WithArgumentList(
+                                        SyntaxFactory.BracketedArgumentList(
+                                            SyntaxFactory.SingletonSeparatedList(
+                                                SyntaxFactory.Argument(left))));
+                            }
+                        }
+                        
                         var right = GenerateCSharpAst(initializer, context).AsType<ExpressionSyntax>();
                         return SyntaxFactory.AssignmentExpression
                         (
