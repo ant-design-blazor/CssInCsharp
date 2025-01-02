@@ -105,69 +105,24 @@ namespace CssInCSharp.Generator
                         {
                             case Ts.TsTypes.SyntaxKind.Block:
                             {
-                                var block = funcBody as Ts.TsTypes.Block;
-                                foreach (var statement in block.Statements)
-                                {
-                                    switch (statement.Kind)
-                                    {
-                                        case Ts.TsTypes.SyntaxKind.VariableStatement:
-                                            var variableStatement = statement as Ts.TsTypes.VariableStatement;
-                                            if (variableStatement.DeclarationList.Declarations.Count <= 0) break;
-                                            var declaration = variableStatement.DeclarationList.Declarations[0];
-                                            if (declaration.Name.Kind == Ts.TsTypes.SyntaxKind.ObjectBindingPattern)
-                                            {
-                                                if (declaration.Initializer.Kind == Ts.TsTypes.SyntaxKind.CallExpression)
-                                                {
-
-                                                }
-                                                else
-                                                {
-                                                    var initializer = declaration.Initializer?.GetText() ?? string.Empty;
-                                                    statements.AddRange(GenerateCSharpAst(declaration.Name, new NodeContext()
-                                                    {
-                                                        Initializer = initializer
-                                                    }).AsT1.Cast<StatementSyntax>());
-                                                }
-                                            }
-                                            else if (declaration.Kind == Ts.TsTypes.SyntaxKind.VariableDeclaration)
-                                            {
-                                                var variableDeclaration = GenerateCSharpAst(declaration).AsType<VariableDeclarationSyntax>();
-                                                statements.Add(SyntaxFactory.LocalDeclarationStatement(variableDeclaration));
-                                            }
-
-                                            break;
-                                        case Ts.TsTypes.SyntaxKind.ReturnStatement:
-                                            var rs = statement as Ts.TsTypes.ReturnStatement;
-                                            var sss = SyntaxFactory.ReturnStatement(GenerateCSharpAst(rs.Expression, new NodeContext
-                                            {
-                                                ReturnType = returnType
-                                            }).AsType<ExpressionSyntax>());
-                                            statements.Add(sss);
-                                            break;
-                                    }
-                                }
+                                var statement = GenerateCSharpAst(funcBody, new NodeContext() { ReturnType = returnType }).AsT1.Cast<StatementSyntax>();
+                                statements.AddRange(statement);
                                 break;
                             }
                             case Ts.TsTypes.SyntaxKind.ParenthesizedExpression:
                             {
-                                var expression = funcBody as Ts.TsTypes.ParenthesizedExpression;
-                                switch (expression.Expression.Kind)
-                                {
-                                    case Ts.TsTypes.SyntaxKind.ObjectLiteralExpression:
-                                        statements.Add(
-                                            SyntaxFactory.ReturnStatement(GenerateCSharpAst(expression.Expression, new NodeContext() { ReturnType = returnType }).AsType<ExpressionSyntax>()));
-                                        break;
-                                }
+                                var expression = funcBody.AsType<Ts.TsTypes.ParenthesizedExpression>();
+                                var statement = GenerateCSharpAst(expression.Expression, new NodeContext() { ReturnType = returnType }).AsType<ExpressionSyntax>();
+                                statements.Add(SyntaxFactory.ReturnStatement(statement));
                                 break;
                             }
-                            case Ts.TsTypes.SyntaxKind.ArrayLiteralExpression:
+                            default:
                             {
                                 var statement = GenerateCSharpAst(funcBody).AsType<ExpressionSyntax>();
                                 statements.Add(SyntaxFactory.ReturnStatement(statement));
                                 break;
                             }
                         }
-
                         if (context is { UseLambda: true })
                         {
                             return SyntaxFactory.ParenthesizedLambdaExpression(SyntaxFactory.ParameterList(SyntaxFactory.SeparatedList(parameters)), SyntaxFactory.Block(statements));
@@ -231,6 +186,25 @@ namespace CssInCSharp.Generator
                         var left = GenerateCSharpAst(n.Left).AsType<ExpressionSyntax>();
                         var right = GenerateCSharpAst(n.Right).AsType<ExpressionSyntax>();
                         return SyntaxFactory.BinaryExpression(operatorToken, left, right);
+                    }
+                    case Ts.TsTypes.SyntaxKind.Block:
+                    {
+                        var n = node.AsType<Ts.TsTypes.Block>();
+                        var statements = new List<SyntaxNode>();
+                        foreach (var statement in n.Statements)
+                        {
+                            if (statement.IsUnsupportedStatement()) continue;
+                            var r = GenerateCSharpAst(statement, new NodeContext { IsLocalDeclaration = true, ReturnType = context?.ReturnType });
+                            if (r.IsT1)
+                            {
+                                statements.AddRange(r.AsT1);
+                            }
+                            else if (r.AsT0 != null)
+                            {
+                                statements.Add(r.AsT0);
+                            }
+                        }
+                        return statements;
                     }
                     case Ts.TsTypes.SyntaxKind.CallExpression:
                     {
@@ -296,6 +270,18 @@ namespace CssInCSharp.Generator
                     {
                         return SyntaxFactory.LiteralExpression(
                             SyntaxKind.FalseLiteralExpression);
+                    }
+                    case Ts.TsTypes.SyntaxKind.ForStatement:
+                    {
+                        var n = node.AsType<Ts.TsTypes.ForStatement>();
+                        var initializer = GenerateCSharpAst(n.Initializer).AsType<VariableDeclarationSyntax>();
+                        var condition = GenerateCSharpAst(n.Condition).AsType<BinaryExpressionSyntax>();
+                        var incrementor = GenerateCSharpAst(n.Incrementor).AsType<PostfixUnaryExpressionSyntax>();
+                        var body = SyntaxFactory.Block();
+                        return SyntaxFactory.ForStatement(body)
+                            .WithDeclaration(initializer)
+                            .WithCondition(condition)
+                            .WithIncrementors(SyntaxFactory.SingletonSeparatedList<ExpressionSyntax>(incrementor));
                     }
                     case Ts.TsTypes.SyntaxKind.HeritageClause:
                     {
@@ -438,6 +424,13 @@ namespace CssInCSharp.Generator
                         var n = node.AsType<Ts.TsTypes.ParenthesizedExpression>();
                         return SyntaxFactory.ParenthesizedExpression(GenerateCSharpAst(n.Expression)
                             .AsType<ExpressionSyntax>());
+                    }
+                    case Ts.TsTypes.SyntaxKind.PostfixUnaryExpression:
+                    {
+                        var n = node.AsType<Ts.TsTypes.PostfixUnaryExpression>();
+                        return SyntaxFactory.PostfixUnaryExpression(
+                            GenerateOperatorToken(n.Operator),
+                            SyntaxFactory.IdentifierName(n.IdentifierStr));
                     }
                     case Ts.TsTypes.SyntaxKind.PrefixUnaryExpression:
                     {
@@ -679,7 +672,12 @@ namespace CssInCSharp.Generator
                     case Ts.TsTypes.SyntaxKind.VariableDeclaration:
                     {
                         var n = node.AsType<Ts.TsTypes.VariableDeclaration>();
-                        var identifier = GenerateCSharpAst(n.Initializer, new NodeContext(){ UseLambda = true}).AsType<ExpressionSyntax>();
+                        var c = new NodeContext() { UseLambda = true };
+                        if (n.Type is { Kind: Ts.TsTypes.SyntaxKind.TypeReference })
+                        {
+                            c.ReturnType = n.Type.AsType<Ts.TsTypes.TypeReferenceNode>().IdentifierStr;
+                        }
+                        var identifier = GenerateCSharpAst(n.Initializer, c).AsType<ExpressionSyntax>();
                         return SyntaxFactory
                             .VariableDeclaration(SyntaxFactory.IdentifierName("var"))
                             .AddVariables
@@ -687,10 +685,36 @@ namespace CssInCSharp.Generator
                                 SyntaxFactory.VariableDeclarator(SyntaxFactory.Identifier(n.IdentifierStr)).WithInitializer(SyntaxFactory.EqualsValueClause(identifier))
                             );
                     }
+                    case Ts.TsTypes.SyntaxKind.VariableDeclarationList:
+                    {
+                        var n = node.AsType<Ts.TsTypes.VariableDeclarationList>();
+                        var variables = n.Declarations.Select(x =>
+                        {
+                            var identifier = GenerateCSharpAst(x.Initializer).AsType<ExpressionSyntax>();
+                            return SyntaxFactory.VariableDeclarator(SyntaxFactory.Identifier(x.IdentifierStr)).WithInitializer(SyntaxFactory.EqualsValueClause(identifier));
+                        });
+                        return SyntaxFactory
+                            .VariableDeclaration(SyntaxFactory.IdentifierName("var"))
+                            .WithVariables(SyntaxFactory.SeparatedList(variables));
+                    }
                     case Ts.TsTypes.SyntaxKind.VariableStatement:
                     {
                         var n = node.AsType<Ts.TsTypes.VariableStatement>();
+                        // todo: ast parser error, it should not be empty.
+                        if (n.DeclarationList.Declarations.Count <= 0) return default;
                         var declaration = n.DeclarationList.Declarations[0];
+                        if (context is { IsLocalDeclaration: true })
+                        {
+                            if (declaration.Name.Kind == Ts.TsTypes.SyntaxKind.ObjectBindingPattern)
+                            {
+                                var initializer = declaration.Initializer?.GetText() ?? string.Empty;
+                                return GenerateCSharpAst(declaration.Name, new NodeContext()
+                                {
+                                    Initializer = initializer
+                                });
+                            }
+                            return SyntaxFactory.LocalDeclarationStatement(GenerateCSharpAst(declaration).AsType<VariableDeclarationSyntax>());
+                        }
                         if (declaration.Initializer.Kind == Ts.TsTypes.SyntaxKind.Identifier && declaration.Name.Kind != Ts.TsTypes.SyntaxKind.Identifier)
                         {
                             var initializer = declaration.Initializer?.GetText() ?? string.Empty;
@@ -702,21 +726,28 @@ namespace CssInCSharp.Generator
                         else if (declaration.Initializer.Kind == Ts.TsTypes.SyntaxKind.ArrowFunction)
                         {
                             var funcName = declaration.Name.GetText();
-                            return GenerateCSharpAst(declaration.Initializer, new NodeContext { FuncName = funcName });
+                            return GenerateCSharpAst(declaration.Initializer, new NodeContext
+                            {
+                                FuncName = funcName
+                            });
                         }
                         else
                         {
                             var name = declaration.Name.GetText();
-                            var variableDeclaration = SyntaxFactory.VariableDeclaration(
-                                    SyntaxFactory.IdentifierName(_options.DefaultFieldType))
-                                .WithVariables(SyntaxFactory.SingletonSeparatedList(
-                                    SyntaxFactory.VariableDeclarator(SyntaxFactory.Identifier(name))));
+                            var variableDeclaration = SyntaxFactory
+                                .VariableDeclaration(SyntaxFactory.IdentifierName(_options.DefaultFieldType))
+                                .WithVariables(SyntaxFactory.SingletonSeparatedList(SyntaxFactory.VariableDeclarator(SyntaxFactory.Identifier(name))));
                             var expression = GenerateCSharpAst(declaration.Initializer).AsType<ExpressionSyntax>();
                             var equalsValueClause = SyntaxFactory.EqualsValueClause(expression);
-                            return SyntaxFactory.FieldDeclaration(variableDeclaration.WithVariables(
-                                SyntaxFactory.SingletonSeparatedList(
-                                    SyntaxFactory.VariableDeclarator(SyntaxFactory.Identifier(name))
-                                        .WithInitializer(equalsValueClause)))).WithModifiers(SyntaxFactory.TokenList(SyntaxFactory.Token(SyntaxKind.PublicKeyword)));
+                            return SyntaxFactory.FieldDeclaration
+                            (
+                                variableDeclaration.WithVariables
+                                (
+                                    SyntaxFactory
+                                        .SingletonSeparatedList(SyntaxFactory.VariableDeclarator(SyntaxFactory.Identifier(name))
+                                        .WithInitializer(equalsValueClause)))
+                                ).WithModifiers(SyntaxFactory.TokenList(SyntaxFactory.Token(SyntaxKind.PublicKeyword))
+                            );
                         }
                     }
                     default: return default;
@@ -735,10 +766,25 @@ namespace CssInCSharp.Generator
             }
         }
 
+        private SyntaxKind GenerateOperatorToken(Ts.TsTypes.SyntaxKind node)
+        {
+            switch (node)
+            {
+                case Ts.TsTypes.SyntaxKind.MinusMinusToken:
+                    return SyntaxKind.PostDecrementExpression;
+                case Ts.TsTypes.SyntaxKind.PlusPlusToken:
+                    return SyntaxKind.PostIncrementExpression;
+                default:
+                    throw new Exception("Typescript SyntaxKind map error.");
+            }
+        }
+
         private SyntaxKind GenerateOperatorToken(Ts.TsTypes.INode node)
         {
             switch (node.Kind)
             {
+                case Ts.TsTypes.SyntaxKind.AmpersandAmpersandToken:
+                    return SyntaxKind.LogicalAndExpression;
                 case Ts.TsTypes.SyntaxKind.AsteriskToken:
                     return SyntaxKind.MultiplyExpression;
                 case Ts.TsTypes.SyntaxKind.BarBarToken:
@@ -746,14 +792,20 @@ namespace CssInCSharp.Generator
                 case Ts.TsTypes.SyntaxKind.EqualsEqualsToken:
                 case Ts.TsTypes.SyntaxKind.EqualsEqualsEqualsToken:
                     return SyntaxKind.EqualsExpression;
+                case Ts.TsTypes.SyntaxKind.GreaterThanToken:
+                    return SyntaxKind.GreaterThanExpression;
+                case Ts.TsTypes.SyntaxKind.GreaterThanEqualsToken:
+                    return SyntaxKind.GreaterThanOrEqualExpression;
+                case Ts.TsTypes.SyntaxKind.LessThanToken:
+                    return SyntaxKind.LessThanExpression;
+                case Ts.TsTypes.SyntaxKind.LessThanEqualsToken:
+                    return SyntaxKind.LessThanOrEqualExpression;
                 case Ts.TsTypes.SyntaxKind.MinusToken:
                     return SyntaxKind.SubtractExpression;
                 case Ts.TsTypes.SyntaxKind.PlusToken:
                     return SyntaxKind.AddExpression;
                 case Ts.TsTypes.SyntaxKind.SlashToken:
                     return SyntaxKind.DivideExpression;
-                case Ts.TsTypes.SyntaxKind.AmpersandAmpersandToken:
-                    return SyntaxKind.LogicalAndExpression;
                 default:
                     throw new Exception("Typescript SyntaxKind map error.");
             }
@@ -831,6 +883,7 @@ namespace CssInCSharp.Generator
         public string? FuncName { get; set; }
         public bool UseLambda { get; set; }
         public string? ConditionalToken { get; set; }
+        public bool IsLocalDeclaration { get; set; }
     }
 
     public struct SyntaxNodeOrList

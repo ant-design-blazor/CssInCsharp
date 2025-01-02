@@ -99,6 +99,16 @@ internal static class NodeExtensions
         }
     }
 
+    public static bool IsUnsupportedStatement(this Ts.TsTypes.INode node)
+    {
+        switch (node.Kind)
+        {
+            case Ts.TsTypes.SyntaxKind.TypeAliasDeclaration:
+                return true;
+            default: return false;
+        }
+    }
+
     public static T AsType<T>(this SyntaxNode node) where T: SyntaxNode
     {
         return (T)node;
