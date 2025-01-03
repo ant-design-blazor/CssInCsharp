@@ -451,10 +451,12 @@ namespace CssInCSharp.Generator
                                 SyntaxFactory.MemberBindingExpression(
                                     SyntaxFactory.IdentifierName(Format(n.Name.GetText()))));
                         }
+
+                        var expression = GenerateCSharpAst(n.Expression).AsType<ExpressionSyntax>();
                         return SyntaxFactory.MemberAccessExpression
                         (
                             SyntaxKind.SimpleMemberAccessExpression,
-                            SyntaxFactory.IdentifierName(n.Expression.GetText()),
+                            expression,
                             SyntaxFactory.IdentifierName(Format(n.Name.GetText()))
                         );
                     }
