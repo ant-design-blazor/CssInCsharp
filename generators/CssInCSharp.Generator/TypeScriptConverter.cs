@@ -142,7 +142,9 @@ namespace CssInCSharp.Generator
                     case Ts.TsTypes.SyntaxKind.ArrayLiteralExpression:
                     {
                         var n = node.AsType<Ts.TsTypes.ArrayLiteralExpression>();
-                        var elements = n.Elements.Select(x => (SyntaxNodeOrToken)GenerateCSharpAst(x).AsT0)
+                        var elements = n.Elements
+                            .Where(x => x.Kind != Ts.TsTypes.SyntaxKind.SpreadElement) // remove SpreadElement
+                            .Select(x => (SyntaxNodeOrToken)GenerateCSharpAst(x).AsT0)
                             .Separate(SyntaxFactory.Token(SyntaxKind.CommaToken));
                         var arrayType = SyntaxFactory.ArrayType(
                                 SyntaxFactory.PredefinedType(
@@ -152,11 +154,57 @@ namespace CssInCSharp.Generator
                                     SyntaxFactory.ArrayRankSpecifier(
                                         SyntaxFactory.SingletonSeparatedList<ExpressionSyntax>(
                                             SyntaxFactory.OmittedArraySizeExpression()))));
-                        return SyntaxFactory.ArrayCreationExpression(arrayType)
-                            .WithInitializer(
-                                SyntaxFactory.InitializerExpression(
-                                    SyntaxKind.ArrayInitializerExpression,
-                                    SyntaxFactory.SeparatedList<ExpressionSyntax>(elements)));
+
+                        var arrayCreation = SyntaxFactory.ArrayCreationExpression(arrayType)
+                            .WithInitializer
+                            (
+                                SyntaxFactory.InitializerExpression(SyntaxKind.ArrayInitializerExpression, SyntaxFactory.SeparatedList<ExpressionSyntax>(elements))
+                            );
+
+                        /*
+                         * typescript
+                         * var arr = [
+                         *    {  },
+                         *    ...anotherArray
+                         * ];
+                         * c#
+                         * var arr = new object[] {
+                         *    new {}
+                         * }.Union(anotherArray).ToArray();
+                         */
+                        ExpressionSyntax chain = arrayCreation;
+                        var toArray = false;
+                        foreach (var element in n.Elements.Where(x => x.Kind == Ts.TsTypes.SyntaxKind.SpreadElement))
+                        {
+                            toArray = true;
+                            var el = element.AsType<Ts.TsTypes.SpreadElement>();
+                            chain = SyntaxFactory.InvocationExpression(
+                                SyntaxFactory.MemberAccessExpression(
+                                    SyntaxKind.SimpleMemberAccessExpression,
+                                    chain,
+                                    SyntaxFactory.IdentifierName("Union")
+                                )
+                            ).WithArgumentList(
+                                SyntaxFactory.ArgumentList(
+                                    SyntaxFactory.SingletonSeparatedList(
+                                        SyntaxFactory.Argument(SyntaxFactory.IdentifierName(el.IdentifierStr))
+                                    )
+                                )
+                            );
+                        }
+
+                        if (toArray)
+                        {
+                            return SyntaxFactory.InvocationExpression(
+                                SyntaxFactory.MemberAccessExpression(
+                                    SyntaxKind.SimpleMemberAccessExpression,
+                                    chain,
+                                    SyntaxFactory.IdentifierName("ToArray")
+                                )
+                            );
+                        }
+
+                        return arrayCreation;
                     }
                     case Ts.TsTypes.SyntaxKind.AsExpression:
                     {
