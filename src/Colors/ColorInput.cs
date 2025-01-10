@@ -16,6 +16,7 @@ namespace CssInCSharp.Colors
         private readonly string _value0;
         private readonly int _value1;
         private readonly TinyColor _value2;
+        private readonly FastColor _value3;
 
         public ColorInput()
         {
@@ -27,6 +28,7 @@ namespace CssInCSharp.Colors
             string value0 = default,
             int value1 = default,
             TinyColor value2 = default,
+            FastColor value3 = default,
             RGB rgb = default,
             RGBA rgba = default,
             HSL hsl = default,
@@ -38,6 +40,7 @@ namespace CssInCSharp.Colors
             _value0 = value0;
             _value1 = value1;
             _value2 = value2;
+            _value3 = value3;
 
             if (rgb != default)
             {
@@ -83,6 +86,7 @@ namespace CssInCSharp.Colors
         public static implicit operator ColorInput(string value) => new(0, value0: value);
         public static implicit operator ColorInput(int value) => new(1, value1: value);
         public static implicit operator ColorInput(TinyColor value) => new(2, value2: value);
+        public static implicit operator ColorInput(FastColor value) => new(3, value3: value);
         public static implicit operator ColorInput(RGB value) => new(-1, rgb: value);
         public static implicit operator ColorInput(RGBA value) => new(-1, rgba: value);
         public static implicit operator ColorInput(HSL value) => new(-1, hsl: value);
@@ -109,6 +113,8 @@ namespace CssInCSharp.Colors
 
         public bool IsColor => _index == 2;
 
+        public bool IsFastColor => _index == 3;
+
         public string AsString =>
             _index == 0 ?
                 _value0 :
@@ -123,6 +129,16 @@ namespace CssInCSharp.Colors
             _index == 2 ? 
                 _value2 : 
                 throw new InvalidOperationException();
+
+        public FastColor AsFastColor =>
+            _index == 3 ?
+                _value3 :
+                throw new InvalidOperationException();
+
+        public bool Is(string type)
+        {
+            return true;
+        }
 
         public override string ToString()
         {

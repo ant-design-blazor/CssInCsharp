@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace CssInCSharp.Colors
 {
@@ -9,6 +10,16 @@ namespace CssInCSharp.Colors
         public static string CharAt(this string str, int index)
         {
             return str[index].ToString();
+        }
+
+        public static string RegexReplace(this string str, string pattern, string replacement)
+        {
+            return Regex.Replace(str, pattern, replacement);
+        }
+
+        public static string[] Match(this string str, string pattern)
+        {
+            return Regex.Matches(str, pattern).Select(x => x.Value).ToArray();
         }
 
         public static string Join<T>(this IEnumerable<T> values, string separator)
