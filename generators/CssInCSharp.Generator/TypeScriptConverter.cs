@@ -89,14 +89,44 @@ namespace CssInCSharp.Generator
                     {
                         var n = node.AsType<Ts.TsTypes.ArrowFunction>();
                         var funcName = context?.FuncName ?? string.Empty;
-                        var returnType = n.Type?.GetText() ?? _options.Infer(funcName, _options.DefaultReturnType);
+                        var returnType = n.Type?.GetText() ?? InferenceEngine.Infer(new Token
+                        {
+                            Kind = Ts.TsTypes.SyntaxKind.TypeReference.ToString(),
+                            MethodName = funcName,
+                            NamePrefix = _options.NamePrefix
+                        }, _options.DefaultReturnType);
 
                         var parameters = n.Parameters.Select(x =>
                         {
+                            LiteralExpressionSyntax? initializer = null;
+                            string defaultValue = null;
+                            if (x.Initializer != null)
+                            {
+                                // todo: csharp does not support variable as default value
+                                if (x.Initializer.Kind != Ts.TsTypes.SyntaxKind.Identifier)
+                                {
+                                    initializer = GenerateCSharpAst(x.Initializer).AsType<LiteralExpressionSyntax>();
+                                    defaultValue = initializer.GetText().ToString();
+                                }
+                            }
                             var pName = x.Name.GetText();
-                            var pType = x.Type?.GetText() ?? _options.Infer(pName, _options.DefaultParameterType);
-                            return SyntaxFactory.Parameter(SyntaxFactory.Identifier(pName))
+                            var pType = x.Type?.GetText() ?? InferenceEngine.Infer(new Token
+                            {
+                                Kind = x.Kind.ToString(),
+                                Identifier = pName,
+                                MethodName = funcName,
+                                NamePrefix = _options.NamePrefix,
+                                DefaultValue = defaultValue,
+                            }, _options.DefaultParameterType);
+
+                            var parameter = SyntaxFactory.Parameter(SyntaxFactory.Identifier(pName))
                                 .WithType(SyntaxFactory.ParseTypeName(pType));
+                            if (initializer != null)
+                            {
+                                parameter = parameter.WithDefault(SyntaxFactory.EqualsValueClause(initializer));
+                            }
+
+                            return parameter;
                         }).ToArray();
                         
                         var funcBody = n.Body;
@@ -118,7 +148,7 @@ namespace CssInCSharp.Generator
                             }
                             default:
                             {
-                                var statement = GenerateCSharpAst(funcBody).AsType<ExpressionSyntax>();
+                                var statement = GenerateCSharpAst(funcBody, new NodeContext(){ ReturnType = returnType}).AsType<ExpressionSyntax>();
                                 statements.Add(SyntaxFactory.ReturnStatement(statement));
                                 break;
                             }
@@ -146,14 +176,14 @@ namespace CssInCSharp.Generator
                             .Where(x => x.Kind != Ts.TsTypes.SyntaxKind.SpreadElement) // remove SpreadElement
                             .Select(x => (SyntaxNodeOrToken)GenerateCSharpAst(x).AsT0)
                             .Separate(SyntaxFactory.Token(SyntaxKind.CommaToken));
-                        var arrayType = SyntaxFactory.ArrayType(
-                                SyntaxFactory.PredefinedType(
-                                    SyntaxFactory.Token(SyntaxKind.ObjectKeyword)))
-                            .WithRankSpecifiers(
-                                SyntaxFactory.SingletonList<ArrayRankSpecifierSyntax>(
-                                    SyntaxFactory.ArrayRankSpecifier(
-                                        SyntaxFactory.SingletonSeparatedList<ExpressionSyntax>(
-                                            SyntaxFactory.OmittedArraySizeExpression()))));
+                        var arrayType = SyntaxFactory.ArrayType(context is { ReturnType: not null } 
+                                ? SyntaxFactory.IdentifierName(context.ReturnType) 
+                                : SyntaxFactory.PredefinedType(SyntaxFactory.Token(SyntaxKind.ObjectKeyword)))
+                                .WithRankSpecifiers(
+                                    SyntaxFactory.SingletonList<ArrayRankSpecifierSyntax>(
+                                        SyntaxFactory.ArrayRankSpecifier(
+                                            SyntaxFactory.SingletonSeparatedList<ExpressionSyntax>(
+                                                SyntaxFactory.OmittedArraySizeExpression()))));
 
                         var arrayCreation = SyntaxFactory.ArrayCreationExpression(arrayType)
                             .WithInitializer
@@ -258,7 +288,7 @@ namespace CssInCSharp.Generator
                     {
                         var n = node.AsType<Ts.TsTypes.CallExpression>();
                         var args = n.Arguments
-                            .Select(x => (SyntaxNodeOrToken)SyntaxFactory.Argument(GenerateCSharpAst(x, new NodeContext() { UseLambda = true }).AsType<ExpressionSyntax>()))
+                            .Select(x => (SyntaxNodeOrToken)SyntaxFactory.Argument(GenerateCSharpAst(x, new NodeContext() { FuncName = n.IdentifierStr, UseLambda = true }).AsType<ExpressionSyntax>()))
                             .Separate(SyntaxFactory.Token(SyntaxKind.CommaToken)).ToList();
                         return SyntaxFactory.InvocationExpression
                         (
@@ -307,7 +337,12 @@ namespace CssInCSharp.Generator
                             ? [SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.StaticKeyword)]
                             : [SyntaxFactory.Token(SyntaxKind.PublicKeyword)];
                         var funcName = _options.DefaultExportMethodName;
-                        var returnType = _options.Infer(funcName, _options.DefaultExportType);
+                        var returnType = InferenceEngine.Infer(new Token
+                        {
+                            Kind = Ts.TsTypes.SyntaxKind.TypeReference.ToString(),
+                            MethodName = funcName,
+                            NamePrefix = _options.NamePrefix
+                        }, _options.DefaultExportType);
                         var methodDeclaration = SyntaxFactory
                             .MethodDeclaration(SyntaxFactory.ParseTypeName(returnType), Format(funcName))
                             .AddModifiers(tokens);
@@ -558,6 +593,11 @@ namespace CssInCSharp.Generator
                                     .WithSemicolonToken(SyntaxFactory.Token(SyntaxKind.SemicolonToken))
                             );
                     }
+                    case Ts.TsTypes.SyntaxKind.ReturnStatement:
+                    {
+                        var n = node.AsType<Ts.TsTypes.ReturnStatement>();
+                        return SyntaxFactory.ReturnStatement(GenerateCSharpAst(n.Expression, context).AsType<ExpressionSyntax>());
+                    }
                     case Ts.TsTypes.SyntaxKind.SpreadAssignment:
                     {
                         var n = node.AsType<Ts.TsTypes.SpreadAssignment>();
@@ -580,11 +620,6 @@ namespace CssInCSharp.Generator
                         }
 
                         return expression;
-                    }
-                    case Ts.TsTypes.SyntaxKind.ReturnStatement:
-                    {
-                        var n = node.AsType<Ts.TsTypes.ReturnStatement>();
-                        return SyntaxFactory.ReturnStatement(GenerateCSharpAst(n.Expression, context).AsType<ExpressionSyntax>());
                     }
                     case Ts.TsTypes.SyntaxKind.SourceFile:
                     {
@@ -911,18 +946,6 @@ namespace CssInCSharp.Generator
             }
 
             return line;
-        }
-    }
-
-    public class AstGenerateException: Exception
-    {
-        public int StartLine { get; }
-        public int EndLine { get; }
-
-        public AstGenerateException(int start, int end) : base($"Generate ast failed, source file line: {start} {end}")
-        {
-            StartLine = start;
-            EndLine = end;
         }
     }
 

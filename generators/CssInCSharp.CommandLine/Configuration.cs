@@ -1,5 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 using CssInCSharp.Generator;
+using RulesEngine.Models;
 
 namespace CssInCSharp.CommandLine
 {
@@ -12,6 +13,8 @@ namespace CssInCSharp.CommandLine
         public List<IncludeItem> Include { get; set; } = [];
 
         public List<string> Exclude { get; set; } = [];
+
+        public List<Rule> TypeInferences { get; set; } = [];
 
         public void AddIncludeItem(string src, string dest)
         {

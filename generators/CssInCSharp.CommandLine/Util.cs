@@ -16,10 +16,6 @@ public static class Util
             {
                 opt.PreCondition((src, dest, srcMember) => src.Usings is { Count: > 0 });
             })
-            .ForMember(x => x.TypeInferences, opt =>
-            {
-                opt.PreCondition((src, dest, srcMember) => src.TypeInferences is { Count: > 0 });
-            })
             .ForMember(x => x.Replacements, opt =>
             {
                 opt.PreCondition((src, dest, srcMember) => src.Replacements is { Count: > 0 });

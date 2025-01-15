@@ -1,5 +1,4 @@
 ﻿using System.Text.RegularExpressions;
-using CssInCSharp.Generator.Extensions;
 
 namespace CssInCSharp.Generator;
 
@@ -19,8 +18,6 @@ public class CSharpOptions
     public bool UseStaticMethod { get; set; } = false;
     public bool UsePascalCase { get; set; } = false;
     public bool UseAnonymousType { get; set; } = false;
-    public bool UseTypeInference { get; set; } = false;
-    public List<MatchItem> TypeInferences { get; set; } = [];
     public List<MatchItem> Replacements { get; set; } = [];
 
     public void SetContextVariables()
@@ -33,20 +30,6 @@ public class CSharpOptions
         _contextVariables[nameof(DefaultClassName)] = DefaultClassName;
         _contextVariables[nameof(DefaultExportMethodName)] = DefaultExportMethodName;
         _contextVariables[nameof(DefaultExportType)] = DefaultExportType;
-    }
-
-    public string Infer(string token, string defaultValue = "object")
-    {
-        if (!UseTypeInference) return defaultValue;
-        foreach (var item in TypeInferences)
-        {
-            if (Regex.IsMatch(token, item.Pattern))
-            {
-                return item.GetValue(_contextVariables).ToPascalCase();
-            }
-        }
-
-        return defaultValue;
     }
 
     public string Replace(string input)

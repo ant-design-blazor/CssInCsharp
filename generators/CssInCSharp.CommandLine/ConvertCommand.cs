@@ -1,5 +1,6 @@
 ﻿using System.CommandLine;
 using CssInCSharp.Generator;
+using RulesEngine.Models;
 
 namespace CssInCSharp.CommandLine
 {
@@ -66,6 +67,9 @@ namespace CssInCSharp.CommandLine
                     CsOptions = global
                 }.Update();
             });
+
+            // init rule engine
+            InferenceEngine.Initialize(config.TypeInferences);
 
             foreach (var item in items)
             {
