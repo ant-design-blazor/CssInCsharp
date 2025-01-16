@@ -67,7 +67,10 @@ namespace CssInCSharp.CommandLine
                     CsOptions = global
                 }.Update();
             });
-
+#if DEBUG
+            var ruleJson = await File.ReadAllTextAsync("rules.json");
+            config.TypeInferences = ruleJson.FromJson<List<Rule>>();
+#endif
             // init rule engine
             InferenceEngine.Initialize(config.TypeInferences);
 

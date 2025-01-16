@@ -2,6 +2,8 @@
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using Ts = Zu.TypeScript;
 
 namespace CssInCSharp.Generator
@@ -89,38 +91,49 @@ namespace CssInCSharp.Generator
                     {
                         var n = node.AsType<Ts.TsTypes.ArrowFunction>();
                         var funcName = context?.FuncName ?? string.Empty;
-                        var returnType = n.Type?.GetText() ?? InferenceEngine.Infer(new Token
-                        {
-                            Kind = Ts.TsTypes.SyntaxKind.TypeReference.ToString(),
-                            MethodName = funcName,
-                            NamePrefix = _options.NamePrefix
-                        }, _options.DefaultReturnType);
-
+                        var returnType = n.Type?.GetText() ?? InferReturnType(n, funcName);
+                        var statements = new List<StatementSyntax>();
+                        var bindingCounter = 0;
                         var parameters = n.Parameters.Select(x =>
                         {
                             LiteralExpressionSyntax? initializer = null;
-                            string defaultValue = null;
-                            if (x.Initializer != null)
+                            string? defaultValue = null;
+                            // todo: csharp does not support variable as default value
+                            if (x.Initializer != null && x.Initializer.Kind != Ts.TsTypes.SyntaxKind.Identifier)
                             {
-                                // todo: csharp does not support variable as default value
-                                if (x.Initializer.Kind != Ts.TsTypes.SyntaxKind.Identifier)
-                                {
-                                    initializer = GenerateCSharpAst(x.Initializer).AsType<LiteralExpressionSyntax>();
-                                    defaultValue = initializer.GetText().ToString();
-                                }
+                                initializer = GenerateCSharpAst(x.Initializer).AsType<LiteralExpressionSyntax>();
+                                defaultValue = initializer.GetText().ToString();
                             }
-                            var pName = x.Name.GetText();
-                            var pType = x.Type?.GetText() ?? InferenceEngine.Infer(new Token
+
+                            string pName;
+                            /*
+                             * ObjectBinding
+                             * ts:
+                             * function Func(p1, { p2, p3 }) {
+                             * }
+                             * c#
+                             * void Func(object p1, object binding)
+                             * {
+                             *    var p2 = binding.p2;
+                             *    var p3 = binding.p3;
+                             * }
+                             */
+                            if (x.Name.Kind == Ts.TsTypes.SyntaxKind.ObjectBindingPattern)
                             {
-                                Kind = x.Kind.ToString(),
-                                Identifier = pName,
-                                MethodName = funcName,
-                                NamePrefix = _options.NamePrefix,
-                                DefaultValue = defaultValue,
-                            }, _options.DefaultParameterType);
+                                pName = $"binding{bindingCounter}";
+                                statements.AddRange(GenerateCSharpAst(x.Name, new NodeContext { Initializer = pName }).AsT1.Cast<StatementSyntax>());
+                                bindingCounter++;
+                            }
+                            else
+                            {
+                                pName = x.Name.GetText();
+                            }
+                            var pType = x.Type != null
+                                ? GetType(x.Type)
+                                : SyntaxFactory.ParseTypeName(InferParameterType(x, funcName, pName, defaultValue));
 
                             var parameter = SyntaxFactory.Parameter(SyntaxFactory.Identifier(pName))
-                                .WithType(SyntaxFactory.ParseTypeName(pType));
+                                .WithType(pType);
                             if (initializer != null)
                             {
                                 parameter = parameter.WithDefault(SyntaxFactory.EqualsValueClause(initializer));
@@ -130,7 +143,6 @@ namespace CssInCSharp.Generator
                         }).ToArray();
                         
                         var funcBody = n.Body;
-                        var statements = new List<StatementSyntax>();
                         switch (funcBody.Kind)
                         {
                             case Ts.TsTypes.SyntaxKind.Block:
@@ -337,12 +349,7 @@ namespace CssInCSharp.Generator
                             ? [SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.StaticKeyword)]
                             : [SyntaxFactory.Token(SyntaxKind.PublicKeyword)];
                         var funcName = _options.DefaultExportMethodName;
-                        var returnType = InferenceEngine.Infer(new Token
-                        {
-                            Kind = Ts.TsTypes.SyntaxKind.TypeReference.ToString(),
-                            MethodName = funcName,
-                            NamePrefix = _options.NamePrefix
-                        }, _options.DefaultExportType);
+                        var returnType = InferReturnType(null, funcName);
                         var methodDeclaration = SyntaxFactory
                             .MethodDeclaration(SyntaxFactory.ParseTypeName(returnType), Format(funcName))
                             .AddModifiers(tokens);
@@ -391,7 +398,13 @@ namespace CssInCSharp.Generator
                     }
                     case Ts.TsTypes.SyntaxKind.Identifier:
                     {
-                        return SyntaxFactory.IdentifierName(node.GetText());
+                        var txt = node.GetText();
+                        // todo: filter ts keyword
+                        if (txt == "undefined")
+                        {
+                            return SyntaxFactory.IdentifierName("default");
+                        }
+                        return SyntaxFactory.IdentifierName(txt);
                     }
                     case Ts.TsTypes.SyntaxKind.InterfaceDeclaration:
                     {
@@ -476,13 +489,16 @@ namespace CssInCSharp.Generator
                     case Ts.TsTypes.SyntaxKind.ObjectLiteralExpression:
                     {
                         var n = node.AsType<Ts.TsTypes.ObjectLiteralExpression>();
-                        var returnType = context?.ReturnType ?? _options.DefaultReturnType;
+                        var objectType = InferObjectType(n, context?.ReturnType);
+                        /*
+                         * todo: should not use return for property, return type only used for Function return eg:
+                         * return {
+                         *   a: 'value'
+                         * };
+                         */
                         var assignments = n.Properties
-                            .Where(x => x.Kind == Ts.TsTypes.SyntaxKind.PropertyAssignment || x.Kind == Ts.TsTypes.SyntaxKind.SpreadAssignment)
-                            .Select(x => (SyntaxNodeOrToken)GenerateCSharpAst(x, new NodeContext()
-                            {
-                                ReturnType = returnType,
-                            }).AsType<ExpressionSyntax>());
+                            .Where(x => x.IsProperty())
+                            .Select(x => (SyntaxNodeOrToken)GenerateCSharpAst(x, new NodeContext { ReturnType = objectType }).AsType<ExpressionSyntax>());
                         if (_options.UseAnonymousType)
                         {
                             return SyntaxFactory.AnonymousObjectCreationExpression()
@@ -492,7 +508,7 @@ namespace CssInCSharp.Generator
                                 );
                         }
                         return SyntaxFactory
-                            .ObjectCreationExpression(SyntaxFactory.IdentifierName(returnType))
+                            .ObjectCreationExpression(SyntaxFactory.IdentifierName(objectType))
                             .WithInitializer
                             (
                                 SyntaxFactory.InitializerExpression
@@ -598,6 +614,18 @@ namespace CssInCSharp.Generator
                         var n = node.AsType<Ts.TsTypes.ReturnStatement>();
                         return SyntaxFactory.ReturnStatement(GenerateCSharpAst(n.Expression, context).AsType<ExpressionSyntax>());
                     }
+                    case Ts.TsTypes.SyntaxKind.ShorthandPropertyAssignment:
+                    {
+                        var n = node.AsType<Ts.TsTypes.ShorthandPropertyAssignment>();
+                        var left = FormatNode(n.Name).AsType<ExpressionSyntax>();
+                        var right = SyntaxFactory.IdentifierName(n.Name.GetText());
+                        return SyntaxFactory.AssignmentExpression
+                        (
+                            SyntaxKind.SimpleAssignmentExpression,
+                            left,
+                            right
+                        );
+                    }
                     case Ts.TsTypes.SyntaxKind.SpreadAssignment:
                     {
                         var n = node.AsType<Ts.TsTypes.SpreadAssignment>();
@@ -626,7 +654,7 @@ namespace CssInCSharp.Generator
                         SyntaxToken[] tokens = _options.UsePartialClass
                             ? [SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.PartialKeyword)]
                             : [SyntaxFactory.Token(SyntaxKind.PublicKeyword)];
-                        return SyntaxFactory.ClassDeclaration(Format(_options.DefaultClassName)).AddModifiers(tokens);
+                        return SyntaxFactory.ClassDeclaration(Format(_options.DefaultExportClassName)).AddModifiers(tokens);
                     }
                     case Ts.TsTypes.SyntaxKind.StringLiteral:
                     {
@@ -919,7 +947,12 @@ namespace CssInCSharp.Generator
                 case Ts.TsTypes.SyntaxKind.UnionType:
                     return SyntaxFactory.ParseTypeName("string");
                 default:
+                {
+                    var txt = node.GetText();
+                    if (txt != null) return SyntaxFactory.ParseTypeName(txt);
                     return SyntaxFactory.ParseTypeName("object");
+                }
+                    
             }
         }
 
@@ -931,6 +964,120 @@ namespace CssInCSharp.Generator
             }
 
             return text;
+        }
+
+        private string InferObjectType(Ts.TsTypes.ObjectLiteralExpression node, string? defaultType = null)
+        {
+            var token = new ObjectType(_options);
+            if (node.Properties != null)
+            {
+                var properties = node.Properties.Where(x => x.Kind == Ts.TsTypes.SyntaxKind.PropertyAssignment).Select(x => x.AsType<Ts.TsTypes.PropertyAssignment>());
+                token.Properties = properties.Select(x => x.Name.GetText()).ToArray();
+                if (properties.Any(x => x.Name.IsIndexerProperty()))
+                {
+                    token.HasIndexer = true;
+                }
+                else if(node.Properties.Any(x => x.Kind == Ts.TsTypes.SyntaxKind.SpreadAssignment))
+                {
+                    token.HasIndexer = true;
+                }
+            }
+
+            return InferenceEngine.Infer(token, defaultType ?? _options.DefaultObjectType);
+        }
+
+        private string InferReturnType(Ts.TsTypes.ArrowFunction? node, string funcName)
+        {
+            if (node == null)
+            {
+                var token = new ReturnType(_options, funcName);
+                return InferenceEngine.Infer(token, _options.DefaultReturnType);
+            }
+            else
+            {
+                string? valueType = null;
+                Ts.TsTypes.INode? returnValue = null;
+                if (node.Body.Kind == Ts.TsTypes.SyntaxKind.Block)
+                {
+                    var statement = node.Body.AsType<Ts.TsTypes.Block>().Statements
+                        .Where(x => x.Kind == Ts.TsTypes.SyntaxKind.ReturnStatement)
+                        .Select(x => x.AsType<Ts.TsTypes.ReturnStatement>())
+                        .FirstOrDefault();
+
+                    if (statement is { Expression.Kind: Ts.TsTypes.SyntaxKind.ObjectLiteralExpression })
+                    {
+                        returnValue = statement.Expression;
+                        valueType = "object";
+                    }
+
+                    if (statement is { Expression.Kind: Ts.TsTypes.SyntaxKind.ArrayLiteralExpression })
+                    {
+                        valueType = "array";
+                    }
+                }
+                
+                if (node.Body.Kind == Ts.TsTypes.SyntaxKind.ParenthesizedExpression)
+                {
+                    var exp = node.Body.AsType<Ts.TsTypes.ParenthesizedExpression>().Expression;
+                    if (exp.Kind == Ts.TsTypes.SyntaxKind.ObjectLiteralExpression)
+                    {
+                        returnValue = exp;
+                        valueType = "object";
+                    }
+                }
+
+                if (node.Body.Kind == Ts.TsTypes.SyntaxKind.ArrayLiteralExpression)
+                {
+                    valueType = "array";
+                }
+
+                var token = new ReturnType(_options, funcName, valueType);
+                var returnType = InferenceEngine.Infer(token, _options.DefaultReturnType);
+                if (returnType != _options.DefaultReturnType)
+                {
+                    return returnType;
+                }
+
+                if (returnValue == null)
+                {
+                    return _options.DefaultReturnType;
+                }
+                else
+                {
+                    switch (valueType)
+                    {
+                        case "object":
+                            return InferObjectType(returnValue.AsType<Ts.TsTypes.ObjectLiteralExpression>());
+                    }
+                }
+
+                return _options.DefaultReturnType;
+            }
+        }
+
+        private string InferParameterType(Ts.TsTypes.ParameterDeclaration node, string funcName, string name, string? defaultValue)
+        {
+            // try parse default value
+            if (defaultValue != null)
+            {
+                if (double.TryParse(defaultValue, out _))
+                {
+                    return "double";
+                }
+
+                if (bool.TryParse(defaultValue, out _))
+                {
+                    return "bool";
+                }
+
+                if (Regex.IsMatch(defaultValue, @"^""\w*""$"))
+                {
+                    return "string";
+                }
+            }
+
+            var token = new ParameterType(_options, name, funcName, defaultValue);
+            return InferenceEngine.Infer(token, _options.DefaultParameterType);
         }
 
         private static int GetLineNumber(string text, int index)

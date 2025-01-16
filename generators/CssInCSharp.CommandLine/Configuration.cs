@@ -58,11 +58,11 @@ namespace CssInCSharp.CommandLine
 
         private void UpdateDefaultClassName()
         {
-            if (CsOptions is not { DefaultClassName: not null }) return;
-            var name = ParseName(CsOptions.DefaultClassName);
+            if (CsOptions is not { DefaultExportClassName: not null }) return;
+            var name = ParseName(CsOptions.DefaultExportClassName);
             if (!string.IsNullOrEmpty(name))
             {
-                CsOptions.DefaultClassName = Util.PurifyFileName(name);
+                CsOptions.DefaultExportClassName = Util.PurifyFileName(name);
             }
         }
 

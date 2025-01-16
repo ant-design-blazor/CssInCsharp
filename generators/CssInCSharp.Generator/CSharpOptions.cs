@@ -8,10 +8,11 @@ public class CSharpOptions
     public List<string> Usings { get; set; } = ["System", "CssInCSharp"];
     public string Namespace { get; set; } = "CssInCSharp";
     public string NamePrefix { get; set; } = default!;
+    public string DefaultObjectType { get; set; } = "object";
     public string DefaultReturnType { get; set; } = "object";
     public string DefaultParameterType { get; set; } = "object";
     public string DefaultFieldType { get; set; } = "object";
-    public string DefaultClassName { get; set; } = "GeneratedStyle";
+    public string DefaultExportClassName { get; set; } = "GeneratedStyle";
     public string DefaultExportMethodName { get; set; } = "Default";
     public string DefaultExportType { get; set; } = "object";
     public bool UsePartialClass { get; set; } = false;
@@ -27,7 +28,7 @@ public class CSharpOptions
         _contextVariables[nameof(DefaultReturnType)] = DefaultReturnType;
         _contextVariables[nameof(DefaultParameterType)] = DefaultParameterType;
         _contextVariables[nameof(DefaultFieldType)] = DefaultFieldType;
-        _contextVariables[nameof(DefaultClassName)] = DefaultClassName;
+        _contextVariables[nameof(DefaultExportClassName)] = DefaultExportClassName;
         _contextVariables[nameof(DefaultExportMethodName)] = DefaultExportMethodName;
         _contextVariables[nameof(DefaultExportType)] = DefaultExportType;
     }

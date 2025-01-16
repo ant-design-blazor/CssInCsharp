@@ -99,6 +99,18 @@ internal static class NodeExtensions
         }
     }
 
+    public static bool IsProperty(this Ts.TsTypes.INode node)
+    {
+        switch (node.Kind)
+        {
+            case Ts.TsTypes.SyntaxKind.PropertyAssignment:
+            case Ts.TsTypes.SyntaxKind.SpreadAssignment:
+            case Ts.TsTypes.SyntaxKind.ShorthandPropertyAssignment:
+                return true;
+            default: return false;
+        }
+    }
+
     public static bool IsUnsupportedStatement(this Ts.TsTypes.INode node)
     {
         switch (node.Kind)

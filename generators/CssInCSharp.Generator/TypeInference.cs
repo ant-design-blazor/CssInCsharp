@@ -1,39 +1,9 @@
-﻿using System.Text.RegularExpressions;
-using CssInCSharp.Generator.Extensions;
+﻿using CssInCSharp.Generator.Extensions;
 using RulesEngine.Actions;
 using RulesEngine.Models;
 
 namespace CssInCSharp.Generator
 {
-    public class Token
-    {
-        public string? Kind { get; set; }
-        public string? Identifier { get; set; }
-        public string? MethodName { get; set; }
-        public string? NamePrefix { get; set; }
-        public string? DefaultValue { get; set; }
-
-        public string ParseDefaultType()
-        {
-            if (double.TryParse(DefaultValue, out _))
-            {
-                return "double";
-            }
-
-            if (bool.TryParse(DefaultValue, out _))
-            {
-                return "bool";
-            }
-
-            if (Regex.IsMatch(DefaultValue, @"^""\w*""$"))
-            {
-                return "string";
-            }
-
-            return "object";
-        }
-    }
-
     public static class InferenceEngine
     {
         private static RulesEngine.RulesEngine? _engine;
@@ -57,7 +27,7 @@ namespace CssInCSharp.Generator
             _engine = new RulesEngine.RulesEngine(workflows, reSettings);
         }
 
-        public static string Infer(Token token, string defaultValue = "object")
+        public static string Infer(object token, string defaultValue)
         {
             if (_engine == null) return defaultValue;
             var results = _engine.ExecuteAllRulesAsync("TypeInference", token).GetAwaiter().GetResult();
