@@ -57,4 +57,81 @@
             DefaultValue = defaultValue;
         }
     }
+
+    public class PropertyType
+    {
+        public string Kind { get; set; } = nameof(PropertyType);
+
+        public CSharpOptions CsOptions { get; set; }
+
+        public string Name { get; set; }
+
+        public IndexedAccessType? IndexedAccessType { get; set; }
+
+        public UnionType? UnionType { get; set; }
+
+        public PropertyType(CSharpOptions options, string name, IndexedAccessType? indexedAccessType = null, UnionType? unionType = null)
+        {
+            CsOptions = options;
+            Name = name;
+            IndexedAccessType = indexedAccessType;
+            UnionType = unionType;
+        }
+
+        public bool ContainsAny(params string[] keys)
+        {
+            foreach (var key in keys)
+            {
+                if (Name.Contains(key))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+    }
+
+    public class IndexedAccessType
+    {
+        public string Kind { get; set; } = nameof(IndexedAccessType);
+
+        public CSharpOptions CsOptions { get; set; }
+
+        public string ObjectType { get; set; }
+
+        public string IndexType { get; set; }
+
+        public IndexedAccessType(CSharpOptions options, string objectType, string indexType)
+        {
+            CsOptions = options;
+            ObjectType = objectType;
+            IndexType = indexType;
+        }
+    }
+
+    public class UnionType
+    {
+        public string Kind { get; set; } = nameof(UnionType);
+
+        public CSharpOptions CsOptions { get; set; }
+
+        public string[] Types { get; set; }
+
+        public UnionType(CSharpOptions options, string[] types)
+        {
+            CsOptions = options;
+            Types = types;
+        }
+
+        public bool HasAny(params string[] keys)
+        {
+            return Types.Any(keys.Contains);
+        }
+
+        public bool HasAll(params string[] keys)
+        {
+            return keys.All(Types.Contains);
+        }
+    }
 }

@@ -30,19 +30,32 @@ namespace CssInCSharp.Generator
         public static string Infer(object token, string defaultValue)
         {
             if (_engine == null) return defaultValue;
-            var results = _engine.ExecuteAllRulesAsync("TypeInference", token).GetAwaiter().GetResult();
-            if (results != null)
+            try
             {
-                foreach (var result in results)
+                var results = _engine.ExecuteAllRulesAsync("TypeInference", token).GetAwaiter().GetResult();
+                if (results != null)
                 {
-                    if (result.IsSuccess)
+                    foreach (var result in results)
                     {
-                        // If there are multiple matching results, the first one is used.
-                        return result.ActionResult.Output.ToString()!.ToType();
+                        if (result.IsSuccess)
+                        {
+                            try
+                            {
+                                // If there are multiple matching results, the first one is used.
+                                return result.ActionResult.Output.ToString()!.ToType();
+                            }
+                            catch
+                            {
+                                Console.WriteLine($"RuleEngine error: {result.Rule.RuleName} output error.");
+                            }
+                        }
                     }
                 }
             }
-
+            catch (Exception ex)
+            {
+                Console.WriteLine($"RuleEngine error: {ex.Message}");
+            }
             return defaultValue;
         }
     }

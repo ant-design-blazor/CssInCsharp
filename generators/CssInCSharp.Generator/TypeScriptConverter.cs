@@ -2,7 +2,6 @@
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Ts = Zu.TypeScript;
 
@@ -129,7 +128,7 @@ namespace CssInCSharp.Generator
                                 pName = x.Name.GetText();
                             }
                             var pType = x.Type != null
-                                ? GetType(x.Type)
+                                ? SyntaxFactory.ParseTypeName(GetType(x.Type))
                                 : SyntaxFactory.ParseTypeName(InferParameterType(x, funcName, pName, defaultValue));
 
                             var parameter = SyntaxFactory.Parameter(SyntaxFactory.Identifier(pName))
@@ -188,9 +187,9 @@ namespace CssInCSharp.Generator
                             .Where(x => x.Kind != Ts.TsTypes.SyntaxKind.SpreadElement) // remove SpreadElement
                             .Select(x => (SyntaxNodeOrToken)GenerateCSharpAst(x).AsT0)
                             .Separate(SyntaxFactory.Token(SyntaxKind.CommaToken));
-                        var arrayType = SyntaxFactory.ArrayType(context is { ReturnType: not null } 
-                                ? SyntaxFactory.IdentifierName(context.ReturnType) 
-                                : SyntaxFactory.PredefinedType(SyntaxFactory.Token(SyntaxKind.ObjectKeyword)))
+
+                        var type = context is { ReturnType: not null } ? context.ReturnType : InferArrayType(n);
+                        var arrayType = SyntaxFactory.ArrayType(SyntaxFactory.IdentifierName(type))
                                 .WithRankSpecifiers(
                                     SyntaxFactory.SingletonList<ArrayRankSpecifierSyntax>(
                                         SyntaxFactory.ArrayRankSpecifier(
@@ -596,8 +595,9 @@ namespace CssInCSharp.Generator
                     case Ts.TsTypes.SyntaxKind.PropertySignature:
                     {
                         var n = node.AsType<Ts.TsTypes.PropertySignature>();
+                        var type = InferPropertyType(n);
                         return SyntaxFactory
-                            .PropertyDeclaration(GetType(n.Type), Format(n.IdentifierStr))
+                            .PropertyDeclaration(SyntaxFactory.ParseTypeName(type), Format(n.IdentifierStr))
                             .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword))
                             .AddAccessorListAccessors
                             (
@@ -847,11 +847,15 @@ namespace CssInCSharp.Generator
                         else
                         {
                             var name = declaration.Name.GetText();
+                            var type = InferVariableType(declaration);
                             var variableDeclaration = SyntaxFactory
-                                .VariableDeclaration(SyntaxFactory.IdentifierName(_options.DefaultFieldType))
+                                .VariableDeclaration(SyntaxFactory.IdentifierName(type))
                                 .WithVariables(SyntaxFactory.SingletonSeparatedList(SyntaxFactory.VariableDeclarator(SyntaxFactory.Identifier(name))));
                             var expression = GenerateCSharpAst(declaration.Initializer).AsType<ExpressionSyntax>();
                             var equalsValueClause = SyntaxFactory.EqualsValueClause(expression);
+                            SyntaxToken[] tokens = _options.UseStaticMethod
+                                ? [SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.StaticKeyword)]
+                                : [SyntaxFactory.Token(SyntaxKind.PublicKeyword)];
                             return SyntaxFactory.FieldDeclaration
                             (
                                 variableDeclaration.WithVariables
@@ -859,7 +863,8 @@ namespace CssInCSharp.Generator
                                     SyntaxFactory
                                         .SingletonSeparatedList(SyntaxFactory.VariableDeclarator(SyntaxFactory.Identifier(name))
                                         .WithInitializer(equalsValueClause)))
-                                ).WithModifiers(SyntaxFactory.TokenList(SyntaxFactory.Token(SyntaxKind.PublicKeyword))
+                                )
+                                .WithModifiers(SyntaxFactory.TokenList(tokens)
                             );
                         }
                     }
@@ -934,25 +939,54 @@ namespace CssInCSharp.Generator
             return GenerateCSharpAst(node);
         }
 
-        private TypeSyntax GetType(Ts.TsTypes.INode node)
+        private string GetType(Ts.TsTypes.INode node)
         {
             switch (node.Kind)
             {
+                case Ts.TsTypes.SyntaxKind.BooleanKeyword:
+                    return "bool";
                 case Ts.TsTypes.SyntaxKind.NumberKeyword:
-                    return SyntaxFactory.ParseTypeName("double");
+                    return "double";
                 case Ts.TsTypes.SyntaxKind.StringKeyword:
-                    return SyntaxFactory.ParseTypeName("string");
+                    return "string";
                 case Ts.TsTypes.SyntaxKind.IndexedAccessType:
-                    return SyntaxFactory.ParseTypeName("string");
+                {
+                    /*
+                     * typescript:
+                     * interface A {
+                     *  defaultPadding: CSSProperties['padding']
+                     * }
+                     */
+                    var type = node.AsType<Ts.TsTypes.IndexedAccessTypeNode>();
+                    var objectType = type.ObjectType.GetText();
+                    var indexType = type.IndexType.GetText();
+                    var token = new IndexedAccessType(_options, objectType, indexType);
+                    return InferenceEngine.Infer(token, objectType);
+                }
                 case Ts.TsTypes.SyntaxKind.UnionType:
-                    return SyntaxFactory.ParseTypeName("string");
+                {
+                    var unionType = node.AsType<Ts.TsTypes.UnionTypeNode>();
+                    // if type is 'a' | 'b' or 1 | 2
+                    if (unionType.Types.All(x => x.Kind == Ts.TsTypes.SyntaxKind.LiteralType))
+                    {
+                        var t = unionType.Types.First().AsType<Ts.TsTypes.LiteralTypeNode>();
+                        switch (t.Literal.Kind)
+                        {
+                            case Ts.TsTypes.SyntaxKind.StringLiteral:
+                                return "string";
+                            case Ts.TsTypes.SyntaxKind.NumericLiteral:
+                                return "double";
+                        }
+                    }
+                    // todo: eg: string | number | bool | object
+                    var types = unionType.Types.Select(x => x.GetText()).ToArray();
+                    var token = new UnionType(_options, types);
+                    return InferenceEngine.Infer(token, _options.DefaultObjectType);
+                }
                 default:
                 {
-                    var txt = node.GetText();
-                    if (txt != null) return SyntaxFactory.ParseTypeName(txt);
-                    return SyntaxFactory.ParseTypeName("object");
+                    return node.GetText();
                 }
-                    
             }
         }
 
@@ -972,7 +1006,10 @@ namespace CssInCSharp.Generator
             if (node.Properties != null)
             {
                 var properties = node.Properties.Where(x => x.Kind == Ts.TsTypes.SyntaxKind.PropertyAssignment).Select(x => x.AsType<Ts.TsTypes.PropertyAssignment>());
-                token.Properties = properties.Select(x => x.Name.GetText()).ToArray();
+                token.Properties = properties
+                    .Where(x => !x.Name.IsIndexerProperty())
+                    .Select(x => x.Name.GetText()).ToArray();
+                if (token.Properties.Length <= 0) token.Properties = null;
                 if (properties.Any(x => x.Name.IsIndexerProperty()))
                 {
                     token.HasIndexer = true;
@@ -1078,6 +1115,48 @@ namespace CssInCSharp.Generator
 
             var token = new ParameterType(_options, name, funcName, defaultValue);
             return InferenceEngine.Infer(token, _options.DefaultParameterType);
+        }
+
+        private string InferPropertyType(Ts.TsTypes.PropertySignature node)
+        {
+            var token = new PropertyType(_options, node.IdentifierStr);
+            if (node.Type.Kind == Ts.TsTypes.SyntaxKind.IndexedAccessType)
+            {
+                var type = node.Type.AsType<Ts.TsTypes.IndexedAccessTypeNode>();
+                var objectType = type.ObjectType.GetText();
+                var indexType = type.IndexType.GetText();
+                token.IndexedAccessType = new IndexedAccessType(_options, objectType, indexType);
+            } 
+            else if (node.Type.Kind == Ts.TsTypes.SyntaxKind.UnionType)
+            {
+                var unionType = node.Type.AsType<Ts.TsTypes.UnionTypeNode>();
+                var types = unionType.Types.Select(x => x.GetText()).ToArray();
+                token.UnionType = new UnionType(_options, types);
+            }
+
+            return InferenceEngine.Infer(token, GetType(node.Type));
+        }
+
+        private string InferVariableType(Ts.TsTypes.VariableDeclaration node)
+        {
+            if (node.Initializer.Kind == Ts.TsTypes.SyntaxKind.NewExpression)
+            {
+                var exp = node.Initializer.AsType<Ts.TsTypes.NewExpression>().Expression;
+                return exp.GetText();
+            }
+            return _options.DefaultVariableType;
+        }
+
+        private string InferArrayType(Ts.TsTypes.ArrayLiteralExpression node)
+        {
+            var element = node.Elements.FirstOrDefault();
+            if (element == null) return "object";
+
+            if (element.Kind == Ts.TsTypes.SyntaxKind.StringLiteral)
+            {
+                return "string";
+            }
+            return "object";
         }
 
         private static int GetLineNumber(string text, int index)
