@@ -298,13 +298,20 @@ namespace CssInCSharp.Generator
                     case Ts.TsTypes.SyntaxKind.CallExpression:
                     {
                         var n = node.AsType<Ts.TsTypes.CallExpression>();
-                        var args = n.Arguments
-                            .Select(x => (SyntaxNodeOrToken)SyntaxFactory.Argument(GenerateCSharpAst(x, new NodeContext() { FuncName = n.IdentifierStr, UseLambda = true }).AsType<ExpressionSyntax>()))
-                            .Separate(SyntaxFactory.Token(SyntaxKind.CommaToken)).ToList();
+                        var args = new List<SyntaxNodeOrToken>();
+                        foreach (var argument in n.Arguments)
+                        {
+                            var ctx = new NodeContext() { FuncName = n.IdentifierStr, UseLambda = true };
+                            if (argument.Kind == Ts.TsTypes.SyntaxKind.ObjectLiteralExpression)
+                            {
+                                ctx.ReturnType = InferArgumentType(n);
+                            }
+                            args.Add(SyntaxFactory.Argument(GenerateCSharpAst(argument, ctx).AsType<ExpressionSyntax>()));
+                        }
                         return SyntaxFactory.InvocationExpression
                         (
                             FormatNode(n.Expression).AsType<ExpressionSyntax>(),
-                            SyntaxFactory.ArgumentList(SyntaxFactory.SeparatedList<ArgumentSyntax>(args))
+                            SyntaxFactory.ArgumentList(SyntaxFactory.SeparatedList<ArgumentSyntax>(args.Separate(SyntaxFactory.Token(SyntaxKind.CommaToken))))
                         );
                     }
                     case Ts.TsTypes.SyntaxKind.ComputedPropertyName:
@@ -1156,6 +1163,34 @@ namespace CssInCSharp.Generator
             {
                 return "string";
             }
+            return "object";
+        }
+
+        private string InferArgumentType(Ts.TsTypes.CallExpression node)
+        {
+            // todo: how to parse Type to 
+            if (node.TypeArguments is { Count: > 0 })
+            {
+                var typeArgument = node.TypeArguments[0];
+                if (typeArgument.Kind == Ts.TsTypes.SyntaxKind.IntersectionType)
+                {
+                    var intersectionType = typeArgument.AsType<Ts.TsTypes.IntersectionTypeNode>();
+                    if (intersectionType.Types is { Count: > 0 })
+                    {
+                        var type = intersectionType.Types[0];
+                        if (type.Kind == Ts.TsTypes.SyntaxKind.TypeReference)
+                        {
+                            return type.AsType<Ts.TsTypes.TypeReferenceNode>().IdentifierStr;
+                        }
+                    }
+                }
+
+                if (typeArgument.Kind == Ts.TsTypes.SyntaxKind.TypeReference)
+                {
+                    return typeArgument.AsType<Ts.TsTypes.TypeReferenceNode>().IdentifierStr;
+                }
+            }
+
             return "object";
         }
 
