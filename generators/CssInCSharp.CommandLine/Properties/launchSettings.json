@@ -2,7 +2,7 @@
   "profiles": {
     "CssInCSharp.CommandLine": {
       "commandName": "Project",
-      "commandLineArgs": "convert -t ts -s index.ts --dry-run"
+      "commandLineArgs": "convert -c cssincs.json --dry-run"
     }
   }
 }

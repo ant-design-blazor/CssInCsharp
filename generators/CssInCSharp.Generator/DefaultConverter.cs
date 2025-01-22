@@ -23,7 +23,7 @@
 
     public class ConverterFactory
     {
-        public static IConverter Create(ConverterType type , CSharpOptions option)
+        public static IConverter Create(ConverterType type , CSharpOptions? option)
         {
             return type switch
             {

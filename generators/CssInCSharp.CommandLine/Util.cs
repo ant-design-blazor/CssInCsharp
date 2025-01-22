@@ -70,8 +70,15 @@ public static class Util
 
     public static bool IsFolder(string path)
     {
-        var attr = File.GetAttributes(path);
-        return (attr & FileAttributes.Directory) == FileAttributes.Directory;
+        try
+        {
+            var attr = File.GetAttributes(path);
+            return (attr & FileAttributes.Directory) == FileAttributes.Directory;
+        }
+        catch (Exception e)
+        {
+            return false;
+        }
     }
 
     public static string PurifyFileName(string fileName)

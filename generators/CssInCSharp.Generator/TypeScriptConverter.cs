@@ -11,7 +11,7 @@ namespace CssInCSharp.Generator
     {
         private readonly CSharpOptions _options;
 
-        public TypeScriptConverter(CSharpOptions options = null)
+        public TypeScriptConverter(CSharpOptions? options = null)
         {
             _options = options ?? new CSharpOptions();
         }
@@ -136,13 +136,14 @@ namespace CssInCSharp.Generator
                                 {
                                     type = InferParameterType(x, funcName, pName, defaultValue);
                                 }
+
                                 pType = SyntaxFactory.ParseTypeName(type);
                             }
                             else
                             {
                                 pType = SyntaxFactory.ParseTypeName(InferParameterType(x, funcName, pName, defaultValue));
                             }
-                            
+
                             var parameter = SyntaxFactory.Parameter(SyntaxFactory.Identifier(pName))
                                 .WithType(pType);
                             if (initializer != null)
@@ -152,7 +153,7 @@ namespace CssInCSharp.Generator
 
                             return parameter;
                         }).ToArray();
-                        
+
                         var funcBody = n.Body;
                         switch (funcBody.Kind)
                         {
@@ -171,11 +172,12 @@ namespace CssInCSharp.Generator
                             }
                             default:
                             {
-                                var statement = GenerateCSharpAst(funcBody, new NodeContext(){ ReturnType = returnType}).AsType<ExpressionSyntax>();
+                                var statement = GenerateCSharpAst(funcBody, new NodeContext() { ReturnType = returnType }).AsType<ExpressionSyntax>();
                                 statements.Add(SyntaxFactory.ReturnStatement(statement));
                                 break;
                             }
                         }
+
                         if (context is { UseLambda: true })
                         {
                             return SyntaxFactory.ParenthesizedLambdaExpression(SyntaxFactory.ParameterList(SyntaxFactory.SeparatedList(parameters)), SyntaxFactory.Block(statements));
@@ -202,11 +204,11 @@ namespace CssInCSharp.Generator
 
                         var type = context is { ReturnType: not null } ? context.ReturnType : InferArrayType(n);
                         var arrayType = SyntaxFactory.ArrayType(SyntaxFactory.IdentifierName(type))
-                                .WithRankSpecifiers(
-                                    SyntaxFactory.SingletonList<ArrayRankSpecifierSyntax>(
-                                        SyntaxFactory.ArrayRankSpecifier(
-                                            SyntaxFactory.SingletonSeparatedList<ExpressionSyntax>(
-                                                SyntaxFactory.OmittedArraySizeExpression()))));
+                            .WithRankSpecifiers(
+                                SyntaxFactory.SingletonList<ArrayRankSpecifierSyntax>(
+                                    SyntaxFactory.ArrayRankSpecifier(
+                                        SyntaxFactory.SingletonSeparatedList<ExpressionSyntax>(
+                                            SyntaxFactory.OmittedArraySizeExpression()))));
 
                         var arrayCreation = SyntaxFactory.ArrayCreationExpression(arrayType)
                             .WithInitializer
@@ -316,6 +318,7 @@ namespace CssInCSharp.Generator
                                 statements.Add(r.AsT0);
                             }
                         }
+
                         return statements;
                     }
                     case Ts.TsTypes.SyntaxKind.CallExpression:
@@ -329,8 +332,10 @@ namespace CssInCSharp.Generator
                             {
                                 ctx.ReturnType = InferArgumentType(n);
                             }
+
                             args.Add(SyntaxFactory.Argument(GenerateCSharpAst(argument, ctx).AsType<ExpressionSyntax>()));
                         }
+
                         return SyntaxFactory.InvocationExpression
                         (
                             FormatNode(n.Expression).AsType<ExpressionSyntax>(),
@@ -348,7 +353,7 @@ namespace CssInCSharp.Generator
                         if (n.WhenFalse.Kind == Ts.TsTypes.SyntaxKind.MissingDeclaration)
                         {
                             return GenerateCSharpAst(n.WhenTrue, new NodeContext() { ConditionalToken = n.IdentifierStr });
-                        } 
+                        }
                         else if (n.WhenTrue.Kind == Ts.TsTypes.SyntaxKind.MissingDeclaration)
                         {
                             return GenerateCSharpAst(n.WhenFalse, new NodeContext() { ConditionalToken = n.IdentifierStr });
@@ -369,7 +374,7 @@ namespace CssInCSharp.Generator
                         var n = node.AsType<Ts.TsTypes.ElementAccessExpression>();
                         var argExp = SyntaxFactory.Argument(GenerateCSharpAst(n.ArgumentExpression).AsType<ExpressionSyntax>());
                         return SyntaxFactory.ElementAccessExpression(SyntaxFactory.IdentifierName(n.IdentifierStr))
-                            .WithArgumentList(SyntaxFactory.BracketedArgumentList(SyntaxFactory.SeparatedList<ArgumentSyntax>(new ArgumentSyntax[]{ argExp })));
+                            .WithArgumentList(SyntaxFactory.BracketedArgumentList(SyntaxFactory.SeparatedList<ArgumentSyntax>(new ArgumentSyntax[] { argExp })));
                     }
                     case Ts.TsTypes.SyntaxKind.ExportAssignment:
                     {
@@ -433,6 +438,7 @@ namespace CssInCSharp.Generator
                         {
                             return SyntaxFactory.IdentifierName("default");
                         }
+
                         return SyntaxFactory.IdentifierName(txt);
                     }
                     case Ts.TsTypes.SyntaxKind.InterfaceDeclaration:
@@ -536,6 +542,7 @@ namespace CssInCSharp.Generator
                                     SyntaxFactory.SeparatedList(assignments.Select(x => SyntaxFactory.AnonymousObjectMemberDeclarator(x.AsNode().AsType<ExpressionSyntax>())))
                                 );
                         }
+
                         return SyntaxFactory
                             .ObjectCreationExpression(SyntaxFactory.IdentifierName(objectType))
                             .WithInitializer
@@ -613,7 +620,7 @@ namespace CssInCSharp.Generator
                                                 SyntaxFactory.Argument(left))));
                             }
                         }
-                        
+
                         var right = GenerateCSharpAst(initializer, context).AsType<ExpressionSyntax>();
                         return SyntaxFactory.AssignmentExpression
                         (
@@ -712,6 +719,7 @@ namespace CssInCSharp.Generator
                                  */
                                 expression = SyntaxFactory.ParenthesizedExpression(expression);
                             }
+
                             spans.Add(SyntaxFactory.Interpolation(expression));
                             spans.Add(SyntaxFactory.InterpolatedStringText(
                                 SyntaxFactory.Token(
@@ -750,6 +758,7 @@ namespace CssInCSharp.Generator
                                 {
                                     classDeclaration = classDeclaration.AddMembers(member.AsType<MemberDeclarationSyntax>());
                                 }
+
                                 return classDeclaration;
                             }
                             case Ts.TsTypes.SyntaxKind.IntersectionType:
@@ -764,6 +773,7 @@ namespace CssInCSharp.Generator
                                         classDeclaration = classDeclaration.AddMembers(member.AsType<MemberDeclarationSyntax>());
                                     }
                                 }
+
                                 goto default;
                             }
                             default:
@@ -785,6 +795,7 @@ namespace CssInCSharp.Generator
                                         SyntaxFactory.BaseList(SyntaxFactory.SeparatedList<BaseTypeSyntax>(baseClasses))
                                     );
                                 }
+
                                 return classDeclaration;
                         }
                     }
@@ -830,6 +841,7 @@ namespace CssInCSharp.Generator
                         {
                             c.ReturnType = n.Type.AsType<Ts.TsTypes.TypeReferenceNode>().IdentifierStr;
                         }
+
                         var identifier = GenerateCSharpAst(n.Initializer, c).AsType<ExpressionSyntax>();
                         return SyntaxFactory
                             .VariableDeclaration(SyntaxFactory.IdentifierName("var"))
@@ -866,8 +878,10 @@ namespace CssInCSharp.Generator
                                     Initializer = initializer
                                 });
                             }
+
                             return SyntaxFactory.LocalDeclarationStatement(GenerateCSharpAst(declaration).AsType<VariableDeclarationSyntax>());
                         }
+
                         if (declaration.Initializer.Kind == Ts.TsTypes.SyntaxKind.Identifier && declaration.Name.Kind != Ts.TsTypes.SyntaxKind.Identifier)
                         {
                             var initializer = declaration.Initializer?.GetText() ?? string.Empty;
@@ -897,19 +911,22 @@ namespace CssInCSharp.Generator
                                 ? [SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.StaticKeyword)]
                                 : [SyntaxFactory.Token(SyntaxKind.PublicKeyword)];
                             return SyntaxFactory.FieldDeclaration
-                            (
-                                variableDeclaration.WithVariables
                                 (
-                                    SyntaxFactory
-                                        .SingletonSeparatedList(SyntaxFactory.VariableDeclarator(SyntaxFactory.Identifier(name))
-                                        .WithInitializer(equalsValueClause)))
+                                    variableDeclaration.WithVariables
+                                    (
+                                        SyntaxFactory.SingletonSeparatedList(SyntaxFactory.VariableDeclarator(SyntaxFactory.Identifier(name))
+                                            .WithInitializer(equalsValueClause))
+                                    )
                                 )
-                                .WithModifiers(SyntaxFactory.TokenList(tokens)
-                            );
+                                .WithModifiers(SyntaxFactory.TokenList(tokens));
                         }
                     }
                     default: return default;
                 }
+            }
+            catch (TypeInferenceException)
+            {
+                throw;
             }
             catch (AstGenerateException)
             {
@@ -920,7 +937,9 @@ namespace CssInCSharp.Generator
                 var n = node.AsType<Ts.TsTypes.Node>();
                 var start = GetLineNumber(n.SourceStr, n.NodeStart);
                 var end = GetLineNumber(n.SourceStr, n.End.Value);
-                throw new AstGenerateException(start, end);
+                var len = n.End.Value - n.NodeStart;
+                var code = n.SourceStr.Substring(n.NodeStart, len);
+                throw new AstGenerateException(start, end, code);
             }
         }
 
@@ -1232,8 +1251,8 @@ namespace CssInCSharp.Generator
             if (index < 0 || index > text.Length)
                 throw new ArgumentOutOfRangeException(nameof(index), "Index is out of the range of the text.");
 
-            int line = 1;
-            for (int i = 0; i < index; i++)
+            var line = 1;
+            for (var i = 0; i < index; i++)
             {
                 if (text[i] == '\n')
                     line++;
