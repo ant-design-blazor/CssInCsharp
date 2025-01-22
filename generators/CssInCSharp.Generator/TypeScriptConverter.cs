@@ -127,10 +127,22 @@ namespace CssInCSharp.Generator
                             {
                                 pName = x.Name.GetText();
                             }
-                            var pType = x.Type != null
-                                ? SyntaxFactory.ParseTypeName(GetType(x.Type))
-                                : SyntaxFactory.ParseTypeName(InferParameterType(x, funcName, pName, defaultValue));
 
+                            TypeSyntax pType;
+                            if (x.Type != null)
+                            {
+                                var type = GetType(x.Type);
+                                if (type == _options.DefaultParameterType)
+                                {
+                                    type = InferParameterType(x, funcName, pName, defaultValue);
+                                }
+                                pType = SyntaxFactory.ParseTypeName(type);
+                            }
+                            else
+                            {
+                                pType = SyntaxFactory.ParseTypeName(InferParameterType(x, funcName, pName, defaultValue));
+                            }
+                            
                             var parameter = SyntaxFactory.Parameter(SyntaxFactory.Identifier(pName))
                                 .WithType(pType);
                             if (initializer != null)
@@ -260,7 +272,18 @@ namespace CssInCSharp.Generator
                             }
                         }
 
-                        var type = n.Type.GetText();
+                        var type = GetType(n.Type);
+                        if (type == "double")
+                        {
+                            return SyntaxFactory.InvocationExpression(
+                                SyntaxFactory.MemberAccessExpression(
+                                    SyntaxKind.SimpleMemberAccessExpression,
+                                    SyntaxFactory.IdentifierName("Convert"),
+                                    SyntaxFactory.IdentifierName("ToDouble")
+                                )
+                            ).WithArgumentList(SyntaxFactory.ArgumentList(SyntaxFactory.SingletonSeparatedList(SyntaxFactory.Argument(variable))));
+                        }
+
                         return SyntaxFactory.BinaryExpression
                         (
                             SyntaxKind.AsExpression,
@@ -679,6 +702,16 @@ namespace CssInCSharp.Generator
                         foreach (var span in n.TemplateSpans)
                         {
                             var expression = GenerateCSharpAst(span.Expression).AsType<ExpressionSyntax>();
+                            if (span.Expression.Kind == Ts.TsTypes.SyntaxKind.ConditionalExpression)
+                            {
+                                /*
+                                 * typescript:
+                                 * const str = `${true ? '123' : 'qwe'}`;
+                                 * csharp:
+                                 * var str = $"{(true ? "123" : "qwe")}";
+                                 */
+                                expression = SyntaxFactory.ParenthesizedExpression(expression);
+                            }
                             spans.Add(SyntaxFactory.Interpolation(expression));
                             spans.Add(SyntaxFactory.InterpolatedStringText(
                                 SyntaxFactory.Token(
