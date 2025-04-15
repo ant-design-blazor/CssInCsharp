@@ -87,7 +87,11 @@ AMD Ryzen 7 5700G with Radeon Graphics, 1 CPU, 16 logical and 8 physical cores
 ## Special Thanks
 
 [cssinjs](https://github.com/ant-design/cssinjs): Component level cssinjs solution used in ant.design.
+
 [stylis](https://github.com/thysultan/stylis): A Light–weight CSS Preprocessor.
+
 [csstype](https://github.com/frenic/csstype): TypeScript and Flow definitions for CSS.
+
 [tinycolor](https://github.com/scttcper/tinycolor): A small library for color manipulation and conversion.
+
 [TypeScriptAST](https://github.com/ToCSharp/TypeScriptAST): .NET port of TypeScript parser.
