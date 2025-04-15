@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CssInCSharp.CommandLine": {
+      "commandName": "Project",
+      "commandLineArgs": "convert -c cssincs.json --dry-run"
+    }
+  }
+}

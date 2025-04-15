@@ -83,3 +83,11 @@ AMD Ryzen 7 5700G with Radeon Graphics, 1 CPU, 16 logical and 8 physical cores
 | CreateCss | .NET 7.0 | .NET 7.0 | 50.61 μs | 0.999 μs | 2.062 μs |  0.87 |    0.05 | 17.6392 | 1.0376 | 144.42 KB |        0.96 |
 | CreateCss | .NET 8.0 | .NET 8.0 | 37.73 μs | 0.748 μs | 1.642 μs |  0.65 |    0.03 | 17.6392 | 0.9155 |  144.3 KB |        0.96 |
 
+
+## Special Thanks
+
+[cssinjs](https://github.com/ant-design/cssinjs): Component level cssinjs solution used in ant.design.
+[stylis](https://github.com/thysultan/stylis): A Light–weight CSS Preprocessor.
+[csstype](https://github.com/frenic/csstype): TypeScript and Flow definitions for CSS.
+[tinycolor](https://github.com/scttcper/tinycolor): A small library for color manipulation and conversion.
+[TypeScriptAST](https://github.com/ToCSharp/TypeScriptAST): .NET port of TypeScript parser.

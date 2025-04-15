@@ -41,6 +41,6 @@ jobs:
         run: |
           VERSION=`git describe --tags`
           echo "Publishing Version: ${VERSION}"
-          dotnet build src/CssInCSharp.csproj
           dotnet pack src/CssInCSharp.csproj /p:PackageVersion=$VERSION -c Release -o publish
+          dotnet pack generators/CssInCSharp.CommandLine/CssInCSharp.CommandLine.csproj /p:PackageVersion=$VERSION -c Release -o publish
           dotnet nuget push publish/*.nupkg -s https://api.nuget.org/v3/index.json -k $NUGET_API_KEY --skip-duplicate

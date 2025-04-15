@@ -1,0 +1,24 @@
+{
+  "Converter": "Ts",
+  "Include": [
+    {
+      "Src": "./index.ts",
+      "Dest": "./index.cs"
+    }
+  ],
+  "Exclude": [],
+  "TypeInferences": [
+    {
+      "RuleName": "ObjectTypeInfer_CSSObject",
+      "Expression": "Kind == \"ObjectType\" && ((HasIndexer && Properties == null) || HasAny(\"width\", \"display\", \"position\", \"color\", \"direction\", \"flex\", \"background\"))",
+      "Actions": {
+        "OnSuccess": {
+          "Name": "OutputExpression",
+          "Context": {
+            "Expression": "\"CSSObject\""
+          }
+        }
+      }
+    }
+  ]
+}
