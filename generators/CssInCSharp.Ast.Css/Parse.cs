@@ -3,260 +3,27 @@ using static CssInCSharp.Ast.Css.Util;
 
 namespace CssInCSharp.Ast.Css
 {
-    public struct UnionList<T0>
-    {
-        private readonly int _index;
-        private readonly T0 _value0;
-        private readonly List<T0> _value1;
-
-        private UnionList(
-            int index,
-            T0 value0 = default,
-            List<T0> value1 = default)
-        {
-            _index = index;
-            _value0 = value0;
-            _value1 = value1;
-        }
-
-        public static implicit operator UnionList<T0>(T0 t) => new(0, value0: t);
-        public static implicit operator UnionList<T0>(List<T0> t) => new(1, value1: t);
-
-        public bool IsElement => _index == 0;
-        public bool IsList => _index == 1;
-
-        public T0 AsT0 => _value0;
-        public List<T0> AsT1 => _value1;
-    }
-
-    public class Content
-    {
-        private readonly int _index;
-        private readonly string _value0;
-        private readonly List<Node> _value1;
-        private Content(
-            int index,
-            string value0 = default,
-            List<Node> value1 = default)
-        {
-            _index = index;
-            _value0 = value0;
-            _value1 = value1;
-        }
-
-        public static implicit operator Content(string t) => new(0, value0: t);
-        public static implicit operator Content(List<Node> t) => new(1, value1: t);
-
-        public bool IsString => _index == 0;
-        public string AsString => _value0;
-        public List<Node> AsArray => _value1;
-    }
-
-    public class NodeType
-    {
-        public const string ArgumentsType = "arguments";
-        public const string AtkeywordType = "atkeyword";
-        public const string AtruleType = "atrule";
-        public const string AttributeSelectorType = "attributeSelector";
-        public const string AttributeNameType = "attributeName";
-        public const string AttributeFlagsType = "attributeFlags";
-        public const string AttributeMatchType = "attributeMatch";
-        public const string AttributeValueType = "attributeValue";
-        public const string BlockType = "block";
-        public const string BracketsType = "brackets";
-        public const string ClassType = "class";
-        public const string CombinatorType = "combinator";
-        public const string CommentMLType = "multilineComment";
-        public const string CommentSLType = "singlelineComment";
-        public const string ConditionType = "condition";
-        public const string ConditionalStatementType = "conditionalStatement";
-        public const string CustomPropertyType = "customProperty";
-        public const string DeclarationType = "declaration";
-        public const string DeclDelimType = "declarationDelimiter";
-        public const string DefaultType = "default";
-        public const string DelimType = "delimiter";
-        public const string DimensionType = "dimension";
-        public const string EscapedStringType = "escapedString";
-        public const string ExtendType = "extend";
-        public const string ExpressionType = "expression";
-        public const string FunctionType = "function";
-        public const string FunctionsListType = "functionsList";
-        public const string GlobalType = "global";
-        public const string IdentType = "ident";
-        public const string ImportantType = "important";
-        public const string IncludeType = "include";
-        public const string InterpolationType = "interpolation";
-        public const string InterpolatedVariableType = "interpolatedVariable";
-        public const string KeyframesSelectorType = "keyframesSelector";
-        public const string LoopType = "loop";
-        public const string MixinType = "mixin";
-        public const string NamePrefixType = "namePrefix";
-        public const string NamespacePrefixType = "namespacePrefix";
-        public const string NamespaceSeparatorType = "namespaceSeparator";
-        public const string NumberType = "number";
-        public const string OperatorType = "operator";
-        public const string OptionalType = "optional";
-        public const string ParenthesesType = "parentheses";
-        public const string ParentSelectorType = "parentSelector";
-        public const string ParentSelectorExtensionType = "parentSelectorExtension";
-        public const string PercentageType = "percentage";
-        public const string PlaceholderType = "placeholder";
-        public const string ProgidType = "progid";
-        public const string PropertyType = "property";
-        public const string PropertyDelimType = "propertyDelimiter";
-        public const string PseudocType = "pseudoClass";
-        public const string PseudoeType = "pseudoElement";
-        public const string RawType = "raw";
-        public const string RulesetType = "ruleset";
-        public const string SType = "space";
-        public const string SelectorType = "selector";
-        public const string ShashType = "id";
-        public const string StringType = "string";
-        public const string StylesheetType = "stylesheet";
-        public const string TypeSelectorType = "typeSelector";
-        public const string UnicodeRangeType = "unicodeRange";
-        public const string UniversalSelectorType = "universalSelector";
-        public const string UriType = "uri";
-        public const string UrangeType = "urange";
-        public const string ValueType = "value";
-        public const string VariableType = "variable";
-        public const string VariablesListType = "variablesList";
-        public const string VhashType = "color";
-    }
-
-    public class TokenType
-    {
-        public const string StringSQ = "StringSQ";
-        public const string StringDQ = "StringDQ";
-        public const string CommentML = "CommentML";
-        public const string CommentSL = "CommentSL";
-
-        public const string Newline = "Newline";
-        public const string Space = "Space";
-        public const string Tab = "Tab";
-
-        public const string ExclamationMark = "ExclamationMark";         // !
-        public const string QuotationMark = "QuotationMark";             // "
-        public const string NumberSign = "NumberSign";                   // #
-        public const string DollarSign = "DollarSign";                   // $
-        public const string PercentSign = "PercentSign";                 // %
-        public const string Ampersand = "Ampersand";                     // &
-        public const string Apostrophe = "Apostrophe";                   // '
-        public const string LeftParenthesis = "LeftParenthesis";         // (
-        public const string RightParenthesis = "RightParenthesis";       // )
-        public const string Asterisk = "Asterisk";                       // *
-        public const string PlusSign = "PlusSign";                       // +
-        public const string Comma = "Comma";                             // ,
-        public const string HyphenMinus = "HyphenMinus";                 // -
-        public const string FullStop = "FullStop";                       // .
-        public const string Solidus = "Solidus";                         // /
-        public const string Colon = "Colon";                             // :
-        public const string Semicolon = "Semicolon";                     // ;
-        public const string LessThanSign = "LessThanSign";               // <
-        public const string EqualsSign = "EqualsSign";                   // =
-        public const string EqualitySign = "EqualitySign";               // ==
-        public const string InequalitySign = "InequalitySign";           // !=
-        public const string GreaterThanSign = "GreaterThanSign";         // >
-        public const string QuestionMark = "QuestionMark";               // ?
-        public const string CommercialAt = "CommercialAt";               // @
-        public const string LeftSquareBracket = "LeftSquareBracket";     // [
-        public const string ReverseSolidus = "ReverseSolidus";           // \
-        public const string RightSquareBracket = "RightSquareBracket";   // ]
-        public const string CircumflexAccent = "CircumflexAccent";       // ^
-        public const string LowLine = "LowLine";                         // _
-        public const string LeftCurlyBracket = "LeftCurlyBracket";       // {
-        public const string VerticalLine = "VerticalLine";               // |
-        public const string RightCurlyBracket = "RightCurlyBracket";     // }
-        public const string Tilde = "Tilde";                             // ~
-
-        public const string Identifier = "Identifier";
-        public const string DecimalNumber = "DecimalNumber";
-    }
-
-    public struct Position
-    {
-        public int line;
-        public int column;
-    }
-
-    public class NodeOptions
-    {
-        public string type { get; set; }
-        public Content content { get; set; }
-        public Position start { get; set; }
-        public Position end { get; set; }
-        public string syntax { get; set; }
-    }
-
-    public class Node
-    {
-        public Content content { get; set; }
-        public Position? end { get; set; }
-
-        public Node(NodeOptions options)
-        {
-
-        }
-    }
-
-    public class Token
-    {
-        public int tn;
-        public int ln;
-        public int col;
-        public string type;
-        public string value;
-        public int stylesheet_child;
-        public int sc_child;
-        public int ws_last;
-        public int atrule_type;
-        public int selectorsGroupEnd;
-        public int selectorsGroupSelectorCount;
-        public int selectorsGroupDelimCount;
-        public int right;
-        public int bd_type;
-        public int ws;
-        public int? atrule_l;
-        public int ident_last;
-        public int selectorEnd;
-        public int tsets_end;
-        public int atrulers_child;
-        public int atrulers_end;
-        public int compoundSelectorType;
-        public int combinatorType;
-        public int tset_child;
-        public int compoundSelectorEnd;
-        public int any_child;
-        public int class_l;
-        public int classEnd;
-        public int attributeSelectorType;
-        public int keyframesSelectorType;
-        public int number_l;
-        public int namePrefixType;
-        public int pseudoElementType;
-        public int pseudoClassType;
-        public int urangeEnd;
-        public int attributeMatchType;
-        public int bd_kind;
-        public int propertyType;
-        public int value_end;
-        public int value_child;
-        public int progid_end;
-        public int importantEnd;
-        public int argument_child;
-    }
-
     public class Parse
     {
         private int tokensLength;
         private int pos;
         private Token[] tokens;
 
-        public Parse(Token[] tokens, object context)
+        public Parse(Token[] tokens)
         {
             this.tokens = tokens;
             tokensLength = tokens.Length;
             pos = 0;
+        }
+
+        public Node stylesheet()
+        {
+            if (checkStylesheet(pos).AsBool())
+            {
+                return getStylesheet();
+            }
+
+            return null;
         }
 
         public void throwError(int i)
@@ -314,7 +81,7 @@ namespace CssInCSharp.Ast.Css
 
         public int checkS(int i)
         {
-            return i < tokensLength && tokens[i].ws.AsBool() ? tokens[i].ws_last - i + 1 : 0;
+            return i < tokensLength && tokens[i].ws ? tokens[i].ws_last - i + 1 : 0;
         }
 
         public int checkRuleset(int i)
@@ -711,7 +478,7 @@ namespace CssInCSharp.Ast.Css
             var start = i;
             int l;
 
-            if ((l = checkUniversalSelector(i)).AsBool() || (checkTypeSelector(i)).AsBool()) i += l;
+            if ((l = Of(checkUniversalSelector(i), checkTypeSelector(i))).AsBool()) i += l;
             else return 0;
 
             while (i < tokensLength)
@@ -2037,11 +1804,11 @@ namespace CssInCSharp.Ast.Css
             var token = tokens[pos];
             var line = token.ln;
             var column = token.col;
-            var content = tokens[pos].value.Substring(2);
+            var content = tokens[pos].value.substring(2);
             var l = content.Length;
 
             if (content.charAt(l - 2) == '*' && content.charAt(l - 1) == '/')
-                content = content.Substring(0, l - 2);
+                content = content.substring(0, l - 2);
 
             var end = getLastPosition(content, line, column, 2);
             if (end[0] == line) end[1] += 2;
@@ -2800,7 +2567,7 @@ namespace CssInCSharp.Ast.Css
             var line = token.ln;
             var column = token.col;
             var content = new List<Node>();
-            Node body;
+            UnionList<Node> body;
 
             // Skip `(`.
             pos++;
@@ -2811,8 +2578,8 @@ namespace CssInCSharp.Ast.Css
                 if (checkDeclaration(pos).AsBool()) content.push(getDeclaration());
                 else if (checkArgument(pos).AsBool())
                 {
-                    body = getArgument().AsT0;
-                    if (body.content.IsString) content.push(body);
+                    body = getArgument();
+                    if (body.IsElement && body.AsT0.content.IsString) content.push(body);
                     else content = content.concat(body);
                 }
                 else if (checkClass(pos).AsBool()) content.push(getClass());
@@ -3856,68 +3623,6 @@ namespace CssInCSharp.Ast.Css
             var content = new List<Node>(){ getIdent() };
 
             return newNode(type, content, line, column);
-        }
-    }
-
-    public static class Extensions
-    {
-        public static void push<TSource>(this List<TSource> source, UnionList<TSource> item)
-        {
-            if (item.IsElement)
-            {
-                source.Add(item.AsT0);
-            }
-            else
-            {
-                source.AddRange(item.AsT1);
-            }
-        }
-
-        public static bool Has<TSource>(this TSource[] source, int index)
-        {
-            return index < source.Length;
-        }
-
-        public static List<TSource> concat<TSource>(this List<TSource> source, params UnionList<TSource>[] second)
-        {
-            IEnumerable<TSource> list = source;
-            foreach (var item in second)
-            {
-                if (item.IsElement)
-                {
-                    source.Add(item.AsT0);
-                }
-                else
-                {
-                    list = list.Concat(item.AsT1);
-                }
-                
-            }
-
-            return source;
-        }
-
-        public static char charAt(this string str, int index)
-        {
-            return str[index];
-        }
-
-        public static bool AsBool(this int value)
-        {
-            return value != 0;
-        }
-    }
-
-    public static class Util
-    {
-        public static int Of(params int[] values)
-        {
-            foreach (var val in values)
-            {
-                if (val != 0) return val;
-            }
-
-            return 0;
         }
     }
 }

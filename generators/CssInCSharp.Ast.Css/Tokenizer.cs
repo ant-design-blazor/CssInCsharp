@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-
-namespace CssInCSharp.Ast.Css
+﻿namespace CssInCSharp.Ast.Css
 {
     public class Tokenizer
     {
@@ -17,6 +10,44 @@ namespace CssInCSharp.Ast.Css
         private int ln = 1;
         private int col = 1;
         private int cssLength = 0;
+
+        private Dictionary<char, string> Punctuation = new()
+        {
+            { ' ', TokenType.Space },
+            { '\n', TokenType.Newline },
+            { '\r', TokenType.Newline },
+            { '\t', TokenType.Tab },
+            { '!', TokenType.ExclamationMark },
+            { '"', TokenType.QuotationMark },
+            { '#', TokenType.NumberSign },
+            { '$', TokenType.DollarSign },
+            { '%', TokenType.PercentSign },
+            { '&', TokenType.Ampersand },
+            { '\'', TokenType.Apostrophe },
+            { '(', TokenType.LeftParenthesis },
+            { ')', TokenType.RightParenthesis },
+            { '*', TokenType.Asterisk },
+            { '+', TokenType.PlusSign },
+            { ',', TokenType.Comma },
+            { '-', TokenType.HyphenMinus },
+            { '.', TokenType.FullStop },
+            { '/', TokenType.Solidus },
+            { ':', TokenType.Colon },
+            { ';', TokenType.Semicolon },
+            { '<', TokenType.LessThanSign },
+            { '=', TokenType.EqualsSign },
+            { '>', TokenType.GreaterThanSign },
+            { '?', TokenType.QuestionMark },
+            { '@', TokenType.CommercialAt },
+            { '[', TokenType.LeftSquareBracket },
+            { ']', TokenType.RightSquareBracket },
+            { '^', TokenType.CircumflexAccent },
+            { '_', TokenType.LowLine },
+            { '{', TokenType.LeftCurlyBracket },
+            { '|', TokenType.VerticalLine },
+            { '}', TokenType.RightCurlyBracket },
+            { '~', TokenType.Tilde }
+        };
 
         public List<Token> getTokens(string css, int tabSize)
         {
@@ -62,7 +93,7 @@ namespace CssInCSharp.Ast.Css
                 }
 
                 // If current character is a punctuation mark:
-                else if (Punctuation[c])
+                else if (Punctuation.ContainsKey(c))
                 {
                     // Add it to the list of tokens:
                     pushToken(Punctuation[c], c, col);
@@ -93,14 +124,144 @@ namespace CssInCSharp.Ast.Css
             return tokens;
         }
 
+        public void parseMLComment(string css)
+        {
+            var start = pos;
+
+            // Read the string until we meet `*/`.
+            // Since we already know first 2 characters (`/*`), start reading
+            // from `pos + 2`:
+            for (pos = pos + 2; pos < cssLength; pos++)
+            {
+                if (css.charAt(pos) == '*' && css.charAt(pos + 1) == '/')
+                {
+                    pos++;
+                    break;
+                }
+            }
+
+            // Add full comment (including `/*` and `*/`) to the list of tokens:
+            var comment = css.substring(start, pos + 1);
+            pushToken(TokenType.CommentML, comment, col);
+
+            var newlines = comment.Split('\n');
+            if (newlines.Length > 1)
+            {
+                ln += newlines.Length - 1;
+                col = newlines[newlines.Length - 1].Length;
+            }
+            else
+            {
+                col += (pos - start);
+            }
+        }
+
+        public void parseIdentifier(string css)
+        {
+            var start = pos;
+
+            // Skip all opening slashes:
+            while (css.charAt(pos) == '/') pos++;
+
+            // Read the string until we meet a punctuation mark:
+            for (; pos < cssLength; pos++)
+            {
+                // Skip all '\':
+                if (css.charAt(pos) == '\\') pos++;
+                else if (Punctuation.ContainsKey(css.charAt(pos))) break;
+            }
+
+            var ident = css.substring(start, pos--);
+
+            // Enter url mode if parsed substring is `url`:
+            urlMode = urlMode || ident == "url";
+
+            // Add identifier to tokens:
+            pushToken(TokenType.Identifier, ident, col);
+            col += (pos - start);
+        }
+
+        public void parseSLComment(string css)
+        {
+            var start = pos;
+
+            // Read the string until we meet line break.
+            // Since we already know first 2 characters (`//`), start reading
+            // from `pos + 2`:
+            for (pos += 2; pos < cssLength; pos++)
+            {
+                if (css.charAt(pos) == '\n' || css.charAt(pos) == '\r')
+                {
+                    break;
+                }
+            }
+
+            // Add comment (including `//` and line break) to the list of tokens:
+            pushToken(TokenType.CommentSL, css.substring(start, pos--), col);
+            col += pos - start;
+        }
+
+        public void parseString(string css, char q)
+        {
+            var start = pos;
+
+            // Read the string until we meet a matching quote:
+            for (pos++; pos < cssLength; pos++)
+            {
+                // Skip escaped quotes:
+                if (css.charAt(pos) == '\\') pos++;
+                else if (css.charAt(pos) == q) break;
+            }
+
+            // Add the string (including quotes) to tokens:
+            pushToken(q == '"' ? TokenType.StringDQ : TokenType.StringSQ,
+                css.substring(start, pos + 1), col);
+            col += (pos - start);
+        }
+
+        public void parseSpaces(string css)
+        {
+            var start = pos;
+
+            // Read the string until we meet a non-space character:
+            for (; pos < cssLength; pos++)
+            {
+                if (css.charAt(pos) != ' ') break;
+            }
+
+            // Add a substring containing only spaces to tokens:
+            pushToken(TokenType.Space, css.substring(start, pos--), col);
+            col += (pos - start);
+        }
+
+        public void parseDecimalNumber(string css)
+        {
+            var start = pos;
+
+            // Read the string until we meet a character that's not a digit:
+            for (; pos < cssLength; pos++)
+            {
+                if (!isDecimalDigit(css.charAt(pos))) break;
+            }
+
+            // Add the number to tokens:
+            pushToken(TokenType.DecimalNumber, css.substring(start, pos--), col);
+            col += (pos - start);
+        }
+
         private void pushToken(string type, char value, int column)
+        {
+            pushToken(type, value.ToString(), column);
+        }
+
+        private void pushToken(string type, string value, int column)
         {
             tokens.push(new Token{
                 tn = tn++,
                 ln = ln,
                 col = column,
                 type = type,
-                value = $"{value}"
+                value = value
             });
         }
 

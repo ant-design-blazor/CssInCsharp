@@ -33,5 +33,24 @@
                 "" => throw new ArgumentException($"{nameof(input)} cannot be empty", nameof(input)),
                 _ => string.Concat(input[0].ToString().ToUpper(), input.AsSpan(1))
             };
+
+        public static string ToCssProperty(this string cssName)
+        {
+            if (string.IsNullOrWhiteSpace(cssName))
+                return string.Empty;
+
+            return string.Join("",
+                cssName
+                    .Trim('-', '_')
+                    .Split('-', '_')
+                    .Where(part => part.Length > 0)
+                    .Select(part => char.ToUpperInvariant(part[0]) + part.Substring(1))
+            );
+        }
+
+        public static string ToCssCustomProperty(this string cssName)
+        {
+            return $"--{cssName}";
+        }
     }
 }

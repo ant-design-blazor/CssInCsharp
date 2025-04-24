@@ -3,9 +3,10 @@
     public enum ConverterType
     {
         Ts,
-        Sass,
+        Css,
         Less,
-        Css
+        Sass,
+        Scss
     }
 
     public interface IConverter
@@ -28,6 +29,10 @@
             return type switch
             {
                 ConverterType.Ts => new TypeScriptConverter(option),
+                ConverterType.Css => new CssConverter(option),
+                ConverterType.Less => new LessConverter(option),
+                ConverterType.Sass => new SassConverter(option),
+                ConverterType.Scss => new ScssConverter(option),
                 _ => new DefaultConverter(),
             };
         }

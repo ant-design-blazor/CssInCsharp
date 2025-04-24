@@ -12,6 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CssInCSharp.Ast.Css\CssInCSharp.Ast.Css.csproj" />
+    <ProjectReference Include="..\CssInCSharp.Ast.Less\CssInCSharp.Ast.Less.csproj" />
+    <ProjectReference Include="..\CssInCSharp.Ast.Sass\CssInCSharp.Ast.Sass.csproj" />
+    <ProjectReference Include="..\CssInCSharp.Ast.Scss\CssInCSharp.Ast.Scss.csproj" />
     <ProjectReference Include="..\CssInCSharp.Ast.TypeScript\CssInCSharp.Ast.TypeScript.csproj" />
   </ItemGroup>
 
