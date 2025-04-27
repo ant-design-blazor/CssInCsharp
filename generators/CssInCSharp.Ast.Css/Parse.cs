@@ -1,5 +1,5 @@
 ﻿using System.Text;
-using static CssInCSharp.Ast.Css.Util;
+using static CssInCSharp.Ast.Util;
 
 namespace CssInCSharp.Ast.Css
 {

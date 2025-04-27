@@ -1,4 +1,4 @@
-﻿namespace CssInCSharp.Ast.Css;
+﻿namespace CssInCSharp.Ast;
 
 public class NodeType
 {
@@ -70,4 +70,5 @@ public class NodeType
     public const string VariableType = "variable";
     public const string VariablesListType = "variablesList";
     public const string VhashType = "color";
+    public const string NamespaceType = "namespace";
 }

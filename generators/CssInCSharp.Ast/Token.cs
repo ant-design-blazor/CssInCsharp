@@ -1,4 +1,4 @@
-﻿namespace CssInCSharp.Ast.Css;
+﻿namespace CssInCSharp.Ast;
 
 public class Token
 {
@@ -48,6 +48,24 @@ public class Token
     public int left;
     public bool sc;
     public int sc_last;
+    public int class_child;
+    public int condition_child;
+    public int extendType;
+    public int extend_type;
+    public int include_type;
+    public int mixin_type;
+    public int selectorType;
+    public int block_end;
+    public int defaultEnd;
+    public int extend_child;
+    public int globalEnd;
+    public int ii_type;
+    public int optionalEnd;
+    public int placeholder_l;
+    public int shashEnd;
+    public int uriType;
+    public int uri_raw_end;
+    public int uri_end;
 
     public override string ToString()
     {

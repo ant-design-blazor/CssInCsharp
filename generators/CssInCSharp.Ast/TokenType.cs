@@ -1,4 +1,4 @@
-﻿namespace CssInCSharp.Ast.Css;
+﻿namespace CssInCSharp.Ast;
 
 public class TokenType
 {
@@ -44,6 +44,7 @@ public class TokenType
     public const string VerticalLine = "VerticalLine";               // |
     public const string RightCurlyBracket = "RightCurlyBracket";     // }
     public const string Tilde = "Tilde";                             // ~
+    public const string Backtick = "Backtick";
 
     public const string Identifier = "Identifier";
     public const string DecimalNumber = "DecimalNumber";

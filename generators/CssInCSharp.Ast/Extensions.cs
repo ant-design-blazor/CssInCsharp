@@ -1,4 +1,4 @@
-﻿namespace CssInCSharp.Ast.Css;
+﻿namespace CssInCSharp.Ast;
 
 public static class Extensions
 {
@@ -27,6 +27,11 @@ public static class Extensions
     public static bool Has<TSource>(this TSource[] source, int index)
     {
         return index < source.Length;
+    }
+
+    public static bool Has<TSource>(this List<TSource> source, int index)
+    {
+        return index < source.Count;
     }
 
     public static List<TSource> concat<TSource>(this List<TSource> source, params UnionList<TSource>[] second)
@@ -81,5 +86,10 @@ public static class Extensions
         to = Math.Min(to, len);
 
         return str.Substring(from, to - from);
+    }
+
+    public static bool ContainsKey(this Dictionary<string, string> dic, char key)
+    {
+        return dic.ContainsKey(key.ToString());
     }
 }

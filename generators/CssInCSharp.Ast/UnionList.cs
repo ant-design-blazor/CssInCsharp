@@ -1,4 +1,4 @@
-﻿namespace CssInCSharp.Ast.Css;
+﻿namespace CssInCSharp.Ast;
 
 public struct UnionList<T0>
 {
@@ -20,6 +20,7 @@ public struct UnionList<T0>
     public static implicit operator UnionList<T0>(List<T0> t) => new(1, value1: t);
 
     public bool IsElement => _index == 0;
+    public bool IsArray => _index == 1;
     public bool IsList => _index == 1;
 
     public T0 AsT0 => _value0;

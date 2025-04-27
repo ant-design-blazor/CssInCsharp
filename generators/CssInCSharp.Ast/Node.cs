@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace CssInCSharp.Ast.Css;
+namespace CssInCSharp.Ast;
 
 public struct Position
 {
