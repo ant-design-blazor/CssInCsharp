@@ -184,5 +184,44 @@ namespace CssInCSharp.Colors
         {
             return val - Math.Truncate(val);
         }
+
+        public static double ParseFloat(string input)
+        {
+            if (string.IsNullOrWhiteSpace(input))
+                return double.NaN;
+
+            input = input.TrimStart();
+
+            var i = 0;
+            var hasDot = false;
+            var hasDigit = false;
+
+            while (i < input.Length)
+            {
+                var c = input[i];
+                if ((c >= '0' && c <= '9') || (c == '.' && !hasDot) || (i == 0 && (c == '+' || c == '-')))
+                {
+                    if (c == '.')
+                        hasDot = true;
+                    else if (char.IsDigit(c))
+                        hasDigit = true;
+                    i++;
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            if (!hasDigit)
+                return double.NaN;
+
+            var numberPart = input.Substring(0, i);
+
+            if (double.TryParse(numberPart, out var result))
+                return result;
+
+            return double.NaN;
+        }
     }
 }

@@ -17,6 +17,7 @@ namespace CssInCSharp.Colors
         private readonly int _value1;
         private readonly TinyColor _value2;
         private readonly FastColor _value3;
+        private string _type;
 
         public ColorInput()
         {
@@ -47,6 +48,7 @@ namespace CssInCSharp.Colors
                 R = rgb.R; 
                 G = rgb.G;
                 B = rgb.B;
+                _type = "rgb";
             }
             if (rgba != default)
             {
@@ -54,12 +56,14 @@ namespace CssInCSharp.Colors
                 G = rgba.G;
                 B = rgba.B;
                 A = rgba.A;
+                _type = "rgb";
             }
             if (hsl != default)
             {
                 H = hsl.H;
                 S = hsl.S;
                 L = hsl.L;
+                _type = "hsl";
             }
             if (hsla != default)
             {
@@ -67,12 +71,14 @@ namespace CssInCSharp.Colors
                 S = hsla.S;
                 L = hsla.L;
                 A = hsla.A;
+                _type = "hsl";
             }
             if (hsv != default)
             {
                 H = hsv.H;
                 S = hsv.S;
                 V = hsv.V;
+                _type = "hsv";
             }
             if (hsva != default)
             {
@@ -80,6 +86,7 @@ namespace CssInCSharp.Colors
                 S = hsva.S;
                 V = hsva.V;
                 A = hsva.A;
+                _type = "hsv";
             }
         }
 
@@ -137,7 +144,7 @@ namespace CssInCSharp.Colors
 
         public bool Is(string type)
         {
-            return true;
+            return type == _type;
         }
 
         public override string ToString()
