@@ -1,6 +1,6 @@
 # CssInCSharp Generator
 
-In order to be able to migrate cssinjs style code or css style files to C# code, CssInCSharp implements a code migration tool.
+In order to be able to migrate cssinjs style code or css style files to C# code, CssInCSharp implements a code converter tool.
 
 ## Usage
 Install the command-line tools
@@ -36,7 +36,11 @@ Additional Arguments:
 
 - `cssincs convert -t ts -s src/style.ts -d dest/style.cs`
   
-  Convert the specified TS file to C# code.
+  Convert the specified ts file to C# code.
+
+- `cssincs convert -t css -s src/style.css -d dest/style.cs`
+
+  Convert the specified css file to C# code.
 
 ## Options
 
@@ -54,7 +58,7 @@ Additional Arguments:
 
 - `--type, -t`
   
-  The converter type supports `ts, css, less` etc.
+  The converter type supports `ts`, `css`, `less`, `sass`, `scss`.
 
 - `--dry-run`
 
@@ -67,12 +71,12 @@ Full profile example:
 
 ```json
 {
+  // converter type
   "Converter": "ts",
+  // csharp generator options
   "CsOptions": {
     "Usings": [
       "System",
-      "CssInCSharp",
-      "CssInCSharp.Colors",
       "static CssInCSharp.Css.CSSUtil",
       "Keyframes = CssInCSharp.Keyframe"
     ],
@@ -87,12 +91,6 @@ Full profile example:
     "UsePartialClass": true,
     "UseStaticMethod": true,
     "UseTypeInference": true,
-    "TypeInferences": [
-      {
-        "Pattern": "^token$",
-        "Value": "{NamePrefix}Token"
-      }
-    ],
     "Replacements": [
       {
         "Pattern": "FullToken(\\<\\w*\\>)?",
@@ -100,12 +98,14 @@ Full profile example:
       }
     ]
   },
+  // include source files
   "Include": [
     {
       "Src": "../ant-design/components/**/style/*.ts",
       "Dest": "./components"
     }
   ],
+  // exclude files
   "Exclude": [
     "../ant-design/components/style/*.ts"
   ]

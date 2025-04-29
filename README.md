@@ -62,6 +62,11 @@ For other examples, you can check out the example code.
 ## Css Compiler
 The CssInCSharp is similar to less or sass. You can simply convert you style file into C# class, so that you can make full use of the C# language features to generate style content.
 
+## Css Converter
+For those projects that are already using css or ts styles, you can use the [converter](./generators/README.md) provided by CssInCSharp to convert css or ts code into C# code, which improves style control and code reuse.
+
+For details about the style migration of antd-v5, see the [Antd v5 Style Migration Document](./docs/migration.md).
+
 ## Benchmark
 ```
 
