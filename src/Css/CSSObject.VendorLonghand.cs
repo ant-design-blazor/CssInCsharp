@@ -7,9 +7,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;time&gt;#`</para>
         /// <para> **Initial value**: `0s`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozAnimationDelay
+        public Property<CSSProperties, PropertySkip, string> MozAnimationDelay
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-animation-delay"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-animation-delay"];
             set => _properties["-moz-animation-delay"] = value;
         }
 
@@ -18,9 +18,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;single-animation-direction&gt;#`</para>
         /// <para> **Initial value**: `normal`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozAnimationDirection
+        public Property<CSSProperties, PropertySkip, string> MozAnimationDirection
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-animation-direction"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-animation-direction"];
             set => _properties["-moz-animation-direction"] = value;
         }
 
@@ -29,9 +29,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;time&gt;#`</para>
         /// <para> **Initial value**: `0s`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozAnimationDuration
+        public Property<CSSProperties, PropertySkip, string> MozAnimationDuration
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-animation-duration"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-animation-duration"];
             set => _properties["-moz-animation-duration"] = value;
         }
 
@@ -40,9 +40,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;single-animation-fill-mode&gt;#`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozAnimationFillMode
+        public Property<CSSProperties, PropertySkip, string> MozAnimationFillMode
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-animation-fill-mode"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-animation-fill-mode"];
             set => _properties["-moz-animation-fill-mode"] = value;
         }
 
@@ -51,9 +51,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;single-animation-iteration-count&gt;#`</para>
         /// <para> **Initial value**: `1`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> MozAnimationIterationCount
+        public Property<CSSProperties, PropertySkip, string, double> MozAnimationIterationCount
         {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-animation-iteration-count"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-moz-animation-iteration-count"];
             set => _properties["-moz-animation-iteration-count"] = value;
         }
 
@@ -62,9 +62,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `[ none | &lt;keyframes-name&gt; ]#`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string, Keyframe> MozAnimationName
+        public Property<CSSProperties, PropertySkip, string, Keyframe> MozAnimationName
         {
-            get => (Property<PropertySkip, string, Keyframe>) _properties["-moz-animation-name"];
+            get => (Property<CSSProperties, PropertySkip, string, Keyframe>) _properties["-moz-animation-name"];
             set => _properties["-moz-animation-name"] = value;
         }
 
@@ -73,9 +73,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;single-animation-play-state&gt;#`</para>
         /// <para> **Initial value**: `running`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozAnimationPlayState
+        public Property<CSSProperties, PropertySkip, string> MozAnimationPlayState
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-animation-play-state"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-animation-play-state"];
             set => _properties["-moz-animation-play-state"] = value;
         }
 
@@ -84,9 +84,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;easing-function&gt;#`</para>
         /// <para> **Initial value**: `ease`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozAnimationTimingFunction
+        public Property<CSSProperties, PropertySkip, string> MozAnimationTimingFunction
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-animation-timing-function"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-animation-timing-function"];
             set => _properties["-moz-animation-timing-function"] = value;
         }
 
@@ -95,9 +95,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | button | button-arrow-down | button-arrow-next | button-arrow-previous | button-arrow-up | button-bevel | button-focus | caret | checkbox | checkbox-container | checkbox-label | checkmenuitem | dualbutton | groupbox | listbox | listitem | menuarrow | menubar | menucheckbox | menuimage | menuitem | menuitemtext | menulist | menulist-button | menulist-text | menulist-textfield | menupopup | menuradio | menuseparator | meterbar | meterchunk | progressbar | progressbar-vertical | progresschunk | progresschunk-vertical | radio | radio-container | radio-label | radiomenuitem | range | range-thumb | resizer | resizerpanel | scale-horizontal | scalethumbend | scalethumb-horizontal | scalethumbstart | scalethumbtick | scalethumb-vertical | scale-vertical | scrollbarbutton-down | scrollbarbutton-left | scrollbarbutton-right | scrollbarbutton-up | scrollbarthumb-horizontal | scrollbarthumb-vertical | scrollbartrack-horizontal | scrollbartrack-vertical | searchfield | separator | sheet | spinner | spinner-downbutton | spinner-textfield | spinner-upbutton | splitter | statusbar | statusbarpanel | tab | tabpanel | tabpanels | tab-scroll-arrow-back | tab-scroll-arrow-forward | textfield | textfield-multiline | toolbar | toolbarbutton | toolbarbutton-dropdown | toolbargripper | toolbox | tooltip | treeheader | treeheadercell | treeheadersortarrow | treeitem | treeline | treetwisty | treetwistyopen | treeview | -moz-mac-unified-toolbar | -moz-win-borderless-glass | -moz-win-browsertabbar-toolbox | -moz-win-communicationstext | -moz-win-communications-toolbox | -moz-win-exclude-glass | -moz-win-glass | -moz-win-mediatext | -moz-win-media-toolbox | -moz-window-button-box | -moz-window-button-box-maximized | -moz-window-button-close | -moz-window-button-maximize | -moz-window-button-minimize | -moz-window-button-restore | -moz-window-frame-bottom | -moz-window-frame-left | -moz-window-frame-right | -moz-window-titlebar | -moz-window-titlebar-maximized`</para>
         /// <para> **Initial value**: `none` (but this value is overridden in the user agent CSS)</para>
         /// </summary>
-        public Property<PropertySkip, string> MozAppearance
+        public Property<CSSProperties, PropertySkip, string> MozAppearance
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-appearance"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-appearance"];
             set => _properties["-moz-appearance"] = value;
         }
 
@@ -106,9 +106,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;url&gt; | none`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozBinding
+        public Property<CSSProperties, PropertySkip, string> MozBinding
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-binding"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-binding"];
             set => _properties["-moz-binding"] = value;
         }
 
@@ -117,9 +117,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;color&gt;+ | none`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozBorderBottomColors
+        public Property<CSSProperties, PropertySkip, string> MozBorderBottomColors
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-border-bottom-colors"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-border-bottom-colors"];
             set => _properties["-moz-border-bottom-colors"] = value;
         }
 
@@ -128,9 +128,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;'border-top-color'&gt;`</para>
         /// <para> **Initial value**: `currentcolor`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozBorderEndColor
+        public Property<CSSProperties, PropertySkip, string> MozBorderEndColor
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-border-end-color"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-border-end-color"];
             set => _properties["-moz-border-end-color"] = value;
         }
 
@@ -139,9 +139,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;'border-top-style'&gt;`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozBorderEndStyle
+        public Property<CSSProperties, PropertySkip, string> MozBorderEndStyle
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-border-end-style"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-border-end-style"];
             set => _properties["-moz-border-end-style"] = value;
         }
 
@@ -150,9 +150,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;'border-top-width'&gt;`</para>
         /// <para> **Initial value**: `medium`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> MozBorderEndWidth
+        public Property<CSSProperties, PropertySkip, string, double> MozBorderEndWidth
         {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-border-end-width"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-moz-border-end-width"];
             set => _properties["-moz-border-end-width"] = value;
         }
 
@@ -161,9 +161,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;color&gt;+ | none`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozBorderLeftColors
+        public Property<CSSProperties, PropertySkip, string> MozBorderLeftColors
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-border-left-colors"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-border-left-colors"];
             set => _properties["-moz-border-left-colors"] = value;
         }
 
@@ -172,9 +172,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;color&gt;+ | none`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozBorderRightColors
+        public Property<CSSProperties, PropertySkip, string> MozBorderRightColors
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-border-right-colors"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-border-right-colors"];
             set => _properties["-moz-border-right-colors"] = value;
         }
 
@@ -183,9 +183,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;'border-top-color'&gt;`</para>
         /// <para> **Initial value**: `currentcolor`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozBorderStartColor
+        public Property<CSSProperties, PropertySkip, string> MozBorderStartColor
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-border-start-color"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-border-start-color"];
             set => _properties["-moz-border-start-color"] = value;
         }
 
@@ -194,9 +194,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;'border-top-style'&gt;`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozBorderStartStyle
+        public Property<CSSProperties, PropertySkip, string> MozBorderStartStyle
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-border-start-style"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-border-start-style"];
             set => _properties["-moz-border-start-style"] = value;
         }
 
@@ -205,9 +205,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;color&gt;+ | none`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozBorderTopColors
+        public Property<CSSProperties, PropertySkip, string> MozBorderTopColors
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-border-top-colors"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-border-top-colors"];
             set => _properties["-moz-border-top-colors"] = value;
         }
 
@@ -216,9 +216,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `content-box | border-box`</para>
         /// <para> **Initial value**: `content-box`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozBoxSizing
+        public Property<CSSProperties, PropertySkip, string> MozBoxSizing
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-box-sizing"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-box-sizing"];
             set => _properties["-moz-box-sizing"] = value;
         }
 
@@ -227,9 +227,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;integer&gt; | auto`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> MozColumnCount
+        public Property<CSSProperties, PropertySkip, string, double> MozColumnCount
         {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-column-count"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-moz-column-count"];
             set => _properties["-moz-column-count"] = value;
         }
 
@@ -238,9 +238,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `auto | balance | balance-all`</para>
         /// <para> **Initial value**: `balance`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozColumnFill
+        public Property<CSSProperties, PropertySkip, string> MozColumnFill
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-column-fill"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-column-fill"];
             set => _properties["-moz-column-fill"] = value;
         }
 
@@ -249,9 +249,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;color&gt;`</para>
         /// <para> **Initial value**: `currentcolor`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozColumnRuleColor
+        public Property<CSSProperties, PropertySkip, string> MozColumnRuleColor
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-column-rule-color"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-column-rule-color"];
             set => _properties["-moz-column-rule-color"] = value;
         }
 
@@ -260,9 +260,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;'border-style'&gt;`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozColumnRuleStyle
+        public Property<CSSProperties, PropertySkip, string> MozColumnRuleStyle
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-column-rule-style"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-column-rule-style"];
             set => _properties["-moz-column-rule-style"] = value;
         }
 
@@ -271,9 +271,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;'border-width'&gt;`</para>
         /// <para> **Initial value**: `medium`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> MozColumnRuleWidth
+        public Property<CSSProperties, PropertySkip, string, double> MozColumnRuleWidth
         {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-column-rule-width"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-moz-column-rule-width"];
             set => _properties["-moz-column-rule-width"] = value;
         }
 
@@ -282,9 +282,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;length&gt; | auto`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> MozColumnWidth
+        public Property<CSSProperties, PropertySkip, string, double> MozColumnWidth
         {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-column-width"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-moz-column-width"];
             set => _properties["-moz-column-width"] = value;
         }
 
@@ -293,9 +293,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | [ fill | fill-opacity | stroke | stroke-opacity ]#`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozContextProperties
+        public Property<CSSProperties, PropertySkip, string> MozContextProperties
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-context-properties"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-context-properties"];
             set => _properties["-moz-context-properties"] = value;
         }
 
@@ -304,9 +304,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `normal | &lt;feature-tag-value&gt;#`</para>
         /// <para> **Initial value**: `normal`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozFontFeatureSettings
+        public Property<CSSProperties, PropertySkip, string> MozFontFeatureSettings
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-font-feature-settings"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-font-feature-settings"];
             set => _properties["-moz-font-feature-settings"] = value;
         }
 
@@ -315,9 +315,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `normal | &lt;string&gt;`</para>
         /// <para> **Initial value**: `normal`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozFontLanguageOverride
+        public Property<CSSProperties, PropertySkip, string> MozFontLanguageOverride
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-font-language-override"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-font-language-override"];
             set => _properties["-moz-font-language-override"] = value;
         }
 
@@ -326,9 +326,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | manual | auto`</para>
         /// <para> **Initial value**: `manual`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozHyphens
+        public Property<CSSProperties, PropertySkip, string> MozHyphens
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-hyphens"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-hyphens"];
             set => _properties["-moz-hyphens"] = value;
         }
 
@@ -337,9 +337,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;shape&gt; | auto`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozImageRegion
+        public Property<CSSProperties, PropertySkip, string> MozImageRegion
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-image-region"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-image-region"];
             set => _properties["-moz-image-region"] = value;
         }
 
@@ -348,9 +348,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;'margin-left'&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> MozMarginEnd
+        public Property<CSSProperties, PropertySkip, string, double> MozMarginEnd
         {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-margin-end"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-moz-margin-end"];
             set => _properties["-moz-margin-end"] = value;
         }
 
@@ -359,9 +359,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;'margin-left'&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> MozMarginStart
+        public Property<CSSProperties, PropertySkip, string, double> MozMarginStart
         {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-margin-start"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-moz-margin-start"];
             set => _properties["-moz-margin-start"] = value;
         }
 
@@ -370,9 +370,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `inline | block | horizontal | vertical`</para>
         /// <para> **Initial value**: `inline`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozOrient
+        public Property<CSSProperties, PropertySkip, string> MozOrient
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-orient"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-orient"];
             set => _properties["-moz-orient"] = value;
         }
 
@@ -381,9 +381,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `auto | never | always | &lt;absolute-size&gt; | &lt;length&gt;`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> MozOsxFontSmoothing
+        public Property<CSSProperties, PropertySkip, string, double> MozOsxFontSmoothing
         {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-osx-font-smoothing"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-moz-osx-font-smoothing"];
             set => _properties["-moz-osx-font-smoothing"] = value;
         }
 
@@ -392,9 +392,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;outline-radius&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> MozOutlineRadiusBottomleft
+        public Property<CSSProperties, PropertySkip, string, double> MozOutlineRadiusBottomleft
         {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-outline-radius-bottomleft"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-moz-outline-radius-bottomleft"];
             set => _properties["-moz-outline-radius-bottomleft"] = value;
         }
 
@@ -403,9 +403,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;outline-radius&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> MozOutlineRadiusBottomright
+        public Property<CSSProperties, PropertySkip, string, double> MozOutlineRadiusBottomright
         {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-outline-radius-bottomright"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-moz-outline-radius-bottomright"];
             set => _properties["-moz-outline-radius-bottomright"] = value;
         }
 
@@ -414,9 +414,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;outline-radius&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> MozOutlineRadiusTopleft
+        public Property<CSSProperties, PropertySkip, string, double> MozOutlineRadiusTopleft
         {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-outline-radius-topleft"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-moz-outline-radius-topleft"];
             set => _properties["-moz-outline-radius-topleft"] = value;
         }
 
@@ -425,9 +425,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;outline-radius&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> MozOutlineRadiusTopright
+        public Property<CSSProperties, PropertySkip, string, double> MozOutlineRadiusTopright
         {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-outline-radius-topright"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-moz-outline-radius-topright"];
             set => _properties["-moz-outline-radius-topright"] = value;
         }
 
@@ -436,9 +436,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;'padding-left'&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> MozPaddingEnd
+        public Property<CSSProperties, PropertySkip, string, double> MozPaddingEnd
         {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-padding-end"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-moz-padding-end"];
             set => _properties["-moz-padding-end"] = value;
         }
 
@@ -447,9 +447,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;'padding-left'&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> MozPaddingStart
+        public Property<CSSProperties, PropertySkip, string, double> MozPaddingStart
         {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-padding-start"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-moz-padding-start"];
             set => _properties["-moz-padding-start"] = value;
         }
 
@@ -458,9 +458,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `ignore | stretch-to-fit`</para>
         /// <para> **Initial value**: `stretch-to-fit`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozStackSizing
+        public Property<CSSProperties, PropertySkip, string> MozStackSizing
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-stack-sizing"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-stack-sizing"];
             set => _properties["-moz-stack-sizing"] = value;
         }
 
@@ -469,9 +469,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;integer&gt; | &lt;length&gt;`</para>
         /// <para> **Initial value**: `8`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> MozTabSize
+        public Property<CSSProperties, PropertySkip, string, double> MozTabSize
         {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-tab-size"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-moz-tab-size"];
             set => _properties["-moz-tab-size"] = value;
         }
 
@@ -480,9 +480,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | blink`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozTextBlink
+        public Property<CSSProperties, PropertySkip, string> MozTextBlink
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-text-blink"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-text-blink"];
             set => _properties["-moz-text-blink"] = value;
         }
 
@@ -491,9 +491,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | auto | &lt;percentage&gt;`</para>
         /// <para> **Initial value**: `auto` for smartphone browsers supporting inflation, `none` in other cases (and then not modifiable).</para>
         /// </summary>
-        public Property<PropertySkip, string> MozTextSizeAdjust
+        public Property<CSSProperties, PropertySkip, string> MozTextSizeAdjust
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-text-size-adjust"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-text-size-adjust"];
             set => _properties["-moz-text-size-adjust"] = value;
         }
 
@@ -502,9 +502,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `ignore | normal | select-after | select-before | select-menu | select-same | select-all | none`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozUserFocus
+        public Property<CSSProperties, PropertySkip, string> MozUserFocus
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-user-focus"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-user-focus"];
             set => _properties["-moz-user-focus"] = value;
         }
 
@@ -513,9 +513,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `read-only | read-write | write-only`</para>
         /// <para> **Initial value**: `read-only`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozUserModify
+        public Property<CSSProperties, PropertySkip, string> MozUserModify
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-user-modify"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-user-modify"];
             set => _properties["-moz-user-modify"] = value;
         }
 
@@ -524,9 +524,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `auto | text | none | contain | all`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozUserSelect
+        public Property<CSSProperties, PropertySkip, string> MozUserSelect
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-user-select"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-user-select"];
             set => _properties["-moz-user-select"] = value;
         }
 
@@ -535,9 +535,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `drag | no-drag`</para>
         /// <para> **Initial value**: `drag`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozWindowDragging
+        public Property<CSSProperties, PropertySkip, string> MozWindowDragging
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-window-dragging"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-window-dragging"];
             set => _properties["-moz-window-dragging"] = value;
         }
 
@@ -546,9 +546,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `default | menu | tooltip | sheet | none`</para>
         /// <para> **Initial value**: `default`</para>
         /// </summary>
-        public Property<PropertySkip, string> MozWindowShadow
+        public Property<CSSProperties, PropertySkip, string> MozWindowShadow
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-window-shadow"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-window-shadow"];
             set => _properties["-moz-window-shadow"] = value;
         }
 
@@ -557,9 +557,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `false | true`</para>
         /// <para> **Initial value**: `false`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsAccelerator
+        public Property<CSSProperties, PropertySkip, string> MsAccelerator
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-accelerator"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-accelerator"];
             set => _properties["-ms-accelerator"] = value;
         }
 
@@ -568,9 +568,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `tb | rl | bt | lr`</para>
         /// <para> **Initial value**: `tb`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsBlockProgression
+        public Property<CSSProperties, PropertySkip, string> MsBlockProgression
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-block-progression"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-block-progression"];
             set => _properties["-ms-block-progression"] = value;
         }
 
@@ -579,9 +579,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | chained`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsContentZoomChaining
+        public Property<CSSProperties, PropertySkip, string> MsContentZoomChaining
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-content-zoom-chaining"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-content-zoom-chaining"];
             set => _properties["-ms-content-zoom-chaining"] = value;
         }
 
@@ -590,9 +590,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;percentage&gt;`</para>
         /// <para> **Initial value**: `400%`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsContentZoomLimitMax
+        public Property<CSSProperties, PropertySkip, string> MsContentZoomLimitMax
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-content-zoom-limit-max"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-content-zoom-limit-max"];
             set => _properties["-ms-content-zoom-limit-max"] = value;
         }
 
@@ -601,9 +601,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;percentage&gt;`</para>
         /// <para> **Initial value**: `100%`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsContentZoomLimitMin
+        public Property<CSSProperties, PropertySkip, string> MsContentZoomLimitMin
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-content-zoom-limit-min"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-content-zoom-limit-min"];
             set => _properties["-ms-content-zoom-limit-min"] = value;
         }
 
@@ -612,9 +612,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `snapInterval( &lt;percentage&gt;, &lt;percentage&gt; ) | snapList( &lt;percentage&gt;# )`</para>
         /// <para> **Initial value**: `snapInterval(0%, 100%)`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsContentZoomSnapPoints
+        public Property<CSSProperties, PropertySkip, string> MsContentZoomSnapPoints
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-content-zoom-snap-points"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-content-zoom-snap-points"];
             set => _properties["-ms-content-zoom-snap-points"] = value;
         }
 
@@ -623,9 +623,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | proximity | mandatory`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsContentZoomSnapType
+        public Property<CSSProperties, PropertySkip, string> MsContentZoomSnapType
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-content-zoom-snap-type"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-content-zoom-snap-type"];
             set => _properties["-ms-content-zoom-snap-type"] = value;
         }
 
@@ -634,9 +634,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | zoom`</para>
         /// <para> **Initial value**: zoom for the top level element, none for all other elements</para>
         /// </summary>
-        public Property<PropertySkip, string> MsContentZooming
+        public Property<CSSProperties, PropertySkip, string> MsContentZooming
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-content-zooming"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-content-zooming"];
             set => _properties["-ms-content-zooming"] = value;
         }
 
@@ -645,9 +645,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;string&gt;`</para>
         /// <para> **Initial value**: "" (the empty string)</para>
         /// </summary>
-        public Property<PropertySkip, string> MsFilter
+        public Property<CSSProperties, PropertySkip, string> MsFilter
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-filter"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-filter"];
             set => _properties["-ms-filter"] = value;
         }
 
@@ -656,9 +656,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `row | row-reverse | column | column-reverse`</para>
         /// <para> **Initial value**: `row`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsFlexDirection
+        public Property<CSSProperties, PropertySkip, string> MsFlexDirection
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-flex-direction"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-flex-direction"];
             set => _properties["-ms-flex-direction"] = value;
         }
 
@@ -667,9 +667,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;number&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> MsFlexPositive
+        public Property<CSSProperties, PropertySkip, string, double> MsFlexPositive
         {
-            get => (Property<PropertySkip, string, double>) _properties["-ms-flex-positive"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-ms-flex-positive"];
             set => _properties["-ms-flex-positive"] = value;
         }
 
@@ -678,9 +678,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `[ none | &lt;custom-ident&gt; ]#`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsFlowFrom
+        public Property<CSSProperties, PropertySkip, string> MsFlowFrom
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-flow-from"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-flow-from"];
             set => _properties["-ms-flow-from"] = value;
         }
 
@@ -689,9 +689,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `[ none | &lt;custom-ident&gt; ]#`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsFlowInto
+        public Property<CSSProperties, PropertySkip, string> MsFlowInto
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-flow-into"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-flow-into"];
             set => _properties["-ms-flow-into"] = value;
         }
 
@@ -700,9 +700,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | &lt;track-list&gt; | &lt;auto-track-list&gt;`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> MsGridColumns
+        public Property<CSSProperties, PropertySkip, string, double> MsGridColumns
         {
-            get => (Property<PropertySkip, string, double>) _properties["-ms-grid-columns"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-ms-grid-columns"];
             set => _properties["-ms-grid-columns"] = value;
         }
 
@@ -711,9 +711,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | &lt;track-list&gt; | &lt;auto-track-list&gt;`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> MsGridRows
+        public Property<CSSProperties, PropertySkip, string, double> MsGridRows
         {
-            get => (Property<PropertySkip, string, double>) _properties["-ms-grid-rows"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-ms-grid-rows"];
             set => _properties["-ms-grid-rows"] = value;
         }
 
@@ -722,9 +722,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `auto | none`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsHighContrastAdjust
+        public Property<CSSProperties, PropertySkip, string> MsHighContrastAdjust
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-high-contrast-adjust"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-high-contrast-adjust"];
             set => _properties["-ms-high-contrast-adjust"] = value;
         }
 
@@ -733,9 +733,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `auto | &lt;integer&gt;{1,3}`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> MsHyphenateLimitChars
+        public Property<CSSProperties, PropertySkip, string, double> MsHyphenateLimitChars
         {
-            get => (Property<PropertySkip, string, double>) _properties["-ms-hyphenate-limit-chars"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-ms-hyphenate-limit-chars"];
             set => _properties["-ms-hyphenate-limit-chars"] = value;
         }
 
@@ -744,9 +744,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `no-limit | &lt;integer&gt;`</para>
         /// <para> **Initial value**: `no-limit`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> MsHyphenateLimitLines
+        public Property<CSSProperties, PropertySkip, string, double> MsHyphenateLimitLines
         {
-            get => (Property<PropertySkip, string, double>) _properties["-ms-hyphenate-limit-lines"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-ms-hyphenate-limit-lines"];
             set => _properties["-ms-hyphenate-limit-lines"] = value;
         }
 
@@ -755,9 +755,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;percentage&gt; | &lt;length&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> MsHyphenateLimitZone
+        public Property<CSSProperties, PropertySkip, string, double> MsHyphenateLimitZone
         {
-            get => (Property<PropertySkip, string, double>) _properties["-ms-hyphenate-limit-zone"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-ms-hyphenate-limit-zone"];
             set => _properties["-ms-hyphenate-limit-zone"] = value;
         }
 
@@ -766,9 +766,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | manual | auto`</para>
         /// <para> **Initial value**: `manual`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsHyphens
+        public Property<CSSProperties, PropertySkip, string> MsHyphens
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-hyphens"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-hyphens"];
             set => _properties["-ms-hyphens"] = value;
         }
 
@@ -777,9 +777,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `auto | after`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsImeAlign
+        public Property<CSSProperties, PropertySkip, string> MsImeAlign
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-ime-align"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-ime-align"];
             set => _properties["-ms-ime-align"] = value;
         }
 
@@ -788,9 +788,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `auto | loose | normal | strict | anywhere`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsLineBreak
+        public Property<CSSProperties, PropertySkip, string> MsLineBreak
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-line-break"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-line-break"];
             set => _properties["-ms-line-break"] = value;
         }
 
@@ -799,9 +799,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;integer&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> MsOrder
+        public Property<CSSProperties, PropertySkip, string, double> MsOrder
         {
-            get => (Property<PropertySkip, string, double>) _properties["-ms-order"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-ms-order"];
             set => _properties["-ms-order"] = value;
         }
 
@@ -810,9 +810,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `auto | none | scrollbar | -ms-autohiding-scrollbar`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsOverflowStyle
+        public Property<CSSProperties, PropertySkip, string> MsOverflowStyle
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-overflow-style"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-overflow-style"];
             set => _properties["-ms-overflow-style"] = value;
         }
 
@@ -821,9 +821,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `visible | hidden | clip | scroll | auto`</para>
         /// <para> **Initial value**: `visible`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsOverflowX
+        public Property<CSSProperties, PropertySkip, string> MsOverflowX
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-overflow-x"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-overflow-x"];
             set => _properties["-ms-overflow-x"] = value;
         }
 
@@ -832,9 +832,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `visible | hidden | clip | scroll | auto`</para>
         /// <para> **Initial value**: `visible`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsOverflowY
+        public Property<CSSProperties, PropertySkip, string> MsOverflowY
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-overflow-y"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-overflow-y"];
             set => _properties["-ms-overflow-y"] = value;
         }
 
@@ -843,9 +843,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `chained | none`</para>
         /// <para> **Initial value**: `chained`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsScrollChaining
+        public Property<CSSProperties, PropertySkip, string> MsScrollChaining
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-scroll-chaining"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-scroll-chaining"];
             set => _properties["-ms-scroll-chaining"] = value;
         }
 
@@ -854,9 +854,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `auto | &lt;length&gt;`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> MsScrollLimitXMax
+        public Property<CSSProperties, PropertySkip, string, double> MsScrollLimitXMax
         {
-            get => (Property<PropertySkip, string, double>) _properties["-ms-scroll-limit-x-max"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-ms-scroll-limit-x-max"];
             set => _properties["-ms-scroll-limit-x-max"] = value;
         }
 
@@ -865,9 +865,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;length&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> MsScrollLimitXMin
+        public Property<CSSProperties, PropertySkip, string, double> MsScrollLimitXMin
         {
-            get => (Property<PropertySkip, string, double>) _properties["-ms-scroll-limit-x-min"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-ms-scroll-limit-x-min"];
             set => _properties["-ms-scroll-limit-x-min"] = value;
         }
 
@@ -876,9 +876,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `auto | &lt;length&gt;`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> MsScrollLimitYMax
+        public Property<CSSProperties, PropertySkip, string, double> MsScrollLimitYMax
         {
-            get => (Property<PropertySkip, string, double>) _properties["-ms-scroll-limit-y-max"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-ms-scroll-limit-y-max"];
             set => _properties["-ms-scroll-limit-y-max"] = value;
         }
 
@@ -887,9 +887,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;length&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> MsScrollLimitYMin
+        public Property<CSSProperties, PropertySkip, string, double> MsScrollLimitYMin
         {
-            get => (Property<PropertySkip, string, double>) _properties["-ms-scroll-limit-y-min"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-ms-scroll-limit-y-min"];
             set => _properties["-ms-scroll-limit-y-min"] = value;
         }
 
@@ -898,9 +898,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | railed`</para>
         /// <para> **Initial value**: `railed`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsScrollRails
+        public Property<CSSProperties, PropertySkip, string> MsScrollRails
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-scroll-rails"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-scroll-rails"];
             set => _properties["-ms-scroll-rails"] = value;
         }
 
@@ -909,9 +909,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `snapInterval( &lt;length-percentage&gt;, &lt;length-percentage&gt; ) | snapList( &lt;length-percentage&gt;# )`</para>
         /// <para> **Initial value**: `snapInterval(0px, 100%)`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsScrollSnapPointsX
+        public Property<CSSProperties, PropertySkip, string> MsScrollSnapPointsX
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-scroll-snap-points-x"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-scroll-snap-points-x"];
             set => _properties["-ms-scroll-snap-points-x"] = value;
         }
 
@@ -920,9 +920,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `snapInterval( &lt;length-percentage&gt;, &lt;length-percentage&gt; ) | snapList( &lt;length-percentage&gt;# )`</para>
         /// <para> **Initial value**: `snapInterval(0px, 100%)`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsScrollSnapPointsY
+        public Property<CSSProperties, PropertySkip, string> MsScrollSnapPointsY
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-scroll-snap-points-y"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-scroll-snap-points-y"];
             set => _properties["-ms-scroll-snap-points-y"] = value;
         }
 
@@ -931,9 +931,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | proximity | mandatory`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsScrollSnapType
+        public Property<CSSProperties, PropertySkip, string> MsScrollSnapType
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-scroll-snap-type"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-scroll-snap-type"];
             set => _properties["-ms-scroll-snap-type"] = value;
         }
 
@@ -942,9 +942,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | vertical-to-horizontal`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsScrollTranslation
+        public Property<CSSProperties, PropertySkip, string> MsScrollTranslation
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-scroll-translation"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-scroll-translation"];
             set => _properties["-ms-scroll-translation"] = value;
         }
 
@@ -953,9 +953,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;color&gt;`</para>
         /// <para> **Initial value**: depends on user agent</para>
         /// </summary>
-        public Property<PropertySkip, string> MsScrollbar3dlightColor
+        public Property<CSSProperties, PropertySkip, string> MsScrollbar3dlightColor
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-scrollbar3dlight-color"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-scrollbar3dlight-color"];
             set => _properties["-ms-scrollbar3dlight-color"] = value;
         }
 
@@ -964,9 +964,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;color&gt;`</para>
         /// <para> **Initial value**: `ButtonText`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsScrollbarArrowColor
+        public Property<CSSProperties, PropertySkip, string> MsScrollbarArrowColor
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-scrollbar-arrow-color"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-scrollbar-arrow-color"];
             set => _properties["-ms-scrollbar-arrow-color"] = value;
         }
 
@@ -975,9 +975,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;color&gt;`</para>
         /// <para> **Initial value**: depends on user agent</para>
         /// </summary>
-        public Property<PropertySkip, string> MsScrollbarBaseColor
+        public Property<CSSProperties, PropertySkip, string> MsScrollbarBaseColor
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-scrollbar-base-color"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-scrollbar-base-color"];
             set => _properties["-ms-scrollbar-base-color"] = value;
         }
 
@@ -986,9 +986,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;color&gt;`</para>
         /// <para> **Initial value**: `ThreeDDarkShadow`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsScrollbarDarkshadowColor
+        public Property<CSSProperties, PropertySkip, string> MsScrollbarDarkshadowColor
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-scrollbar-darkshadow-color"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-scrollbar-darkshadow-color"];
             set => _properties["-ms-scrollbar-darkshadow-color"] = value;
         }
 
@@ -997,9 +997,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;color&gt;`</para>
         /// <para> **Initial value**: `ThreeDFace`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsScrollbarFaceColor
+        public Property<CSSProperties, PropertySkip, string> MsScrollbarFaceColor
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-scrollbar-face-color"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-scrollbar-face-color"];
             set => _properties["-ms-scrollbar-face-color"] = value;
         }
 
@@ -1008,9 +1008,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;color&gt;`</para>
         /// <para> **Initial value**: `ThreeDHighlight`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsScrollbarHighlightColor
+        public Property<CSSProperties, PropertySkip, string> MsScrollbarHighlightColor
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-scrollbar-highlight-color"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-scrollbar-highlight-color"];
             set => _properties["-ms-scrollbar-highlight-color"] = value;
         }
 
@@ -1019,9 +1019,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;color&gt;`</para>
         /// <para> **Initial value**: `ThreeDDarkShadow`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsScrollbarShadowColor
+        public Property<CSSProperties, PropertySkip, string> MsScrollbarShadowColor
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-scrollbar-shadow-color"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-scrollbar-shadow-color"];
             set => _properties["-ms-scrollbar-shadow-color"] = value;
         }
 
@@ -1030,9 +1030,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;color&gt;`</para>
         /// <para> **Initial value**: `Scrollbar`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsScrollbarTrackColor
+        public Property<CSSProperties, PropertySkip, string> MsScrollbarTrackColor
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-scrollbar-track-color"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-scrollbar-track-color"];
             set => _properties["-ms-scrollbar-track-color"] = value;
         }
 
@@ -1041,9 +1041,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | ideograph-alpha | ideograph-numeric | ideograph-parenthesis | ideograph-space`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsTextAutospace
+        public Property<CSSProperties, PropertySkip, string> MsTextAutospace
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-text-autospace"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-text-autospace"];
             set => _properties["-ms-text-autospace"] = value;
         }
 
@@ -1052,9 +1052,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | all | [ digits &lt;integer&gt;? ]`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsTextCombineHorizontal
+        public Property<CSSProperties, PropertySkip, string> MsTextCombineHorizontal
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-text-combine-horizontal"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-text-combine-horizontal"];
             set => _properties["-ms-text-combine-horizontal"] = value;
         }
 
@@ -1063,9 +1063,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `[ clip | ellipsis | &lt;string&gt; ]{1,2}`</para>
         /// <para> **Initial value**: `clip`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsTextOverflow
+        public Property<CSSProperties, PropertySkip, string> MsTextOverflow
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-text-overflow"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-text-overflow"];
             set => _properties["-ms-text-overflow"] = value;
         }
 
@@ -1074,9 +1074,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `auto | none | [ [ pan-x | pan-left | pan-right ] || [ pan-y | pan-up | pan-down ] || pinch-zoom ] | manipulation`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsTouchAction
+        public Property<CSSProperties, PropertySkip, string> MsTouchAction
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-touch-action"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-touch-action"];
             set => _properties["-ms-touch-action"] = value;
         }
 
@@ -1085,9 +1085,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `grippers | none`</para>
         /// <para> **Initial value**: `grippers`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsTouchSelect
+        public Property<CSSProperties, PropertySkip, string> MsTouchSelect
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-touch-select"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-touch-select"];
             set => _properties["-ms-touch-select"] = value;
         }
 
@@ -1096,9 +1096,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | &lt;transform-list&gt;`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsTransform
+        public Property<CSSProperties, PropertySkip, string> MsTransform
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-transform"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-transform"];
             set => _properties["-ms-transform"] = value;
         }
 
@@ -1107,9 +1107,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `[ &lt;length-percentage&gt; | left | center | right | top | bottom ] | [ [ &lt;length-percentage&gt; | left | center | right ] && [ &lt;length-percentage&gt; | top | center | bottom ] ] &lt;length&gt;?`</para>
         /// <para> **Initial value**: `50% 50% 0`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> MsTransformOrigin
+        public Property<CSSProperties, PropertySkip, string, double> MsTransformOrigin
         {
-            get => (Property<PropertySkip, string, double>) _properties["-ms-transform-origin"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-ms-transform-origin"];
             set => _properties["-ms-transform-origin"] = value;
         }
 
@@ -1118,9 +1118,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;time&gt;#`</para>
         /// <para> **Initial value**: `0s`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsTransitionDelay
+        public Property<CSSProperties, PropertySkip, string> MsTransitionDelay
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-transition-delay"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-transition-delay"];
             set => _properties["-ms-transition-delay"] = value;
         }
 
@@ -1129,9 +1129,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;time&gt;#`</para>
         /// <para> **Initial value**: `0s`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsTransitionDuration
+        public Property<CSSProperties, PropertySkip, string> MsTransitionDuration
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-transition-duration"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-transition-duration"];
             set => _properties["-ms-transition-duration"] = value;
         }
 
@@ -1140,9 +1140,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | &lt;single-transition-property&gt;#`</para>
         /// <para> **Initial value**: all</para>
         /// </summary>
-        public Property<PropertySkip, string> MsTransitionProperty
+        public Property<CSSProperties, PropertySkip, string> MsTransitionProperty
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-transition-property"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-transition-property"];
             set => _properties["-ms-transition-property"] = value;
         }
 
@@ -1151,9 +1151,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;easing-function&gt;#`</para>
         /// <para> **Initial value**: `ease`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsTransitionTimingFunction
+        public Property<CSSProperties, PropertySkip, string> MsTransitionTimingFunction
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-transition-timing-function"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-transition-timing-function"];
             set => _properties["-ms-transition-timing-function"] = value;
         }
 
@@ -1162,9 +1162,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | element | text`</para>
         /// <para> **Initial value**: `text`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsUserSelect
+        public Property<CSSProperties, PropertySkip, string> MsUserSelect
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-user-select"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-user-select"];
             set => _properties["-ms-user-select"] = value;
         }
 
@@ -1173,9 +1173,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `normal | break-all | keep-all | break-word`</para>
         /// <para> **Initial value**: `normal`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsWordBreak
+        public Property<CSSProperties, PropertySkip, string> MsWordBreak
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-word-break"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-word-break"];
             set => _properties["-ms-word-break"] = value;
         }
 
@@ -1184,9 +1184,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `auto | both | start | end | maximum | clear`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsWrapFlow
+        public Property<CSSProperties, PropertySkip, string> MsWrapFlow
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-wrap-flow"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-wrap-flow"];
             set => _properties["-ms-wrap-flow"] = value;
         }
 
@@ -1195,9 +1195,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;length&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> MsWrapMargin
+        public Property<CSSProperties, PropertySkip, string, double> MsWrapMargin
         {
-            get => (Property<PropertySkip, string, double>) _properties["-ms-wrap-margin"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-ms-wrap-margin"];
             set => _properties["-ms-wrap-margin"] = value;
         }
 
@@ -1206,9 +1206,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `wrap | none`</para>
         /// <para> **Initial value**: `wrap`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsWrapThrough
+        public Property<CSSProperties, PropertySkip, string> MsWrapThrough
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-wrap-through"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-wrap-through"];
             set => _properties["-ms-wrap-through"] = value;
         }
 
@@ -1217,9 +1217,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `horizontal-tb | vertical-rl | vertical-lr | sideways-rl | sideways-lr`</para>
         /// <para> **Initial value**: `horizontal-tb`</para>
         /// </summary>
-        public Property<PropertySkip, string> MsWritingMode
+        public Property<CSSProperties, PropertySkip, string> MsWritingMode
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-writing-mode"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-writing-mode"];
             set => _properties["-ms-writing-mode"] = value;
         }
 
@@ -1228,9 +1228,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `normal | &lt;baseline-position&gt; | &lt;content-distribution&gt; | &lt;overflow-position&gt;? &lt;content-position&gt;`</para>
         /// <para> **Initial value**: `normal`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitAlignContent
+        public Property<CSSProperties, PropertySkip, string> WebkitAlignContent
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-align-content"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-align-content"];
             set => _properties["-webkit-align-content"] = value;
         }
 
@@ -1239,9 +1239,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `normal | stretch | &lt;baseline-position&gt; | [ &lt;overflow-position&gt;? &lt;self-position&gt; ]`</para>
         /// <para> **Initial value**: `normal`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitAlignItems
+        public Property<CSSProperties, PropertySkip, string> WebkitAlignItems
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-align-items"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-align-items"];
             set => _properties["-webkit-align-items"] = value;
         }
 
@@ -1250,9 +1250,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `auto | normal | stretch | &lt;baseline-position&gt; | &lt;overflow-position&gt;? &lt;self-position&gt;`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitAlignSelf
+        public Property<CSSProperties, PropertySkip, string> WebkitAlignSelf
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-align-self"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-align-self"];
             set => _properties["-webkit-align-self"] = value;
         }
 
@@ -1261,9 +1261,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;time&gt;#`</para>
         /// <para> **Initial value**: `0s`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitAnimationDelay
+        public Property<CSSProperties, PropertySkip, string> WebkitAnimationDelay
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-animation-delay"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-animation-delay"];
             set => _properties["-webkit-animation-delay"] = value;
         }
 
@@ -1272,9 +1272,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;single-animation-direction&gt;#`</para>
         /// <para> **Initial value**: `normal`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitAnimationDirection
+        public Property<CSSProperties, PropertySkip, string> WebkitAnimationDirection
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-animation-direction"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-animation-direction"];
             set => _properties["-webkit-animation-direction"] = value;
         }
 
@@ -1283,9 +1283,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;time&gt;#`</para>
         /// <para> **Initial value**: `0s`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitAnimationDuration
+        public Property<CSSProperties, PropertySkip, string> WebkitAnimationDuration
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-animation-duration"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-animation-duration"];
             set => _properties["-webkit-animation-duration"] = value;
         }
 
@@ -1294,9 +1294,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;single-animation-fill-mode&gt;#`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitAnimationFillMode
+        public Property<CSSProperties, PropertySkip, string> WebkitAnimationFillMode
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-animation-fill-mode"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-animation-fill-mode"];
             set => _properties["-webkit-animation-fill-mode"] = value;
         }
 
@@ -1305,9 +1305,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;single-animation-iteration-count&gt;#`</para>
         /// <para> **Initial value**: `1`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitAnimationIterationCount
+        public Property<CSSProperties, PropertySkip, string, double> WebkitAnimationIterationCount
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-animation-iteration-count"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-animation-iteration-count"];
             set => _properties["-webkit-animation-iteration-count"] = value;
         }
 
@@ -1316,9 +1316,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `[ none | &lt;keyframes-name&gt; ]#`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string, Keyframe> WebkitAnimationName
+        public Property<CSSProperties, PropertySkip, string, Keyframe> WebkitAnimationName
         {
-            get => (Property<PropertySkip, string, Keyframe>) _properties["-webkit-animation-name"];
+            get => (Property<CSSProperties, PropertySkip, string, Keyframe>) _properties["-webkit-animation-name"];
             set => _properties["-webkit-animation-name"] = value;
         }
 
@@ -1327,9 +1327,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;single-animation-play-state&gt;#`</para>
         /// <para> **Initial value**: `running`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitAnimationPlayState
+        public Property<CSSProperties, PropertySkip, string> WebkitAnimationPlayState
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-animation-play-state"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-animation-play-state"];
             set => _properties["-webkit-animation-play-state"] = value;
         }
 
@@ -1338,9 +1338,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;easing-function&gt;#`</para>
         /// <para> **Initial value**: `ease`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitAnimationTimingFunction
+        public Property<CSSProperties, PropertySkip, string> WebkitAnimationTimingFunction
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-animation-timing-function"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-animation-timing-function"];
             set => _properties["-webkit-animation-timing-function"] = value;
         }
 
@@ -1349,9 +1349,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | button | button-bevel | caret | checkbox | default-button | inner-spin-button | listbox | listitem | media-controls-background | media-controls-fullscreen-background | media-current-time-display | media-enter-fullscreen-button | media-exit-fullscreen-button | media-fullscreen-button | media-mute-button | media-overlay-play-button | media-play-button | media-seek-back-button | media-seek-forward-button | media-slider | media-sliderthumb | media-time-remaining-display | media-toggle-closed-captions-button | media-volume-slider | media-volume-slider-container | media-volume-sliderthumb | menulist | menulist-button | menulist-text | menulist-textfield | meter | progress-bar | progress-bar-value | push-button | radio | searchfield | searchfield-cancel-button | searchfield-decoration | searchfield-results-button | searchfield-results-decoration | slider-horizontal | slider-vertical | sliderthumb-horizontal | sliderthumb-vertical | square-button | textarea | textfield | -apple-pay-button`</para>
         /// <para> **Initial value**: `none` (but this value is overridden in the user agent CSS)</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitAppearance
+        public Property<CSSProperties, PropertySkip, string> WebkitAppearance
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-appearance"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-appearance"];
             set => _properties["-webkit-appearance"] = value;
         }
 
@@ -1360,9 +1360,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | &lt;filter-function-list&gt;`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitBackdropFilter
+        public Property<CSSProperties, PropertySkip, string> WebkitBackdropFilter
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-backdrop-filter"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-backdrop-filter"];
             set => _properties["-webkit-backdrop-filter"] = value;
         }
 
@@ -1371,9 +1371,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `visible | hidden`</para>
         /// <para> **Initial value**: `visible`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitBackfaceVisibility
+        public Property<CSSProperties, PropertySkip, string> WebkitBackfaceVisibility
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-backface-visibility"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-backface-visibility"];
             set => _properties["-webkit-backface-visibility"] = value;
         }
 
@@ -1382,9 +1382,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;box&gt;#`</para>
         /// <para> **Initial value**: `border-box`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitBackgroundClip
+        public Property<CSSProperties, PropertySkip, string> WebkitBackgroundClip
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-background-clip"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-background-clip"];
             set => _properties["-webkit-background-clip"] = value;
         }
 
@@ -1393,9 +1393,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;box&gt;#`</para>
         /// <para> **Initial value**: `padding-box`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitBackgroundOrigin
+        public Property<CSSProperties, PropertySkip, string> WebkitBackgroundOrigin
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-background-origin"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-background-origin"];
             set => _properties["-webkit-background-origin"] = value;
         }
 
@@ -1404,9 +1404,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;bg-size&gt;#`</para>
         /// <para> **Initial value**: `auto auto`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitBackgroundSize
+        public Property<CSSProperties, PropertySkip, string, double> WebkitBackgroundSize
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-background-size"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-background-size"];
             set => _properties["-webkit-background-size"] = value;
         }
 
@@ -1414,9 +1414,9 @@ namespace CssInCSharp
         /// **Syntax**: `&lt;color&gt;`
         /// <para> **Initial value**: `currentcolor`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitBorderBeforeColor
+        public Property<CSSProperties, PropertySkip, string> WebkitBorderBeforeColor
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-border-before-color"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-border-before-color"];
             set => _properties["-webkit-border-before-color"] = value;
         }
 
@@ -1424,9 +1424,9 @@ namespace CssInCSharp
         /// **Syntax**: `&lt;'border-style'&gt;`
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitBorderBeforeStyle
+        public Property<CSSProperties, PropertySkip, string> WebkitBorderBeforeStyle
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-border-before-style"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-border-before-style"];
             set => _properties["-webkit-border-before-style"] = value;
         }
 
@@ -1434,9 +1434,9 @@ namespace CssInCSharp
         /// **Syntax**: `&lt;'border-width'&gt;`
         /// <para> **Initial value**: `medium`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitBorderBeforeWidth
+        public Property<CSSProperties, PropertySkip, string, double> WebkitBorderBeforeWidth
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-border-before-width"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-border-before-width"];
             set => _properties["-webkit-border-before-width"] = value;
         }
 
@@ -1445,9 +1445,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;length-percentage&gt;{1,2}`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitBorderBottomLeftRadius
+        public Property<CSSProperties, PropertySkip, string, double> WebkitBorderBottomLeftRadius
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-border-bottom-left-radius"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-border-bottom-left-radius"];
             set => _properties["-webkit-border-bottom-left-radius"] = value;
         }
 
@@ -1456,9 +1456,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;length-percentage&gt;{1,2}`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitBorderBottomRightRadius
+        public Property<CSSProperties, PropertySkip, string, double> WebkitBorderBottomRightRadius
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-border-bottom-right-radius"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-border-bottom-right-radius"];
             set => _properties["-webkit-border-bottom-right-radius"] = value;
         }
 
@@ -1467,9 +1467,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;number-percentage&gt;{1,4} && fill?`</para>
         /// <para> **Initial value**: `100%`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitBorderImageSlice
+        public Property<CSSProperties, PropertySkip, string, double> WebkitBorderImageSlice
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-border-image-slice"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-border-image-slice"];
             set => _properties["-webkit-border-image-slice"] = value;
         }
 
@@ -1478,9 +1478,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;length-percentage&gt;{1,2}`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitBorderTopLeftRadius
+        public Property<CSSProperties, PropertySkip, string, double> WebkitBorderTopLeftRadius
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-border-top-left-radius"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-border-top-left-radius"];
             set => _properties["-webkit-border-top-left-radius"] = value;
         }
 
@@ -1489,9 +1489,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;length-percentage&gt;{1,2}`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitBorderTopRightRadius
+        public Property<CSSProperties, PropertySkip, string, double> WebkitBorderTopRightRadius
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-border-top-right-radius"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-border-top-right-radius"];
             set => _properties["-webkit-border-top-right-radius"] = value;
         }
 
@@ -1500,9 +1500,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `slice | clone`</para>
         /// <para> **Initial value**: `slice`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitBoxDecorationBreak
+        public Property<CSSProperties, PropertySkip, string> WebkitBoxDecorationBreak
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-box-decoration-break"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-box-decoration-break"];
             set => _properties["-webkit-box-decoration-break"] = value;
         }
 
@@ -1511,9 +1511,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `[ above | below | right | left ]? &lt;length&gt;? &lt;image&gt;?`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitBoxReflect
+        public Property<CSSProperties, PropertySkip, string, double> WebkitBoxReflect
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-box-reflect"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-box-reflect"];
             set => _properties["-webkit-box-reflect"] = value;
         }
 
@@ -1522,9 +1522,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | &lt;shadow&gt;#`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitBoxShadow
+        public Property<CSSProperties, PropertySkip, string> WebkitBoxShadow
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-box-shadow"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-box-shadow"];
             set => _properties["-webkit-box-shadow"] = value;
         }
 
@@ -1533,9 +1533,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `content-box | border-box`</para>
         /// <para> **Initial value**: `content-box`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitBoxSizing
+        public Property<CSSProperties, PropertySkip, string> WebkitBoxSizing
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-box-sizing"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-box-sizing"];
             set => _properties["-webkit-box-sizing"] = value;
         }
 
@@ -1544,9 +1544,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;clip-source&gt; | [ &lt;basic-shape&gt; || &lt;geometry-box&gt; ] | none`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitClipPath
+        public Property<CSSProperties, PropertySkip, string> WebkitClipPath
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-clip-path"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-clip-path"];
             set => _properties["-webkit-clip-path"] = value;
         }
 
@@ -1555,9 +1555,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;integer&gt; | auto`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitColumnCount
+        public Property<CSSProperties, PropertySkip, string, double> WebkitColumnCount
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-column-count"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-column-count"];
             set => _properties["-webkit-column-count"] = value;
         }
 
@@ -1566,9 +1566,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `auto | balance | balance-all`</para>
         /// <para> **Initial value**: `balance`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitColumnFill
+        public Property<CSSProperties, PropertySkip, string> WebkitColumnFill
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-column-fill"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-column-fill"];
             set => _properties["-webkit-column-fill"] = value;
         }
 
@@ -1577,9 +1577,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;color&gt;`</para>
         /// <para> **Initial value**: `currentcolor`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitColumnRuleColor
+        public Property<CSSProperties, PropertySkip, string> WebkitColumnRuleColor
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-column-rule-color"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-column-rule-color"];
             set => _properties["-webkit-column-rule-color"] = value;
         }
 
@@ -1588,9 +1588,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;'border-style'&gt;`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitColumnRuleStyle
+        public Property<CSSProperties, PropertySkip, string> WebkitColumnRuleStyle
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-column-rule-style"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-column-rule-style"];
             set => _properties["-webkit-column-rule-style"] = value;
         }
 
@@ -1599,9 +1599,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;'border-width'&gt;`</para>
         /// <para> **Initial value**: `medium`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitColumnRuleWidth
+        public Property<CSSProperties, PropertySkip, string, double> WebkitColumnRuleWidth
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-column-rule-width"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-column-rule-width"];
             set => _properties["-webkit-column-rule-width"] = value;
         }
 
@@ -1610,9 +1610,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | all`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitColumnSpan
+        public Property<CSSProperties, PropertySkip, string> WebkitColumnSpan
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-column-span"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-column-span"];
             set => _properties["-webkit-column-span"] = value;
         }
 
@@ -1621,9 +1621,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;length&gt; | auto`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitColumnWidth
+        public Property<CSSProperties, PropertySkip, string, double> WebkitColumnWidth
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-column-width"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-column-width"];
             set => _properties["-webkit-column-width"] = value;
         }
 
@@ -1632,9 +1632,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | &lt;filter-function-list&gt;`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitFilter
+        public Property<CSSProperties, PropertySkip, string> WebkitFilter
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-filter"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-filter"];
             set => _properties["-webkit-filter"] = value;
         }
 
@@ -1643,9 +1643,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `content | &lt;'width'&gt;`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitFlexBasis
+        public Property<CSSProperties, PropertySkip, string, double> WebkitFlexBasis
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-flex-basis"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-flex-basis"];
             set => _properties["-webkit-flex-basis"] = value;
         }
 
@@ -1654,9 +1654,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `row | row-reverse | column | column-reverse`</para>
         /// <para> **Initial value**: `row`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitFlexDirection
+        public Property<CSSProperties, PropertySkip, string> WebkitFlexDirection
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-flex-direction"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-flex-direction"];
             set => _properties["-webkit-flex-direction"] = value;
         }
 
@@ -1665,9 +1665,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;number&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitFlexGrow
+        public Property<CSSProperties, PropertySkip, string, double> WebkitFlexGrow
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-flex-grow"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-flex-grow"];
             set => _properties["-webkit-flex-grow"] = value;
         }
 
@@ -1676,9 +1676,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;number&gt;`</para>
         /// <para> **Initial value**: `1`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitFlexShrink
+        public Property<CSSProperties, PropertySkip, string, double> WebkitFlexShrink
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-flex-shrink"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-flex-shrink"];
             set => _properties["-webkit-flex-shrink"] = value;
         }
 
@@ -1687,9 +1687,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `nowrap | wrap | wrap-reverse`</para>
         /// <para> **Initial value**: `nowrap`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitFlexWrap
+        public Property<CSSProperties, PropertySkip, string> WebkitFlexWrap
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-flex-wrap"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-flex-wrap"];
             set => _properties["-webkit-flex-wrap"] = value;
         }
 
@@ -1698,9 +1698,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `normal | &lt;feature-tag-value&gt;#`</para>
         /// <para> **Initial value**: `normal`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitFontFeatureSettings
+        public Property<CSSProperties, PropertySkip, string> WebkitFontFeatureSettings
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-font-feature-settings"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-font-feature-settings"];
             set => _properties["-webkit-font-feature-settings"] = value;
         }
 
@@ -1709,9 +1709,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `auto | normal | none`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitFontKerning
+        public Property<CSSProperties, PropertySkip, string> WebkitFontKerning
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-font-kerning"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-font-kerning"];
             set => _properties["-webkit-font-kerning"] = value;
         }
 
@@ -1720,9 +1720,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `auto | never | always | &lt;absolute-size&gt; | &lt;length&gt;`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitFontSmoothing
+        public Property<CSSProperties, PropertySkip, string, double> WebkitFontSmoothing
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-font-smoothing"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-font-smoothing"];
             set => _properties["-webkit-font-smoothing"] = value;
         }
 
@@ -1731,9 +1731,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `normal | none | [ &lt;common-lig-values&gt; || &lt;discretionary-lig-values&gt; || &lt;historical-lig-values&gt; || &lt;contextual-alt-values&gt; ]`</para>
         /// <para> **Initial value**: `normal`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitFontVariantLigatures
+        public Property<CSSProperties, PropertySkip, string> WebkitFontVariantLigatures
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-font-variant-ligatures"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-font-variant-ligatures"];
             set => _properties["-webkit-font-variant-ligatures"] = value;
         }
 
@@ -1742,9 +1742,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `auto | &lt;string&gt;`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitHyphenateCharacter
+        public Property<CSSProperties, PropertySkip, string> WebkitHyphenateCharacter
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-hyphenate-character"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-hyphenate-character"];
             set => _properties["-webkit-hyphenate-character"] = value;
         }
 
@@ -1753,9 +1753,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | manual | auto`</para>
         /// <para> **Initial value**: `manual`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitHyphens
+        public Property<CSSProperties, PropertySkip, string> WebkitHyphens
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-hyphens"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-hyphens"];
             set => _properties["-webkit-hyphens"] = value;
         }
 
@@ -1764,9 +1764,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `normal | [ &lt;number&gt; &lt;integer&gt;? ]`</para>
         /// <para> **Initial value**: `normal`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitInitialLetter
+        public Property<CSSProperties, PropertySkip, string, double> WebkitInitialLetter
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-initial-letter"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-initial-letter"];
             set => _properties["-webkit-initial-letter"] = value;
         }
 
@@ -1775,9 +1775,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `normal | &lt;content-distribution&gt; | &lt;overflow-position&gt;? [ &lt;content-position&gt; | left | right ]`</para>
         /// <para> **Initial value**: `normal`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitJustifyContent
+        public Property<CSSProperties, PropertySkip, string> WebkitJustifyContent
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-justify-content"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-justify-content"];
             set => _properties["-webkit-justify-content"] = value;
         }
 
@@ -1786,9 +1786,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `auto | loose | normal | strict | anywhere`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitLineBreak
+        public Property<CSSProperties, PropertySkip, string> WebkitLineBreak
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-line-break"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-line-break"];
             set => _properties["-webkit-line-break"] = value;
         }
 
@@ -1797,9 +1797,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | &lt;integer&gt;`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitLineClamp
+        public Property<CSSProperties, PropertySkip, string, double> WebkitLineClamp
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-line-clamp"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-line-clamp"];
             set => _properties["-webkit-line-clamp"] = value;
         }
 
@@ -1808,9 +1808,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;'margin-left'&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitMarginEnd
+        public Property<CSSProperties, PropertySkip, string, double> WebkitMarginEnd
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-margin-end"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-margin-end"];
             set => _properties["-webkit-margin-end"] = value;
         }
 
@@ -1819,9 +1819,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;'margin-left'&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitMarginStart
+        public Property<CSSProperties, PropertySkip, string, double> WebkitMarginStart
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-margin-start"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-margin-start"];
             set => _properties["-webkit-margin-start"] = value;
         }
 
@@ -1830,9 +1830,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;attachment&gt;#`</para>
         /// <para> **Initial value**: `scroll`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitMaskAttachment
+        public Property<CSSProperties, PropertySkip, string> WebkitMaskAttachment
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-mask-attachment"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-mask-attachment"];
             set => _properties["-webkit-mask-attachment"] = value;
         }
 
@@ -1841,9 +1841,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `[ &lt;length&gt; | &lt;number&gt; ]{1,4}`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitMaskBoxImageOutset
+        public Property<CSSProperties, PropertySkip, string, double> WebkitMaskBoxImageOutset
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-mask-box-image-outset"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-mask-box-image-outset"];
             set => _properties["-webkit-mask-box-image-outset"] = value;
         }
 
@@ -1852,9 +1852,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `[ stretch | repeat | round | space ]{1,2}`</para>
         /// <para> **Initial value**: `stretch`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitMaskBoxImageRepeat
+        public Property<CSSProperties, PropertySkip, string> WebkitMaskBoxImageRepeat
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-mask-box-image-repeat"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-mask-box-image-repeat"];
             set => _properties["-webkit-mask-box-image-repeat"] = value;
         }
 
@@ -1863,9 +1863,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;number-percentage&gt;{1,4} fill?`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitMaskBoxImageSlice
+        public Property<CSSProperties, PropertySkip, string, double> WebkitMaskBoxImageSlice
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-mask-box-image-slice"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-mask-box-image-slice"];
             set => _properties["-webkit-mask-box-image-slice"] = value;
         }
 
@@ -1874,9 +1874,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | &lt;image&gt;`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitMaskBoxImageSource
+        public Property<CSSProperties, PropertySkip, string> WebkitMaskBoxImageSource
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-mask-box-image-source"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-mask-box-image-source"];
             set => _properties["-webkit-mask-box-image-source"] = value;
         }
 
@@ -1885,9 +1885,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `[ &lt;length-percentage&gt; | &lt;number&gt; | auto ]{1,4}`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitMaskBoxImageWidth
+        public Property<CSSProperties, PropertySkip, string, double> WebkitMaskBoxImageWidth
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-mask-box-image-width"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-mask-box-image-width"];
             set => _properties["-webkit-mask-box-image-width"] = value;
         }
 
@@ -1896,9 +1896,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `[ &lt;box&gt; | border | padding | content | text ]#`</para>
         /// <para> **Initial value**: `border`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitMaskClip
+        public Property<CSSProperties, PropertySkip, string> WebkitMaskClip
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-mask-clip"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-mask-clip"];
             set => _properties["-webkit-mask-clip"] = value;
         }
 
@@ -1907,9 +1907,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;composite-style&gt;#`</para>
         /// <para> **Initial value**: `source-over`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitMaskComposite
+        public Property<CSSProperties, PropertySkip, string> WebkitMaskComposite
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-mask-composite"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-mask-composite"];
             set => _properties["-webkit-mask-composite"] = value;
         }
 
@@ -1918,9 +1918,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;mask-reference&gt;#`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitMaskImage
+        public Property<CSSProperties, PropertySkip, string> WebkitMaskImage
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-mask-image"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-mask-image"];
             set => _properties["-webkit-mask-image"] = value;
         }
 
@@ -1929,9 +1929,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `[ &lt;box&gt; | border | padding | content ]#`</para>
         /// <para> **Initial value**: `padding`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitMaskOrigin
+        public Property<CSSProperties, PropertySkip, string> WebkitMaskOrigin
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-mask-origin"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-mask-origin"];
             set => _properties["-webkit-mask-origin"] = value;
         }
 
@@ -1940,9 +1940,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;position&gt;#`</para>
         /// <para> **Initial value**: `0% 0%`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitMaskPosition
+        public Property<CSSProperties, PropertySkip, string, double> WebkitMaskPosition
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-mask-position"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-mask-position"];
             set => _properties["-webkit-mask-position"] = value;
         }
 
@@ -1951,9 +1951,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `[ &lt;length-percentage&gt; | left | center | right ]#`</para>
         /// <para> **Initial value**: `0%`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitMaskPositionX
+        public Property<CSSProperties, PropertySkip, string, double> WebkitMaskPositionX
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-mask-position-x"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-mask-position-x"];
             set => _properties["-webkit-mask-position-x"] = value;
         }
 
@@ -1962,9 +1962,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `[ &lt;length-percentage&gt; | top | center | bottom ]#`</para>
         /// <para> **Initial value**: `0%`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitMaskPositionY
+        public Property<CSSProperties, PropertySkip, string, double> WebkitMaskPositionY
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-mask-position-y"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-mask-position-y"];
             set => _properties["-webkit-mask-position-y"] = value;
         }
 
@@ -1973,9 +1973,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;repeat-style&gt;#`</para>
         /// <para> **Initial value**: `repeat`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitMaskRepeat
+        public Property<CSSProperties, PropertySkip, string> WebkitMaskRepeat
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-mask-repeat"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-mask-repeat"];
             set => _properties["-webkit-mask-repeat"] = value;
         }
 
@@ -1984,9 +1984,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `repeat | no-repeat | space | round`</para>
         /// <para> **Initial value**: `repeat`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitMaskRepeatX
+        public Property<CSSProperties, PropertySkip, string> WebkitMaskRepeatX
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-mask-repeat-x"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-mask-repeat-x"];
             set => _properties["-webkit-mask-repeat-x"] = value;
         }
 
@@ -1995,9 +1995,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `repeat | no-repeat | space | round`</para>
         /// <para> **Initial value**: `repeat`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitMaskRepeatY
+        public Property<CSSProperties, PropertySkip, string> WebkitMaskRepeatY
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-mask-repeat-y"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-mask-repeat-y"];
             set => _properties["-webkit-mask-repeat-y"] = value;
         }
 
@@ -2006,9 +2006,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;bg-size&gt;#`</para>
         /// <para> **Initial value**: `auto auto`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitMaskSize
+        public Property<CSSProperties, PropertySkip, string, double> WebkitMaskSize
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-mask-size"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-mask-size"];
             set => _properties["-webkit-mask-size"] = value;
         }
 
@@ -2017,9 +2017,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;'max-width'&gt;`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitMaxInlineSize
+        public Property<CSSProperties, PropertySkip, string, double> WebkitMaxInlineSize
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-max-inline-size"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-max-inline-size"];
             set => _properties["-webkit-max-inline-size"] = value;
         }
 
@@ -2028,9 +2028,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;integer&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitOrder
+        public Property<CSSProperties, PropertySkip, string, double> WebkitOrder
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-order"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-order"];
             set => _properties["-webkit-order"] = value;
         }
 
@@ -2039,9 +2039,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `auto | touch`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitOverflowScrolling
+        public Property<CSSProperties, PropertySkip, string> WebkitOverflowScrolling
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-overflow-scrolling"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-overflow-scrolling"];
             set => _properties["-webkit-overflow-scrolling"] = value;
         }
 
@@ -2050,9 +2050,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;'padding-left'&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitPaddingEnd
+        public Property<CSSProperties, PropertySkip, string, double> WebkitPaddingEnd
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-padding-end"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-padding-end"];
             set => _properties["-webkit-padding-end"] = value;
         }
 
@@ -2061,9 +2061,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;'padding-left'&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitPaddingStart
+        public Property<CSSProperties, PropertySkip, string, double> WebkitPaddingStart
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-padding-start"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-padding-start"];
             set => _properties["-webkit-padding-start"] = value;
         }
 
@@ -2072,9 +2072,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | &lt;length&gt;`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitPerspective
+        public Property<CSSProperties, PropertySkip, string, double> WebkitPerspective
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-perspective"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-perspective"];
             set => _properties["-webkit-perspective"] = value;
         }
 
@@ -2083,9 +2083,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;position&gt;`</para>
         /// <para> **Initial value**: `50% 50%`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitPerspectiveOrigin
+        public Property<CSSProperties, PropertySkip, string, double> WebkitPerspectiveOrigin
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-perspective-origin"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-perspective-origin"];
             set => _properties["-webkit-perspective-origin"] = value;
         }
 
@@ -2094,9 +2094,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `economy | exact`</para>
         /// <para> **Initial value**: `economy`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitPrintColorAdjust
+        public Property<CSSProperties, PropertySkip, string> WebkitPrintColorAdjust
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-print-color-adjust"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-print-color-adjust"];
             set => _properties["-webkit-print-color-adjust"] = value;
         }
 
@@ -2105,9 +2105,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `[ alternate || [ over | under ] ] | inter-character`</para>
         /// <para> **Initial value**: `alternate`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitRubyPosition
+        public Property<CSSProperties, PropertySkip, string> WebkitRubyPosition
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-ruby-position"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-ruby-position"];
             set => _properties["-webkit-ruby-position"] = value;
         }
 
@@ -2116,9 +2116,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | [ x | y | block | inline | both ] [ mandatory | proximity ]?`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitScrollSnapType
+        public Property<CSSProperties, PropertySkip, string> WebkitScrollSnapType
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-scroll-snap-type"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-scroll-snap-type"];
             set => _properties["-webkit-scroll-snap-type"] = value;
         }
 
@@ -2127,9 +2127,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;length-percentage&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitShapeMargin
+        public Property<CSSProperties, PropertySkip, string, double> WebkitShapeMargin
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-shape-margin"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-shape-margin"];
             set => _properties["-webkit-shape-margin"] = value;
         }
 
@@ -2138,9 +2138,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;color&gt;`</para>
         /// <para> **Initial value**: `black`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitTapHighlightColor
+        public Property<CSSProperties, PropertySkip, string> WebkitTapHighlightColor
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-tap-highlight-color"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-tap-highlight-color"];
             set => _properties["-webkit-tap-highlight-color"] = value;
         }
 
@@ -2149,9 +2149,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | all | [ digits &lt;integer&gt;? ]`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitTextCombine
+        public Property<CSSProperties, PropertySkip, string> WebkitTextCombine
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-text-combine"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-text-combine"];
             set => _properties["-webkit-text-combine"] = value;
         }
 
@@ -2160,9 +2160,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;color&gt;`</para>
         /// <para> **Initial value**: `currentcolor`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitTextDecorationColor
+        public Property<CSSProperties, PropertySkip, string> WebkitTextDecorationColor
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-text-decoration-color"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-text-decoration-color"];
             set => _properties["-webkit-text-decoration-color"] = value;
         }
 
@@ -2171,9 +2171,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | [ underline || overline || line-through || blink ] | spelling-error | grammar-error`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitTextDecorationLine
+        public Property<CSSProperties, PropertySkip, string> WebkitTextDecorationLine
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-text-decoration-line"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-text-decoration-line"];
             set => _properties["-webkit-text-decoration-line"] = value;
         }
 
@@ -2182,9 +2182,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | [ objects || [ spaces | [ leading-spaces || trailing-spaces ] ] || edges || box-decoration ]`</para>
         /// <para> **Initial value**: `objects`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitTextDecorationSkip
+        public Property<CSSProperties, PropertySkip, string> WebkitTextDecorationSkip
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-text-decoration-skip"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-text-decoration-skip"];
             set => _properties["-webkit-text-decoration-skip"] = value;
         }
 
@@ -2193,9 +2193,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `solid | double | dotted | dashed | wavy`</para>
         /// <para> **Initial value**: `solid`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitTextDecorationStyle
+        public Property<CSSProperties, PropertySkip, string> WebkitTextDecorationStyle
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-text-decoration-style"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-text-decoration-style"];
             set => _properties["-webkit-text-decoration-style"] = value;
         }
 
@@ -2204,9 +2204,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;color&gt;`</para>
         /// <para> **Initial value**: `currentcolor`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitTextEmphasisColor
+        public Property<CSSProperties, PropertySkip, string> WebkitTextEmphasisColor
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-text-emphasis-color"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-text-emphasis-color"];
             set => _properties["-webkit-text-emphasis-color"] = value;
         }
 
@@ -2215,9 +2215,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `[ over | under ] && [ right | left ]`</para>
         /// <para> **Initial value**: `over right`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitTextEmphasisPosition
+        public Property<CSSProperties, PropertySkip, string> WebkitTextEmphasisPosition
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-text-emphasis-position"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-text-emphasis-position"];
             set => _properties["-webkit-text-emphasis-position"] = value;
         }
 
@@ -2226,9 +2226,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | [ [ filled | open ] || [ dot | circle | double-circle | triangle | sesame ] ] | &lt;string&gt;`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitTextEmphasisStyle
+        public Property<CSSProperties, PropertySkip, string> WebkitTextEmphasisStyle
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-text-emphasis-style"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-text-emphasis-style"];
             set => _properties["-webkit-text-emphasis-style"] = value;
         }
 
@@ -2237,9 +2237,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;color&gt;`</para>
         /// <para> **Initial value**: `currentcolor`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitTextFillColor
+        public Property<CSSProperties, PropertySkip, string> WebkitTextFillColor
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-text-fill-color"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-text-fill-color"];
             set => _properties["-webkit-text-fill-color"] = value;
         }
 
@@ -2248,9 +2248,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `mixed | upright | sideways`</para>
         /// <para> **Initial value**: `mixed`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitTextOrientation
+        public Property<CSSProperties, PropertySkip, string> WebkitTextOrientation
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-text-orientation"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-text-orientation"];
             set => _properties["-webkit-text-orientation"] = value;
         }
 
@@ -2259,9 +2259,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | auto | &lt;percentage&gt;`</para>
         /// <para> **Initial value**: `auto` for smartphone browsers supporting inflation, `none` in other cases (and then not modifiable).</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitTextSizeAdjust
+        public Property<CSSProperties, PropertySkip, string> WebkitTextSizeAdjust
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-text-size-adjust"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-text-size-adjust"];
             set => _properties["-webkit-text-size-adjust"] = value;
         }
 
@@ -2270,9 +2270,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;color&gt;`</para>
         /// <para> **Initial value**: `currentcolor`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitTextStrokeColor
+        public Property<CSSProperties, PropertySkip, string> WebkitTextStrokeColor
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-text-stroke-color"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-text-stroke-color"];
             set => _properties["-webkit-text-stroke-color"] = value;
         }
 
@@ -2281,9 +2281,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;length&gt;`</para>
         /// <para> **Initial value**: `0`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitTextStrokeWidth
+        public Property<CSSProperties, PropertySkip, string, double> WebkitTextStrokeWidth
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-text-stroke-width"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-text-stroke-width"];
             set => _properties["-webkit-text-stroke-width"] = value;
         }
 
@@ -2292,9 +2292,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `auto | from-font | [ under || [ left | right ] ]`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitTextUnderlinePosition
+        public Property<CSSProperties, PropertySkip, string> WebkitTextUnderlinePosition
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-text-underline-position"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-text-underline-position"];
             set => _properties["-webkit-text-underline-position"] = value;
         }
 
@@ -2303,9 +2303,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `default | none`</para>
         /// <para> **Initial value**: `default`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitTouchCallout
+        public Property<CSSProperties, PropertySkip, string> WebkitTouchCallout
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-touch-callout"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-touch-callout"];
             set => _properties["-webkit-touch-callout"] = value;
         }
 
@@ -2314,9 +2314,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | &lt;transform-list&gt;`</para>
         /// <para> **Initial value**: `none`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitTransform
+        public Property<CSSProperties, PropertySkip, string> WebkitTransform
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-transform"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-transform"];
             set => _properties["-webkit-transform"] = value;
         }
 
@@ -2325,9 +2325,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `[ &lt;length-percentage&gt; | left | center | right | top | bottom ] | [ [ &lt;length-percentage&gt; | left | center | right ] && [ &lt;length-percentage&gt; | top | center | bottom ] ] &lt;length&gt;?`</para>
         /// <para> **Initial value**: `50% 50% 0`</para>
         /// </summary>
-        public Property<PropertySkip, string, double> WebkitTransformOrigin
+        public Property<CSSProperties, PropertySkip, string, double> WebkitTransformOrigin
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-transform-origin"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-transform-origin"];
             set => _properties["-webkit-transform-origin"] = value;
         }
 
@@ -2336,9 +2336,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `flat | preserve-3d`</para>
         /// <para> **Initial value**: `flat`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitTransformStyle
+        public Property<CSSProperties, PropertySkip, string> WebkitTransformStyle
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-transform-style"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-transform-style"];
             set => _properties["-webkit-transform-style"] = value;
         }
 
@@ -2347,9 +2347,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;time&gt;#`</para>
         /// <para> **Initial value**: `0s`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitTransitionDelay
+        public Property<CSSProperties, PropertySkip, string> WebkitTransitionDelay
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-transition-delay"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-transition-delay"];
             set => _properties["-webkit-transition-delay"] = value;
         }
 
@@ -2358,9 +2358,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;time&gt;#`</para>
         /// <para> **Initial value**: `0s`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitTransitionDuration
+        public Property<CSSProperties, PropertySkip, string> WebkitTransitionDuration
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-transition-duration"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-transition-duration"];
             set => _properties["-webkit-transition-duration"] = value;
         }
 
@@ -2369,9 +2369,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `none | &lt;single-transition-property&gt;#`</para>
         /// <para> **Initial value**: all</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitTransitionProperty
+        public Property<CSSProperties, PropertySkip, string> WebkitTransitionProperty
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-transition-property"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-transition-property"];
             set => _properties["-webkit-transition-property"] = value;
         }
 
@@ -2380,9 +2380,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `&lt;easing-function&gt;#`</para>
         /// <para> **Initial value**: `ease`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitTransitionTimingFunction
+        public Property<CSSProperties, PropertySkip, string> WebkitTransitionTimingFunction
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-transition-timing-function"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-transition-timing-function"];
             set => _properties["-webkit-transition-timing-function"] = value;
         }
 
@@ -2390,9 +2390,9 @@ namespace CssInCSharp
         /// **Syntax**: `read-only | read-write | read-write-plaintext-only`
         /// <para> **Initial value**: `read-only`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitUserModify
+        public Property<CSSProperties, PropertySkip, string> WebkitUserModify
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-user-modify"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-user-modify"];
             set => _properties["-webkit-user-modify"] = value;
         }
 
@@ -2401,9 +2401,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `auto | text | none | contain | all`</para>
         /// <para> **Initial value**: `auto`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitUserSelect
+        public Property<CSSProperties, PropertySkip, string> WebkitUserSelect
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-user-select"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-user-select"];
             set => _properties["-webkit-user-select"] = value;
         }
 
@@ -2412,9 +2412,9 @@ namespace CssInCSharp
         /// <para> **Syntax**: `horizontal-tb | vertical-rl | vertical-lr | sideways-rl | sideways-lr`</para>
         /// <para> **Initial value**: `horizontal-tb`</para>
         /// </summary>
-        public Property<PropertySkip, string> WebkitWritingMode
+        public Property<CSSProperties, PropertySkip, string> WebkitWritingMode
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-writing-mode"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-writing-mode"];
             set => _properties["-webkit-writing-mode"] = value;
         }
 
