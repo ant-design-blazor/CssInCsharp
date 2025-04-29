@@ -94,7 +94,8 @@ function getPropertyTypes(lines: string[]): PropertyType[] {
             }
 
             const types: PropertyTypeItem[] = [];
-
+            // CSSProperties
+            types.push({ name: `value${types.length}`, type: 'CSSProperties' });
             // ignore type
             types.push({ name: `value${types.length}`, type: 'PropertySkip' });
             // string type

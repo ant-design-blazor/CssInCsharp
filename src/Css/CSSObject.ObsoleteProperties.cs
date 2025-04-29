@@ -11,9 +11,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> Azimuth
+        public Property<CSSProperties, PropertySkip, string> Azimuth
         {
-            get => (Property<PropertySkip, string>) _properties["azimuth"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["azimuth"];
             set => _properties["azimuth"] = value;
         }
 
@@ -24,9 +24,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> BoxAlign
+        public Property<CSSProperties, PropertySkip, string> BoxAlign
         {
-            get => (Property<PropertySkip, string>) _properties["box-align"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["box-align"];
             set => _properties["box-align"] = value;
         }
 
@@ -37,9 +37,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> BoxDirection
+        public Property<CSSProperties, PropertySkip, string> BoxDirection
         {
-            get => (Property<PropertySkip, string>) _properties["box-direction"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["box-direction"];
             set => _properties["box-direction"] = value;
         }
 
@@ -50,9 +50,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> BoxFlex
+        public Property<CSSProperties, PropertySkip, string, double> BoxFlex
         {
-            get => (Property<PropertySkip, string, double>) _properties["box-flex"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["box-flex"];
             set => _properties["box-flex"] = value;
         }
 
@@ -63,9 +63,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> BoxFlexGroup
+        public Property<CSSProperties, PropertySkip, string, double> BoxFlexGroup
         {
-            get => (Property<PropertySkip, string, double>) _properties["box-flex-group"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["box-flex-group"];
             set => _properties["box-flex-group"] = value;
         }
 
@@ -76,9 +76,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> BoxLines
+        public Property<CSSProperties, PropertySkip, string> BoxLines
         {
-            get => (Property<PropertySkip, string>) _properties["box-lines"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["box-lines"];
             set => _properties["box-lines"] = value;
         }
 
@@ -89,9 +89,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> BoxOrdinalGroup
+        public Property<CSSProperties, PropertySkip, string, double> BoxOrdinalGroup
         {
-            get => (Property<PropertySkip, string, double>) _properties["box-ordinal-group"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["box-ordinal-group"];
             set => _properties["box-ordinal-group"] = value;
         }
 
@@ -102,9 +102,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> BoxOrient
+        public Property<CSSProperties, PropertySkip, string> BoxOrient
         {
-            get => (Property<PropertySkip, string>) _properties["box-orient"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["box-orient"];
             set => _properties["box-orient"] = value;
         }
 
@@ -115,9 +115,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> BoxPack
+        public Property<CSSProperties, PropertySkip, string> BoxPack
         {
-            get => (Property<PropertySkip, string>) _properties["box-pack"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["box-pack"];
             set => _properties["box-pack"] = value;
         }
 
@@ -128,9 +128,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> Clip
+        public Property<CSSProperties, PropertySkip, string> Clip
         {
-            get => (Property<PropertySkip, string>) _properties["clip"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["clip"];
             set => _properties["clip"] = value;
         }
 
@@ -141,9 +141,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> GridColumnGap
+        public Property<CSSProperties, PropertySkip, string, double> GridColumnGap
         {
-            get => (Property<PropertySkip, string, double>) _properties["grid-column-gap"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["grid-column-gap"];
             set => _properties["grid-column-gap"] = value;
         }
 
@@ -153,9 +153,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> GridGap
+        public Property<CSSProperties, PropertySkip, string, double> GridGap
         {
-            get => (Property<PropertySkip, string, double>) _properties["grid-gap"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["grid-gap"];
             set => _properties["grid-gap"] = value;
         }
 
@@ -166,9 +166,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> GridRowGap
+        public Property<CSSProperties, PropertySkip, string, double> GridRowGap
         {
-            get => (Property<PropertySkip, string, double>) _properties["grid-row-gap"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["grid-row-gap"];
             set => _properties["grid-row-gap"] = value;
         }
 
@@ -179,9 +179,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> ImeMode
+        public Property<CSSProperties, PropertySkip, string> ImeMode
         {
-            get => (Property<PropertySkip, string>) _properties["ime-mode"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["ime-mode"];
             set => _properties["ime-mode"] = value;
         }
 
@@ -191,9 +191,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> OffsetBlock
+        public Property<CSSProperties, PropertySkip, string, double> OffsetBlock
         {
-            get => (Property<PropertySkip, string, double>) _properties["offset-block"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["offset-block"];
             set => _properties["offset-block"] = value;
         }
 
@@ -204,9 +204,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> OffsetBlockEnd
+        public Property<CSSProperties, PropertySkip, string, double> OffsetBlockEnd
         {
-            get => (Property<PropertySkip, string, double>) _properties["offset-block-end"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["offset-block-end"];
             set => _properties["offset-block-end"] = value;
         }
 
@@ -217,9 +217,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> OffsetBlockStart
+        public Property<CSSProperties, PropertySkip, string, double> OffsetBlockStart
         {
-            get => (Property<PropertySkip, string, double>) _properties["offset-block-start"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["offset-block-start"];
             set => _properties["offset-block-start"] = value;
         }
 
@@ -229,9 +229,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> OffsetInline
+        public Property<CSSProperties, PropertySkip, string, double> OffsetInline
         {
-            get => (Property<PropertySkip, string, double>) _properties["offset-inline"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["offset-inline"];
             set => _properties["offset-inline"] = value;
         }
 
@@ -242,9 +242,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> OffsetInlineEnd
+        public Property<CSSProperties, PropertySkip, string, double> OffsetInlineEnd
         {
-            get => (Property<PropertySkip, string, double>) _properties["offset-inline-end"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["offset-inline-end"];
             set => _properties["offset-inline-end"] = value;
         }
 
@@ -255,9 +255,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> OffsetInlineStart
+        public Property<CSSProperties, PropertySkip, string, double> OffsetInlineStart
         {
-            get => (Property<PropertySkip, string, double>) _properties["offset-inline-start"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["offset-inline-start"];
             set => _properties["offset-inline-start"] = value;
         }
 
@@ -268,9 +268,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> ScrollSnapCoordinate
+        public Property<CSSProperties, PropertySkip, string, double> ScrollSnapCoordinate
         {
-            get => (Property<PropertySkip, string, double>) _properties["scroll-snap-coordinate"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["scroll-snap-coordinate"];
             set => _properties["scroll-snap-coordinate"] = value;
         }
 
@@ -281,9 +281,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> ScrollSnapDestination
+        public Property<CSSProperties, PropertySkip, string, double> ScrollSnapDestination
         {
-            get => (Property<PropertySkip, string, double>) _properties["scroll-snap-destination"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["scroll-snap-destination"];
             set => _properties["scroll-snap-destination"] = value;
         }
 
@@ -294,9 +294,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> ScrollSnapPointsX
+        public Property<CSSProperties, PropertySkip, string> ScrollSnapPointsX
         {
-            get => (Property<PropertySkip, string>) _properties["scroll-snap-points-x"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["scroll-snap-points-x"];
             set => _properties["scroll-snap-points-x"] = value;
         }
 
@@ -307,9 +307,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> ScrollSnapPointsY
+        public Property<CSSProperties, PropertySkip, string> ScrollSnapPointsY
         {
-            get => (Property<PropertySkip, string>) _properties["scroll-snap-points-y"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["scroll-snap-points-y"];
             set => _properties["scroll-snap-points-y"] = value;
         }
 
@@ -320,9 +320,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> ScrollSnapTypeX
+        public Property<CSSProperties, PropertySkip, string> ScrollSnapTypeX
         {
-            get => (Property<PropertySkip, string>) _properties["scroll-snap-type-x"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["scroll-snap-type-x"];
             set => _properties["scroll-snap-type-x"] = value;
         }
 
@@ -333,9 +333,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> ScrollSnapTypeY
+        public Property<CSSProperties, PropertySkip, string> ScrollSnapTypeY
         {
-            get => (Property<PropertySkip, string>) _properties["scroll-snap-type-y"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["scroll-snap-type-y"];
             set => _properties["scroll-snap-type-y"] = value;
         }
 
@@ -346,9 +346,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> KhtmlBoxAlign
+        public Property<CSSProperties, PropertySkip, string> KhtmlBoxAlign
         {
-            get => (Property<PropertySkip, string>) _properties["-khtml-box-align"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-khtml-box-align"];
             set => _properties["-khtml-box-align"] = value;
         }
 
@@ -359,9 +359,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> KhtmlBoxDirection
+        public Property<CSSProperties, PropertySkip, string> KhtmlBoxDirection
         {
-            get => (Property<PropertySkip, string>) _properties["-khtml-box-direction"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-khtml-box-direction"];
             set => _properties["-khtml-box-direction"] = value;
         }
 
@@ -372,9 +372,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> KhtmlBoxFlex
+        public Property<CSSProperties, PropertySkip, string, double> KhtmlBoxFlex
         {
-            get => (Property<PropertySkip, string, double>) _properties["-khtml-box-flex"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-khtml-box-flex"];
             set => _properties["-khtml-box-flex"] = value;
         }
 
@@ -385,9 +385,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> KhtmlBoxFlexGroup
+        public Property<CSSProperties, PropertySkip, string, double> KhtmlBoxFlexGroup
         {
-            get => (Property<PropertySkip, string, double>) _properties["-khtml-box-flex-group"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-khtml-box-flex-group"];
             set => _properties["-khtml-box-flex-group"] = value;
         }
 
@@ -398,9 +398,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> KhtmlBoxLines
+        public Property<CSSProperties, PropertySkip, string> KhtmlBoxLines
         {
-            get => (Property<PropertySkip, string>) _properties["-khtml-box-lines"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-khtml-box-lines"];
             set => _properties["-khtml-box-lines"] = value;
         }
 
@@ -411,9 +411,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> KhtmlBoxOrdinalGroup
+        public Property<CSSProperties, PropertySkip, string, double> KhtmlBoxOrdinalGroup
         {
-            get => (Property<PropertySkip, string, double>) _properties["-khtml-box-ordinal-group"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-khtml-box-ordinal-group"];
             set => _properties["-khtml-box-ordinal-group"] = value;
         }
 
@@ -424,9 +424,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> KhtmlBoxOrient
+        public Property<CSSProperties, PropertySkip, string> KhtmlBoxOrient
         {
-            get => (Property<PropertySkip, string>) _properties["-khtml-box-orient"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-khtml-box-orient"];
             set => _properties["-khtml-box-orient"] = value;
         }
 
@@ -437,9 +437,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> KhtmlBoxPack
+        public Property<CSSProperties, PropertySkip, string> KhtmlBoxPack
         {
-            get => (Property<PropertySkip, string>) _properties["-khtml-box-pack"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-khtml-box-pack"];
             set => _properties["-khtml-box-pack"] = value;
         }
 
@@ -450,9 +450,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> KhtmlLineBreak
+        public Property<CSSProperties, PropertySkip, string> KhtmlLineBreak
         {
-            get => (Property<PropertySkip, string>) _properties["-khtml-line-break"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-khtml-line-break"];
             set => _properties["-khtml-line-break"] = value;
         }
 
@@ -463,9 +463,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> KhtmlOpacity
+        public Property<CSSProperties, PropertySkip, string, double> KhtmlOpacity
         {
-            get => (Property<PropertySkip, string, double>) _properties["-khtml-opacity"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-khtml-opacity"];
             set => _properties["-khtml-opacity"] = value;
         }
 
@@ -476,9 +476,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> KhtmlUserSelect
+        public Property<CSSProperties, PropertySkip, string> KhtmlUserSelect
         {
-            get => (Property<PropertySkip, string>) _properties["-khtml-user-select"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-khtml-user-select"];
             set => _properties["-khtml-user-select"] = value;
         }
 
@@ -489,9 +489,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> MozBackfaceVisibility
+        public Property<CSSProperties, PropertySkip, string> MozBackfaceVisibility
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-backface-visibility"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-backface-visibility"];
             set => _properties["-moz-backface-visibility"] = value;
         }
 
@@ -502,9 +502,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> MozBackgroundClip
+        public Property<CSSProperties, PropertySkip, string> MozBackgroundClip
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-background-clip"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-background-clip"];
             set => _properties["-moz-background-clip"] = value;
         }
 
@@ -515,9 +515,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> MozBackgroundInlinePolicy
+        public Property<CSSProperties, PropertySkip, string> MozBackgroundInlinePolicy
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-background-inline-policy"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-background-inline-policy"];
             set => _properties["-moz-background-inline-policy"] = value;
         }
 
@@ -528,9 +528,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> MozBackgroundOrigin
+        public Property<CSSProperties, PropertySkip, string> MozBackgroundOrigin
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-background-origin"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-background-origin"];
             set => _properties["-moz-background-origin"] = value;
         }
 
@@ -541,9 +541,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> MozBackgroundSize
+        public Property<CSSProperties, PropertySkip, string, double> MozBackgroundSize
         {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-background-size"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-moz-background-size"];
             set => _properties["-moz-background-size"] = value;
         }
 
@@ -553,9 +553,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> MozBorderRadius
+        public Property<CSSProperties, PropertySkip, string, double> MozBorderRadius
         {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-border-radius"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-moz-border-radius"];
             set => _properties["-moz-border-radius"] = value;
         }
 
@@ -566,9 +566,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> MozBorderRadiusBottomleft
+        public Property<CSSProperties, PropertySkip, string, double> MozBorderRadiusBottomleft
         {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-border-radius-bottomleft"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-moz-border-radius-bottomleft"];
             set => _properties["-moz-border-radius-bottomleft"] = value;
         }
 
@@ -579,9 +579,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> MozBorderRadiusBottomright
+        public Property<CSSProperties, PropertySkip, string, double> MozBorderRadiusBottomright
         {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-border-radius-bottomright"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-moz-border-radius-bottomright"];
             set => _properties["-moz-border-radius-bottomright"] = value;
         }
 
@@ -592,9 +592,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> MozBorderRadiusTopleft
+        public Property<CSSProperties, PropertySkip, string, double> MozBorderRadiusTopleft
         {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-border-radius-topleft"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-moz-border-radius-topleft"];
             set => _properties["-moz-border-radius-topleft"] = value;
         }
 
@@ -605,9 +605,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> MozBorderRadiusTopright
+        public Property<CSSProperties, PropertySkip, string, double> MozBorderRadiusTopright
         {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-border-radius-topright"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-moz-border-radius-topright"];
             set => _properties["-moz-border-radius-topright"] = value;
         }
 
@@ -618,9 +618,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> MozBoxAlign
+        public Property<CSSProperties, PropertySkip, string> MozBoxAlign
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-box-align"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-box-align"];
             set => _properties["-moz-box-align"] = value;
         }
 
@@ -631,9 +631,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> MozBoxDirection
+        public Property<CSSProperties, PropertySkip, string> MozBoxDirection
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-box-direction"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-box-direction"];
             set => _properties["-moz-box-direction"] = value;
         }
 
@@ -644,9 +644,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> MozBoxFlex
+        public Property<CSSProperties, PropertySkip, string, double> MozBoxFlex
         {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-box-flex"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-moz-box-flex"];
             set => _properties["-moz-box-flex"] = value;
         }
 
@@ -657,9 +657,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> MozBoxOrdinalGroup
+        public Property<CSSProperties, PropertySkip, string, double> MozBoxOrdinalGroup
         {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-box-ordinal-group"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-moz-box-ordinal-group"];
             set => _properties["-moz-box-ordinal-group"] = value;
         }
 
@@ -670,9 +670,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> MozBoxOrient
+        public Property<CSSProperties, PropertySkip, string> MozBoxOrient
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-box-orient"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-box-orient"];
             set => _properties["-moz-box-orient"] = value;
         }
 
@@ -683,9 +683,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> MozBoxPack
+        public Property<CSSProperties, PropertySkip, string> MozBoxPack
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-box-pack"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-box-pack"];
             set => _properties["-moz-box-pack"] = value;
         }
 
@@ -696,9 +696,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> MozBoxShadow
+        public Property<CSSProperties, PropertySkip, string> MozBoxShadow
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-box-shadow"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-box-shadow"];
             set => _properties["-moz-box-shadow"] = value;
         }
 
@@ -709,9 +709,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> MozFloatEdge
+        public Property<CSSProperties, PropertySkip, string> MozFloatEdge
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-float-edge"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-float-edge"];
             set => _properties["-moz-float-edge"] = value;
         }
 
@@ -722,9 +722,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> MozForceBrokenImageIcon
+        public Property<CSSProperties, PropertySkip, string> MozForceBrokenImageIcon
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-force-broken-image-icon"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-force-broken-image-icon"];
             set => _properties["-moz-force-broken-image-icon"] = value;
         }
 
@@ -735,9 +735,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> MozOpacity
+        public Property<CSSProperties, PropertySkip, string, double> MozOpacity
         {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-opacity"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-moz-opacity"];
             set => _properties["-moz-opacity"] = value;
         }
 
@@ -747,9 +747,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> MozOutline
+        public Property<CSSProperties, PropertySkip, string, double> MozOutline
         {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-outline"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-moz-outline"];
             set => _properties["-moz-outline"] = value;
         }
 
@@ -760,9 +760,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> MozOutlineColor
+        public Property<CSSProperties, PropertySkip, string> MozOutlineColor
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-outline-color"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-outline-color"];
             set => _properties["-moz-outline-color"] = value;
         }
 
@@ -773,9 +773,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> MozOutlineStyle
+        public Property<CSSProperties, PropertySkip, string> MozOutlineStyle
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-outline-style"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-outline-style"];
             set => _properties["-moz-outline-style"] = value;
         }
 
@@ -786,9 +786,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> MozOutlineWidth
+        public Property<CSSProperties, PropertySkip, string, double> MozOutlineWidth
         {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-outline-width"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-moz-outline-width"];
             set => _properties["-moz-outline-width"] = value;
         }
 
@@ -799,9 +799,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> MozPerspective
+        public Property<CSSProperties, PropertySkip, string, double> MozPerspective
         {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-perspective"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-moz-perspective"];
             set => _properties["-moz-perspective"] = value;
         }
 
@@ -812,9 +812,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> MozPerspectiveOrigin
+        public Property<CSSProperties, PropertySkip, string, double> MozPerspectiveOrigin
         {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-perspective-origin"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-moz-perspective-origin"];
             set => _properties["-moz-perspective-origin"] = value;
         }
 
@@ -825,9 +825,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> MozTextAlignLast
+        public Property<CSSProperties, PropertySkip, string> MozTextAlignLast
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-text-align-last"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-text-align-last"];
             set => _properties["-moz-text-align-last"] = value;
         }
 
@@ -838,9 +838,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> MozTextDecorationColor
+        public Property<CSSProperties, PropertySkip, string> MozTextDecorationColor
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-text-decoration-color"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-text-decoration-color"];
             set => _properties["-moz-text-decoration-color"] = value;
         }
 
@@ -851,9 +851,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> MozTextDecorationLine
+        public Property<CSSProperties, PropertySkip, string> MozTextDecorationLine
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-text-decoration-line"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-text-decoration-line"];
             set => _properties["-moz-text-decoration-line"] = value;
         }
 
@@ -864,9 +864,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> MozTextDecorationStyle
+        public Property<CSSProperties, PropertySkip, string> MozTextDecorationStyle
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-text-decoration-style"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-text-decoration-style"];
             set => _properties["-moz-text-decoration-style"] = value;
         }
 
@@ -877,9 +877,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> MozTransform
+        public Property<CSSProperties, PropertySkip, string> MozTransform
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-transform"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-transform"];
             set => _properties["-moz-transform"] = value;
         }
 
@@ -890,9 +890,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> MozTransformOrigin
+        public Property<CSSProperties, PropertySkip, string, double> MozTransformOrigin
         {
-            get => (Property<PropertySkip, string, double>) _properties["-moz-transform-origin"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-moz-transform-origin"];
             set => _properties["-moz-transform-origin"] = value;
         }
 
@@ -903,9 +903,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> MozTransformStyle
+        public Property<CSSProperties, PropertySkip, string> MozTransformStyle
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-transform-style"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-transform-style"];
             set => _properties["-moz-transform-style"] = value;
         }
 
@@ -915,9 +915,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> MozTransition
+        public Property<CSSProperties, PropertySkip, string> MozTransition
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-transition"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-transition"];
             set => _properties["-moz-transition"] = value;
         }
 
@@ -928,9 +928,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> MozTransitionDelay
+        public Property<CSSProperties, PropertySkip, string> MozTransitionDelay
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-transition-delay"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-transition-delay"];
             set => _properties["-moz-transition-delay"] = value;
         }
 
@@ -941,9 +941,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> MozTransitionDuration
+        public Property<CSSProperties, PropertySkip, string> MozTransitionDuration
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-transition-duration"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-transition-duration"];
             set => _properties["-moz-transition-duration"] = value;
         }
 
@@ -954,9 +954,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> MozTransitionProperty
+        public Property<CSSProperties, PropertySkip, string> MozTransitionProperty
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-transition-property"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-transition-property"];
             set => _properties["-moz-transition-property"] = value;
         }
 
@@ -967,9 +967,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> MozTransitionTimingFunction
+        public Property<CSSProperties, PropertySkip, string> MozTransitionTimingFunction
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-transition-timing-function"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-transition-timing-function"];
             set => _properties["-moz-transition-timing-function"] = value;
         }
 
@@ -980,9 +980,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> MozUserInput
+        public Property<CSSProperties, PropertySkip, string> MozUserInput
         {
-            get => (Property<PropertySkip, string>) _properties["-moz-user-input"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-moz-user-input"];
             set => _properties["-moz-user-input"] = value;
         }
 
@@ -993,9 +993,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> MsImeMode
+        public Property<CSSProperties, PropertySkip, string> MsImeMode
         {
-            get => (Property<PropertySkip, string>) _properties["-ms-ime-mode"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-ms-ime-mode"];
             set => _properties["-ms-ime-mode"] = value;
         }
 
@@ -1005,9 +1005,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> OAnimation
+        public Property<CSSProperties, PropertySkip, string> OAnimation
         {
-            get => (Property<PropertySkip, string>) _properties["-o-animation"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-o-animation"];
             set => _properties["-o-animation"] = value;
         }
 
@@ -1018,9 +1018,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> OAnimationDelay
+        public Property<CSSProperties, PropertySkip, string> OAnimationDelay
         {
-            get => (Property<PropertySkip, string>) _properties["-o-animation-delay"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-o-animation-delay"];
             set => _properties["-o-animation-delay"] = value;
         }
 
@@ -1031,9 +1031,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> OAnimationDirection
+        public Property<CSSProperties, PropertySkip, string> OAnimationDirection
         {
-            get => (Property<PropertySkip, string>) _properties["-o-animation-direction"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-o-animation-direction"];
             set => _properties["-o-animation-direction"] = value;
         }
 
@@ -1044,9 +1044,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> OAnimationDuration
+        public Property<CSSProperties, PropertySkip, string> OAnimationDuration
         {
-            get => (Property<PropertySkip, string>) _properties["-o-animation-duration"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-o-animation-duration"];
             set => _properties["-o-animation-duration"] = value;
         }
 
@@ -1057,9 +1057,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> OAnimationFillMode
+        public Property<CSSProperties, PropertySkip, string> OAnimationFillMode
         {
-            get => (Property<PropertySkip, string>) _properties["-o-animation-fill-mode"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-o-animation-fill-mode"];
             set => _properties["-o-animation-fill-mode"] = value;
         }
 
@@ -1070,9 +1070,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> OAnimationIterationCount
+        public Property<CSSProperties, PropertySkip, string, double> OAnimationIterationCount
         {
-            get => (Property<PropertySkip, string, double>) _properties["-o-animation-iteration-count"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-o-animation-iteration-count"];
             set => _properties["-o-animation-iteration-count"] = value;
         }
 
@@ -1083,9 +1083,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, Keyframe> OAnimationName
+        public Property<CSSProperties, PropertySkip, string, Keyframe> OAnimationName
         {
-            get => (Property<PropertySkip, string, Keyframe>) _properties["-o-animation-name"];
+            get => (Property<CSSProperties, PropertySkip, string, Keyframe>) _properties["-o-animation-name"];
             set => _properties["-o-animation-name"] = value;
         }
 
@@ -1096,9 +1096,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> OAnimationPlayState
+        public Property<CSSProperties, PropertySkip, string> OAnimationPlayState
         {
-            get => (Property<PropertySkip, string>) _properties["-o-animation-play-state"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-o-animation-play-state"];
             set => _properties["-o-animation-play-state"] = value;
         }
 
@@ -1109,9 +1109,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> OAnimationTimingFunction
+        public Property<CSSProperties, PropertySkip, string> OAnimationTimingFunction
         {
-            get => (Property<PropertySkip, string>) _properties["-o-animation-timing-function"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-o-animation-timing-function"];
             set => _properties["-o-animation-timing-function"] = value;
         }
 
@@ -1122,9 +1122,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> OBackgroundSize
+        public Property<CSSProperties, PropertySkip, string, double> OBackgroundSize
         {
-            get => (Property<PropertySkip, string, double>) _properties["-o-background-size"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-o-background-size"];
             set => _properties["-o-background-size"] = value;
         }
 
@@ -1134,9 +1134,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> OBorderImage
+        public Property<CSSProperties, PropertySkip, string, double> OBorderImage
         {
-            get => (Property<PropertySkip, string, double>) _properties["-o-border-image"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-o-border-image"];
             set => _properties["-o-border-image"] = value;
         }
 
@@ -1147,9 +1147,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> OObjectFit
+        public Property<CSSProperties, PropertySkip, string> OObjectFit
         {
-            get => (Property<PropertySkip, string>) _properties["-o-object-fit"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-o-object-fit"];
             set => _properties["-o-object-fit"] = value;
         }
 
@@ -1160,9 +1160,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> OObjectPosition
+        public Property<CSSProperties, PropertySkip, string, double> OObjectPosition
         {
-            get => (Property<PropertySkip, string, double>) _properties["-o-object-position"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-o-object-position"];
             set => _properties["-o-object-position"] = value;
         }
 
@@ -1173,9 +1173,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> OTabSize
+        public Property<CSSProperties, PropertySkip, string, double> OTabSize
         {
-            get => (Property<PropertySkip, string, double>) _properties["-o-tab-size"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-o-tab-size"];
             set => _properties["-o-tab-size"] = value;
         }
 
@@ -1186,9 +1186,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> OTextOverflow
+        public Property<CSSProperties, PropertySkip, string> OTextOverflow
         {
-            get => (Property<PropertySkip, string>) _properties["-o-text-overflow"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-o-text-overflow"];
             set => _properties["-o-text-overflow"] = value;
         }
 
@@ -1199,9 +1199,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> OTransform
+        public Property<CSSProperties, PropertySkip, string> OTransform
         {
-            get => (Property<PropertySkip, string>) _properties["-o-transform"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-o-transform"];
             set => _properties["-o-transform"] = value;
         }
 
@@ -1212,9 +1212,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> OTransformOrigin
+        public Property<CSSProperties, PropertySkip, string, double> OTransformOrigin
         {
-            get => (Property<PropertySkip, string, double>) _properties["-o-transform-origin"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-o-transform-origin"];
             set => _properties["-o-transform-origin"] = value;
         }
 
@@ -1224,9 +1224,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> OTransition
+        public Property<CSSProperties, PropertySkip, string> OTransition
         {
-            get => (Property<PropertySkip, string>) _properties["-o-transition"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-o-transition"];
             set => _properties["-o-transition"] = value;
         }
 
@@ -1237,9 +1237,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> OTransitionDelay
+        public Property<CSSProperties, PropertySkip, string> OTransitionDelay
         {
-            get => (Property<PropertySkip, string>) _properties["-o-transition-delay"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-o-transition-delay"];
             set => _properties["-o-transition-delay"] = value;
         }
 
@@ -1250,9 +1250,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> OTransitionDuration
+        public Property<CSSProperties, PropertySkip, string> OTransitionDuration
         {
-            get => (Property<PropertySkip, string>) _properties["-o-transition-duration"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-o-transition-duration"];
             set => _properties["-o-transition-duration"] = value;
         }
 
@@ -1263,9 +1263,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> OTransitionProperty
+        public Property<CSSProperties, PropertySkip, string> OTransitionProperty
         {
-            get => (Property<PropertySkip, string>) _properties["-o-transition-property"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-o-transition-property"];
             set => _properties["-o-transition-property"] = value;
         }
 
@@ -1276,9 +1276,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> OTransitionTimingFunction
+        public Property<CSSProperties, PropertySkip, string> OTransitionTimingFunction
         {
-            get => (Property<PropertySkip, string>) _properties["-o-transition-timing-function"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-o-transition-timing-function"];
             set => _properties["-o-transition-timing-function"] = value;
         }
 
@@ -1289,9 +1289,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> WebkitBoxAlign
+        public Property<CSSProperties, PropertySkip, string> WebkitBoxAlign
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-box-align"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-box-align"];
             set => _properties["-webkit-box-align"] = value;
         }
 
@@ -1302,9 +1302,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> WebkitBoxDirection
+        public Property<CSSProperties, PropertySkip, string> WebkitBoxDirection
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-box-direction"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-box-direction"];
             set => _properties["-webkit-box-direction"] = value;
         }
 
@@ -1315,9 +1315,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> WebkitBoxFlex
+        public Property<CSSProperties, PropertySkip, string, double> WebkitBoxFlex
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-box-flex"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-box-flex"];
             set => _properties["-webkit-box-flex"] = value;
         }
 
@@ -1328,9 +1328,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> WebkitBoxFlexGroup
+        public Property<CSSProperties, PropertySkip, string, double> WebkitBoxFlexGroup
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-box-flex-group"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-box-flex-group"];
             set => _properties["-webkit-box-flex-group"] = value;
         }
 
@@ -1341,9 +1341,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> WebkitBoxLines
+        public Property<CSSProperties, PropertySkip, string> WebkitBoxLines
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-box-lines"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-box-lines"];
             set => _properties["-webkit-box-lines"] = value;
         }
 
@@ -1354,9 +1354,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string, double> WebkitBoxOrdinalGroup
+        public Property<CSSProperties, PropertySkip, string, double> WebkitBoxOrdinalGroup
         {
-            get => (Property<PropertySkip, string, double>) _properties["-webkit-box-ordinal-group"];
+            get => (Property<CSSProperties, PropertySkip, string, double>) _properties["-webkit-box-ordinal-group"];
             set => _properties["-webkit-box-ordinal-group"] = value;
         }
 
@@ -1367,9 +1367,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> WebkitBoxOrient
+        public Property<CSSProperties, PropertySkip, string> WebkitBoxOrient
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-box-orient"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-box-orient"];
             set => _properties["-webkit-box-orient"] = value;
         }
 
@@ -1380,9 +1380,9 @@ namespace CssInCSharp
         /// <para> @deprecated</para>
         /// </summary>
         [Obsolete]
-        public Property<PropertySkip, string> WebkitBoxPack
+        public Property<CSSProperties, PropertySkip, string> WebkitBoxPack
         {
-            get => (Property<PropertySkip, string>) _properties["-webkit-box-pack"];
+            get => (Property<CSSProperties, PropertySkip, string>) _properties["-webkit-box-pack"];
             set => _properties["-webkit-box-pack"] = value;
         }
 
