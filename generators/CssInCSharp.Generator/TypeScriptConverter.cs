@@ -776,6 +776,25 @@ namespace CssInCSharp.Generator
 
                                 goto default;
                             }
+                            case Ts.TsTypes.SyntaxKind.MappedType:
+                            {
+                                /*
+                                 * type ShadowColorMap = {
+                                 *   [Key in `${PresetColorKey}ShadowColor`]: string;
+                                 * };
+                                 * todo: how to convert to csharp?
+                                 * eg:
+                                 * if PresetColorKey has keys 'blue, purple, cyan'
+                                 * it should be like:
+                                 * public class ShadowColorMap
+                                 * {
+                                 *     public string BlueShadowColor { get;set; }
+                                 *     public string PurpleShadowColor { get;set; }
+                                 *     public string CyanShadowColor { get;set; }
+                                 * }
+                                 */
+                                return classDeclaration;
+                            }
                             default:
                                 var r = GenerateCSharpAst(n.Type);
                                 var baseClasses = new List<SyntaxNodeOrToken>();
