@@ -13,6 +13,7 @@ dotnet add package CssInCSharp
 ```
 
 ## Usage
+- Used in native style tag
 ```csharp
 <div class="basic">
     <div class="title">Title</div>
@@ -57,7 +58,121 @@ dotnet add package CssInCSharp
 }
 ```
 
-For other examples, you can check out the example code.
+- Use StyleContent Or Style Component
+```csharp
+<div class="div1">
+    Style In Head
+</div>
+
+<div class="div2">
+    Style In Body
+</div>
+
+<!-- style in head -->
+<StyleContent>
+    <Style StyleFn="@StyleInHead" Path="Basic|StyleTag"></Style>
+</StyleContent>
+
+<!--style in body-->
+<Style StyleFn="@StyleInBody"></Style>
+
+@code {
+    private CSSInterpolation StyleInHead()
+    {
+        return new CSSObject
+        {
+            [".div1"] = new CSSObject
+            {
+                Width = "200px",
+                Height = "200px",
+                Border = "1px solid #DDD",
+            }
+        };
+    }
+
+    private CSSInterpolation StyleInBody()
+    {
+        return new CSSObject
+        {
+            [".div2"] = new CSSObject
+            {
+                Width = "200px",
+                Height = "200px",
+                Border = "1px solid #DDD",
+                BackgroundColor = "#EFEFEF",
+            }
+        };
+    }
+}
+```
+
+- Register style
+```csharp
+@_node
+
+@code {
+
+    private RenderFragment _node;
+
+    protected override void OnInitialized()
+    {
+        var token = new
+        {
+            ColorBgLayout = "#ddd",
+            BorderRadiusLG = "8px",
+            BoxShadow = "5px #DEDEDE",
+            Padding = 20,
+            BorderRadius = 4,
+            ColorTextTertiary = "#000",
+            ColorBgContainer = "#EFEFEF",
+            MotionEaseInBack = "",
+            ColorTextSecondary = "",
+            BoxShadowSecondary = ""
+        };
+        var styles = new
+        {
+            container = new CSSObject
+            {
+                BackgroundColor = token.ColorBgLayout,
+                BorderRadius = token.BorderRadiusLG,
+                MaxWidth = 400,
+                Width = "100%",
+                Height = 180,
+                Display = "flex",
+                AlignItems = "center",
+                JustifyContent = "center",
+                FlexDirection = "column",
+                MarginLeft = "auto",
+                MarginRight = "auto",
+            },
+
+            card = CSS($$""""
+                box-shadow: {{token.BoxShadow}};
+                padding: {{token.Padding}}px;
+                border-radius: {{token.BorderRadius}}px;
+                color: {{token.ColorTextTertiary}};
+                background: {{token.ColorBgContainer}};
+                transition: all 100ms {{token.MotionEaseInBack}};
+
+                margin-bottom: 8px;
+                cursor: pointer;
+
+                &:hover {
+                  color: {{token.ColorTextSecondary}};
+                  box-shadow: {{token.BoxShadowSecondary}};
+                }
+            """"),
+        };
+
+        _node = @<div class="@CX("a-simple-create-style-demo-classname", styles.container)">
+                    <div class="@styles.card">createStyles Demo</div>
+                    <div>Current theme mode: dark</div>
+                </div>;
+    }
+}
+```
+
+For other examples, you can check out the example code. For more information, please refer to the [document](./docs/index.md).
 
 ## Css Compiler
 The CssInCSharp is similar to less or sass. You can simply convert you style file into C# class, so that you can make full use of the C# language features to generate style content.

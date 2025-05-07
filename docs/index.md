@@ -667,21 +667,19 @@ The style output:
 ```
 
 ## Custom Component Style
-On a page, you can use the `<StyleContent>` component to add styles, but you can't use StyleContent in custom component, so if you need to add a style to the head in the custom component, you need to use the `UseStyleRegister` method in the `StyleHelper` class to register the style.
+On a page, you can use the `<StyleContent>` component to add styles, but you can't use StyleContent in custom component, so if you need to add a style to the head in the custom component, you need to use the `Register` method in the `StyleHelper` class to register the style.
 
 DemoComponent.razor
 ```csharp
 <div class="@_tokenHash demo"></div>
-@_styleContent
 
 @code
 {
-    private RenderFragment _styleContent;
     private string _tokenHash = "css-zcfrx9";
 
     protected override void OnInitialized()
     {
-        _styleContent = StyleHelper.UseStyleRegister(new StyleInfo
+        StyleHelper.Register(new StyleInfo
         {
             HashId = _tokenHash,
             Path = new[] { "component", "demo" },
@@ -703,3 +701,69 @@ DemoComponent.razor
     }
 }
 ```
+The `StyleHelper` class contains a set of methods for registering styles. `CSSObject` or `CSSString` can be injected directly.
+```csharp
+@_node
+
+@code {
+
+    private RenderFragment _node;
+
+    protected override void OnInitialized()
+    {
+        var token = new
+        {
+            ColorBgLayout = "#ddd",
+            BorderRadiusLG = "8px",
+            BoxShadow = "5px #DEDEDE",
+            Padding = 20,
+            BorderRadius = 4,
+            ColorTextTertiary = "#000",
+            ColorBgContainer = "#EFEFEF",
+            MotionEaseInBack = "",
+            ColorTextSecondary = "",
+            BoxShadowSecondary = ""
+        };
+        var styles = new
+        {
+            container = new CSSObject
+            {
+                BackgroundColor = token.ColorBgLayout,
+                BorderRadius = token.BorderRadiusLG,
+                MaxWidth = 400,
+                Width = "100%",
+                Height = 180,
+                Display = "flex",
+                AlignItems = "center",
+                JustifyContent = "center",
+                FlexDirection = "column",
+                MarginLeft = "auto",
+                MarginRight = "auto",
+            },
+
+            card = CSS($$""""
+                box-shadow: {{token.BoxShadow}};
+                padding: {{token.Padding}}px;
+                border-radius: {{token.BorderRadius}}px;
+                color: {{token.ColorTextTertiary}};
+                background: {{token.ColorBgContainer}};
+                transition: all 100ms {{token.MotionEaseInBack}};
+
+                margin-bottom: 8px;
+                cursor: pointer;
+
+                &:hover {
+                  color: {{token.ColorTextSecondary}};
+                  box-shadow: {{token.BoxShadowSecondary}};
+                }
+            """"),
+        };
+
+        _node = @<div class="@CX("a-simple-create-style-demo-classname", styles.container)">
+                    <div class="@styles.card">createStyles Demo</div>
+                    <div>Current theme mode: dark</div>
+                </div>;
+    }
+}
+```
+When injecting CSSObject via the `CX` method, you can keep the custom className, otherwise the `HashId` will be used as the default className, and the `CSS` method can inject a style string, which can contain structured style content.

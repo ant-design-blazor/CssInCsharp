@@ -308,7 +308,7 @@ cssincs convert -c cssincs.json
 
 After the command is executed, all .ts files will be converted to .cs files. If `Dest` specifies a folder instead of a file, the final file will be generated according to the directory of the source file.
 
-## Legacy ssues
+## Legacy Issues
 - Since C# doesn't support UnionType, like multiple inheritance or `Pick<T>`, `Omit<T>`, etc., are not possible.
   
 To solve this problem, we plan to use a source generator to achieve the effect of Pick and Omit.
@@ -340,3 +340,38 @@ var style = new
 <div class="@cx('a-simple-create-style-demo-classname', styles.container)"></div>
 ```
 To solve the above problems, you only need to implement a css() and cx() method. CssInCSharp already supports the serialization of a `string` or a `CSSObject`.
+
+## Guide
+
+- Step1: Add new theme options for antd, eg:
+  
+  ```csharp
+  services.AddAntDesign(option => 
+  {
+    option.DefaultTheme = "dark",
+    option.ThemeAlgorithm = () => {
+      ...
+    }
+  });
+  ```
+
+- Step2: Gen style code from ts code.
+  ```bash
+  # use cssincs cli tool
+  cssincs convert -c cssincs.json
+
+  # eg: button component
+  button/
+    ├── Button.razor
+    ├── Button.razor.cs
+    ├── style
+        ├── index.cs
+        ├── group.cs
+        ├── compact.cs
+        ├── token.cs
+  ```
+
+- Step3: Register style for each component
+  ```csharp
+  
+  ```

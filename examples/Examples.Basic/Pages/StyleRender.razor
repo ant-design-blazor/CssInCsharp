@@ -1,0 +1,66 @@
+﻿@page "/style-render"
+
+<div>
+    @_node
+</div>
+
+@code {
+
+    private RenderFragment _node;
+
+    protected override void OnInitialized()
+    {
+        var token = new
+        {
+            ColorBgLayout = "#ddd",
+            BorderRadiusLG = "8px",
+            BoxShadow = "5px #DEDEDE",
+            Padding = 20,
+            BorderRadius = 4,
+            ColorTextTertiary = "#000",
+            ColorBgContainer = "#EFEFEF",
+            MotionEaseInBack = "",
+            ColorTextSecondary = "",
+            BoxShadowSecondary = ""
+        };
+        var styles = new
+        {
+            container = new CSSObject
+            {
+                BackgroundColor = token.ColorBgLayout,
+                BorderRadius = token.BorderRadiusLG,
+                MaxWidth = 400,
+                Width = "100%",
+                Height = 180,
+                Display = "flex",
+                AlignItems = "center",
+                JustifyContent = "center",
+                FlexDirection = "column",
+                MarginLeft = "auto",
+                MarginRight = "auto",
+            },
+
+            card = CSS($$""""
+                box-shadow: {{token.BoxShadow}};
+                padding: {{token.Padding}}px;
+                border-radius: {{token.BorderRadius}}px;
+                color: {{token.ColorTextTertiary}};
+                background: {{token.ColorBgContainer}};
+                transition: all 100ms {{token.MotionEaseInBack}};
+
+                margin-bottom: 8px;
+                cursor: pointer;
+
+                &:hover {
+                  color: {{token.ColorTextSecondary}};
+                  box-shadow: {{token.BoxShadowSecondary}};
+                }
+            """"),
+        };
+
+        _node = @<div class="@CX("a-simple-create-style-demo-classname", styles.container)">
+                    <div class="@styles.card">createStyles Demo</div>
+                    <div>Current theme mode: dark</div>
+                </div>;
+    }
+}

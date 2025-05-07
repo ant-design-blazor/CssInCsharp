@@ -1,14 +1,11 @@
 ﻿@namespace Examples.Component
-@inherits AntdComponentBase
 
-@WrapSSR(
-    @<div class="@Name">
-        @foreach (var item in Items)
-        {
+<div class="@_token.HashId @Name">
+    @foreach (var item in Items)
+    {
         <div class="item">@item</div>
-        }
-    </div>
-, _token)
+    }
+</div>
 
 @code {
     [Parameter] 
@@ -16,4 +13,15 @@
 
     [Parameter]
     public int Width { get; set; } = 500;
+
+    protected override void OnInitialized()
+    {
+        // use style helper to register style
+        StyleHelper.Register(new StyleInfo
+        {
+            HashId = _token.HashId,
+            Path = new string[]{ "component", "demo" },
+            StyleFn = UseStyle
+        });
+    }
 }

@@ -700,21 +700,19 @@ Style组件属性列表:
 ```
 
 ## 自定义组件样式
-在页面上，你可以使用`<StyleContent>`组件来添加页面样式。但是StyleContent并不能用在自定义的组件里。例如创建一个`<DemoComponent>`组件，该如何为这个自定义组件添加样式。CssInCsharp提供一个全局的Helper类`StyleHelper`。你可以使用`UseStyleRegister`方法来向head标签里注入样式。
+在页面上，你可以使用`<StyleContent>`组件来添加页面样式。但是StyleContent并不能用在自定义的组件里。例如创建一个`<DemoComponent>`组件，该如何为这个自定义组件添加样式。CssInCsharp提供一个全局的Helper类`StyleHelper`。你可以使用`Register`方法来向head标签里注入样式。
 
 DemoComponent.razor演示代码：
 ```csharp
 <div class="@_tokenHash demo"></div>
-@_styleContent
 
 @code
 {
-    private RenderFragment _styleContent;
     private string _tokenHash = "css-zcfrx9";
 
     protected override void OnInitialized()
     {
-        _styleContent = StyleHelper.UseStyleRegister(new StyleInfo
+        StyleHelper.Register(new StyleInfo
         {
             HashId = _tokenHash,
             Path = new[] { "component", "demo" },
@@ -736,4 +734,69 @@ DemoComponent.razor演示代码：
     }
 }
 ```
-`UseStyleRegister`方法调用后会返回RenderFragment对象。你需要将该对象放到组件里。
+`StyleHelper`类中包含一组用于注册样式的方法。可直接注入`CSSObject`对象或样式字符串。
+```csharp
+@_node
+
+@code {
+
+    private RenderFragment _node;
+
+    protected override void OnInitialized()
+    {
+        var token = new
+        {
+            ColorBgLayout = "#ddd",
+            BorderRadiusLG = "8px",
+            BoxShadow = "5px #DEDEDE",
+            Padding = 20,
+            BorderRadius = 4,
+            ColorTextTertiary = "#000",
+            ColorBgContainer = "#EFEFEF",
+            MotionEaseInBack = "",
+            ColorTextSecondary = "",
+            BoxShadowSecondary = ""
+        };
+        var styles = new
+        {
+            container = new CSSObject
+            {
+                BackgroundColor = token.ColorBgLayout,
+                BorderRadius = token.BorderRadiusLG,
+                MaxWidth = 400,
+                Width = "100%",
+                Height = 180,
+                Display = "flex",
+                AlignItems = "center",
+                JustifyContent = "center",
+                FlexDirection = "column",
+                MarginLeft = "auto",
+                MarginRight = "auto",
+            },
+
+            card = CSS($$""""
+                box-shadow: {{token.BoxShadow}};
+                padding: {{token.Padding}}px;
+                border-radius: {{token.BorderRadius}}px;
+                color: {{token.ColorTextTertiary}};
+                background: {{token.ColorBgContainer}};
+                transition: all 100ms {{token.MotionEaseInBack}};
+
+                margin-bottom: 8px;
+                cursor: pointer;
+
+                &:hover {
+                  color: {{token.ColorTextSecondary}};
+                  box-shadow: {{token.BoxShadowSecondary}};
+                }
+            """"),
+        };
+
+        _node = @<div class="@CX("a-simple-create-style-demo-classname", styles.container)">
+                    <div class="@styles.card">createStyles Demo</div>
+                    <div>Current theme mode: dark</div>
+                </div>;
+    }
+}
+```
+通过`CX`方法注入CSSObject时可以保留自定义className，否则会以HashId作为该对象的className，`CSS`方法可以直接注入样式字符串，该字符串可以包含结构化的样式内容。

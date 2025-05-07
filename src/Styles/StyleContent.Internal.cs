@@ -1,24 +1,28 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Rendering;
-#if NET8_0_OR_GREATER
-using Microsoft.AspNetCore.Components.Sections;
-#endif
 
 namespace CssInCSharp
 {
     internal class StyleContentInternal : ComponentBase
     {
-        [Parameter]
-        public RenderFragment? ChildContent { get; set; }
-
         protected override void BuildRenderTree(RenderTreeBuilder builder)
         {
-#if NET8_0_OR_GREATER
-            builder.OpenComponent<SectionContent>(0);
-            builder.AddAttribute(1, nameof(SectionContent.SectionName), StyleOutlet.InternalStyeSectionOutletName);
-            builder.AddAttribute(2, nameof(SectionContent.ChildContent), ChildContent);
+            builder.OpenComponent<StyleSectionContent>(0);
+            builder.AddAttribute(1, nameof(StyleSectionContent.SectionName), StyleOutlet.InternalStyeSectionOutletName);
+            builder.AddAttribute(2, nameof(StyleSectionContent.ChildContent), (RenderFragment)((child) =>
+            {
+                var i = 0;
+                foreach (var item in StyleHelper.Styles)
+                {
+                    child.OpenComponent<Style>(i++);
+                    child.AddAttribute(i++, "HashId", item.Value.HashId);
+                    child.AddAttribute(i++, "TokenKey", item.Value.TokenKey);
+                    child.AddAttribute(i++, "Path", item.Key);
+                    child.AddAttribute(i++, "StyleFn", item.Value.StyleFn);
+                    child.CloseComponent();
+                }
+            }));
             builder.CloseComponent();
-#endif
         }
     }
 }
