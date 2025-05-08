@@ -341,7 +341,7 @@ var style = new
 ```
 To solve the above problems, you only need to implement a css() and cx() method. CssInCSharp already supports the serialization of a `string` or a `CSSObject`.
 
-## Guide
+## Style Migration Guide
 
 - Step1: Add new theme options for antd, eg:  
   
@@ -385,7 +385,7 @@ To solve the above problems, you only need to implement a css() and cx() method.
   {
     var prefixName = "ant-btn";
     // 注入index.cs中的IndexDefault()方法
-    var hashId = ButtonStyle.IndexDefault()(prefixName);
+    var hashId = ButtonStyle.IndexDefault()(prefixName， ...);
     // Add hashId
     ClassMapper
       .Add(prefixName)
@@ -403,66 +403,101 @@ To solve the above problems, you only need to implement a css() and cx() method.
     GenOptions options = null
   )
   {
-    // default token
-    var defaultToken = ...
-    // gen theme token
-    var themeToken = option.ThemeAlgorithm();
-    // component token
-    var mergedToken = new T();
-    mergedToken.Merge(defaultToken, themeToken);
+    // some init code
     ...
-    // 这里就是调用CssInCsharp方法
-    UseStyleRegister(new StyleInfo()
-    {
-      HashId = hash.HashId,
-      TokenKey = hash.TokenKey,
-      Path = new[] { "Shared", rootPrefixCls },
-      StyleFn = () => new CSSObject { ["&"] = GlobalStyle.GenLinkStyle(token) },
-    });
-  }
-  ```
-  Note: The theme options needs to be retrieved here. Since `IOptions` is injected clsss but the `GenStyleHooks` method is a static method, a static instance must be created to access it. eg:
-  ```csharp
-  service.AddSingleton<ThemeService>((provider) =>
-  {
-      if (StyleUtil.ThemeService == default)
+
+    // return render func
+    return (prefixCls, themeOptions) => {
+      // default token
+      var defaultToken = ...
+      // gen theme token
+      var themeToken = themeOptions.ThemeAlgorithm();
+      // component token
+      var mergedToken = new T();
+      mergedToken.Merge(defaultToken, themeToken);
+      ...
+      // 这里就是调用CssInCsharp方法
+      UseStyleRegister(new StyleInfo()
       {
-          var options = provider.GetRequiredService<IOptions<ThemeOptions>>();
-          StyleUtil.ThemeService = new ThemeService(options);
-      }
-
-      return StyleUtil.ThemeService;
-  });
-
-  public class ThemeService
-  {
-    /**
-      * StyleHelper是CssInCsharp提供的静态类
-      * 如果需要使用注入类可以使用StyleService
-      * service.AddCssInCSharp();
-      * public ThemeService(IOptions<ThemeOptions> options, StyleService styleService)
-      * {
-      * }
-      */
-    public ThemeService(IOptions<ThemeOptions> options)
-    {
-    }
-
-    public UseComponentStyleResult UseStyle()
-    {
-    }
-  }
-
-  internal static class StyleUtil
-  {
-    // static instance
-    internal static ThemeService ThemeService { get;set; }
-
-    // hook method
-    internal static UseComponentStyleResult GenStyleHooks<T>()
-    {
-      // call theme service
-      return ThemeService.UseTyle();
+        HashId = hash.HashId,
+        TokenKey = hash.TokenKey,
+        Path = new[] { "Shared", rootPrefixCls },
+        StyleFn = styleFunc,
+      });
     }
   }
   ```
+  Then you can update the invoke code in `Button.razor.cs` as follows:
+  ```csharp
+  // inject options or Themeservice
+  [Inject]
+  protected IOptions<ThemeOptions> ThemeOptions { get; set; }
+
+  // 修改调用代码
+  protected void SetClassMap()
+  {
+    var prefixName = "ant-btn";
+    // 调用样式的ExportDefault方法时会返回渲染方法
+    var renderFunc = ButtonStyle.IndexDefault();
+    // 调用渲染方法传入主题管相关配置，并获取hashId
+    var hashId = renderFunc(prefixName， ThemeOptions);
+    // Add hashId
+    ClassMapper
+      .Add(prefixName)
+      .Add(hashId)
+  }
+  ```
+
+- Step5: Usage of style variables
+  The latest style files use style variables, which requires assigning values during style rendering. The implementation is as follows.
+  ```csharp
+    internal static UseComponentStyleResult GenStyleHooks<T>(
+    string componentName,
+    Func<T, CSSObject> styleFunc,
+    Func<T> getDefaultToken,
+    GenOptions options = null
+  )
+  {
+    // some init code
+    ...
+
+    // return render func
+    return (prefixCls, themeOptions) => {
+      /**
+       * 渲染全局样式变量表，比如：
+       * :root{
+       *   --green: #28a745;
+       * }
+       */
+      UseStyleRegister(new StyleInfo()
+      {
+        HashId = hash.HashId,
+        TokenKey = hash.TokenKey,
+        Path = new[] { "Variables", rootPrefixCls },
+        StyleFn = variableFunc, // 全局定义的
+      });
+
+      // 渲染全局样式，比如icon图标
+      UseStyleRegister(new StyleInfo()
+      {
+        HashId = hash.HashId,
+        TokenKey = hash.TokenKey,
+        Path = new[] { "Shared", rootPrefixCls },
+        StyleFn = iconFunc,  // 全局定义
+      });
+
+      // 这里用来渲染某个具体组件的样式
+      UseStyleRegister(new StyleInfo()
+      {
+        HashId = hash.HashId,
+        TokenKey = hash.TokenKey,
+        Path = new[] { "Component", rootPrefixCls },
+        StyleFn = styleFunc, // 每个组件自己定义
+      });
+    }
+  }
+  ```
+
+### Notes
+* The `GenStyleHooks` method called in the `ExportDefault` of style files may have different parameters, so you need to implement multiple overloads.  
+* For token merging: `DefaultToken` contains the default values, while `ThemeToken` contains values computed by the theme algorithm. A component's token needs to merge the ThemeToken with the DefaultToken。  
