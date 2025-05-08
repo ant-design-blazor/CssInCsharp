@@ -20,6 +20,11 @@ namespace CssInCSharp
         private static StyleCache _instance;
         public static StyleCache Instance => _instance ??= new StyleCache();
 
+        public bool TryAdd(string key, Item item)
+        {
+            return _cache.TryAdd(key, item);
+        }
+
         public Item GetOrAdd(string key, Func<string, Item> func)
         {
             return _cache.GetOrAdd(key, func);

@@ -12,7 +12,7 @@ namespace CssInCSharp
         public string TokenKey { get; set; }
 
         [Parameter]
-        public string Path { get; set; } = $"css|{Guid.NewGuid()}";
+        public string Path { get; set; } = $"cssincs|{Guid.NewGuid()}";
 
         [Parameter]
         public string HashId { get; set; }
@@ -27,21 +27,33 @@ namespace CssInCSharp
         {
             var cache = StyleCache.Instance.GetOrAdd(Path, (key) =>
             {
-                var csses = StyleFn().ToCssArray();
-                var sb = new StringBuilder();
-                var effects = new List<(string, string)>();
-                foreach (var css in csses)
+                var style = StyleFn();
+                string styleStr;
+                List<(string, string)> effects = null;
+                if (style.IsT3)
                 {
-                    sb.Append(css?.SerializeCss(HashId, effects));
+                    styleStr = style.AsT3.ToString();
                 }
+                else
+                {
+                    var csses = style.ToCssArray();
+                    var sb = new StringBuilder();
+                    effects = new List<(string, string)>();
+                    foreach (var css in csses)
+                    {
+                        sb.Append(css?.SerializeCss(HashId, effects));
+                    }
+                    styleStr = sb.ToString();
+                }
+
                 var item = new StyleCache.Item
                 {
-                    StyleStr = sb.ToString(),
+                    StyleStr = styleStr,
                     TokenKey = TokenKey,
                     StyleId = "",
                     Effects = new Dictionary<string, string>(),
                 };
-                if (effects.Count > 0)
+                if (effects != null && effects.Count > 0)
                 {
                     foreach (var (effectName, effect) in effects)
                     {

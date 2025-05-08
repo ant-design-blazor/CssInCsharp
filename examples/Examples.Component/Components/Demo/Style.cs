@@ -2,12 +2,25 @@
 
 namespace Examples.Component
 {
+    public class CssToken
+    {
+        // some css token, eg: theme parameters
+        public string ThemeColor { get; set; }
+        public string ThemeBackground { get; set; }
+        public string ComponentName { get; set; }
+        public string HashId { get; set; }
+    }
+
     public partial class Demo
     {
         // or component id,name etc.
         private const string Name = "demo";
         private const string ClassName = $".{Name}";
-        private CssToken _token = new CssToken();
+
+        private CssToken _token = new CssToken()
+        {
+            HashId = "qsdfq",
+        };
 
         private CSSObject GenStyle(CssToken token)
         {
@@ -35,9 +48,6 @@ namespace Examples.Component
             };
         }
 
-        protected override CSSInterpolation UseStyle() => new CSSInterpolation[]
-        {
-            GenStyle(_token)
-        };
+        public CSSInterpolation UseStyle() => GenStyle(_token);
     }
 }

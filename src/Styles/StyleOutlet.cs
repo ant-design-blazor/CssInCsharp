@@ -1,9 +1,8 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Rendering;
-#if NET8_0_OR_GREATER
-using Microsoft.AspNetCore.Components.Sections;
-#endif
+#if NET6_0_OR_GREATER
 using Microsoft.AspNetCore.Components.Web;
+#endif
 
 namespace CssInCSharp
 {
@@ -11,6 +10,8 @@ namespace CssInCSharp
     {
         internal const string StyeSectionOutletName = "cssincsharp_style";
         internal const string InternalStyeSectionOutletName = "cssincsharp_style_internal";
+
+        [Parameter] public bool HeadOutletRender { get; set; } = true;
 
         /*
          * using SectionOutlet to render style tag
@@ -22,23 +23,28 @@ namespace CssInCSharp
         protected override void BuildRenderTree(RenderTreeBuilder builder)
         {
             var i = 0;
-#if NET8_0_OR_GREATER
-            // internal style content for components
-            builder.OpenComponent<SectionOutlet>(i++);
-            builder.AddAttribute(i++, nameof(SectionOutlet.SectionName), InternalStyeSectionOutletName);
+
+            // render internal styles
+            builder.OpenComponent<StyleSection>(i++);
+            builder.AddAttribute(i++, nameof(StyleSection.SectionName), InternalStyeSectionOutletName);
             builder.CloseComponent();
-            // style content for pages
-            builder.OpenComponent<SectionOutlet>(i++);
-            builder.AddAttribute(i++, nameof(SectionOutlet.SectionName), StyeSectionOutletName);
+
+            // render page styles
+            builder.OpenComponent<StyleSection>(i++);
+            builder.AddAttribute(i++, nameof(StyleSection.SectionName), StyeSectionOutletName);
             builder.CloseComponent();
-            // original head
-            builder.OpenComponent<HeadOutlet>(i++);
+
+            // internal style container
+            builder.OpenComponent<StyleContentInternal>(i++);
             builder.CloseComponent();
-#elif NET6_0_OR_GREATER
-            builder.OpenComponent<HeadOutlet>(i++);
-            builder.CloseComponent();
-#else
-#warning "The TargetFramework does not support the StyleOutlet component, upgrade the TargetFramework or use Style component only."
+
+#if NET6_0_OR_GREATER
+            // render default HeadOutlet
+            if (HeadOutletRender)
+            {
+                builder.OpenComponent<HeadOutlet>(i++);
+                builder.CloseComponent();
+            }
 #endif
         }
     }

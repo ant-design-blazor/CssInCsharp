@@ -13,6 +13,7 @@ dotnet add package CssInCSharp
 ```
 
 ## Usage
+- Used within a native `<style>` tag.
 ```csharp
 <div class="basic">
     <div class="title">Title</div>
@@ -57,7 +58,142 @@ dotnet add package CssInCSharp
 }
 ```
 
-For other examples, you can check out the example code.
+- Use the `StyleContent` and `Style` components on the page.
+```csharp
+<div class="div1">
+    Style In Head
+</div>
+
+<div class="div2">
+    Style In Body
+</div>
+
+<!-- style in head -->
+<StyleContent>
+    <Style StyleFn="@StyleInHead" Path="Basic|StyleTag"></Style>
+</StyleContent>
+
+<!--style in body-->
+<Style StyleFn="@StyleInBody"></Style>
+
+@code {
+    private CSSInterpolation StyleInHead()
+    {
+        return new CSSObject
+        {
+            [".div1"] = new CSSObject
+            {
+                Width = "200px",
+                Height = "200px",
+                Border = "1px solid #DDD",
+            }
+        };
+    }
+
+    private CSSInterpolation StyleInBody()
+    {
+        return new CSSObject
+        {
+            [".div2"] = new CSSObject
+            {
+                Width = "200px",
+                Height = "200px",
+                Border = "1px solid #DDD",
+                BackgroundColor = "#EFEFEF",
+            }
+        };
+    }
+}
+```
+
+- Use StyleHelper to inject styles in custom components.
+```csharp
+<div class="@_token.HashId @Name">
+    @foreach (var item in Items)
+    {
+        <div class="item">@item</div>
+    }
+</div>
+
+@code {
+    [Parameter] 
+    public string[] Items { get; set; }
+
+    [Parameter]
+    public int Width { get; set; } = 500;
+
+    protected override void OnInitialized()
+    {
+        // use style helper to register style
+        StyleHelper.Register(new StyleInfo
+        {
+            HashId = _token.HashId,
+            Path = new string[]{ "component", "demo" },
+            StyleFn = UseStyle
+        });
+    }
+
+    private CSSInterpolation UseStyle()
+    {
+        ...
+    }
+}
+```
+
+- Inject a `CSSObject` or `CSSString` into the head.
+```csharp
+@_node
+
+@code {
+
+    private RenderFragment _node;
+
+    protected override void OnInitialized()
+    {
+        var styles = new
+        {
+            container = new CSSObject
+            {
+                BackgroundColor = token.ColorBgLayout,
+                BorderRadius = token.BorderRadiusLG,
+                MaxWidth = 400,
+                Width = "100%",
+                Height = 180,
+                Display = "flex",
+                AlignItems = "center",
+                JustifyContent = "center",
+                FlexDirection = "column",
+                MarginLeft = "auto",
+                MarginRight = "auto",
+            },
+
+            card = CSS($$""""
+                box-shadow: {{token.BoxShadow}};
+                padding: {{token.Padding}}px;
+                border-radius: {{token.BorderRadius}}px;
+                color: {{token.ColorTextTertiary}};
+                background: {{token.ColorBgContainer}};
+                transition: all 100ms {{token.MotionEaseInBack}};
+
+                margin-bottom: 8px;
+                cursor: pointer;
+
+                &:hover {
+                  color: {{token.ColorTextSecondary}};
+                  box-shadow: {{token.BoxShadowSecondary}};
+                }
+            """"),
+        };
+        // The CX and CSS methods are defined in the StyleHelper class.
+        // @using static CssInCSharp.StyleHelper
+        _node = @<div class="@CX("a-simple-create-style-demo-classname", styles.container)">
+                    <div class="@styles.card">createStyles Demo</div>
+                    <div>Current theme mode: dark</div>
+                </div>;
+    }
+}
+```
+For other examples, you can check out the example code. For more information, please refer to the [document](./docs/index.md).
 
 ## Css Compiler
 The CssInCSharp is similar to less or sass. You can simply convert you style file into C# class, so that you can make full use of the C# language features to generate style content.

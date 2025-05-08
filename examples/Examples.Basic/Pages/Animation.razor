@@ -34,7 +34,7 @@
                     Height = 100,
                     BackgroundColor = "rgba(0, 0, 255, 0.5)",
                     AnimationDuration = "3s",
-                    AnimationName = new Keyframe("animation-transform")
+                    AnimationName = new Keyframe($"animation-{Guid.NewGuid()}")
                     {
                         ["from"] = new CSSObject()
                         {
@@ -73,7 +73,7 @@
                     Height = 100,
                     BackgroundColor = "rgba(0, 0, 255, 0.5)",
                     AnimationDuration = "3s",
-                    AnimationName = new Keyframe("animation-offset")
+                    AnimationName = new Keyframe($"animation-{Guid.NewGuid()}")
                     {
                         ["0%"] = new CSSObject()
                         {
