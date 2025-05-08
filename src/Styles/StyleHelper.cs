@@ -80,31 +80,16 @@ namespace CssInCSharp
             return className;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="css"></param>
         public static void UseStyleRegister(StyleInfo css)
         {
             Register(css);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="css"></param>
-        /// <returns>className</returns>
         public static string CSS(string css)
         {
             return Register(css);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="className"></param>
-        /// <param name="css"></param>
-        /// <returns></returns>
         public static string CX(string className, CSSObject css)
         {
             return Register(className, css);

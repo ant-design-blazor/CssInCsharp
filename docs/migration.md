@@ -343,7 +343,7 @@ To solve the above problems, you only need to implement a css() and cx() method.
 
 ## Guide
 
-- Step1: Add new theme options for antd, eg:
+- Step1: Add new theme options for antd, eg:  
   
   ```csharp
   services.AddAntDesign(option => 
@@ -355,7 +355,7 @@ To solve the above problems, you only need to implement a css() and cx() method.
   });
   ```
 
-- Step2: Gen style code from ts code.
+- Step2: Gen style code from ts code.  
   ```bash
   # use cssincs cli tool
   cssincs convert -c cssincs.json
@@ -370,8 +370,99 @@ To solve the above problems, you only need to implement a css() and cx() method.
         ├── compact.cs
         ├── token.cs
   ```
+  Each style's index file contains a default export method named `IndexDefault()`. The default naming rule is `filename + Default`, and you can modify the default generation rules by updating the configuration in cssincs.json.
+  ```json
+  {
+    "DefaultExportMethodName": "{file}Default",
+  }
+  ```
 
-- Step3: Register style for each component
+- Step3: Register style for each component.  
+  When registering styles, it is generally done in the `OnInitialized` method. However, for antd, it should be done in the `SetClassMap` method because the isolated `HashId` needs to be injected into the `ClassMapper`.
   ```csharp
+  // Button.razor.cs
+  protected void SetClassMap()
+  {
+    var prefixName = "ant-btn";
+    // 注入index.cs中的IndexDefault()方法
+    var hashId = ButtonStyle.IndexDefault()(prefixName);
+    // Add hashId
+    ClassMapper
+      .Add(prefixName)
+      .Add(hashId)
+  }
+  ```
   
+- Step4: Merge tokens and render using CssInCSharp.  
+  The ButtonStyle.IndexDefault method calls `GenStyleHooks`, which needs to be implemented in antd. This method is used to merge the theme tokens and invoke the style injection method from CssInCsharp.
+  ```csharp
+  internal static UseComponentStyleResult GenStyleHooks<T>(
+    string componentName,
+    Func<T, CSSObject> styleFunc,
+    Func<T> getDefaultToken,
+    GenOptions options = null
+  )
+  {
+    // default token
+    var defaultToken = ...
+    // gen theme token
+    var themeToken = option.ThemeAlgorithm();
+    // component token
+    var mergedToken = new T();
+    mergedToken.Merge(defaultToken, themeToken);
+    ...
+    // 这里就是调用CssInCsharp方法
+    UseStyleRegister(new StyleInfo()
+    {
+      HashId = hash.HashId,
+      TokenKey = hash.TokenKey,
+      Path = new[] { "Shared", rootPrefixCls },
+      StyleFn = () => new CSSObject { ["&"] = GlobalStyle.GenLinkStyle(token) },
+    });
+  }
+  ```
+  Note: The theme options needs to be retrieved here. Since `IOptions` is injected clsss but the `GenStyleHooks` method is a static method, a static instance must be created to access it. eg:
+  ```csharp
+  service.AddSingleton<ThemeService>((provider) =>
+  {
+      if (StyleUtil.ThemeService == default)
+      {
+          var options = provider.GetRequiredService<IOptions<ThemeOptions>>();
+          StyleUtil.ThemeService = new ThemeService(options);
+      }
+
+      return StyleUtil.ThemeService;
+  });
+
+  public class ThemeService
+  {
+    /**
+      * StyleHelper是CssInCsharp提供的静态类
+      * 如果需要使用注入类可以使用StyleService
+      * service.AddCssInCSharp();
+      * public ThemeService(IOptions<ThemeOptions> options, StyleService styleService)
+      * {
+      * }
+      */
+    public ThemeService(IOptions<ThemeOptions> options)
+    {
+    }
+
+    public UseComponentStyleResult UseStyle()
+    {
+    }
+  }
+
+  internal static class StyleUtil
+  {
+    // static instance
+    internal static ThemeService ThemeService { get;set; }
+
+    // hook method
+    internal static UseComponentStyleResult GenStyleHooks<T>()
+    {
+      // call theme service
+      return ThemeService.UseTyle();
+    }
+  }
   ```
