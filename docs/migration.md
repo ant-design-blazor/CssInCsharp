@@ -448,7 +448,7 @@ To solve the above problems, you only need to implement a css() and cx() method.
   }
   ```
 
-- Step5: Usage of style variables
+- Step5: Usage of style variables.  
   The latest style files use style variables, which requires assigning values during style rendering. The implementation is as follows.
   ```csharp
     internal static UseComponentStyleResult GenStyleHooks<T>(
