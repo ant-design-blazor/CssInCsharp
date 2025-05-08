@@ -667,7 +667,7 @@ The style output:
 ```
 
 ## Custom Component Style
-On a page, you can use the `<StyleContent>` component to add styles, but you can't use StyleContent in custom component, so if you need to add a style to the head in the custom component, you need to use the `Register` method in the `StyleHelper` class to register the style.
+On a page, you can use the `<StyleContent>` component to add page-specific styles. However, StyleContent cannot be used inside custom components. For example, if you create a `<DemoComponent>` component, how can you inject its styles into the `<head>` tag? CssInCsharp provides a global helper class called `StyleHelper`. You can use the `Register` method to inject styles into the `<head>` tag.
 
 DemoComponent.razor
 ```csharp

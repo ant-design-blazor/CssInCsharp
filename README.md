@@ -13,7 +13,7 @@ dotnet add package CssInCSharp
 ```
 
 ## Usage
-- Used in native style tag
+- Used within a native `<style>` tag.
 ```csharp
 <div class="basic">
     <div class="title">Title</div>
@@ -58,7 +58,7 @@ dotnet add package CssInCSharp
 }
 ```
 
-- Use StyleContent Or Style Component
+- Use the `StyleContent` and `Style` components on the page.
 ```csharp
 <div class="div1">
     Style In Head
@@ -106,7 +106,41 @@ dotnet add package CssInCSharp
 }
 ```
 
-- Register style
+- Use StyleHelper to inject styles in custom components.
+```csharp
+<div class="@_token.HashId @Name">
+    @foreach (var item in Items)
+    {
+        <div class="item">@item</div>
+    }
+</div>
+
+@code {
+    [Parameter] 
+    public string[] Items { get; set; }
+
+    [Parameter]
+    public int Width { get; set; } = 500;
+
+    protected override void OnInitialized()
+    {
+        // use style helper to register style
+        StyleHelper.Register(new StyleInfo
+        {
+            HashId = _token.HashId,
+            Path = new string[]{ "component", "demo" },
+            StyleFn = UseStyle
+        });
+    }
+
+    private CSSInterpolation UseStyle()
+    {
+        ...
+    }
+}
+```
+
+- Inject a `CSSObject` or `CSSString` into the head.
 ```csharp
 @_node
 
@@ -116,19 +150,6 @@ dotnet add package CssInCSharp
 
     protected override void OnInitialized()
     {
-        var token = new
-        {
-            ColorBgLayout = "#ddd",
-            BorderRadiusLG = "8px",
-            BoxShadow = "5px #DEDEDE",
-            Padding = 20,
-            BorderRadius = 4,
-            ColorTextTertiary = "#000",
-            ColorBgContainer = "#EFEFEF",
-            MotionEaseInBack = "",
-            ColorTextSecondary = "",
-            BoxShadowSecondary = ""
-        };
         var styles = new
         {
             container = new CSSObject
@@ -163,7 +184,8 @@ dotnet add package CssInCSharp
                 }
             """"),
         };
-
+        // The CX and CSS methods are defined in the StyleHelper class.
+        // @using static CssInCSharp.StyleHelper
         _node = @<div class="@CX("a-simple-create-style-demo-classname", styles.container)">
                     <div class="@styles.card">createStyles Demo</div>
                     <div>Current theme mode: dark</div>
@@ -171,7 +193,6 @@ dotnet add package CssInCSharp
     }
 }
 ```
-
 For other examples, you can check out the example code. For more information, please refer to the [document](./docs/index.md).
 
 ## Css Compiler
