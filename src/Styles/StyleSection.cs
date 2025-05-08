@@ -190,7 +190,7 @@ namespace CssInCSharp
 
             builder.OpenComponent<StyleSectionContentRenderer>(0);
             builder.SetKey(fragment);
-            builder.AddComponentParameter(1, StyleSectionContentRenderer.ContentParameterName, fragment);
+            builder.AddAttribute(1, StyleSectionContentRenderer.ContentParameterName, fragment);
             builder.CloseComponent();
         }
 
